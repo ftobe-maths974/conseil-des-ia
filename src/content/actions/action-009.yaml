@@ -1,0 +1,14 @@
+id: action-009
+phase: action
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Plafonner la consommation énergétique des infrastructures IA internes"
+body: >
+  Un budget énergétique annuel est alloué à l'ensemble des usages IA d'une organisation. Tout dépassement déclenche un audit et un gel des nouveaux déploiements.
+tags: 
+  - energie
+  - budget
+  - gouvernance
+  - sobriete
+version: "1.0"

@@ -1,0 +1,17 @@
+id: tension-003
+phase: tension
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "La souveraineté numérique est une question de couche d'infrastructure"
+content: >
+  Les nations et organisations qui n'hébergent pas leurs propres modèles délèguent de fait une partie de leur souveraineté décisionnelle à des acteurs étrangers. Les CGU peuvent changer. Les accès peuvent être coupés.
+data_point: >
+  En 2023, un pays européen a vu son service public de traduction fermer après que le prestataire IA a modifié unilatéralement ses tarifs et conditions de disponibilité.
+question: >
+  Peut-on parler de souveraineté quand les capacités cognitives critiques reposent sur des serveurs hors territoire ?
+tags: 
+  - souverainete
+  - infrastructure
+  - geopolitique
+  - dependance
+version: "1.0"

@@ -1,0 +1,15 @@
+id: tension-024
+phase: tension
+chamber: singularite-vs-standard
+reversibility: green
+title: "La diversité des systèmes IA est une forme de résilience"
+content: >
+  Un monde où tous les acteurs utilisent les mêmes modèles IA partage aussi les mêmes failles, les mêmes angles morts et les mêmes points de défaillance unique. La standardisation peut être un vecteur de fragilité systémique.
+question: >
+  Comment préserver la diversité des approches IA tout en garantissant un niveau minimal de fiabilité partagé ?
+tags: 
+  - diversite
+  - resilience
+  - standardisation
+  - fragilite
+version: "1.0"

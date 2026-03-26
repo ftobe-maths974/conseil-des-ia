@@ -1,0 +1,14 @@
+id: action-010
+phase: action
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: organisationnel
+title: "Publier l'empreinte carbone de chaque modèle IA utilisé"
+body: >
+  Le rapport RSE annuel inclut une ligne dédiée à l'empreinte carbone de chaque outil IA déployé — entraînement, inférence, hébergement.
+tags: 
+  - carbone
+  - rse
+  - transparence
+  - mesure
+version: "1.0"

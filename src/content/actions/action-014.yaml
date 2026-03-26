@@ -1,0 +1,16 @@
+id: action-014
+phase: action
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: organisationnel
+title: "Auditer annuellement les biais des outils IA de recrutement"
+body: >
+  Un tiers indépendant évalue chaque année les biais statistiques des systèmes IA utilisés dans les processus RH. Les résultats sont transmis aux représentants du personnel et aux candidats sur demande.
+tags: 
+  - biais
+  - recrutement
+  - audit
+  - rh
+amplifies:
+  - action-013
+version: "1.0"

@@ -1,0 +1,17 @@
+id: tension-004
+phase: tension
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Le consentement à la délégation est-il éclairé ?"
+content: >
+  Les utilisateurs acceptent les recommandations IA sans comprendre les critères qui les génèrent. L'asymétrie d'information entre le système et l'utilisateur remet en question la validité du consentement.
+question: >
+  Peut-on consentir à une délégation dont on ne comprend pas les règles de fonctionnement ?
+tags: 
+  - consentement
+  - asymetrie
+  - information
+  - autonomie
+facilitator_note: >
+  Demander au groupe de définir ce que serait un 'consentement éclairé' à une IA.
+version: "1.0"

@@ -1,0 +1,14 @@
+id: action-020
+phase: action
+chamber: singularite-vs-standard
+reversibility: green
+scope: organisationnel
+title: "Expérimenter un protocole IA minimal en situation de crise"
+body: >
+  Une organisation définit un protocole de dégradation gracieuse : quels services IA sont maintenus en cas de panne, lesquels sont suspendus et qui reprend la décision manuelle. Testé deux fois par an.
+tags: 
+  - resilience
+  - crise
+  - protocole
+  - continuite
+version: "1.0"

@@ -1,0 +1,19 @@
+id: tension-012
+phase: tension
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "Le progrès technique crée les besoins qu'il prétend satisfaire"
+content: >
+  Chaque amélioration de l'efficacité IA génère de nouveaux usages qui consomment les gains réalisés — l'effet rebond. Une IA deux fois plus efficace traitant dix fois plus de requêtes consomme davantage qu'avant.
+data_point: >
+  L'effet rebond énergétique a été documenté dans tous les secteurs informatiques depuis les années 1970. Dans l'IA, les projections 2025-2030 prévoient une multiplication par 5 de la consommation malgré les gains d'efficacité.
+question: >
+  L'efficacité technique peut-elle être une solution au problème de consommation qu'elle contribue à créer ?
+tags: 
+  - effet-rebond
+  - consommation
+  - efficacite
+  - paradoxe
+facilitator_note: >
+  Demander des exemples d'effets rebond que le groupe a vécus personnellement.
+version: "1.0"

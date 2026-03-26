@@ -1,0 +1,14 @@
+id: action-019
+phase: action
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: systemique
+title: "Créer un label 'IA de confiance' pour les services publics numériques"
+body: >
+  Les services publics numériques utilisant une IA peuvent obtenir un label officiel garantissant audit, explicabilité et recours. Le label est visible des usagers et renouvelable annuellement.
+tags: 
+  - service-public
+  - label
+  - confiance
+  - numerique
+version: "1.0"

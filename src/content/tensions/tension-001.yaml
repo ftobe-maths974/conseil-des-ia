@@ -1,0 +1,19 @@
+id: tension-001
+phase: tension
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "Le délégant ne comprend plus ce qu'il délègue"
+content: >
+  Lorsqu'un système IA prend en charge une tâche cognitive, les humains perdent progressivement la capacité de la réaliser eux-mêmes. La délégation crée une dépendance que ni l'organisation ni l'individu ne perçoit en temps réel.
+data_point: >
+  Dans une étude de 2024, 67 % des gestionnaires utilisant un outil IA de planification depuis plus de 6 mois déclarent ne plus savoir justifier leurs décisions sans lui.
+question: >
+  À partir de quel moment la délégation devient-elle une amputation silencieuse de compétence ?
+tags: 
+  - delegation
+  - competence
+  - dependance
+  - cognition
+facilitator_note: >
+  Faire énumérer des tâches que le groupe ne saurait plus accomplir sans IA.
+version: "1.0"

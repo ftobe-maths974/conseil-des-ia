@@ -1,0 +1,16 @@
+id: action-001
+phase: action
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Confier le scoring de crédit aux modèles d'une IA tierce"
+body: >
+  Une banque ou administration adopte un système de scoring entièrement géré par un prestataire IA externe. Les critères d'évaluation deviennent opaques et le prestataire peut modifier les paramètres sans préavis.
+tags: 
+  - delegation
+  - finance
+  - opacite
+  - dependance
+facilitator_note: >
+  Demander qui détient réellement le pouvoir de décision quand un algorithme juge la solvabilité.
+version: "1.0"

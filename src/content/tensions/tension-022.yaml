@@ -1,0 +1,17 @@
+id: tension-022
+phase: tension
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "L'homogénéisation culturelle est un effet secondaire de l'IA"
+content: >
+  Les grandes IA sont entraînées majoritairement sur du contenu anglophone occidental. En les déployant globalement, on diffuse implicitement des normes, des valeurs et des références culturelles dominantes.
+data_point: >
+  Wikipedia en anglais représente 20 % du contenu total de la plateforme mais concentre 80 % des données utilisées pour entraîner les grands modèles de langage.
+question: >
+  Peut-on déployer une IA globale sans imposer simultanément une vision du monde particulière ?
+tags: 
+  - culture
+  - langue
+  - homogeneisation
+  - domination
+version: "1.0"

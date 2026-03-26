@@ -1,0 +1,17 @@
+id: tension-002
+phase: tension
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Qui est responsable quand l'IA décide mal ?"
+content: >
+  La chaîne de responsabilité se fragmente entre l'éditeur du modèle, l'intégrateur, l'opérateur et l'utilisateur final. Aucun acteur n'a une visibilité complète sur la décision prise — et tous peuvent se renvoyer la faute.
+data_point: >
+  Sur 120 litiges impliquant une décision IA analysés en 2023, moins de 10 % ont abouti à une condamnation explicitement liée à l'IA.
+question: >
+  Quelle forme de responsabilité est encore possible quand la décision est distribuée entre des couches logicielles opaques ?
+tags: 
+  - responsabilite
+  - juridique
+  - chaine
+  - opacite
+version: "1.0"

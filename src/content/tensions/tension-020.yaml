@@ -1,0 +1,17 @@
+id: tension-020
+phase: tension
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "L'audit algorithmique peut-il être démocratique ?"
+content: >
+  Des initiatives citoyennes d'audit des IA publiques émergent — journalistes de données, collectifs techniques, associations. Mais l'expertise requise crée une nouvelle élite de l'arbitrage.
+data_point: >
+  En France, le collectif AlgoJ a publié en 2023 un audit critique du système IA d'attribution des logements sociaux de trois métropoles, pointant des biais géographiques.
+question: >
+  Qui a légitimement le droit d'auditer les algorithmes qui nous gouvernent, et à quelle condition ?
+tags: 
+  - audit
+  - democratie
+  - expertise
+  - legitimite
+version: "1.0"

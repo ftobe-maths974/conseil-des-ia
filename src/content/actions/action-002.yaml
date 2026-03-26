@@ -1,0 +1,16 @@
+id: action-002
+phase: action
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "Instaurer un droit d'appel humain sur toute décision automatisée"
+body: >
+  Tout individu affecté par une décision prise ou recommandée par une IA peut demander un réexamen par un humain identifié. Ce droit est formalisé dans les CGU et les procédures internes.
+tags: 
+  - recours
+  - transparence
+  - droits
+  - gouvernance
+facilitator_note: >
+  Faire discuter ce que 'humain identifié' signifie concrètement : qui, avec quel pouvoir réel ?
+version: "1.0"

@@ -1,0 +1,17 @@
+id: tension-023
+phase: tension
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "La certification crée des oligopoles de confiance"
+content: >
+  Pour certifier une IA, il faut des ressources, une expertise et un accès aux organismes de certification. Seuls les grands acteurs peuvent se conformer aux exigences. Le standard protège les citoyens mais élimine les alternatives.
+data_point: >
+  L'AI Act européen impose des coûts de conformité estimés entre 500 000 et 2 millions d'euros pour les IA à 'haut risque'. Une barrière à l'entrée que seules les grandes entreprises peuvent franchir.
+question: >
+  Un standard rigoureux qui consolide le marché autour de quelques acteurs vaut-il mieux que des systèmes plus divers mais moins sûrs ?
+tags: 
+  - certification
+  - oligopole
+  - marche
+  - regulation
+version: "1.0"

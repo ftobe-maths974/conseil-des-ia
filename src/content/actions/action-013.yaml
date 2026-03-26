@@ -1,0 +1,16 @@
+id: action-013
+phase: action
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Rendre obligatoire l'explicabilité des décisions IA d'attribution de ressources"
+body: >
+  Toute décision IA attribuant ou refusant logement, emploi, crédit, allocation sociale ou accès aux soins doit être accompagnée d'une explication lisible, contestable et archivée.
+tags: 
+  - explicabilite
+  - droits
+  - attribution
+  - justice
+facilitator_note: >
+  Interroger la faisabilité technique : certains modèles sont fondamentalement inexplicables.
+version: "1.0"

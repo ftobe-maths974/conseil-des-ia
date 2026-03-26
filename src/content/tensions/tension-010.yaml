@@ -1,0 +1,17 @@
+id: tension-010
+phase: tension
+chamber: preuve-vs-simulation
+reversibility: red
+title: "Les enfants grandissent dans un monde où rien ne prouve rien"
+content: >
+  La génération qui grandit aujourd'hui est formée à douter de tout document visuel ou sonore. Ce scepticisme généralisé peut produire soit une meilleure pensée critique, soit un nihilisme informationnel.
+data_point: >
+  Dans une enquête menée auprès d'adolescents de 14-18 ans en Europe (2024), 72 % déclarent 'ne pas faire confiance par défaut' aux vidéos en ligne.
+question: >
+  Le doute systématique est-il une compétence ou un symptôme ?
+tags: 
+  - jeunesse
+  - confiance
+  - scepticisme
+  - education
+version: "1.0"

@@ -1,0 +1,16 @@
+id: action-007
+phase: action
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: systemique
+title: "Ouvrir un registre public des contenus synthétiques détectés"
+body: >
+  Une plateforme gouvernementale référence les contenus synthétiques signalés, leurs métadonnées d'origine et les outils de détection utilisés. Accès libre pour les journalistes et chercheurs.
+tags: 
+  - registre
+  - deepfake
+  - transparence
+  - media
+amplifies:
+  - action-005
+version: "1.0"

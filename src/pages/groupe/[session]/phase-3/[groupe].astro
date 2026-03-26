@@ -1,0 +1,606 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+// ── Chambres assignées au deck demo ──────────────────────────────────────────
+const CHAMBER_MAP: Record<string, string> = {
+  'groupe-A': 'delegation-vs-souverainete',
+  'groupe-B': 'preuve-vs-simulation',
+  'groupe-C': 'metabolisme-vs-progres',
+  'groupe-D': 'invisibilite-vs-arbitrage',
+};
+
+const CHAMBER_LABELS: Record<string, string> = {
+  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
+  'preuve-vs-simulation':       'Preuve vs Simulation',
+  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
+  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
+  'singularite-vs-standard':    'Singularité vs Standard',
+};
+
+// Rotation du mandat : groupe-A → B → C → D → A
+const NEXT_GROUPE: Record<string, string> = {
+  'groupe-A': 'groupe-B',
+  'groupe-B': 'groupe-C',
+  'groupe-C': 'groupe-D',
+  'groupe-D': 'groupe-A',
+};
+
+// ── Tirage déterministe des 4 cartes action ───────────────────────────────
+function seededHash(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+function selectActions(
+  all: CollectionEntry<'actions'>[],
+  chamber: string,
+  seed: number
+): CollectionEntry<'actions'>[] {
+  const chamberCards = all.filter(a => a.data.chamber === chamber);
+  // Rotation déterministe dans les cartes de la chambre
+  const offset = chamberCards.length > 0 ? seed % chamberCards.length : 0;
+  const rotated = [...chamberCards.slice(offset), ...chamberCards.slice(0, offset)];
+  return rotated.slice(0, 4);
+}
+
+// ── Routes statiques ──────────────────────────────────────────────────────
+export async function getStaticPaths() {
+  return ['groupe-A', 'groupe-B', 'groupe-C', 'groupe-D'].map(groupe => ({
+    params: { session: 'demo', groupe },
+  }));
+}
+
+// ── Données de la page ────────────────────────────────────────────────────
+const { session, groupe } = Astro.params;
+const allActions = await getCollection('actions');
+const chamber = CHAMBER_MAP[groupe] ?? 'delegation-vs-souverainete';
+const seed = seededHash(session + ':phase3:' + groupe);
+const selected = selectActions(allActions, chamber, seed);
+const nextGroupe = NEXT_GROUPE[groupe] ?? 'groupe-B';
+
+const REV_LABELS: Record<string, string> = {
+  green:  'Réversible',
+  yellow: 'Coûteux',
+  red:    'Irréversible',
+};
+
+type ActionData = {
+  id: string;
+  title: string;
+  body: string;
+  reversibility: string;
+  scope: string;
+  chamber: string;
+  tags: string[];
+};
+
+const actionsData: ActionData[] = selected.map(a => ({
+  id: a.data.id,
+  title: a.data.title,
+  body: a.data.body,
+  reversibility: a.data.reversibility,
+  scope: a.data.scope,
+  chamber: a.data.chamber,
+  tags: a.data.tags,
+}));
+
+const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${nextGroupe}`;
+---
+
+<BaseLayout title={`${groupe} — Phase 3`} mode="groupe">
+  <main class="p3" data-groupe={groupe} data-session={session} data-next={nextGroupe}>
+
+    <!-- En-tête -->
+    <header class="p3__header">
+      <div class="p3__header-left">
+        <span class="p3__phase-label">Phase 3</span>
+        <h1 class="p3__groupe">{groupe}</h1>
+      </div>
+      <span class="p3__chamber" data-chamber={chamber}>
+        {CHAMBER_LABELS[chamber]}
+      </span>
+    </header>
+
+    <!-- Instructions -->
+    <section class="p3__instructions" id="p3-instructions">
+      <p class="p3__instructions-text">
+        Choisissez <strong>une carte action</strong> et rédigez un <strong>mandat court</strong>
+        (1 à 2 phrases) expliquant pourquoi votre groupe la propose.
+        Ce mandat sera transmis au groupe suivant.
+      </p>
+    </section>
+
+    <!-- Grille des 4 cartes action -->
+    <section class="p3__cards" id="p3-cards" aria-label="Cartes action disponibles">
+      {actionsData.map(action => (
+        <article
+          class="p3-card"
+          data-id={action.id}
+          data-rev={action.reversibility}
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          aria-label={`Sélectionner : ${action.title}`}
+        >
+          <div class="p3-card__meta">
+            <span class="p3-card__id">{action.id}</span>
+            <div class="p3-card__badges">
+              <span class="rev-badge" data-rev={action.reversibility}>
+                {REV_LABELS[action.reversibility]}
+              </span>
+              <span class="p3-card__scope">{action.scope}</span>
+            </div>
+          </div>
+          <h2 class="p3-card__title">{action.title}</h2>
+          <p class="p3-card__body">{action.body}</p>
+          <div class="p3-card__tags" aria-hidden="true">
+            {action.tags.map(tag => <span class="p3-card__tag">#{tag}</span>)}
+          </div>
+          <div class="p3-card__check" aria-hidden="true">✓ Sélectionnée</div>
+        </article>
+      ))}
+    </section>
+
+    <!-- Alerte règle red-rouge -->
+    <div class="p3__red-warning" id="p3-red-warning" hidden role="alert">
+      ⚠ Votre groupe a hérité d'un mandat irréversible. Vous ne pouvez pas émettre
+      un mandat irréversible à votre tour. Choisissez une carte verte ou jaune.
+    </div>
+
+    <!-- Formulaire de rédaction du mandat -->
+    <section class="p3__form" id="p3-form" hidden>
+      <label class="p3__form-label" for="mandat-text">
+        Rédigez votre mandat
+        <span class="p3__form-hint">1 à 2 phrases. Soyez précis sur l'engagement que vous proposez.</span>
+      </label>
+      <textarea
+        id="mandat-text"
+        class="p3__textarea"
+        rows="4"
+        maxlength="400"
+        placeholder="Notre groupe mandate… parce que…"
+        aria-describedby="mandat-counter"
+      ></textarea>
+      <div class="p3__form-footer">
+        <span class="p3__char-counter" id="mandat-counter">0 / 400</span>
+        <button class="p3__submit" id="p3-submit" disabled>
+          Générer le QR code →
+        </button>
+      </div>
+    </section>
+
+    <!-- Panneau QR code -->
+    <section class="p3__qr-panel" id="p3-qr-panel" hidden aria-live="polite">
+      <div class="p3__qr-header">
+        <span class="p3__qr-label">Mandat généré</span>
+        <span class="p3__qr-dest" id="p3-qr-dest"></span>
+      </div>
+      <div class="p3__qr-card" id="p3-qr-card">
+        <!-- rempli par le script -->
+      </div>
+      <div class="p3__qr-wrap">
+        <canvas id="qr-canvas" class="p3__qr-canvas" aria-label="QR code du mandat"></canvas>
+      </div>
+      <div class="p3__qr-url-wrap">
+        <code class="p3__qr-url" id="p3-qr-url"></code>
+        <button class="p3__copy-btn" id="p3-copy-btn" aria-label="Copier le lien">
+          Copier le lien
+        </button>
+      </div>
+      <p class="p3__qr-instructions">
+        Montrez ce QR code à {nextGroupe} — ils le scanneront pour démarrer leur Phase 4.
+      </p>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<!-- Données pour le script client -->
+<script type="application/json" id="actions-data" set:html={JSON.stringify(actionsData)} />
+<script type="application/json" id="phase4-base" set:html={JSON.stringify(phase4BaseUrl)} />
+
+<script>
+  import QRCode from 'qrcode';
+
+  // ── Données ──────────────────────────────────────────────────────────────
+  const actionsData: Array<{
+    id: string; title: string; body: string;
+    reversibility: string; scope: string; chamber: string; tags: string[];
+  }> = JSON.parse(document.getElementById('actions-data')!.textContent!);
+
+  const phase4Base: string = JSON.parse(document.getElementById('phase4-base')!.textContent!);
+
+  const REV_LABELS: Record<string, string> = {
+    green: 'Réversible', yellow: 'Coûteux', red: 'Irréversible',
+  };
+
+  // ── État ──────────────────────────────────────────────────────────────────
+  let selectedId: string | null = null;
+  let inheritedRed = false;
+
+  // Vérifier si le groupe a hérité d'un mandat red (via URL hash)
+  const hash = window.location.hash;
+  if (hash.includes('inherited=red')) inheritedRed = true;
+
+  // ── Éléments DOM ─────────────────────────────────────────────────────────
+  const cardsSection  = document.getElementById('p3-cards')!;
+  const formSection   = document.getElementById('p3-form')!;
+  const qrPanel       = document.getElementById('p3-qr-panel')!;
+  const textarea      = document.getElementById('mandat-text') as HTMLTextAreaElement;
+  const counter       = document.getElementById('mandat-counter')!;
+  const submitBtn     = document.getElementById('p3-submit') as HTMLButtonElement;
+  const redWarning    = document.getElementById('p3-red-warning')!;
+  const qrDest        = document.getElementById('p3-qr-dest')!;
+  const qrCardEl      = document.getElementById('p3-qr-card')!;
+  const qrCanvas      = document.getElementById('qr-canvas') as HTMLCanvasElement;
+  const qrUrlEl       = document.getElementById('p3-qr-url')!;
+  const copyBtn       = document.getElementById('p3-copy-btn') as HTMLButtonElement;
+
+  // ── Sélection de carte ────────────────────────────────────────────────────
+  cardsSection.addEventListener('click', handleCardSelect);
+  cardsSection.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleCardSelect(e);
+    }
+  });
+
+  function handleCardSelect(e: Event): void {
+    const card = (e.target as HTMLElement).closest<HTMLElement>('.p3-card');
+    if (!card) return;
+
+    const id  = card.dataset.id!;
+    const rev = card.dataset.rev!;
+
+    // Règle : pas de red si héritage red
+    if (inheritedRed && rev === 'red') {
+      redWarning.hidden = false;
+      redWarning.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
+
+    // Déselectionner l'ancienne carte
+    cardsSection.querySelectorAll<HTMLElement>('.p3-card--selected').forEach(c => {
+      c.classList.remove('p3-card--selected');
+      c.setAttribute('aria-pressed', 'false');
+    });
+
+    // Sélectionner la nouvelle
+    card.classList.add('p3-card--selected');
+    card.setAttribute('aria-pressed', 'true');
+    selectedId = id;
+
+    // Afficher le formulaire
+    formSection.hidden = false;
+    formSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    textarea.focus();
+    updateSubmitState();
+  }
+
+  // ── Formulaire ────────────────────────────────────────────────────────────
+  textarea.addEventListener('input', () => {
+    const len = textarea.value.length;
+    counter.textContent = `${len} / 400`;
+    updateSubmitState();
+  });
+
+  function updateSubmitState(): void {
+    const hasText = textarea.value.trim().length >= 10;
+    submitBtn.disabled = !(selectedId && hasText);
+  }
+
+  // ── Génération QR code ────────────────────────────────────────────────────
+  submitBtn.addEventListener('click', async () => {
+    if (!selectedId) return;
+
+    const action = actionsData.find(a => a.id === selectedId);
+    if (!action) return;
+
+    const handoff = {
+      text:    textarea.value.trim(),
+      level:   action.reversibility,
+      chamber: action.chamber,
+      from:    document.querySelector<HTMLElement>('.p3')!.dataset.groupe ?? '',
+    };
+
+    const encoded = btoa(encodeURIComponent(JSON.stringify(handoff)));
+    const fullUrl = `${phase4Base}#handoff=${encoded}`;
+
+    // Remplir la carte de résumé
+    qrCardEl.innerHTML = `
+      <div class="p3-qr-summary__meta">
+        <span class="p3-card__id">${escHtml(action.id)}</span>
+        <span class="rev-badge rev-badge--glow" data-rev="${escHtml(action.reversibility)}">
+          ${escHtml(REV_LABELS[action.reversibility] ?? action.reversibility)}
+        </span>
+      </div>
+      <h3 class="p3-qr-summary__title">${escHtml(action.title)}</h3>
+      <blockquote class="p3-qr-summary__mandat">${escHtml(handoff.text)}</blockquote>
+    `;
+
+    // Destination
+    const nextGroupe = document.querySelector<HTMLElement>('.p3')?.dataset.next ?? '';
+    qrDest.textContent = `→ ${nextGroupe}`;
+
+    // Générer le QR
+    await QRCode.toCanvas(qrCanvas, fullUrl, {
+      width: 240,
+      margin: 2,
+      color: { dark: '#f0f0f5', light: '#141420' },
+    });
+
+    qrUrlEl.textContent = fullUrl;
+
+    // Afficher le panneau
+    formSection.hidden = true;
+    document.getElementById('p3-instructions')!.hidden = true;
+    qrPanel.hidden = false;
+    qrPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // ── Copier le lien ────────────────────────────────────────────────────────
+  copyBtn.addEventListener('click', async () => {
+    const url = qrUrlEl.textContent ?? '';
+    try {
+      await navigator.clipboard.writeText(url);
+      copyBtn.textContent = 'Copié ✓';
+      setTimeout(() => { copyBtn.textContent = 'Copier le lien'; }, 2000);
+    } catch {
+      copyBtn.textContent = 'Erreur';
+    }
+  });
+
+  // ── Helpers ───────────────────────────────────────────────────────────────
+  function escHtml(s: string): string {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+</script>
+
+<style>
+  /* ── Layout ──────────────────────────────────────────────────────────────── */
+  .p3 {
+    min-height: 100dvh;
+    padding: var(--space-lg);
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  /* ── En-tête (identique Phase 1) ────────────────────────────────────────── */
+  .p3__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+  .p3__header-left { display: flex; flex-direction: column; gap: var(--space-xs); }
+  .p3__phase-label {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p3__groupe { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; }
+  .p3__chamber {
+    font-size: 0.8rem; padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--chamber-color, var(--border-subtle));
+    color: var(--chamber-color, var(--text-muted));
+    text-align: right; max-width: 16ch; line-height: 1.3;
+  }
+
+  /* ── Instructions ────────────────────────────────────────────────────────── */
+  .p3__instructions-text {
+    font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg);
+  }
+
+  /* ── Grille de cartes ────────────────────────────────────────────────────── */
+  .p3__cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  /* ── Carte action ────────────────────────────────────────────────────────── */
+  .p3-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    cursor: pointer;
+    transition: border-color var(--transition-base), background var(--transition-base),
+                box-shadow var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    position: relative;
+    outline: none;
+  }
+
+  .p3-card:hover, .p3-card:focus-visible {
+    background: var(--bg-card-hover);
+    border-color: var(--text-muted);
+  }
+
+  .p3-card--selected {
+    border-color: var(--chamber-delegation);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  }
+
+  /* ── Check indicator ─────────────────────────────────────────────────────── */
+  .p3-card__check {
+    display: none;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--chamber-delegation);
+    font-weight: 600;
+  }
+  .p3-card--selected .p3-card__check { display: block; }
+
+  /* ── Contenu carte ───────────────────────────────────────────────────────── */
+  .p3-card__meta {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: var(--space-sm); flex-wrap: wrap;
+  }
+  .p3-card__id { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); }
+  .p3-card__badges { display: flex; gap: var(--space-xs); align-items: center; }
+  .p3-card__scope {
+    font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm); padding: 2px 6px;
+  }
+  .p3-card__title {
+    font-family: var(--font-display); font-size: 1rem;
+    font-weight: 600; line-height: 1.3;
+  }
+  .p3-card__body { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; }
+  .p3-card__tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+  .p3-card__tag {
+    font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm); padding: 1px 6px;
+  }
+
+  /* ── Alerte red ──────────────────────────────────────────────────────────── */
+  .p3__red-warning {
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: var(--radius-md);
+    color: #fca5a5;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* ── Formulaire mandat ───────────────────────────────────────────────────── */
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .p3__form {
+    display: flex; flex-direction: column; gap: var(--space-md);
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg); padding: var(--space-xl);
+    animation: slide-in 250ms ease both;
+  }
+
+  .p3__form-label {
+    display: flex; flex-direction: column; gap: var(--space-xs);
+    font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+  }
+  .p3__form-hint { font-family: var(--font-body); font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+
+  .p3__textarea {
+    width: 100%; background: var(--bg-surface); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); color: var(--text-primary);
+    font-family: var(--font-body); font-size: 0.95rem; line-height: 1.6;
+    padding: var(--space-md); resize: vertical; outline: none;
+    transition: border-color var(--transition-fast);
+  }
+  .p3__textarea:focus { border-color: var(--chamber-delegation); }
+  .p3__textarea::placeholder { color: var(--text-muted); }
+
+  .p3__form-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: var(--space-md);
+  }
+  .p3__char-counter { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); }
+
+  .p3__submit {
+    padding: var(--space-sm) var(--space-xl);
+    background: var(--chamber-delegation); color: #fff;
+    border: none; border-radius: var(--radius-md);
+    font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+    cursor: pointer;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+  }
+  .p3__submit:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
+  .p3__submit:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  /* ── Panneau QR code ─────────────────────────────────────────────────────── */
+  @keyframes reveal-in {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .p3__qr-panel {
+    display: flex; flex-direction: column; gap: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+    animation: reveal-in 400ms ease both;
+  }
+
+  .p3__qr-header {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .p3__qr-label {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p3__qr-dest {
+    font-family: var(--font-display); font-size: 0.9rem;
+    font-weight: 600; color: var(--chamber-delegation);
+  }
+
+  /* Carte récapitulative du mandat */
+  .p3__qr-card {
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg); padding: var(--space-xl);
+    display: flex; flex-direction: column; gap: var(--space-md);
+  }
+  .p3-qr-summary__meta { display: flex; align-items: center; gap: var(--space-sm); }
+  .p3-qr-summary__title {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 600; line-height: 1.3;
+  }
+  .p3-qr-summary__mandat {
+    font-style: italic; font-size: 0.9rem; color: var(--text-secondary);
+    border-left: 3px solid var(--chamber-delegation);
+    padding-left: var(--space-md); line-height: 1.6;
+  }
+
+  /* Badge glow dans la récap */
+  .rev-badge--glow[data-rev="green"]  { box-shadow: 0 0 12px rgba(34,197,94,0.4); }
+  .rev-badge--glow[data-rev="yellow"] { box-shadow: 0 0 12px rgba(234,179,8,0.4); }
+  .rev-badge--glow[data-rev="red"]    { box-shadow: 0 0 12px rgba(239,68,68,0.4); }
+
+  .p3__qr-wrap {
+    display: flex; justify-content: center;
+  }
+  .p3__qr-canvas {
+    border-radius: var(--radius-md);
+    max-width: 100%;
+  }
+
+  .p3__qr-url-wrap {
+    display: flex; align-items: center; gap: var(--space-sm);
+    background: var(--bg-surface); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); padding: var(--space-sm) var(--space-md);
+    flex-wrap: wrap;
+  }
+  .p3__qr-url {
+    flex: 1; font-family: var(--font-mono); font-size: 0.65rem;
+    color: var(--text-muted); word-break: break-all; min-width: 0;
+  }
+  .p3__copy-btn {
+    background: transparent; border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm); color: var(--text-secondary);
+    font-family: var(--font-mono); font-size: 0.75rem;
+    padding: 4px 10px; cursor: pointer; white-space: nowrap;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+    flex-shrink: 0;
+  }
+  .p3__copy-btn:hover { border-color: var(--text-muted); color: var(--text-primary); }
+
+  .p3__qr-instructions {
+    font-size: 0.85rem; color: var(--text-secondary);
+    text-align: center; line-height: 1.5;
+  }
+</style>

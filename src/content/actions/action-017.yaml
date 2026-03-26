@@ -1,0 +1,16 @@
+id: action-017
+phase: action
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "Adopter un standard ISO commun pour les IA de diagnostic médical"
+body: >
+  Un standard international définit les critères de validation, les tests de robustesse et les obligations de surveillance post-marché pour tout outil IA utilisé en diagnostic clinique.
+tags: 
+  - sante
+  - standard
+  - iso
+  - certification
+facilitator_note: >
+  Discuter qui établit le standard et comment il est mis à jour face à l'évolution rapide des modèles.
+version: "1.0"

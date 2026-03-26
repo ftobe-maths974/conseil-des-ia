@@ -1,0 +1,14 @@
+id: action-005
+phase: action
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Étiqueter obligatoirement tout contenu généré ou modifié par IA"
+body: >
+  Tout contenu produit ou altéré par une IA — texte, image, audio, vidéo — doit porter un label visible et standardisé, lisible par l'humain et par les machines.
+tags: 
+  - transparence
+  - etiquetage
+  - contenu
+  - verification
+version: "1.0"

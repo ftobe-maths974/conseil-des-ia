@@ -1,0 +1,17 @@
+id: tension-021
+phase: tension
+chamber: singularite-vs-standard
+reversibility: red
+title: "Le standard tue l'exception — et l'exception peut sauver une vie"
+content: >
+  Les IA médicales optimisées sur des populations statistiquement représentatives échouent sur les cas atypiques. La standardisation du diagnostic crée une médecine plus efficace en moyenne et plus dangereuse pour les minorités biologiques.
+data_point: >
+  Les IA de détection du mélanome ont un taux d'erreur 34 % plus élevé sur les peaux sombres que sur les peaux claires, car les données d'entraînement sont majoritairement issues de patients blancs.
+question: >
+  Jusqu'où peut-on accepter une médecine standardisée qui sacrifice les cas rares sur l'autel de l'efficacité statistique ?
+tags: 
+  - sante
+  - standard
+  - minorite
+  - diagnostic
+version: "1.0"

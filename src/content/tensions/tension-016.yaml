@@ -1,0 +1,17 @@
+id: tension-016
+phase: tension
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Ce qu'on ne voit pas ne peut pas être contesté"
+content: >
+  Les décisions algorithmiques produisent des effets visibles (refus de prêt, classement de CV, prix personnalisé) mais leurs causes restent opaques. Sans visibilité sur le mécanisme, il est impossible de former un recours.
+data_point: >
+  En Europe, le RGPD garantit un droit à l'explication pour les décisions automatisées. Mais dans 80 % des cas, les explications fournies sont jugées insuffisantes par les individus concernés.
+question: >
+  Un droit à l'explication est-il utile si les explications sont incompréhensibles ou incomplètes ?
+tags: 
+  - opacite
+  - recours
+  - droits
+  - explication
+version: "1.0"

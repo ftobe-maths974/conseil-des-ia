@@ -1,0 +1,14 @@
+id: action-012
+phase: action
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: individuel
+title: "Substituer 30 % des déplacements professionnels par des réunions IA augmentées"
+body: >
+  Une politique d'entreprise fixe un objectif de réduction des déplacements par l'usage d'outils de présence augmentée. Les économies carbone sont reversées dans un fonds de formation.
+tags: 
+  - mobilite
+  - carbone
+  - teletravail
+  - organisation
+version: "1.0"

@@ -1,0 +1,14 @@
+id: action-003
+phase: action
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "Former 100 % des managers à interpréter les recommandations IA"
+body: >
+  Un programme de formation certifiant permet à chaque responsable de comprendre les sorties des outils IA de son périmètre, d'en identifier les limites et de les contester si nécessaire.
+tags: 
+  - formation
+  - litteratie
+  - autonomie
+  - management
+version: "1.0"

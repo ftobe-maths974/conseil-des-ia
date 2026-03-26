@@ -1,0 +1,15 @@
+id: tension-019
+phase: tension
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Les victimes de discrimination algorithmique ne savent pas qu'elles en sont victimes"
+content: >
+  La discrimination algorithmique est par nature invisible à l'individu. Il ne sait pas qu'il a été défavorisé — et encore moins pourquoi. L'injustice sans témoin est difficile à nommer et impossible à réparer.
+question: >
+  Que faire d'une injustice que la victime ne peut pas percevoir et que l'auteur peut nier de bonne foi ?
+tags: 
+  - invisibilite
+  - discrimination
+  - justice
+  - perception
+version: "1.0"

@@ -1,0 +1,19 @@
+id: tension-008
+phase: tension
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "L'authenticité devient un luxe"
+content: >
+  Les contenus vérifiés et certifiés non-synthétiques seront plus coûteux à produire et à distribuer. L'accès à l'information vérifiable risque de devenir un privilège économique.
+data_point: >
+  Le coût de la certification de contenu authentique (watermarking, traçabilité) représente entre 5 et 20 % du coût de production selon les formats.
+question: >
+  Une société où seuls les riches peuvent accéder à de l'information certifiée : dystopie ou trajectoire probable ?
+tags: 
+  - authenticite
+  - inegalite
+  - acces
+  - certification
+facilitator_note: >
+  Faire réfléchir sur qui peut se payer la vérité dans l'information.
+version: "1.0"

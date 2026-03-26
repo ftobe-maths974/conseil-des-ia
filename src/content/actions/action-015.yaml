@@ -1,0 +1,16 @@
+id: action-015
+phase: action
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Créer un médiateur IA indépendant par secteur critique"
+body: >
+  Un organisme de médiation sectorielle est institué pour les domaines où les décisions IA ont des effets majeurs sur les individus (santé, justice, logement, éducation). Compétence de recommandation contraignante.
+tags: 
+  - mediation
+  - gouvernance
+  - secteur
+  - recours
+facilitator_note: >
+  Faire débattre qui nomme le médiateur et comment son indépendance est garantie.
+version: "1.0"

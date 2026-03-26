@@ -1,0 +1,17 @@
+id: tension-011
+phase: tension
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "L'IA consomme plus qu'elle n'économise"
+content: >
+  Les outils IA promettent d'optimiser l'énergie, les transports, la chaîne logistique. Mais leur propre empreinte carbone — entraînement, inférence, refroidissement — dépasse souvent les gains qu'ils génèrent.
+data_point: >
+  L'entraînement d'un grand modèle de langage émet autant de CO₂ que 300 vols transatlantiques. L'inférence quotidienne de ChatGPT consomme l'équivalent de 500 000 foyers pendant une heure.
+question: >
+  Comment justifier le déploiement d'une technologie dont le bilan carbone net est négatif à court terme ?
+tags: 
+  - carbone
+  - energie
+  - paradoxe
+  - sobriete
+version: "1.0"

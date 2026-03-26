@@ -1,0 +1,17 @@
+id: tension-007
+phase: tension
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "La détection du faux court toujours un temps de retard"
+content: >
+  Les outils de détection de deepfakes sont entraînés sur les modèles existants. Chaque nouvelle génération de synthèse dépasse les détecteurs actuels. C'est une course aux armements asymétrique.
+data_point: >
+  Les meilleurs détecteurs de deepfakes disponibles en 2024 ont un taux d'erreur de 15 à 30 % sur des contenus générés par les derniers modèles.
+question: >
+  Peut-on concevoir un système de confiance médiatique qui ne repose pas sur la capacité à détecter le faux ?
+tags: 
+  - detection
+  - course
+  - asymetrie
+  - media
+version: "1.0"

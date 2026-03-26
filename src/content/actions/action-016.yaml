@@ -1,0 +1,14 @@
+id: action-016
+phase: action
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: organisationnel
+title: "Documenter et diffuser en interne les critères d'entraînement des IA utilisées"
+body: >
+  L'équipe IA publie une fiche technique de chaque modèle déployé : données d'entraînement, critères d'évaluation, limitations connues. Accessible à tous les collaborateurs concernés.
+tags: 
+  - documentation
+  - transparence
+  - formation
+  - interne
+version: "1.0"

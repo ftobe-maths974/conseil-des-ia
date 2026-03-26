@@ -1,0 +1,18 @@
+id: action-011
+phase: action
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Conditionner les autorisations de datacenter IA à 100 % d'énergie renouvelable"
+body: >
+  Toute nouvelle infrastructure d'entraînement ou d'inférence IA dépassant un seuil de puissance doit être alimentée exclusivement en énergie renouvelable certifiée. Modifie la réglementation des permis de construire industriels.
+tags: 
+  - datacenter
+  - renouvelable
+  - legislation
+  - climat
+blocks:
+  - action-009
+facilitator_note: >
+  Discuter qui contrôle la certification 'renouvelable' et comment éviter le greenwashing.
+version: "1.0"

@@ -1,0 +1,17 @@
+id: tension-006
+phase: tension
+chamber: preuve-vs-simulation
+reversibility: red
+title: "La simulation parfaite rend la vérité indémontrable"
+content: >
+  Lorsqu'une IA peut reproduire n'importe quelle réalité de façon indiscernable, la preuve visuelle ou sonore perd sa valeur probatoire. Ce n'est pas seulement un problème judiciaire — c'est une crise épistémique.
+data_point: >
+  En 2024, plusieurs procès aux États-Unis ont été suspendus après la mise en doute de vidéos de surveillance présentées comme preuves.
+question: >
+  Si tout peut être simulé, sur quoi peut-on encore fonder une conviction collective ?
+tags: 
+  - preuve
+  - epistemologie
+  - vérité
+  - simulation
+version: "1.0"

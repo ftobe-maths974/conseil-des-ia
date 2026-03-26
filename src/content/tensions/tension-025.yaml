@@ -1,0 +1,19 @@
+id: tension-025
+phase: tension
+chamber: singularite-vs-standard
+reversibility: red
+title: "Les IA éducatives façonnent ce qu'on appelle apprendre"
+content: >
+  Quand des millions d'élèves apprennent avec les mêmes outils IA, ces outils définissent implicitement ce que signifie comprendre, mémoriser, raisonner. L'outil éducatif n'est jamais neutre — l'IA encore moins.
+data_point: >
+  En 2025, Khan Academy estime que 15 millions d'élèves dans le monde utilisent régulièrement son tuteur IA Khanmigo pour faire leurs devoirs et apprendre les mathématiques.
+question: >
+  Qui décide de ce que doit savoir un enfant quand c'est une IA privée qui lui enseigne ?
+tags: 
+  - education
+  - apprentissage
+  - enfants
+  - norme
+facilitator_note: >
+  Tension particulièrement forte à jouer avec des groupes d'enseignants ou d'étudiants.
+version: "1.0"

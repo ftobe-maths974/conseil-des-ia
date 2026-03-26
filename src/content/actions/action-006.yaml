@@ -1,0 +1,16 @@
+id: action-006
+phase: action
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Interdire l'admission de preuves IA non certifiées en procédure judiciaire"
+body: >
+  Aucun élément probatoire produit par un système IA ne peut être admis sans certification indépendante. Modifie la procédure civile et pénale et nécessite une refonte des expertises numériques.
+tags: 
+  - justice
+  - preuve
+  - deepfake
+  - legislation
+facilitator_note: >
+  Discuter ce que 'certifié' signifie et qui a les moyens de certifier à l'échelle.
+version: "1.0"

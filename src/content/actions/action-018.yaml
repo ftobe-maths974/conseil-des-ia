@@ -1,0 +1,16 @@
+id: action-018
+phase: action
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: systemique
+title: "Certifier les outils IA pédagogiques avant tout déploiement en établissement"
+body: >
+  Un label national conditionne l'accès des outils IA aux établissements scolaires publics. La certification évalue biais, transparence, protection des données mineurs et impact sur l'autonomie cognitive.
+tags: 
+  - education
+  - certification
+  - enfants
+  - pedagogie
+amplifies:
+  - action-017
+version: "1.0"
