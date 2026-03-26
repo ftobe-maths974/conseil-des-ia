@@ -9,11 +9,6 @@ context: >
   heures. Le modèle est entraîné sur des données nationales et ses critères ne sont
   pas publiés. En cas de refus, les demandeurs recevront une lettre type sans
   explication détaillée. Le contrat prévoit une exclusivité de 5 ans.
-constraint_from_mandat: >
-  Le mandat reçu engage votre chambre à se prononcer sur une action concrète
-  concernant la délégation de décisions à caractère social à un système IA tiers.
-  Votre acte doit intégrer les implications du mandat transmis sur l'autonomie
-  décisionnelle de la collectivité.
 roles_briefing:
   decideur: >
     Vous êtes le maire de Vercors-sur-Rhône. Vous avez promis une réduction des délais

@@ -98,7 +98,6 @@ const scenarios = defineCollection({
     ]),
     title: z.string(),
     context: z.string(),
-    constraint_from_mandat: z.string(),
     roles_briefing: z.object({
       decideur: z.string(),
       technicien: z.string(),

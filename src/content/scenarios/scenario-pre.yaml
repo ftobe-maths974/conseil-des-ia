@@ -9,11 +9,6 @@ context: >
   enregistrements originaux sont partiellement corrompus. La défense conteste
   l'authenticité. C'est la première fois qu'un tel élément est soumis à une
   juridiction française. La décision créera un précédent national.
-constraint_from_mandat: >
-  Le mandat reçu vous engage sur la question de la valeur probatoire des contenus
-  produits ou transformés par IA. Votre acte doit définir les conditions sous
-  lesquelles une preuve synthétique peut être admise — ou les raisons pour
-  lesquelles elle ne peut pas l'être dans ce contexte.
 roles_briefing:
   decideur: >
     Vous êtes juge d'instruction. Vous devez décider si cette pièce est recevable

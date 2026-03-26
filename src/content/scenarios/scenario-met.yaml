@@ -9,12 +9,6 @@ context: >
   indirects. Il consommera 28 millions de litres d'eau par an dans une région
   touchée par trois sécheresses consécutives. L'électricité sera fournie par le
   réseau national — dont 70 % de nucléaire. Le préfet doit statuer dans 30 jours.
-constraint_from_mandat: >
-  Le mandat reçu vous engage à vous prononcer sur une décision qui met en tension
-  le développement économique lié à l'IA et l'impact environnemental local et
-  systémique. Votre acte doit répondre à la question : à quelles conditions
-  l'infrastructure IA peut-elle être autorisée dans un contexte de tension sur
-  les ressources naturelles ?
 roles_briefing:
   decideur: >
     Vous êtes sous-préfet en charge du dossier. La région a 9,2 % de chômage.

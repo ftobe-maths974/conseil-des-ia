@@ -47,7 +47,6 @@ type ScenarioData = {
   id: string;
   title: string;
   context: string;
-  constraint_from_mandat: string;
   roles_briefing: { decideur: string; technicien: string; affecte: string; contre_pouvoir: string };
   difficulty: string;
 };
@@ -56,7 +55,6 @@ const scenarioData: ScenarioData | null = scenario ? {
   id: scenario.data.id,
   title: scenario.data.title,
   context: scenario.data.context,
-  constraint_from_mandat: scenario.data.constraint_from_mandat,
   roles_briefing: scenario.data.roles_briefing,
   difficulty: scenario.data.difficulty,
 } : null;
@@ -92,7 +90,6 @@ const scenarioData: ScenarioData | null = scenario ? {
           <p class="p4__mandat-bascule-text" id="p4-mandat-bascule-text"></p>
         </div>
         <blockquote class="p4__mandat-text" id="p4-mandat-text"></blockquote>
-        <p class="p4__mandat-constraint" id="p4-mandat-constraint"></p>
       </div>
     </section>
 
@@ -108,10 +105,6 @@ const scenarioData: ScenarioData | null = scenario ? {
           </div>
           <h2 class="p4__scenario-title">{scenarioData.title}</h2>
           <p class="p4__scenario-context">{scenarioData.context}</p>
-          <aside class="p4__scenario-constraint" id="p4-constraint-box" hidden>
-            <span class="p4__scenario-constraint-label">Contrainte du mandat</span>
-            <p>{scenarioData.constraint_from_mandat}</p>
-          </aside>
         </section>
 
         <!-- Rôles -->
@@ -242,7 +235,6 @@ const scenarioData: ScenarioData | null = scenario ? {
 
   // ── Affichage du mandat reçu ──────────────────────────────────────────────
   const mandatContent = document.getElementById('p4-mandat-content')!;
-  const constraintBox = document.getElementById('p4-constraint-box');
 
   if (handoff) {
     document.getElementById('p4-mandat-from')!.textContent =
@@ -266,13 +258,7 @@ const scenarioData: ScenarioData | null = scenario ? {
 
     document.getElementById('p4-mandat-text')!.textContent = handoff.text;
 
-    const constraintEl = document.getElementById('p4-mandat-constraint')!;
-    constraintEl.textContent =
-      `Ce mandat concerne la chambre "${CHAMBER_LABELS[handoff.chamber] ?? handoff.chamber}" ` +
-      `avec un niveau d'irréversibilité : ${REV_LABELS[handoff.level] ?? handoff.level}.`;
-
     mandatContent.hidden = false;
-    if (constraintBox) constraintBox.hidden = false;
 
     if (handoff.level === 'red') {
       mandatContent.classList.add('p4__mandat-content--red');

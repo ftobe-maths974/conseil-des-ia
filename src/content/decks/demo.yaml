@@ -4,23 +4,23 @@ groups:
   - id: groupe-A
     chamber: delegation-vs-souverainete
     receives_from: groupe-E
-    scenario_id: scenario-met
+    scenario_id: scenario-del
   - id: groupe-B
     chamber: invisibilite-vs-arbitrage
     receives_from: groupe-A
-    scenario_id: scenario-del
+    scenario_id: scenario-inv
   - id: groupe-C
     chamber: preuve-vs-simulation
     receives_from: groupe-B
-    scenario_id: scenario-inv
+    scenario_id: scenario-pre
   - id: groupe-D
     chamber: singularite-vs-standard
     receives_from: groupe-C
-    scenario_id: scenario-pre
+    scenario_id: scenario-sin
   - id: groupe-E
     chamber: metabolisme-vs-progres
     receives_from: groupe-D
-    scenario_id: scenario-sin
+    scenario_id: scenario-met
 mandat_circulation:
   groupe-A: groupe-B
   groupe-B: groupe-C

@@ -9,11 +9,6 @@ context: >
   réduit de 15 %. Le modèle croise données médicales, géographiques et socio-
   économiques. L'objectif est de réduire les coûts liés aux traitements abandonnés.
   Le dispositif serait déployé en silence — aucune mention dans les courriers patients.
-constraint_from_mandat: >
-  Le mandat reçu vous impose de vous prononcer sur une mesure affectant la visibilité
-  des critères de décision dans un système d'attribution de ressources. Votre acte
-  doit répondre à la question : jusqu'où l'invisibilité algorithmique est-elle
-  acceptable quand elle affecte l'accès aux soins ?
 roles_briefing:
   decideur: >
     Vous êtes directeur de la CPAM. Le budget est sous pression. PredictHealth a

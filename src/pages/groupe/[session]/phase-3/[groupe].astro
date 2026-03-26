@@ -109,12 +109,6 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
       </span>
     </header>
 
-    <!-- Rappel point de bascule (rempli depuis le hash URL) -->
-    <div class="p3__bascule-reminder" id="p3-bascule-reminder" hidden>
-      <span class="p3__bascule-label">Votre point de bascule — Phase 2</span>
-      <p class="p3__bascule-text" id="p3-bascule-text"></p>
-    </div>
-
     <!-- Instructions -->
     <section class="p3__instructions" id="p3-instructions">
       <p class="p3__instructions-text">
@@ -126,29 +120,33 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     <!-- Grille des 4 cartes action -->
     <section class="p3__cards" id="p3-cards" aria-label="Cartes action disponibles">
       {actionsData.map(action => (
-        <article
-          class="p3-card"
-          data-id={action.id}
-          data-rev={action.reversibility}
-          role="button"
-          tabindex="0"
-          aria-pressed="false"
-          aria-label={`Sélectionner : ${action.title}`}
-        >
-          <div class="p3-card__meta">
-            <span class="p3-card__id">{action.id}</span>
-            <div class="p3-card__badges">
-              <span class="rev-badge" data-rev={action.reversibility}>
-                {REV_LABELS[action.reversibility]}
-              </span>
-              <span class="p3-card__scope">{action.scope}</span>
+        <article class="p3-card" data-id={action.id} data-rev={action.reversibility}>
+          <details class="p3-card__details">
+            <summary class="p3-card__summary">
+              <span class="p3-card__id">{action.id}</span>
+              <h2 class="p3-card__title">{action.title}</h2>
+              <span class="p3-card__chevron" aria-hidden="true">›</span>
+            </summary>
+            <div class="p3-card__expanded">
+              <div class="p3-card__badges">
+                <span class="rev-badge" data-rev={action.reversibility}>
+                  {REV_LABELS[action.reversibility]}
+                </span>
+                <span class="p3-card__scope">{action.scope}</span>
+              </div>
+              <p class="p3-card__body">{action.body}</p>
+              <div class="p3-card__tags" aria-hidden="true">
+                {action.tags.map(tag => <span class="p3-card__tag">#{tag}</span>)}
+              </div>
+              <button
+                class="p3-card__select-btn"
+                data-id={action.id}
+                data-rev={action.reversibility}
+              >
+                Choisir cette action →
+              </button>
             </div>
-          </div>
-          <h2 class="p3-card__title">{action.title}</h2>
-          <p class="p3-card__body">{action.body}</p>
-          <div class="p3-card__tags" aria-hidden="true">
-            {action.tags.map(tag => <span class="p3-card__tag">#{tag}</span>)}
-          </div>
+          </details>
           <div class="p3-card__check" aria-hidden="true">✓ Sélectionnée</div>
         </article>
       ))}
@@ -160,8 +158,17 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
       un mandat irréversible à votre tour. Choisissez une carte verte ou jaune.
     </div>
 
-    <!-- Formulaire de rédaction du mandat -->
-    <section class="p3__form" id="p3-form" hidden>
+    <!-- Bloc mandat : rappel + formulaire -->
+    <div class="p3__mandat-block" id="p3-mandat-block" hidden>
+
+      <!-- Rappel point de bascule (rempli depuis le hash URL) -->
+      <div class="p3__bascule-reminder" id="p3-bascule-reminder" hidden>
+        <span class="p3__bascule-label">* RAPPEL : Votre point de bascule — Phase 2</span>
+        <p class="p3__bascule-text" id="p3-bascule-text"></p>
+      </div>
+
+      <!-- Formulaire de rédaction du mandat -->
+      <section class="p3__form" id="p3-form">
       <div class="p3__mandat-card" id="p3-selected-title" aria-hidden="true">
         <!-- Nom de la carte sélectionnée, rempli par JS -->
       </div>
@@ -200,7 +207,9 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
           Générer le QR code →
         </button>
       </div>
-    </section>
+      </section>
+
+    </div><!-- /.p3__mandat-block -->
 
     <!-- Panneau QR code -->
     <section class="p3__qr-panel" id="p3-qr-panel" hidden aria-live="polite">
@@ -274,6 +283,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
 
   // ── Éléments DOM ─────────────────────────────────────────────────────────
   const cardsSection  = document.getElementById('p3-cards')!;
+  const mandatBlock   = document.getElementById('p3-mandat-block')!;
   const formSection   = document.getElementById('p3-form')!;
   const qrPanel       = document.getElementById('p3-qr-panel')!;
   const selectedTitle = document.getElementById('p3-selected-title')!;
@@ -288,20 +298,12 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   const copyBtn       = document.getElementById('p3-copy-btn') as HTMLButtonElement;
 
   // ── Sélection de carte ────────────────────────────────────────────────────
-  cardsSection.addEventListener('click', handleCardSelect);
-  cardsSection.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleCardSelect(e);
-    }
-  });
+  cardsSection.addEventListener('click', (e: Event) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('.p3-card__select-btn');
+    if (!btn) return;
 
-  function handleCardSelect(e: Event): void {
-    const card = (e.target as HTMLElement).closest<HTMLElement>('.p3-card');
-    if (!card) return;
-
-    const id  = card.dataset.id!;
-    const rev = card.dataset.rev!;
+    const id  = btn.dataset.id!;
+    const rev = btn.dataset.rev!;
 
     // Règle : pas de red si héritage red
     if (inheritedRed && rev === 'red') {
@@ -313,24 +315,23 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     // Déselectionner l'ancienne carte
     cardsSection.querySelectorAll<HTMLElement>('.p3-card--selected').forEach(c => {
       c.classList.remove('p3-card--selected');
-      c.setAttribute('aria-pressed', 'false');
     });
 
     // Sélectionner la nouvelle
+    const card = btn.closest<HTMLElement>('.p3-card')!;
     card.classList.add('p3-card--selected');
-    card.setAttribute('aria-pressed', 'true');
     selectedId = id;
 
     // Mettre à jour le titre affiché dans le formulaire
     const action = actionsData.find(a => a.id === id);
     selectedTitle.textContent = action?.title ?? '';
 
-    // Afficher le formulaire
-    formSection.hidden = false;
-    formSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    // Afficher le bloc mandat
+    mandatBlock.hidden = false;
+    mandatBlock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     parcequeTa.focus();
     updateSubmitState();
-  }
+  });
 
   // ── Formulaire ────────────────────────────────────────────────────────────
   parcequeTa.addEventListener('input', updateSubmitState);
@@ -402,7 +403,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     qrUrlEl.textContent = fullUrl;
 
     // Afficher le panneau
-    formSection.hidden = true;
+    mandatBlock.hidden = true;
     document.getElementById('p3-instructions')!.hidden = true;
     qrPanel.hidden = false;
     qrPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -460,12 +461,21 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     text-align: right; max-width: 16ch; line-height: 1.3;
   }
 
+  /* ── Bloc mandat (parent rappel + formulaire) ────────────────────────────── */
+  .p3__mandat-block {
+    display: flex; flex-direction: column; gap: var(--space-lg);
+    background: var(--bg-surface);
+    border: 2px solid var(--chamber-color, var(--chamber-delegation));
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
+  }
+
   /* ── Rappel point de bascule ─────────────────────────────────────────────── */
   .p3__bascule-reminder {
     background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
     border-left: 3px solid var(--chamber-color, var(--chamber-delegation));
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     padding: var(--space-md) var(--space-lg);
     display: flex; flex-direction: column; gap: var(--space-xs);
   }
@@ -497,20 +507,8 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     background: var(--bg-card);
     border: 2px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    cursor: pointer;
-    transition: border-color var(--transition-base), background var(--transition-base),
-                box-shadow var(--transition-base);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-    position: relative;
-    outline: none;
-  }
-
-  .p3-card:hover, .p3-card:focus-visible {
-    background: var(--bg-card-hover);
-    border-color: var(--text-muted);
+    overflow: hidden;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
   }
 
   .p3-card--selected {
@@ -518,31 +516,45 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
   }
 
-  /* ── Check indicator ─────────────────────────────────────────────────────── */
-  .p3-card__check {
-    display: none;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--chamber-delegation);
-    font-weight: 600;
-  }
-  .p3-card--selected .p3-card__check { display: block; }
+  /* ── Summary (replié) ────────────────────────────────────────────────────── */
+  .p3-card__details { }
 
-  /* ── Contenu carte ───────────────────────────────────────────────────────── */
-  .p3-card__meta {
-    display: flex; justify-content: space-between;
-    align-items: flex-start; gap: var(--space-sm); flex-wrap: wrap;
+  .p3-card__summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    transition: background var(--transition-fast);
   }
-  .p3-card__id { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); }
+  .p3-card__summary::-webkit-details-marker { display: none; }
+  .p3-card__summary:hover,
+  .p3-card__details[open] .p3-card__summary { background: var(--bg-card-hover); }
+
+  .p3-card__id {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--text-muted); flex-shrink: 0;
+  }
+  .p3-card__title {
+    flex: 1; font-family: var(--font-display); font-size: 0.95rem;
+    font-weight: 600; line-height: 1.3;
+  }
+  .p3-card__chevron {
+    font-size: 1.1rem; color: var(--text-muted); flex-shrink: 0;
+    transition: transform var(--transition-fast);
+  }
+  .p3-card__details[open] .p3-card__chevron { transform: rotate(90deg); }
+
+  /* ── Contenu déplié ──────────────────────────────────────────────────────── */
+  .p3-card__expanded {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    border-top: 1px solid var(--border-subtle);
+    display: flex; flex-direction: column; gap: var(--space-md);
+  }
+
   .p3-card__badges { display: flex; gap: var(--space-xs); align-items: center; }
   .p3-card__scope {
     font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);
     background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm); padding: 2px 6px;
-  }
-  .p3-card__title {
-    font-family: var(--font-display); font-size: 1rem;
-    font-weight: 600; line-height: 1.3;
   }
   .p3-card__body { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; }
   .p3-card__tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
@@ -551,6 +563,35 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm); padding: 1px 6px;
   }
+
+  /* ── Bouton de sélection ─────────────────────────────────────────────────── */
+  .p3-card__select-btn {
+    align-self: flex-end;
+    padding: var(--space-xs) var(--space-lg);
+    background: transparent; border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); color: var(--text-secondary);
+    font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition-fast), border-color var(--transition-fast),
+                color var(--transition-fast);
+  }
+  .p3-card__select-btn:hover {
+    background: var(--chamber-delegation); border-color: var(--chamber-delegation);
+    color: #fff;
+  }
+  .p3-card--selected .p3-card__select-btn {
+    background: var(--chamber-delegation); border-color: var(--chamber-delegation);
+    color: #fff;
+  }
+
+  /* ── Check indicator ─────────────────────────────────────────────────────── */
+  .p3-card__check {
+    display: none;
+    font-family: var(--font-mono); font-size: 0.72rem;
+    color: var(--chamber-delegation); font-weight: 600;
+    padding: 2px var(--space-lg) var(--space-xs);
+  }
+  .p3-card--selected .p3-card__check { display: block; }
 
   /* ── Alerte red ──────────────────────────────────────────────────────────── */
   .p3__red-warning {
@@ -571,9 +612,6 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
 
   .p3__form {
     display: flex; flex-direction: column; gap: var(--space-lg);
-    background: var(--bg-card); border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg); padding: var(--space-xl);
-    animation: slide-in 250ms ease both;
   }
 
   /* Nom de la carte sélectionnée */

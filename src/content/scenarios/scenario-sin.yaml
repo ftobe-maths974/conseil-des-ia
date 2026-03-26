@@ -9,11 +9,6 @@ context: >
   de chaque élève et génère des rapports hebdomadaires pour les enseignants.
   Le déploiement est prévu en 6 mois. Les enseignants n'ont pas été consultés.
   Les données des élèves sont hébergées hors UE.
-constraint_from_mandat: >
-  Le mandat reçu vous engage à vous prononcer sur l'imposition d'un standard IA
-  unique dans un domaine à fort impact social. Votre acte doit répondre à la
-  question : quelles conditions permettent d'accepter — ou imposent de refuser —
-  l'homogénéisation d'une pratique via un outil IA unique ?
 roles_briefing:
   decideur: >
     Vous êtes conseiller du ministre. Les résultats des pilotes montrent +18 % sur
