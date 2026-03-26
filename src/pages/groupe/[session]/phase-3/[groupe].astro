@@ -4,11 +4,13 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
 // ── Chambres assignées au deck demo ──────────────────────────────────────────
+// Ordre canonique : delegation → invisibilite → preuve → singularite → metabolisme
 const CHAMBER_MAP: Record<string, string> = {
   'groupe-A': 'delegation-vs-souverainete',
-  'groupe-B': 'preuve-vs-simulation',
-  'groupe-C': 'metabolisme-vs-progres',
-  'groupe-D': 'invisibilite-vs-arbitrage',
+  'groupe-B': 'invisibilite-vs-arbitrage',
+  'groupe-C': 'preuve-vs-simulation',
+  'groupe-D': 'singularite-vs-standard',
+  'groupe-E': 'metabolisme-vs-progres',
 };
 
 const CHAMBER_LABELS: Record<string, string> = {
@@ -19,12 +21,13 @@ const CHAMBER_LABELS: Record<string, string> = {
   'singularite-vs-standard':    'Singularité vs Standard',
 };
 
-// Rotation du mandat : groupe-A → B → C → D → A
+// Rotation du mandat (5 groupes) : A → B → C → D → E → A
 const NEXT_GROUPE: Record<string, string> = {
   'groupe-A': 'groupe-B',
   'groupe-B': 'groupe-C',
   'groupe-C': 'groupe-D',
-  'groupe-D': 'groupe-A',
+  'groupe-D': 'groupe-E',
+  'groupe-E': 'groupe-A',
 };
 
 // ── Tirage déterministe des 4 cartes action ───────────────────────────────
@@ -50,7 +53,7 @@ function selectActions(
 
 // ── Routes statiques ──────────────────────────────────────────────────────
 export async function getStaticPaths() {
-  return ['groupe-A', 'groupe-B', 'groupe-C', 'groupe-D'].map(groupe => ({
+  return ['groupe-A', 'groupe-B', 'groupe-C', 'groupe-D', 'groupe-E'].map(groupe => ({
     params: { session: 'demo', groupe },
   }));
 }

@@ -5,10 +5,10 @@
 :root {
   /* — Couleurs des 5 chambres — */
   --chamber-delegation:   #2563eb; /* bleu souverain */
-  --chamber-preuve:       #dc2626; /* rouge alerte */
+  --chamber-preuve:       #d97706; /* ambre alerte */
   --chamber-metabolisme:  #059669; /* vert organique */
   --chamber-invisibilite: #7c3aed; /* violet ombre */
-  --chamber-singularite:  #d97706; /* ambre singulier */
+  --chamber-singularite:  #e8563a; /* corail singulier */
 
   /* — Réversibilité — */
   --rev-green:  #22c55e;

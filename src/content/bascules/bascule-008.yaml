@@ -1,0 +1,18 @@
+id: bascule-008
+phase: bascule
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Le score de crédit algorithmique remplace la relation bancaire"
+situation: >
+  Les banques délèguent l'évaluation du risque à des modèles qui agrègent des milliers
+    de signaux — achats, géolocalisation, comportement en ligne. Le conseiller humain ne
+    comprend plus les critères. Le client non plus.
+question: >
+  Peut-on refuser un crédit à quelqu'un sans être capable de lui expliquer pourquoi ?
+tags: 
+  - credit
+  - opacite
+  - finance
+  - droits
+version: "1.0"

@@ -1,0 +1,19 @@
+id: bascule-015
+phase: bascule
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Les datacenters IA entrent en compétition avec l'agriculture pour l'eau locale"
+situation: >
+  Le refroidissement des serveurs nécessite des volumes massifs d'eau douce. Dans
+    des régions soumises à des sécheresses récurrentes, les datacenters des grandes
+    plateformes IA obtiennent des droits d'eau prioritaires sur les usages agricoles
+    locaux — sans consultation publique.
+question: >
+  Quand une infrastructure numérique prive une communauté de ressources vitales, comment arbitre-t-on entre intérêt global et survie locale ?
+tags: 
+  - eau
+  - territoire
+  - datacenter
+  - agriculture
+version: "1.0"

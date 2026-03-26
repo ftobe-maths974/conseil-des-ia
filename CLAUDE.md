@@ -30,6 +30,38 @@ src/content/
   roles/        → fiches rôle Phase 4 (à créer)
   decks/        → configurations de partie (à créer)
 
+## Circulation des mandats
+Toujours circulaire, définie dans le deck :
+A → B → C → D → E → A
+Jamais choisi en session, jamais aléatoire.
+Le groupe destinataire est affiché nommément dans l'interface Phase 3.
+
+## Chaîne d'implications entre chambres (ordre canonique)
+delegation → invisibilite → preuve → singularite → metabolisme → delegation
+Cet ordre détermine la rotation des groupes dans le deck standard 5 groupes.
+Chaque groupe reçoit le mandat de la chambre qui l'implique logiquement.
+
+## Configurations de groupes supportées
+
+4 groupes : retire Singularité vs Standard
+  Ordre : Délégation → Invisibilité → Preuve → Métabolisme
+
+5 groupes : version canonique, toutes les chambres
+  Ordre : Délégation → Invisibilité → Preuve → Singularité → Métabolisme
+
+6 groupes : duplique Délégation vs Souveraineté
+  Les deux groupes Délégation reçoivent des cartes différentes
+  de la même chambre (suffixe -A et -B dans les fichiers YAML)
+
+La rotation circulaire et l'assignation chambre/groupe
+sont définies dans le fichier deck YAML, jamais calculées
+à la volée. L'animateur choisit son deck au lancement.
+
+## Cohérence verticale par chambre
+Un groupe travaille la même chambre de la Phase 1 à la Phase 4.
+Bascule, tension, action et scénario sont tous filtrés par chamber.
+Jamais de mélange inter-chambres sauf décision explicite de l'animateur.
+
 ## Les 5 phases du jeu
 1. Dossiers de Bascule (20 min)
    - 3 cartes tirées depuis bascules/ selon la chambre du groupe
@@ -130,17 +162,22 @@ L'animateur peut override depuis son interface.
 - [x] GitHub Actions deploy
 - [x] Phase 1 : tirage déterministe (3 cartes/chambre), tri ↑↓ interactif,
       bouton validation désactivé puis révélation de la carte top
+- [x] Phase 2 : 25 cartes tensions YAML (5/chambre × 5 chambres), accordion interactif,
+      textarea "point de bascule", navigation vers Phase 3
 - [x] Phase 3 : 20 cartes actions YAML (4/chambre × 5 chambres), sélection carte,
       rédaction mandat, encodage base64, génération QR code client-side
+- [x] Cohérence verticale : CHAMBER_MAP aligné sur la chaîne canonique
+      (delegation → invisibilite → preuve → singularite → metabolisme)
+- [x] Couleurs chambres corrigées (preuve=ambre, singularite=corail)
+- [x] 15 cartes bascules (3/chambre × 5 chambres), plus aucun fallback cross-chamber
+- [x] groupe-E (métabolisme) ajouté, rotation 5 groupes A→B→C→D→E→A
 
 ## Ce qui reste à faire (priorité ordre)
-1. Schémas Zod pour tensions, scenarios, roles, decks (actions ✓)
-2. Contenu : rédiger les cartes tensions (5 chambres × 5 cartes)
-3. Contenu : rédiger les scénarios (10 minimum)
-4. Phase 4 : réception mandat via URL hash + interface arbitrage
-6. Phase 4 : réception mandat via URL hash + interface arbitrage
-7. Interface animateur : timer + tableau des mandats + QR distribution
-8. Mode clair / lisibilité mobile en pleine lumière
+1. Phase 4 : réception mandat via URL hash + interface arbitrage
+   (scénarios + rôles + acte en 4 points)
+2. Contenu : rédiger les scénarios (5 minimum, 1 par chambre)
+3. Interface animateur : timer + tableau des mandats reçus + QR distribution
+4. Mode clair / lisibilité mobile en pleine lumière
 
 ## Conventions de code
 - Composants Astro pour tout ce qui est statique

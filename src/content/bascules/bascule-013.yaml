@@ -1,0 +1,19 @@
+id: bascule-013
+phase: bascule
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: individuel
+title: "Le tuteur IA scolaire décide en silence ce qui compte comme 'comprendre'"
+situation: >
+  Les plateformes d'apprentissage adaptatif évaluent la compréhension à travers des
+    patterns de réponse et de comportement. La définition de 'maîtriser un concept'
+    est encodée dans le modèle — sans que l'enseignant ni l'élève ne sachent
+    exactement ce qui est mesuré.
+question: >
+  Qui a le droit de définir ce que signifie apprendre, quand cette définition est enfouie dans un algorithme propriétaire ?
+tags: 
+  - education
+  - apprentissage
+  - evaluation
+  - standard
+version: "1.0"

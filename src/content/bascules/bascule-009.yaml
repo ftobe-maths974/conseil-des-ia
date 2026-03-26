@@ -1,0 +1,20 @@
+id: bascule-009
+phase: bascule
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: organisationnel
+title: "Le filtre algorithmique des CV crée une génération invisible"
+situation: >
+  Les ATS (systèmes de suivi des candidatures) éliminent entre 70 et 80 % des candidatures
+    avant qu'un humain ne les lise. Les profils atypiques — reconversion, trous dans le CV,
+    formation non standard — sont écartés de manière systématique et invisible.
+question: >
+  Quand l'algorithme de recrutement ne voit pas le candidat, qui est responsable de l'exclusion ?
+tags: 
+  - recrutement
+  - biais
+  - cv
+  - exclusion
+facilitator_note: >
+  Faire compter combien de personnes du groupe ont un profil 'atypique' selon ces critères.
+version: "1.0"

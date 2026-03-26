@@ -1,0 +1,19 @@
+id: bascule-010
+phase: bascule
+chamber: preuve-vs-simulation
+reversibility: red
+scope: individuel
+title: "La voix de n'importe qui peut être clonée en trois minutes"
+situation: >
+  Les outils de clonage vocal accessibles au grand public permettent de reproduire
+    la voix d'une personne à partir de quelques secondes d'enregistrement. Appels
+    frauduleux, faux témoignages, usurpation d'identité vocale : le seuil d'accès
+    s'est effondré.
+question: >
+  Quand la voix n'est plus une preuve d'identité, sur quoi fonde-t-on la confiance dans une communication ?
+tags: 
+  - voix
+  - identite
+  - fraude
+  - deepfake
+version: "1.0"

@@ -1,0 +1,21 @@
+id: bascule-014
+phase: bascule
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: individuel
+title: "Une requête à un LLM consomme 10 fois plus qu'une recherche Google"
+situation: >
+  Une conversation de 10 échanges avec un grand modèle de langage consomme
+    autant d'énergie que 10 recherches web classiques. Avec des milliards de requêtes
+    quotidiennes, l'IA générative représente une nouvelle catégorie de consommation
+    énergétique — invisible pour l'utilisateur.
+question: >
+  Faut-il afficher l'empreinte carbone de chaque requête IA, comme on affiche les calories sur les aliments ?
+tags: 
+  - energie
+  - carbone
+  - consommation
+  - transparence
+facilitator_note: >
+  Demander au groupe d'estimer sa consommation IA quotidienne avant de révéler les chiffres.
+version: "1.0"

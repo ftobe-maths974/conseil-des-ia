@@ -1,0 +1,18 @@
+id: bascule-011
+phase: bascule
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: systemique
+title: "Les images satellites retouchées entrent dans les négociations diplomatiques"
+situation: >
+  Des États utilisent des images satellites modifiées par IA pour alimenter des
+    négociations territoriales ou des rapports d'enquête internationaux. La
+    manipulation est techniquement indétectable par les méthodes conventionnelles.
+question: >
+  Quand les preuves géopolitiques deviennent simulables, comment les institutions internationales peuvent-elles encore arbitrer ?
+tags: 
+  - geopolitique
+  - preuve
+  - manipulation
+  - institutions
+version: "1.0"

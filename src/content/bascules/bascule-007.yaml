@@ -1,0 +1,20 @@
+id: bascule-007
+phase: bascule
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Le prestataire IA met à jour ses modèles sans prévenir — vos processus changent avec"
+situation: >
+  Une organisation construit ses procédures sur le comportement d'un modèle IA tiers.
+    Le prestataire déploie une mise à jour silencieuse. Les décisions produites diffèrent,
+    mais personne ne le remarque avant que les conséquences deviennent visibles.
+question: >
+  À quel moment une mise à jour logicielle non annoncée devient-elle une modification unilatérale du contrat de travail ?
+tags: 
+  - dependance
+  - contrat
+  - versioning
+  - gouvernance
+facilitator_note: >
+  Demander si quelqu'un a déjà vécu un changement de comportement d'outil sans notification.
+version: "1.0"

@@ -1,0 +1,19 @@
+id: bascule-012
+phase: bascule
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "L'IA médicale entraînée sur des données majoritaires rate les cas minoritaires"
+situation: >
+  Les modèles de diagnostic IA sont entraînés sur des données hospitalières historiques,
+    où certaines populations sont sous-représentées. Les erreurs de diagnostic se
+    concentrent sur les mêmes groupes que les inégalités existantes — et sont désormais
+    automatisées à grande échelle.
+question: >
+  Peut-on déployer un outil médical dont on sait qu'il est moins fiable pour certaines populations ?
+tags: 
+  - sante
+  - biais
+  - minorites
+  - diagnostic
+version: "1.0"
