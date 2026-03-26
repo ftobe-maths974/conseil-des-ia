@@ -1,0 +1,20 @@
+id: bascule-002
+phase: bascule
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Le patron t'appelle. Ce n'est pas lui."
+situation: >
+  En 2024, une entreprise hongkongaise a viré 25 millions de dollars
+  après un appel vidéo avec de faux dirigeants générés par IA.
+  Le clonage vocal d'une voix prend désormais 3 secondes d'enregistrement.
+question: >
+  Quand le coût de vérifier l'authenticité d'une information dépasse
+  le bénéfice de l'information elle-même, que se passe-t-il ?
+tags: [deepfake, confiance, fraude, authentification]
+facilitator_note: >
+  Attention au fatalisme. Si le groupe dit "on ne peut plus rien vérifier",
+  recentrer : quels systèmes de vérification existent déjà ?
+  Qui les contrôle ?
+illustration: /images/cards/bascule-002.svg
+version: "1.0"

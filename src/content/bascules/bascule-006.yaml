@@ -1,0 +1,22 @@
+id: bascule-006
+phase: bascule
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "Tu n'as pas choisi ta playlist. Elle te connaît mieux que toi."
+situation: >
+  Spotify Discover Weekly, TikTok For You, YouTube Recommandations :
+  des milliards d'heures de contenu consommé quotidiennement sans
+  aucune décision consciente de l'utilisateur.
+  Le choix a été délégué sans qu'on s'en rende compte.
+question: >
+  Si tu laisses une IA choisir ce que tu écoutes, regardes et lis
+  chaque jour, qui décide de qui tu deviens ?
+tags: [recommandation, algorithme, identite, autonomie, culture]
+facilitator_note: >
+  Carte d'entrée facile, très parlante pour ce public.
+  Bonne carte pour démarrer la Phase 1 si le groupe est silencieux.
+  Attention à ne pas rester trop longtemps sur TikTok —
+  faire glisser vers les enjeux systémiques.
+illustration: /images/cards/bascule-006.svg
+version: "1.0"

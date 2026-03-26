@@ -1,0 +1,19 @@
+id: bascule-001
+phase: bascule
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "Slack te résume ta réunion. Tu ne l'as pas écoutée."
+situation: >
+  Les outils de réunion (Teams, Zoom, Notion AI) proposent désormais
+  des résumés automatiques. Dans certaines entreprises, 40% des
+  participants avouent ne plus écouter en temps réel.
+question: >
+  À partir de quand l'incapacité à suivre une réunion sans assistance
+  devient-elle un handicap professionnel ?
+tags: [delegation, travail, attention, outils]
+facilitator_note: >
+  Demander si quelqu'un dans le groupe a déjà utilisé ce type d'outil.
+  Fait souvent émerger des témoignages concrets qui relancent le débat.
+illustration: /images/cards/bascule-001.svg
+version: "1.0"

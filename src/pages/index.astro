@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Accueil">
+  <main class="home">
+    <div class="home__container">
+      <div class="home__header">
+        <h1 class="home__title">Conseil des IA</h1>
+        <p class="home__subtitle">Jeu pédagogique sur les points de bascule de l'intelligence artificielle</p>
+      </div>
+
+      <div class="home__choices">
+        <a href={`${import.meta.env.BASE_URL}/animateur/demo`} class="home__card home__card--animateur">
+          <span class="home__card-icon">📡</span>
+          <span class="home__card-label">Animateur</span>
+          <span class="home__card-desc">Projection grand écran, timer, tableau de bord</span>
+        </a>
+
+        <a href={`${import.meta.env.BASE_URL}/groupe/demo/phase-1/groupe-A`} class="home__card home__card--groupe">
+          <span class="home__card-icon">📱</span>
+          <span class="home__card-label">Groupe</span>
+          <span class="home__card-desc">Interface mobile, cartes, mandats</span>
+        </a>
+      </div>
+
+      <p class="home__footnote">
+        Version 0.1 — Deck de démonstration
+      </p>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .home {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+  }
+
+  .home__container {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .home__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-sm);
+    background: linear-gradient(135deg, var(--chamber-delegation), var(--chamber-invisibilite));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .home__subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-3xl);
+    max-width: 28ch;
+    margin-inline: auto;
+    line-height: 1.5;
+  }
+
+  .home__choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  @media (max-width: 480px) {
+    .home__choices {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .home__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all var(--transition-base);
+    cursor: pointer;
+  }
+
+  .home__card:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .home__card--animateur:hover {
+    border-color: var(--chamber-delegation);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+  }
+
+  .home__card--groupe:hover {
+    border-color: var(--chamber-singularite);
+    box-shadow: 0 0 20px rgba(217, 119, 6, 0.2);
+  }
+
+  .home__card-icon {
+    font-size: 2.5rem;
+  }
+
+  .home__card-label {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .home__card-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .home__footnote {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+</style>

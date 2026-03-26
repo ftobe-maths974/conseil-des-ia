@@ -1,0 +1,21 @@
+id: bascule-004
+phase: bascule
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: organisationnel
+title: "Tu n'as pas eu le job. L'algorithme ne dit pas pourquoi."
+situation: >
+  Amazon a abandonné en 2018 un outil de tri de CV qui pénalisait
+  automatiquement les femmes. Des outils similaires tournent encore
+  dans des services RH, sans obligation de transparence
+  dans la majorité des pays.
+question: >
+  Quand une décision est prise par un algorithme sans explication
+  possible, à qui réclame-t-on justice ?
+tags: [biais, rh, recrutement, transparence, discrimination]
+facilitator_note: >
+  Riche en expériences personnelles. Certains étudiants ont déjà
+  passé des tests de recrutement automatisés. Laisser émerger
+  avant d'apporter le cadre réglementaire (RGPD, AI Act).
+illustration: /images/cards/bascule-004.svg
+version: "1.0"

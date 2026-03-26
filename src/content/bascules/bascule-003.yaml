@@ -1,0 +1,21 @@
+id: bascule-003
+phase: bascule
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Envoyer 50 messages ChatGPT = boire une bouteille d'eau."
+situation: >
+  Les datacenters IA consomment de l'eau pour refroidir leurs serveurs.
+  GPT-4 consomme environ 500ml d'eau pour 50 questions. En 2027,
+  les datacenters américains pourraient dépasser la consommation en eau
+  de certains États.
+question: >
+  À quel moment la décision d'utiliser une IA pour rédiger un email
+  devient-elle une décision environnementale ?
+tags: [environnement, eau, energie, datacenter, sobriete]
+facilitator_note: >
+  Chiffre souvent contesté par les groupes. C'est bien : les pousser
+  à chercher d'autres ordres de grandeur comparables
+  (streaming vidéo, crypto) enrichit le débat.
+illustration: /images/cards/bascule-003.svg
+version: "1.0"
