@@ -14,4 +14,7 @@ tags:
   - standard
   - minorite
   - diagnostic
+suggestions_bascule:
+  - "Le point de bascule est le moment où un diagnostic IA standardisé est préféré à l'avis d'un spécialiste humain pour un cas atypique — quand l'efficacité statistique prime sur le jugement clinique individuel."
+  - "Le point de bascule est quand le taux d'erreur différentiel d'une IA médicale sur des minorités biologiques est connu, documenté, et que le système est quand même déployé sans restriction."
 version: "1.0"

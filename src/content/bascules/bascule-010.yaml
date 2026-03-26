@@ -6,14 +6,19 @@ scope: individuel
 title: "La voix de n'importe qui peut être clonée en trois minutes"
 situation: >
   Les outils de clonage vocal accessibles au grand public permettent de reproduire
-    la voix d'une personne à partir de quelques secondes d'enregistrement. Appels
-    frauduleux, faux témoignages, usurpation d'identité vocale : le seuil d'accès
-    s'est effondré.
+  la voix d'une personne à partir de quelques secondes d'enregistrement. Appels
+  frauduleux, faux témoignages, usurpation d'identité vocale : le seuil d'accès
+  s'est effondré.
 question: >
   Quand la voix n'est plus une preuve d'identité, sur quoi fonde-t-on la confiance dans une communication ?
-tags: 
+tags:
   - voix
   - identite
   - fraude
   - deepfake
+facilitator_note:
+  si_silence: "Demandez : si vous receviez un appel avec la voix exacte d'un proche vous demandant de l'argent en urgence, qu'est-ce qui vous ferait douter ?"
+  si_debat_bloque: "Fait choc : des escrocs utilisent déjà le clonage vocal pour cibler des personnes âgées en se faisant passer pour leurs enfants. Le taux de succès est significativement supérieur aux arnaques classiques — la voix rassure."
+  si_trop_technique: "Revenez à l'infrastructure de confiance : on a construit nos systèmes de communication sur l'idée que la voix prouve l'identité. Cette hypothèse vient de s'effondrer. Qu'est-ce qu'on met à la place ?"
+  relance_cle: "Quand la biométrie ne suffit plus comme preuve, sur quoi repose la confiance dans nos échanges — numériques ou pas ?"
 version: "1.0"

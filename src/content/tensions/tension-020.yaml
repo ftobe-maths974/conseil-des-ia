@@ -14,4 +14,7 @@ tags:
   - democratie
   - expertise
   - legitimite
+suggestions_bascule:
+  - "Le point de bascule est le moment où auditer un algorithme public exige un niveau d'expertise que seule une poignée d'acteurs privés possède — quand la transparence démocratique crée une oligarchie de l'expertise."
+  - "Le point de bascule est quand l'audit citoyen devient techniquement impossible sans les outils et données que seules les grandes entreprises détiennent — quand contrôler le contrôleur exige d'être le contrôleur."
 version: "1.0"

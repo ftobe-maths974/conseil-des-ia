@@ -6,13 +6,18 @@ scope: systemique
 title: "Les images satellites retouchées entrent dans les négociations diplomatiques"
 situation: >
   Des États utilisent des images satellites modifiées par IA pour alimenter des
-    négociations territoriales ou des rapports d'enquête internationaux. La
-    manipulation est techniquement indétectable par les méthodes conventionnelles.
+  négociations territoriales ou des rapports d'enquête internationaux. La
+  manipulation est techniquement indétectable par les méthodes conventionnelles.
 question: >
   Quand les preuves géopolitiques deviennent simulables, comment les institutions internationales peuvent-elles encore arbitrer ?
-tags: 
+tags:
   - geopolitique
   - preuve
   - manipulation
   - institutions
+facilitator_note:
+  si_silence: "Demandez : si vous étiez juge international et qu'on vous montrait une image satellite, qu'est-ce que vous demanderiez pour vérifier qu'elle n'a pas été manipulée ?"
+  si_debat_bloque: "Fait choc : en 2022, des images satellites ont joué un rôle central dans les rapports sur des conflits armés. Des experts ont identifié des cas de manipulation dans des images utilisées par différentes parties — sans que les institutions aient pu trancher."
+  si_trop_technique: "Sortez de la géopolitique : le problème est identique dans n'importe quel contexte légal. Si les preuves visuelles sont falsifiables à grande échelle, le droit de la preuve doit être réécrit. Qui fait ce travail, et dans quel délai ?"
+  relance_cle: "Quand toute preuve peut être fabriquée à moindre coût, la question n'est plus 'est-ce vrai ?' mais 'qui a intérêt à ce que ce soit cru, et qui a le pouvoir de le faire croire ?'"
 version: "1.0"

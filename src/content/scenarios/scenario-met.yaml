@@ -1,0 +1,54 @@
+id: scenario-met
+phase: scenario
+chamber: metabolisme-vs-progres
+title: "L'autorisation du datacenter NexusAI à Clermont-Ferrand est soumise au vote"
+context: >
+  NexusAI, filiale d'un groupe américain, demande l'autorisation de construire un
+  datacenter de 120 MW à 8 km de Clermont-Ferrand, spécialisé dans l'entraînement
+  de grands modèles IA. Le projet promet 420 emplois directs et 2 400 emplois
+  indirects. Il consommera 28 millions de litres d'eau par an dans une région
+  touchée par trois sécheresses consécutives. L'électricité sera fournie par le
+  réseau national — dont 70 % de nucléaire. Le préfet doit statuer dans 30 jours.
+constraint_from_mandat: >
+  Le mandat reçu vous engage à vous prononcer sur une décision qui met en tension
+  le développement économique lié à l'IA et l'impact environnemental local et
+  systémique. Votre acte doit répondre à la question : à quelles conditions
+  l'infrastructure IA peut-elle être autorisée dans un contexte de tension sur
+  les ressources naturelles ?
+roles_briefing:
+  decideur: >
+    Vous êtes sous-préfet en charge du dossier. La région a 9,2 % de chômage.
+    NexusAI a la réputation d'honorer ses promesses d'emploi. Mais vous avez reçu
+    40 recours d'agriculteurs et de maires ruraux inquiets pour les nappes phréatiques.
+    Votre priorité : l'emploi et la cohésion territoriale. Votre angle mort :
+    vous n'avez pas d'expertise sur les projections hydrologiques à 10 ans.
+  technicien: >
+    Vous êtes hydrologue mandaté par la préfecture. Les projections montrent que
+    la consommation du datacenter représente 12 % des prélèvements autorisés sur
+    le bassin versant en année normale — mais 40 % en année de sécheresse.
+    NexusAI propose d'utiliser de l'eau recyclée à 60 %, mais cette technologie
+    n'a jamais été déployée à cette échelle en France. Les risques sont réels mais
+    quantifiables. Vous pouvez proposer des conditions techniques précises.
+  affecte: >
+    Vous êtes vigneron en appellation Auvergne, représentant 120 exploitations.
+    Vous utilisez l'irrigation en août-septembre. Trois sécheresses consécutives ont
+    déjà réduit vos réserves. Vous n'êtes pas contre le progrès, mais vous voulez
+    une garantie contractuelle que le datacenter sera contraint à zéro prélèvement
+    dès le déclenchement du seuil d'alerte hydrique. Votre ligne rouge :
+    l'eau ne peut pas être une variable d'ajustement pour une infrastructure
+    privée à but lucratif.
+  contre_pouvoir: >
+    Vous représentez un collectif de chercheurs en transitions énergétiques.
+    Vous avez calculé que ce datacenter représentera 0,8 % des émissions carbones
+    de la région d'ici 2030 si les engagements de NexusAI sont tenus — 2,1 % s'ils
+    ne le sont pas. Vous posez la question systémique : si toutes les régions de
+    France accueillent un datacenter similaire, quel est le bilan national ?
+    Votre demande : un moratoire national avant toute nouvelle autorisation.
+tags: 
+  - eau
+  - datacenter
+  - emploi
+  - territoire
+  - energie
+difficulty: eleve
+version: "1.0"

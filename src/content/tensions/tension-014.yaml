@@ -14,4 +14,7 @@ tags:
   - regulation
   - outil
   - energie
+suggestions_bascule:
+  - "Le point de bascule est le moment où on confie à l'IA la mesure de sa propre empreinte — quand le système qui pose problème devient aussi le système qui certifie qu'il ne pose plus problème."
+  - "Le point de bascule est quand une organisation considère que l'optimisation IA de sa consommation énergétique suffit à justifier l'expansion indéfinie de ses capacités IA."
 version: "1.0"

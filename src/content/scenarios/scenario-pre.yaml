@@ -1,0 +1,50 @@
+id: scenario-pre
+phase: scenario
+chamber: preuve-vs-simulation
+title: "Le parquet demande l'admission d'une reconstruction vocale IA comme preuve"
+context: >
+  Dans une affaire de fraude fiscale complexe, le parquet de Lyon souhaite soumettre
+  comme preuve une reconstruction vocale générée par IA à partir de fragments audio
+  dégradés. L'IA a été utilisée pour "restituer" des conversations dont les
+  enregistrements originaux sont partiellement corrompus. La défense conteste
+  l'authenticité. C'est la première fois qu'un tel élément est soumis à une
+  juridiction française. La décision créera un précédent national.
+constraint_from_mandat: >
+  Le mandat reçu vous engage sur la question de la valeur probatoire des contenus
+  produits ou transformés par IA. Votre acte doit définir les conditions sous
+  lesquelles une preuve synthétique peut être admise — ou les raisons pour
+  lesquelles elle ne peut pas l'être dans ce contexte.
+roles_briefing:
+  decideur: >
+    Vous êtes juge d'instruction. Vous devez décider si cette pièce est recevable
+    avant le procès. Si vous refusez, l'affaire pourrait être classée faute de
+    preuves suffisantes. Si vous acceptez, vous créez un précédent que d'autres
+    parquets utiliseront. Votre priorité : la justice. Votre angle mort :
+    vous n'avez pas d'expertise technique pour évaluer la fiabilité du modèle.
+  technicien: >
+    Vous êtes expert judiciaire en forensique numérique. La reconstruction vocale
+    a un taux de fidélité estimé à 87 % — ce qui signifie 13 % d'incertitude
+    sur chaque segment. Vous pouvez certifier le processus mais pas garantir
+    que chaque mot est exact. Vous pouvez proposer un protocole de certification
+    indépendante, mais il prendrait 6 mois.
+  affecte: >
+    Vous représentez le prévenu, PDG d'une PME de 80 salariés. Vous contestez
+    avoir dit certaines des phrases "reconstruites". Vous craignez que votre
+    vie professionnelle soit détruite sur la base d'un algorithme. Vos avocats
+    ne peuvent pas contre-expertiser le modèle : il est protégé par le secret
+    des affaires de la société qui l'a développé.
+  contre_pouvoir: >
+    Vous êtes chercheuse en droit du numérique. Vous documentez depuis 3 ans
+    l'usage croissant des outils IA dans les procédures judiciaires. Votre
+    constat : les juges n'ont pas la formation pour évaluer ces preuves, et
+    les défenses rarement les moyens de les contester. Admettre cette preuve
+    sans cadre strict, c'est ouvrir une brèche que les acteurs malveillants
+    utiliseront en sens inverse.
+tags: 
+  - justice
+  - preuve
+  - deepfake
+  - precedent
+  - expertise
+difficulty: eleve
+version: "1.0"

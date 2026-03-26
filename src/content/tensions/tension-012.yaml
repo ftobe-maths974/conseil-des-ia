@@ -14,6 +14,7 @@ tags:
   - consommation
   - efficacite
   - paradoxe
-facilitator_note: >
-  Demander des exemples d'effets rebond que le groupe a vécus personnellement.
+suggestions_bascule:
+  - "Le point de bascule est le moment où l'effet rebond est documenté et prévisible, mais où aucune organisation n'est prête à plafonner ses usages IA pour l'éviter."
+  - "Le point de bascule est quand optimiser ne suffit plus et qu'il faut choisir explicitement de ne pas utiliser — quand l'efficacité technique ne peut plus compenser la croissance des usages."
 version: "1.0"

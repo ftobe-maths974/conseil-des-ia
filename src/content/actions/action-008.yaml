@@ -11,4 +11,8 @@ tags:
   - litteratie
   - jeunesse
   - simulation
+facilitator_note:
+  si_silence: "Demandez : qu'est-ce qu'on enseignait en éducation aux médias il y a 10 ans ? Est-ce que ça a servi — et qu'est-ce qui serait vraiment différent cette fois ?"
+  si_debat_bloque: "Angle constructif : former les lycéens ne résout pas le problème systémique, mais crée des adultes mieux équipés. Qu'est-ce qu'un lycéen formé ferait différemment face à un deepfake partagé par un proche ?"
+  relance_cle: "Si la détection technique devient vite obsolète, l'objectif de la formation devrait-il être de détecter le faux — ou d'apprendre à décider et agir malgré l'incertitude ?"
 version: "1.0"

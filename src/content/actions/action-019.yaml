@@ -11,4 +11,8 @@ tags:
   - label
   - confiance
   - numerique
+facilitator_note:
+  si_silence: "Demandez : si un service public affiche 'IA de confiance', est-ce que ça change votre comportement vis-à-vis de lui ? Qu'attendriez-vous concrètement de ce label pour lui faire confiance ?"
+  si_debat_bloque: "Fait choc : le label 'France Numérique de Confiance' existe depuis 2021 mais couvre uniquement des critères d'hébergement et de sécurité — pas explicabilité, ni biais, ni recours. Les usagers ne font pas la distinction."
+  relance_cle: "Un label que les usagers ne lisent pas ou ne comprennent pas reste cosmétique. Quelle serait la condition minimale pour qu'un label IA soit réellement utile à un citoyen — pas à une administration ?"
 version: "1.0"

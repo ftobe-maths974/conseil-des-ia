@@ -11,4 +11,8 @@ tags:
   - etiquetage
   - contenu
   - verification
+facilitator_note:
+  si_silence: "Demandez : si vous lisiez cet article en sachant qu'il est généré par IA, est-ce que ça changerait votre niveau de confiance ? Pourquoi — et est-ce que ce serait rationnel ?"
+  si_debat_bloque: "Fait choc : l'AI Act européen impose l'étiquetage pour certains contenus, mais en pratique 90 % des contenus IA ne tombent pas dans les catégories à risque élevé. L'obligation ne couvre pas ce qu'on voit le plus."
+  relance_cle: "Un label que personne ne lit sert-il à quelque chose ? Quelle condition rendrait cet étiquetage réellement utile plutôt que symbolique — et pour qui ?"
 version: "1.0"

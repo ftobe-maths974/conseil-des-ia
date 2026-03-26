@@ -13,4 +13,8 @@ tags:
   - media
 amplifies:
   - action-005
+facilitator_note:
+  si_silence: "Demandez : si un registre public existait, qui aurait intérêt à l'utiliser activement ? Et qui aurait intérêt à ce qu'il n'existe pas ou reste vide ?"
+  si_debat_bloque: "Fait choc : le gouvernement britannique a lancé en 2023 un projet pilote de registre de contenus synthétiques. Il a été abandonné après 6 mois, faute de participation volontaire des grandes plateformes."
+  relance_cle: "Un registre public n'a de valeur que si ceux qui créent du contenu synthétique y participent. Comment forcer cette participation sans pousser les acteurs vers des pratiques non déclarées ?"
 version: "1.0"

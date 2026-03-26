@@ -12,4 +12,7 @@ tags:
   - resilience
   - standardisation
   - fragilite
+suggestions_bascule:
+  - "Le point de bascule est le moment où tous les acteurs critiques d'un secteur utilisent le même modèle IA — quand une défaillance partagée n'a plus de correctif possible parce qu'il n'existe aucune alternative."
+  - "Le point de bascule est quand la standardisation des IA rend systémique une vulnérabilité que la diversité aurait maintenue locale et gérable."
 version: "1.0"

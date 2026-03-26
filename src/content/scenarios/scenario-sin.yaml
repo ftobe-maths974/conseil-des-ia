@@ -1,0 +1,49 @@
+id: scenario-sin
+phase: scenario
+chamber: singularite-vs-standard
+title: "Le ministère impose EduIA comme tuteur universel en classe de 6ème"
+context: >
+  Le ministère de l'Éducation nationale veut déployer EduIA, développé par un
+  consortium franco-canadien, comme outil de tutorat adaptatif obligatoire pour
+  tous les élèves de 6ème. EduIA personnalise les exercices selon le profil
+  de chaque élève et génère des rapports hebdomadaires pour les enseignants.
+  Le déploiement est prévu en 6 mois. Les enseignants n'ont pas été consultés.
+  Les données des élèves sont hébergées hors UE.
+constraint_from_mandat: >
+  Le mandat reçu vous engage à vous prononcer sur l'imposition d'un standard IA
+  unique dans un domaine à fort impact social. Votre acte doit répondre à la
+  question : quelles conditions permettent d'accepter — ou imposent de refuser —
+  l'homogénéisation d'une pratique via un outil IA unique ?
+roles_briefing:
+  decideur: >
+    Vous êtes conseiller du ministre. Les résultats des pilotes montrent +18 % sur
+    les évaluations standardisées. La presse est favorable. Le contrat est signé.
+    Votre priorité : tenir le calendrier politique. Votre angle mort : vous n'avez
+    pas lu les clauses de propriété des données enfants dans le contrat.
+  technicien: >
+    Vous avez évalué EduIA pour la DINUM. Le modèle est performant sur les mathématiques
+    et la grammaire. Mais il est fragile sur les profils atypiques (dys, allophones,
+    précoces) et les enseignants signalent que les rapports hebdomadaires créent une
+    pression de conformité sur les élèves. Le stockage hors UE viole techniquement
+    le RGPD pour les mineurs.
+  affecte: >
+    Vous êtes professeure de français en zone rurale, représentant le collectif
+    Enseignants Sans Algorithme. Vous observez que EduIA formate les élèves sur un
+    modèle de réussite unique et pénalise la créativité et les raisonnements non
+    linéaires. Votre ligne rouge : un outil pédagogique imposé sans consultation
+    des enseignants n'est pas un outil pédagogique, c'est un outil de contrôle.
+  contre_pouvoir: >
+    Vous représentez une association de protection des données des mineurs. Les CGU
+    d'EduIA autorisent le prestataire à utiliser les données d'apprentissage pour
+    améliorer ses modèles commerciaux. Vous avez documenté que ces données peuvent
+    permettre d'inférer le QI, l'état de santé mentale et les difficultés familiales
+    des enfants. Votre question : qui a donné son consentement au nom des 800 000
+    élèves de 6ème ?
+tags: 
+  - education
+  - enfants
+  - donnees
+  - standard
+  - consentement
+difficulty: moyen
+version: "1.0"

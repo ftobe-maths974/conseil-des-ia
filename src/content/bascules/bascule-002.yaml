@@ -12,9 +12,10 @@ question: >
   Quand le coût de vérifier l'authenticité d'une information dépasse
   le bénéfice de l'information elle-même, que se passe-t-il ?
 tags: [deepfake, confiance, fraude, authentification]
-facilitator_note: >
-  Attention au fatalisme. Si le groupe dit "on ne peut plus rien vérifier",
-  recentrer : quels systèmes de vérification existent déjà ?
-  Qui les contrôle ?
+facilitator_note:
+  si_silence: "Demandez : qui dans ce groupe a déjà reçu un message ou un appel suspect, qui semblait venir de quelqu'un de connu ?"
+  si_debat_bloque: "Fait choc : en 2024, une entreprise hongkongaise a viré 25 millions de dollars sur la base d'un appel vidéo avec de faux dirigeants générés par IA. Toute la chaîne hiérarchique a été trompée."
+  si_trop_technique: "Sortez du 'comment détecter' : quand vérifier coûte plus que faire confiance, les organisations choisissent la confiance. C'est là que la fraude s'installe structurellement."
+  relance_cle: "Quand voix, visage et écriture ne prouvent plus rien, sur quoi base-t-on la confiance dans les institutions ?"
 illustration: /images/cards/bascule-002.svg
 version: "1.0"

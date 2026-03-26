@@ -14,4 +14,7 @@ tags:
   - datacenter
   - territoire
   - ressources
+suggestions_bascule:
+  - "Le point de bascule est le moment où une collectivité locale perd le contrôle de ses droits d'eau au profit d'infrastructures numériques — quand la souveraineté alimentaire est sacrifiée à la souveraineté numérique."
+  - "Le point de bascule est quand le stress hydrique d'une région est officiellement aggravé par des datacenters, et qu'aucune autorité n'a le pouvoir légal d'imposer un arbitrage entre les usages."
 version: "1.0"

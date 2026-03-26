@@ -12,8 +12,10 @@ question: >
   À partir de quand l'incapacité à suivre une réunion sans assistance
   devient-elle un handicap professionnel ?
 tags: [delegation, travail, attention, outils]
-facilitator_note: >
-  Demander si quelqu'un dans le groupe a déjà utilisé ce type d'outil.
-  Fait souvent émerger des témoignages concrets qui relancent le débat.
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici a déjà utilisé Teams ou Notion AI pour avoir le résumé d'une réunion qu'il n'avait pas suivie ?"
+  si_debat_bloque: "Fait choc : dans certaines entreprises, 40% des participants avouent ne plus écouter en temps réel. Ce n'est pas un comportement déviant — c'est une adaptation rationnelle."
+  si_trop_technique: "Ramenez au concret : si votre manager ne lit que le résumé IA de vos échanges, qui décide de ce qui est important dans votre travail ?"
+  relance_cle: "La vraie question n'est pas l'outil — c'est qui contrôle ce qui est résumé, et donc ce qui est mémorisé institutionnellement."
 illustration: /images/cards/bascule-001.svg
 version: "1.0"

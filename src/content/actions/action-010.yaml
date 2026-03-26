@@ -11,4 +11,8 @@ tags:
   - rse
   - transparence
   - mesure
+facilitator_note:
+  si_silence: "Demandez : si votre organisation publiait l'empreinte carbone de chaque outil IA utilisé, quel chiffre vous surprendrait le plus ? Lequel serait le plus difficile à rendre public ?"
+  si_debat_bloque: "Angle pragmatique : même une mesure imparfaite crée une pression interne. Quelles décisions changeraient concrètement si l'empreinte carbone de chaque outil était visible de tous les collaborateurs ?"
+  relance_cle: "Mesurer sans s'engager à réduire, c'est du reporting vert. Quelle condition transformerait cette publication en levier de changement réel plutôt qu'en exercice de communication ?"
 version: "1.0"

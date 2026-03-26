@@ -14,9 +14,10 @@ question: >
   aux idées marginales, aux raisonnements atypiques,
   aux erreurs créatives ?
 tags: [education, creativite, homogeneisation, cognition, evaluation]
-facilitator_note: >
-  Question personnelle pour ce groupe précis. Leur demander
-  s'ils reconnaissent ce phénomène dans leur promo.
-  Éviter le jugement moral, rester sur l'observation.
+facilitator_note:
+  si_silence: "Demandez : est-ce que vous reconnaissez ce phénomène dans votre promo ? Les rendus se ressemblent-ils plus qu'avant ? Évitez le jugement moral."
+  si_debat_bloque: "Fait choc : des chercheurs ont mesuré une réduction de la diversité lexicale dans les travaux étudiants depuis 2023 — pas de plagiat détectable, mais un appauvrissement mesurable des formulations et des angles."
+  si_trop_technique: "Sortez de la question de la triche. La vraie question : si tout le monde pense dans les mêmes cadres, qui produit les idées en rupture dont les organisations ont besoin dans 10 ans ?"
+  relance_cle: "L'IA optimise vers la réponse la plus probable — ce qui est, par définition, la réponse la plus moyenne. Qu'est-ce qu'on perd quand on optimise la pensée ?"
 illustration: /images/cards/bascule-005.svg
 version: "1.0"

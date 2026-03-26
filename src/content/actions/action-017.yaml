@@ -11,6 +11,9 @@ tags:
   - standard
   - iso
   - certification
-facilitator_note: >
-  Discuter qui établit le standard et comment il est mis à jour face à l'évolution rapide des modèles.
+facilitator_note:
+  si_silence: "Demandez : préféreriez-vous être diagnostiqué par une IA certifiée ISO ou par un médecin sans certification formelle ? Pourquoi — et qu'est-ce que ça dit de votre rapport à la certification ?"
+  si_debat_bloque: "Fait choc : l'AI Act classe les IA médicales comme 'haut risque' et impose certification et surveillance — mais des dizaines d'outils déjà déployés bénéficient d'une période de transition sans obligation jusqu'en 2027."
+  si_trop_technique: "Pas besoin d'entrer dans ISO ou l'AI Act. La question est : qui assume la responsabilité quand un standard certifié se trompe sur un cas atypique et que le patient en subit les conséquences ?"
+  relance_cle: "Un standard global protège les patients — mais consolide le marché autour des rares acteurs qui peuvent se payer la certification. Quel est le coût de cette consolidation pour les alternatives ?"
 version: "1.0"

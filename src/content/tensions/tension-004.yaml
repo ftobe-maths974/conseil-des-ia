@@ -12,6 +12,7 @@ tags:
   - asymetrie
   - information
   - autonomie
-facilitator_note: >
-  Demander au groupe de définir ce que serait un 'consentement éclairé' à une IA.
+suggestions_bascule:
+  - "Le point de bascule est le moment où l'utilisateur accepte une recommandation IA sans même chercher à la comprendre — quand la délégation est devenue un réflexe automatique, plus un choix."
+  - "Le point de bascule est quand la complexité du système rend structurellement impossible un consentement réel — où 'j'accepte' ne signifie plus rien."
 version: "1.0"

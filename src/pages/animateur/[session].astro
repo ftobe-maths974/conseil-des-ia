@@ -3,114 +3,467 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  return [
-    { params: { session: 'demo' } },
-  ];
+  return [{ params: { session: 'demo' } }];
 }
 
 const { session } = Astro.params;
 const bascules = await getCollection('bascules');
+const tensions = await getCollection('tensions');
+const actions  = await getCollection('actions');
+
+const CHAMBER_LABELS: Record<string, string> = {
+  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
+  'preuve-vs-simulation':       'Preuve vs Simulation',
+  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
+  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
+  'singularite-vs-standard':    'Singularité vs Standard',
+};
+
+// Regrouper les bascules par chambre pour l'affichage
+const basculesByChamberId = bascules.reduce<Record<string, typeof bascules>>((acc, b) => {
+  if (!acc[b.data.chamber]) acc[b.data.chamber] = [];
+  acc[b.data.chamber].push(b);
+  return acc;
+}, {});
+
+// Regrouper les tensions par chambre
+const tensionsByChamberId = tensions.reduce<Record<string, typeof tensions>>((acc, t) => {
+  if (!acc[t.data.chamber]) acc[t.data.chamber] = [];
+  acc[t.data.chamber].push(t);
+  return acc;
+}, {});
+
+// Regrouper les actions par chambre
+const actionsByChamberId = actions.reduce<Record<string, typeof actions>>((acc, a) => {
+  if (!acc[a.data.chamber]) acc[a.data.chamber] = [];
+  acc[a.data.chamber].push(a);
+  return acc;
+}, {});
+
+type FacilitatorNote = {
+  si_silence: string;
+  si_debat_bloque: string;
+  si_trop_technique?: string;
+  relance_cle: string;
+} | undefined;
 ---
 
 <BaseLayout title={`Animateur — ${session}`} mode="animateur">
-  <main class="animateur">
-    <header class="animateur__header">
-      <h1 class="animateur__title">Conseil des IA</h1>
-      <span class="animateur__session">Session : {session}</span>
+  <main class="anim">
+
+    <header class="anim__header">
+      <div>
+        <span class="anim__label">Conseil des IA · {session}</span>
+        <h1 class="anim__title">Interface animateur</h1>
+      </div>
+      <nav class="anim__nav">
+        <a href={`${import.meta.env.BASE_URL}/animateur/setup`} class="anim__nav-link">
+          ← Setup
+        </a>
+      </nav>
     </header>
 
-    <section class="animateur__deck">
-      <h2>Cartes bascules ({bascules.length})</h2>
-      <ul class="card-list">
-        {bascules.map((b) => (
-          <li class="card-item">
-            <span class="card-item__id">{b.data.id}</span>
-            <span class="card-item__title">{b.data.title}</span>
-            <span class={`card-item__rev rev--${b.data.reversibility}`}>{b.data.reversibility}</span>
-          </li>
-        ))}
-      </ul>
+    <!-- ═══════════════════════════════════════════════════
+         SECTION RELANCES — visible sur mobile uniquement
+         (le grand écran projette autre chose)
+         ═══════════════════════════════════════════════════ -->
+    <section class="relances" aria-label="Relances animateur">
+      <div class="relances__intro">
+        <span class="relances__badge">📱 Téléphone animateur</span>
+        <p class="relances__hint">
+          Consultez ces relances discrètement pendant que le grand écran reste sur les cartes.
+        </p>
+      </div>
+
+      <!-- ══ Phase 1 — Dossiers de bascule ═══════════════════════════════════ -->
+      <details class="phase-block" open>
+        <summary class="phase-block__summary">
+          <span class="phase-block__num">Phase 1</span>
+          <span class="phase-block__label">Dossiers de bascule</span>
+          <span class="phase-block__meta">Relances animateur · {bascules.filter(b => b.data.facilitator_note).length} cartes</span>
+          <span class="phase-block__chevron" aria-hidden="true">›</span>
+        </summary>
+
+        <div class="phase-block__body">
+          {Object.entries(basculesByChamberId).map(([chamberId, cards]) => (
+            <details class="chamber-block">
+              <summary class="chamber-block__summary">
+                <span class="chamber-block__title">{CHAMBER_LABELS[chamberId]}</span>
+                <span class="chamber-block__count">{cards.filter(c => c.data.facilitator_note).length} cartes</span>
+                <span class="chamber-block__chevron" aria-hidden="true">›</span>
+              </summary>
+              <div class="chamber-block__body">
+                {cards.map(card => {
+                  const note = card.data.facilitator_note as FacilitatorNote;
+                  if (!note) return null;
+                  return (
+                    <details class="relance-card">
+                      <summary class="relance-card__summary">
+                        <span class={`relance-card__rev rev-dot--${card.data.reversibility}`}></span>
+                        <span class="relance-card__id">{card.data.id}</span>
+                        <span class="relance-card__title">{card.data.title}</span>
+                        <span class="relance-card__chevron" aria-hidden="true">›</span>
+                      </summary>
+                      <div class="relance-card__body">
+                        <div class="relance-item relance-item--silence">
+                          <span class="relance-item__label">Si silence</span>
+                          <p class="relance-item__text">{note.si_silence}</p>
+                        </div>
+                        <div class="relance-item relance-item--bloque">
+                          <span class="relance-item__label">Si débat bloqué</span>
+                          <p class="relance-item__text">{note.si_debat_bloque}</p>
+                        </div>
+                        {note.si_trop_technique && (
+                          <div class="relance-item relance-item--technique">
+                            <span class="relance-item__label">Si trop technique</span>
+                            <p class="relance-item__text">{note.si_trop_technique}</p>
+                          </div>
+                        )}
+                        <div class="relance-item relance-item--cle">
+                          <span class="relance-item__label">Relance clé</span>
+                          <p class="relance-item__text">{note.relance_cle}</p>
+                        </div>
+                      </div>
+                    </details>
+                  );
+                })}
+              </div>
+            </details>
+          ))}
+        </div>
+      </details>
+
+      <!-- ══ Phase 2 — Chambre de tension ════════════════════════════════════ -->
+      <details class="phase-block">
+        <summary class="phase-block__summary">
+          <span class="phase-block__num">Phase 2</span>
+          <span class="phase-block__label">Chambre de tension</span>
+          <span class="phase-block__meta">Points de bascule suggérés · {tensions.length} cartes</span>
+          <span class="phase-block__chevron" aria-hidden="true">›</span>
+        </summary>
+
+        <div class="phase-block__body">
+          {Object.entries(tensionsByChamberId).map(([chamberId, cards]) => (
+            <details class="chamber-block">
+              <summary class="chamber-block__summary">
+                <span class="chamber-block__title">{CHAMBER_LABELS[chamberId]}</span>
+                <span class="chamber-block__count">{cards.length} cartes</span>
+                <span class="chamber-block__chevron" aria-hidden="true">›</span>
+              </summary>
+              <div class="chamber-block__body">
+                {cards.map(card => {
+                  const suggestions = (card.data as any).suggestions_bascule as string[] | undefined;
+                  if (!suggestions?.length) return null;
+                  return (
+                    <details class="relance-card">
+                      <summary class="relance-card__summary">
+                        <span class={`relance-card__rev rev-dot--${card.data.reversibility}`}></span>
+                        <span class="relance-card__id">{card.data.id}</span>
+                        <span class="relance-card__title">{card.data.title}</span>
+                        <span class="relance-card__chevron" aria-hidden="true">›</span>
+                      </summary>
+                      <div class="relance-card__body">
+                        <div class="relance-item relance-item--suggestions">
+                          <span class="relance-item__label">Formulations du point de bascule</span>
+                          {suggestions.map((s, i) => (
+                            <p class="relance-item__text relance-item__suggestion">
+                              <span class="relance-item__suggestion-num">{i + 1}</span>
+                              {s}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </details>
+                  );
+                })}
+              </div>
+            </details>
+          ))}
+        </div>
+      </details>
+
+      <!-- ══ Phase 3 — Mandat d'action ════════════════════════════════════════ -->
+      <details class="phase-block">
+        <summary class="phase-block__summary">
+          <span class="phase-block__num">Phase 3</span>
+          <span class="phase-block__label">Mandat d'action</span>
+          <span class="phase-block__meta">Relances animateur · {actions.filter(a => a.data.facilitator_note).length} cartes</span>
+          <span class="phase-block__chevron" aria-hidden="true">›</span>
+        </summary>
+
+        <div class="phase-block__body">
+          {Object.entries(actionsByChamberId).map(([chamberId, cards]) => (
+            <details class="chamber-block">
+              <summary class="chamber-block__summary">
+                <span class="chamber-block__title">{CHAMBER_LABELS[chamberId]}</span>
+                <span class="chamber-block__count">{cards.filter(c => c.data.facilitator_note).length} cartes</span>
+                <span class="chamber-block__chevron" aria-hidden="true">›</span>
+              </summary>
+              <div class="chamber-block__body">
+                {cards.map(card => {
+                  const note = card.data.facilitator_note as FacilitatorNote;
+                  if (!note) return null;
+                  return (
+                    <details class="relance-card">
+                      <summary class="relance-card__summary">
+                        <span class={`relance-card__rev rev-dot--${card.data.reversibility}`}></span>
+                        <span class="relance-card__id">{card.data.id}</span>
+                        <span class="relance-card__title">{card.data.title}</span>
+                        <span class="relance-card__chevron" aria-hidden="true">›</span>
+                      </summary>
+                      <div class="relance-card__body">
+                        <div class="relance-item relance-item--silence">
+                          <span class="relance-item__label">Si silence</span>
+                          <p class="relance-item__text">{note.si_silence}</p>
+                        </div>
+                        <div class="relance-item relance-item--bloque">
+                          <span class="relance-item__label">Si débat bloqué</span>
+                          <p class="relance-item__text">{note.si_debat_bloque}</p>
+                        </div>
+                        {note.si_trop_technique && (
+                          <div class="relance-item relance-item--technique">
+                            <span class="relance-item__label">Si trop technique</span>
+                            <p class="relance-item__text">{note.si_trop_technique}</p>
+                          </div>
+                        )}
+                        <div class="relance-item relance-item--cle">
+                          <span class="relance-item__label">Relance clé</span>
+                          <p class="relance-item__text">{note.relance_cle}</p>
+                        </div>
+                      </div>
+                    </details>
+                  );
+                })}
+              </div>
+            </details>
+          ))}
+        </div>
+      </details>
+
     </section>
+
   </main>
 </BaseLayout>
 
 <style>
-  .animateur {
+  .anim {
     padding: var(--space-lg);
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
-  }
-
-  .animateur__header {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-    border-bottom: 1px solid var(--border-subtle);
-    padding-bottom: var(--space-lg);
-  }
-
-  .animateur__title {
-    font-family: var(--font-display);
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-
-  .animateur__session {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    font-family: var(--font-mono);
-  }
-
-  .animateur__deck h2 {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: var(--space-lg);
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .card-list {
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-2xl);
   }
 
-  .card-item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
+  /* ── En-tête ─────────────────────────────────────────────────────────────── */
+  .anim__header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .anim__label {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+    display: block; margin-bottom: var(--space-xs);
+  }
+
+  .anim__title {
+    font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+  }
+
+  .anim__nav-link {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: var(--text-muted); text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+  }
+  .anim__nav-link:hover { color: var(--text-primary); border-color: var(--text-muted); }
+
+  /* ── Section relances ────────────────────────────────────────────────────── */
+  .relances {
+    display: flex; flex-direction: column; gap: var(--space-2xl);
+  }
+
+  .relances__intro {
+    display: flex; flex-direction: column; gap: var(--space-xs);
     padding: var(--space-md) var(--space-lg);
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
+    background: rgba(37,99,235,0.08);
+    border: 1px solid rgba(37,99,235,0.2);
     border-radius: var(--radius-md);
   }
 
-  .card-item__id {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    min-width: 8ch;
+  .relances__badge {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--chamber-delegation); text-transform: uppercase; letter-spacing: 0.05em;
   }
 
-  .card-item__title {
+  .relances__hint {
+    font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;
+  }
+
+  /* ── Bloc phase (niveau 1) ───────────────────────────────────────────────── */
+  .phase-block {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); overflow: hidden;
+  }
+
+  .phase-block__summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card);
+    transition: background var(--transition-fast);
+  }
+  .phase-block__summary::-webkit-details-marker { display: none; }
+  .phase-block[open] .phase-block__summary,
+  .phase-block__summary:hover { background: var(--bg-card-hover); }
+
+  .phase-block__num {
+    font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700;
+    color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.1em;
+    background: var(--border-subtle); padding: 2px 8px;
+    border-radius: var(--radius-sm); flex-shrink: 0;
+  }
+
+  .phase-block__label {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
     flex: 1;
-    font-size: 0.95rem;
   }
 
-  .card-item__rev {
-    font-size: 0.75rem;
-    font-family: var(--font-mono);
-    padding: 2px 8px;
+  .phase-block__meta {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--text-muted); flex-shrink: 0;
+  }
+
+  .phase-block__chevron {
+    font-size: 1.1rem; color: var(--text-muted);
+    transition: transform var(--transition-fast); flex-shrink: 0;
+  }
+  .phase-block[open] .phase-block__chevron { transform: rotate(90deg); }
+
+  .phase-block__body {
+    display: flex; flex-direction: column; gap: var(--space-sm);
+    padding: var(--space-md) var(--space-md) var(--space-md);
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-base, transparent);
+  }
+
+  /* ── Bloc chambre (niveau 2) ─────────────────────────────────────────────── */
+  .chamber-block {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm); overflow: hidden;
+  }
+
+  .chamber-block__summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-card);
+    transition: background var(--transition-fast);
+  }
+  .chamber-block__summary::-webkit-details-marker { display: none; }
+  .chamber-block[open] .chamber-block__summary,
+  .chamber-block__summary:hover { background: var(--bg-card-hover); }
+
+  .chamber-block__title {
+    font-family: var(--font-display); font-size: 0.85rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    flex: 1;
+  }
+
+  .chamber-block__count {
+    font-family: var(--font-mono); font-size: 0.68rem;
+    color: var(--text-muted); flex-shrink: 0;
+  }
+
+  .chamber-block__chevron {
+    font-size: 1rem; color: var(--text-muted);
+    transition: transform var(--transition-fast); flex-shrink: 0;
+  }
+  .chamber-block[open] .chamber-block__chevron { transform: rotate(90deg); }
+
+  .chamber-block__body {
+    display: flex; flex-direction: column; gap: var(--space-xs);
+    padding: var(--space-sm);
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  /* ── Carte relance (accordion) ───────────────────────────────────────────── */
+  .relance-card {
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); overflow: hidden;
+  }
+
+  .relance-card__summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    transition: background var(--transition-fast);
+  }
+  .relance-card__summary::-webkit-details-marker { display: none; }
+  .relance-card[open] .relance-card__summary,
+  .relance-card__summary:hover { background: var(--bg-card-hover); }
+
+  .rev-dot--green  { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--rev-green); }
+  .rev-dot--yellow { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--rev-yellow); }
+  .rev-dot--red    { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--rev-red); }
+
+  .relance-card__id {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--text-muted); flex-shrink: 0;
+  }
+
+  .relance-card__title {
+    flex: 1; font-size: 0.9rem; line-height: 1.3;
+  }
+
+  .relance-card__chevron {
+    font-size: 1.1rem; color: var(--text-muted);
+    transition: transform var(--transition-fast); flex-shrink: 0;
+  }
+  .relance-card[open] .relance-card__chevron { transform: rotate(90deg); }
+
+  .relance-card__body {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    border-top: 1px solid var(--border-subtle);
+    display: flex; flex-direction: column; gap: var(--space-md);
+  }
+
+  /* ── Items de relance ────────────────────────────────────────────────────── */
+  .relance-item {
+    display: flex; flex-direction: column; gap: 4px;
+    padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-sm);
-    font-weight: 600;
+    border-left: 3px solid var(--border-subtle);
   }
 
-  .rev--green { background: rgba(34,197,94,0.15); color: #16a34a; }
-  .rev--yellow { background: rgba(234,179,8,0.15); color: #a16207; }
-  .rev--red { background: rgba(239,68,68,0.15); color: #dc2626; }
+  .relance-item--silence     { border-left-color: var(--text-muted);         background: rgba(255,255,255,0.03); }
+  .relance-item--bloque      { border-left-color: var(--rev-yellow);         background: rgba(234,179,8,0.06); }
+  .relance-item--technique   { border-left-color: var(--chamber-preuve);     background: rgba(217,119,6,0.06); }
+  .relance-item--cle         { border-left-color: var(--chamber-delegation); background: rgba(37,99,235,0.06); }
+  .relance-item--suggestions { border-left-color: var(--chamber-singularite, #f87171); background: rgba(248,113,113,0.06);
+                               gap: var(--space-sm); }
+
+  .relance-item__label {
+    font-family: var(--font-mono); font-size: 0.65rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+    font-weight: 700;
+  }
+
+  .relance-item__text {
+    font-size: 0.88rem; color: var(--text-primary); line-height: 1.55;
+  }
+
+  .relance-item__suggestion {
+    display: flex; gap: var(--space-sm); align-items: flex-start;
+  }
+
+  .relance-item__suggestion-num {
+    font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700;
+    color: var(--text-muted); flex-shrink: 0; padding-top: 2px;
+  }
+
 </style>

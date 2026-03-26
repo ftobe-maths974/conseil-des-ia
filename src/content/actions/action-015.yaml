@@ -11,6 +11,9 @@ tags:
   - gouvernance
   - secteur
   - recours
-facilitator_note: >
-  Faire débattre qui nomme le médiateur et comment son indépendance est garantie.
+facilitator_note:
+  si_silence: "Demandez : est-ce qu'un médiateur IA ressemblerait à un médiateur bancaire — utile en théorie, peu saisi en pratique ? Qu'est-ce qui le rendrait vraiment différent ?"
+  si_debat_bloque: "Fait choc : la France a créé un médiateur du numérique en 2021. En 3 ans, il a traité environ 1 200 dossiers — mais les décisions IA d'attribution dans les secteurs critiques ne relèvent pas de sa compétence."
+  si_trop_technique: "Pas besoin d'entrer dans le droit administratif. La question est : quand une IA vous lèse, à qui parlez-vous — et est-ce que cette personne a les moyens réels de vous aider ?"
+  relance_cle: "Un médiateur sans pouvoir d'injonction peut documenter les injustices sans jamais les corriger. Quel pouvoir minimal lui donner pour que les acteurs IA le prennent réellement au sérieux ?"
 version: "1.0"

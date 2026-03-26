@@ -14,4 +14,7 @@ tags:
   - discrimination
   - statistique
   - justice
+suggestions_bascule:
+  - "Le point de bascule est le moment où une discrimination statistiquement documentée est maintenue parce qu'aucun acteur n'assume la responsabilité de la corriger."
+  - "Le point de bascule est quand un biais algorithmique est présenté comme une 'réalité statistique objective' — quand les données du passé deviennent la norme imposée au futur."
 version: "1.0"

@@ -13,4 +13,8 @@ tags:
   - rh
 amplifies:
   - action-013
+facilitator_note:
+  si_silence: "Demandez : si l'audit révèle un biais systémique contre un profil de candidat, qui est responsable de le corriger — le prestataire IA ou l'entreprise qui l'utilise ?"
+  si_debat_bloque: "Fait choc : en 2018, Amazon a abandonné son système de recrutement IA après avoir découvert qu'il pénalisait systématiquement les candidates — un biais appris à partir de 10 ans d'historique de recrutements masculins."
+  relance_cle: "Un audit qui trouve un biais sans obligation de le corriger a-t-il une valeur réelle ? Quelle condition rendrait cet audit contraignant plutôt que cosmétique ?"
 version: "1.0"

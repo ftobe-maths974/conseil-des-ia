@@ -1,0 +1,48 @@
+id: scenario-inv
+phase: scenario
+chamber: invisibilite-vs-arbitrage
+title: "PredictHealth module les remboursements selon l'adhérence prévisionnelle aux traitements"
+context: >
+  La Caisse Primaire d'Assurance Maladie du Bassin Méditerranéen veut déployer
+  PredictHealth, un outil IA qui évalue la probabilité qu'un patient suive son
+  traitement. Les patients jugés "peu adhérents" verraient leur taux de remboursement
+  réduit de 15 %. Le modèle croise données médicales, géographiques et socio-
+  économiques. L'objectif est de réduire les coûts liés aux traitements abandonnés.
+  Le dispositif serait déployé en silence — aucune mention dans les courriers patients.
+constraint_from_mandat: >
+  Le mandat reçu vous impose de vous prononcer sur une mesure affectant la visibilité
+  des critères de décision dans un système d'attribution de ressources. Votre acte
+  doit répondre à la question : jusqu'où l'invisibilité algorithmique est-elle
+  acceptable quand elle affecte l'accès aux soins ?
+roles_briefing:
+  decideur: >
+    Vous êtes directeur de la CPAM. Le budget est sous pression. PredictHealth a
+    démontré une réduction de 12 % des traitements interrompus dans les pilotes.
+    Votre priorité : la soutenabilité financière du système. Votre angle mort :
+    vous ne savez pas quelles variables pèsent le plus dans le score d'adhérence.
+  technicien: >
+    Vous avez développé PredictHealth. Le modèle utilise 47 variables dont le code
+    postal, l'âge, la composition du foyer et l'historique de remboursement. Les
+    performances sont solides en moyenne, mais le taux d'erreur grimpe à 22 % pour
+    les populations rurales et les plus de 75 ans. Vous pouvez ajuster les seuils
+    mais pas éliminer ces biais sans réduire les performances globales.
+  affecte: >
+    Vous représentez les patients atteints de maladies chroniques. Beaucoup ont des
+    scores d'adhérence faibles non pas par négligence mais à cause de contraintes
+    économiques, de transports, ou d'effets secondaires non signalés. Une réduction
+    de 15 % du remboursement peut forcer un arbitrage entre médicaments et alimentation.
+    Votre ligne rouge : personne ne doit être pénalisé pour une décision invisible.
+  contre_pouvoir: >
+    Vous êtes médecin généraliste et membre d'un collectif de soignants. Vous observez
+    que le modèle punit des comportements qui sont souvent des signaux de détresse
+    sociale, pas de mauvaise volonté. Vous craignez que la modulation silencieuse des
+    remboursements crée une médecine à deux vitesses algorithmiquement validée.
+    Votre question : peut-on conditionner l'accès aux soins à un score de comportement ?
+tags: 
+  - sante
+  - remboursement
+  - adherence
+  - biais
+  - invisibilite
+difficulty: eleve
+version: "1.0"

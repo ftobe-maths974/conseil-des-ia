@@ -1,0 +1,601 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+// Ordre canonique : delegation → invisibilite → preuve → singularite → metabolisme
+const CHAMBER_MAP: Record<string, string> = {
+  'groupe-A': 'delegation-vs-souverainete',
+  'groupe-B': 'invisibilite-vs-arbitrage',
+  'groupe-C': 'preuve-vs-simulation',
+  'groupe-D': 'singularite-vs-standard',
+  'groupe-E': 'metabolisme-vs-progres',
+};
+
+const CHAMBER_LABELS: Record<string, string> = {
+  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
+  'preuve-vs-simulation':       'Preuve vs Simulation',
+  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
+  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
+  'singularite-vs-standard':    'Singularité vs Standard',
+};
+
+const REV_LABELS: Record<string, string> = {
+  green:  'Réversible',
+  yellow: 'Coûteux',
+  red:    'Irréversible',
+};
+
+export async function getStaticPaths() {
+  return ['groupe-A', 'groupe-B', 'groupe-C', 'groupe-D', 'groupe-E'].map(groupe => ({
+    params: { session: 'demo', groupe },
+  }));
+}
+
+const { session, groupe } = Astro.params;
+const allScenarios = await getCollection('scenarios');
+const allDecks = await getCollection('decks');
+const chamber = CHAMBER_MAP[groupe] ?? 'delegation-vs-souverainete';
+
+const deck = allDecks.find(d => d.data.id === session);
+const groupConfig = deck?.data.groups.find(g => g.id === groupe);
+const scenario = groupConfig?.scenario_id
+  ? allScenarios.find(s => s.data.id === groupConfig.scenario_id)
+  : allScenarios.find(s => s.data.chamber === chamber);
+
+type ScenarioData = {
+  id: string;
+  title: string;
+  context: string;
+  constraint_from_mandat: string;
+  roles_briefing: { decideur: string; technicien: string; affecte: string; contre_pouvoir: string };
+  difficulty: string;
+};
+
+const scenarioData: ScenarioData | null = scenario ? {
+  id: scenario.data.id,
+  title: scenario.data.title,
+  context: scenario.data.context,
+  constraint_from_mandat: scenario.data.constraint_from_mandat,
+  roles_briefing: scenario.data.roles_briefing,
+  difficulty: scenario.data.difficulty,
+} : null;
+---
+
+<BaseLayout title={`${groupe} — Phase 4`} mode="groupe">
+  <main class="p4" data-groupe={groupe} data-session={session} data-chamber={chamber}>
+
+    <!-- En-tête -->
+    <header class="p4__header">
+      <div class="p4__header-left">
+        <span class="p4__phase-label">Phase 4</span>
+        <h1 class="p4__groupe">{groupe}</h1>
+      </div>
+      <span class="p4__chamber" data-chamber={chamber}>
+        {CHAMBER_LABELS[chamber]}
+      </span>
+    </header>
+
+    <!-- Mandat reçu (rempli par JS depuis le hash) -->
+    <section class="p4__mandat" id="p4-mandat" aria-live="polite">
+      <div class="p4__mandat-content" id="p4-mandat-content" hidden>
+        <div class="p4__mandat-header">
+          <span class="p4__mandat-label">Mandat reçu</span>
+          <div class="p4__mandat-meta">
+            <span class="p4__mandat-from" id="p4-mandat-from"></span>
+            <span class="rev-badge" id="p4-mandat-badge"></span>
+          </div>
+        </div>
+        <div class="p4__mandat-action" id="p4-mandat-action" hidden></div>
+        <blockquote class="p4__mandat-text" id="p4-mandat-text"></blockquote>
+        <p class="p4__mandat-constraint" id="p4-mandat-constraint"></p>
+      </div>
+    </section>
+
+    {scenarioData ? (
+      <>
+        <!-- Scénario -->
+        <section class="p4__scenario">
+          <div class="p4__scenario-header">
+            <span class="p4__scenario-label">Scénario</span>
+            <span class={`p4__scenario-diff diff--${scenarioData.difficulty}`}>
+              {scenarioData.difficulty}
+            </span>
+          </div>
+          <h2 class="p4__scenario-title">{scenarioData.title}</h2>
+          <p class="p4__scenario-context">{scenarioData.context}</p>
+          <aside class="p4__scenario-constraint" id="p4-constraint-box" hidden>
+            <span class="p4__scenario-constraint-label">Contrainte du mandat</span>
+            <p>{scenarioData.constraint_from_mandat}</p>
+          </aside>
+        </section>
+
+        <!-- Rôles -->
+        <section class="p4__roles" aria-label="Rôles à distribuer">
+          <h3 class="p4__roles-title">Distribuez les rôles</h3>
+          <p class="p4__roles-hint">Chaque membre du groupe ouvre sa carte et lit son briefing en privé.</p>
+          <div class="p4__roles-grid">
+            {([
+              { key: 'decideur',      label: 'Décideur·se',     icon: '⚖️' },
+              { key: 'technicien',    label: 'Technicien·ne',   icon: '🔧' },
+              { key: 'affecte',       label: 'Affecté·e',       icon: '🙋' },
+              { key: 'contre_pouvoir',label: 'Contre-pouvoir',  icon: '🛡️' },
+            ] as const).map(role => (
+              <article class="p4-role" data-role={role.key}>
+                <details class="p4-role__details">
+                  <summary class="p4-role__summary">
+                    <span class="p4-role__icon" aria-hidden="true">{role.icon}</span>
+                    <h4 class="p4-role__name">{role.label}</h4>
+                    <span class="p4-role__taken-badge" aria-hidden="true">Pris ✓</span>
+                    <span class="p4-role__chevron" aria-hidden="true">›</span>
+                  </summary>
+                  <div class="p4-role__body">
+                    <p class="p4-role__briefing">
+                      {scenarioData.roles_briefing[role.key]}
+                    </p>
+                    {role.key === 'decideur' && (
+                      <div class="p4__acte" id="p4-acte-form">
+                        <h3 class="p4__acte-title">Rédigez l'Acte d'arbitrage</h3>
+                        <p class="p4__acte-hint">
+                          Positionnez-vous sur les quatre dimensions après délibération du groupe.
+                          Chaque ligne doit être argumentée en 1 à 3 phrases.
+                        </p>
+                        {([
+                          { id: 'autoriser',    label: 'Nous autorisons',          color: 'green',  placeholder: 'Ce que votre chambre autorise explicitement…' },
+                          { id: 'conditionner', label: 'Nous conditionnons',       color: 'yellow', placeholder: 'Ce qui peut être fait, mais seulement si…' },
+                          { id: 'interdire',    label: 'Nous interdisons',         color: 'red',    placeholder: 'Ce qui est formellement exclu…' },
+                          { id: 'reexaminer',   label: 'Nous renvoyons à réexamen',color: 'grey',   placeholder: "Ce qui nécessite plus d'information ou un autre arbitre…" },
+                        ]).map(point => (
+                          <div class="p4-acte-point">
+                            <label class={`p4-acte-point__label label--${point.color}`} for={`acte-${point.id}`}>
+                              {point.label}
+                            </label>
+                            <textarea
+                              id={`acte-${point.id}`}
+                              class="p4-acte-point__textarea"
+                              rows="3"
+                              maxlength="500"
+                              placeholder={point.placeholder}
+                              data-point={point.id}
+                            ></textarea>
+                          </div>
+                        ))}
+                        <div class="p4__acte-footer">
+                          <button class="p4__acte-submit" id="p4-submit" disabled>
+                            Finaliser l'Acte →
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- Acte final (caché jusqu'à validation) -->
+        <section class="p4__acte-final" id="p4-acte-final" hidden aria-live="polite">
+          <div class="p4__acte-final-header">
+            <span class="p4__acte-final-label">Acte d'arbitrage</span>
+            <span class="p4__acte-final-groupe" id="p4-final-groupe"></span>
+          </div>
+          <div class="p4__acte-final-scenario" id="p4-final-scenario"></div>
+          <div class="p4__acte-final-points" id="p4-final-points"></div>
+          <div class="p4__acte-final-footer">
+            <p class="p4__acte-final-note">
+              Phase 5 — Délibéré Final : chaque groupe présente son acte à l'ensemble.
+            </p>
+          </div>
+        </section>
+      </>
+    ) : (
+      <p class="p4__no-scenario">Aucun scénario disponible pour cette chambre.</p>
+    )}
+
+  </main>
+</BaseLayout>
+
+<!-- Données pour le script client -->
+<script type="application/json" id="scenario-data" set:html={JSON.stringify(scenarioData)} />
+
+<script>
+  // ── Types ─────────────────────────────────────────────────────────────────
+  interface Handoff {
+    action?: { id: string; title: string };
+    text: string;
+    level: 'green' | 'yellow' | 'red';
+    chamber: string;
+    from: string;
+  }
+
+  // ── Lecture du handoff depuis le hash ─────────────────────────────────────
+  function decodeHandoff(): Handoff | null {
+    const hash = window.location.hash;
+    const match = hash.match(/[#&]handoff=([^&]+)/);
+    if (!match) return null;
+    try {
+      return JSON.parse(decodeURIComponent(atob(match[1])));
+    } catch {
+      return null;
+    }
+  }
+
+  const handoff = decodeHandoff();
+
+  const REV_LABELS: Record<string, string> = {
+    green: 'Réversible', yellow: 'Coûteux', red: 'Irréversible',
+  };
+
+  const CHAMBER_LABELS: Record<string, string> = {
+    'delegation-vs-souverainete': 'Délégation',
+    'preuve-vs-simulation':       'Preuve',
+    'metabolisme-vs-progres':     'Métabolisme',
+    'invisibilite-vs-arbitrage':  'Invisibilité',
+    'singularite-vs-standard':    'Singularité',
+  };
+
+  // ── Affichage du mandat reçu ──────────────────────────────────────────────
+  const mandatContent = document.getElementById('p4-mandat-content')!;
+  const constraintBox = document.getElementById('p4-constraint-box');
+
+  if (handoff) {
+    document.getElementById('p4-mandat-from')!.textContent =
+      `${handoff.from} · ${CHAMBER_LABELS[handoff.chamber] ?? handoff.chamber}`;
+
+    const badge = document.getElementById('p4-mandat-badge')!;
+    badge.textContent = REV_LABELS[handoff.level] ?? handoff.level;
+    badge.setAttribute('data-rev', handoff.level);
+
+    if (handoff.action?.title) {
+      const actionEl = document.getElementById('p4-mandat-action')!;
+      actionEl.textContent = handoff.action.title;
+      actionEl.hidden = false;
+    }
+
+    document.getElementById('p4-mandat-text')!.textContent = handoff.text;
+
+    const constraintEl = document.getElementById('p4-mandat-constraint')!;
+    constraintEl.textContent =
+      `Ce mandat concerne la chambre "${CHAMBER_LABELS[handoff.chamber] ?? handoff.chamber}" ` +
+      `avec un niveau d'irréversibilité : ${REV_LABELS[handoff.level] ?? handoff.level}.`;
+
+    mandatContent.hidden = false;
+    if (constraintBox) constraintBox.hidden = false;
+
+    if (handoff.level === 'red') {
+      mandatContent.classList.add('p4__mandat-content--red');
+    }
+  }
+
+  // ── Rôles — accordion ─────────────────────────────────────────────────────
+  document.querySelectorAll<HTMLElement>('.p4-role').forEach(card => {
+    const det = card.querySelector<HTMLDetailsElement>('.p4-role__details');
+    if (!det) return;
+    det.addEventListener('toggle', () => {
+      card.classList.toggle('p4-role--taken', det.open);
+    });
+  });
+
+  // ── Acte — validation ─────────────────────────────────────────────────────
+  const textareas = document.querySelectorAll<HTMLTextAreaElement>('.p4-acte-point__textarea');
+  const submitBtn = document.getElementById('p4-submit') as HTMLButtonElement;
+  const acteForm  = document.getElementById('p4-acte-form')!;
+  const acteFinal = document.getElementById('p4-acte-final')!;
+
+  function checkSubmitState() {
+    const filled = Array.from(textareas).filter(t => t.value.trim().length >= 10).length;
+    submitBtn.disabled = filled < 2; // au moins 2 points remplis
+  }
+
+  textareas.forEach(t => t.addEventListener('input', checkSubmitState));
+
+  const POINT_LABELS: Record<string, { label: string; color: string }> = {
+    autoriser:    { label: 'Nous autorisons',          color: 'green'  },
+    conditionner: { label: 'Nous conditionnons',       color: 'yellow' },
+    interdire:    { label: 'Nous interdisons',         color: 'red'    },
+    reexaminer:   { label: 'Nous renvoyons à réexamen',color: 'grey'   },
+  };
+
+  submitBtn.addEventListener('click', () => {
+    const groupe = document.querySelector<HTMLElement>('.p4')?.dataset.groupe ?? '';
+    const scenarioRaw = document.getElementById('scenario-data')?.textContent ?? 'null';
+    const scenario = JSON.parse(scenarioRaw) as { title: string } | null;
+
+    document.getElementById('p4-final-groupe')!.textContent = groupe;
+    document.getElementById('p4-final-scenario')!.textContent =
+      scenario?.title ?? '';
+
+    const pointsEl = document.getElementById('p4-final-points')!;
+    pointsEl.innerHTML = '';
+
+    textareas.forEach(t => {
+      const text = t.value.trim();
+      if (!text) return;
+      const point = t.dataset.point ?? '';
+      const meta = POINT_LABELS[point] ?? { label: point, color: 'grey' };
+      const div = document.createElement('div');
+      div.className = 'p4-final-point';
+      div.innerHTML = `
+        <span class="p4-final-point__label label--${meta.color}">${escHtml(meta.label)}</span>
+        <p class="p4-final-point__text">${escHtml(text)}</p>
+      `;
+      pointsEl.appendChild(div);
+    });
+
+    acteForm.hidden = true;
+    acteFinal.hidden = false;
+    acteFinal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  function escHtml(s: string): string {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+</script>
+
+<style>
+  /* ── Layout ──────────────────────────────────────────────────────────────── */
+  .p4 {
+    min-height: 100dvh;
+    padding: var(--space-lg);
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  /* ── En-tête ─────────────────────────────────────────────────────────────── */
+  .p4__header {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: var(--space-md);
+  }
+  .p4__header-left { display: flex; flex-direction: column; gap: var(--space-xs); }
+  .p4__phase-label {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p4__groupe { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; }
+  .p4__chamber {
+    font-size: 0.8rem; padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--chamber-color, var(--border-subtle));
+    color: var(--chamber-color, var(--text-muted));
+    text-align: right; max-width: 16ch; line-height: 1.3;
+  }
+
+  /* ── Mandat reçu ─────────────────────────────────────────────────────────── */
+  .p4__mandat-content {
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg); padding: var(--space-lg);
+    display: flex; flex-direction: column; gap: var(--space-md);
+  }
+  .p4__mandat-content--red {
+    border-color: rgba(239,68,68,0.5);
+    box-shadow: 0 0 16px rgba(239,68,68,0.1);
+  }
+
+  .p4__mandat-header {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm);
+  }
+  .p4__mandat-label {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p4__mandat-meta { display: flex; align-items: center; gap: var(--space-sm); }
+  .p4__mandat-from { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); }
+
+  .p4__mandat-action {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+    line-height: 1.3; color: var(--text-primary);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-surface); border-radius: var(--radius-md);
+    border-left: 3px solid var(--chamber-color, var(--border-subtle));
+  }
+
+  .p4__mandat-text {
+    font-size: 1rem; font-style: italic; line-height: 1.6;
+    border-left: 3px solid var(--chamber-color, var(--border-subtle));
+    padding-left: var(--space-md); color: var(--text-primary);
+  }
+  .p4__mandat-constraint {
+    font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
+  }
+
+  /* ── Scénario ────────────────────────────────────────────────────────────── */
+  .p4__scenario {
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg); padding: var(--space-xl);
+    display: flex; flex-direction: column; gap: var(--space-md);
+  }
+  .p4__scenario-header {
+    display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm);
+  }
+  .p4__scenario-label {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p4__scenario-diff {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    padding: 2px 8px; border-radius: var(--radius-sm); font-weight: 600;
+  }
+  .diff--faible  { background: rgba(34,197,94,0.15);  color: #22c55e; }
+  .diff--moyen   { background: rgba(234,179,8,0.15);  color: #eab308; }
+  .diff--eleve   { background: rgba(239,68,68,0.15);  color: #ef4444; }
+
+  .p4__scenario-title {
+    font-family: var(--font-display); font-size: 1.1rem;
+    font-weight: 700; line-height: 1.3;
+  }
+  .p4__scenario-context {
+    font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;
+  }
+  .p4__scenario-constraint {
+    background: var(--bg-surface); border-radius: var(--radius-md);
+    padding: var(--space-md); border-left: 3px solid var(--chamber-delegation);
+    display: flex; flex-direction: column; gap: var(--space-xs);
+  }
+  .p4__scenario-constraint-label {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .p4__scenario-constraint p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; }
+
+  /* ── Rôles ───────────────────────────────────────────────────────────────── */
+  .p4__roles-title {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 600;
+  }
+  .p4__roles-hint { font-size: 0.85rem; color: var(--text-muted); margin-top: calc(-1 * var(--space-sm)); }
+  .p4__roles-grid {
+    display: flex; flex-direction: column;
+    gap: var(--space-sm); margin-top: var(--space-sm);
+  }
+
+  .p4-role {
+    background: var(--bg-card); border: 2px solid var(--border-subtle);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: border-color var(--transition-base);
+  }
+  .p4-role--taken {
+    border-color: var(--chamber-delegation);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+  }
+
+  .p4-role__summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    transition: background var(--transition-fast);
+  }
+  .p4-role__summary::-webkit-details-marker { display: none; }
+  .p4-role__summary:hover { background: var(--bg-card-hover); }
+
+  .p4-role__icon { font-size: 1.3rem; flex-shrink: 0; }
+  .p4-role__name { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; flex: 1; }
+
+  .p4-role__taken-badge {
+    display: none; font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--chamber-delegation); font-weight: 600;
+  }
+  .p4-role--taken .p4-role__taken-badge { display: block; }
+
+  .p4-role__chevron {
+    font-size: 1.2rem; color: var(--text-muted);
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+  }
+  .p4-role__details[open] .p4-role__chevron { transform: rotate(90deg); }
+
+  .p4-role__body {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    border-top: 1px solid var(--border-subtle);
+    display: flex; flex-direction: column; gap: var(--space-lg);
+  }
+  .p4-role__briefing { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+  /* ── Acte dans le dépliant décideur ─────────────────────────────────────── */
+  .p4__acte {
+    display: flex; flex-direction: column; gap: var(--space-md);
+    border-top: 1px solid var(--border-subtle);
+    padding-top: var(--space-lg);
+  }
+
+  /* ── Acte ────────────────────────────────────────────────────────────────── */
+  .p4__acte-title {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+  }
+  .p4__acte-hint {
+    font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;
+    margin-top: calc(-1 * var(--space-sm));
+  }
+  .p4-acte-point {
+    display: flex; flex-direction: column; gap: var(--space-xs);
+  }
+  .p4-acte-point__label {
+    font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+    padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-sm);
+    display: inline-flex; align-items: center; gap: var(--space-xs); width: fit-content;
+  }
+  .label--green  { background: rgba(34,197,94,0.15);  color: #22c55e; }
+  .label--yellow { background: rgba(234,179,8,0.15);  color: #eab308; }
+  .label--red    { background: rgba(239,68,68,0.15);  color: #ef4444; }
+  .label--grey   { background: rgba(255,255,255,0.06);color: var(--text-muted); }
+
+  .p4-acte-point__textarea {
+    width: 100%; background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); color: var(--text-primary);
+    font-family: var(--font-body); font-size: 0.9rem; line-height: 1.6;
+    padding: var(--space-md); resize: vertical; outline: none;
+    transition: border-color var(--transition-fast);
+  }
+  .p4-acte-point__textarea:focus { border-color: var(--chamber-delegation); }
+  .p4-acte-point__textarea::placeholder { color: var(--text-muted); font-style: italic; }
+
+  .p4__acte-footer { display: flex; justify-content: flex-end; }
+  .p4__acte-submit {
+    padding: var(--space-md) var(--space-2xl);
+    background: var(--chamber-delegation); color: #fff;
+    border: none; border-radius: var(--radius-md);
+    font-family: var(--font-display); font-size: 1rem; font-weight: 600;
+    cursor: pointer;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+  }
+  .p4__acte-submit:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
+  .p4__acte-submit:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  /* ── Acte final ──────────────────────────────────────────────────────────── */
+  @keyframes reveal-in {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .p4__acte-final {
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg); padding: var(--space-xl);
+    display: flex; flex-direction: column; gap: var(--space-lg);
+    animation: reveal-in 400ms ease both;
+  }
+  .p4__acte-final-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .p4__acte-final-label {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p4__acte-final-groupe {
+    font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+  }
+  .p4__acte-final-scenario {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 600;
+    line-height: 1.3; color: var(--text-secondary);
+  }
+  .p4__acte-final-points { display: flex; flex-direction: column; gap: var(--space-md); }
+
+  .p4-final-point { display: flex; flex-direction: column; gap: var(--space-xs); }
+  .p4-final-point__label {
+    font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
+    padding: 2px 10px; border-radius: var(--radius-sm); width: fit-content;
+  }
+  .p4-final-point__text {
+    font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--border-subtle);
+  }
+
+  .p4__acte-final-footer {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-subtle);
+  }
+  .p4__acte-final-note {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--text-muted); text-align: center;
+  }
+
+  .p4__no-scenario {
+    color: var(--text-muted); font-style: italic; text-align: center;
+    padding: var(--space-2xl);
+  }
+</style>

@@ -13,6 +13,9 @@ tags:
   - juridique
 amplifies:
   - action-001
-facilitator_note: >
-  Interroger qui signe juridiquement et qui peut être tenu responsable en cas de litige.
+facilitator_note:
+  si_silence: "Demandez : si une IA signe un contrat qui engage votre organisation sur 10 ans et se révèle désavantageux, qui va au tribunal — et pour plaider quoi ?"
+  si_debat_bloque: "Fait choc : plusieurs analyses juridiques de 2023-2024 concluent que les contrats signés sans intervention humaine identifiable sont difficilement opposables devant les tribunaux européens. L'efficacité opérationnelle crée un vide juridique."
+  si_trop_technique: "Sortez de l'efficacité contractuelle. La vraie question est : peut-on déléguer un acte juridique engageant à un système qui ne peut pas être poursuivi en cas d'erreur ?"
+  relance_cle: "L'efficacité d'un contrat négocié par IA est-elle suffisante pour justifier que personne ne soit responsable de son contenu — ni de ses conséquences ?"
 version: "1.0"

@@ -11,6 +11,9 @@ tags:
   - preuve
   - deepfake
   - legislation
-facilitator_note: >
-  Discuter ce que 'certifié' signifie et qui a les moyens de certifier à l'échelle.
+facilitator_note:
+  si_silence: "Demandez : si votre avocat voulait utiliser une vidéo générée par IA comme preuve à votre décharge, préféreriez-vous qu'il puisse le faire — ou non ?"
+  si_debat_bloque: "Fait choc : plusieurs juridictions américaines ont refusé des preuves IA sans expertise préalable après des scandales. En France, le droit n'a pas encore tranché — et des affaires sont en cours."
+  si_trop_technique: "Pas besoin d'entrer dans la procédure civile. La question est : qui certifie le certifieur, et que se passe-t-il quand la certification elle-même se trompe ?"
+  relance_cle: "Rendre les preuves IA inadmissibles sans certification ralentit la justice — les admettre sans contrôle la fragilise. Quel est le moins mauvais compromis, et qui en supporte le coût ?"
 version: "1.0"

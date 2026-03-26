@@ -11,4 +11,8 @@ tags:
   - budget
   - gouvernance
   - sobriete
+facilitator_note:
+  si_silence: "Demandez : si votre organisation avait un budget carbone pour l'IA comme elle a un budget financier, quels usages seraient les premiers sacrifiés — et par qui ?"
+  si_debat_bloque: "Fait choc : plusieurs grandes banques européennes intègrent déjà le coût carbone de leurs services numériques dans leur comptabilité RSE. Quand c'est mesuré, les arbitrages changent — même sans contrainte légale."
+  relance_cle: "Un plafond énergétique force les arbitrages que le marché évite. Qui dans l'organisation aurait le pouvoir — et la légitimité — de décider quels usages IA sont prioritaires sur les autres ?"
 version: "1.0"

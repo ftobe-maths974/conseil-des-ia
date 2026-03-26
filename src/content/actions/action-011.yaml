@@ -13,6 +13,9 @@ tags:
   - climat
 blocks:
   - action-009
-facilitator_note: >
-  Discuter qui contrôle la certification 'renouvelable' et comment éviter le greenwashing.
+facilitator_note:
+  si_silence: "Demandez : est-ce qu'une telle règle aurait empêché la construction du datacenter qui consomme l'eau agricole de régions en sécheresse — ou aurait-il trouvé un contournement ?"
+  si_debat_bloque: "Fait choc : en 2024, Microsoft et Google ont annoncé des objectifs 100 % renouvelable — mais via des mécanismes de compensation qui permettent de continuer à utiliser du charbon localement tout en achetant des certificats verts à distance."
+  si_trop_technique: "Pas besoin d'entrer dans les certifications énergétiques. La vraie question est : une contrainte applicable mais imparfaite vaut-elle mieux qu'une règle parfaite mais systématiquement contournée ?"
+  relance_cle: "Si les énergies renouvelables disponibles ne suffisent pas à alimenter toute l'IA qu'on veut construire, cette contrainte nous oblige à choisir. Qui décide quels datacenters passent en premier ?"
 version: "1.0"

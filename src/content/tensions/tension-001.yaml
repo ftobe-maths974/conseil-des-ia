@@ -14,6 +14,7 @@ tags:
   - competence
   - dependance
   - cognition
-facilitator_note: >
-  Faire énumérer des tâches que le groupe ne saurait plus accomplir sans IA.
+suggestions_bascule:
+  - "Le point de bascule est le moment où un gestionnaire ne peut plus expliquer sa propre décision à un pair sans consulter l'IA — quand déléguer est devenu ne plus savoir."
+  - "Le point de bascule est atteint quand une organisation décide de ne plus former ses membres à une compétence parce que l'IA la remplace définitivement — quand la perte est irréversible et non perçue."
 version: "1.0"

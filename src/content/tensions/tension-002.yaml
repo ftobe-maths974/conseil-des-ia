@@ -14,4 +14,7 @@ tags:
   - juridique
   - chaine
   - opacite
+suggestions_bascule:
+  - "Le point de bascule est le moment où aucun acteur humain identifiable ne peut être tenu responsable d'une décision IA — où la faute devient techniquement inassignable."
+  - "Le point de bascule est quand la chaîne de délégation est si longue qu'un recours judiciaire devient statistiquement impossible pour la victime d'une décision automatisée."
 version: "1.0"

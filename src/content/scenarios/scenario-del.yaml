@@ -1,0 +1,48 @@
+id: scenario-del
+phase: scenario
+chamber: delegation-vs-souverainete
+title: "La mairie délègue l'attribution des aides sociales à AlgoSolidaire"
+context: >
+  La ville de Vercors-sur-Rhône (45 000 habitants) souhaite déployer AlgoSolidaire,
+  un système IA développé par une startup privée, pour traiter automatiquement les
+  demandes d'aides sociales. Le temps de traitement passerait de 11 semaines à 72
+  heures. Le modèle est entraîné sur des données nationales et ses critères ne sont
+  pas publiés. En cas de refus, les demandeurs recevront une lettre type sans
+  explication détaillée. Le contrat prévoit une exclusivité de 5 ans.
+constraint_from_mandat: >
+  Le mandat reçu engage votre chambre à se prononcer sur une action concrète
+  concernant la délégation de décisions à caractère social à un système IA tiers.
+  Votre acte doit intégrer les implications du mandat transmis sur l'autonomie
+  décisionnelle de la collectivité.
+roles_briefing:
+  decideur: >
+    Vous êtes le maire de Vercors-sur-Rhône. Vous avez promis une réduction des délais
+    d'attribution pendant la campagne. Le budget de la CCAS est en déficit. Vous devez
+    décider si vous signez le contrat. Votre priorité : l'efficacité et la réélection.
+    Votre angle mort : vous ne comprenez pas réellement comment fonctionne l'algorithme.
+  technicien: >
+    Vous êtes la DSI de la mairie. Vous avez testé AlgoSolidaire sur 3 mois de données
+    historiques : 94 % de concordance avec les décisions humaines. Mais 6 % de divergence
+    représente 180 dossiers par an. Vous ne pouvez pas expliquer pourquoi le modèle
+    prend certaines décisions. Votre ligne rouge : vous refuserez de signer si l'audit
+    du modèle n'est pas possible.
+  affecte: >
+    Vous représentez les bénéficiaires potentiels des aides sociales. Beaucoup sont
+    peu alphabétisés numériquement, certains n'ont pas accès à internet. Vous savez
+    que les algorithmes reproduisent les biais des données — et les données historiques
+    de la CCAS reflètent des décisions parfois discriminatoires. Votre ligne rouge :
+    tout refus doit pouvoir être expliqué à la personne concernée.
+  contre_pouvoir: >
+    Vous êtes une association de défense des droits numériques. Vous avez documenté
+    3 autres villes ayant adopté des systèmes similaires : dans deux cas, les erreurs
+    ont touché de façon disproportionnée les familles monoparentales et les étrangers.
+    Le contrat d'exclusivité de 5 ans vous inquiète : sortir du système sera coûteux
+    et politiquement difficile. Votre question : qui est responsable en cas d'erreur ?
+tags: 
+  - aides-sociales
+  - delegation
+  - contrat
+  - exclusivite
+  - biais
+difficulty: moyen
+version: "1.0"

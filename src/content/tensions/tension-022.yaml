@@ -14,4 +14,7 @@ tags:
   - langue
   - homogeneisation
   - domination
+suggestions_bascule:
+  - "Le point de bascule est le moment où une IA globale remplace des pratiques culturelles locales non par substitution directe, mais par désintérêt progressif — quand la commodité de l'universel étouffe la résistance du particulier."
+  - "Le point de bascule est quand une langue ou une culture ne dispose pas de corpus suffisant pour entraîner ses propres modèles — quand elle devient irrémédiablement dépendante d'une IA pensée dans une autre langue."
 version: "1.0"

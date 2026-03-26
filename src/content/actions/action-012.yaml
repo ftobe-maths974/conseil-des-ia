@@ -11,4 +11,8 @@ tags:
   - carbone
   - teletravail
   - organisation
+facilitator_note:
+  si_silence: "Demandez : est-ce qu'une réunion en présence IA augmentée peut remplacer un déplacement pour rencontrer un client important — ou certaines choses ne sont-elles possibles qu'en physique ?"
+  si_debat_bloque: "Fait choc : les études post-2020 sur le travail hybride montrent que les réunions à distance bien outillées réduisent les déplacements — mais augmentent le nombre total de réunions. L'effet rebond est documenté."
+  relance_cle: "Si réduire les déplacements crée plus de réunions IA qui consomment au final plus d'énergie que les vols évités, est-ce que l'objectif environnemental est vraiment atteint — ou juste déplacé ?"
 version: "1.0"

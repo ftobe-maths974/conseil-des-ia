@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allDecks = await getCollection('decks');
+const deck = allDecks.find(d => d.data.id === 'demo')!;
+
+const CHAMBER_LABELS: Record<string, string> = {
+  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
+  'preuve-vs-simulation':       'Preuve vs Simulation',
+  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
+  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
+  'singularite-vs-standard':    'Singularité vs Standard',
+};
+
+const CHAMBER_KEY: Record<string, string> = {
+  'delegation-vs-souverainete': 'delegation',
+  'preuve-vs-simulation':       'preuve',
+  'metabolisme-vs-progres':     'metabolisme',
+  'invisibilite-vs-arbitrage':  'invisibilite',
+  'singularite-vs-standard':    'singularite',
+};
+
+const groups = deck.data.groups;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Setup animateur" mode="animateur">
+  <main class="setup">
+
+    <header class="setup__header">
+      <div>
+        <span class="setup__label">Conseil des IA</span>
+        <h1 class="setup__title">Préparation de session</h1>
+      </div>
+      <a class="setup__launch" href={`${baseUrl}/animateur/demo`}>
+        Lancer la session →
+      </a>
+    </header>
+
+    <section class="setup__deck">
+      <p class="setup__deck-name">Deck : {deck.data.name} — {groups.length} groupes</p>
+
+      <div class="setup__groups">
+        {groups.map(g => (
+          <div class="setup__group-row" data-chamber={CHAMBER_KEY[g.chamber]}>
+            <span class="setup__group-id">{g.id}</span>
+            <span class="setup__group-chamber">{CHAMBER_LABELS[g.chamber]}</span>
+            <span class="setup__group-arrow">→ {deck.data.mandat_circulation[g.id]}</span>
+          </div>
+        ))}
+      </div>
+
+      <button class="setup__print-btn" id="btn-print">
+        Imprimer les fiches groupes
+      </button>
+    </section>
+
+    <!-- Fiches imprimables (cachées à l'écran, visibles à l'impression) -->
+    <div class="print-sheets" id="print-sheets" aria-hidden="true">
+      {groups.map(g => (
+        <div
+          class="sheet"
+          data-groupe={g.id}
+          data-chamber={CHAMBER_KEY[g.chamber]}
+          data-url={`${baseUrl}/groupe/demo/phase-1/${g.id}`}
+        >
+          <div class="sheet__header">
+            <span class="sheet__session">Conseil des IA — Session démo</span>
+            <span class="sheet__phase">Phase 1</span>
+          </div>
+
+          <div class="sheet__main">
+            <div class="sheet__group-name">{g.id.replace('groupe-', 'Groupe ')}</div>
+            <div class="sheet__chamber">{CHAMBER_LABELS[g.chamber]}</div>
+          </div>
+
+          <div class="sheet__qr" id={`qr-${g.id}`}>
+            <!-- QR généré par le script -->
+          </div>
+
+          <div class="sheet__footer">
+            <span class="sheet__instruction">Scannez pour démarrer</span>
+            <span class="sheet__mandate">Votre mandat sera transmis à {deck.data.mandat_circulation[g.id]}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </main>
+</BaseLayout>
+
+<!-- Données pour le script -->
+<script
+  type="application/json"
+  id="groups-data"
+  set:html={JSON.stringify(groups.map(g => ({
+    id: g.id,
+    chamber: g.chamber,
+    url: `${baseUrl}/groupe/demo/phase-1/${g.id}`,
+    next: deck.data.mandat_circulation[g.id],
+  })))}
+/>
+<script type="application/json" id="base-url" set:html={JSON.stringify(baseUrl)} />
+
+<script>
+  import QRCode from 'qrcode';
+
+  const groupsData: Array<{ id: string; chamber: string; url: string; next: string }> =
+    JSON.parse(document.getElementById('groups-data')!.textContent!);
+
+  // Génère les QR codes dès le chargement
+  async function generateQRCodes() {
+    for (const g of groupsData) {
+      const container = document.getElementById(`qr-${g.id}`);
+      if (!container) continue;
+      const canvas = document.createElement('canvas');
+      container.appendChild(canvas);
+      const fullUrl = window.location.origin + g.url;
+      await QRCode.toCanvas(canvas, fullUrl, {
+        width: 400,
+        margin: 2,
+        color: { dark: '#0a0a0f', light: '#ffffff' },
+      });
+    }
+  }
+
+  generateQRCodes();
+
+  document.getElementById('btn-print')?.addEventListener('click', () => {
+    window.print();
+  });
+</script>
+
+<style>
+  /* ── Écran ───────────────────────────────────────────────────────────────── */
+  .setup {
+    padding: var(--space-lg);
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+
+  .setup__header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .setup__label {
+    font-family: var(--font-mono); font-size: 0.75rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+    display: block; margin-bottom: var(--space-xs);
+  }
+
+  .setup__title {
+    font-family: var(--font-display); font-size: 1.6rem; font-weight: 700;
+  }
+
+  .setup__launch {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-xl);
+    background: var(--chamber-delegation); color: #fff;
+    border-radius: var(--radius-md); text-decoration: none;
+    font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+    white-space: nowrap;
+    transition: opacity var(--transition-fast);
+  }
+  .setup__launch:hover { opacity: 0.9; }
+
+  .setup__deck-name {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: var(--text-muted); margin-bottom: var(--space-lg);
+  }
+
+  .setup__groups {
+    display: flex; flex-direction: column; gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+  }
+
+  .setup__group-row {
+    display: flex; align-items: center; gap: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--chamber-color, var(--border-subtle));
+  }
+
+  .setup__group-id {
+    font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600;
+    min-width: 9ch;
+  }
+
+  .setup__group-chamber {
+    flex: 1; font-size: 0.9rem; color: var(--text-secondary);
+  }
+
+  .setup__group-arrow {
+    font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);
+  }
+
+  .setup__print-btn {
+    padding: var(--space-md) var(--space-2xl);
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); color: var(--text-secondary);
+    font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+  }
+  .setup__print-btn:hover {
+    border-color: var(--text-muted); color: var(--text-primary);
+  }
+
+  /* Masquer les fiches sur écran */
+  .print-sheets { display: none; }
+
+  /* ── Impression ──────────────────────────────────────────────────────────── */
+  @media print {
+    /* Cacher l'interface sur l'impression */
+    .setup__header,
+    .setup__deck { display: none; }
+
+    .print-sheets {
+      display: block;
+    }
+
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      padding: 20mm;
+      box-sizing: border-box;
+      page-break-after: always;
+      break-after: page;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      color: #0a0a0f;
+      font-family: 'Georgia', serif;
+    }
+
+    .sheet__header {
+      width: 100%;
+      display: flex; justify-content: space-between; align-items: baseline;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8mm;
+      font-size: 11pt;
+      color: #666;
+    }
+
+    .sheet__session { font-style: italic; }
+    .sheet__phase { font-weight: bold; letter-spacing: 0.05em; }
+
+    .sheet__main {
+      text-align: center;
+      display: flex; flex-direction: column; gap: 8mm;
+    }
+
+    .sheet__group-name {
+      font-size: 52pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .sheet__chamber {
+      font-size: 18pt;
+      color: #333;
+      font-style: italic;
+    }
+
+    .sheet__qr canvas {
+      width: 120mm !important;
+      height: 120mm !important;
+    }
+
+    .sheet__footer {
+      width: 100%;
+      display: flex; flex-direction: column; align-items: center; gap: 4mm;
+      border-top: 1px solid #ddd;
+      padding-top: 8mm;
+      text-align: center;
+    }
+
+    .sheet__instruction {
+      font-size: 13pt; font-weight: bold; letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .sheet__mandate {
+      font-size: 10pt; color: #666; font-style: italic;
+    }
+  }
+</style>

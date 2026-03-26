@@ -14,4 +14,7 @@ tags:
   - infrastructure
   - geopolitique
   - dependance
+suggestions_bascule:
+  - "Le point de bascule est le moment où une organisation n'a plus les compétences internes pour basculer vers un autre fournisseur — quand la dépendance est structurelle, pas seulement contractuelle."
+  - "Le point de bascule est quand un État ou une organisation ne peut plus fonctionner normalement si le service IA est coupé unilatéralement — quand la souveraineté décisionnelle est externalisée sans retour."
 version: "1.0"

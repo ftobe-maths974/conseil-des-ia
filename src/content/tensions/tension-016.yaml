@@ -14,4 +14,7 @@ tags:
   - recours
   - droits
   - explication
+suggestions_bascule:
+  - "Le point de bascule est le moment où un citoyen ne peut techniquement pas contester une décision algorithmique qui le lèse — quand le droit au recours existe en théorie mais est impossible en pratique."
+  - "Le point de bascule est quand la complexité d'un système IA dépasse la capacité des juges et régulateurs à l'évaluer — quand le droit devient aveugle face à l'algorithme."
 version: "1.0"

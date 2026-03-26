@@ -11,6 +11,9 @@ tags:
   - droits
   - attribution
   - justice
-facilitator_note: >
-  Interroger la faisabilité technique : certains modèles sont fondamentalement inexplicables.
+facilitator_note:
+  si_silence: "Demandez : si un algorithme vous refusait un logement social sans explication lisible, à qui vous adresseriez-vous — et qu'espéreriez-vous obtenir concrètement ?"
+  si_debat_bloque: "Fait choc : le RGPD prévoit déjà une obligation d'explication pour les décisions automatisées. Mais dans 80 % des cas, les explications fournies sont jugées incompréhensibles ou insuffisantes par les personnes concernées."
+  si_trop_technique: "Sortez de l'XAI technique. L'explicabilité n'est utile que si elle permet à quelqu'un de contester efficacement. À qui l'explication doit-elle être compréhensible — au développeur ou à la personne lésée ?"
+  relance_cle: "Une explication compréhensible uniquement par un expert IA n'est pas vraiment une explication. Quelle est la condition minimale pour qu'elle soit réellement utile à la personne qui en a besoin ?"
 version: "1.0"

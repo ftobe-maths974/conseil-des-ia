@@ -14,4 +14,7 @@ tags:
   - course
   - asymetrie
   - media
+suggestions_bascule:
+  - "Le point de bascule est le moment où aucune technologie disponible ne peut distinguer le vrai du faux avec un niveau de confiance suffisant pour un usage juridique ou journalistique."
+  - "Le point de bascule est quand les institutions renoncent officiellement à s'appuyer sur la vérification technique — quand la course est perdue et qu'on l'admet."
 version: "1.0"

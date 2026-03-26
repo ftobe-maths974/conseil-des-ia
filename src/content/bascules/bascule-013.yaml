@@ -6,14 +6,19 @@ scope: individuel
 title: "Le tuteur IA scolaire décide en silence ce qui compte comme 'comprendre'"
 situation: >
   Les plateformes d'apprentissage adaptatif évaluent la compréhension à travers des
-    patterns de réponse et de comportement. La définition de 'maîtriser un concept'
-    est encodée dans le modèle — sans que l'enseignant ni l'élève ne sachent
-    exactement ce qui est mesuré.
+  patterns de réponse et de comportement. La définition de 'maîtriser un concept'
+  est encodée dans le modèle — sans que l'enseignant ni l'élève ne sachent
+  exactement ce qui est mesuré.
 question: >
   Qui a le droit de définir ce que signifie apprendre, quand cette définition est enfouie dans un algorithme propriétaire ?
-tags: 
+tags:
   - education
   - apprentissage
   - evaluation
   - standard
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un utilise Khan Academy, Duolingo ou une plateforme similaire ? Comment sait-on qu'on a 'compris' selon ces outils ? Qui a décidé ce critère ?"
+  si_debat_bloque: "Fait choc : certaines plateformes évaluent la 'compréhension' à partir de la vitesse de réponse, du comportement de scrolling et des patterns de clic — des proxies qui ne sont jamais publiés ni contestables."
+  si_trop_technique: "Revenez au fond pédagogique : un enseignant peut expliquer comment il évalue la compréhension et se faire contester. Un algorithme ne peut pas. Quelle est la différence pour l'élève qui échoue ?"
+  relance_cle: "Qui a le droit de définir ce que signifie apprendre ? La réponse change complètement selon qu'on répond 'un pédagogue', 'un algorithme' ou 'une entreprise privée cotée en bourse'."
 version: "1.0"

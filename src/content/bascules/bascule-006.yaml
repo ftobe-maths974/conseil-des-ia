@@ -13,10 +13,10 @@ question: >
   Si tu laisses une IA choisir ce que tu écoutes, regardes et lis
   chaque jour, qui décide de qui tu deviens ?
 tags: [recommandation, algorithme, identite, autonomie, culture]
-facilitator_note: >
-  Carte d'entrée facile, très parlante pour ce public.
-  Bonne carte pour démarrer la Phase 1 si le groupe est silencieux.
-  Attention à ne pas rester trop longtemps sur TikTok —
-  faire glisser vers les enjeux systémiques.
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un a déjà désactivé les recommandations sur une plateforme ? Pourquoi, ou pourquoi ne pas l'avoir fait ?"
+  si_debat_bloque: "Fait choc : YouTube a admis que 70% du temps de visionnage provient des recommandations algorithmiques. Le contenu que vous choisissez consciemment, c'est 30%."
+  si_trop_technique: "Recentrez sur l'identité : si l'algorithme décide ce que vous écoutez, lisez et regardez chaque jour depuis 5 ans, quelle part de votre culture est vraiment la vôtre ?"
+  relance_cle: "On accepte que l'IA choisisse notre musique. Où s'arrête la délégation légitime ? La lecture politique ? Les amis suggérés ? Les partenaires amoureux ?"
 illustration: /images/cards/bascule-006.svg
 version: "1.0"

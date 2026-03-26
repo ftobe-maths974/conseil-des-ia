@@ -6,15 +6,18 @@ scope: systemique
 title: "Le prestataire IA met à jour ses modèles sans prévenir — vos processus changent avec"
 situation: >
   Une organisation construit ses procédures sur le comportement d'un modèle IA tiers.
-    Le prestataire déploie une mise à jour silencieuse. Les décisions produites diffèrent,
-    mais personne ne le remarque avant que les conséquences deviennent visibles.
+  Le prestataire déploie une mise à jour silencieuse. Les décisions produites diffèrent,
+  mais personne ne le remarque avant que les conséquences deviennent visibles.
 question: >
   À quel moment une mise à jour logicielle non annoncée devient-elle une modification unilatérale du contrat de travail ?
-tags: 
+tags:
   - dependance
   - contrat
   - versioning
   - gouvernance
-facilitator_note: >
-  Demander si quelqu'un a déjà vécu un changement de comportement d'outil sans notification.
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un a déjà remarqué que le comportement d'un outil avait changé sans notification ? Comment l'avez-vous découvert ?"
+  si_debat_bloque: "Fait choc : la plupart des contrats SaaS autorisent les mises à jour unilatérales du modèle. Quand vous utilisez un outil IA externe, vous n'avez aucun droit contractuel sur sa stabilité comportementale."
+  si_trop_technique: "Posez la question juridique simplement : si un prestataire humain change la façon dont il exécute sa prestation sans vous prévenir, c'est une rupture de contrat. Pourquoi ça ne s'applique pas aux IA ?"
+  relance_cle: "Quelle est la différence entre une mise à jour logicielle et une modification unilatérale des règles du jeu que personne n'a signées ?"
 version: "1.0"

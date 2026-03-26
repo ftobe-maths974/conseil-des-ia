@@ -11,6 +11,9 @@ tags:
   - finance
   - opacite
   - dependance
-facilitator_note: >
-  Demander qui détient réellement le pouvoir de décision quand un algorithme juge la solvabilité.
+facilitator_note:
+  si_silence: "Demandez : si demain votre banque vous refusait un prêt sans pouvoir vous expliquer pourquoi, que feriez-vous ? À qui vous adresseriez-vous ?"
+  si_debat_bloque: "Fait choc : en 2023, la Cour de justice de l'UE a condamné une banque autrichienne pour scoring IA opaque — 8 ans après les faits, et seulement parce qu'une avocate avait les moyens de poursuivre."
+  si_trop_technique: "Revenez au mandat : peu importe le modèle, la question est — qui est responsable quand ce système se trompe et ruine la vie de quelqu'un ?"
+  relance_cle: "Si cette action est adoptée sans garde-fous, dans combien de temps ne pourra-t-on plus faire machine arrière — et qui aura perdu quelque chose d'irremplaçable ?"
 version: "1.0"

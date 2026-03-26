@@ -112,9 +112,8 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     <!-- Instructions -->
     <section class="p3__instructions" id="p3-instructions">
       <p class="p3__instructions-text">
-        Choisissez <strong>une carte action</strong> et rédigez un <strong>mandat court</strong>
-        (1 à 2 phrases) expliquant pourquoi votre groupe la propose.
-        Ce mandat sera transmis au groupe suivant.
+        Choisissez <strong>une carte action</strong>. Complétez ensuite les deux phrases
+        qui formeront votre mandat. Il sera transmis au groupe suivant via QR code.
       </p>
     </section>
 
@@ -157,20 +156,40 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
 
     <!-- Formulaire de rédaction du mandat -->
     <section class="p3__form" id="p3-form" hidden>
-      <label class="p3__form-label" for="mandat-text">
-        Rédigez votre mandat
-        <span class="p3__form-hint">1 à 2 phrases. Soyez précis sur l'engagement que vous proposez.</span>
-      </label>
-      <textarea
-        id="mandat-text"
-        class="p3__textarea"
-        rows="4"
-        maxlength="400"
-        placeholder="Notre groupe mandate… parce que…"
-        aria-describedby="mandat-counter"
-      ></textarea>
+      <div class="p3__mandat-card" id="p3-selected-title" aria-hidden="true">
+        <!-- Nom de la carte sélectionnée, rempli par JS -->
+      </div>
+
+      <div class="p3__field">
+        <label class="p3__field-label" for="mandat-parce">
+          <span class="p3__field-prefix">Nous choisissons cette action</span>
+          <span class="p3__field-connector">parce que</span>
+        </label>
+        <textarea
+          id="mandat-parce"
+          class="p3__textarea"
+          rows="2"
+          maxlength="200"
+          placeholder="…cette technologie crée une dépendance irréversible sur laquelle il faut agir maintenant."
+        ></textarea>
+      </div>
+
+      <div class="p3__field">
+        <label class="p3__field-label" for="mandat-condition">
+          <span class="p3__field-prefix">Nous la soumettons</span>
+          <span class="p3__field-connector">à condition que</span>
+          <span class="p3__field-optional">optionnel</span>
+        </label>
+        <textarea
+          id="mandat-condition"
+          class="p3__textarea"
+          rows="2"
+          maxlength="200"
+          placeholder="…un mécanisme de recours humain soit garanti avant tout déploiement à grande échelle."
+        ></textarea>
+      </div>
+
       <div class="p3__form-footer">
-        <span class="p3__char-counter" id="mandat-counter">0 / 400</span>
         <button class="p3__submit" id="p3-submit" disabled>
           Générer le QR code →
         </button>
@@ -234,8 +253,9 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   const cardsSection  = document.getElementById('p3-cards')!;
   const formSection   = document.getElementById('p3-form')!;
   const qrPanel       = document.getElementById('p3-qr-panel')!;
-  const textarea      = document.getElementById('mandat-text') as HTMLTextAreaElement;
-  const counter       = document.getElementById('mandat-counter')!;
+  const selectedTitle = document.getElementById('p3-selected-title')!;
+  const parcequeTa    = document.getElementById('mandat-parce') as HTMLTextAreaElement;
+  const conditionTa   = document.getElementById('mandat-condition') as HTMLTextAreaElement;
   const submitBtn     = document.getElementById('p3-submit') as HTMLButtonElement;
   const redWarning    = document.getElementById('p3-red-warning')!;
   const qrDest        = document.getElementById('p3-qr-dest')!;
@@ -278,23 +298,23 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     card.setAttribute('aria-pressed', 'true');
     selectedId = id;
 
+    // Mettre à jour le titre affiché dans le formulaire
+    const action = actionsData.find(a => a.id === id);
+    selectedTitle.textContent = action?.title ?? '';
+
     // Afficher le formulaire
     formSection.hidden = false;
     formSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    textarea.focus();
+    parcequeTa.focus();
     updateSubmitState();
   }
 
   // ── Formulaire ────────────────────────────────────────────────────────────
-  textarea.addEventListener('input', () => {
-    const len = textarea.value.length;
-    counter.textContent = `${len} / 400`;
-    updateSubmitState();
-  });
+  parcequeTa.addEventListener('input', updateSubmitState);
+  conditionTa.addEventListener('input', updateSubmitState);
 
   function updateSubmitState(): void {
-    const hasText = textarea.value.trim().length >= 10;
-    submitBtn.disabled = !(selectedId && hasText);
+    submitBtn.disabled = !(selectedId && parcequeTa.value.trim().length >= 8);
   }
 
   // ── Génération QR code ────────────────────────────────────────────────────
@@ -304,15 +324,21 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     const action = actionsData.find(a => a.id === selectedId);
     if (!action) return;
 
+    const parce     = parcequeTa.value.trim();
+    const condition = conditionTa.value.trim();
+    const text = condition
+      ? `Parce que : ${parce} — À condition que : ${condition}`
+      : `Parce que : ${parce}`;
     const handoff = {
-      text:    textarea.value.trim(),
+      action: { id: action.id, title: action.title },
+      text,
       level:   action.reversibility,
       chamber: action.chamber,
       from:    document.querySelector<HTMLElement>('.p3')!.dataset.groupe ?? '',
     };
 
     const encoded = btoa(encodeURIComponent(JSON.stringify(handoff)));
-    const fullUrl = `${phase4Base}#handoff=${encoded}`;
+    const fullUrl = `${window.location.origin}${phase4Base}#handoff=${encoded}`;
 
     // Remplir la carte de résumé
     qrCardEl.innerHTML = `
@@ -323,7 +349,12 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
         </span>
       </div>
       <h3 class="p3-qr-summary__title">${escHtml(action.title)}</h3>
-      <blockquote class="p3-qr-summary__mandat">${escHtml(handoff.text)}</blockquote>
+      <dl class="p3-qr-summary__mandat">
+        <dt>Parce que</dt>
+        <dd>${escHtml(parce)}</dd>
+        <dt>À condition que</dt>
+        <dd>${escHtml(condition)}</dd>
+      </dl>
     `;
 
     // Destination
@@ -490,17 +521,38 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   }
 
   .p3__form {
-    display: flex; flex-direction: column; gap: var(--space-md);
+    display: flex; flex-direction: column; gap: var(--space-lg);
     background: var(--bg-card); border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg); padding: var(--space-xl);
     animation: slide-in 250ms ease both;
   }
 
-  .p3__form-label {
-    display: flex; flex-direction: column; gap: var(--space-xs);
+  /* Nom de la carte sélectionnée */
+  .p3__mandat-card {
     font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+    line-height: 1.3; color: var(--text-primary);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-surface); border-radius: var(--radius-md);
+    border-left: 3px solid var(--chamber-delegation);
   }
-  .p3__form-hint { font-family: var(--font-body); font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+
+  /* Champ guidé */
+  .p3__field { display: flex; flex-direction: column; gap: var(--space-xs); }
+
+  .p3__field-label {
+    display: flex; align-items: baseline; gap: var(--space-sm); flex-wrap: wrap;
+  }
+  .p3__field-prefix {
+    font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-body);
+  }
+  .p3__field-connector {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+    color: var(--text-primary);
+  }
+  .p3__field-optional {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--text-muted); margin-left: var(--space-xs);
+  }
 
   .p3__textarea {
     width: 100%; background: var(--bg-surface); border: 1px solid var(--border-subtle);
@@ -510,13 +562,9 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     transition: border-color var(--transition-fast);
   }
   .p3__textarea:focus { border-color: var(--chamber-delegation); }
-  .p3__textarea::placeholder { color: var(--text-muted); }
+  .p3__textarea::placeholder { color: var(--text-muted); font-style: italic; font-size: 0.85rem; }
 
-  .p3__form-footer {
-    display: flex; justify-content: space-between; align-items: center;
-    gap: var(--space-md);
-  }
-  .p3__char-counter { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); }
+  .p3__form-footer { display: flex; justify-content: flex-end; }
 
   .p3__submit {
     padding: var(--space-sm) var(--space-xl);
@@ -564,9 +612,17 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     font-family: var(--font-display); font-size: 1rem; font-weight: 600; line-height: 1.3;
   }
   .p3-qr-summary__mandat {
-    font-style: italic; font-size: 0.9rem; color: var(--text-secondary);
+    display: flex; flex-direction: column; gap: var(--space-sm);
     border-left: 3px solid var(--chamber-delegation);
-    padding-left: var(--space-md); line-height: 1.6;
+    padding-left: var(--space-md);
+  }
+  .p3-qr-summary__mandat dt {
+    font-family: var(--font-display); font-size: 0.75rem; font-weight: 700;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .p3-qr-summary__mandat dd {
+    font-size: 0.9rem; color: var(--text-secondary);
+    line-height: 1.55; font-style: italic; margin: 0;
   }
 
   /* Badge glow dans la récap */

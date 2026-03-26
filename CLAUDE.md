@@ -171,13 +171,12 @@ L'animateur peut override depuis son interface.
 - [x] Couleurs chambres corrigées (preuve=ambre, singularite=corail)
 - [x] 15 cartes bascules (3/chambre × 5 chambres), plus aucun fallback cross-chamber
 - [x] groupe-E (métabolisme) ajouté, rotation 5 groupes A→B→C→D→E→A
+- [x] Phase 4 : 5 scénarios YAML (1/chambre), décodage handoff depuis URL hash,
+      4 rôles avec briefings, acte d'arbitrage en 4 points, acte final révélé
 
 ## Ce qui reste à faire (priorité ordre)
-1. Phase 4 : réception mandat via URL hash + interface arbitrage
-   (scénarios + rôles + acte en 4 points)
-2. Contenu : rédiger les scénarios (5 minimum, 1 par chambre)
-3. Interface animateur : timer + tableau des mandats reçus + QR distribution
-4. Mode clair / lisibilité mobile en pleine lumière
+1. Interface animateur : timer + tableau des mandats reçus + QR distribution
+2. Mode clair / lisibilité mobile en pleine lumière
 
 ## Conventions de code
 - Composants Astro pour tout ce qui est statique
@@ -185,6 +184,29 @@ L'animateur peut override depuis son interface.
 - Nommage fichiers : kebab-case partout
 - Pas de CSS-in-JS, styles dans fichiers .css ou style tag Astro
 - getCollection() pour lire le contenu, jamais fs direct
+
+## Conventions UX — règles figées
+- Phase 3 : jamais de textarea libre pour le mandat. Toujours 2 champs guidés :
+  "parce que" + "à condition que". Le texte encodé dans le handoff est la
+  concaténation des deux. Ne pas revenir au champ unique.
+
+# Distribution des groupes — flow animateur
+
+PAS de QR projeté pour la distribution initiale.
+PAS de sélection manuelle par les étudiants.
+
+Flow :
+1. /animateur/setup → choix nb groupes → génération fiches
+2. Impression N fiches A4 (1 par table) avant la session
+3. Chaque fiche = nom groupe + chambre + 1 QR code géant
+4. URL courte encodée dans le QR : /g/[deck]/[groupe-id]
+5. Les étudiants scannent la fiche sur leur table, pas l'écran
+
+Page /animateur/setup à créer :
+- 3 boutons : 4 / 5 / 6 groupes
+- Génère les fiches avec window.print()
+- CSS print : 1 fiche par page A4, QR géant centré
+- Bouton "Lancer" → /animateur/[deck-id]
 
 ## Spec fonctionnelle — Phase 1 (priorité immédiate)
 
