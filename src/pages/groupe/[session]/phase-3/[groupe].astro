@@ -109,6 +109,12 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
       </span>
     </header>
 
+    <!-- Rappel point de bascule (rempli depuis le hash URL) -->
+    <div class="p3__bascule-reminder" id="p3-bascule-reminder" hidden>
+      <span class="p3__bascule-label">Votre point de bascule — Phase 2</span>
+      <p class="p3__bascule-text" id="p3-bascule-text"></p>
+    </div>
+
     <!-- Instructions -->
     <section class="p3__instructions" id="p3-instructions">
       <p class="p3__instructions-text">
@@ -244,10 +250,27 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   // ── État ──────────────────────────────────────────────────────────────────
   let selectedId: string | null = null;
   let inheritedRed = false;
+  let basculeText = '';
 
-  // Vérifier si le groupe a hérité d'un mandat red (via URL hash)
+  // Lire les données du hash URL
   const hash = window.location.hash;
   if (hash.includes('inherited=red')) inheritedRed = true;
+
+  // Décoder le point de bascule depuis Phase 2
+  const basculeMatch = hash.match(/bascule=([^&]*)/);
+  if (basculeMatch) {
+    try {
+      basculeText = decodeURIComponent(atob(basculeMatch[1]));
+    } catch { /* hash malformé, on ignore */ }
+  }
+
+  // Afficher le rappel si on a un texte
+  const basculeReminder = document.getElementById('p3-bascule-reminder')!;
+  const basculeTextEl   = document.getElementById('p3-bascule-text')!;
+  if (basculeText) {
+    basculeTextEl.textContent = basculeText;
+    basculeReminder.hidden = false;
+  }
 
   // ── Éléments DOM ─────────────────────────────────────────────────────────
   const cardsSection  = document.getElementById('p3-cards')!;
@@ -330,18 +353,26 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
       ? `Parce que : ${parce} — À condition que : ${condition}`
       : `Parce que : ${parce}`;
     const handoff = {
-      action: { id: action.id, title: action.title },
+      action:   { id: action.id, title: action.title },
+      bascule:  basculeText || undefined,
       text,
-      level:   action.reversibility,
-      chamber: action.chamber,
-      from:    document.querySelector<HTMLElement>('.p3')!.dataset.groupe ?? '',
+      level:    action.reversibility,
+      chamber:  action.chamber,
+      from:     document.querySelector<HTMLElement>('.p3')!.dataset.groupe ?? '',
     };
 
     const encoded = btoa(encodeURIComponent(JSON.stringify(handoff)));
     const fullUrl = `${window.location.origin}${phase4Base}#handoff=${encoded}`;
 
     // Remplir la carte de résumé
+    const basculeHtml = basculeText
+      ? `<div class="p3-qr-summary__bascule">
+           <span class="p3-qr-summary__bascule-label">Point de bascule</span>
+           <p class="p3-qr-summary__bascule-text">${escHtml(basculeText)}</p>
+         </div>`
+      : '';
     qrCardEl.innerHTML = `
+      ${basculeHtml}
       <div class="p3-qr-summary__meta">
         <span class="p3-card__id">${escHtml(action.id)}</span>
         <span class="rev-badge rev-badge--glow" data-rev="${escHtml(action.reversibility)}">
@@ -427,6 +458,24 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     border: 1px solid var(--chamber-color, var(--border-subtle));
     color: var(--chamber-color, var(--text-muted));
     text-align: right; max-width: 16ch; line-height: 1.3;
+  }
+
+  /* ── Rappel point de bascule ─────────────────────────────────────────────── */
+  .p3__bascule-reminder {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--chamber-color, var(--chamber-delegation));
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    display: flex; flex-direction: column; gap: var(--space-xs);
+  }
+  .p3__bascule-label {
+    font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p3__bascule-text {
+    font-size: 0.92rem; color: var(--text-primary);
+    line-height: 1.55; font-style: italic;
   }
 
   /* ── Instructions ────────────────────────────────────────────────────────── */
@@ -616,6 +665,24 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     border-left: 3px solid var(--chamber-delegation);
     padding-left: var(--space-md);
   }
+  /* Bloc bascule dans la récap QR */
+  .p3-qr-summary__bascule {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-surface);
+    border-left: 3px solid var(--chamber-color, var(--chamber-delegation));
+    border-radius: var(--radius-sm);
+    display: flex; flex-direction: column; gap: 4px;
+    margin-bottom: var(--space-sm);
+  }
+  .p3-qr-summary__bascule-label {
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p3-qr-summary__bascule-text {
+    font-size: 0.85rem; color: var(--text-secondary);
+    line-height: 1.5; font-style: italic;
+  }
+
   .p3-qr-summary__mandat dt {
     font-family: var(--font-display); font-size: 0.75rem; font-weight: 700;
     color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;

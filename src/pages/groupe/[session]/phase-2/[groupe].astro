@@ -168,16 +168,22 @@ const tensionsData: TensionData[] = selected.map(t => ({
         >
           Continuer vers la Phase 3 →
         </a>
+
       </div>
     </section>
 
   </main>
 </BaseLayout>
 
+<!-- Données pour le script client -->
+<script type="application/json" id="phase3-base" set:html={JSON.stringify(phase3Url)} />
+
 <script>
   const textarea  = document.getElementById('bascule-text') as HTMLTextAreaElement;
   const counter   = document.getElementById('bascule-counter')!;
   const continueA = document.getElementById('p2-continue') as HTMLAnchorElement;
+
+  const phase3Base: string = JSON.parse(document.getElementById('phase3-base')!.textContent!);
 
   textarea.addEventListener('input', () => {
     const len = textarea.value.trim().length;
@@ -186,10 +192,14 @@ const tensionsData: TensionData[] = selected.map(t => ({
       continueA.removeAttribute('aria-disabled');
       continueA.removeAttribute('tabindex');
       continueA.classList.add('p2__continue--active');
+      // Encoder le texte dans l'URL hash pour Phase 3
+      const encoded = btoa(encodeURIComponent(textarea.value.trim()));
+      continueA.href = `${phase3Base}#bascule=${encoded}`;
     } else {
       continueA.setAttribute('aria-disabled', 'true');
       continueA.setAttribute('tabindex', '-1');
       continueA.classList.remove('p2__continue--active');
+      continueA.href = phase3Base;
     }
   });
 

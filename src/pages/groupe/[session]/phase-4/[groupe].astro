@@ -87,6 +87,10 @@ const scenarioData: ScenarioData | null = scenario ? {
           </div>
         </div>
         <div class="p4__mandat-action" id="p4-mandat-action" hidden></div>
+        <div class="p4__mandat-bascule" id="p4-mandat-bascule" hidden>
+          <span class="p4__mandat-bascule-label">Point de bascule identifié</span>
+          <p class="p4__mandat-bascule-text" id="p4-mandat-bascule-text"></p>
+        </div>
         <blockquote class="p4__mandat-text" id="p4-mandat-text"></blockquote>
         <p class="p4__mandat-constraint" id="p4-mandat-constraint"></p>
       </div>
@@ -202,11 +206,12 @@ const scenarioData: ScenarioData | null = scenario ? {
 <script>
   // ── Types ─────────────────────────────────────────────────────────────────
   interface Handoff {
-    action?: { id: string; title: string };
-    text: string;
-    level: 'green' | 'yellow' | 'red';
-    chamber: string;
-    from: string;
+    action?:  { id: string; title: string };
+    bascule?: string;
+    text:     string;
+    level:    'green' | 'yellow' | 'red';
+    chamber:  string;
+    from:     string;
   }
 
   // ── Lecture du handoff depuis le hash ─────────────────────────────────────
@@ -251,6 +256,12 @@ const scenarioData: ScenarioData | null = scenario ? {
       const actionEl = document.getElementById('p4-mandat-action')!;
       actionEl.textContent = handoff.action.title;
       actionEl.hidden = false;
+    }
+
+    if (handoff.bascule) {
+      const basculeEl = document.getElementById('p4-mandat-bascule')!;
+      document.getElementById('p4-mandat-bascule-text')!.textContent = handoff.bascule;
+      basculeEl.hidden = false;
     }
 
     document.getElementById('p4-mandat-text')!.textContent = handoff.text;
@@ -393,6 +404,23 @@ const scenarioData: ScenarioData | null = scenario ? {
     padding: var(--space-sm) var(--space-md);
     background: var(--bg-surface); border-radius: var(--radius-md);
     border-left: 3px solid var(--chamber-color, var(--border-subtle));
+  }
+
+  .p4__mandat-bascule {
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--text-muted);
+    border-radius: var(--radius-sm);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .p4__mandat-bascule-label {
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p4__mandat-bascule-text {
+    font-size: 0.88rem; color: var(--text-secondary);
+    line-height: 1.55; font-style: italic;
   }
 
   .p4__mandat-text {
