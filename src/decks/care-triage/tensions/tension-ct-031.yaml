@@ -1,0 +1,24 @@
+id: tension-ct-031
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: green
+title: "L'audit de couverture avant déploiement ralentit l'accès au bénéfice pour tous"
+content: >
+  Exiger un audit de couverture des populations atypiques avant tout déploiement de
+  module CareFlow est une garantie éthique légitime. Mais cet audit prend du temps
+  et de l'argent. Pendant ce délai, les patients pour lesquels le système fonctionne
+  bien — la majorité — ne bénéficient pas de l'amélioration potentielle. Retarder
+  le déploiement pour protéger une minorité revient à priver une majorité d'un gain
+  réel. Les deux perspectives ont leur légitimité.
+question: >
+  Retarder le déploiement de CareFlow pour protéger les patients atypiques est-il
+  une exigence éthique inconditionnelle ou un arbitrage à faire en fonction des
+  bénéfices attendus pour l'ensemble des patients ?
+tags:
+  - deploiement
+  - audit
+  - arbitrage
+  - majorite-minorite
+version: "1.0"

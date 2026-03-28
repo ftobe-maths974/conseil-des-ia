@@ -1,0 +1,24 @@
+id: tension-ct-043
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "CareFlow réduit la charge cognitive des soignants — et réduit aussi leur marge de manœuvre"
+content: >
+  L'argument principal en faveur de CareFlow est la réduction de la charge cognitive
+  des soignants : moins de décisions répétitives, moins de vigilance constante, moins
+  de fatigue décisionnelle. Cet avantage est réel. Mais la charge cognitive n'est pas
+  seulement un coût : elle est aussi la condition de l'exercice du jugement. En
+  réduisant la sollicitation cognitive, CareFlow réduit aussi les occasions d'exercer
+  et de maintenir ce jugement.
+question: >
+  Si CareFlow réduit la charge cognitive des soignants en prenant en charge une partie
+  de leur raisonnement clinique, est-ce une amélioration des conditions de travail
+  ou une réduction progressive de leur capacité à décider sans aide ?
+tags:
+  - charge-cognitive
+  - jugement-clinique
+  - avantage
+  - contrepartie
+version: "1.0"

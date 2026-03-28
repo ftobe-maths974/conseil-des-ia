@@ -1,0 +1,24 @@
+id: tension-ct-039
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Le soignant qui maîtrise CareFlow est plus employable — celui qui ne le maîtrise pas, moins"
+content: >
+  La maîtrise de CareFlow devient progressivement une compétence attendue dans les
+  recrutements hospitaliers de la région. Les soignants qui ont travaillé dans des
+  établissements non équipés sont perçus comme moins opérationnels. Cette évolution
+  du marché du travail hospitalier crée une pression à l'adoption du système non
+  seulement institutionnelle mais individuelle. Le refus ou l'ignorance de CareFlow
+  a désormais un coût personnel.
+question: >
+  Si maîtriser CareFlow devient une condition implicite d'employabilité pour les
+  soignants, la décision de déployer le système appartient encore à l'institution
+  ou est-elle déjà contrainte par le marché du travail qu'elle a contribué à créer ?
+tags:
+  - employabilite
+  - compétence-requise
+  - pression-marche
+  - soignants
+version: "1.0"

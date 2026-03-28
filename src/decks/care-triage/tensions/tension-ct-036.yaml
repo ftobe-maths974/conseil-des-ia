@@ -1,0 +1,24 @@
+id: tension-ct-036
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+title: "CareFlow homogénéise les pratiques de triage — et efface les expertises locales"
+content: >
+  Avant CareFlow, chaque équipe des urgences du GHR avait développé des pratiques
+  de triage adaptées à sa patientèle locale — une population vieillissante dans un
+  secteur, une forte prévalence de maladies chroniques dans un autre. CareFlow impose
+  un standard commun qui efface ces adaptations. L'homogénéisation améliore la
+  comparabilité et réduit certaines inégalités inter-services. Mais elle supprime aussi
+  une expertise locale construite sur des années d'observation.
+question: >
+  L'homogénéisation des pratiques de triage par CareFlow à l'échelle du GHR est-elle
+  un gain d'équité et de gouvernance ou la destruction d'une intelligence collective
+  locale irremplaçable ?
+tags:
+  - homogeneisation
+  - expertise-locale
+  - pratique
+  - standard
+version: "1.0"

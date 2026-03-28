@@ -1,0 +1,24 @@
+id: action-ct-007
+phase: action
+slot: 3
+lever_type: conditionner
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner l'affichage des scores CareFlow à la présence d'un critère lisible par le soignant"
+body: >
+  CareFlow ne peut afficher un score de triage ou d'orientation sans qu'y soit associée
+  une formulation en langage clinique identifiant le critère principal ayant pesé dans
+  le calcul. Cette formulation est rédigée par l'éditeur en accord avec le comité médical
+  du GHR et mise à jour à chaque nouvelle version du modèle. Un score sans critère
+  lisible est rejeté par l'interface et traité comme donnée incomplète.
+mandat_principe: >
+  N'autoriser aucune décision automatisée à être présentée à un opérateur sans qu'un
+  critère principal déterminant soit formulé dans un langage compréhensible par ce
+  même opérateur.
+tags:
+  - lisibilite
+  - score
+  - critere
+  - interface
+version: "1.0"

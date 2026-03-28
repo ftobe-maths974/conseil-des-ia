@@ -1,0 +1,24 @@
+id: action-ct-006
+phase: action
+slot: 2
+lever_type: auditer
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: organisationnel
+title: "Auditer semestriellement les biais de distribution des scores CareFlow par population"
+body: >
+  Le GHR mandate un audit semestriel des distributions de scores CareFlow, stratifiées
+  par âge, sexe, origine géographique et pathologie chronique. L'audit identifie les
+  populations sur- ou sous-scorées par rapport aux décisions cliniques effectives.
+  Les résultats sont transmis au comité d'éthique et à la commission médicale
+  d'établissement, avec un plan de correction si des écarts significatifs sont constatés.
+mandat_principe: >
+  Exiger la vérification régulière et documentée que les décisions automatisées ne
+  produisent pas d'effets différenciés injustifiés selon les caractéristiques des
+  personnes concernées.
+tags:
+  - biais
+  - audit
+  - population
+  - equite
+version: "1.0"

@@ -1,0 +1,23 @@
+id: tension-ct-002
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Le soignant qui résiste à CareFlow : indépendance ou non-conformité ?"
+content: >
+  Un médecin qui conteste régulièrement les recommandations de CareFlow et documente
+  ses raisons exerce son autonomie clinique — c'est ce que la déontologie médicale
+  lui impose. Mais dans une institution où CareFlow est le standard, sa résistance
+  peut être lue comme un refus de coopérer, une source de non-conformités dans les
+  tableaux de bord, voire un obstacle à l'efficience du service. La tension entre
+  souveraineté clinique individuelle et cohérence institutionnelle est réelle.
+question: >
+  À partir de quel seuil de contestation des recommandations CareFlow un médecin
+  cesse-t-il d'exercer son jugement clinique pour devenir un problème organisationnel ?
+tags:
+  - autonomie-clinique
+  - conformite
+  - resistance
+  - deontologie
+version: "1.0"

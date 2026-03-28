@@ -1,0 +1,25 @@
+id: action-ct-008
+phase: action
+slot: 4
+lever_type: interdire
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Interdire l'usage de scores CareFlow non journalisés dans les décisions de sortie"
+body: >
+  Toute décision de sortie, de transfert ou de refus d'admission appuyée sur un score
+  CareFlow doit s'accompagner d'un enregistrement horodaté dans le dossier patient,
+  mentionnant le score, les critères principaux et le nom du praticien ayant pris la
+  décision finale. Il est interdit d'utiliser une recommandation CareFlow sans traçabilité
+  dans les actes engageant la continuité des soins. Les données de journalisation sont
+  conservées cinq ans et accessibles sur demande du patient ou de son représentant.
+mandat_principe: >
+  Exiger que toute décision engageant la continuité des soins d'une personne soit
+  traçable, horodatée et attribuable à un responsable identifié, quelle que soit la
+  part d'automatisation dans son élaboration.
+tags:
+  - journalisation
+  - sortie
+  - traçabilite
+  - responsabilite
+version: "1.0"

@@ -1,0 +1,24 @@
+id: action-ct-015
+phase: action
+slot: 3
+lever_type: conditionner
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner la mise à jour de CareFlow à une évaluation d'impact sur les cas limites"
+body: >
+  Toute mise à jour du modèle CareFlow affectant les règles de triage ou d'orientation
+  doit être précédée d'une évaluation d'impact sur les cas cliniques atypiques ou
+  limites des six derniers mois. Cette évaluation est conduite par un binôme composé
+  d'un clinicien référent et du responsable technique CareFlow. La mise à jour est
+  suspendue si l'évaluation révèle une dégradation de couverture pour une population
+  identifiée.
+mandat_principe: >
+  N'autoriser aucune modification d'un système automatisé sans évaluation préalable
+  de son impact sur les situations les plus fragiles ou les moins bien couvertes.
+tags:
+  - mise-a-jour
+  - cas-limites
+  - evaluation-impact
+  - comorbidite
+version: "1.0"

@@ -1,0 +1,25 @@
+id: action-ct-013
+phase: action
+slot: 1
+lever_type: recours
+chamber: singularite-vs-standard
+reversibility: green
+scope: individuel
+title: "Garantir une voie de dérogation motivée pour tout patient hors profil standard CareFlow"
+body: >
+  Tout soignant peut déclencher une procédure de dérogation pour un patient dont le
+  profil clinique s'écarte significativement des populations couvertes par CareFlow.
+  La dérogation est documentée dans le dossier avec la mention du critère d'atypie,
+  validée par le médecin responsable et transmise au référent CareFlow pour suivi
+  statistique. La dérogation ne peut être refusée pour motif d'organisation si le
+  soignant la juge cliniquement nécessaire.
+mandat_principe: >
+  Garantir à toute personne dont le profil s'écarte du standard couvert par un système
+  automatisé une voie de dérogation formalisée, documentée et non refusable pour
+  motif organisationnel.
+tags:
+  - derogation
+  - atypie
+  - profil-hors-standard
+  - droits
+version: "1.0"

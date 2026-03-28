@@ -1,0 +1,24 @@
+id: tension-ct-023
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "L'audit de concordance CareFlow révèle des écarts — sans dire lequel a tort"
+content: >
+  L'audit trimestriel de concordance compare les prédictions CareFlow aux évolutions
+  cliniques observées. Il produit des statistiques d'écart. Mais un écart entre
+  prédiction et évolution réelle ne prouve pas que CareFlow s'est trompé : peut-être
+  que l'hospitalisation préventive recommandée a précisément évité la décompensation.
+  La concordance observable est impossible à mesurer proprement dans des situations
+  où l'action préventive modifie l'événement prédit.
+question: >
+  Comment évaluer la fiabilité d'un système de prédiction clinique quand l'action
+  déclenchée par la prédiction modifie elle-même le résultat que l'on cherche à
+  mesurer ?
+tags:
+  - evaluation
+  - concordance
+  - prevention
+  - methodologie
+version: "1.0"

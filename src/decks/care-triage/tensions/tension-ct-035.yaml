@@ -1,0 +1,23 @@
+id: tension-ct-035
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Élargir la base d'entraînement de CareFlow aux cas rares améliore la couverture — et dilue la précision"
+content: >
+  Intégrer les patients atypiques dans la base d'entraînement de CareFlow permettrait
+  de mieux les couvrir. Mais ces populations sont rares par définition — elles sont
+  statistiquement minoritaires. Leur intégration peut dégrader la précision du modèle
+  sur les cas courants, qui représentent 95 % des passages. L'éditeur doit arbitrer
+  entre une couverture élargie et une précision maintenue. Les deux répondent à des
+  exigences légitimes mais incompatibles à paramètres constants.
+question: >
+  Si améliorer la couverture de CareFlow pour les patients atypiques dégrade sa
+  précision pour les patients courants, comment décider quel groupe mérite priorité ?
+tags:
+  - entraînement
+  - couverture
+  - precision
+  - arbitrage
+version: "1.0"

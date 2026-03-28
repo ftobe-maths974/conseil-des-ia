@@ -1,0 +1,29 @@
+id: tension-ct-044
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "La dépendance à CareFlow est invisible jusqu'à la panne"
+content: >
+  Une organisation dépendante de CareFlow fonctionne normalement tant que le système
+  fonctionne. La dépendance n'est pas perceptible au quotidien : elle ne se manifeste
+  que lors d'une interruption. À ce moment, son ampleur réelle est révélée — et il
+  est trop tard pour l'anticiper. La dépendance opérationnelle est une irréversibilité
+  qui ne se révèle que dans les situations de crise, quand les solutions alternatives
+  ne sont plus disponibles.
+data_point: >
+  Une analyse des incidents de systèmes d'information hospitaliers en France (ANSSI,
+  rapport 2023) montre que 34 % des établissements de santé victimes d'une panne
+  informatique majeure n'avaient pas de procédure de mode dégradé documentée et
+  à jour.
+question: >
+  Si la dépendance à CareFlow n'est mesurable qu'au moment où elle crée une crise,
+  comment une institution peut-elle décider de la gérer avant que cette crise ne
+  survienne ?
+tags:
+  - dependance
+  - panne
+  - crise
+  - visibilite
+version: "1.0"

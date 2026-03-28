@@ -12,7 +12,7 @@ L'application est **content-first** : les decks et les cartes sont des fichiers 
 
 - **Astro SSG** — pas de SSR, pas de backend
 - **TypeScript strict** — pas de `any` implicite
-- **Contenu** — fichiers YAML dans `src/content/`, validés par schémas Zod
+- **Contenu** — fichiers YAML dans `src/decks/`, validés par schémas Zod
 - **Déploiement** — GitHub Actions → GitHub Pages (build statique uniquement)
 - **État de session** — mémoire volatile + URL hash uniquement. Pas de localStorage, sessionStorage, IndexedDB ni WebSocket pour l'état de jeu
 - **QR codes** — librairie `qrcode` npm, côté client uniquement
@@ -47,6 +47,12 @@ src/decks/
     tensions/              ← cartes Phase 2
     actions/               ← cartes Phase 3
     scenarios/             ← cartes Phase 4
+  care-triage/             ← deck pilote éditorial (univers CareFlow/GHR)
+    config.yaml
+    bascules/
+    tensions/
+    actions/
+    scenarios/
 
 src/content/
   config.ts                ← schémas Zod + glob loaders (pas de fichiers YAML ici)
@@ -59,6 +65,8 @@ Les collections Astro pointent vers `src/decks/` via `glob()` (Content Layer exp
 **Isolation par deck** : les pages filtrent toujours avec `entry.id.startsWith(deckId + '/')`. Les cartes d'un deck ne peuvent pas fuiter dans un autre.
 
 **Contenu du deck demo** : 15 bascules (3/chambre × 5), 45 tensions (9/chambre × 5, 3/slot_theme), 20 actions (4/chambre × 5), 5 scénarios (1/chambre).
+
+**Contenu du deck care-triage** : identique en volume, univers CareFlow/GHR, champ `mandat_principe` présent sur toutes les actions.
 
 ---
 
@@ -97,6 +105,7 @@ Cet ordre détermine la rotation des mandats. Un groupe travaille la même chamb
 - 4 actions filtrées par chambre, badge **Recommandé** selon le thème dominant
 - Mapping : `individu → recours, limiter` / `organisation → conditionner, auditer` / `systeme → interdire, auditer`
 - Tâche : choisir 1 carte, rédiger un mandat en 2 champs guidés ("parce que" + "à condition que")
+- Le `mandat_principe` de la carte choisie sert de base à la reformulation
 - Modification trajectoire : `green → traj-1`, `yellow → traj±0`, `red → traj+1`
 - Output : objet handoff base64 encodé → QR code → groupe suivant
 
@@ -206,6 +215,7 @@ reversibility: green | yellow | red
 scope: individuel | organisationnel | systemique
 title: "Verbe institutionnel + objet"   # décrit l'intervention, jamais le problème
 body: "..."    # 30–70 mots, qui fait quoi avec quel effet mesurable
+mandat_principe: "..."   # principe de gouvernance portable interchambre — OBLIGATOIRE pour tout deck non-demo
 tags: [...]
 amplifies: [...]         # optionnel
 blocks: [...]            # optionnel
@@ -256,9 +266,31 @@ mandat_circulation:
 
 ---
 
+## Règle Action → Mandat (`mandat_principe`)
+
+Une carte action n'est **jamais** transmise telle quelle à la chambre suivante. Elle doit être reformulée en `mandat_principe` : un principe de gouvernance interchambre, portable dans le même univers narratif.
+
+- `title` + `body` = action locale, située, institutionnelle
+- `mandat_principe` = principe portable, compréhensible par la chambre suivante sans explication extérieure
+
+**Formulations autorisées :**
+- `N'autoriser aucune… sans…`
+- `Garantir à toute personne concernée…`
+- `Exiger que toute décision fondée sur…`
+- `Préserver la possibilité de…`
+- `Imposer une exception motivée lorsque…`
+
+**Formulations à refuser :**
+- nom d'un module logiciel précis comme mandat
+- action trop locale impossible à réutiliser interchambre
+- consigne purement technique sans portée institutionnelle
+- mandat limité à une spécialité si la chambre suivante ne peut pas l'exploiter
+
+---
+
 ## Bible éditoriale
 
-### Philosophie des chambres
+### Philosophie des chambres (générique)
 
 Chaque chambre a une **question mère**, un **lexique central**, un **angle mort** et une **ligne rouge**.
 
@@ -301,6 +333,49 @@ Chaque chambre a une **question mère**, un **lexique central**, un **angle mort
 
 ---
 
+### Mini-bible deck `CARE-TRIAGE` (univers CareFlow/GHR)
+
+Univers : le système `CareFlow` pilote progressivement triage, orientation, priorisation des lits et suivi des patients dans un groupement hospitalier régional (GHR) public. Les décisions humaines s'alignent sur ses recommandations sans toujours en connaître les critères.
+
+Règle absolue : toutes les cartes restent dans le monde CareFlow/hôpital public/GHR.
+
+**Délégation vs Souveraineté**
+- Question mère : qui décide encore réellement de l'orientation, de la priorité ou du refus ?
+- Lexique : validation humaine, autonomie clinique, responsabilité médicale, dépendance au système, maîtrise du protocole
+- Angle mort : CareFlow peut réduire certains biais humains dans le triage
+- Ligne rouge : ne pas dériver vers "la technologie décide" comme slogan
+- Mandat type : "N'autoriser aucune décision d'orientation sans validation humaine traçable identifiée"
+
+**Invisibilité vs Arbitrage**
+- Question mère : qu'est-ce qui reste visible, traçable et contestable dans les choix de CareFlow ?
+- Lexique : score, justification, audit, journalisation, recours, lisibilité du critère
+- Angle mort : la transparence totale peut surcharger les soignants
+- Ligne rouge : ne pas confondre biais algorithmique et erreur humaine
+- Mandat type : "Garantir à tout patient la traçabilité et la contestabilité des scores CareFlow qui l'affectent"
+
+**Preuve vs Simulation**
+- Question mère : qu'est-ce qu'une sortie CareFlow prouve vraiment dans une décision de soin ?
+- Lexique : validation clinique, seuil de fiabilité, attestation, protocole de contre-indication, contradiction
+- Angle mort : CareFlow peut repérer des signaux faibles que le clinicien manque
+- Ligne rouge : ne pas dériver vers "peut-on faire confiance à l'IA" en général
+- Mandat type : "Exiger que toute recommandation CareFlow soit accompagnée d'un seuil de fiabilité documenté et d'un protocole de contradiction"
+
+**Singularité vs Standard**
+- Question mère : que deviennent les patients atypiques dans un système piloté par des modèles entraînés sur des cas courants ?
+- Lexique : exception, atypie, cas-limite, profil hors-standard, dérogation motivée, adaptation
+- Angle mort : les standards permettent l'équité et l'accès universel
+- Ligne rouge : ne pas dériver vers un rejet de tout protocole
+- Mandat type : "Imposer une dérogation motivée pour tout patient dont le profil s'écarte significativement du standard CareFlow"
+
+**Métabolisme vs Progrès**
+- Question mère : que consomme, rigidifie ou rend irréversible le déploiement de CareFlow dans le GHR ?
+- Lexique : dépendance opérationnelle, coût de maintenance, charge des équipes, soutenabilité, réversibilité, capacité autonome résiduelle
+- Angle mort : CareFlow peut réduire la charge cognitive et optimiser les ressources
+- Ligne rouge : ne pas dériver vers un technopessimisme général
+- Mandat type : "Conditionner tout déploiement CareFlow à la préservation d'une capacité de fonctionnement autonome documentée"
+
+---
+
 ### Règles d'écriture par phase
 
 **Phase 1 — Bascule**
@@ -317,6 +392,7 @@ Chaque chambre a une **question mère**, un **lexique central**, un **angle mort
 **Phase 3 — Action**
 - `title` : commence par un verbe institutionnel (Interdire / Conditionner / Auditer / Plafonner / Garantir…). Décrit l'intervention, jamais le problème.
 - `body` : 30–70 mots. Qui fait quoi, dans quel cadre, avec quel effet mesurable.
+- `mandat_principe` : 1–2 phrases, principe de gouvernance portable interchambre.
 - Test : un décideur ou législateur pourrait-il adopter cette mesure telle quelle ?
 
 **Mandat transmis**
@@ -350,6 +426,8 @@ Chaque chambre a une **question mère**, un **lexique central**, un **angle mort
 8. **`data_point` sans source réelle** — pas de "selon une étude" sans référence
 9. **Question de Phase 1 donnant une réponse implicite** — les deux positions doivent être défendables
 10. **Sujet institutionnel absent** — qui fait quoi ?
+11. **`mandat_principe` trop technique ou trop local** — doit être portable interchambre
+12. **`mandat_principe` absent sur une action d'un deck non-demo** — champ obligatoire
 
 ### Matrice de contrôle qualité
 
@@ -358,9 +436,27 @@ Chaque chambre a une **question mère**, un **lexique central**, un **angle mort
 - [ ] Cohérence `slot_theme` : individu / organisation / système
 - [ ] Niveau d'abstraction correct pour la phase (concret P1, structurel P2, institutionnel P3)
 - [ ] `lever_type` cohérent avec le titre et le body (P3)
-- [ ] Mandat transmissible à une chambre différente sans perte de sens
+- [ ] `mandat_principe` portable vers la chambre suivante sans perte de sens
 - [ ] Accessible à des étudiants non-spécialistes (pas de jargon technique opaque)
 - [ ] Pas de redondance avec une autre carte de la même chambre
+
+---
+
+## Protocole de génération d'un nouveau deck
+
+Ordre de travail obligatoire (ne pas générer dans le désordre) :
+
+1. **Bible du deck** — univers narratif, institution, population, registre, logiciel central
+2. **5 scénarios (Phase 4)** — point culminant ; chaque scénario nomme la friction attendue avec le mandat qu'il recevra
+3. **20 actions + mandat_principe** — vérifier que chaque `mandat_principe` peut créer une friction dans le scénario de la chambre suivante
+4. **Audit de circulation interchambre** — tableau : chambre émettrice / mandat_principe / chambre réceptrice / scénario récepteur / nature de la friction / verdict
+5. **15 bascules** — préparer le terrain pour les tensions
+6. **45 tensions** — approfondir les dilemmes
+7. **Audit de cohérence global**
+
+Le deck n'est pas validé tant que les 5 passages interchambres ne sont pas jugés cohérents (verdict : cohérent / trop local / trop abstrait / lexicalement incohérent / à réécrire).
+
+Le deck `care-triage` est le **deck de référence** pour cette méthode.
 
 ---
 
@@ -394,7 +490,8 @@ Chaque chambre a une **question mère**, un **lexique central**, un **angle mort
 1. Créer `src/decks/mon-deck/config.yaml` avec tous les champs obligatoires
 2. Créer les sous-dossiers `bascules/`, `tensions/`, `actions/`, `scenarios/` dans ce même dossier
 3. Peupler avec les fichiers YAML en respectant les schémas et la bible éditoriale
-4. Le build génère automatiquement toutes les routes — aucun code à modifier
+4. Suivre le **protocole de génération** (scénarios → actions → audit → bascules → tensions)
+5. Le build génère automatiquement toutes les routes — aucun code à modifier
 
 ---
 

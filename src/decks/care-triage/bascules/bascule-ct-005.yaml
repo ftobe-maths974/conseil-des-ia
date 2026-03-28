@@ -1,0 +1,23 @@
+id: bascule-ct-005
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: organisationnel
+title: "Les logs CareFlow existent — personne ne sait les lire"
+situation: >
+  Après un incident de triage, l'équipe du service des urgences veut reconstituer
+  la séquence des décisions CareFlow. Les logs existent dans le système, mais ils
+  sont au format technique. Le référent CareFlow est en congé. Le médecin chef
+  demande à l'éditeur : délai de réponse annoncé, 72 heures. L'audit interne est
+  bloqué faute de lisibilité des données.
+question: >
+  Des données de journalisation inaccessibles en temps réel par l'équipe concernée
+  constituent-elles une traçabilité réelle ou une traçabilité de façade ?
+tags:
+  - journalisation
+  - lisibilite
+  - audit
+  - incident
+version: "1.0"

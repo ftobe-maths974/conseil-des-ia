@@ -1,0 +1,28 @@
+id: tension-ct-003
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "La signature du médecin sur une décision CareFlow : couverture ou responsabilité ?"
+content: >
+  Lorsqu'un médecin valide une recommandation CareFlow, il appose sa signature sur
+  une décision dont il n'a pas nécessairement évalué tous les critères. Juridiquement,
+  la signature transfère la responsabilité vers lui. Mais si la décision s'avère
+  erronée et que les critères de CareFlow n'étaient pas visibles ou compréhensibles
+  au moment de la validation, peut-on véritablement parler d'un acte médical libre
+  et éclairé ? La signature protège l'éditeur autant qu'elle engage le médecin.
+data_point: >
+  Dans une étude sur la responsabilité médicale et les outils d'aide à la décision
+  clinique (Delphi Medical Law Review, 2022), 67 % des juristes interrogés estiment
+  que la validation d'une recommandation IA sans traçabilité des critères constitue
+  une signature en blanc.
+question: >
+  Signer une recommandation CareFlow sans accès aux critères de calcul, est-ce
+  exercer sa responsabilité médicale ou la déléguer à l'éditeur ?
+tags:
+  - responsabilite
+  - signature
+  - juridique
+  - autonomie-clinique
+version: "1.0"

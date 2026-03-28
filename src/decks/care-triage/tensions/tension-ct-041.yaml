@@ -1,0 +1,25 @@
+id: tension-ct-041
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "L'audit de charge CareFlow révèle un surcoût — mais aussi un bénéfice réel"
+content: >
+  Un audit honnête de la charge organisationnelle induite par CareFlow produira
+  probablement un résultat ambigu : certains services auront gagné du temps, d'autres
+  l'auront perdu. Les gains de fluidité seront réels dans les services à fort volume ;
+  les coûts de maintenance seront visibles dans les services spécialisés à faible
+  volume. Décider de l'avenir du déploiement à partir de cet audit suppose d'accepter
+  une réalité nuancée que les deux camps — pro et contra CareFlow — préféreront ne
+  pas voir.
+question: >
+  Si un audit de charge de CareFlow montre des gains pour certains services et des
+  coûts pour d'autres, comment l'institution décide-t-elle sans invisibiliser
+  systématiquement ceux qui perdent ?
+tags:
+  - audit
+  - charge
+  - inegalite-service
+  - decision
+version: "1.0"

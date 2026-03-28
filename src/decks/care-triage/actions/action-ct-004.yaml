@@ -1,0 +1,23 @@
+id: action-ct-004
+phase: action
+slot: 4
+lever_type: limiter
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "Plafonner le taux de recommandations CareFlow exécutées sans révision humaine"
+body: >
+  Le GHR fixe un seuil maximal de recommandations CareFlow exécutées sans révision
+  explicite par un soignant : ce taux ne peut excéder 60 % sur une période mensuelle,
+  par service. Les services dépassant ce seuil font l'objet d'un entretien avec la
+  direction médicale pour évaluer si le niveau de délégation est approprié au contexte
+  clinique et à la charge de travail réelle.
+mandat_principe: >
+  Plafonner la proportion de décisions exécutées sans révision humaine à ce qui peut
+  être justifié, mesuré et réversible dans le contexte institutionnel concerné.
+tags:
+  - seuil
+  - revision-humaine
+  - delegation
+  - service
+version: "1.0"

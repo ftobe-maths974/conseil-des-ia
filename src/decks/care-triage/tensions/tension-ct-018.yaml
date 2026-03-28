@@ -1,0 +1,24 @@
+id: tension-ct-018
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Rendre CareFlow visible rend aussi visible ce que l'hôpital fait mal"
+content: >
+  Un système de journalisation et d'audit complet de CareFlow permettrait de détecter
+  des biais, des erreurs systématiques, des inégalités de traitement. Mais il rendrait
+  aussi visibles des dysfonctionnements organisationnels, des sous-effectifs, des
+  pratiques non conformes. Pour l'institution, accroître la visibilité du système
+  revient à accroître sa propre visibilité — y compris ses défaillances. Cela peut
+  freiner la mise en place réelle de l'auditabilité.
+question: >
+  Si rendre CareFlow transparent revient à rendre l'hôpital transparent sur ses
+  propres imperfections, peut-on attendre de l'institution qu'elle s'impose elle-même
+  cette exigence ?
+tags:
+  - visibilite
+  - institutionnel
+  - audit
+  - dysfonctionnement
+version: "1.0"

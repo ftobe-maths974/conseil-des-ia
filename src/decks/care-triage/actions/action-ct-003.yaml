@@ -1,0 +1,23 @@
+id: action-ct-003
+phase: action
+slot: 3
+lever_type: auditer
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "Auditer annuellement les périmètres de décision effectivement délégués à CareFlow"
+body: >
+  Le GHR conduit chaque année un audit interne recensant l'ensemble des décisions
+  cliniques et organisationnelles pour lesquelles CareFlow produit des recommandations
+  suivies d'exécution. L'audit compare les périmètres contractuels initiaux avec l'usage
+  réel, identifie les glissements non formalisés et produit un rapport transmis au comité
+  médical d'établissement et aux représentants du personnel.
+mandat_principe: >
+  Exiger la traçabilité et l'auditabilité publique de tout élargissement du périmètre
+  de décision délégué à un système automatisé au sein d'une institution.
+tags:
+  - audit
+  - perimetre
+  - glissement
+  - gouvernance
+version: "1.0"

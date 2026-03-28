@@ -1,0 +1,25 @@
+id: action-ct-010
+phase: action
+slot: 2
+lever_type: interdire
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Interdire l'usage d'une alerte CareFlow comme seule justification d'une décision d'admission"
+body: >
+  Aucune décision d'admission, d'hospitalisation préventive ou de transfert ne peut
+  reposer exclusivement sur une alerte ou une prédiction CareFlow. Toute décision de
+  ce type doit être motivée par un examen clinique documenté, indépendant du score
+  automatique. L'alerte CareFlow peut déclencher un examen complémentaire ; elle ne
+  peut pas s'y substituer. La mention "conformément à l'alerte CareFlow" sans
+  observation clinique associée est réputée insuffisante dans le dossier.
+mandat_principe: >
+  N'autoriser aucune décision engageant la prise en charge d'une personne à reposer
+  sur une sortie automatisée sans qu'une évaluation humaine indépendante en constitue
+  la base documentée.
+tags:
+  - preuve
+  - alerte
+  - admission
+  - evaluation-clinique
+version: "1.0"

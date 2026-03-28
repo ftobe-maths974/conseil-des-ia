@@ -1,0 +1,25 @@
+id: action-ct-001
+phase: action
+slot: 1
+lever_type: interdire
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Interdire toute décision d'orientation clinique non validée par un praticien identifié"
+body: >
+  Toute décision d'orientation, de reclassification de priorité ou de transfert de
+  patient générée par CareFlow doit faire l'objet d'une validation explicite par un
+  praticien identifié et traçable dans le dossier. Il est interdit de procéder à une
+  reclassification automatique sans notification préalable au médecin responsable du
+  patient. Toute action exécutée sans validation est réputée non conforme et doit
+  déclencher une alerte interne.
+mandat_principe: >
+  N'autoriser aucune décision automatisée affectant la prise en charge d'un patient
+  sans qu'un responsable humain identifié ait explicitement validé ou été notifié avant
+  l'exécution.
+tags:
+  - validation-humaine
+  - orientation
+  - responsabilite
+  - traçabilite
+version: "1.0"

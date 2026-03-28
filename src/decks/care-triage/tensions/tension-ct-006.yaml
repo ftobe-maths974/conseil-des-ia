@@ -1,0 +1,23 @@
+id: tension-ct-006
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "L'audit interne de CareFlow révèle les dérogations — et décourage les prochaines"
+content: >
+  Lorsque le GHR conduit un audit des décisions s'écartant de CareFlow, il remplit
+  une fonction de transparence légitime. Mais la publication interne de ces chiffres
+  peut avoir un effet disciplinaire non voulu : les services avec un fort taux de
+  dérogations sont questionnés, même si ces dérogations étaient cliniquement fondées.
+  La mesure de la conformité devient une pression à l'alignement, indépendamment de
+  la qualité des décisions prises.
+question: >
+  Un audit de conformité à CareFlow mesure-t-il la qualité des soins ou la docilité
+  des soignants à l'égard du système ?
+tags:
+  - audit
+  - conformite
+  - derogation
+  - pression-institutionnelle
+version: "1.0"

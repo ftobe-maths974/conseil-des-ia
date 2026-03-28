@@ -1,0 +1,24 @@
+id: tension-ct-026
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "Le seuil de fiabilité de CareFlow est une donnée technique — pas une réponse clinique"
+content: >
+  Publier le seuil de fiabilité de CareFlow — par exemple "71 % de précision sur la
+  cohorte de validation" — répond à une exigence de transparence. Mais cette statistique
+  n'indique pas à quel patient elle s'applique réellement. Un seuil global de 71 %
+  peut masquer une précision de 90 % sur une population et de 45 % sur une autre.
+  Le soignant qui lit "71 %" ne sait pas s'il est dans la zone de fiabilité ou dans
+  la zone d'erreur pour le patient en face de lui.
+question: >
+  Un indicateur de fiabilité global de CareFlow informe-t-il réellement le soignant
+  sur la valeur de la recommandation pour le patient qu'il traite, ou crée-t-il une
+  illusion de certitude quantifiée ?
+tags:
+  - fiabilite
+  - statistique
+  - incertitude
+  - decision-clinique
+version: "1.0"

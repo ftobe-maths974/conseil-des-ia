@@ -1,0 +1,23 @@
+id: tension-ct-028
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: green
+title: "Le patient atypique perturbe le flux — ou révèle les limites du standard"
+content: >
+  Un patient avec un profil clinique hors-standard ralentit le processus de triage
+  automatisé : son cas ne s'inscrit pas dans les catégories de CareFlow, nécessite
+  une consultation supplémentaire, génère des alertes mal calibrées. Du point de vue
+  opérationnel, ce patient est coûteux. Du point de vue clinique, il est exactement
+  le type de patient pour lequel un triage expert est indispensable. Sa présence révèle
+  que l'efficience du standard repose sur l'exclusion des cas qui en sortent.
+question: >
+  Le temps supplémentaire consacré par CareFlow aux patients atypiques est-il un
+  dysfonctionnement du système ou la preuve que le système ne couvre pas ces patients ?
+tags:
+  - atypie
+  - standard
+  - efficience
+  - cas-complexe
+version: "1.0"

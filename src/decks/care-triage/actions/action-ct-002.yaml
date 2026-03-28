@@ -1,0 +1,23 @@
+id: action-ct-002
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner l'activation de CareFlow à la définition d'un responsable médical par module"
+body: >
+  Chaque module fonctionnel de CareFlow (triage, allocation de lits, suivi à distance,
+  priorisation des sorties) doit être associé à un médecin ou cadre responsable nommément
+  désigné, dont la mission inclut la supervision des recommandations automatiques et la
+  capacité de suspendre le module en cas de dysfonctionnement avéré. L'activation d'un
+  module sans responsable désigné est suspendue jusqu'à nomination formelle.
+mandat_principe: >
+  N'autoriser l'activation d'aucun outil de décision automatisée sans qu'un responsable
+  humain nommément désigné soit compétent pour l'interrompre et en rendre compte.
+tags:
+  - responsabilite
+  - gouvernance
+  - module
+  - designation
+version: "1.0"

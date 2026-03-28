@@ -1,0 +1,23 @@
+id: action-ct-012
+phase: action
+slot: 4
+lever_type: limiter
+chamber: preuve-vs-simulation
+reversibility: green
+scope: individuel
+title: "Plafonner le recours aux modules prédictifs CareFlow aux pathologies validées en cohorte locale"
+body: >
+  Les modules de prédiction de CareFlow ne peuvent être utilisés en décision clinique
+  que pour les pathologies et populations représentées dans la cohorte de validation
+  locale du GHR. Pour toute pathologie ou profil non couvert, le module est désactivé
+  par défaut et son usage requiert une demande motivée auprès du comité médical. La
+  liste des pathologies couvertes est publiée et mise à jour à chaque nouvelle version.
+mandat_principe: >
+  Limiter l'usage de tout outil automatisé aux seuls périmètres pour lesquels sa
+  fiabilité a été vérifiée sur une population représentative de celle qu'il affecte.
+tags:
+  - perimetre
+  - cohorte
+  - pathologie
+  - validation-locale
+version: "1.0"

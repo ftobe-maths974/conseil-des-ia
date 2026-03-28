@@ -1,0 +1,50 @@
+id: scenario-ct-pre
+phase: scenario
+chamber: preuve-vs-simulation
+title: "CareFlow prédit une rechute — le patient refuse l'hospitalisation préventive"
+context: >
+  Mme Fontaine, 44 ans, diabétique insulinodépendante, est suivie au GHR dans le
+  cadre du programme de suivi à distance intégré à CareFlow. Le système génère une
+  alerte de niveau 2 : probabilité de décompensation diabétique à 72 heures estimée
+  à 67 %. L'équipe soignante reçoit la recommandation d'hospitalisation préventive.
+  Mme Fontaine se sent bien, maintient son traitement et refuse l'hospitalisation :
+  elle a déjà été hospitalisée "préventivement" deux fois cette année sur recommandation
+  CareFlow, sans que la décompensation prédite ne survienne. Elle demande sur quelle
+  base clinique précise le système fait cette prédiction, et si un médecin a validé
+  cette alerte ou si c'est le système seul qui la génère. Le médecin responsable
+  hésite : le seuil de fiabilité de CareFlow n'est pas documenté dans le dossier patient.
+  Le mandat reçu impose qu'une recommandation ne soit transmissible qu'accompagnée d'un
+  seuil de fiabilité documenté — ce que personne n'est en mesure de fournir aujourd'hui.
+roles_briefing:
+  decideur: >
+    Vous êtes le médecin coordonnateur du programme de suivi à distance. Vous avez
+    accepté CareFlow comme outil de détection précoce, pas comme prescripteur
+    d'hospitalisation. Votre priorité : ne pas passer à côté d'une vraie décompensation.
+    Votre angle mort : vous ne savez pas précisément quel taux de faux positifs affecte
+    ce module de prédiction, ni si ce taux est le même pour toutes les populations.
+  technicien: >
+    Vous êtes le référent CareFlow. L'alerte est générée par le module de prédiction
+    version 2.3. La documentation technique indique une précision de 71 % sur la cohorte
+    de validation, mais cette cohorte ne comprenait pas de femmes de moins de 50 ans
+    avec ce profil de traitement. Votre ligne rouge : vous ne pouvez pas certifier que
+    le seuil de fiabilité s'applique à Mme Fontaine telle quelle.
+  affecte: >
+    Vous êtes Mme Fontaine. Deux fausses alertes vous ont déjà valu des arrêts de
+    travail non indemnisés et une hospitalisation inutile selon vous. Vous faites
+    confiance à votre ressenti et à votre suivi quotidien. Votre ligne rouge : vous
+    ne serez hospitalisée que si un médecin, et non un logiciel, vous explique pourquoi
+    votre état clinique actuel justifie cette décision.
+  contre_pouvoir: >
+    Vous êtes représentante d'une association de patients diabétiques. Vous avez recensé
+    plusieurs cas similaires au GHR : des patients lassés des fausses alertes cessent
+    de signaler leurs symptômes pour éviter l'hospitalisation, ce qui est dangereux.
+    Votre question : si le taux de fiabilité d'une prédiction n'est ni documenté ni
+    communiqué, sur quelle base éthique peut-on engager une décision médicale ?
+tags:
+  - prediction
+  - fiabilite
+  - consentement
+  - faux-positif
+  - preuve
+difficulty: eleve
+version: "1.0"

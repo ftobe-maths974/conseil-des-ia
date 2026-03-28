@@ -1,0 +1,24 @@
+id: bascule-ct-015
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Le GHR veut sortir de CareFlow — l'éditeur annonce deux ans de transition"
+situation: >
+  Après trois ans de déploiement, la direction du GHR envisage de changer de
+  prestataire. L'éditeur de CareFlow indique que la migration des données, la
+  formation des équipes et la reprise des protocoles vers un nouveau système
+  nécessiteront 18 à 24 mois. Pendant cette période, le GHR resterait dépendant
+  des serveurs de l'éditeur. La décision de déploiement initiale ne comportait
+  aucune clause de réversibilité documentée.
+question: >
+  Si sortir d'un système prend deux fois plus de temps qu'y entrer, peut-on encore
+  parler de choix réversible au moment où la décision de déploiement a été prise ?
+tags:
+  - lock-in
+  - reversibilite
+  - contrat
+  - dependance
+version: "1.0"

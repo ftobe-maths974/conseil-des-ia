@@ -1,0 +1,24 @@
+id: tension-ct-013
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "La journalisation protège les patients — et expose les soignants"
+content: >
+  Un journal complet des décisions CareFlow et des validations humaines associées
+  renforce la traçabilité et les droits des patients. Mais ce même journal peut être
+  utilisé dans des audits de performance ou des procédures disciplinaires contre des
+  soignants qui ont dévié du standard pour de bonnes raisons cliniques. La traçabilité
+  n'est jamais neutre : elle produit des données dont le GHR, l'éditeur et des tiers
+  peuvent faire des usages que les soignants n'ont pas anticipés.
+question: >
+  Peut-on exiger une journalisation complète des décisions CareFlow sans garantir
+  simultanément que ces données ne seront pas utilisées contre les soignants qui les
+  ont produites ?
+tags:
+  - journalisation
+  - protection
+  - usage-secondaire
+  - soignants
+version: "1.0"

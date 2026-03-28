@@ -1,0 +1,23 @@
+id: tension-ct-009
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "La maîtrise institutionnelle de CareFlow suppose de comprendre ce qu'on ne maîtrise pas"
+content: >
+  Le GHR a signé un contrat avec l'éditeur de CareFlow mais ne possède ni le code
+  source ni les paramètres exacts du modèle. La direction peut décider d'activer ou
+  de suspendre des modules — mais elle ne peut pas modifier les critères internes du
+  système. La souveraineté institutionnelle s'arrête à la surface de l'interface :
+  au-delà, les décisions de l'éditeur priment. C'est une délégation qui ne dit pas
+  son nom.
+question: >
+  Un établissement public peut-il revendiquer la maîtrise d'un système dont il ne
+  contrôle ni les critères internes ni la possibilité d'en sortir facilement ?
+tags:
+  - souverainete
+  - contrat
+  - editeur
+  - maitrise
+version: "1.0"

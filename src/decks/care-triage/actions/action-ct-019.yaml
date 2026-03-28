@@ -1,0 +1,23 @@
+id: action-ct-019
+phase: action
+slot: 3
+lever_type: limiter
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Plafonner la dépendance opérationnelle à CareFlow en maintenant une compétence autonome certifiée"
+body: >
+  Le GHR garantit que, pour chaque fonction couverte par CareFlow, au moins 30 %
+  des soignants du service concerné maintiennent une compétence certifiée à l'exercice
+  de cette fonction sans assistance du système. Cette compétence est évaluée annuellement.
+  Tout service ne respectant pas ce seuil est soumis à un programme de formation
+  prioritaire avant toute extension du périmètre CareFlow dans le service.
+mandat_principe: >
+  Préserver la capacité d'un nombre minimal d'opérateurs à exercer toute fonction
+  déléguée à un système automatisé, comme condition de non-dépendance irréversible.
+tags:
+  - dependance
+  - competence-autonome
+  - formation
+  - seuil
+version: "1.0"

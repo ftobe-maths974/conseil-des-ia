@@ -1,0 +1,24 @@
+id: tension-ct-033
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: red
+title: "Documenter les dérogations CareFlow améliore le système — ou dissuade de les faire"
+content: >
+  Chaque dérogation documentée dans CareFlow est une donnée précieuse pour améliorer
+  le modèle : elle signale un cas que le standard ne couvre pas bien. L'éditeur peut
+  en théorie intégrer ces données dans une future version. Mais la documentation
+  systématique des dérogations crée aussi un registre des non-conformités que la
+  direction peut utiliser comme indicateur de performance des services. Cela dissuade
+  certains soignants de déroger, même quand c'est cliniquement justifié.
+question: >
+  Documenter les dérogations à CareFlow pour améliorer le système crée-t-il une
+  incitation positive à signaler les limites ou une pression à la conformité qui
+  réduit ces signalements ?
+tags:
+  - derogation
+  - documentation
+  - amelioration
+  - incitation
+version: "1.0"

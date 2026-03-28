@@ -1,0 +1,24 @@
+id: tension-ct-045
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Sortir de CareFlow est plus cher que d'y rester — même quand rester est problématique"
+content: >
+  À mesure que le déploiement de CareFlow s'approfondit — données intégrées,
+  formations dispensées, procédures réorganisées autour du système — le coût de sortie
+  augmente. À un certain point, rester devient moins cher que partir, même si la
+  direction est consciente des problèmes du système. La décision de continuer n'est
+  plus librement prise : elle est contrainte par l'irréversibilité accumulée. Le GHR
+  peut ne plus avoir de choix réel, même formellement.
+question: >
+  Quand sortir de CareFlow coûte davantage que d'y rester malgré ses défauts,
+  la décision de continuer est-elle encore un choix institutionnel libre ou la
+  conséquence d'une irréversibilité construite progressivement ?
+tags:
+  - lock-in
+  - coût-de-sortie
+  - choix
+  - irréversibilite
+version: "1.0"

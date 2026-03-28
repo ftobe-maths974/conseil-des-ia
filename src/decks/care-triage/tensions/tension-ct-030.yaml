@@ -1,0 +1,24 @@
+id: tension-ct-030
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: red
+title: "Le patient qui connaît son atypie doit encore la prouver à chaque passage"
+content: >
+  Un patient porteur d'une pathologie rare ou d'un profil physiologique atypique
+  dispose souvent d'une connaissance fine de sa propre singularité médicale. Mais
+  cette connaissance n'est pas intégrée dans CareFlow : à chaque passage, le patient
+  doit réexpliquer son cas à un nouveau soignant, qui doit convaincre le système ou
+  déclencher une dérogation. La charge de la preuve de son atypie repose sur le patient
+  lui-même, à répétition.
+question: >
+  Imposer à un patient de démontrer son atypie à chaque contact avec le système
+  CareFlow, est-ce une limite acceptable du standard ou un échec du droit à la
+  continuité des soins personnalisés ?
+tags:
+  - pathologie-rare
+  - continuite
+  - charge-patient
+  - atypie
+version: "1.0"

@@ -1,0 +1,23 @@
+id: tension-ct-005
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Désigner un responsable de module CareFlow crée une expertise — et une dépendance"
+content: >
+  Nommer un référent CareFlow par service concentre l'expertise et fluidifie le
+  fonctionnement quotidien. Mais cette désignation crée aussi une dépendance interne :
+  si le référent est absent, en congé ou démissionne, le service perd sa capacité
+  de supervision et d'interprétation du système. La spécialisation de la compétence
+  autour d'un outil renforce sa maîtrise locale tout en fragilisant la résilience
+  collective.
+question: >
+  Concentrer la maîtrise de CareFlow chez un référent identifié est-il une bonne
+  gouvernance ou la création d'un nouveau point de défaillance unique ?
+tags:
+  - referent
+  - expertise
+  - resilience
+  - gouvernance
+version: "1.0"

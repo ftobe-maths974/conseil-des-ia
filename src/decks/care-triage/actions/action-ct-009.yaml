@@ -1,0 +1,25 @@
+id: action-ct-009
+phase: action
+slot: 1
+lever_type: conditionner
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner toute recommandation CareFlow à la publication de son seuil de fiabilité"
+body: >
+  Chaque recommandation clinique produite par CareFlow doit être accompagnée d'un
+  indicateur de fiabilité documenté — précision, sensibilité, taux de faux positifs —
+  calculé sur une cohorte de validation représentative de la population du GHR.
+  Cet indicateur est affiché dans l'interface soignant. Toute recommandation produite
+  par un modèle dont la cohorte de validation remonte à plus de 18 mois ou ne couvre
+  pas la population concernée est signalée comme "fiabilité non certifiée".
+mandat_principe: >
+  N'autoriser aucune recommandation automatisée à être transmise ou exécutée sans
+  qu'un indicateur de fiabilité documenté et daté soit joint et compréhensible par
+  le destinataire.
+tags:
+  - fiabilite
+  - seuil
+  - validation
+  - cohorte
+version: "1.0"

@@ -1,0 +1,24 @@
+id: bascule-ct-014
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "La mise à jour CareFlow mobilise deux semaines — le service tourne à moitié"
+situation: >
+  La migration vers la nouvelle version de CareFlow nécessite deux semaines de
+  paramétrisation, de tests et de formation. Pendant cette période, plusieurs
+  fonctionnalités sont indisponibles. Le service des urgences réduit son activité
+  programmée. Deux soignants référents consacrent 60 % de leur temps à la migration.
+  La direction considère que c'est "un coût d'investissement normal". Le personnel
+  parle de charge supplémentaire non anticipée.
+question: >
+  À partir de quel niveau de dépendance opérationnelle la maintenance d'un outil
+  numérique représente-t-elle un risque pour la continuité des soins ?
+tags:
+  - maintenance
+  - charge-operationnelle
+  - migration
+  - continuite
+version: "1.0"

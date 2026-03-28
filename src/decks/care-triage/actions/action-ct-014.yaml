@@ -1,0 +1,24 @@
+id: action-ct-014
+phase: action
+slot: 2
+lever_type: auditer
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: organisationnel
+title: "Auditer la couverture de CareFlow sur les populations à profil atypique avant tout déploiement"
+body: >
+  Avant tout déploiement d'un nouveau module CareFlow, le GHR mandate un audit de
+  couverture identifiant les populations dont les profils cliniques sont insuffisamment
+  représentés dans la base d'entraînement : maladies rares, comorbidités multiples,
+  grossesses pathologiques, patients polymédicamentés. L'audit produit une liste de
+  restrictions d'usage et conditionne le déploiement à leur prise en compte par l'éditeur.
+mandat_principe: >
+  Imposer l'audit des populations mal couvertes ou sous-représentées avant tout
+  déploiement d'un outil automatisé, et conditionner ce déploiement à la publication
+  des restrictions d'usage identifiées.
+tags:
+  - couverture
+  - audit
+  - populations-vulnerables
+  - deploiement
+version: "1.0"

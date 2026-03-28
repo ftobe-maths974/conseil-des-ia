@@ -1,0 +1,24 @@
+id: tension-ct-025
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: green
+title: "CareFlow peut repérer des signaux faibles que le clinicien manque — et l'inverse"
+content: >
+  CareFlow traite en temps réel des combinaisons de variables que le soignant ne
+  peut pas intégrer simultanément en consultation. Il peut repérer des patterns
+  associés à une décompensation que l'examen clinique ne détecte pas encore. Mais
+  le soignant perçoit des éléments non capturés par le système : l'état émotionnel,
+  la qualité du discours, le comportement non verbal. Les deux types de signal sont
+  complémentaires — et aucun n'est plus "vrai" que l'autre par principe.
+question: >
+  Peut-on établir une hiérarchie valide entre la preuve produite par CareFlow et
+  celle que construit le soignant par l'examen direct, ou les deux sont-elles
+  irréductibles l'une à l'autre ?
+tags:
+  - signal-faible
+  - complement
+  - examen-clinique
+  - preuve
+version: "1.0"

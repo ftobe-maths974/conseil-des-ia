@@ -1,0 +1,23 @@
+id: tension-ct-004
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Standardiser le triage accélère le flux — et rend les écarts difficiles à justifier"
+content: >
+  CareFlow a réduit les temps d'attente aux urgences du GHR de 23 % depuis son
+  déploiement. Cette performance repose sur la standardisation des critères de triage.
+  Mais cette standardisation rend les exceptions plus visibles et plus coûteuses à
+  défendre : un médecin qui s'écarte du score doit documenter, motiver, accepter d'être
+  audité. Le gain collectif de fluidité crée une pression individuelle sur l'exercice
+  du jugement clinique en dehors du standard.
+question: >
+  Le gain d'efficience collectif produit par la standardisation de CareFlow justifie-t-il
+  la pression exercée sur les soignants qui s'en écartent pour raison clinique ?
+tags:
+  - standardisation
+  - efficience
+  - exception
+  - pression
+version: "1.0"

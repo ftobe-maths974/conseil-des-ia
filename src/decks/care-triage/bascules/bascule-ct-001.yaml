@@ -1,0 +1,23 @@
+id: bascule-ct-001
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "L'infirmière valide sans lire — CareFlow dit pareil que d'habitude"
+situation: >
+  Une infirmière de triage expérimentée travaille depuis huit mois avec CareFlow.
+  Elle remarque qu'elle valide les recommandations du système quasi systématiquement,
+  parfois avant d'avoir terminé l'interrogatoire du patient. Elle justifie : "Le
+  système voit tout, moi j'aurais donné le même score." Ce matin, un patient avec
+  des symptômes atypiques passe en niveau 3. Elle valide.
+question: >
+  À quel moment la validation humaine d'une recommandation automatique cesse-t-elle
+  d'être une vérification réelle pour devenir une formalité ?
+tags:
+  - validation
+  - attention
+  - triage
+  - autonomie-clinique
+version: "1.0"

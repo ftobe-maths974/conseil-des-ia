@@ -1,0 +1,23 @@
+id: tension-ct-032
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Les filières spécialisées veulent leur propre paramétrage — CareFlow devient fragmenté"
+content: >
+  Si chaque spécialité du GHR obtient un paramétrage CareFlow adapté à ses patients
+  atypiques, la cohérence du système se fragmente. Les coûts de maintenance augmentent,
+  les comparaisons inter-services deviennent difficiles, et la maîtrise globale du
+  système se complique. L'adaptation à la singularité clinique de chaque service entre
+  en tension directe avec la standardisation qui permet à CareFlow d'être gérable et
+  comparable à l'échelle du GHR.
+question: >
+  Adapter CareFlow aux populations atypiques de chaque service est-il la condition
+  d'un usage éthique ou la fragmentation qui rendra le système ingouvernable ?
+tags:
+  - paramétrage
+  - fragmentation
+  - specilite
+  - standardisation
+version: "1.0"

@@ -1,0 +1,23 @@
+id: bascule-ct-011
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: organisationnel
+title: "Les filières spécialisées contournent CareFlow — officiellement, elles ne le font pas"
+situation: >
+  Plusieurs services spécialisés du GHR (oncologie, rhumatologie, maladies rares)
+  ont développé des pratiques informelles pour contourner les recommandations CareFlow
+  qu'ils jugent inadaptées à leurs patients. Ils documentent les décisions différemment
+  pour ne pas générer de non-conformités dans les tableaux de bord. La direction n'est
+  pas informée de l'étendue de ces pratiques.
+question: >
+  Quand les soignants experts contournent systématiquement un système pour protéger
+  leurs patients, le problème est-il leur comportement ou les limites du système ?
+tags:
+  - contournement
+  - specialite
+  - conformite
+  - adaptation
+version: "1.0"

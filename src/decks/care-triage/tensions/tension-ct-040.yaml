@@ -1,0 +1,23 @@
+id: tension-ct-040
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "La procédure dégradée coûte à maintenir — et ne sert presque jamais"
+content: >
+  Maintenir une procédure de fonctionnement dégradé opérationnelle exige des formations
+  régulières, des mises à jour, du temps soignant. Elle est utilisée de manière
+  exceptionnelle. Du point de vue de l'efficience à court terme, ce coût est difficile
+  à justifier. Du point de vue de la résilience à long terme, c'est précisément ce
+  type de coût que l'on regrette de ne pas avoir payé le jour où la panne survient.
+question: >
+  Maintenir une capacité de fonctionnement dégradé sans CareFlow est-il un coût
+  organisationnel injustifiable dans un contexte de tension budgétaire, ou la seule
+  garantie raisonnable contre une dépendance irréversible ?
+tags:
+  - mode-degrade
+  - coût
+  - resilience
+  - formation
+version: "1.0"

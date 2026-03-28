@@ -1,0 +1,24 @@
+id: tension-ct-017
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "L'auditabilité de CareFlow suppose un auditeur indépendant — qui ne peut pas exister"
+content: >
+  Pour qu'un audit des scores CareFlow soit crédible, il doit être conduit par un
+  acteur indépendant du GHR et de l'éditeur. Mais un auditeur externe n'aura pas accès
+  au code source propriétaire, et un auditeur interne n'est pas indépendant. Les
+  agences publiques pourraient jouer ce rôle, mais elles n'ont pas la capacité technique
+  de traiter un système aussi spécifique. L'exigence d'auditabilité reste formellement
+  satisfaite sans être réellement remplie.
+question: >
+  Exiger que CareFlow soit auditable sans que les conditions d'un audit indépendant
+  et compétent soient réunies, est-ce une garantie effective ou une obligation de
+  façade ?
+tags:
+  - auditabilite
+  - independance
+  - audit
+  - prestataire
+version: "1.0"

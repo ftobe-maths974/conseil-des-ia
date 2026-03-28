@@ -1,0 +1,28 @@
+id: tension-ct-011
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Contester un score CareFlow : droit formel ou démarche réservée aux patients ressource ?"
+content: >
+  Le droit de contestation d'une décision automatisée n'a de sens que s'il peut être
+  exercé. Or, formuler une contestation efficace suppose de comprendre le langage
+  clinique, de connaître ses droits, d'avoir le temps et l'énergie pour l'engager.
+  Les patients les plus susceptibles d'être mal scorés — personnes âgées, allophones,
+  précaires — sont souvent les moins équipés pour contester. Un droit formel non
+  accompagné de moyens d'accès est une garantie sur le papier.
+data_point: >
+  Dans une enquête de la Défenseure des droits publiée en 2023 sur les recours
+  administratifs, les personnes en situation de précarité exercent trois fois moins
+  souvent leurs droits de contestation que la moyenne, malgré des taux d'erreur
+  plus élevés les concernant.
+question: >
+  Un droit de contestation du score CareFlow réservé dans les faits aux patients
+  les plus informés et les mieux accompagnés est-il encore un droit universel ?
+tags:
+  - droit-recours
+  - equite
+  - accessibilite
+  - contestation
+version: "1.0"

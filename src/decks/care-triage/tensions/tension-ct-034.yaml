@@ -1,0 +1,29 @@
+id: tension-ct-034
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: green
+title: "Le standard CareFlow produit l'équité pour la majorité — et l'invisibilité pour les marges"
+content: >
+  Un standard bien conçu garantit un traitement comparable à tous les patients qui
+  entrent dans ses catégories. C'est une forme d'équité réelle et précieuse. Mais
+  ce même standard, en traitant comme similaires des situations qui ne le sont pas,
+  rend invisibles les patients qui s'en écartent. L'équité produite par la norme pour
+  la majorité est réelle ; l'inégalité produite par la même norme pour les marges
+  est aussi réelle, et moins visible.
+data_point: >
+  Une étude du BMJ (2022) sur l'usage de protocoles standardisés dans les urgences
+  britanniques montre que les patients atteints de maladies rares ont un temps moyen
+  de prise en charge supérieur de 40 % à celui des patients aux profils standards,
+  sans corrélation avec la gravité clinique.
+question: >
+  Si l'équité par le standard est réelle pour la majorité mais structurellement
+  défaillante pour les minorités cliniques, peut-on la qualifier d'équité sans
+  qualifier l'inégalité qu'elle produit simultanément ?
+tags:
+  - equite
+  - standard
+  - majorite
+  - exclusion
+version: "1.0"

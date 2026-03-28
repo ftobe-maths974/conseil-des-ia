@@ -1,0 +1,23 @@
+id: tension-ct-012
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Expliquer le score CareFlow au patient : transparence utile ou surcharge inutile ?"
+content: >
+  Certains défenseurs de la transparence algorithmique estiment que chaque patient
+  doit pouvoir accéder aux critères qui ont déterminé son score CareFlow. Mais une
+  explication complète implique un niveau de détail technique que la majorité des
+  patients — et soignants — ne peut pas interpréter utilement. La transparence totale
+  peut créer de l'anxiété, de la méfiance injustifiée ou des refus de soins fondés
+  sur une incompréhension du score.
+question: >
+  Exposer aux patients tous les critères du score CareFlow est-il une condition de
+  leur autonomie ou un risque d'information mal comprise nuisant à la relation de soin ?
+tags:
+  - transparence
+  - autonomie-patient
+  - information
+  - risque-cognitif
+version: "1.0"

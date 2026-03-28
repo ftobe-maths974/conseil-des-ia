@@ -1,0 +1,24 @@
+id: tension-ct-042
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Le bilan de réversibilité de CareFlow fait apparaître ce que le GHR ne voulait pas savoir"
+content: >
+  Produire un bilan de réversibilité honnête — coût de sortie, compétences perdues,
+  procédures abandonnées — revient pour la direction à documenter les conséquences
+  de ses propres décisions passées. Ce bilan peut révéler que le GHR a pris des
+  engagements irréversibles sans les avoir anticipés. C'est une information nécessaire
+  à une décision de renouvellement éclairée ; c'est aussi une information que la
+  direction peut être tentée d'atténuer ou de ne pas produire du tout.
+question: >
+  Imposer un bilan de réversibilité avant tout renouvellement de CareFlow a-t-il
+  une valeur réelle si c'est l'institution elle-même — et non un tiers indépendant —
+  qui le produit ?
+tags:
+  - reversibilite
+  - bilan
+  - renouvellement
+  - independance
+version: "1.0"

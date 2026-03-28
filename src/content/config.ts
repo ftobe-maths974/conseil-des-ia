@@ -72,6 +72,7 @@ const actions = defineCollection({
     scope: z.enum(['individuel', 'organisationnel', 'systemique']),
     title: z.string(),
     body: z.string(),
+    mandat_principe: z.string().optional(),
     tags: z.array(z.string()),
     amplifies: z.array(z.string()).optional(),
     blocks: z.array(z.string()).optional(),

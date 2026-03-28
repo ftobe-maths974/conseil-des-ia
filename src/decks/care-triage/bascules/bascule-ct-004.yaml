@@ -1,0 +1,23 @@
+id: bascule-ct-004
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: individuel
+title: "Le patient ne sait pas que CareFlow a calculé son attente"
+situation: >
+  Aux urgences du GHR, le temps d'attente affiché sur l'écran de la salle est
+  calculé par CareFlow à partir du score de triage et de la charge du service.
+  Les patients voient un chiffre. Aucun panneau n'indique que ce délai est généré
+  par un système automatisé. Ce matin, plusieurs patients se plaignent de l'attente ;
+  l'infirmière d'accueil leur dit "c'est le système" sans pouvoir expliquer davantage.
+question: >
+  Un patient peut-il contester ou comprendre une décision qui le concerne si personne
+  ne lui a dit qu'une décision a été prise par un système automatisé ?
+tags:
+  - information-patient
+  - triage
+  - transparence
+  - attente
+version: "1.0"

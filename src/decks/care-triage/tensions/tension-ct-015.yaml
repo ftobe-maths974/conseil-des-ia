@@ -1,0 +1,23 @@
+id: tension-ct-015
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Le critère lisible pour le soignant est-il le bon critère pour le patient ?"
+content: >
+  Exiger que CareFlow affiche le critère principal ayant conduit à un score est une
+  avancée pour la lisibilité soignante. Mais le critère le plus compréhensible pour
+  un soignant n'est pas nécessairement celui qui correspond à la réalité clinique
+  du patient. Simplifier pour rendre lisible peut tromper : le score résulte d'une
+  combinaison de variables, et n'en retenir qu'une peut induire une fausse sécurité
+  ou orienter l'attention dans la mauvaise direction.
+question: >
+  Un critère lisible mais simplifié à l'excès est-il plus utile qu'un score opaque
+  ou crée-t-il une nouvelle forme d'illusion de compréhension ?
+tags:
+  - lisibilite
+  - simplification
+  - critere
+  - fiabilite
+version: "1.0"

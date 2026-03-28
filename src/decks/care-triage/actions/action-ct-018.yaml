@@ -1,0 +1,24 @@
+id: action-ct-018
+phase: action
+slot: 2
+lever_type: auditer
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Auditer annuellement la charge réelle induite par CareFlow sur les équipes soignantes"
+body: >
+  Le GHR conduit chaque année un audit de charge organisationnelle lié à CareFlow :
+  temps de saisie, gestion des alertes, résolution des désaccords avec les
+  recommandations, formation continue nécessaire. L'audit est conduit avec les
+  représentants des soignants et ses résultats conditionnent toute extension du
+  périmètre fonctionnel. Une charge nette négative pour les équipes est un motif
+  de suspension d'extension.
+mandat_principe: >
+  Exiger la mesure documentée et partagée des charges réelles induites par un système
+  automatisé sur les opérateurs qui le font fonctionner, avant toute décision d'extension.
+tags:
+  - charge-cognitive
+  - audit
+  - conditions-travail
+  - extension
+version: "1.0"

@@ -1,0 +1,23 @@
+id: bascule-ct-009
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Le modèle CareFlow est mis à jour — les résultats passés ne sont plus reproductibles"
+situation: >
+  L'éditeur de CareFlow déploie une mise à jour majeure du modèle de prédiction.
+  Le service qualité du GHR tente de réanalyser les décisions des trois derniers mois
+  avec le nouveau modèle : les scores sont différents de ceux qui ont servi aux décisions
+  de l'époque. En cas de litige médical, il sera impossible de reproduire exactement
+  le raisonnement automatique qui a conduit à la décision originale.
+question: >
+  Quand un système de décision clinique ne permet plus de reproduire les recommandations
+  qu'il a émises, peut-on encore l'utiliser comme fondement d'une preuve médicale ?
+tags:
+  - reproductibilite
+  - mise-a-jour
+  - litige
+  - trace
+version: "1.0"

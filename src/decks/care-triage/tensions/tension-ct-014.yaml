@@ -1,0 +1,23 @@
+id: tension-ct-014
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Publier les biais de CareFlow renforce la confiance — ou ouvre des recours contentieux"
+content: >
+  L'audit des biais de distribution des scores CareFlow par population est une
+  démarche éthiquement légitime et juridiquement attendue. Mais publier les résultats
+  — même pour en corriger les écarts — expose le GHR à des recours juridiques de
+  patients ayant été affectés par des décisions biaisées. La transparence sur les
+  imperfections du système peut être freinée par la crainte du contentieux, même
+  quand elle est nécessaire à l'amélioration.
+question: >
+  Rendre publics les biais identifiés dans CareFlow est-il un acte de responsabilité
+  institutionnelle ou un risque juridique que le GHR ne peut pas assumer seul ?
+tags:
+  - biais
+  - publication
+  - contentieux
+  - responsabilite
+version: "1.0"

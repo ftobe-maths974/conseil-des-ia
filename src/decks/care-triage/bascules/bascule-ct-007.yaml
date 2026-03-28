@@ -1,0 +1,23 @@
+id: bascule-ct-007
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+scope: individuel
+title: "L'alerte CareFlow n'a pas suffi — le médecin en doute désormais"
+situation: >
+  Un médecin interniste a reçu trois alertes CareFlow en deux semaines signalant
+  un risque élevé de décompensation pour des patients en suivi chronique. Dans
+  les trois cas, la décompensation ne s'est pas produite. Cette semaine, une quatrième
+  alerte arrive. Le médecin hésite à appeler le patient pour une hospitalisation
+  préventive. Il note dans son dossier : "alerte CareFlow, valeur incertaine."
+question: >
+  Quand un professionnel commence à ignorer systématiquement une alerte automatique,
+  est-ce un signe de discernement clinique ou d'une dérive du système de vigilance ?
+tags:
+  - alerte
+  - faux-positif
+  - discernement
+  - vigilance
+version: "1.0"

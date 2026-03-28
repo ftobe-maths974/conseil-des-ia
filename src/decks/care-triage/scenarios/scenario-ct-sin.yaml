@@ -1,0 +1,48 @@
+id: scenario-ct-sin
+phase: scenario
+chamber: singularite-vs-standard
+title: "CareFlow ne reconnaît pas le profil atypique — la douleur reste sans prise en charge"
+context: >
+  M. Tremblay, 34 ans, porteur d'une pathologie rare du tissu conjonctif (syndrome
+  d'Ehlers-Danlos), se présente aux urgences du GHR pour une crise douloureuse aiguë.
+  CareFlow attribue un score de triage de niveau 4 (faible priorité) : ses constantes
+  vitales sont dans les normes standards et ses réponses au questionnaire de triage
+  ne correspondent pas aux seuils d'urgence codés dans le système. Or, les patients
+  atteints de ce syndrome ont des normes physiologiques différentes — une tension
+  artérielle basse est normale pour eux, ce qui fausse l'interprétation des constantes.
+  L'infirmière de triage sait que quelque chose ne va pas, mais CareFlow ne propose
+  pas d'option "profil hors-standard". Le mandat reçu impose une dérogation motivée
+  pour les profils atypiques — mais il n'existe ni procédure ni formulaire pour cela
+  dans le système CareFlow actuel.
+roles_briefing:
+  decideur: >
+    Vous êtes le responsable de l'organisation des urgences. CareFlow a été déployé
+    pour uniformiser et accélérer le triage. Vous n'avez pas prévu de procédure
+    d'exception formalisée : cela aurait ralenti le déploiement. Votre priorité :
+    maintenir le flux. Votre angle mort : vous ignorez combien de patients avec
+    pathologies rares sont mal classifiés chaque mois.
+  technicien: >
+    Vous êtes le référent CareFlow. Le système ne dispose pas de module pour les
+    pathologies rares : elles représentent moins de 2 % des passages et ont été
+    exclues de la base d'entraînement. Vous pouvez techniquement créer un flag
+    "exception manuelle" mais cela nécessite une validation par la direction médicale.
+    Votre ligne rouge : tout écart manuel au score doit être documenté et signé.
+  affecte: >
+    Vous êtes M. Tremblay. Vous avez une carte maladie rare, un dossier médical
+    détaillé sur votre téléphone, et l'habitude d'expliquer votre situation à chaque
+    nouveau soignant. Aujourd'hui, on vous dit de vous asseoir et d'attendre. Votre
+    ligne rouge : si le système ne peut pas s'adapter à votre profil, vous exigez
+    un médecin qui, lui, peut l'évaluer.
+  contre_pouvoir: >
+    Vous êtes coordinatrice d'une filière maladies rares au GHR. Vous avez alerté
+    la direction il y a quatre mois sur l'absence de protocole pour les profils
+    atypiques dans CareFlow. Votre question : si le standard exclut structurellement
+    certains patients, peut-on appeler ça une amélioration du triage ?
+tags:
+  - maladie-rare
+  - atypie
+  - profil-hors-standard
+  - derogation
+  - triage
+difficulty: moyen
+version: "1.0"

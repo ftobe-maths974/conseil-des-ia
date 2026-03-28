@@ -1,0 +1,24 @@
+id: bascule-ct-003
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Le GHR supprime le poste de coordonnateur de triage — CareFlow suffit"
+situation: >
+  Lors de la révision budgétaire annuelle, la direction du GHR décide de ne pas
+  renouveler le poste de coordonnateur de triage, occupé depuis dix ans par un
+  cadre infirmier expérimenté. L'argument : CareFlow couvre désormais cette fonction.
+  La décision est présentée comme une rationalisation. Elle n'est pas réversible
+  à court terme — le profil est retiré des plans de recrutement.
+question: >
+  À partir de quel moment la suppression d'un poste humain au profit d'un système
+  automatisé crée-t-elle une irréversibilité institutionnelle que l'organisation
+  ne peut plus défaire ?
+tags:
+  - poste
+  - rationalisation
+  - dependance
+  - irréversibilite
+version: "1.0"

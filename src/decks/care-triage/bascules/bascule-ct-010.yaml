@@ -1,0 +1,23 @@
+id: bascule-ct-010
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: green
+scope: individuel
+title: "L'infirmière connaît ce patient — CareFlow ne le connaît pas"
+situation: >
+  Une infirmière de nuit suit depuis plusieurs semaines un patient polymédicamenté
+  de 82 ans hospitalisé pour une fracture. Elle sait que sa tension "normale" à lui
+  est basse depuis toujours et que ses habituelles valeurs d'anxiété sont élevées.
+  CareFlow génère une alerte sur ses constantes "anormales". L'infirmière sait que
+  c'est sa norme personnelle. Le protocole lui demande de traiter l'alerte.
+question: >
+  Quand la connaissance personnelle qu'un soignant a d'un patient contredit une
+  alerte automatique, quel poids institutionnel a cette connaissance ?
+tags:
+  - norme-individuelle
+  - relation-soignant
+  - alerte
+  - patient-fragile
+version: "1.0"

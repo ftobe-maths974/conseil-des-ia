@@ -1,0 +1,24 @@
+id: bascule-ct-012
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "CareFlow est conçu pour les cas courants — les cas rares deviennent invisibles"
+situation: >
+  Le GHR traite en moyenne 120 patients par pathologie rare chaque année. Lors du
+  déploiement de CareFlow, l'éditeur a informé la direction que le modèle n'avait
+  pas été entraîné sur ce type de population. Cet avertissement figure en annexe
+  du contrat technique. Il n'a pas été communiqué aux équipes cliniques. Ces patients
+  continuent à passer par le triage automatisé sans signal particulier.
+question: >
+  Si un système sait qu'il ne peut pas bien gérer certains patients mais ne le
+  signale pas à ceux qui les prennent en charge, à qui appartient la responsabilité
+  des erreurs qui en résultent ?
+tags:
+  - maladie-rare
+  - responsabilite
+  - information
+  - population-exclue
+version: "1.0"

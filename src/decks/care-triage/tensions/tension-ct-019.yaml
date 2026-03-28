@@ -1,0 +1,24 @@
+id: tension-ct-019
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+title: "Le soignant fait confiance à son jugement — CareFlow dit le contraire"
+content: >
+  Un médecin expérimenté évalue un patient comme stable et orientable en ambulatoire.
+  CareFlow génère une alerte de niveau 2. Le médecin, après examen, maintient son
+  évaluation. Il a tort ou raison — les deux sont possibles. Ce qui est sûr, c'est
+  qu'il ne sait pas avec quelle précision CareFlow fait cette prédiction, ni si elle
+  s'applique bien à ce profil patient. Sa décision clinique repose sur une évaluation
+  que le système ne peut pas reproduire ; la recommandation du système repose sur des
+  données que lui ne peut pas lire.
+question: >
+  Quand le jugement clinique d'un expert et la prédiction de CareFlow divergent,
+  lequel des deux constitue la meilleure base de décision — et comment le savoir ?
+tags:
+  - jugement-clinique
+  - alerte
+  - confiance
+  - preuve
+version: "1.0"

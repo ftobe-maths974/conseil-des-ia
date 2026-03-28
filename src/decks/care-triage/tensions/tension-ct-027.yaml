@@ -1,0 +1,24 @@
+id: tension-ct-027
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+title: "Documenter que CareFlow a orienté une décision change la nature de la responsabilité médicale"
+content: >
+  Si un médecin documente qu'une décision clinique a été prise "en cohérence avec
+  la recommandation CareFlow", il crée une trace qui protège sa décision individuellement.
+  Mais cette trace transforme aussi CareFlow en co-décideur documenté. En cas de
+  complication, la question de la responsabilité de l'éditeur devient inévitable.
+  L'éditeur, lui, a prévu contractuellement que CareFlow est un outil d'aide et non
+  un décideur — laissant l'entière responsabilité au médecin.
+question: >
+  Peut-on documenter une décision comme "appuyée sur CareFlow" tout en maintenant
+  que la responsabilité reste intégralement médicale — ou cette documentation
+  crée-t-elle une contradiction juridique irrésoluble ?
+tags:
+  - responsabilite
+  - documentation
+  - co-décideur
+  - editeur
+version: "1.0"

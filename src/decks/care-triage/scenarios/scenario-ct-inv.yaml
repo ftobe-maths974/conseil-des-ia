@@ -1,0 +1,49 @@
+id: scenario-ct-inv
+phase: scenario
+chamber: invisibilite-vs-arbitrage
+title: "Un patient conteste son score de triage — CareFlow ne peut pas expliquer"
+context: >
+  M. Alami, 58 ans, consulte aux urgences du GHR pour des douleurs thoraciques
+  récurrentes. CareFlow lui attribue un score de triage de niveau 3 (non urgent) et
+  l'oriente vers la filière ambulatoire avec un délai d'attente estimé à 4 heures.
+  M. Alami refuse de partir : il a déjà été hospitalisé pour infarctus il y a deux ans
+  et estime que son dossier devrait le classer autrement. L'infirmière de triage lui
+  explique qu'elle suit la recommandation CareFlow et qu'elle ne peut pas modifier le
+  score. Le médecin urgentiste, en surcharge ce soir, délègue la gestion de la
+  contestation à l'infirmière. M. Alami demande à voir par écrit les critères qui
+  ont conduit à ce classement. Il n'existe pas de document patient exposant ces critères.
+  Le mandat reçu impose que toute décision automatisée soit traçable et contestable —
+  ce qui crée une tension directe avec la procédure actuelle des urgences.
+roles_briefing:
+  decideur: >
+    Vous êtes le chef du service des urgences. Votre priorité ce soir est de gérer
+    un flux inhabituel de patients. Vous avez accepté CareFlow pour fluidifier le
+    triage. Vous n'avez pas prévu de procédure de contestation patient. Votre angle
+    mort : vous supposez que les patients font confiance au système médical sans
+    demander d'explication sur les algorithmes.
+  technicien: >
+    Vous êtes le référent CareFlow. Le score de M. Alami résulte de la combinaison
+    de 12 paramètres cliniques et d'un historique anonymisé de cas similaires. Vous
+    pouvez afficher le détail technique, mais pas le traduire en langage compréhensible
+    pour le patient sans préparation. Votre ligne rouge : vous ne falsifierez pas les
+    logs ni ne modifierez le score manuellement sans ordre médical documenté.
+  affecte: >
+    Vous êtes M. Alami. Vous n'êtes pas médecin, mais vous connaissez votre corps
+    et votre historique cardiaque. Vous avez l'impression que le système vous a
+    catégorisé sans regarder votre dossier en détail. Votre ligne rouge : vous refusez
+    de partir sans avoir reçu une explication que vous comprenez ou une révision
+    médicale de votre dossier par un praticien humain.
+  contre_pouvoir: >
+    Vous êtes médiateur de santé au GHR. Vous avez déjà reçu deux plaintes similaires
+    ce trimestre. Selon vous, l'absence de procédure d'explication accessible aux
+    patients est une lacune réglementaire que le GHR risque de payer cher si un incident
+    survient. Votre question : peut-on légalement opposer un score algorithmique à un
+    patient sans lui donner les moyens de le contester ?
+tags:
+  - triage
+  - contestation
+  - traçabilite
+  - droits-patient
+  - score
+difficulty: moyen
+version: "1.0"

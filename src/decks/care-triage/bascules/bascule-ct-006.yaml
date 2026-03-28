@@ -1,0 +1,23 @@
+id: bascule-ct-006
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "CareFlow oriente différemment selon le code postal — les équipes ne le savent pas"
+situation: >
+  Un médecin du GHR remarque que deux patients avec des scores cliniques identiques
+  reçoivent des recommandations d'orientation différentes. Il interroge le référent
+  CareFlow, qui découvre que le modèle intègre le code postal de résidence parmi ses
+  variables. Cette variable n'est mentionnée dans aucune communication interne. Elle
+  n'a jamais été validée par le comité médical.
+question: >
+  Quand un critère non validé par l'institution influence des décisions cliniques
+  sans que les soignants le sachent, qui est responsable des effets de ce critère ?
+tags:
+  - biais
+  - critere-cache
+  - equite
+  - validation
+version: "1.0"

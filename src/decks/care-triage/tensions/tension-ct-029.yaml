@@ -1,0 +1,24 @@
+id: tension-ct-029
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "La dérogation motivée protège le soignant — ou l'isole face au système"
+content: >
+  La dérogation motivée pour un patient hors-standard est une protection clinique
+  et éthique importante. Mais dans la pratique, elle met le soignant dans une position
+  délicate : il s'écarte du standard documenté, assume seul la responsabilité de
+  cette décision, et expose son raisonnement à l'audit. Certains soignants renoncent
+  à la dérogation non par conviction clinique, mais pour éviter d'être singularisés
+  dans un contexte d'évaluation par conformité.
+question: >
+  Si exercer le droit à la dérogation motivée expose professionnellement le soignant,
+  ce droit est-il encore une garantie pour le patient ou une charge supplémentaire
+  pour le professionnel ?
+tags:
+  - derogation
+  - responsabilite-individuelle
+  - protection
+  - pression
+version: "1.0"

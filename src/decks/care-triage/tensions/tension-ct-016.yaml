@@ -1,0 +1,24 @@
+id: tension-ct-016
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "La traçabilité protège les patients — ou crée une archive de leurs vulnérabilités"
+content: >
+  Un journal exhaustif des scores CareFlow, des alertes et des décisions constitue
+  une ressource précieuse pour améliorer le système et protéger les patients en cas
+  de litige. Mais ces données, agrégées, forment aussi un profil détaillé de chaque
+  patient : sa trajectoire de soins, ses fragilités, ses comportements de recours.
+  La valeur de la traçabilité pour le présent entre en tension avec les risques
+  que représente cette archive pour l'avenir, notamment en cas de fuite, de changement
+  de prestataire ou d'usage commercial des données.
+question: >
+  La traçabilité complète des décisions CareFlow est-elle une protection pour les
+  patients aujourd'hui ou une vulnérabilité pour eux demain ?
+tags:
+  - traçabilite
+  - donnees-de-sante
+  - vie-privee
+  - usage-futur
+version: "1.0"

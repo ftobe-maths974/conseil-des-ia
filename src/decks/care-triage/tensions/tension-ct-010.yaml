@@ -1,0 +1,23 @@
+id: tension-ct-010
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Le patient a le droit de savoir — le soignant n'a pas le temps d'expliquer"
+content: >
+  Le droit du patient à l'information sur les décisions qui le concernent est un
+  principe fondamental du code de la santé publique. Mais expliquer en langage
+  accessible les critères d'un score CareFlow demande du temps que l'équipe soignante
+  n'a pas en période de flux tendu. La transparence envers le patient entre en
+  concurrence directe avec l'efficience opérationnelle que CareFlow est censé produire.
+question: >
+  Si garantir le droit à l'information du patient sur son score CareFlow alourdit
+  la charge des soignants, faut-il en conclure que ce droit est inapplicable en
+  situation de tension opérationnelle ?
+tags:
+  - droits-patient
+  - information
+  - transparence
+  - charge-soignant
+version: "1.0"

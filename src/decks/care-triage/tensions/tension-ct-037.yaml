@@ -1,0 +1,24 @@
+id: tension-ct-037
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "Le soignant formé avec CareFlow ignore ce qu'il ne saurait pas faire sans lui"
+content: >
+  Un soignant formé intégralement dans un environnement CareFlow ne sait pas
+  nécessairement ce qu'il est incapable de faire sans le système. Il ne perçoit pas
+  l'atrophie parce qu'il n'a pas de référence antérieure. Son sentiment de compétence
+  est intact — c'est le périmètre de cette compétence qui est réduit, silencieusement.
+  Contrairement à un soignant expérimenté qui mesure ce qu'il délègue, le nouveau
+  professionnel ne mesure pas ce qu'il n'a jamais appris.
+question: >
+  Un professionnel formé avec CareFlow dès le début est-il aussi compétent qu'un
+  soignant formé sans lui, ou dispose-t-il simplement d'une compétence différente
+  dont les limites ne sont pas visibles ?
+tags:
+  - formation
+  - competence
+  - atrophie-silencieuse
+  - interne
+version: "1.0"

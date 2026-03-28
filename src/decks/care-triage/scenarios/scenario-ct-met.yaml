@@ -1,0 +1,49 @@
+id: scenario-ct-met
+phase: scenario
+chamber: metabolisme-vs-progres
+title: "Panne CareFlow à 3h du matin — l'équipe n'a plus les automatismes"
+context: >
+  Le serveur principal de CareFlow tombe en panne à 3h12 un dimanche matin. Le GHR
+  n'a pas de bascule manuelle formalisée depuis le déploiement : les procédures papier
+  ont été progressivement abandonnées au profit du système. L'équipe de nuit — quatre
+  infirmières et un interne — doit gérer en mode dégradé sans accès aux scores de
+  triage, aux alertes de sortie, ni aux recommandations d'allocation de lits. Plusieurs
+  soignants n'ont jamais travaillé sans CareFlow. La formation initiale au triage
+  "conventionnel" remonte à plus de deux ans pour certains. Le prestataire annonce un
+  rétablissement en 4 à 6 heures. Le mandat reçu impose de préserver une capacité de
+  fonctionnement autonome documentée — ce qui aurait dû signifier des procédures
+  maintenues et des formations régulières que le GHR n'a pas organisées.
+roles_briefing:
+  decideur: >
+    Vous êtes le cadre de santé de nuit, responsable opérationnel jusqu'à l'arrivée
+    du directeur de permanence. Vous devez décider en 15 minutes si vous activez le
+    plan de crise (appel des équipes de renfort, suspension des admissions non urgentes)
+    ou si vous faites fonctionner l'équipe en mode dégradé. Votre angle mort : vous
+    ne savez pas précisément quelles compétences de triage votre équipe maîtrise encore
+    sans le système.
+  technicien: >
+    Vous êtes l'astreinte informatique du GHR. La panne est matérielle, côté hébergeur.
+    Vous ne pouvez pas rétablir CareFlow avant 4 heures minimum. Vous avez accès aux
+    dernières données sauvegardées à 2h45 — soit 27 minutes avant la panne. Votre
+    ligne rouge : vous ne fournirez pas de données partielles si elles risquent d'induire
+    des décisions basées sur un état clinique périmé.
+  affecte: >
+    Vous êtes infirmière de nuit, en poste depuis 18 mois. Vous avez été formée avec
+    CareFlow dès le début. Le triage manuel, vous l'avez appris en formation initiale
+    mais ne l'avez jamais pratiqué en conditions réelles. Votre ligne rouge : vous
+    refusez de prendre seule des décisions d'orientation urgente sans protocole écrit
+    ou supervision médicale directe.
+  contre_pouvoir: >
+    Vous êtes délégué syndical du personnel soignant. Vous avez alerté la direction
+    par écrit deux fois dans l'année sur l'absence de formation aux modes dégradés et
+    la disparition des procédures manuelles. Votre question : si le GHR était incapable
+    de fonctionner sans CareFlow, pourquoi a-t-on continué le déploiement sans
+    préserver une capacité autonome documentée ?
+tags:
+  - dependance-operationnelle
+  - mode-degrade
+  - reversibilite
+  - formation
+  - panne
+difficulty: eleve
+version: "1.0"

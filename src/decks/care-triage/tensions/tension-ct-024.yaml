@@ -1,0 +1,24 @@
+id: tension-ct-024
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: red
+title: "L'éditeur met à jour CareFlow — le GHR perd la maîtrise de ce qu'il utilise"
+content: >
+  Chaque mise à jour de CareFlow modifie potentiellement les critères internes du
+  modèle. Le GHR n'a pas de droit de veto sur ces mises à jour — elles sont
+  contractuellement imposées pour des raisons de sécurité et de performance. Après
+  une mise à jour, les soignants utilisent un système dont les critères ont changé,
+  sans qu'une nouvelle formation ou validation clinique ait eu lieu. La preuve que
+  le nouveau modèle est aussi adapté à la population du GHR n'est pas établie.
+question: >
+  Si l'éditeur peut modifier unilatéralement les critères de CareFlow, le GHR
+  peut-il encore garantir que le système qu'il utilise est le même que celui
+  qu'il a validé ?
+tags:
+  - mise-a-jour
+  - souverainete
+  - critères
+  - preuve
+version: "1.0"

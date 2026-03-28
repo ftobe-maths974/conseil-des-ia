@@ -1,0 +1,28 @@
+id: tension-ct-007
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "CareFlow réduit certains biais humains — en en introduisant d'autres"
+content: >
+  Le triage manuel est soumis aux biais des soignants : fatigue, stéréotypes, charge
+  émotionnelle. CareFlow applique des critères constants, sans humeur ni préjugé
+  conscient. Cet avantage est réel. Mais le modèle perpétue les biais présents dans
+  ses données d'entraînement — des décisions historiques prises par des soignants
+  humains, avec leurs propres biais. Il les rend simplement moins visibles et
+  plus difficiles à contester.
+data_point: >
+  Une revue systématique publiée dans The Lancet Digital Health en 2021 montre que
+  65 % des modèles d'aide au triage reproduisent des disparités ethniques ou sociales
+  présentes dans les données d'entraînement, sans que les utilisateurs en soient
+  informés.
+question: >
+  Préférer CareFlow au triage humain pour éviter les biais, est-ce réduire les biais
+  ou les rendre institutionnellement invisibles et juridiquement indétectables ?
+tags:
+  - biais
+  - triage
+  - donnees-entraînement
+  - equite
+version: "1.0"

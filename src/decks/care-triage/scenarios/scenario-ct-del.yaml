@@ -1,0 +1,50 @@
+id: scenario-ct-del
+phase: scenario
+chamber: delegation-vs-souverainete
+title: "CareFlow suspend automatiquement un lit de réanimation — l'équipe découvre après"
+context: >
+  Le GHR a activé le module d'allocation automatique de CareFlow il y a six semaines.
+  Ce soir, une patiente de 71 ans en post-opératoire d'une chirurgie cardiaque est
+  transférée en service standard : CareFlow a reclassifié son score de priorité à la
+  baisse après 48 heures en soins intensifs. L'interne de garde découvre la décision
+  en consultant le dossier numérique — elle n'a reçu aucune alerte. La chef de service
+  est en astreinte ; elle n'a pas été consultée. Le log CareFlow indique "reclassification
+  automatique conforme au protocole P-07". Personne dans l'équipe ne sait qui a validé
+  le protocole P-07 ni ce qu'il contient exactement. La patiente sera réorientée vers
+  les soins intensifs deux heures plus tard, après dégradation clinique.
+roles_briefing:
+  decideur: >
+    Vous êtes le directeur médical du GHR. Vous avez signé le contrat CareFlow et
+    approuvé le déploiement du module d'allocation. Vous n'avez pas lu le protocole P-07
+    dans le détail — vous avez fait confiance au rapport de validation de l'éditeur.
+    Votre priorité : éviter qu'un incident isolé remette en cause un déploiement qui
+    réduit les tensions de capacité. Votre angle mort : vous ne savez pas combien
+    d'autres reclassifications automatiques ont eu lieu sans que l'équipe soit prévenue.
+  technicien: >
+    Vous êtes le référent CareFlow du GHR. Le protocole P-07 est un paramètre livré
+    par l'éditeur, configuré lors du déploiement. Vous pouvez le désactiver, mais cela
+    requiert une demande formelle. Vous savez que CareFlow enregistre toutes les
+    reclassifications — les logs existent. Votre ligne rouge : vous refusez de modifier
+    un paramètre clinique sans accord écrit d'un médecin responsable identifié.
+  affecte: >
+    Vous êtes l'interne de garde qui a découvert la reclassification. Vous avez suivi
+    la patiente depuis son admission. La dégradation clinique n'était pas prévisible
+    avec certitude, mais vous aviez noté des signes d'instabilité dans le dossier.
+    Votre ligne rouge : si CareFlow peut déplacer une patiente sans que le médecin
+    traitant soit notifié, vous n'avez plus de garantie que votre jugement clinique
+    compte dans la prise en charge.
+  contre_pouvoir: >
+    Vous êtes représentant du personnel soignant au comité médical d'établissement.
+    Vous avez demandé une liste des décisions automatiques de CareFlow il y a trois
+    semaines — vous attendez toujours. Cet incident illustre ce que vous redoutiez :
+    la responsabilité médicale est diluée entre le système et l'équipe sans que
+    personne ne soit clairement identifié. Votre question : qui répond devant la
+    patiente et sa famille quand CareFlow décide et que personne ne signe ?
+tags:
+  - allocation
+  - responsabilite
+  - validation-humaine
+  - protocole
+  - soins-intensifs
+difficulty: eleve
+version: "1.0"

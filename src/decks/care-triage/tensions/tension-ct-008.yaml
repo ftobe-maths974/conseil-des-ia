@@ -1,0 +1,23 @@
+id: tension-ct-008
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Confier le triage à CareFlow libère des soignants — ou rend leur rôle résiduel"
+content: >
+  Si CareFlow gère le triage automatisé, les soignants qui l'exécutaient peuvent
+  être redéployés vers des tâches à plus forte valeur humaine : accompagnement,
+  coordination, cas complexes. C'est l'argument de la direction. Mais si le triage
+  représentait une compétence centrale dans la formation et l'identité professionnelle
+  des infirmières d'urgences, le délester de cette fonction modifie profondément ce
+  que signifie être soignant dans ce service.
+question: >
+  Libérer les soignants du triage grâce à CareFlow est-il une revalorisation de leur
+  rôle ou la suppression progressive d'une compétence qui définissait leur expertise ?
+tags:
+  - identite-professionnelle
+  - redéploiement
+  - triage
+  - compétence
+version: "1.0"

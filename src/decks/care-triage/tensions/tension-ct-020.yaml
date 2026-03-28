@@ -1,0 +1,27 @@
+id: tension-ct-020
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "La répétition des fausses alertes CareFlow crée une désensibilisation clinique"
+content: >
+  Un taux de faux positifs trop élevé dans les alertes CareFlow entraîne un phénomène
+  documenté : la désensibilisation aux alertes. Les soignants, après avoir constaté
+  que la majorité des alertes ne se concrétisent pas, commencent à les traiter avec
+  moins d'attention. Ce comportement est rationnel et prévisible. Mais il crée une
+  nouvelle vulnérabilité : la prochaine alerte vraie sera traitée avec le même
+  scepticisme que les fausses.
+data_point: >
+  Une étude publiée dans Critical Care Medicine (2022) montre que dans les services
+  utilisant des systèmes d'alerte automatique, le taux de réponse clinique aux alertes
+  chute de 78 % à 43 % en moins de 12 mois d'utilisation, en raison du bruit d'alerte.
+question: >
+  Quand les fausses alertes CareFlow conduisent les soignants à ignorer les vraies,
+  la fiabilité du système nuit-elle à la sécurité plus qu'elle ne la renforce ?
+tags:
+  - faux-positif
+  - desensibilisation
+  - securite
+  - alerte
+version: "1.0"

@@ -1,0 +1,24 @@
+id: action-ct-011
+phase: action
+slot: 3
+lever_type: auditer
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Auditer la concordance entre prédictions CareFlow et évolutions cliniques réelles"
+body: >
+  Le GHR conduit trimestriellement un audit de concordance entre les alertes et
+  prédictions CareFlow et les évolutions cliniques effectivement observées dans les
+  30 jours suivants. L'audit calcule les taux de vrais positifs, faux positifs et
+  faux négatifs par type d'alerte et par population. Les résultats alimentent un
+  tableau de bord accessible aux équipes médicales et servent de base à toute décision
+  de mise à jour ou de retrait du modèle.
+mandat_principe: >
+  Exiger la confrontation régulière et documentée entre les prédictions d'un système
+  automatisé et les résultats observés, comme condition de maintien de son usage.
+tags:
+  - concordance
+  - audit
+  - prediction
+  - tableau-de-bord
+version: "1.0"

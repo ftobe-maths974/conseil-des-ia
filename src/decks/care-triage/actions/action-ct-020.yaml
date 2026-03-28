@@ -1,0 +1,24 @@
+id: action-ct-020
+phase: action
+slot: 4
+lever_type: interdire
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Interdire le renouvellement du contrat CareFlow sans bilan de réversibilité documenté"
+body: >
+  Le renouvellement ou l'extension du contrat CareFlow est subordonné à la production
+  d'un bilan de réversibilité établissant : le coût estimé d'une sortie du système,
+  les compétences perdues depuis le déploiement, les procédures autonomes dégradées
+  ou abandonnées, et le délai estimé de retour à une capacité autonome complète.
+  Ce bilan est soumis au conseil de surveillance du GHR et aux instances représentatives
+  du personnel avant toute décision contractuelle.
+mandat_principe: >
+  N'autoriser aucune reconduction d'un engagement institutionnel envers un système
+  automatisé sans bilan documenté des irréversibilités accumulées et du coût de sortie.
+tags:
+  - reversibilite
+  - contrat
+  - bilan
+  - sortie
+version: "1.0"

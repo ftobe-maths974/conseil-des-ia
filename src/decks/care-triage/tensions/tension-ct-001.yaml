@@ -1,0 +1,28 @@
+id: tension-ct-001
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "La confiance dans l'outil décharge ou atrophie ?"
+content: >
+  Lorsqu'un soignant utilise CareFlow quotidiennement, il peut mobiliser son attention
+  sur d'autres aspects de la prise en charge — communication avec le patient, coordination
+  d'équipe, situations complexes. Mais cette redistribution de l'attention s'accompagne
+  d'une moindre sollicitation de certains raisonnements cliniques de base. La question
+  n'est pas de savoir si CareFlow est fiable : c'est de savoir si la confiance accordée
+  entretient ou érode les compétences que l'on cesse d'exercer.
+data_point: >
+  Une étude publiée en 2023 dans le Journal of the American Medical Informatics
+  Association note que les cliniciens utilisant des outils d'aide à la décision depuis
+  plus d'un an montrent une réduction mesurable de la précision diagnostique en l'absence
+  de l'outil.
+question: >
+  Faire confiance à CareFlow pour réduire sa charge cognitive est-il un gain
+  professionnel ou le début d'une atrophie silencieuse de compétences irremplaçables ?
+tags:
+  - confiance
+  - competence
+  - charge-cognitive
+  - delegation
+version: "1.0"

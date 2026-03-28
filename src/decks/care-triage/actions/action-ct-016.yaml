@@ -1,0 +1,25 @@
+id: action-ct-016
+phase: action
+slot: 4
+lever_type: interdire
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "Interdire l'application d'un score CareFlow à un patient sans vérification de représentativité"
+body: >
+  Il est interdit d'appliquer une recommandation CareFlow à un patient dont le profil
+  clinique principal est répertorié comme hors-champ de la base d'entraînement du
+  modèle, sans qu'un soignant ait explicitement confirmé que la recommandation reste
+  pertinente en dépit de cette limite. Cette confirmation est documentée au dossier.
+  L'interface CareFlow doit afficher une alerte de représentativité dès qu'un profil
+  hors-champ est détecté.
+mandat_principe: >
+  Interdire l'application automatique d'une décision standardisée à une personne dont
+  le profil est reconnu comme hors-champ du système, sans vérification humaine
+  explicitement documentée.
+tags:
+  - representativite
+  - hors-champ
+  - alerte
+  - profil
+version: "1.0"

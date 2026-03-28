@@ -1,0 +1,24 @@
+id: tension-ct-021
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: red
+title: "Le patient qui refuse l'hospitalisation préventive a-t-il tort parce que CareFlow a raison ?"
+content: >
+  Un patient informé refuse une hospitalisation préventive recommandée par CareFlow.
+  Il invoque ses expériences passées (fausses alertes), son ressenti clinique, et
+  son autonomie. Le médecin est tiraillé entre le respect de la volonté du patient,
+  son propre jugement clinique, et la responsabilité que lui confère la recommandation
+  d'un système dont il ne connaît pas précisément le taux d'erreur. Le refus du patient
+  est légalement opposable. La recommandation de CareFlow n'a pas force obligatoire.
+question: >
+  Quand un patient informé refuse une recommandation CareFlow sur la base de ses
+  propres expériences, son jugement sur sa propre santé est-il moins valide que
+  celui d'un modèle dont la précision n'est pas documentée pour son profil ?
+tags:
+  - autonomie-patient
+  - refus-soin
+  - prediction
+  - consentement
+version: "1.0"

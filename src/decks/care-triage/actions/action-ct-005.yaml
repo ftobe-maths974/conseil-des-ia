@@ -1,0 +1,24 @@
+id: action-ct-005
+phase: action
+slot: 1
+lever_type: recours
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: individuel
+title: "Garantir à tout patient un droit d'explication et de contestation du score CareFlow"
+body: >
+  Tout patient ou son représentant légal peut demander, à tout moment, une explication
+  en langage non technique des critères ayant conduit au score CareFlow qui l'affecte.
+  Cette explication est fournie par écrit dans les 24 heures par un référent identifié.
+  Le patient peut en outre demander une révision du score par un praticien humain, dont
+  la décision motivée est intégrée au dossier et prime sur la recommandation automatique.
+mandat_principe: >
+  Garantir à toute personne affectée par une décision automatisée le droit d'en obtenir
+  une explication accessible et de demander une révision par un humain compétent dont
+  la décision est traçable.
+tags:
+  - droits-patient
+  - explication
+  - contestation
+  - score
+version: "1.0"

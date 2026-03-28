@@ -1,0 +1,23 @@
+id: action-ct-017
+phase: action
+slot: 1
+lever_type: conditionner
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner tout déploiement CareFlow à la maintenance d'une procédure de fonctionnement dégradé"
+body: >
+  Aucun module CareFlow ne peut être activé en exploitation si le GHR ne dispose pas
+  d'une procédure documentée de fonctionnement dégradé couvrant le même périmètre
+  fonctionnel, accessible à tous les soignants concernés et testée dans les six mois
+  précédant le déploiement. La procédure dégradée est révisée à chaque mise à jour
+  majeure de CareFlow et incluse dans la formation continue obligatoire des équipes.
+mandat_principe: >
+  Conditionner tout déploiement d'un outil automatisé à la préservation d'une
+  capacité de fonctionnement autonome documentée, testée et maintenue à jour.
+tags:
+  - mode-degrade
+  - reversibilite
+  - procedure
+  - formation
+version: "1.0"

@@ -1,0 +1,36 @@
+id: care-triage
+name: "CareFlow — Triage sous pression"
+domaine: "santé publique hospitalière"
+institution_centrale: "groupement hospitalier régional (GHR)"
+population_affectee: "patients, soignants, cadres hospitaliers, proches"
+type_decision: "triage, orientation, priorisation des soins, allocation des lits, suivi des patients"
+horizon_temporel: "déploiement en cours sur 18 mois"
+risque_dominant: "centralisation progressive des décisions cliniques autour du système CareFlow"
+registre_langage: "institutionnel, clinique, concret, jamais technobéat, jamais apocalyptique"
+groups:
+  - id: groupe-A
+    chamber: delegation-vs-souverainete
+    receives_from: groupe-E
+    scenario_id: scenario-ct-del
+  - id: groupe-B
+    chamber: invisibilite-vs-arbitrage
+    receives_from: groupe-A
+    scenario_id: scenario-ct-inv
+  - id: groupe-C
+    chamber: preuve-vs-simulation
+    receives_from: groupe-B
+    scenario_id: scenario-ct-pre
+  - id: groupe-D
+    chamber: singularite-vs-standard
+    receives_from: groupe-C
+    scenario_id: scenario-ct-sin
+  - id: groupe-E
+    chamber: metabolisme-vs-progres
+    receives_from: groupe-D
+    scenario_id: scenario-ct-met
+mandat_circulation:
+  groupe-A: groupe-B
+  groupe-B: groupe-C
+  groupe-C: groupe-D
+  groupe-D: groupe-E
+  groupe-E: groupe-A

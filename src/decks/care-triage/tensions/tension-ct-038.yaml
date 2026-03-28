@@ -1,0 +1,24 @@
+id: tension-ct-038
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "La charge de maintenance de CareFlow pèse inégalement sur les soignants"
+content: >
+  La maintenance de CareFlow — saisie, validation, gestion des alertes, formation
+  continue — représente une charge de travail réelle. Cette charge est rarement
+  comptabilisée explicitement et n'est pas répartie équitablement : elle tombe souvent
+  sur les soignants les plus disponibles ou les moins à même de la refuser. La promesse
+  de gain de temps produit par CareFlow ne se traduit pas toujours en allègement pour
+  ceux qui absorbent le coût de son fonctionnement.
+question: >
+  Si la charge de maintenance de CareFlow est absorbée par les soignants les plus
+  précaires sans être reconnue ni compensée, le gain d'efficience annoncé pour qui
+  est-il réellement un gain ?
+tags:
+  - charge-maintenance
+  - inegalite
+  - temps
+  - soignants
+version: "1.0"

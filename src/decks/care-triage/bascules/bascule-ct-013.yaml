@@ -1,0 +1,23 @@
+id: bascule-ct-013
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: individuel
+title: "L'interne n'a plus appris à faire un triage sans CareFlow"
+situation: >
+  Un interne de première année en médecine d'urgence découvre que son stage se déroule
+  dans un service entièrement piloté par CareFlow. Sa formation pratique au triage
+  consiste à valider les scores du système. Son maître de stage lui confie : "On
+  fait comme ça depuis que CareFlow est là, avant c'était différent." L'interne
+  termine son stage sans avoir jamais réalisé un triage manuel en conditions réelles.
+question: >
+  Quand la formation d'un professionnel de santé est entièrement organisée autour
+  d'un outil, que se passe-t-il pour ses compétences si l'outil disparaît ?
+tags:
+  - formation
+  - interne
+  - compétence
+  - transmission
+version: "1.0"
