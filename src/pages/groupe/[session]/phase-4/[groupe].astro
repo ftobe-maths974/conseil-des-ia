@@ -69,6 +69,13 @@ const scenarioData: ScenarioData | null = scenario ? {
           <p class="p4__mandat-bascule-text" id="p4-mandat-bascule-text"></p>
         </div>
         <blockquote class="p4__mandat-text" id="p4-mandat-text"></blockquote>
+        <div class="p4__traj-row">
+          <span class="p4__traj-badge" id="p4-traj" hidden></span>
+        </div>
+        <div class="p4__traj-constraint" id="p4-traj-constraint" hidden role="alert">
+          <span class="p4__traj-constraint-label">Contexte structurel</span>
+          <p>L'infrastructure est déjà verrouillée. Interdire n'est plus une suspension simple, mais un démantèlement coûteux. Votre arbitrage doit en tenir compte.</p>
+        </div>
       </div>
     </section>
 
@@ -176,7 +183,7 @@ const scenarioData: ScenarioData | null = scenario ? {
 <script type="application/json" id="scenario-data" set:html={JSON.stringify(scenarioData)} />
 
 <script>
-  import { REV_LABELS, CHAMBER_LABELS_SHORT } from '../../../../lib/chambers';
+  import { REV_LABELS, CHAMBER_LABELS_SHORT, TRAJ_LABELS } from '../../../../lib/chambers';
   // ── Types ─────────────────────────────────────────────────────────────────
   interface Handoff {
     action?:  { id: string; title: string };
@@ -185,6 +192,7 @@ const scenarioData: ScenarioData | null = scenario ? {
     level:    'green' | 'yellow' | 'red';
     chamber:  string;
     from:     string;
+    traj?:    number;
   }
 
   // ── Lecture du handoff depuis le hash ─────────────────────────────────────
@@ -230,6 +238,18 @@ const scenarioData: ScenarioData | null = scenario ? {
 
     if (handoff.level === 'red') {
       mandatContent.classList.add('p4__mandat-content--red');
+    }
+
+    // ── Trajectoire de réversibilité ────────────────────────────────────────
+    const traj = handoff.traj ?? 3;
+    const trajEl = document.getElementById('p4-traj')!;
+    trajEl.textContent = `Trajectoire : ${TRAJ_LABELS[traj] ?? traj}`;
+    trajEl.setAttribute('data-traj', String(traj));
+    trajEl.hidden = false;
+
+    if (traj >= 4) {
+      const constraintEl = document.getElementById('p4-traj-constraint')!;
+      constraintEl.hidden = false;
     }
   }
 
@@ -384,6 +404,36 @@ const scenarioData: ScenarioData | null = scenario ? {
   }
   .p4__mandat-constraint {
     font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
+  }
+
+  /* ── Trajectoire ─────────────────────────────────────────────────────────── */
+  .p4__traj-row { display: flex; align-items: center; gap: var(--space-sm); }
+
+  .p4__traj-badge {
+    font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+    padding: 3px 10px; border-radius: var(--radius-sm);
+    background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    transition: background var(--transition-fast), color var(--transition-fast),
+                border-color var(--transition-fast);
+  }
+  .p4__traj-badge[data-traj="4"],
+  .p4__traj-badge[data-traj="5"] {
+    background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.4); color: #ef4444;
+  }
+
+  .p4__traj-constraint {
+    background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.3);
+    border-left: 3px solid #ef4444;
+    border-radius: var(--radius-md); padding: var(--space-md);
+    display: flex; flex-direction: column; gap: var(--space-xs);
+  }
+  .p4__traj-constraint-label {
+    font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+    color: #ef4444; text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .p4__traj-constraint p {
+    font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;
   }
 
   /* ── Scénario ────────────────────────────────────────────────────────────── */

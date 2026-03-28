@@ -140,7 +140,7 @@ const cardsData: CardData[] = selected.map(b => ({
 <script type="application/json" id="cards-data" set:html={JSON.stringify(cardsData)} />
 
 <script>
-  import { REV_LABELS } from '../../../../lib/chambers';
+  import { REV_LABELS, initTraj, clampTraj } from '../../../../lib/chambers';
   // ── Lecture des données ────────────────────────────────────────────────────
   const rawData = document.getElementById('cards-data')?.textContent ?? '[]';
   const cards: Array<{
@@ -251,15 +251,17 @@ const cardsData: CardData[] = selected.map(b => ({
       <div class="p1-card__tags" aria-hidden="true">${tagsHtml}</div>
     `;
 
-    // Encoder les thèmes dans le lien "Continuer vers Phase 2"
+    // Encoder les thèmes + trajectoire dans le lien "Continuer vers Phase 2"
     const allCardEls2 = stack.querySelectorAll<HTMLElement>('.p1-card');
     const dominant  = allCardEls2[allCardEls2.length - 1]?.dataset.theme ?? '';
     const secondary = allCardEls2.length >= 2 ? allCardEls2[allCardEls2.length - 2]?.dataset.theme ?? '' : '';
     const minor     = allCardEls2[0]?.dataset.theme ?? '';
+    const bottomRev = allCardEls2[allCardEls2.length - 1]?.dataset.rev ?? 'yellow';
+    const traj      = clampTraj(initTraj(bottomRev));
     const continueBtn = document.getElementById('btn-continue') as HTMLAnchorElement;
-    if (dominant && continueBtn) {
+    if (continueBtn) {
       const base = continueBtn.getAttribute('href')!.split('#')[0];
-      continueBtn.setAttribute('href', `${base}#dominant=${dominant}&secondary=${secondary}&minor=${minor}`);
+      continueBtn.setAttribute('href', `${base}#dominant=${dominant}&secondary=${secondary}&minor=${minor}&traj=${traj}`);
     }
 
     // Transition : masquer tri, afficher révélation

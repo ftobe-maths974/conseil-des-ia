@@ -290,6 +290,9 @@ comment les décisions accumulées réduisent ou restaurent la possibilité de r
       badge Recommandé Phase 3 selon thème dominant
 - [x] Enrichissement contenu : 45 tensions (9/chambre × 5 chambres, distribution 3/3/3 par slot_theme),
       filtrage 3/1/1 réel en Phase 2 (cartes hors sélection masquées côté client)
+- [x] Trajectoire de réversibilité : TRAJ_LABELS + clampTraj() + initTraj() dans chambers.ts,
+      calcul Phase 1 (carte du bas), confirmation Phase 2 (majorité red → traj+1),
+      modificateur Phase 3 (green→-1 / yellow→0 / red→+1), badge + contrainte narrative Phase 4
 
 ## Ce qui reste à faire (priorité ordre)
 1. ~~Corriger le bug Phase 1~~ ✓ corrigé
@@ -299,8 +302,7 @@ comment les décisions accumulées réduisent ou restaurent la possibilité de r
 5. ~~Migration slot : étape 4 (centraliser constantes → src/lib/chambers.ts)~~ ✓ fait
 6. ~~Refonte Slots & Leviers (slot_theme + lever_type + propagation thématique)~~ ✓ fait
 7. ~~Enrichissement contenu : 9 tensions/chambre (3/3/3), filtrage 3/1/1 réel Phase 2~~ ✓ fait
-8. Implémenter la trajectoire de réversibilité (traj dans le hash, calcul Phase 1→2→3,
-   contrainte narrative Phase 4, TRAJ_LABELS dans chambers.ts)
+8. ~~Implémenter la trajectoire de réversibilité~~ ✓ fait
 9. Interface animateur : timer + tableau des mandats reçus + QR distribution
 10. Mode clair / lisibilité mobile en pleine lumière
 
@@ -400,8 +402,7 @@ Fichier : `src/pages/animateur/setup.astro`
 `SLOT_THEMES`, `SLOT_THEME_LABELS`, `LEVER_TYPES`, `LEVER_LABELS`, `DOMINANT_TO_LEVERS`.
 Toutes les pages importent depuis ce fichier, plus de duplication.
 
-À ajouter lors de l'implémentation de la trajectoire : `TRAJ_LABELS` (Record&lt;number, string&gt;
-mappant 1→'Fluide', 2→'Engagé', 3→'Contraint', 4→'Critique', 5→'Point de non-retour').
+Ajouté : `TRAJ_LABELS` (Record&lt;number, string&gt;), `clampTraj()`, `initTraj()`.
 
 ### ✓ Priorité 2 — Rendre le projet deck-driven (fait)
 

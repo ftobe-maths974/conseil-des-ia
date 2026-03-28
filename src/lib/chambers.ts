@@ -67,3 +67,26 @@ export const DOMINANT_TO_LEVERS: Record<string, string[]> = {
   organisation: ['conditionner', 'auditer'],
   systeme:      ['interdire', 'auditer'],
 };
+
+// ── Trajectoire de réversibilité ──────────────────────────────────────────────
+// Entier borné 1–5. Jamais de décimales. Jamais de score global.
+
+export const TRAJ_LABELS: Record<number, string> = {
+  1: 'Fluide',
+  2: 'Engagé',
+  3: 'Contraint',
+  4: 'Critique',
+  5: 'Point de non-retour',
+};
+
+/** Borne la trajectoire entre 1 et 5. */
+export function clampTraj(n: number): number {
+  return Math.max(1, Math.min(5, Math.round(n)));
+}
+
+/** Initialise la trajectoire depuis la réversibilité de la carte la plus irréversible (Phase 1). */
+export function initTraj(reversibility: string): number {
+  if (reversibility === 'green')  return 2;
+  if (reversibility === 'yellow') return 3;
+  return 4; // red
+}

@@ -161,14 +161,17 @@ const tensionsData: TensionData[] = selected.map(t => ({
 
   const phase3Base: string = JSON.parse(document.getElementById('phase3-base')!.textContent!);
 
-  // ── Lire le thème dominant depuis le hash Phase 1 ────────────────────────
+  // ── Lire le thème dominant + trajectoire depuis le hash Phase 1 ──────────
   const inHash = window.location.hash;
   const dominantMatch  = inHash.match(/dominant=([^&]+)/);
   const secondaryMatch = inHash.match(/secondary=([^&]+)/);
   const minorMatch     = inHash.match(/minor=([^&]+)/);
+  const trajMatch      = inHash.match(/traj=([^&]+)/);
   const dominant  = dominantMatch?.[1]  ?? '';
   const secondary = secondaryMatch?.[1] ?? '';
   const minor     = minorMatch?.[1]     ?? '';
+  let   traj      = parseInt(trajMatch?.[1] ?? '3', 10);
+  if (isNaN(traj) || traj < 1 || traj > 5) traj = 3;
 
   // ── Filtrage + réordonnancement 3/1/1 côté client ────────────────────────
   if (cardsSection) {
@@ -204,6 +207,14 @@ const tensionsData: TensionData[] = selected.map(t => ({
     });
 
     cardsSection.style.visibility = 'visible';
+
+    // ── Confirmation de trajectoire (Phase 2) ────────────────────────────────
+    // Si la majorité des 5 cartes visibles est red → traj + 1 (borné à 5)
+    const visibleCards = selected; // tableau des 5 cartes affichées
+    const redCount = visibleCards.filter(c => c.dataset.rev === 'red').length;
+    if (redCount > visibleCards.length / 2) {
+      traj = Math.min(5, traj + 1);
+    }
   }
 
   textarea.addEventListener('input', () => {
@@ -216,7 +227,7 @@ const tensionsData: TensionData[] = selected.map(t => ({
       // Encoder texte + propager dominant vers Phase 3
       const encoded = btoa(encodeURIComponent(textarea.value.trim()));
       const dominantSuffix = dominant ? `&dominant=${dominant}` : '';
-      continueA.href = `${phase3Base}#bascule=${encoded}${dominantSuffix}`;
+      continueA.href = `${phase3Base}#bascule=${encoded}${dominantSuffix}&traj=${traj}`;
     } else {
       continueA.setAttribute('aria-disabled', 'true');
       continueA.setAttribute('tabindex', '-1');

@@ -210,7 +210,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
 
 <script>
   import QRCode from 'qrcode';
-  import { REV_LABELS, DOMINANT_TO_LEVERS } from '../../../../lib/chambers';
+  import { REV_LABELS, DOMINANT_TO_LEVERS, clampTraj } from '../../../../lib/chambers';
 
   // ── Données ──────────────────────────────────────────────────────────────
   const actionsData: Array<{
@@ -236,6 +236,11 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
       basculeText = decodeURIComponent(atob(basculeMatch[1]));
     } catch { /* hash malformé, on ignore */ }
   }
+
+  // Lire la trajectoire transmise par Phase 2
+  const trajMatch = hash.match(/traj=([^&]+)/);
+  let incomingTraj = parseInt(trajMatch?.[1] ?? '3', 10);
+  if (isNaN(incomingTraj) || incomingTraj < 1 || incomingTraj > 5) incomingTraj = 3;
 
   // Badge "Recommandé" selon le thème dominant de Phase 1
   const dominantMatch = hash.match(/dominant=([^&]+)/);
@@ -329,6 +334,12 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     const text = condition
       ? `Parce que : ${parce} — À condition que : ${condition}`
       : `Parce que : ${parce}`;
+    // Modifier la trajectoire selon la réversibilité de l'action choisie
+    const trajDelta = action.reversibility === 'green' ? -1
+                    : action.reversibility === 'red'   ?  1
+                    :                                     0;
+    const outTraj = clampTraj(incomingTraj + trajDelta);
+
     const handoff = {
       action:   { id: action.id, title: action.title },
       bascule:  basculeText || undefined,
@@ -336,6 +347,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
       level:    action.reversibility,
       chamber:  action.chamber,
       from:     document.querySelector<HTMLElement>('.p3')!.dataset.groupe ?? '',
+      traj:     outTraj,
     };
 
     const encoded = btoa(encodeURIComponent(JSON.stringify(handoff)));
