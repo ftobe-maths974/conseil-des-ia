@@ -1,0 +1,21 @@
+id: action-gg-010
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner toute publication de contenu synthétique à un label d'origine visible"
+body: >
+  Toute production générée ou substantiellement modifiée par FAME-GEN publiée sur
+  OmniStream doit porter un label d'origine lisible, non supprimable par l'utilisateur,
+  indiquant la nature synthétique du contenu et l'identité de l'entité responsable
+  de sa publication. Ce label doit être interopérable avec les standards de traçabilité
+  des contenus synthétiques reconnus par les régulateurs.
+mandat_principe: "Conditionner toute diffusion de contenu synthétique à la présence d'un marqueur d'origine visible, non falsifiable et standardisé."
+tags:
+  - labellisation
+  - authenticite
+  - transparence
+  - traçabilite
+version: "1.0"

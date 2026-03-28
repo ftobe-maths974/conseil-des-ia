@@ -1,0 +1,21 @@
+id: action-gg-003
+phase: action
+slot: 3
+lever_type: auditer
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "Auditer annuellement la part de contenu humain dans la production OmniStream"
+body: >
+  OmniStream Studios est tenu de publier chaque année un rapport d'audit indépendant
+  mesurant la proportion de contenu créé, validé ou modifié par un humain identifié,
+  par catégorie de créateur. Ce rapport inclut le taux de publications purement
+  automatiques, les catégories concernées et l'évolution sur trois ans.
+  L'auditeur est désigné par un comité externe indépendant du studio.
+mandat_principe: "Exiger la transparence publique et vérifiable sur la proportion de création humaine effective dans toute plateforme de production automatisée."
+tags:
+  - audit
+  - transparence
+  - creation-humaine
+  - reporting
+version: "1.0"

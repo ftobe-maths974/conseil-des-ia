@@ -1,0 +1,50 @@
+id: scenario-gg-pre
+phase: scenario
+chamber: preuve-vs-simulation
+title: "La voix de quelqu'un d'autre"
+context: >
+  Amara K. est doubleuse professionnelle depuis douze ans. Elle découvre que sa voix
+  tourne dans 400 productions OmniStream par mois — sans contrat, sans rémunération,
+  sans crédit. FAME-GEN a été entraîné sur ses archives de sessions studio, cédées lors
+  du rachat d'un petit studio par OmniStream en 2021. Le contrat de cession incluait
+  une clause de "transfert des actifs de production", interprétée par OmniStream comme
+  couvrant les données vocales. Amara affirme n'avoir jamais consenti à l'utilisation
+  de sa voix pour entraîner un modèle génératif. La commission d'éthique reçoit le
+  mandat : "Interdire tout usage d'identité de créateur par FAME-GEN sans clé de
+  consentement traçable et révocable." Le directeur technique prévient que
+  rétroactivement appliquer ce principe effacerait 60% du catalogue vocal actif
+  et exposerait OmniStream à un risque de 180M€ de dépréciation d'actifs.
+roles_briefing:
+  decideur: >
+    Vous êtes le directeur artistique d'OmniStream Studios. Amara est un cas parmi
+    plusieurs centaines de talents dont les voix ont été intégrées lors du rachat.
+    Appliquer le mandat rétroactivement serait ruineux. Mais ne pas l'appliquer
+    expose le studio à un procès collectif. Votre priorité : minimiser l'exposition
+    juridique. Votre angle mort : vous pensez que la clause de cession était
+    suffisamment explicite, ce que deux juristes contestent.
+  technicien: >
+    Vous êtes l'ingénieur ML qui a supervisé l'entraînement du modèle vocal FAME-GEN.
+    Techniquement, il est impossible d'isoler la contribution exacte d'Amara dans le
+    modèle — les données sont fusionnées. Vous pourriez ré-entraîner sans ses données,
+    mais cela prend 8 mois et coûte 12M€. Votre ligne rouge : vous refusez de certifier
+    que le consentement existait si personne ne peut le prouver documentairement.
+  affecte: >
+    Vous êtes Amara K. ou un ayant droit dans la même situation. Votre identité vocale
+    circule dans des productions que vous n'avez pas approuvées, parfois pour des
+    contenus contraires à vos valeurs. Vous n'avez aucun moyen de savoir où votre voix
+    est utilisée, ni de la retirer. Votre ligne rouge : le droit à l'intégrité de
+    l'identité vocale doit être inaliénable.
+  contre_pouvoir: >
+    Vous représentez le Syndicat des Doubleurs et Comédiens Vocaux. Vous avez recensé
+    340 professionnels dans la même situation qu'Amara depuis le rachat de 2021.
+    Deux d'entre eux ont reconnu leur voix dans des publicités pour des produits qu'ils
+    n'auraient jamais accepté de promouvoir. Votre question : la cession d'actifs
+    de production peut-elle inclure le droit à l'identité d'une personne physique ?
+tags:
+  - clone-vocal
+  - consentement
+  - authenticite
+  - droits-identite
+  - rachat
+difficulty: eleve
+version: "1.0"

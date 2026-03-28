@@ -1,0 +1,25 @@
+id: tension-gg-036
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: green
+title: "Préserver l'exception ou optimiser l'accès ?"
+content: >
+  Un régulateur propose qu'OmniStream réserve 15% de son flux de recommandations
+  à des contenus hors-FOF. OmniStream répond que cette contrainte réduirait
+  l'engagement moyen de 12%, ce qui affecterait ses revenus publicitaires et
+  donc les ressources disponibles pour rémunérer les créateurs. Le régulateur
+  réplique que l'engagement maximum n'est pas une valeur constitutionnelle.
+  Deux conceptions légitimes s'affrontent : optimisation de l'engagement vs
+  préservation de la diversité comme intérêt public non réductible à une métrique.
+question: >
+  La préservation de la diversité créative sur OmniStream est-elle un objectif
+  de politique publique légitime qui justifie de contraindre l'optimisation
+  commerciale d'un acteur privé ?
+tags:
+  - quota
+  - diversite
+  - regulation
+  - engagement
+version: "1.0"

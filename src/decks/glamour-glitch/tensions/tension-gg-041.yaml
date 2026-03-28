@@ -1,0 +1,27 @@
+id: tension-gg-041
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "La dépendance infrastructurelle qui rend impossible la sortie"
+content: >
+  OmniStream a internalisé FAME-GEN dans l'ensemble de sa chaîne de production.
+  Ses créateurs, ses outils, ses contrats, ses métriques sont construits autour
+  du pipeline IA. Si OmniStream voulait réduire substantiellement son empreinte
+  ressource, cela impliquerait de démanteler une architecture productive dont
+  des milliers d'emplois et de revenus dépendent directement. La dépendance
+  infrastructurelle rend la sobriété choisie économiquement catastrophique
+  — non pas impossible en théorie, mais suicidaire en pratique pour une entreprise
+  cotée avec des obligations fiduciaires envers ses actionnaires.
+question: >
+  Une organisation peut-elle choisir la sobriété quand son modèle économique,
+  ses contrats et ses emplois reposent intégralement sur l'infrastructure
+  qu'il faudrait réduire — ou faut-il une contrainte externe pour rendre
+  ce choix possible ?
+tags:
+  - lock-in-infrastructurel
+  - dependance
+  - sobriete
+  - contrainte
+version: "1.0"

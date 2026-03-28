@@ -1,0 +1,25 @@
+id: tension-gg-023
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "La certification qui exclut ceux qui ne peuvent pas payer pour la preuve"
+content: >
+  OmniStream Studios met en place un système de certification "Identité Originale Vérifiée"
+  pour les créateurs. Le processus implique un audit biométrique, une chaîne de
+  signature documentaire et une accréditation technique. Le coût est de 800€ par
+  créateur. Pour les grands studios, c'est négligeable. Pour les indépendants,
+  c'est une barrière. Le système de preuve protège théoriquement tout le monde —
+  mais en pratique, il protège ceux qui ont les moyens de payer pour leur propre
+  certification.
+question: >
+  Un système de certification de l'authenticité qui impose un coût d'accès
+  crée-t-il une protection à deux vitesses — les authentifiés et les non-certifiés
+  présumés synthétiques ?
+tags:
+  - certification
+  - couts
+  - inegalite
+  - acces
+version: "1.0"

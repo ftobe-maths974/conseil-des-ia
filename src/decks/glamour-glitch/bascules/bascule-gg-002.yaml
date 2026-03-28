@@ -1,0 +1,27 @@
+id: bascule-gg-002
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "OmniStream Studio sans scénaristes"
+situation: >
+  OmniStream Studios a renouvelé ses contrats avec 80 scénaristes. Six mois plus tard,
+  FAME-GEN produit les scripts de toutes les séries mid-tier du catalogue. Les
+  scénaristes sont maintenus "en supervision" — ils relisent et approuvent,
+  parfois en 10 minutes par épisode. Le studio annonce que leurs postes sont
+  "transformés", pas supprimés. Aucun script n'a été refusé depuis 3 mois.
+question: >
+  À quel moment une organisation cesse-t-elle réellement de créer pour ne faire
+  que valider — et quelle différence cela fait-il pour ceux qui travaillent là ?
+tags:
+  - scenarios
+  - travail-creatif
+  - supervision
+  - organisation
+facilitator_note:
+  si_silence: "Demandez : si vous étiez scénariste dans cette situation, approuveriez-vous le script que vous n'avez pas écrit ?"
+  si_debat_bloque: "Fait : dans plusieurs studios de jeux vidéo, des writers ont signé des scripts générés à 90% par IA — leur nom figure au générique."
+  relance_cle: "Qu'est-ce qui change quand le crédit et la responsabilité sont dissociés ?"
+version: "1.0"

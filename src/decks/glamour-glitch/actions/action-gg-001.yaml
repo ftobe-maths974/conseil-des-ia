@@ -1,0 +1,21 @@
+id: action-gg-001
+phase: action
+slot: 1
+lever_type: interdire
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Interdire toute publication sous identité de créateur sans validation explicite"
+body: >
+  OmniStream Studios est tenu d'obtenir, pour chaque contenu généré par FAME-GEN
+  publié sous le nom ou l'image d'un créateur identifié, une validation active et
+  horodatée de ce créateur. Le silence, l'inaction ou l'absence de réponse dans
+  un délai imparti ne peuvent valoir consentement. Toute publication en violation
+  de cette règle engage la responsabilité civile d'OmniStream.
+mandat_principe: "Interdire toute publication sous identité humaine sans acte de consentement explicite, traçable et révocable."
+tags:
+  - consentement
+  - pipeline
+  - delegation
+  - publication
+version: "1.0"

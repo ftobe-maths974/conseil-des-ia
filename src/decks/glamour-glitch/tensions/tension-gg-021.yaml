@@ -1,0 +1,26 @@
+id: tension-gg-021
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+title: "La simulation qui sert à apprendre, pas à tromper"
+content: >
+  Un studio pédagogique utilise FAME-GEN pour produire des simulations d'entretiens
+  avec des "recruteurs synthétiques" — visages, voix, comportements réalistes.
+  Les apprenants s'entraînent comme s'ils passaient un vrai entretien. Personne
+  n'est trompé : le cadre pédagogique est explicite. La simulation au service
+  de la formation ne relève pas de la même logique que la simulation au service
+  de la tromperie. Mais FAME-GEN est le même outil dans les deux cas.
+  La question n'est pas le modèle — c'est l'usage déclaré et la possibilité
+  de vérifier que l'usage correspond bien à la déclaration.
+question: >
+  Peut-on distinguer de façon opérationnelle les usages légitimes de la simulation
+  identitaire — pédagogiques, artistiques, fictionnels — des usages trompeurs,
+  avec les mêmes outils FAME-GEN ?
+tags:
+  - usage-pedagogique
+  - simulation-legitime
+  - consentement
+  - controle
+version: "1.0"

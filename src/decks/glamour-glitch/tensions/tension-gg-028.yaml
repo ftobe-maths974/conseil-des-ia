@@ -1,0 +1,25 @@
+id: tension-gg-028
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Le style qu'on a perdu en cherchant à être vu"
+content: >
+  Un créateur expérimental adapte progressivement son format à FOF pour retrouver
+  de la visibilité. Ses métriques remontent. Mais au bout de six mois, il ne
+  reconnaît plus ses propres contenus dans son feed. Son style particulier —
+  ce qui l'avait rendu identifiable à ses 20 000 abonnés fidèles — a été
+  gommé par les adaptations successives. Il a gagné en audience et perdu en identité.
+  La question n'est pas s'il a eu raison de s'adapter : c'est si ce choix était
+  vraiment libre quand l'alternative était l'invisibilité économique.
+question: >
+  Quand adapter son style au standard algorithmique est la condition de la
+  visibilité, le créateur qui s'adapte fait-il un choix libre ou cède-t-il
+  à une pression structurelle déguisée en opportunité ?
+tags:
+  - identite-artistique
+  - adaptation
+  - pression
+  - vibe
+version: "1.0"

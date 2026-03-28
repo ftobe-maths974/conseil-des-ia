@@ -1,0 +1,50 @@
+id: scenario-gg-sin
+phase: scenario
+chamber: singularite-vs-standard
+title: "Le format qui efface tout le reste"
+context: >
+  OmniStream Studios annonce le déploiement de "Format Optimisé FAME-GEN" (FOF) :
+  une norme de production automatique qui garantit à tout créateur qui l'adopte
+  un boost de visibilité de 35% en moyenne. Le format impose : durée entre 6 et
+  9 minutes, trois points de tension narrative aux minutes 2, 5 et 7, thumbnail
+  avec visage expressif cadré à 60% de la surface, titre interrogatif court. En
+  six mois, 78% des créateurs OmniStream ont adopté FOF. La plateforme ressemble
+  à un catalogue homogène. Un collectif de 40 créateurs expérimentaux — formats
+  longs, documentaires, essais — voit leurs vues divisées par quatre. FAME-GEN
+  a commencé à déclasser automatiquement les contenus hors-FOF comme "peu engageants".
+  La commission reçoit le mandat : "Imposer un audit des profils hors-standard avant
+  toute décision de démonétisation ou de déclassement." Le responsable produit soutient
+  que FOF est une aide, pas une obligation — et que les créateurs ont choisi librement.
+roles_briefing:
+  decideur: >
+    Vous êtes le directeur produit d'OmniStream. FOF a augmenté le temps moyen de
+    visionnage de 22% et les revenus publicitaires de 18%. C'est un succès mesurable.
+    Vous considérez que les créateurs hors-FOF font un choix éditorial, pas une
+    contrainte subie. Votre angle mort : vous n'avez pas mesuré l'impact sur les
+    créateurs issus de minorités culturelles, qui surreprésentent les hors-FOF.
+  technicien: >
+    Vous êtes la data scientist qui a conçu le scoring FOF. Le modèle optimise
+    l'engagement moyen — il est structurellement défavorable aux formats longs,
+    complexes ou culturellement spécifiques. Vous pouvez démontrer que le déclassement
+    des hors-FOF n'est pas une décision humaine : c'est une conséquence mécanique du
+    modèle. Votre ligne rouge : vous refusez de présenter le déclassement comme neutre.
+  affecte: >
+    Vous êtes un créateur de documentaires ou d'essais culturels sur OmniStream.
+    Votre format ne peut pas entrer dans le moule FOF sans trahir votre travail.
+    Votre revenu a chuté de 60%. Vos abonnés les plus fidèles restent, mais vous
+    n'en gagnez plus. Votre ligne rouge : le droit à un format non-standard ne
+    peut pas être sanctionné par une perte de visibilité.
+  contre_pouvoir: >
+    Vous êtes un chercheur en diversité culturelle numérique. Vos données montrent
+    que 80% des créateurs hors-FOF représentent des cultures, langues ou formats
+    minoritaires dans le catalogue global. FOF normalise implicitement une esthétique
+    anglo-américaine. Votre question : une norme de production algorithmique qui
+    efface la diversité culturelle est-elle neutre ?
+tags:
+  - standardisation
+  - format
+  - diversite-culturelle
+  - monoculture
+  - declassement
+difficulty: moyen
+version: "1.0"

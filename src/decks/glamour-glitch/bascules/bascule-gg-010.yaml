@@ -1,0 +1,28 @@
+id: bascule-gg-010
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: individuel
+title: "Le format qui gomme son style"
+situation: >
+  Un créateur de vidéos d'essai culturel sur OmniStream, connu pour ses formats
+  de 25 minutes et son rythme lent, voit ses vues chuter de 55% depuis que
+  FAME-GEN a déployé son système de scoring FOF. Un conseiller créateur lui
+  recommande d'adopter le format optimisé : durée 7 minutes, trois temps forts,
+  thumbnail avec visage cadré. Il teste deux vidéos FOF : ses vues remontent.
+  Ses abonnés historiques commentent : "C'est plus toi."
+question: >
+  Quand adopter le format standard qui fonctionne signifie perdre ce qui
+  vous distingue, est-ce un choix libre ou une contrainte déguisée en opportunité ?
+tags:
+  - format
+  - identite-artistique
+  - standard
+  - pression
+facilitator_note:
+  si_silence: "Demandez : si vous étiez ce créateur, adopteriez-vous le format FOF pour les vues, même si vos abonnés fidèles disent que ça ne vous ressemble plus ?"
+  si_debat_bloque: "Poussez : est-ce qu'une plateforme qui récompense un seul type de format peut encore prétendre être neutre ?"
+  relance_cle: "Un choix conditionné par des sanctions algorithmiques est-il encore un choix ?"
+version: "1.0"

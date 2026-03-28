@@ -1,0 +1,26 @@
+id: tension-gg-031
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Le standard qui aide les petits studios à exister"
+content: >
+  Pour un petit studio de production indépendant, le Format Optimisé FAME-GEN
+  est une aubaine : il peut produire des contenus à la qualité des grands studios
+  sans budget comparable. La standardisation du format est ce qui le rend compétitif.
+  Sans FOF, il serait invisible face aux acteurs qui ont les moyens de produire
+  une esthétique propriétaire. La tension est ici asymétrique : le standard écrase
+  les singularités établies mais permet l'émergence des acteurs sans ressources.
+  Protéger l'exception créative contre la standardisation peut revenir à protéger
+  les acteurs déjà dominants contre la concurrence des moins dotés.
+question: >
+  Défendre la singularité créative contre le standard algorithmique protège-t-il
+  la diversité ou préserve-t-il l'avantage des créateurs qui avaient déjà
+  les moyens d'être singuliers ?
+tags:
+  - standard
+  - inegalite
+  - acces
+  - petit-studio
+version: "1.0"

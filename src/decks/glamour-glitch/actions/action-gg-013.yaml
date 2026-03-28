@@ -1,0 +1,21 @@
+id: action-gg-013
+phase: action
+slot: 1
+lever_type: auditer
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: systemique
+title: "Auditer les profils hors-standard avant toute décision de déclassement"
+body: >
+  OmniStream Studios est tenu de conduire, avant toute décision de déclassement
+  ou de démonétisation d'un créateur ne correspondant pas aux formats optimisés
+  de FAME-GEN, une analyse de l'impact différentiel par sous-groupe culturel,
+  linguistique et de format. Les résultats de cet audit sont opposables à la
+  décision de déclassement et publiés dans le rapport annuel de diversité.
+mandat_principe: "Imposer l'audit des populations mal couvertes ou hors-standard avant toute décision de sanction ou de déclassement algorithmique."
+tags:
+  - audit
+  - diversite
+  - hors-standard
+  - declassement
+version: "1.0"

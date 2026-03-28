@@ -1,0 +1,28 @@
+id: bascule-gg-005
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: organisationnel
+title: "Le classement que personne ne peut expliquer"
+situation: >
+  OmniStream Studios annonce une mise à jour majeure du moteur de recommandation
+  FAME-GEN. Trois semaines plus tard, 40% des créateurs mid-tier voient leur
+  visibilité varier de plus de 50% dans un sens ou dans l'autre. L'équipe
+  Relations Créateurs reçoit 2 400 demandes d'explication. Le service communique
+  un message générique : "Les critères de classement sont propriétaires." Personne
+  en interne n'est en mesure d'expliquer les cas individuels.
+question: >
+  Peut-on justifier un système de classement que même ses opérateurs ne peuvent
+  pas expliquer à ceux qu'il affecte directement ?
+tags:
+  - opacite
+  - classement
+  - responsabilite
+  - explicabilite
+facilitator_note:
+  si_silence: "Demandez : si vous dirigiez un studio, accepteriez-vous de déployer un système que votre propre équipe ne comprend pas ?"
+  si_debat_bloque: "Poussez la complexité : les systèmes de recommandation de grande échelle sont souvent trop complexes pour être expliqués cas par cas — est-ce une raison suffisante pour ne pas essayer ?"
+  relance_cle: "La complexité technique est-elle une excuse valable pour l'opacité décisionnelle ?"
+version: "1.0"

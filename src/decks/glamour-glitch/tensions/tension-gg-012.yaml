@@ -1,0 +1,24 @@
+id: tension-gg-012
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "La dépendance économique qui empêche la contestation"
+content: >
+  Un créateur dont 85% des revenus proviennent de sa visibilité OmniStream sait
+  qu'en contestant publiquement une décision de FAME-GEN, il risque une attention
+  accrue du système de modération — ce qu'il appelle "l'effet loupe". Il se
+  censure. Il accepte des restrictions dont il pense qu'elles sont injustes.
+  Sa dépendance économique à la plateforme ne supprime pas formellement son
+  droit de recours — mais elle le neutralise en pratique. Le droit existe ;
+  l'exercice du droit est économiquement suicidaire.
+question: >
+  Un droit de contestation qui ne peut pas être exercé sans mettre en péril
+  la source de revenu principale de celui qui l'exerce est-il encore un droit ?
+tags:
+  - dependance-economique
+  - autocensure
+  - recours
+  - pouvoir
+version: "1.0"

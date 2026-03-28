@@ -1,0 +1,25 @@
+id: tension-gg-045
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "La capacité de production hors-plateforme comme condition de souveraineté"
+content: >
+  Si FAME-GEN s'effondre, subit une panne, est régulé au point d'être inutilisable,
+  ou si OmniStream disparaît — les créateurs, studios et filières entières qui ont
+  externalisé leur production n'ont plus les compétences, les outils ni les
+  infrastructures pour produire autrement. La dépendance infrastructurelle totale
+  crée une fragilité systémique : la perte d'accès à FAME-GEN équivaut à une
+  perte de la capacité de créer. Maintenir une capacité de production hors-FAME-GEN
+  a un coût — mais c'est aussi une assurance contre la disparition de la capacité
+  créative humaine indépendante.
+question: >
+  Doit-on imposer aux acteurs dépendants de FAME-GEN le maintien d'une capacité
+  de production hors-plateforme viable — et si oui, qui porte ce coût ?
+tags:
+  - dependance-systemique
+  - resilience
+  - souverainete-creative
+  - capacite-hors-ia
+version: "1.0"

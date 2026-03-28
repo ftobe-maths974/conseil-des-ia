@@ -1,0 +1,29 @@
+id: bascule-gg-011
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: red
+scope: organisationnel
+title: "OmniStream ressemble à lui-même"
+situation: >
+  Six mois après le déploiement généralisé de FAME-GEN Format Optimisé sur OmniStream,
+  une étude comparative analyse 50 000 vidéos publiées. La diversité structurelle
+  des formats a chuté de 64%. Les thumbnails sont quasi-identiques entre créateurs
+  de la même catégorie. Les intros sont interchangeables. Les abonnés qui suivent
+  plus de 10 créateurs disent que leur feed "se ressemble de plus en plus". OmniStream
+  affirme que les créateurs ont adopté le format librement.
+question: >
+  Quand un système de recommandation crée une pression homogénéisante si forte
+  que les créateurs convergent tous vers le même format, à qui appartient
+  la diversité du catalogue ?
+tags:
+  - homogeneisation
+  - catalogue
+  - diversite
+  - pression-algorithmique
+facilitator_note:
+  si_silence: "Demandez : est-ce que vous avez déjà eu l'impression que votre fil de recommandations ressemblait toujours au même contenu ?"
+  si_debat_bloque: "Fait : dans l'industrie musicale, la durée moyenne des chansons a diminué de 30% depuis l'émergence du streaming, pour maximiser les streams comptabilisés."
+  relance_cle: "Qui porte la responsabilité d'une homogénéisation qui résulte d'une somme de choix individuels rationnels ?"
+version: "1.0"

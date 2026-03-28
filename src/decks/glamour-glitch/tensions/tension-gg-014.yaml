@@ -1,0 +1,31 @@
+id: tension-gg-014
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "L'audit indépendant comme menace ou garantie ?"
+content: >
+  OmniStream Studios résiste à l'audit indépendant de FAME-GEN au motif que
+  révéler le fonctionnement interne du système à des tiers expose ses secrets
+  commerciaux et crée un avantage concurrentiel pour ses rivaux. Les défenseurs
+  de l'audit répondent que sans vérification externe, il est impossible de savoir
+  si les décisions du système sont équitables, légales, et conformes aux engagements
+  d'OmniStream. Les deux logiques sont fondées : protection de la propriété
+  industrielle vs nécessité d'un contrôle externe pour les systèmes ayant un
+  impact sur des droits économiques et professionnels.
+data_point: >
+  Plusieurs régulateurs européens ont commencé à imposer des audits de systèmes
+  algorithmiques à impact sur l'emploi ou les revenus — avec des dispositifs
+  de confidentialité permettant de protéger les secrets commerciaux tout en
+  garantissant une vérification indépendante.
+question: >
+  La protection des secrets commerciaux d'OmniStream est-elle un motif
+  légitime pour refuser tout audit indépendant d'un système affectant
+  les revenus de centaines de milliers de créateurs ?
+tags:
+  - audit
+  - secrets-commerciaux
+  - controle
+  - regulation
+version: "1.0"

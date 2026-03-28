@@ -1,0 +1,26 @@
+id: tension-gg-044
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "Le verrouillage technologique comme obstacle à la transition"
+content: >
+  OmniStream a investi 4 milliards dans son infrastructure FAME-GEN propriétaire.
+  Des alternatives moins consommatrices existent mais sont développées par des
+  concurrents ou des consortiums ouverts. Adopter ces alternatives implique
+  de déprécier l'investissement, de renoncer à un avantage concurrentiel propriétaire
+  et de partager des données techniques avec des tiers. L'incitation économique
+  et concurrentielle pousse OmniStream à maintenir son infrastructure coûteuse
+  en ressources plutôt que de migrer vers des solutions plus sobres.
+  Le marché ne corrige pas ce verrouillage — il le renforce.
+question: >
+  Quand le verrouillage technologique d'un acteur dominant empêche la transition
+  vers des infrastructures plus sobres, quel mécanisme — régulation, taxe,
+  interopérabilité obligatoire — peut corriger cet échec de marché ?
+tags:
+  - lock-in-technologique
+  - transition
+  - regulation
+  - competition
+version: "1.0"

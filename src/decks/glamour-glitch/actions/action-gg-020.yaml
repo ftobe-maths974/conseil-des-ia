@@ -1,0 +1,21 @@
+id: action-gg-020
+phase: action
+slot: 4
+lever_type: auditer
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: organisationnel
+title: "Auditer l'empreinte carbone et hydrique de chaque type de contenu produit par FAME-GEN"
+body: >
+  OmniStream Studios est tenu de produire et publier annuellement une décomposition
+  de l'empreinte carbone et hydrique par catégorie de contenu généré par FAME-GEN :
+  clips courts, avatars continus, re-génération de catalogue, thumbnails, voix off.
+  Ce rapport permet aux créateurs et aux régulateurs d'identifier les usages les
+  plus coûteux et d'orienter les politiques de sobriété numérique du studio.
+mandat_principe: "Exiger la traçabilité publique de l'empreinte ressource par type d'usage d'un système génératif pour permettre des choix de gouvernance éclairés."
+tags:
+  - empreinte-carbone
+  - audit
+  - sobriete
+  - reporting
+version: "1.0"

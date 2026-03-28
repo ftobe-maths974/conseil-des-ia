@@ -1,0 +1,24 @@
+id: tension-gg-020
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "Le label 'synthétique' qui détruit la performance"
+content: >
+  OmniStream impose que tout contenu voix générée par FAME-GEN soit labellisé
+  "Voix Synthétique" dans les métadonnées. Un doubleur affirme que ce label
+  dévalue systématiquement les performances humaines — les utilisateurs supposant
+  désormais que tout contenu vocal peut être synthétique. Une actrice répond
+  que sans ce label, elle ne peut pas prouver que sa performance est humaine.
+  Le label protège l'authenticité mais crée une catégorie de suspicion.
+  L'absence de label protège l'expérience mais efface la distinction.
+question: >
+  Le marquage obligatoire des contenus synthétiques protège-t-il l'authenticité
+  humaine ou crée-t-il une présomption de synthèse qui dévalorise toute performance ?
+tags:
+  - label
+  - authenticite
+  - devaluation
+  - performance
+version: "1.0"

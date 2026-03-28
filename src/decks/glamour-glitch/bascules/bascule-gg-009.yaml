@@ -1,0 +1,27 @@
+id: bascule-gg-009
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: green
+scope: systemique
+title: "La certification qui ne certifie plus rien"
+situation: >
+  OmniStream Studios lance le label "Verified Human Content" pour distinguer les
+  contenus produits par des humains identifiés. En six mois, 60% des contenus
+  labelisés contiennent en réalité plus de 40% de matière générée ou modifiée
+  par FAME-GEN, selon un audit interne. Le process de certification est
+  contournable par simple déclaration du créateur. Personne n'a invalidé de label.
+question: >
+  Quand un système de certification ne peut pas vérifier ce qu'il certifie,
+  vaut-il mieux le réformer, le supprimer ou accepter qu'il soit symbolique ?
+tags:
+  - certification
+  - authenticite
+  - label
+  - confiance
+facilitator_note:
+  si_silence: "Demandez : en tant qu'abonné, est-ce que vous feriez confiance à un label 'Contenu Humain Vérifié' sur une plateforme commerciale ?"
+  si_debat_bloque: "Poussez : un label imparfait vaut-il mieux qu'aucun label — ou risque-t-il de donner une fausse impression de garantie ?"
+  relance_cle: "La certification crée-t-elle de la confiance ou l'illusion de confiance ?"
+version: "1.0"

@@ -1,0 +1,29 @@
+id: tension-gg-034
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+title: "L'optimisation du contenu moyen comme politique culturelle"
+content: >
+  FAME-GEN optimise pour maximiser l'engagement moyen : ce qui plaît au plus grand
+  nombre dans le plus court délai. Ce critère n'est pas neutre culturellement —
+  il favorise structurellement les codes culturels dominants, les langues majoritaires,
+  les esthétiques les plus familières au plus grand nombre. Ce n'est pas de la
+  discrimination intentionnelle : c'est une politique culturelle implicite produite
+  par une fonction d'optimisation. À l'échelle de milliards de recommandations,
+  c'est une force de standardisation culturelle d'une puissance sans précédent.
+data_point: >
+  Des chercheurs en sciences de la communication estiment que les algorithmes
+  de recommandation des plateformes globales exercent une influence sur la
+  diversité culturelle consommée supérieure à celle de toutes les politiques
+  culturelles nationales réunies.
+question: >
+  Un algorithme d'optimisation de l'engagement exerce-t-il de facto une politique
+  culturelle — et si oui, qui devrait en répondre et devant qui ?
+tags:
+  - politique-culturelle
+  - optimisation
+  - diversite
+  - gouvernance
+version: "1.0"

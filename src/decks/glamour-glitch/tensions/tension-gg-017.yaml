@@ -1,0 +1,25 @@
+id: tension-gg-017
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Le shadowban comme outil de politique éditoriale inavouable"
+content: >
+  FAME-GEN peut réduire discrètement la visibilité d'un contenu ou d'un créateur
+  sans le désactiver, sans le supprimer, sans envoyer de notification.
+  La restriction silencieuse permet à OmniStream d'exercer une politique
+  éditoriale sans en assumer la responsabilité publique. Si elle est identifiée,
+  OmniStream peut nier ou invoquer un bug algorithmique. L'outil est techniquement
+  pratique et politiquement commode — ce qui en fait une tentation permanente
+  pour toute organisation qui veut moduler sa politique sans la rendre contestable.
+question: >
+  La restriction silencieuse de visibilité est-elle une pratique de gestion
+  opérationnelle acceptable ou un outil de censure déguisée — et la différence
+  tient-elle à l'intention ou à l'effet ?
+tags:
+  - shadowban
+  - censure
+  - responsabilite
+  - politique-editoriale
+version: "1.0"

@@ -1,0 +1,27 @@
+id: bascule-gg-013
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: individuel
+title: "Le clip qui a coûté 40 litres d'eau"
+situation: >
+  Un créateur partenaire OmniStream utilise FAME-GEN pour produire 30 clips
+  synthétiques par semaine. Il reçoit un rapport de durabilité automatique :
+  son activité mensuelle équivaut à 1 200 litres d'eau consommés et 48 kg de CO2
+  émis par les data centers. Il n'avait jamais pensé à ce coût. Il ne sait pas
+  si c'est beaucoup, peu, ou si les chiffres sont fiables.
+question: >
+  Doit-on informer les créateurs de l'empreinte ressource de leur production
+  numérique — et si oui, est-ce suffisant pour changer leurs pratiques ?
+tags:
+  - empreinte-ressource
+  - information
+  - responsabilite-individuelle
+  - sobriete
+facilitator_note:
+  si_silence: "Demandez : si vous connaissiez l'empreinte carbone et hydrique exacte de chaque contenu que vous publiez, est-ce que ça changerait quelque chose à votre façon de produire ?"
+  si_debat_bloque: "Poussez : l'information individuelle suffit-elle à changer des comportements systémiques ?"
+  relance_cle: "La responsabilité de l'empreinte numérique repose-t-elle sur le créateur, la plateforme ou le régulateur ?"
+version: "1.0"

@@ -1,0 +1,26 @@
+id: tension-gg-006
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Le pipeline qui aide les petits à exister"
+content: >
+  Pour un petit créateur sans moyens, FAME-GEN change la donne : produire des
+  contenus de qualité professionnelle sans équipe, sans budget post-production,
+  sans studio d'enregistrement. Des créateurs de pays à faible revenus accèdent
+  pour la première fois à des standards de production que seuls les grands studios
+  pouvaient s'offrir. La délégation à FAME-GEN n'est pas une perte pour eux —
+  c'est une entrée dans un marché qui leur était fermé. La question est donc
+  asymétrique : la délégation appauvrit certains, enrichit d'autres selon leur
+  position de départ dans l'industrie.
+question: >
+  Peut-on s'opposer à la délégation créative à FAME-GEN sans ignorer qu'elle
+  offre à certains créateurs un accès à un marché qui leur était structurellement
+  interdit ?
+tags:
+  - acces
+  - inegalites
+  - petits-createurs
+  - democratisation
+version: "1.0"

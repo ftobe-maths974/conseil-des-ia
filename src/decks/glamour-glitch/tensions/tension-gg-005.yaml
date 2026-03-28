@@ -1,0 +1,28 @@
+id: tension-gg-005
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "L'exclusivité qui verrouille la sortie"
+content: >
+  OmniStream Studios propose à ses créateurs mid-tier un contrat d'exclusivité 3 ans
+  avec accès complet à FAME-GEN. Les revenus sont garantis, la production automatisée.
+  Mais la clause d'exclusivité interdit toute production sur d'autres plateformes
+  pendant la durée du contrat. En signant, les créateurs construisent leur audience
+  entière sur OmniStream, leur style est modelé par FAME-GEN, et leurs données
+  alimentent le modèle. Au bout de 3 ans, partir signifie repartir de zéro ailleurs,
+  avec une identité créative qui n'existe plus hors de l'écosystème.
+data_point: >
+  Le "vendor lock-in" dans les contrats de création numérique est documenté comme
+  un facteur structurel de dépendance : plus la durée du contrat est longue et plus
+  les outils propriétaires sont intégrés, plus le coût de sortie est élevé.
+question: >
+  Un contrat qui garantit des revenus à court terme mais rend la sortie économiquement
+  suicidaire à long terme est-il un accord de liberté ou une forme de dépendance ?
+tags:
+  - lock-in
+  - exclusivite
+  - contrat
+  - dependance
+version: "1.0"

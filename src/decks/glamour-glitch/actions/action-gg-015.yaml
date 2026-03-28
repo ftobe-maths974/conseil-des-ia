@@ -1,0 +1,21 @@
+id: action-gg-015
+phase: action
+slot: 3
+lever_type: limiter
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: systemique
+title: "Plafonner la part de contenu généré par FAME-GEN dans les recommandations"
+body: >
+  Dans le flux de recommandations OmniStream, le contenu généré intégralement par
+  FAME-GEN sans validation humaine identifiable ne peut dépasser 30% des contenus
+  recommandés à un utilisateur donné sur une période de 7 jours glissants. Ce
+  plafond est vérifié mensuellement par un audit automatisé dont les résultats
+  sont publiés par catégorie de créateur et de contenu.
+mandat_principe: "Plafonner la présence algorithmique de contenu synthétique dans les flux de découverte pour préserver l'espace de création humaine visible."
+tags:
+  - plafond
+  - recommandation
+  - diversite
+  - flux
+version: "1.0"

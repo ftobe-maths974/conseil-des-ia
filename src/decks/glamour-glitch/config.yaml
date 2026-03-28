@@ -1,0 +1,37 @@
+id: glamour-glitch
+name: "GLAMOUR & GLITCH"
+tagline: "À qui appartient ton visage, ta voix et ta vibe quand FAME-GEN peut les monétiser mieux que toi ?"
+domaine: "industrie du divertissement, plateformes et streaming"
+institution_centrale: "OmniStream Studios"
+population_affectee: "créateurs, influenceurs, acteurs, doubleurs, ayants droit, abonnés, publics"
+type_decision: "clonage identitaire, hiérarchisation de visibilité, remplacement de performances humaines, standardisation de contenus"
+horizon_temporel: "très proche, déjà commencé, industrialisation dans les 12–24 mois"
+risque_dominant: "perte de contrôle sur l'identité, l'authenticité, la valeur créative et les conditions de visibilité"
+registre_langage: "hype, nerveux, contemporain, dramatique mais crédible"
+groups:
+  - id: groupe-A
+    chamber: delegation-vs-souverainete
+    receives_from: groupe-E
+    scenario_id: scenario-gg-del
+  - id: groupe-B
+    chamber: invisibilite-vs-arbitrage
+    receives_from: groupe-A
+    scenario_id: scenario-gg-inv
+  - id: groupe-C
+    chamber: preuve-vs-simulation
+    receives_from: groupe-B
+    scenario_id: scenario-gg-pre
+  - id: groupe-D
+    chamber: singularite-vs-standard
+    receives_from: groupe-C
+    scenario_id: scenario-gg-sin
+  - id: groupe-E
+    chamber: metabolisme-vs-progres
+    receives_from: groupe-D
+    scenario_id: scenario-gg-met
+mandat_circulation:
+  groupe-A: groupe-B
+  groupe-B: groupe-C
+  groupe-C: groupe-D
+  groupe-D: groupe-E
+  groupe-E: groupe-A

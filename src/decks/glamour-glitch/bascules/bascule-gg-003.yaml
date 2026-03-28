@@ -1,0 +1,27 @@
+id: bascule-gg-003
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Le catalogue des morts ne dort jamais"
+situation: >
+  OmniStream Studios lance "Legacy Stream" : des avatars de 12 créateurs et acteurs
+  décédés produisent de nouveaux contenus en continu, générés par FAME-GEN à partir
+  de leurs archives. Les familles ont signé des accords de cession de droits successoraux.
+  Le service est suivi par 18 millions d'abonnés. Aucun mécanisme de retrait n'existe.
+  Les avatars peuvent être mis à jour pour intégrer de nouvelles tendances culturelles.
+question: >
+  Qui décide de ce qu'une identité défunte peut encore dire, montrer et représenter
+  quand la technologie permet de la faire parler indéfiniment ?
+tags:
+  - droits-successoraux
+  - avatar-posthume
+  - identite
+  - irreversibilite
+facilitator_note:
+  si_silence: "Demandez : si votre parent décédé était célèbre, signeriez-vous ce contrat pour sa famille ?"
+  si_debat_bloque: "Poussez : est-ce que la légalité d'un accord suffit à en faire une décision éthique ?"
+  relance_cle: "L'identité d'une personne décédée appartient-elle à ses héritiers, à son public, ou à personne ?"
+version: "1.0"

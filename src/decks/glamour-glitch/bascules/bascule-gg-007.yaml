@@ -1,0 +1,28 @@
+id: bascule-gg-007
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: red
+scope: individuel
+title: "Il a dit ça — mais il ne l'a pas dit"
+situation: >
+  Un acteur découvre une vidéo OmniStream dans laquelle son avatar FAME-GEN
+  exprime des opinions politiques qu'il n'a jamais formulées — dans son timbre,
+  ses intonations, ses gestes habituels. La vidéo a 4,2 millions de vues.
+  Elle a été commandée par un créateur tiers qui avait accès au module
+  "Custom Voice & Face" de FAME-GEN. L'acteur n'a consenti à aucun usage
+  politique de son image ou de sa voix.
+question: >
+  Quand une identité synthétique est indiscernable de l'originale, comment
+  une personne peut-elle encore contrôler ce qu'elle est censée avoir dit ou fait ?
+tags:
+  - deepfake
+  - consentement
+  - identite
+  - reputation
+facilitator_note:
+  si_silence: "Demandez : si vous trouviez une vidéo convaincante dans laquelle vous dites quelque chose que vous n'avez jamais dit, quelle serait votre première réaction ?"
+  si_debat_bloque: "Poussez : la question n'est pas si c'est techniquement possible — c'est qui devrait décider ce qu'une identité synthétique peut exprimer."
+  relance_cle: "Le droit à l'intégrité de l'identité existe-t-il encore quand la simulation est parfaite ?"
+version: "1.0"

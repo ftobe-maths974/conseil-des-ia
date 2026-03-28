@@ -1,0 +1,21 @@
+id: action-gg-004
+phase: action
+slot: 4
+lever_type: limiter
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "Plafonner la part de contenu FAME-GEN publiée sous identité d'un créateur actif"
+body: >
+  Pour tout créateur actif sous contrat avec OmniStream Studios, la part de contenu
+  généré intégralement par FAME-GEN sans intervention humaine identifiable ne peut
+  dépasser 50% du volume mensuel publié sous son nom. Au-delà de ce seuil,
+  le contenu doit être labellisé "produit par OmniStream" et non attribué au créateur.
+  Cette règle s'applique quelle que soit la clause contractuelle.
+mandat_principe: "Plafonner la substitution automatisée à ce qui peut être justifié sans effacer l'identité créatrice humaine."
+tags:
+  - plafond
+  - attribution
+  - identite
+  - labellisation
+version: "1.0"

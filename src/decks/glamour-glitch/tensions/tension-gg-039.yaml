@@ -1,0 +1,25 @@
+id: tension-gg-039
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Le GPU qui tourne pour des clips qui ne seront jamais vus"
+content: >
+  FAME-GEN produit en continu des contenus pour les créateurs actifs et des
+  "tests de performance" à grande échelle. Une part significative des inférences
+  FAME-GEN alimente des contenus A/B testés qui ne seront jamais publiés,
+  des variations abandonnées, des thumbnails non sélectionnés. La consommation
+  ressource n'est pas proportionnelle au contenu diffusé : elle est proportionnelle
+  aux essais, aux tests, aux options non retenues. Le gaspillage est invisible
+  dans les métriques de performance — et non mesuré dans les bilans de soutenabilité.
+question: >
+  Doit-on inclure dans le bilan ressource d'un système génératif le coût
+  des contenus produits mais non publiés — tests, variantes, ébauches —
+  ou seulement les contenus effectivement diffusés ?
+tags:
+  - gaspillage
+  - inférence
+  - bilan-ressource
+  - production-invisible
+version: "1.0"

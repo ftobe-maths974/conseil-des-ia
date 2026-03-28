@@ -1,0 +1,25 @@
+id: tension-gg-024
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: green
+title: "La responsabilité éditoriale d'un catalogue qu'on ne peut plus vérifier"
+content: >
+  OmniStream publie 40 000 nouveaux contenus par jour. Vérifier l'authenticité
+  de chacun serait techniquement impossible et économiquement prohibitif.
+  Le studio ne peut garantir que tous les contenus "Verified Human" dans son
+  catalogue le sont réellement. Il maintient ce label car il a de la valeur
+  commerciale. Mais l'afficher sans pouvoir le vérifier à l'échelle, c'est
+  vendre une garantie qu'on ne peut pas tenir. La question n'est pas la
+  mauvaise foi — c'est la limite opérationnelle de la responsabilité éditoriale
+  à l'échelle industrielle.
+question: >
+  Une organisation peut-elle légitimement maintenir des garanties d'authenticité
+  sur un catalogue dont elle sait ne plus pouvoir vérifier la totalité ?
+tags:
+  - responsabilite-editoriale
+  - echelle
+  - garantie
+  - limites
+version: "1.0"

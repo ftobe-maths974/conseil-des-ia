@@ -1,0 +1,26 @@
+id: tension-gg-008
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "La responsabilité sans auteur identifiable"
+content: >
+  Un contenu produit par FAME-GEN, publié sous le nom d'un créateur, déclenche
+  une polémique. Le créateur dit qu'il ne l'a pas fait. OmniStream dit qu'il
+  a consenti au pipeline. La plateforme dit que le contenu respecte les règles.
+  Personne n'est clairement responsable. Ce n'est pas un bug du système —
+  c'est une caractéristique structurelle : quand la délégation est totale,
+  la chaîne de responsabilité se dissout. Le droit civil n'a pas encore de
+  réponse claire à cette situation, et les contrats d'OmniStream ont été conçus
+  pour la minimiser, pas pour la résoudre.
+question: >
+  Quand un contenu généré par FAME-GEN cause un préjudice, comment attribue-t-on
+  la responsabilité quand le créateur, la plateforme et le modèle sont tous
+  impliqués mais personne ne décide seul ?
+tags:
+  - responsabilite
+  - auteur
+  - droit
+  - delegation-totale
+version: "1.0"

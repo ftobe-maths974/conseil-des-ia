@@ -1,0 +1,21 @@
+id: action-gg-002
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner tout contrat de pipeline IA à une clause de reprise de contrôle"
+body: >
+  Tout contrat entre OmniStream Studios et un créateur intégrant une clause de
+  pipeline automatique FAME-GEN doit inclure une procédure de reprise de contrôle
+  activable unilatéralement par le créateur dans un délai maximal de 48 heures,
+  sans pénalité financière ni réduction de visibilité pendant une période probatoire
+  de 30 jours. OmniStream est tenu de documenter l'effectivité de cette procédure.
+mandat_principe: "Garantir à tout créateur sous contrat d'automatisation le droit de reprendre le contrôle de sa production sans sanction."
+tags:
+  - contrat
+  - reprise-controle
+  - pipeline
+  - autonomie
+version: "1.0"

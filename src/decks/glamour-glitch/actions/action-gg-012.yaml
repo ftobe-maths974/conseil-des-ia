@@ -1,0 +1,21 @@
+id: action-gg-012
+phase: action
+slot: 4
+lever_type: auditer
+chamber: preuve-vs-simulation
+reversibility: green
+scope: organisationnel
+title: "Auditer la chaîne de consentement de tout modèle vocal ou facial de FAME-GEN"
+body: >
+  OmniStream Studios est tenu de soumettre à audit indépendant, tous les 18 mois,
+  la chaîne documentaire de consentement de chaque modèle vocal, facial ou gestuel
+  actif dans FAME-GEN. L'audit identifie les identités pour lesquelles le consentement
+  est manquant, ambigu ou antérieur à l'usage génératif, et publie ses conclusions
+  avec les mesures correctives appliquées.
+mandat_principe: "Exiger l'auditabilité publique de la chaîne de consentement pour tout modèle entraîné sur des identités de personnes physiques."
+tags:
+  - audit
+  - consentement
+  - modele
+  - responsabilite
+version: "1.0"

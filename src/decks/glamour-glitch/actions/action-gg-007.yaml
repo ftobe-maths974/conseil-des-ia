@@ -1,0 +1,21 @@
+id: action-gg-007
+phase: action
+slot: 3
+lever_type: interdire
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Interdire les restrictions de visibilité sans notification préalable au créateur"
+body: >
+  OmniStream Studios est tenu de notifier tout créateur dans les 24 heures précédant
+  ou suivant toute modification substantielle de sa visibilité algorithmique appliquée
+  par FAME-GEN. Toute restriction silencieuse non notifiée dans ce délai est réputée
+  nulle et donne droit à une compensation automatique calculée sur la perte de revenus
+  estimée. L'absence de notification ne peut être invoquée comme défense contractuelle.
+mandat_principe: "Interdire toute sanction ou restriction algorithmique appliquée sans notification explicite et tracée à la personne affectée."
+tags:
+  - notification
+  - shadowban
+  - restriction
+  - transparence
+version: "1.0"

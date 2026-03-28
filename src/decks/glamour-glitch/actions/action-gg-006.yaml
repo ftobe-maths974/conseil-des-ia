@@ -1,0 +1,21 @@
+id: action-gg-006
+phase: action
+slot: 2
+lever_type: recours
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: individuel
+title: "Garantir un droit de recours opposable contre toute restriction de visibilité"
+body: >
+  Tout créateur dont la visibilité est restreinte, déclassée ou supprimée par
+  FAME-GEN a le droit d'obtenir une réponse écrite motivée dans un délai de
+  7 jours ouvrés, identifiant la règle déclenchée et les éléments factuels
+  retenus. OmniStream Studios est tenu de maintenir une voie de recours humaine
+  indépendante de l'équipe ayant appliqué la restriction.
+mandat_principe: "Garantir un droit opposable à l'explication motivée et à la contestation pour toute décision algorithmique affectant la visibilité ou les revenus d'un créateur."
+tags:
+  - recours
+  - visibilite
+  - explication
+  - droits
+version: "1.0"

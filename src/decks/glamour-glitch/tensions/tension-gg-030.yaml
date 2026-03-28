@@ -1,0 +1,25 @@
+id: tension-gg-030
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: green
+title: "L'interchangeabilité comme condition de scalabilité"
+content: >
+  FAME-GEN produit des créateurs "interchangeables" au sens opérationnel : un avatar
+  de remplacement peut reprendre le flux d'un créateur absent sans que les abonnés
+  le détectent immédiatement. Pour OmniStream, c'est de la résilience opérationnelle.
+  Pour le créateur, c'est la preuve que son unicité n'est pas reconnue.
+  Paradoxalement, certains créateurs apprécient ce filet de sécurité — savoir
+  que leur communauté ne sera pas abandonnée s'ils sont malades ou absents.
+  La même capacité produit deux effets opposés selon le rapport au remplacement.
+question: >
+  La capacité de FAME-GEN à remplacer un créateur sans rupture visible est-elle
+  une menace pour son unicité ou une protection de sa communauté — et cette
+  question a-t-elle une réponse universelle ?
+tags:
+  - remplacement
+  - singularite
+  - resilience
+  - communaute
+version: "1.0"

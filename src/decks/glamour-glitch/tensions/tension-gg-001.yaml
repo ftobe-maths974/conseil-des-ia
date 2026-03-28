@@ -1,0 +1,28 @@
+id: tension-gg-001
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Déléguer pour exister — ou exister pour déléguer"
+content: >
+  Un créateur qui confie sa production à FAME-GEN gagne en volume et en régularité.
+  Il perd en investissement personnel, en risque créatif et en capacité à justifier
+  ses propres contenus. La délégation n'est pas neutre : elle restructure l'identité
+  professionnelle. Pour certains, c'est une libération — finir de faire ce qu'on
+  faisait par nécessité. Pour d'autres, c'est une amputation — ne plus faire ce qui
+  donnait du sens au métier. La même décision produit deux trajectoires radicalement
+  différentes selon le rapport que l'individu entretient avec son travail créatif.
+data_point: >
+  Dans une enquête de 2024 conduite auprès de 800 créateurs de contenu en Europe,
+  58% déclarent que l'automatisation de leur production les soulage ; 41% déclarent
+  qu'elle les vide de sens. Les deux groupes utilisent les mêmes outils.
+question: >
+  Déléguer à FAME-GEN sa production créative est-il un choix de liberté ou
+  une perte de souveraineté sur ce qui donnait de la valeur au métier ?
+tags:
+  - delegation
+  - identite-professionnelle
+  - sens
+  - autonomie
+version: "1.0"

@@ -1,0 +1,25 @@
+id: tension-gg-037
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "Le créateur qui ne sait pas ce que sa production coûte"
+content: >
+  Un créateur utilise FAME-GEN quotidiennement depuis deux ans. Il n'a aucune
+  visibilité sur l'empreinte ressource de son activité. Il sait que son smartphone
+  consomme de l'énergie, que son cloud a un coût carbone — mais l'inférence
+  FAME-GEN pour produire ses 15 clips hebdomadaires représente une consommation
+  qu'il ne peut ni mesurer ni comparer. L'information n'est pas rendue disponible
+  par OmniStream. Son choix de production ne peut pas intégrer ce facteur puisqu'il
+  n'y a pas accès.
+question: >
+  Un créateur peut-il être tenu responsable de l'empreinte ressource de sa
+  production numérique quand l'information nécessaire lui est délibérément
+  inaccessible ?
+tags:
+  - empreinte-individuelle
+  - information
+  - responsabilite
+  - opacite
+version: "1.0"

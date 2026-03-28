@@ -1,0 +1,54 @@
+id: scenario-gg-met
+phase: scenario
+chamber: metabolisme-vs-progres
+title: "Le coût invisible de la célébrité synthétique"
+context: >
+  OmniStream Studios annonce l'expansion de FAME-GEN Tier Platinum : production
+  de 10 000 clips synthétiques par jour, avatars de 50 créateurs actifs tournant
+  en continu 24h/24, re-génération de tout le catalogue de 12 streamers historiques
+  décédés. Un rapport d'une ONG de veille numérique révèle que l'infrastructure
+  FAME-GEN consomme autant d'énergie annuellement qu'une ville de 80 000 habitants,
+  et que les data centers OmniStream ont déclenché deux ruptures locales
+  d'approvisionnement en eau de refroidissement dans des zones déjà en stress
+  hydrique. La direction de la soutenabilité d'OmniStream propose une clause de
+  reporting. La commission reçoit le mandat : "Conditionner tout déploiement de
+  FAME-GEN à la publication vérifiable de son empreinte ressource et au maintien
+  d'une capacité de production hors-plateforme." Le directeur financier estime
+  que ce mandat rendrait impossible l'expansion Tier Platinum dans les délais.
+roles_briefing:
+  decideur: >
+    Vous êtes le directeur financier d'OmniStream. L'expansion Tier Platinum est
+    valorisée à 2,1 milliards par les investisseurs. Un retard de 12 mois pour
+    audit de soutenabilité ferait chuter le cours de 18%. Votre priorité : maintenir
+    la trajectoire d'expansion. Votre angle mort : vous n'avez jamais rencontré les
+    communautés locales affectées par les data centers.
+  technicien: >
+    Vous êtes l'ingénieure infrastructure d'OmniStream. Vous savez que la
+    consommation énergétique par clip FAME-GEN a été divisée par trois en deux ans
+    grâce à l'optimisation — mais le volume total a été multiplié par douze.
+    L'efficacité ne compense pas la croissance. Vous pouvez produire un rapport
+    d'empreinte ressource fiable, mais il révélerait des chiffres que la direction
+    ne veut pas voir publiés. Votre ligne rouge : vous ne signerez pas un rapport
+    qui minimise les données réelles.
+  affecte: >
+    Vous représentez les créateurs et petits studios indépendants. Si OmniStream
+    est contraint de limiter sa production FAME-GEN, vous craignez d'être les
+    premiers à perdre l'accès aux outils — au profit des créateurs Gold Tier.
+    Mais vous avez aussi besoin d'alternatives viables si OmniStream s'effondre
+    ou verrouille l'accès. Votre ligne rouge : les contraintes de soutenabilité
+    ne doivent pas concentrer encore plus de pouvoir chez les plus grands acteurs.
+  contre_pouvoir: >
+    Vous êtes un journaliste d'investigation spécialisé dans les externalités
+    du numérique. Vous avez les données de l'ONG : deux communes en Espagne et
+    au Maroc ont vu leurs ressources en eau dégradées par des data centers OmniStream.
+    Aucune compensation n'a été versée. Votre question : peut-on légitimement
+    produire de la célébrité synthétique à l'échelle industrielle quand le coût
+    physique est externalisé sur des populations qui ne consomment pas le contenu ?
+tags:
+  - empreinte-ressource
+  - energie
+  - eau
+  - infrastructure
+  - externalite
+difficulty: eleve
+version: "1.0"

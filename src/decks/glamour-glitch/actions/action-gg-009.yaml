@@ -1,0 +1,21 @@
+id: action-gg-009
+phase: action
+slot: 1
+lever_type: interdire
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Interdire tout usage d'identité de créateur par FAME-GEN sans consentement traçable"
+body: >
+  OmniStream Studios est tenu d'obtenir, avant tout entraînement ou usage de FAME-GEN
+  sur la voix, le visage, les gestes ou le style d'un créateur identifié, un
+  consentement documenté, daté, explicitement borné au périmètre d'usage, et révocable
+  à tout moment avec effet sur les nouvelles productions. Aucune clause de cession
+  d'actifs antérieure ne peut valoir consentement à l'usage génératif.
+mandat_principe: "Interdire tout usage d'identité d'une personne physique dans un système génératif sans clé de consentement traçable, scopée et révocable."
+tags:
+  - consentement
+  - identite
+  - clone
+  - reversibilite
+version: "1.0"

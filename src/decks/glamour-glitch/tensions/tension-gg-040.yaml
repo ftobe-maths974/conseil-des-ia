@@ -1,0 +1,30 @@
+id: tension-gg-040
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "L'efficacité qui justifie l'expansion"
+content: >
+  OmniStream communique sur ses progrès d'efficacité énergétique : FAME-GEN
+  consomme aujourd'hui 3 fois moins d'énergie par clip qu'en 2022. Mais le volume
+  de production a été multiplié par 12 dans le même temps. La consommation totale
+  a donc quadruplé malgré l'efficacité améliorée. C'est l'effet rebond classique :
+  l'efficacité rend la production moins coûteuse par unité, ce qui incite à
+  produire plus, annulant et au-delà les gains d'efficacité. OmniStream présente
+  ses progrès d'efficacité comme une preuve de responsabilité environnementale.
+data_point: >
+  L'effet rebond en économie de l'énergie est documenté depuis les travaux
+  de William Jevons en 1865 : les améliorations d'efficacité des machines
+  à vapeur avaient augmenté la consommation totale de charbon plutôt que
+  de la réduire.
+question: >
+  L'amélioration de l'efficacité énergétique par unité produite justifie-t-elle
+  une augmentation du volume total de production — ou est-ce une façon de
+  rendre l'expansion acceptable sans en réduire l'impact ?
+tags:
+  - effet-rebond
+  - efficacite
+  - expansion
+  - communication
+version: "1.0"

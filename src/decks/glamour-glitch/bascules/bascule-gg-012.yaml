@@ -1,0 +1,29 @@
+id: bascule-gg-012
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: green
+scope: systemique
+title: "La culture qui ne passe pas le filtre"
+situation: >
+  Une analyse comparative de 5 000 créateurs OmniStream sur 18 mois révèle que
+  les créateurs produisant en langues non-latines, en formats longs ou dans
+  des esthétiques non-occidentales ont un taux de déclassement FAME-GEN 3,1 fois
+  supérieur à la moyenne. Ces créateurs représentent 12% du catalogue mais
+  seulement 2,3% des contenus recommandés à de nouveaux utilisateurs. Aucun
+  paramètre du modèle ne cible explicitement la culture ou la langue.
+question: >
+  Quand un algorithme d'optimisation de l'engagement standardise silencieusement
+  une esthétique, est-ce de la discrimination culturelle ou une conséquence
+  inévitable de la maximisation du clic ?
+tags:
+  - monoculture
+  - biais-culturel
+  - diversite
+  - systeme
+facilitator_note:
+  si_silence: "Demandez : si vous étiez un créateur appartenant à ces 12%, que ressentiriez-vous en découvrant ces statistiques ?"
+  si_debat_bloque: "Poussez : l'absence d'intention discriminatoire dans le modèle suffit-elle à qualifier le résultat de 'neutre' ?"
+  relance_cle: "La neutralité algorithmique est-elle possible quand les données d'entraînement reflètent des préférences culturellement situées ?"
+version: "1.0"

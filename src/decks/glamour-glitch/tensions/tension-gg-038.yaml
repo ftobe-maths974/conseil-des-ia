@@ -1,0 +1,25 @@
+id: tension-gg-038
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "La sobriété numérique qui pénalise les moins compétitifs"
+content: >
+  Si OmniStream impose des limites à la production FAME-GEN par créateur pour
+  réduire l'empreinte ressource, les premiers affectés ne seraient pas les grands
+  créateurs Gold Tier — ils produisent déjà moins de clips mais à haute valeur —
+  mais les petits créateurs qui utilisent le volume FAME-GEN comme seul levier
+  de compétitivité. Une politique de sobriété applicable à tous creuse les inégalités
+  plutôt que de les réduire si elle ne tient pas compte de la position de départ
+  des acteurs dans l'écosystème.
+question: >
+  Une politique de sobriété numérique appliquée uniformément à tous les créateurs
+  OmniStream protège-t-elle l'environnement ou renforce-t-elle les inégalités
+  entre créateurs établis et émergents ?
+tags:
+  - sobriete
+  - inegalite
+  - petits-createurs
+  - politique
+version: "1.0"

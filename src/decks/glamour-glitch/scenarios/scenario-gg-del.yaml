@@ -1,0 +1,50 @@
+id: scenario-gg-del
+phase: scenario
+chamber: delegation-vs-souverainete
+title: "Le créateur qui n'avait plus rien à créer"
+context: >
+  Karim L. est l'un des dix créateurs "Gold Tier" d'OmniStream Studios — 2,3 millions
+  d'abonnés, contrat d'exclusivité trois ans. Depuis six mois, FAME-GEN pilote
+  l'intégralité de sa production : scripts, montage, voix off alternative, thumbnails
+  A/B testés, calendrier de publication. Ses métriques n'ont jamais été aussi bonnes.
+  Mais lors d'un audit interne, le directeur artistique découvre que Karim n'a plus
+  validé un seul contenu depuis 90 jours — FAME-GEN publie en son nom dans la fenêtre
+  de 24h contractuellement accordée à l'IA. Karim affirme avoir "implicitement consenti"
+  en ne s'y opposant pas. OmniStream invoque la clause pipeline du contrat. La commission
+  d'éthique du studio reçoit le mandat suivant : "N'autoriser aucune performance
+  synthétique publiée sous identité de créateur sans validation explicite et traçable
+  de ce créateur." Le directeur technique prévient que bloquer le pipeline automatique
+  ferait chuter 40% des revenus Gold Tier dans les 30 jours.
+roles_briefing:
+  decideur: >
+    Vous êtes la directrice générale d'OmniStream Studios. Le modèle économique Gold Tier
+    repose sur la continuité algorithmique : un créateur qui publie irrégulièrement perd
+    15% d'abonnés par semaine. Karim génère 4,2M€ de revenus publicitaires annuels.
+    Votre priorité : protéger le contrat et les indicateurs. Votre angle mort : vous
+    n'avez jamais lu la clause pipeline que votre équipe juridique a rédigée en 2022.
+  technicien: >
+    Vous êtes le responsable du pipeline FAME-GEN chez OmniStream. La validation humaine
+    existe dans le système — une fenêtre de 24h où le créateur peut bloquer la publication.
+    Karim n'a jamais utilisé ce bouton. Techniquement, le consentement est "opt-out".
+    Votre ligne rouge : vous refuserez de déclarer que le système fonctionne par
+    consentement explicite — ce serait un mensonge.
+  affecte: >
+    Vous représentez Karim L. et les créateurs Gold Tier. Karim dit qu'il ne savait pas
+    que le silence valait consentement, et que relire chaque publication FAME-GEN lui
+    prendrait 4h par jour — incompatible avec son contrat d'exclusivité actuel.
+    Votre ligne rouge : aucun créateur ne peut être publié sous son nom sans avoir
+    activement approuvé le contenu.
+  contre_pouvoir: >
+    Vous êtes le Collectif des Créateurs Indépendants, qui suit le dossier OmniStream
+    depuis 18 mois. Vous avez recensé 14 créateurs dont le contenu FAME-GEN a contredit
+    leurs prises de position publiques passées — sans qu'ils s'en aperçoivent avant
+    la publication. Votre question : si le créateur ne contrôle plus ce qui est publié
+    sous son nom, qui est responsable du contenu ?
+tags:
+  - delegation
+  - consentement
+  - pipeline
+  - controle-editorial
+  - contrat
+difficulty: eleve
+version: "1.0"

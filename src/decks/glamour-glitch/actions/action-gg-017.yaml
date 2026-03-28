@@ -1,0 +1,21 @@
+id: action-gg-017
+phase: action
+slot: 1
+lever_type: conditionner
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: systemique
+title: "Conditionner tout déploiement de FAME-GEN à la publication de son empreinte ressource"
+body: >
+  Toute expansion ou mise à jour majeure de FAME-GEN est conditionnée à la publication
+  préalable d'un rapport d'empreinte ressource vérifiable incluant la consommation
+  énergétique par type de contenu produit, la consommation d'eau de refroidissement
+  par data center, et l'impact sur les réseaux électriques locaux. Ce rapport est
+  audité par un tiers indépendant et rendu public avant le déploiement.
+mandat_principe: "Conditionner tout déploiement de système génératif à grande échelle à la publication vérifiable et préalable de son empreinte ressource complète."
+tags:
+  - empreinte-ressource
+  - energie
+  - eau
+  - transparence
+version: "1.0"

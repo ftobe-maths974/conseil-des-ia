@@ -1,0 +1,25 @@
+id: tension-gg-033
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: green
+title: "L'interopérabilité qui permet l'accès mais brise l'identité"
+content: >
+  OmniStream impose des standards techniques d'interopérabilité à tous ses partenaires :
+  formats de fichiers, métadonnées, structures de contenu compatibles avec FAME-GEN.
+  Ces standards permettent aux petits créateurs de distribuer leur contenu sur
+  de multiples plateformes simultanément — une forme réelle d'équité d'accès.
+  Mais ils imposent aussi une structure de création qui efface les particularités
+  techniques et stylistiques qui faisaient l'identité de certains formats artisanaux.
+  L'interopérabilité libère la distribution mais contraint la création.
+question: >
+  Les standards d'interopérabilité d'OmniStream servent-ils l'équité d'accès
+  ou imposent-ils une normalisation technique qui efface les singularités
+  de création non-conformes ?
+tags:
+  - interoperabilite
+  - standard-technique
+  - identite-format
+  - acces
+version: "1.0"

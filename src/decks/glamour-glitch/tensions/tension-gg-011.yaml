@@ -1,0 +1,24 @@
+id: tension-gg-011
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Le recours qui existe mais ne fonctionne pas"
+content: >
+  OmniStream Studios offre un portail de recours à ses créateurs. En théorie,
+  tout créateur peut contester une décision de restriction. En pratique, le délai
+  moyen de réponse est de 23 jours, la majorité des réponses sont génériques,
+  et le taux de révision favorable est de 4,7% selon un audit indépendant.
+  Le recours existe — ce qui permet à OmniStream de dire qu'il respecte les
+  principes de procédure équitable. Mais un recours qui ne fonctionne pas
+  est-il encore un recours, ou est-il une façade de légitimité ?
+question: >
+  Un mécanisme de recours formel mais inefficace en pratique suffit-il
+  à légitimer les décisions algorithmiques qu'il est censé encadrer ?
+tags:
+  - recours
+  - efficacite
+  - legitimite
+  - droits
+version: "1.0"

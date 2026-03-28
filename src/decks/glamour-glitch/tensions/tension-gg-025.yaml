@@ -1,0 +1,26 @@
+id: tension-gg-025
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+title: "L'authenticité comme avantage concurrentiel ou comme droit fondamental ?"
+content: >
+  OmniStream commercialise la certification d'authenticité comme un premium :
+  les créateurs "Verified" ont accès à plus de visibilité, des revenus supérieurs,
+  une confiance accrue des abonnés. L'authenticité est transformée en produit.
+  Ceux qui peuvent se la payer la vendent mieux. Mais si l'authenticité d'une
+  identité est un droit fondamental — le droit à ne pas voir son image ou
+  sa voix exploitée sans accord — sa monétisation comme service premium contredit
+  sa nature de droit. On ne devrait pas avoir à payer pour faire respecter
+  son identité.
+question: >
+  Transformer la certification d'authenticité en service commercial premium
+  revient-il à faire payer les créateurs pour la protection d'un droit
+  qui devrait être garanti sans condition ?
+tags:
+  - authentite-premium
+  - droit-fondamental
+  - marché
+  - identite
+version: "1.0"

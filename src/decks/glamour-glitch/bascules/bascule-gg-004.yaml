@@ -1,0 +1,27 @@
+id: bascule-gg-004
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: individuel
+title: "Les vues qui disparaissent sans raison"
+situation: >
+  Une influenceuse beauté sur OmniStream, 180 000 abonnés, publie régulièrement
+  depuis deux ans. En trois semaines, ses vues chutent de 71%. Ses abonnés reçoivent
+  les notifications, mais ses vidéos n'apparaissent plus dans la recherche ni les
+  recommandations. Elle n'a reçu aucun avertissement. Elle consulte le portail
+  créateur : son statut est "actif". Elle ne sait pas ce qui a changé.
+question: >
+  Quand une décision algorithmique invisible change radicalement la vie professionnelle
+  de quelqu'un, qui est responsable et comment peut-on contester ?
+tags:
+  - shadowban
+  - visibilite
+  - responsabilite
+  - recours
+facilitator_note:
+  si_silence: "Demandez : si votre revenu dépendait de cette visibilité, quelle serait votre première démarche ?"
+  si_debat_bloque: "Fait : en 2023, plusieurs créateurs ont documenté des restrictions silencieuses durables sur de grandes plateformes de streaming sans notification officielle."
+  relance_cle: "Est-ce qu'une décision qui affecte votre vie professionnelle sans vous en informer peut être considérée comme légitime ?"
+version: "1.0"

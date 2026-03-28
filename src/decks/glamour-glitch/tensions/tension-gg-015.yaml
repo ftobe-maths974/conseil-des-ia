@@ -1,0 +1,25 @@
+id: tension-gg-015
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "La modération automatisée comme nécessité de survie"
+content: >
+  OmniStream reçoit 400 000 nouveaux contenus par jour. Sans modération automatisée
+  par FAME-GEN, il serait impossible de détecter les contenus illicites, dangereux
+  ou trompeurs à l'échelle du catalogue. L'opacité n'est pas un choix idéologique —
+  c'est une contrainte opérationnelle : un système de modération explicable
+  en temps réel pour 400 000 décisions quotidiennes n'existe pas encore.
+  Mais la nécessité opérationnelle d'une modération opaque ne résout pas les
+  effets qu'elle produit sur les créateurs affectés.
+question: >
+  La nécessité opérationnelle de la modération automatisée à grande échelle
+  justifie-t-elle l'impossibilité de l'expliquer cas par cas aux créateurs
+  qu'elle affecte ?
+tags:
+  - moderation
+  - echelle
+  - contrainte
+  - explication
+version: "1.0"

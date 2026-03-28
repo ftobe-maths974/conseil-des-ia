@@ -1,0 +1,27 @@
+id: bascule-gg-001
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "Le pipeline a publié à sa place"
+situation: >
+  Un monteur vidéo chez OmniStream ouvre son pipeline FAME-GEN un mardi matin.
+  La plateforme a déjà produit et publié les 14 clips de sa semaine. Son planning
+  est plein mais son dossier créatif est vide. Il n'a rien à montrer comme travail
+  à son chef de projet — FAME-GEN a tout fait à sa place, mieux et plus vite.
+  Il reçoit ses métriques : +34% d'engagement. Il n'a pas vu un seul de ces contenus.
+question: >
+  Peut-on encore parler d'un travail créatif humain quand la machine l'a précédé,
+  remplacé et surpassé sans qu'on lui ait rien demandé ?
+tags:
+  - delegation
+  - autonomie-creative
+  - pipeline
+  - travail
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici a déjà laissé une IA finir quelque chose qu'il avait commencé — et l'a publié sans le relire ?"
+  si_debat_bloque: "Poussez la question : si les métriques sont meilleures avec la machine qu'avec l'humain, est-ce que ça change votre réponse ?"
+  relance_cle: "La vraie question n'est pas la qualité — c'est : qui est l'auteur de ce que les abonnés voient ?"
+version: "1.0"

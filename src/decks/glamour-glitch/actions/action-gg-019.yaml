@@ -1,0 +1,22 @@
+id: action-gg-019
+phase: action
+slot: 3
+lever_type: interdire
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Interdire l'implantation de data centers FAME-GEN dans des zones en stress hydrique"
+body: >
+  OmniStream Studios est tenu de soumettre tout nouveau projet de data center
+  alimentant FAME-GEN à une étude d'impact hydrique indépendante. Toute installation
+  dans une zone identifiée en stress hydrique modéré à sévère selon les indices
+  internationaux est interdite sans dérogation formelle motivée et approuvée par
+  un comité d'experts environnementaux. Les installations existantes en zone critique
+  sont soumises à un plan de sortie dans un délai de 36 mois.
+mandat_principe: "Interdire l'implantation d'infrastructures de production numérique intensive dans des zones dont les ressources hydriques ou énergétiques ne peuvent absorber la charge."
+tags:
+  - eau
+  - data-center
+  - impact-environnemental
+  - zone-critique
+version: "1.0"

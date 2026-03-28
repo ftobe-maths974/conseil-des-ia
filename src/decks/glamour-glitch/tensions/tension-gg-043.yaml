@@ -1,0 +1,26 @@
+id: tension-gg-043
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Les ressources des autres pour le divertissement de quelques-uns"
+content: >
+  Les data centers OmniStream sont localisés dans des pays où l'énergie et l'eau
+  sont moins chères — souvent des régions à ressources contraintes ou en
+  développement économique. Les externalités physiques — consommation d'eau,
+  émissions, chaleur — sont supportées par des populations locales qui ne
+  consomment pas le contenu produit. Les bénéfices économiques — emplois tech,
+  revenus fiscaux — profitent en majorité aux classes éduquées locales et
+  aux actionnaires d'OmniStream. La géographie des coûts et la géographie
+  des bénéfices ne coïncident pas.
+question: >
+  L'externalisation des coûts physiques d'une infrastructure numérique de
+  divertissement vers des populations qui n'en bénéficient pas est-elle
+  une forme d'injustice environnementale — et qui est en position de la corriger ?
+tags:
+  - justice-environnementale
+  - externalite
+  - geographie
+  - inegalite
+version: "1.0"

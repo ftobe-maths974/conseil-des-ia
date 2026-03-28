@@ -1,0 +1,25 @@
+id: tension-gg-019
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: red
+title: "La voix qu'on n'a plus le droit de reconnaître"
+content: >
+  Un fan écoute un podcast OmniStream et reconnaît la voix de son acteur préféré,
+  décédé deux ans plus tôt. La biographie publiée dit "voix synthétique inspirée".
+  Il ne sait pas si c'est une reconstitution fidèle, une approximation, ou une
+  fabrication complète. Il ne sait pas non plus si l'acteur avait consenti à cet
+  usage posthume. Pour lui, l'écoute est une expérience authentique. Pour les
+  ayants droit, c'est une exploitation commerciale. Pour les producteurs, c'est
+  de la créativité technologique. Trois lectures légitimes du même objet sonore.
+question: >
+  L'expérience subjective d'authenticité d'un auditeur est-elle suffisante
+  pour légitimer une identité synthétique — ou le consentement du modèle
+  prime-t-il sur le ressenti du public ?
+tags:
+  - authenticite-subjective
+  - posthume
+  - consentement
+  - fan
+version: "1.0"

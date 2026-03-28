@@ -1,0 +1,21 @@
+id: action-gg-011
+phase: action
+slot: 3
+lever_type: recours
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: individuel
+title: "Garantir un droit de retrait opposable sur toute identité synthétique en circulation"
+body: >
+  Toute personne physique dont la voix, le visage ou le style a été intégré dans
+  FAME-GEN dispose d'un droit de retrait opposable, exerçable à tout moment,
+  entraînant l'arrêt de toute nouvelle production utilisant ces éléments dans
+  un délai de 30 jours. OmniStream Studios est tenu de maintenir un registre
+  public des identités sous consentement actif, consultable par les intéressés.
+mandat_principe: "Garantir à toute personne physique un droit de retrait effectif et opposable sur l'usage de son identité dans tout système génératif."
+tags:
+  - retrait
+  - droits-identite
+  - registre
+  - consentement
+version: "1.0"

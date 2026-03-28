@@ -1,0 +1,25 @@
+id: tension-gg-009
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Qui forma les formateurs de FAME-GEN ?"
+content: >
+  FAME-GEN a été entraîné sur des millions de créations humaines, sans accord
+  explicite de leurs auteurs dans la plupart des cas. Il reproduit des styles,
+  des structures, des esthétiques — en les recombinant. La délégation que FAME-GEN
+  permet repose sur une extraction préalable de la valeur créative humaine, jamais
+  rémunérée ni consentie. Les créateurs qui délèguent aujourd'hui à FAME-GEN
+  alimentent un système qui a déjà capturé leur culture créative sans leur accord.
+  C'est une délégation à un héritier non mandaté — qui a pris avant qu'on lui donne.
+question: >
+  Peut-on parler de délégation libre à un système construit sur l'extraction
+  non consentie de la créativité humaine — et cela change-t-il les règles du
+  consentement pour les usages futurs ?
+tags:
+  - extraction
+  - entrainement
+  - consentement
+  - propriete-intellectuelle
+version: "1.0"

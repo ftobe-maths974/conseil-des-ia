@@ -1,0 +1,26 @@
+id: tension-gg-016
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Le boost qui achète la visibilité sans le dire"
+content: >
+  OmniStream Studios offre aux annonceurs la possibilité d'accélérer la visibilité
+  de certains créateurs ou contenus via FAME-GEN, sans que les abonnés sachent
+  qu'un critère commercial a influencé ce qu'ils voient. La frontière entre
+  recommandation organique et boost commercial est invisible dans le flux.
+  Pour le spectateur, tout semble naturel — mais l'algorithme est en réalité
+  partiellement piloté par des intérêts commerciaux qui ne lui sont pas révélés.
+  La question n'est pas la légalité des pratiques publicitaires ; c'est la
+  légitimité d'une recommandation présentée comme organique quand elle ne l'est pas.
+question: >
+  Un système de recommandation qui mêle signaux organiques et boosts commerciaux
+  sans les distinguer pour l'utilisateur est-il encore un système de recommandation
+  ou une régie publicitaire déguisée ?
+tags:
+  - boost-commercial
+  - transparence
+  - publicite
+  - recommandation
+version: "1.0"

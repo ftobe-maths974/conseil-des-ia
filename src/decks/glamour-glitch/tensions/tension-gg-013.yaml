@@ -1,0 +1,27 @@
+id: tension-gg-013
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Rendre les critères publics sans les rendre manipulables"
+content: >
+  OmniStream Studios refuse de publier les critères de classement de FAME-GEN
+  au motif qu'ils seraient immédiatement exploités par des acteurs cherchant
+  à les contourner — produisant des contenus optimisés pour le score, pas pour
+  le public. Cette tension est réelle : la transparence des critères peut produire
+  une course aux armements entre le système et ceux qui cherchent à le manipuler.
+  Mais l'opacité des critères produit une asymétrie de pouvoir qui prive les
+  acteurs légitimes de tout moyen de défense. Les deux positions défendent des
+  biens légitimes : l'intégrité du système vs le droit des acteurs à comprendre
+  les règles qui les gouvernent.
+question: >
+  Comment rendre les critères de classement FAME-GEN suffisamment transparents
+  pour permettre la contestation sans les rendre suffisamment lisibles pour
+  permettre leur manipulation industrielle ?
+tags:
+  - transparence
+  - manipulation
+  - criteres
+  - equilibre
+version: "1.0"

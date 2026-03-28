@@ -1,0 +1,25 @@
+id: tension-gg-004
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Le studio qui sous-traite sa vision"
+content: >
+  OmniStream Studios utilise FAME-GEN pour produire 80% de ses contenus mid-tier.
+  L'équipe créative interne est réduite à 15 personnes qui définissent des "briefs
+  stratégiques" que FAME-GEN exécute. La question qui émerge : est-ce qu'OmniStream
+  fait encore de la production ou de la curation ? L'organisation conserve-t-elle
+  une identité créative propre quand ses décisions créatives sont réduites à des
+  paramètres d'entrée pour un modèle ? La valeur ajoutée organisationnelle se
+  déplace — mais vers quoi ? Vers l'ingénierie de prompt, vers le goût éditorial,
+  ou simplement vers l'accès au modèle ?
+question: >
+  Quand une organisation délègue 80% de sa production créative à un système IA,
+  reste-t-elle un acteur créatif ou devient-elle un opérateur de pipeline ?
+tags:
+  - organisation
+  - identite-creative
+  - sous-traitance
+  - valeur-ajoutee
+version: "1.0"

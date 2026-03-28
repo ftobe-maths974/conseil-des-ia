@@ -1,0 +1,21 @@
+id: action-gg-008
+phase: action
+slot: 4
+lever_type: conditionner
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: organisationnel
+title: "Conditionner tout déploiement de FAME-GEN à la publication de ses règles de ranking"
+body: >
+  Toute mise à jour majeure du module de classement et de recommandation de FAME-GEN
+  doit être précédée d'une publication synthétique des critères effectifs de scoring,
+  dans un langage accessible aux créateurs non-techniques, avec un délai de 30 jours
+  avant déploiement permettant les observations formelles. OmniStream Studio est tenu
+  de répondre publiquement aux observations reçues.
+mandat_principe: "Conditionner tout déploiement de règle algorithmique de classement à une publication préalable et à une période d'observation ouverte."
+tags:
+  - ranking
+  - transparence
+  - regles
+  - consultation
+version: "1.0"

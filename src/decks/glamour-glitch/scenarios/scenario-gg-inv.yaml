@@ -1,0 +1,50 @@
+id: scenario-gg-inv
+phase: scenario
+chamber: invisibilite-vs-arbitrage
+title: "Shadowban, mode silencieux"
+context: >
+  Yéva T. est une streameuse indépendante sur OmniStream, 340 000 abonnés, spécialisée
+  dans les contenus de santé mentale. Depuis trois semaines, ses vues ont chuté de 73%.
+  Ses abonnés reçoivent toujours les notifications mais ses vidéos n'apparaissent plus
+  dans les recommandations ni dans la recherche OmniStream. FAME-GEN a appliqué une
+  restriction de visibilité de catégorie 3 ("contenu sensible non-certifié") — sans
+  notification à la créatrice. Yéva a déposé trois demandes de recours via le portail
+  créateur : aucune réponse après 19 jours. OmniStream affirme que les critères de
+  restriction sont "propriétaires et non communicables". La commission de régulation
+  interne reçoit le mandat : "Garantir la lisibilité et la contestabilité des critères
+  de classement et de sanction algorithmique appliqués à toute identité de créateur."
+  Le directeur des opérations estime que rendre les critères publics permettrait à des
+  acteurs malveillants d'optimiser leur contenu pour contourner les filtres.
+roles_briefing:
+  decideur: >
+    Vous êtes le vice-président Contenu & Modération d'OmniStream. Yéva est dans une
+    zone grise réelle : ses contenus de santé mentale sont utiles mais FAME-GEN les
+    classe comme "potentiellement anxiogènes". Rétablir sa visibilité sans audit
+    créerait un précédent. Votre priorité : ne pas fragiliser le modèle de modération.
+    Votre angle mort : vous ignorez combien de créateurs sont dans la même situation.
+  technicien: >
+    Vous êtes l'ingénieure qui a conçu le module de restriction de visibilité de FAME-GEN.
+    La catégorie 3 est déclenchée automatiquement par un score composite de 14 signaux.
+    Vous pouvez extraire pourquoi Yéva a été classée — mais le rapport serait de 47 pages
+    de features weights. Votre ligne rouge : vous refusez d'affirmer que le système est
+    équitable sans avoir conduit un audit par catégorie de créateurs.
+  affecte: >
+    Vous êtes Yéva T. ou un créateur de contenu dans la même situation. Votre revenu
+    mensuel dépend à 80% de la visibilité algorithmique OmniStream. Vous ne savez pas
+    ce que vous avez fait de mal, vous ne savez pas comment vous corriger, et vous ne
+    savez pas à qui vous adresser. Votre ligne rouge : vous exigez une réponse écrite
+    et motivée dans un délai raisonnable.
+  contre_pouvoir: >
+    Vous êtes un juriste de l'association Droit au Contenu, qui a déjà obtenu en justice
+    qu'une plateforme concurrente communique ses critères de démonétisation dans 2 pays
+    européens. Vous avez recensé 800 créateurs OmniStream en restriction silencieuse
+    cette année. Votre question : une décision algorithmique sans motivation est-elle
+    une décision opposable ?
+tags:
+  - shadowban
+  - demonetisation
+  - recours
+  - opacite
+  - visibilite
+difficulty: moyen
+version: "1.0"

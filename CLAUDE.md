@@ -47,26 +47,22 @@ src/decks/
     tensions/              ← cartes Phase 2
     actions/               ← cartes Phase 3
     scenarios/             ← cartes Phase 4
-  care-triage/             ← deck pilote éditorial (univers CareFlow/GHR)
+  care-triage/             ← santé publique, univers CareFlow/GHR
     config.yaml
-    bascules/
-    tensions/
-    actions/
-    scenarios/
+    bascules/ tensions/ actions/ scenarios/
+  glamour-glitch/          ← creator economy, univers OmniStream/FAME-GEN
+    config.yaml
+    bascules/ tensions/ actions/ scenarios/
 
 src/content/
   config.ts                ← schémas Zod + glob loaders (pas de fichiers YAML ici)
 ```
 
-Chaque deck est un **paquet autonome** dans `src/decks/`. Brancher un nouveau deck = créer un dossier. Débrancher = le supprimer.
+Chaque deck est un **paquet autonome**. Brancher = créer un dossier. Débrancher = le supprimer.
 
 Les collections Astro pointent vers `src/decks/` via `glob()` (Content Layer expérimental activé dans `astro.config.mjs`). Astro 4 interdit `glob()` dans `src/content/` — c'est pourquoi le contenu vit dans `src/decks/`.
 
-**Isolation par deck** : les pages filtrent toujours avec `entry.id.startsWith(deckId + '/')`. Les cartes d'un deck ne peuvent pas fuiter dans un autre.
-
-**Contenu du deck demo** : 15 bascules (3/chambre × 5), 45 tensions (9/chambre × 5, 3/slot_theme), 20 actions (4/chambre × 5), 5 scénarios (1/chambre).
-
-**Contenu du deck care-triage** : identique en volume, univers CareFlow/GHR, champ `mandat_principe` présent sur toutes les actions.
+**Isolation par deck** : `entry.id.startsWith(deckId + '/')`. Les cartes ne peuvent pas fuiter entre decks.
 
 ---
 
@@ -80,20 +76,22 @@ Les collections Astro pointent vers `src/decks/` via `glob()` (Content Layer exp
 | `singularite-vs-standard` | Singularité vs Standard | `--chamber-singularite` (corail) |
 | `metabolisme-vs-progres` | Métabolisme vs Progrès | `--chamber-metabolisme` (vert) |
 
-**Chaîne d'implications canonique** : `delegation → invisibilite → preuve → singularite → metabolisme → delegation`
+**Chaîne canonique** : `delegation → invisibilite → preuve → singularite → metabolisme → delegation`
 
-Cet ordre détermine la rotation des mandats. Un groupe travaille la même chambre de la Phase 1 à la Phase 4 — jamais de mélange inter-chambres.
+Un groupe travaille la même chambre de la Phase 1 à la Phase 4 — jamais de mélange inter-chambres.
 
 ---
 
 ## Mécanique du jeu — 5 phases
 
 ### Phase 1 — Dossiers de bascule (20 min)
-- 3 cartes bascules filtrées par chambre (1 par `slot_theme`)
-- Tâche : trier du **moins réversible en haut** au plus réversible en bas
-- La carte du **haut** (index 0) est la plus irréversible selon le groupe → révélée à la validation
-- Initialise la trajectoire : `green → traj=2`, `yellow → traj=3`, `red → traj=4`
+- 3 cartes bascules filtrées par chambre (1 par `slot_theme`), triées par `slot` croissant
+- Tâche : **mettre la plus irréversible en haut** (position 1), la plus réversible en bas (position 3)
+- La carte du **haut (index 0 du DOM, position 1) = dominant** → révélée à la validation
+- `initTraj()` : `green → traj=2`, `yellow → traj=3`, `red → traj=4`
 - Output hash : `#dominant=X&secondary=Y&minor=Z&traj=N` → Phase 2
+
+> **Vérification code** : `allCardEls2[0]` = premier élément du DOM = haut de pile = dominant. `initTraj(topRev)` confirmé dans `src/lib/chambers.ts`. Pas de contradiction.
 
 ### Phase 2 — Chambre de tension (30 min)
 - 9 tensions filtrées par chambre, réordonnées 3/1/1 selon le `dominant` de Phase 1
@@ -105,14 +103,14 @@ Cet ordre détermine la rotation des mandats. Un groupe travaille la même chamb
 - 4 actions filtrées par chambre, badge **Recommandé** selon le thème dominant
 - Mapping : `individu → recours, limiter` / `organisation → conditionner, auditer` / `systeme → interdire, auditer`
 - Tâche : choisir 1 carte, rédiger un mandat en 2 champs guidés ("parce que" + "à condition que")
-- Le `mandat_principe` de la carte choisie sert de base à la reformulation
+- Le `mandat_principe` de la carte choisie sert de base éditoriale à la reformulation
 - Modification trajectoire : `green → traj-1`, `yellow → traj±0`, `red → traj+1`
 - Output : objet handoff base64 encodé → QR code → groupe suivant
 
 ### Phase 4 — Audience d'arbitrage (30 min)
 - 1 scénario + mandat reçu via `#handoff=BASE64`
 - 4 rôles : Décideur / Technicien / Affecté / Contre-pouvoir
-- Si `traj ≥ 4` : contrainte narrative affichée ("L'infrastructure est déjà verrouillée…")
+- Si `traj ≥ 4` : contrainte narrative affichée
 - Output : acte en 4 points (autoriser / conditionner / interdire / réexaminer)
 
 ### Phase 5 — Délibéré final (15 min)
@@ -122,32 +120,28 @@ Cet ordre détermine la rotation des mandats. Un groupe travaille la même chamb
 
 ## Transmission des mandats
 
-Le mandat circule via URL hash, jamais stocké :
-
 ```
 Phase 1 → Phase 2 : #dominant=X&secondary=Y&minor=Z&traj=N
 Phase 2 → Phase 3 : #bascule=BASE64&dominant=X&traj=N
 Phase 3 → Phase 4 : #handoff=BASE64
 ```
 
-Structure du handoff décodé :
+Structure du handoff :
 ```ts
 {
   text: string,              // concaténation des 2 champs guidés
   level: 'green'|'yellow'|'red',
-  chamber: string,           // chambre du groupe émetteur
-  from: string,              // id du groupe émetteur
-  traj: number,              // trajectoire 1–5
+  chamber: string,
+  from: string,
+  traj: number,              // 1–5
 }
 ```
 
-**Circulation** : toujours circulaire, définie dans le deck YAML (`mandat_circulation`). Jamais calculée à la volée, jamais aléatoire.
+**Circulation** : circulaire, définie dans `mandat_circulation` du deck YAML. Jamais calculée à la volée.
 
 ---
 
 ## Trajectoire de réversibilité
-
-Entier borné 1–5, local à chaque chambre, jamais de score global.
 
 | Valeur | Label |
 |--------|-------|
@@ -157,9 +151,9 @@ Entier borné 1–5, local à chaque chambre, jamais de score global.
 | 4 | Critique |
 | 5 | Point de non-retour |
 
-Constantes et helpers dans `src/lib/chambers.ts` : `TRAJ_LABELS`, `clampTraj()`, `initTraj()`.
+`src/lib/chambers.ts` : `TRAJ_LABELS`, `clampTraj()`, `initTraj()`.
 
-**Règle fondamentale** : la réversibilité d'une carte est une propriété **fixe et intrinsèque**. La trajectoire est **dynamique** et résulte des choix successifs. Ne jamais modifier la couleur d'une carte en cours de partie.
+**Règle** : la réversibilité d'une carte est fixe. La trajectoire est dynamique. Ne jamais modifier la couleur d'une carte en cours de partie.
 
 ---
 
@@ -169,20 +163,16 @@ Constantes et helpers dans `src/lib/chambers.ts` : `TRAJ_LABELS`, `clampTraj()`,
 ```yaml
 id: bascule-xxx
 phase: bascule
-slot: 1          # ordre d'affichage dans la chambre
-slot_theme: individu | organisation | systeme
-chamber: [slug chambre]
-reversibility: green | yellow | red
-scope: individuel | organisationnel | systemique
+slot: 1|2|3
+slot_theme: individu|organisation|systeme
+chamber: [slug]
+reversibility: green|yellow|red
+scope: individuel|organisationnel|systemique
 title: "..."
-situation: "..."   # 40–80 mots, fait observable du quotidien
-question: "..."    # 15–30 mots, tension ouverte
+situation: "..."   # 40–80 mots, micro-scène observable du quotidien
+question: "..."    # 15–30 mots, tension ouverte, les deux positions défendables
 tags: [...]
-facilitator_note:  # optionnel
-  si_silence: "..."
-  si_debat_bloque: "..."
-  si_trop_technique: "..."  # optionnel
-  relance_cle: "..."
+facilitator_note: { si_silence, si_debat_bloque, relance_cle }  # optionnel
 version: "1.0"
 ```
 
@@ -191,16 +181,14 @@ version: "1.0"
 id: tension-xxx
 phase: tension
 slot: 1–9
-slot_theme: individu | organisation | systeme
-chamber: [slug chambre]
-reversibility: green | yellow | red
+slot_theme: individu|organisation|systeme
+chamber: [slug]
+reversibility: green|yellow|red
 title: "..."
-content: "..."      # 60–120 mots, tension structurelle entre deux valeurs
+content: "..."      # 60–120 mots, dilemme entre deux valeurs légitimes
 data_point: "..."   # optionnel, sourcé
-question: "..."     # 20–35 mots, irréductible
+question: "..."     # 20–35 mots, désaccord légitime possible
 tags: [...]
-suggestions_bascule: [...]  # optionnel
-facilitator_note: { ... }   # optionnel
 version: "1.0"
 ```
 
@@ -209,18 +197,14 @@ version: "1.0"
 id: action-xxx
 phase: action
 slot: 1–4
-lever_type: limiter | conditionner | auditer | recours | interdire
-chamber: [slug chambre]
-reversibility: green | yellow | red
-scope: individuel | organisationnel | systemique
-title: "Verbe institutionnel + objet"   # décrit l'intervention, jamais le problème
-body: "..."    # 30–70 mots, qui fait quoi avec quel effet mesurable
-mandat_principe: "..."   # principe de gouvernance portable interchambre — OBLIGATOIRE pour tout deck non-demo
+lever_type: limiter|conditionner|auditer|recours|interdire
+chamber: [slug]
+reversibility: green|yellow|red
+scope: individuel|organisationnel|systemique
+title: "Verbe institutionnel + objet"
+body: "..."              # 30–70 mots, qui fait quoi avec quel effet mesurable
+mandat_principe: "..."   # principe portable interchambre — OBLIGATOIRE (sauf deck demo legacy)
 tags: [...]
-amplifies: [...]         # optionnel
-blocks: [...]            # optionnel
-compatible_scenarios: [] # optionnel
-facilitator_note: { ... } # optionnel
 version: "1.0"
 ```
 
@@ -228,17 +212,16 @@ version: "1.0"
 ```yaml
 id: scenario-xxx
 phase: scenario
-chamber: [slug chambre]
+chamber: [slug]
 title: "..."
-context: "..."   # 100–160 mots, même institution/population que le deck
+context: "..."   # 100–160 mots, même institution/population que le deck, crise décisionnelle
 roles_briefing:
   decideur: "..."
   technicien: "..."
   affecte: "..."
   contre_pouvoir: "..."
 tags: [...]
-difficulty: faible | moyen | eleve
-facilitator_note: { ... }  # optionnel
+difficulty: faible|moyen|eleve
 version: "1.0"
 ```
 
@@ -246,19 +229,18 @@ version: "1.0"
 ```yaml
 id: mon-deck
 name: "Nom affiché"
-domaine: "secteur institutionnel"
-institution_centrale: "qui décide"
-population_affectee: "qui subit"
-type_decision: "ce qui est arbitré"
-horizon_temporel: "court/moyen/long terme"
-risque_dominant: "risque principal exploré"
-registre_langage: "ton attendu"
+domaine: "..."
+institution_centrale: "..."
+population_affectee: "..."
+type_decision: "..."
+horizon_temporel: "..."
+risque_dominant: "..."
+registre_langage: "..."
 groups:
   - id: groupe-A
     chamber: delegation-vs-souverainete
     receives_from: groupe-E
-    scenario_id: scenario-del
-  # ...
+    scenario_id: scenario-xxx
 mandat_circulation:
   groupe-A: groupe-B
   # ...
@@ -266,145 +248,155 @@ mandat_circulation:
 
 ---
 
+## Doctrine éditoriale : un deck = un univers fermé
+
+Un deck n'est pas un assemblage de cartes thématiquement proches. C'est une **crise systémique cohérente** vécue à travers cinq chambres.
+
+Exigences minimales pour tout nouveau deck :
+- **une institution centrale unique** (ex. GHR, OmniStream Studios)
+- **une technologie/système central unique** (ex. CareFlow, FAME-GEN)
+- **une logique industrielle unique** et un macro-conflit implicite
+- **cinq chambres qui lisent la même crise sous cinq angles différents**
+- **mandats interchambres organiques** — chaque mandat_principe doit créer une friction réelle dans le scénario de la chambre suivante
+
+---
+
 ## Règle Action → Mandat (`mandat_principe`)
 
-Une carte action n'est **jamais** transmise telle quelle à la chambre suivante. Elle doit être reformulée en `mandat_principe` : un principe de gouvernance interchambre, portable dans le même univers narratif.
+Une carte action n'est **jamais** transmise telle quelle. Elle doit être reformulée en `mandat_principe` : un principe de gouvernance portable.
 
-- `title` + `body` = action locale, située, institutionnelle
-- `mandat_principe` = principe portable, compréhensible par la chambre suivante sans explication extérieure
+| Champ | Rôle |
+|---|---|
+| `title` + `body` | Action locale, située, institutionnelle, spécifique au domaine |
+| `mandat_principe` | Principe portable, non sectoriel à l'intérieur du deck, formulé comme règle/droit/limite/garantie |
 
-**Formulations autorisées :**
-- `N'autoriser aucune… sans…`
-- `Garantir à toute personne concernée…`
-- `Exiger que toute décision fondée sur…`
-- `Préserver la possibilité de…`
-- `Imposer une exception motivée lorsque…`
+**Gabarits autorisés** :
+- `Rendre visible…` / `Garantir…` / `Exiger…` / `Interdire tout usage de… sans…`
+- `Préserver…` / `Imposer…` / `Conditionner…` / `Plafonner…`
 
-**Formulations à refuser :**
-- nom d'un module logiciel précis comme mandat
-- action trop locale impossible à réutiliser interchambre
-- consigne purement technique sans portée institutionnelle
-- mandat limité à une spécialité si la chambre suivante ne peut pas l'exploiter
+**À refuser** :
+- Nom de module logiciel précis comme mandat
+- Action trop locale impossible à réutiliser interchambre
+- Consigne purement technique sans portée institutionnelle
+- Mandat limité à une spécialité/plateforme si la chambre suivante ne peut pas l'exploiter
 
----
-
-## Bible éditoriale
-
-### Philosophie des chambres (générique)
-
-Chaque chambre a une **question mère**, un **lexique central**, un **angle mort** et une **ligne rouge**.
+**Exemples** :
+- Action : "Ajouter un bouton d'audit sur chaque clip généré" → `mandat_principe` : "Garantir la traçabilité intégrale de l'origine de tout signal synthétique exposé au public"
+- Action : "Permettre aux doubleurs de retirer leur voix d'un modèle" → `mandat_principe` : "Interdire tout usage d'identité vocale sans clé de consentement révocable"
 
 ---
 
-**Délégation vs Souveraineté**
+## Bible éditoriale — chambres (générique)
+
+### Délégation vs Souveraineté
 - **Question mère** : À qui ai-je confié ce pouvoir — et puis-je encore le reprendre ?
 - **Lexique** : mandat, dépendance, lock-in, responsabilité diffuse, sous-traitance, maîtrise
-- **Angle mort** : qu'une IA peut parfois décider plus justement qu'un humain biaisé
-- **Ligne rouge** : ne pas dériver vers "technologie = mauvais" ou "l'humain doit toujours décider"
+- **Angle mort** : une IA peut parfois décider plus justement qu'un humain biaisé
+- **Ligne rouge** : ne pas dériver vers "technologie = mauvais"
 - **Mandat type** : "N'autoriser aucune décision engageante sans possibilité de reprise humaine identifiée"
 
-**Invisibilité vs Arbitrage**
+### Invisibilité vs Arbitrage
 - **Question mère** : Qui décide pour moi — comment, sur quoi, et sans que je le sache ?
 - **Lexique** : profilage, score, opacité, biais, discrimination systémique, explicabilité, voie de recours
-- **Angle mort** : que la personnalisation peut aussi aider (accessibilité, recommandation médicale)
-- **Ligne rouge** : ne pas confondre biais algorithmique et erreur humaine ; ne pas nier la discrimination préexistante
+- **Angle mort** : la personnalisation peut aussi aider
+- **Ligne rouge** : ne pas confondre biais algorithmique et erreur humaine
 - **Mandat type** : "Garantir un droit opposable d'explication et de contestation pour toute décision automatisée"
 
-**Preuve vs Simulation**
+### Preuve vs Simulation
 - **Question mère** : Comment établir qu'une chose est vraie quand tout peut être simulé ?
 - **Lexique** : attestation, certificat, traçabilité, falsifiabilité, authenticité, chaîne de confiance
-- **Angle mort** : que la simulation peut servir à éduquer, créer, modéliser sans tromperie
-- **Ligne rouge** : ne pas dériver vers un débat moral général sur l'IA ou la vérité
+- **Angle mort** : la simulation peut servir à éduquer, créer, modéliser sans tromperie
+- **Ligne rouge** : ne pas dériver vers un débat moral général sur l'IA
 - **Mandat type** : "Imposer la traçabilité de toute décision basée sur du contenu potentiellement synthétique"
 
-**Singularité vs Standard**
+### Singularité vs Standard
 - **Question mère** : Ce qui me rend singulier est-il encore viable dans un monde que l'IA homogénéise ?
 - **Lexique** : norme, diversité, edge case, minorité, adaptation, interopérabilité, exception, monoculture
-- **Angle mort** : valeur réelle de l'interopérabilité pour l'équité et l'accès universel
-- **Ligne rouge** : ne pas dériver vers un rejet de tout standard ou de toute interopérabilité
+- **Angle mort** : valeur réelle de l'interopérabilité pour l'équité
+- **Ligne rouge** : ne pas dériver vers un rejet de tout standard
 - **Mandat type** : "Imposer l'audit des populations mal couvertes avant tout déploiement à grande échelle"
 
-**Métabolisme vs Progrès**
+### Métabolisme vs Progrès
 - **Question mère** : Quel prix physique payons-nous réellement pour ce progrès numérique ?
-- **Lexique** : empreinte, ressource, sobriété, énergie, eau, territoire, irréversibilité physique, externalité
-- **Angle mort** : que l'IA peut aussi optimiser la consommation et réduire le gaspillage
-- **Ligne rouge** : ne pas dériver vers un technopessimisme général ou un romantisme pré-numérique
+- **Lexique** : empreinte, ressource, sobriété, énergie, irréversibilité physique, externalité
+- **Angle mort** : l'IA peut optimiser la consommation et réduire le gaspillage
+- **Ligne rouge** : ne pas dériver vers un technopessimisme général
 - **Mandat type** : "Conditionner tout déploiement IA à la publication vérifiable de son empreinte ressource"
 
 ---
 
-### Mini-bible deck `CARE-TRIAGE` (univers CareFlow/GHR)
+## Mini-bible deck `care-triage` (univers CareFlow/GHR)
 
-Univers : le système `CareFlow` pilote progressivement triage, orientation, priorisation des lits et suivi des patients dans un groupement hospitalier régional (GHR) public. Les décisions humaines s'alignent sur ses recommandations sans toujours en connaître les critères.
+**Institution** : groupement hospitalier régional (GHR) public
+**Technologie** : `CareFlow` — suite IA pilotant triage, orientation, priorisation des lits, suivi des patients
+**Macro-conflit** : CareFlow devient le centre de gravité des décisions cliniques ; les décisions humaines s'alignent sur ses recommandations sans toujours en connaître les critères
+**Registre** : institutionnel, clinique, concret — jamais technobéat, jamais apocalyptique
+**Règle** : toutes les cartes restent dans le monde CareFlow/hôpital public/GHR
 
-Règle absolue : toutes les cartes restent dans le monde CareFlow/hôpital public/GHR.
-
-**Délégation vs Souveraineté**
-- Question mère : qui décide encore réellement de l'orientation, de la priorité ou du refus ?
-- Lexique : validation humaine, autonomie clinique, responsabilité médicale, dépendance au système, maîtrise du protocole
-- Angle mort : CareFlow peut réduire certains biais humains dans le triage
-- Ligne rouge : ne pas dériver vers "la technologie décide" comme slogan
-- Mandat type : "N'autoriser aucune décision d'orientation sans validation humaine traçable identifiée"
-
-**Invisibilité vs Arbitrage**
-- Question mère : qu'est-ce qui reste visible, traçable et contestable dans les choix de CareFlow ?
-- Lexique : score, justification, audit, journalisation, recours, lisibilité du critère
-- Angle mort : la transparence totale peut surcharger les soignants
-- Ligne rouge : ne pas confondre biais algorithmique et erreur humaine
-- Mandat type : "Garantir à tout patient la traçabilité et la contestabilité des scores CareFlow qui l'affectent"
-
-**Preuve vs Simulation**
-- Question mère : qu'est-ce qu'une sortie CareFlow prouve vraiment dans une décision de soin ?
-- Lexique : validation clinique, seuil de fiabilité, attestation, protocole de contre-indication, contradiction
-- Angle mort : CareFlow peut repérer des signaux faibles que le clinicien manque
-- Ligne rouge : ne pas dériver vers "peut-on faire confiance à l'IA" en général
-- Mandat type : "Exiger que toute recommandation CareFlow soit accompagnée d'un seuil de fiabilité documenté et d'un protocole de contradiction"
-
-**Singularité vs Standard**
-- Question mère : que deviennent les patients atypiques dans un système piloté par des modèles entraînés sur des cas courants ?
-- Lexique : exception, atypie, cas-limite, profil hors-standard, dérogation motivée, adaptation
-- Angle mort : les standards permettent l'équité et l'accès universel
-- Ligne rouge : ne pas dériver vers un rejet de tout protocole
-- Mandat type : "Imposer une dérogation motivée pour tout patient dont le profil s'écarte significativement du standard CareFlow"
-
-**Métabolisme vs Progrès**
-- Question mère : que consomme, rigidifie ou rend irréversible le déploiement de CareFlow dans le GHR ?
-- Lexique : dépendance opérationnelle, coût de maintenance, charge des équipes, soutenabilité, réversibilité, capacité autonome résiduelle
-- Angle mort : CareFlow peut réduire la charge cognitive et optimiser les ressources
-- Ligne rouge : ne pas dériver vers un technopessimisme général
-- Mandat type : "Conditionner tout déploiement CareFlow à la préservation d'une capacité de fonctionnement autonome documentée"
+| Chambre | Question mère | Lexique propre | Mandat typique |
+|---|---|---|---|
+| Délégation | Qui décide encore de l'orientation, de la priorité ou du refus ? | validation humaine, autonomie clinique, responsabilité médicale | N'autoriser aucune décision d'orientation sans validation humaine traçable |
+| Invisibilité | Qu'est-ce qui reste visible, traçable et contestable dans les choix de CareFlow ? | score, justification, audit, journalisation, recours | Garantir la traçabilité et la contestabilité des scores qui affectent les patients |
+| Preuve | Qu'est-ce qu'une sortie CareFlow prouve vraiment ? | seuil de fiabilité, attestation, protocole de contradiction | Exiger un seuil de fiabilité documenté et un protocole de contradiction |
+| Singularité | Que deviennent les patients atypiques dans un système piloté par des modèles ? | exception, atypie, dérogation motivée | Imposer une dérogation motivée pour tout profil hors-standard |
+| Métabolisme | Que consomme, rigidifie ou rend irréversible le déploiement de CareFlow ? | dépendance opérationnelle, soutenabilité, capacité autonome résiduelle | Conditionner tout déploiement à la préservation d'une capacité autonome documentée |
 
 ---
 
-### Règles d'écriture par phase
+## Mini-bible deck `glamour-glitch` (univers OmniStream/FAME-GEN)
 
-**Phase 1 — Bascule**
-- `situation` : 40–80 mots. Fait ou comportement observable du quotidien. Pas une analyse.
-- `question` : 15–30 mots. Tension ouverte — ne donne pas la réponse implicitement.
-- Test : est-ce que quelqu'un dans la salle a déjà vécu ça ou pourrait le vivre demain ?
+**Institution** : `OmniStream Studios`
+**Technologie** : `FAME-GEN` — suite IA qui génère scripts/trailers/clips/thumbnails, clone voix/visage/gestes/style, produit des avatars 24h/24, pilote visibilité algorithmique, classe/booste/enterre/démonétise, peut "faire rejouer" des talents vivants ou morts
+**Population** : créateurs, influenceurs, acteurs, doubleurs, monteurs, scénaristes, ayants droit, fans, petits studios
+**Enjeu** : à qui appartiennent le visage, la voix, le style, la performance et la valeur symbolique quand FAME-GEN peut les simuler, les industrialiser et les monétiser mieux que leur propriétaire ?
+**Registre** : nerveux, contemporain, précis, hype mais crédible — jamais boomer, jamais Black Mirror paresseux
+**Tagline** : *À qui appartient ton visage, ta voix et ta vibe quand FAME-GEN peut les monétiser mieux que toi ?*
+**Règle** : toutes les cartes restent dans le monde OmniStream/FAME-GEN — pas de références directes à TikTok, Twitch, Netflix comme entités séparées
 
-**Phase 2 — Tension**
-- `content` : 60–120 mots. Tension structurelle entre deux valeurs légitimes.
-- `data_point` : sourcé ou plausiblement sourcé. Pas de statistique floue sans référence.
-- `question` : 20–35 mots. On peut avoir raison des deux côtés selon ses valeurs.
-- Test : la tension résiste-t-elle à un désaccord légitime ?
+| Chambre | Question mère | Lexique propre | Mandat typique |
+|---|---|---|---|
+| Délégation | À quel moment les créateurs cessent-ils réellement de décider eux-mêmes ? | ghostwriting, autonomie créative, pipeline, délégation de performance, perte de talent | N'autoriser aucune performance synthétique sans validation explicite du créateur identifié |
+| Invisibilité | Pourquoi tel créateur est-il boosté, enterré, shadowbanné ou démonétisé ? | ranking, shadowban, démonétisation, boost, opacité, règles cachées | Garantir la lisibilité et la contestabilité des critères de classement et de sanction |
+| Preuve | Comment sait-on si une voix, un visage ou une performance dans OmniStream est authentique ? | deepfake, clone vocal, authenticité, certification, consentement, traçabilité, faux-vrai | Interdire tout usage d'identité de créateur sans clé de consentement traçable et révocable |
+| Singularité | Que devient la créativité humaine quand FAME-GEN optimise tout pour le contenu moyen ? | standardisation, formatage, contenu moyen, edge case, vibe homogène, créateur interchangeable | Imposer un audit des profils hors-standard avant toute décision de déclassement |
+| Métabolisme | Quel coût physique et infrastructurel cache l'usine à célébrités synthétiques ? | GPU, énergie, verrouillage industriel, dépendance, coût caché, soutenabilité | Conditionner tout déploiement FAME-GEN à la publication de son empreinte ressource |
 
-**Phase 3 — Action**
-- `title` : commence par un verbe institutionnel (Interdire / Conditionner / Auditer / Plafonner / Garantir…). Décrit l'intervention, jamais le problème.
-- `body` : 30–70 mots. Qui fait quoi, dans quel cadre, avec quel effet mesurable.
-- `mandat_principe` : 1–2 phrases, principe de gouvernance portable interchambre.
+### Logique de circulation `glamour-glitch`
+
+| Passage | Problème transmis | Pourquoi la chambre suivante est la bonne destinataire |
+|---|---|---|
+| Délégation → Invisibilité | Si la création est déléguée à FAME-GEN, qu'est-ce qui reste visible du travail humain, du crédit, de la responsabilité ? | La chambre Invisibilité doit se demander comment auditer un système qui classe sans montrer ses critères |
+| Invisibilité → Preuve | Si le ranking est opaque, comment établir la preuve d'une origine, d'un boost, d'un clone ? | La chambre Preuve doit se demander ce qui prouve qu'une performance est humaine ou synthétique |
+| Preuve → Singularité | Si tout doit être certifié et labellisé, que devient ce qui échappe au label ou à la norme ? | La chambre Singularité doit se demander si les créateurs atypiques peuvent être certifiés et visibles |
+| Singularité → Métabolisme | Si on veut préserver l'exception créative, quel coût industriel et énergétique accepte-t-on ? | La chambre Métabolisme doit se demander si l'infrastructure FAME-GEN peut absorber l'exception |
+| Métabolisme → Délégation | Si l'infrastructure est lourde et dépendante, que peut-on encore déléguer sans perdre la capacité de créer autrement ? | La chambre Délégation doit se demander si on peut reprendre le contrôle quand on est captif de FAME-GEN |
+
+---
+
+## Règles d'écriture par phase
+
+### Phase 1 — Bascule
+- `situation` : 40–80 mots. Micro-scène incarnée, observable, concrète, située dans l'univers du deck
+- `question` : 15–30 mots. Tension ouverte — les deux positions défendables
+- Test : quelqu'un dans la salle a-t-il déjà vécu ça ou pourrait-il le vivre demain ?
+
+### Phase 2 — Tension
+- `content` : 60–120 mots. Dilemme institutionnel entre deux valeurs légitimes
+- `data_point` : sourcé ou plausiblement sourcé
+- `question` : 20–35 mots. On peut avoir raison des deux côtés
+
+### Phase 3 — Action
+- `title` : verbe institutionnel (Interdire / Conditionner / Auditer / Plafonner / Garantir…)
+- `body` : 30–70 mots. Qui fait quoi, dans quel cadre, avec quel effet mesurable
+- `mandat_principe` : principe portable interchambre — obligatoire
 - Test : un décideur ou législateur pourrait-il adopter cette mesure telle quelle ?
 
-**Mandat transmis**
-- 1–2 phrases, 20–40 mots. Format : "parce que [raison]" + optionnel "à condition que [garde-fou]"
-- Non sectoriel — doit avoir un sens pour une chambre travaillant sur un autre domaine.
+### Phase 4 — Scénario
+- `context` : 100–160 mots. Même institution et même population que le deck
+- 4 rôles avec angle mort et ligne rouge
+- Le scénario est une **collision** entre la logique locale de la chambre, le mandat reçu et la trajectoire
 
-**Phase 4 — Scénario**
-- `context` : 100–160 mots. Même institution et même population que le deck.
-- 4 rôles, chacun avec une ligne rouge explicite et un angle mort nommé.
-- La tension créée par le mandat reçu doit créer une vraie friction dans le scénario.
-
-### Conversion mandat
+### Conversion `lever_type` → mandat
 
 | `lever_type` | Formulation type |
 |---|---|
@@ -414,49 +406,62 @@ Règle absolue : toutes les cartes restent dans le monde CareFlow/hôpital publi
 | `recours` | "Garantir un droit opposable de contestation pour toute [décision X]" |
 | `limiter` | "Plafonner [X] à ce qui peut être justifié, mesuré et réversible" |
 
-### Anti-patterns à rejeter
+---
+
+## Anti-patterns universels
 
 1. **Titre d'action décrivant le problème** — le titre décrit l'intervention institutionnelle
-2. **Corps d'action descriptif** — pas "une banque adopte X", mais "il est interdit de / toute entité doit"
-3. **`lever_type` incohérent avec le titre** — "Rendre obligatoire" ≠ `interdire`, "Plafonner" ≠ `conditionner`
-4. **Tension dérivant vers le débat moral général** — la tension doit être entre deux valeurs légitimes
-5. **Mandat trop sectoriel** — "les banques doivent…" n'est pas portable interchambre
+2. **Corps d'action descriptif** — "il est interdit de / toute entité doit", pas "une banque adopte X"
+3. **`lever_type` incohérent avec le titre** — "Rendre obligatoire" ≠ `interdire`
+4. **Tension dérivant vers le débat moral général** — deux valeurs légitimes en conflit
+5. **Mandat trop sectoriel** — pas portable interchambre
 6. **Scénario dans un domaine différent du deck** — contamination de domaine
-7. **Chambres partageant le même vocabulaire** — contamination lexicale inter-chambres
-8. **`data_point` sans source réelle** — pas de "selon une étude" sans référence
-9. **Question de Phase 1 donnant une réponse implicite** — les deux positions doivent être défendables
+7. **Chambres partageant le même vocabulaire** — contamination lexicale
+8. **`data_point` sans source réelle**
+9. **Question de Phase 1 donnant une réponse implicite**
 10. **Sujet institutionnel absent** — qui fait quoi ?
-11. **`mandat_principe` trop technique ou trop local** — doit être portable interchambre
-12. **`mandat_principe` absent sur une action d'un deck non-demo** — champ obligatoire
+11. **`mandat_principe` absent** sur une action d'un deck non-demo
+12. **`mandat_principe` trop technique ou trop local**
 
-### Matrice de contrôle qualité
+### Anti-patterns spécifiques `glamour-glitch`
+
+13. **Patchwork de plateformes** — tout passe par OmniStream/FAME-GEN, pas des références directes à des plateformes réelles comme entités séparées
+14. **Ton boomer** — pas d'extériorité face aux codes du feed/clip/stream/fandom
+15. **Black Mirror paresseux** — dystopie sans ancrage institutionnel et économique
+16. **Hype vide** — pas d'architecture systémique derrière la référence culturelle
+17. **Scénario Phase 4 trop faible** — doit être une vraie collision, pas une suite fade de Phase 3
+18. **Absence de tension sur consentement, visibilité, preuve, standardisation ou coût**
+
+---
+
+## Matrice de contrôle qualité
 
 - [ ] Cohérence deck : même institution, même population, même horizon
-- [ ] Cohérence chambre : lexique propre à la chambre, sans contamination
+- [ ] Cohérence chambre : lexique propre, sans contamination
 - [ ] Cohérence `slot_theme` : individu / organisation / système
-- [ ] Niveau d'abstraction correct pour la phase (concret P1, structurel P2, institutionnel P3)
-- [ ] `lever_type` cohérent avec le titre et le body (P3)
-- [ ] `mandat_principe` portable vers la chambre suivante sans perte de sens
-- [ ] Accessible à des étudiants non-spécialistes (pas de jargon technique opaque)
-- [ ] Pas de redondance avec une autre carte de la même chambre
+- [ ] Niveau d'abstraction correct (concret P1, structurel P2, institutionnel P3)
+- [ ] `lever_type` cohérent avec titre et body
+- [ ] `mandat_principe` portable interchambre
+- [ ] Accessible à des étudiants non-spécialistes
+- [ ] Pas de redondance dans la même chambre
 
 ---
 
 ## Protocole de génération d'un nouveau deck
 
-Ordre de travail obligatoire (ne pas générer dans le désordre) :
+Ordre **obligatoire** :
 
-1. **Bible du deck** — univers narratif, institution, population, registre, logiciel central
-2. **5 scénarios (Phase 4)** — point culminant ; chaque scénario nomme la friction attendue avec le mandat qu'il recevra
-3. **20 actions + mandat_principe** — vérifier que chaque `mandat_principe` peut créer une friction dans le scénario de la chambre suivante
-4. **Audit de circulation interchambre** — tableau : chambre émettrice / mandat_principe / chambre réceptrice / scénario récepteur / nature de la friction / verdict
-5. **15 bascules** — préparer le terrain pour les tensions
+1. **Bible du deck** — univers, institution, technologie centrale, population, macro-conflit, registre
+2. **5 scénarios (Phase 4)** — les collisions finales ; chaque scénario nomme la friction attendue avec le mandat qu'il recevra
+3. **20 actions + `mandat_principe`** — vérifier que chaque mandat peut créer une friction dans le scénario de la chambre suivante
+4. **Audit de circulation** : tableau chambre émettrice / mandat_principe / chambre réceptrice / nature de la friction / verdict (fort / acceptable / trop local / trop abstrait / à réécrire)
+5. **15 bascules** — préparer le terrain
 6. **45 tensions** — approfondir les dilemmes
 7. **Audit de cohérence global**
 
-Le deck n'est pas validé tant que les 5 passages interchambres ne sont pas jugés cohérents (verdict : cohérent / trop local / trop abstrait / lexicalement incohérent / à réécrire).
+Le deck n'est pas validé tant que les 5 passages interchambres ne sont pas jugés cohérents.
 
-Le deck `care-triage` est le **deck de référence** pour cette méthode.
+**Decks de référence** : `care-triage` (santé publique), `glamour-glitch` (creator economy).
 
 ---
 
@@ -465,40 +470,35 @@ Le deck `care-triage` est le **deck de référence** pour cette méthode.
 **Architecture**
 - `getCollection()` pour lire le contenu, jamais `fs` direct
 - `getStaticPaths()` dans toutes les phases lit les decks et passe `chamber`, `nextGroupe`, `scenarioId` comme props — aucun mapping hardcodé
-- Filtrage par deck : `entries.filter(e => e.id.startsWith(deckId + '/'))` — fonctionne car les IDs générés par `glob()` ont la forme `demo/bascules/bascule-001`
-- Lookup scénario par champ YAML : `scenarios.find(s => s.data.id === scenarioId)` — jamais par entry ID
+- Filtrage par deck : `entries.filter(e => e.id.startsWith(deckId + '/'))` — IDs de la forme `glamour-glitch/bascules/bascule-gg-001`
+- Lookup scénario : `scenarios.find(s => s.data.id === scenarioId)` — jamais par entry ID
 
 **Constantes métier**
-- Toutes centralisées dans `src/lib/chambers.ts` : `CHAMBER_LABELS`, `CHAMBER_LABELS_SHORT`, `REV_LABELS`, `SLOT_THEME_LABELS`, `LEVER_LABELS`, `DOMINANT_TO_LEVERS`, `TRAJ_LABELS`, `clampTraj()`, `initTraj()`
-- Jamais redéclarées localement dans une page
+- Toutes dans `src/lib/chambers.ts` : `CHAMBER_LABELS`, `CHAMBER_LABELS_SHORT`, `REV_LABELS`, `SLOT_THEME_LABELS`, `LEVER_LABELS`, `DOMINANT_TO_LEVERS`, `TRAJ_LABELS`, `clampTraj()`, `initTraj()`
+- Jamais redéclarées localement
 
 **CSS**
-- Tokens dans `src/styles/global.css` — deux thèmes via `[data-theme="dark"]` / `[data-theme="light"]`
-- `data-chamber` utilise toujours les **slugs complets canoniques** (ex. `delegation-vs-souverainete`), jamais d'abréviation
-- Pas de CSS-in-JS, styles dans `<style>` tag Astro ou fichier `.css`
-- Éléments créés dynamiquement par JS → styles dans `<style is:global>` (Astro scoped CSS ne s'applique pas aux éléments `createElement()`)
+- Tokens dans `src/styles/global.css`
+- `data-chamber` utilise toujours les slugs complets canoniques
+- Pas de CSS-in-JS
+- Éléments créés dynamiquement → `<style is:global>`
 
 **UX figée**
-- Phase 1 : haut de pile = plus irréversible (index 0 = dominant), carte révélée = index 0
-- Phase 3 : jamais de textarea libre pour le mandat — toujours 2 champs guidés "parce que" + "à condition que"
-- Distribution des groupes : fiches A4 imprimées avant session, QR scanné sur la table — pas de QR projeté ni sélection manuelle
+- Phase 1 : position 1 (haut) = plus irréversible = dominant ; carte révélée = index 0 du DOM
+- Phase 3 : 2 champs guidés "parce que" + "à condition que" — jamais de textarea libre
+- Distribution des groupes : fiches A4 imprimées, QR scanné sur la table
 
 ---
 
 ## Ajouter un deck
 
-1. Créer `src/decks/mon-deck/config.yaml` avec tous les champs obligatoires
-2. Créer les sous-dossiers `bascules/`, `tensions/`, `actions/`, `scenarios/` dans ce même dossier
-3. Peupler avec les fichiers YAML en respectant les schémas et la bible éditoriale
-4. Suivre le **protocole de génération** (scénarios → actions → audit → bascules → tensions)
-5. Le build génère automatiquement toutes les routes — aucun code à modifier
+1. Créer `src/decks/mon-deck/config.yaml`
+2. Créer les sous-dossiers `bascules/`, `tensions/`, `actions/`, `scenarios/`
+3. Suivre le **protocole de génération** (scénarios → actions → audit → bascules → tensions)
+4. `npm run build` — les routes sont générées automatiquement
 
 ---
 
-## Migration : structure par paquets (terminée)
+## Migration structure par paquets (terminée)
 
-Migration effectuée. Structure résultante : `src/decks/[deck-id]/config.yaml` + sous-dossiers par phase.
-
-**Note technique** : Astro 4 interdit `glob()` dans `src/content/` — le contenu vit donc dans `src/decks/` (hors zone réservée). Le Content Layer expérimental est activé dans `astro.config.mjs`.
-
-Les schémas Zod, les filtres `startsWith(deckId + '/')`, et toutes les URLs générées sont inchangés.
+`src/decks/` (hors `src/content/`) via `glob()` + Content Layer expérimental (`astro.config.mjs`). Les schémas Zod, les filtres `startsWith()` et les URLs sont inchangés.

@@ -1,0 +1,28 @@
+id: bascule-gg-008
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Le studio qui ne sait plus ce qu'il a produit"
+situation: >
+  OmniStream Studios lance un catalogue de 40 000 clips audio produits par FAME-GEN
+  pour ses créateurs partenaires. Six mois plus tard, une réclamation juridique
+  arrive : une maison d'édition musicale identifie des similarités entre 200 clips
+  du catalogue et des œuvres de son catalogue protégé. L'équipe juridique d'OmniStream
+  ne peut pas reconstruire les sources d'entraînement utilisées pour ces clips.
+  Le modèle a été mis à jour 4 fois depuis la production.
+question: >
+  Quand un studio ne peut plus prouver l'origine de ce qu'il a produit, qui est
+  responsable — et peut-on gouverner ce qu'on ne peut pas retracer ?
+tags:
+  - traçabilite
+  - propriete-intellectuelle
+  - responsabilite
+  - modele
+facilitator_note:
+  si_silence: "Demandez : si vous étiez dans l'équipe juridique de ce studio, que demanderiez-vous à l'équipe technique ?"
+  si_debat_bloque: "Fait : plusieurs grandes plateformes ont fait face à des réclamations de droits sur des contenus générés par IA sans pouvoir retracer les données d'entraînement."
+  relance_cle: "La traçabilité d'un contenu généré est-elle une obligation technique ou une obligation éthique ?"
+version: "1.0"

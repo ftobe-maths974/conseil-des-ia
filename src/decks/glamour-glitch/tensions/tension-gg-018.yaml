@@ -1,0 +1,26 @@
+id: tension-gg-018
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Le classement qui crée ce qu'il prétend décrire"
+content: >
+  FAME-GEN classe les contenus selon leur engagement prédit — mais ce classement
+  influe sur la visibilité, qui influe sur l'engagement réel, qui valide
+  rétrospectivement la prédiction. Le système ne décrit pas une réalité
+  préexistante : il la crée. Les contenus qui ne rentrent pas dans ce cycle
+  de renforcement ne "décollent" jamais, non pas parce qu'ils sont mauvais,
+  mais parce que le système ne les a jamais mis en position de prouver leur valeur.
+  L'arbitrage algorithmique n'est pas neutre — il perpétue et amplifie les biais
+  de départ intégrés dans les données d'entraînement.
+question: >
+  Un système de classement qui auto-valide ses prédictions en influençant
+  les conditions de leur réalisation peut-il encore être considéré comme
+  un reflet du mérite ou de la qualité des contenus ?
+tags:
+  - boucle-de-renforcement
+  - biais
+  - merite
+  - classement
+version: "1.0"

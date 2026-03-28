@@ -1,0 +1,24 @@
+id: tension-gg-032
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: red
+title: "La diversité de façade dans un catalogue homogène"
+content: >
+  OmniStream affiche 200 catégories de contenus dans son catalogue. Mais une
+  analyse de la distribution réelle de la visibilité montre que 80% des vues
+  se concentrent sur des contenus FOF dans cinq catégories dominant.
+  Les 195 autres catégories existent nominalement mais sont invisibles
+  algorithmiquement. OmniStream communique sur sa "diversité de catalogue"
+  — ce qui est vrai en termes de volume de titres, faux en termes de visibilité
+  réelle. La diversité nominale masque la concentration réelle.
+question: >
+  Un catalogue diversifié en volume mais homogène en visibilité algorithmique
+  peut-il être présenté comme un engagement sincère envers la diversité culturelle ?
+tags:
+  - diversite-nominale
+  - visibilite
+  - catalogue
+  - concentration
+version: "1.0"

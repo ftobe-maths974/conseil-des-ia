@@ -1,0 +1,25 @@
+id: tension-gg-035
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Le créateur interchangeable dans une économie de l'attention"
+content: >
+  Dans un catalogue OmniStream homogénéisé par FAME-GEN, les créateurs deviennent
+  structurellement interchangeables : même format, même durée, même rythme narratif.
+  Quand un créateur quitte la plateforme, FAME-GEN peut le remplacer sans rupture
+  de flux détectable. Cette interchangeabilité affaiblit le pouvoir de négociation
+  de chaque créateur individuellement : il peut être remplacé, et le sait.
+  La standardisation n'est pas seulement une question esthétique — c'est un rapport
+  de force économique entre la plateforme et les individus qui en dépendent.
+question: >
+  L'homogénéisation des formats par FAME-GEN est-elle un résultat involontaire
+  de l'optimisation ou un mécanisme structurel qui affaiblit délibérément
+  le pouvoir de négociation des créateurs face à la plateforme ?
+tags:
+  - pouvoir-de-negociation
+  - interchangeabilite
+  - rapport-de-force
+  - economie
+version: "1.0"

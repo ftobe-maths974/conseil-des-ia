@@ -1,0 +1,30 @@
+id: tension-gg-026
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "La course entre la preuve et la simulation"
+content: >
+  À mesure que FAME-GEN améliore la qualité de ses synthèses, les outils de
+  détection de contenus synthétiques deviennent rapidement obsolètes. Cette
+  course technologique est asymétrique : produire des faux de qualité supérieure
+  est moins coûteux que de les détecter avec certitude. OmniStream investit
+  dans la génération — le marché de la détection reste fragmenté et sous-financé.
+  Un système de certification basé sur la détection technique peut donc être
+  valide aujourd'hui et dépassé dans six mois. La preuve technique est structurellement
+  instable dans un environnement de course à l'armement.
+data_point: >
+  Des chercheurs en sécurité numérique documentent que les taux de détection
+  de deepfakes par les meilleurs classifieurs tombent de 90% à moins de 50%
+  en moins de 12 mois lors des cycles d'amélioration rapide des modèles génératifs.
+question: >
+  Peut-on construire un régime de certification de l'authenticité sur des
+  outils de détection technique quand la course entre génération et détection
+  est structurellement gagnée par la génération ?
+tags:
+  - detection
+  - course-technologique
+  - certification
+  - fragilite
+version: "1.0"

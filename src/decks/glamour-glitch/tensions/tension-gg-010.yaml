@@ -1,0 +1,28 @@
+id: tension-gg-010
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Le droit de savoir pourquoi on a été enterré"
+content: >
+  Un créateur dont la visibilité a été réduite par FAME-GEN a-t-il un droit à
+  l'explication ? OmniStream Studio affirme que ses critères sont propriétaires et
+  que les révéler compromettrait l'intégrité du système. Le créateur répond qu'une
+  décision qui affecte son revenu sans motivation n'est pas une décision légitime.
+  Deux logiques s'affrontent : la logique de protection du modèle industriel versus
+  la logique de droit à l'explication pour toute décision ayant des effets sur la
+  vie professionnelle et économique d'une personne. Les deux positions sont défendables.
+data_point: >
+  Le RGPD européen reconnaît depuis 2018 un droit à l'explication pour les décisions
+  automatisées ayant un impact significatif sur une personne physique. Son application
+  aux plateformes de contenu fait l'objet d'une jurisprudence encore incomplète.
+question: >
+  Le droit à l'explication d'une décision algorithmique doit-il s'appliquer même
+  quand la transparence risque de fragiliser l'intégrité du système qui décide ?
+tags:
+  - explication
+  - droit
+  - opacite
+  - modele-proprietaire
+version: "1.0"

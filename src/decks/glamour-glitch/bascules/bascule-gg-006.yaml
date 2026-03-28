@@ -1,0 +1,28 @@
+id: bascule-gg-006
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: systemique
+title: "La démonétisation qui trie sans le dire"
+situation: >
+  Une analyse indépendante de 10 000 créateurs OmniStream révèle que les contenus
+  en langues autres que l'anglais sont démonétisés à un taux 2,8 fois supérieur
+  aux contenus anglophones, toutes choses égales par ailleurs. FAME-GEN n'a pas
+  été conçu pour discriminer — mais le biais est statistiquement significatif
+  et documenté. OmniStream n'a publié aucune donnée sur la répartition de la
+  démonétisation par langue ou culture.
+question: >
+  Quand un système sans intention discriminatoire produit des effets discriminatoires
+  mesurables, qui est responsable et quelles mesures s'imposent ?
+tags:
+  - biais-algorithmique
+  - demonetisation
+  - langue
+  - discrimination
+facilitator_note:
+  si_silence: "Demandez : si ce biais touchait votre langue ou votre culture, considéreriez-vous ça comme un bug ou comme une décision ?"
+  si_debat_bloque: "Fait technique : les biais dans les systèmes de NLP et de recommandation liés à la langue sont bien documentés dans la littérature académique depuis 2018."
+  relance_cle: "L'absence d'intention discriminatoire exonère-t-elle d'une responsabilité face à un effet discriminatoire prouvé ?"
+version: "1.0"

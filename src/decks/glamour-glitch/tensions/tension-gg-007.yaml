@@ -1,0 +1,28 @@
+id: tension-gg-007
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "La concentration du pouvoir de décision créative"
+content: >
+  Quand FAME-GEN prend les décisions créatives pour des milliers de créateurs,
+  il ne s'agit plus de délégation individuelle — c'est une concentration du pouvoir
+  éditorial dans un seul système contrôlé par un seul acteur. OmniStream Studios
+  décide implicitement de ce qui est produit, de ce qui est optimisé, de ce qui
+  est standardisé. Des millions de décisions créatives passent par un seul goulot
+  d'étranglement algorithmique. Ce n'est pas de l'aide à la création : c'est
+  une centralisation inédite du pouvoir éditorial à l'échelle industrielle.
+data_point: >
+  Les économistes de la culture documentent que la concentration de la décision
+  éditoriale réduit historiquement la diversité de la production — effet observé
+  lors de chaque vague de consolidation dans la presse, le cinéma et la musique.
+question: >
+  La délégation de millions de décisions créatives individuelles à un seul système
+  crée-t-elle un monopole éditorial de fait — et est-ce un problème de gouvernance ?
+tags:
+  - concentration
+  - pouvoir-editorial
+  - gouvernance
+  - systeme
+version: "1.0"

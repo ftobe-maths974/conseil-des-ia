@@ -1,0 +1,21 @@
+id: action-gg-018
+phase: action
+slot: 2
+lever_type: limiter
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Plafonner la production synthétique annuelle de FAME-GEN à empreinte ressource constante"
+body: >
+  OmniStream Studios est tenu de maintenir la consommation totale en énergie et
+  en eau de FAME-GEN à un niveau constant ou décroissant d'une année sur l'autre,
+  indépendamment de la croissance du volume de production. Toute augmentation du
+  volume est conditionnée à une amélioration documentée de l'efficacité par unité
+  produite, vérifiée par audit indépendant publié dans les 90 jours.
+mandat_principe: "Plafonner la croissance d'un système génératif à ce que son efficacité réelle peut absorber sans augmentation de l'empreinte ressource totale."
+tags:
+  - plafond
+  - empreinte
+  - efficacite
+  - croissance
+version: "1.0"

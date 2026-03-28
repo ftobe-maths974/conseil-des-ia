@@ -1,0 +1,21 @@
+id: action-gg-016
+phase: action
+slot: 4
+lever_type: interdire
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "Interdire la standardisation rétroactive du catalogue sans accord des créateurs"
+body: >
+  OmniStream Studios ne peut appliquer rétroactivement les normes de format FAME-GEN
+  à des contenus déjà publiés sans l'accord explicite de chaque créateur concerné.
+  Toute modification de métadonnées, de thumbnail, de titre ou de structure d'un
+  contenu existant à des fins d'optimisation algorithmique est soumise au consentement
+  préalable du créateur, avec droit de refus sans pénalité.
+mandat_principe: "Interdire toute modification rétroactive d'une œuvre publiée à des fins d'optimisation algorithmique sans consentement explicite de son auteur."
+tags:
+  - standardisation-retroactive
+  - consentement
+  - catalogue
+  - droits-auteur
+version: "1.0"

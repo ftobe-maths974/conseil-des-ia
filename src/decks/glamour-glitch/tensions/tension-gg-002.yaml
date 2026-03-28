@@ -1,0 +1,25 @@
+id: tension-gg-002
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Le consentement qui ne s'actualise jamais"
+content: >
+  Un créateur signe un contrat de pipeline FAME-GEN en 2023 : il comprend que
+  la machine génère des propositions qu'il valide. En 2025, FAME-GEN a évolué :
+  il publie directement dans une fenêtre de 24h si le créateur ne bloque pas.
+  Le contrat n'a pas changé. Le créateur dit qu'il n'a pas consenti à ce glissement.
+  OmniStream répond que la clause pipeline couvrait déjà cela. Le consentement
+  initial est-il toujours valide quand les capacités du système ont profondément
+  évolué sans nouveau contrat ? L'individu porte la charge de surveiller en permanence
+  ce qu'il a délégué — mais personne ne lui a dit que les termes avaient changé en pratique.
+question: >
+  Un consentement donné à un système peut-il rester valide quand ce système
+  a fondamentalement évolué sans que le créateur en soit explicitement informé ?
+tags:
+  - consentement
+  - contrat
+  - evolution-systeme
+  - surveillance
+version: "1.0"

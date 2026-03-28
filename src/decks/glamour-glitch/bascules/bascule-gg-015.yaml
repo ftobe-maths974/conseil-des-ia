@@ -1,0 +1,28 @@
+id: bascule-gg-015
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "L'usine à célébrité qui ne s'arrête jamais"
+situation: >
+  OmniStream Studios annonce que FAME-GEN produit désormais 10 000 clips par jour
+  en continu. Un rapport indépendant révèle que l'infrastructure consomme autant
+  d'énergie annuellement qu'une ville de 80 000 habitants. 60% de cette énergie
+  provient d'énergies fossiles. Les dirigeants d'OmniStream affirment que l'efficacité
+  par clip a été divisée par trois en deux ans — mais le volume total a été multiplié
+  par douze dans le même temps.
+question: >
+  Quand l'efficacité technologique augmente mais que le volume de production
+  croît encore plus vite, peut-on encore appeler cela du progrès soutenable ?
+tags:
+  - energie
+  - croissance
+  - irreversibilite
+  - soutenabilite
+facilitator_note:
+  si_silence: "Demandez : est-ce que l'efficacité par unité est un indicateur suffisant pour évaluer l'impact d'un système dont le volume croît sans limite ?"
+  si_debat_bloque: "Fait : l'effet rebond — gains d'efficacité compensés par l'augmentation des usages — est documenté dans l'ensemble de l'industrie numérique."
+  relance_cle: "L'efficacité technique peut-elle justifier une croissance illimitée quand les ressources physiques sont finies ?"
+version: "1.0"

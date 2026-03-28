@@ -1,0 +1,26 @@
+id: tension-gg-027
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: green
+title: "Le faux déclaré qui enrichit la culture"
+content: >
+  FAME-GEN permet de produire des parodies, des hommages, des œuvres fictionnelles
+  clairement déclarées comme telles : une pièce de théâtre où un personnage historique
+  répond à des questions contemporaines, une satire avec une voix synthétique
+  explicitement identifiée. Ces usages sont légalement et éthiquement distincts
+  de la tromperie. Mais OmniStream ne dispose pas de mécanisme robuste pour distinguer
+  automatiquement le faux assumé du faux trompeur à grande échelle. Une règle
+  absolue contre toute simulation identitaire interdirait des usages culturels
+  précieux ; pas de règle du tout expose à la tromperie industrielle.
+question: >
+  Comment distinguer institutionnellement le faux assumé culturellement légitime
+  du faux trompeur dans un système génératif à grande échelle — sans sacrifier
+  l'un pour contrôler l'autre ?
+tags:
+  - fiction
+  - satire
+  - usage-legitime
+  - distinction
+version: "1.0"

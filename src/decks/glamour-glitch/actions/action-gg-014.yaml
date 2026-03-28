@@ -1,0 +1,21 @@
+id: action-gg-014
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: singularite-vs-standard
+reversibility: green
+scope: organisationnel
+title: "Conditionner tout standard de format à une clause d'exception documentée"
+body: >
+  Toute norme de production imposée ou fortement incitée par FAME-GEN sur OmniStream
+  doit être accompagnée d'une procédure d'exception formelle, permettant à un créateur
+  de demander une exemption motivée avec maintien de la visibilité de base. OmniStream
+  est tenu de traiter les demandes d'exception dans un délai de 14 jours et de publier
+  le taux d'acceptation par catégorie de créateur.
+mandat_principe: "Conditionner tout standard de production automatisée à l'existence d'une voie d'exception accessible, motivée et non sanctionnante."
+tags:
+  - standard
+  - exception
+  - format
+  - visibilite
+version: "1.0"

@@ -1,0 +1,25 @@
+id: tension-gg-029
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: red
+title: "L'edge case humain que FAME-GEN ne sait pas traiter"
+content: >
+  Un créateur sourd produit des contenus avec une esthétique visuelle dense et
+  sans voix — incompatible avec les standards FOF. FAME-GEN le déclasse
+  systématiquement. Son format n'est pas une non-conformité esthétique : c'est
+  une adaptation fonctionnelle à sa propre expérience sensorielle. Pour lui,
+  l'optimisation algorithmique n'est pas une pression stylistique — c'est une
+  exclusion. Les systèmes conçus pour la moyenne excluent structurellement ceux
+  dont la différence n'est pas un choix.
+question: >
+  Un système de classement conçu pour optimiser la moyenne peut-il éviter
+  d'exclure structurellement les créateurs dont la singularité n'est pas
+  un choix esthétique mais une condition d'existence ?
+tags:
+  - accessibilite
+  - edge-case
+  - exclusion
+  - diversite
+version: "1.0"

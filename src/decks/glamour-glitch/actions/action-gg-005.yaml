@@ -1,0 +1,22 @@
+id: action-gg-005
+phase: action
+slot: 1
+lever_type: auditer
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: systemique
+title: "Auditer les critères de démonétisation appliqués par FAME-GEN"
+body: >
+  OmniStream Studios est tenu de publier annuellement un rapport d'audit indépendant
+  sur les critères effectifs de déclassement, démonétisation et suppression de contenu
+  appliqués par FAME-GEN, incluant les taux d'erreur par catégorie de créateurs,
+  les biais identifiés par sous-groupe et les voies de recours disponibles.
+  L'audit est conduit par un tiers agréé désigné hors de la chaîne hiérarchique
+  du studio.
+mandat_principe: "Garantir la lisibilité et la contestabilité publique des critères de classement et de sanction algorithmique appliqués à toute identité de créateur."
+tags:
+  - audit
+  - demonetisation
+  - transparence
+  - biais
+version: "1.0"

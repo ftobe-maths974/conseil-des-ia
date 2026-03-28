@@ -1,0 +1,29 @@
+id: tension-gg-003
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "La compétence qu'on n'exerce plus"
+content: >
+  Pendant cinq ans, un monteur OmniStream développe son expertise technique et
+  créative. Depuis 18 mois, FAME-GEN fait le travail à sa place — mieux, plus vite.
+  Il ne monte plus rien. Il valide. Un jour, il doit monter un clip urgent sans
+  accès au pipeline : il réalise qu'il ne sait plus. La délégation prolongée n'a
+  pas seulement externalisé le travail — elle a désamorcé la compétence. La question
+  n'est pas la performance du système IA ; c'est l'atrophie silencieuse d'une
+  capacité humaine qui paraît inutile jusqu'au moment où elle ne l'est plus.
+data_point: >
+  Des études en psychologie du travail documentent le phénomène d'"automation complacency"
+  : les opérateurs humains supervisants des systèmes automatisés perdent leurs
+  compétences de base en l'absence de pratique régulière, y compris dans des secteurs
+  critiques comme l'aviation ou la médecine.
+question: >
+  Doit-on préserver des compétences créatives humaines que FAME-GEN remplace
+  efficacement — et si oui, qui en porte la responsabilité ?
+tags:
+  - competence
+  - atrophie
+  - dependance
+  - formation
+version: "1.0"

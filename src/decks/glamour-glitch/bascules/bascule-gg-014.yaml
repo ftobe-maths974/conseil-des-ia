@@ -1,0 +1,28 @@
+id: bascule-gg-014
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Le data center qui refroidit dans la nappe"
+situation: >
+  OmniStream Studios installe un nouveau data center en Espagne du sud pour héberger
+  les modèles FAME-GEN de la région EMEA. La commune voisine apprend que le data
+  center consommera l'équivalent de l'usage en eau potable annuel de 12 000 habitants
+  pour son refroidissement. La région est en stress hydrique modéré. OmniStream
+  a respecté toutes les réglementations locales. La commission municipale réclame
+  une étude d'impact. OmniStream rappelle les 400 emplois créés.
+question: >
+  Peut-on justifier des externalités environnementales locales par des bénéfices
+  économiques locaux — et qui devrait avoir le dernier mot sur ce compromis ?
+tags:
+  - eau
+  - data-center
+  - externalite
+  - impact-local
+facilitator_note:
+  si_silence: "Demandez : si vous étiez un élu de cette commune, quel serait votre critère de décision ?"
+  si_debat_bloque: "Poussez : est-ce que 'conforme à la réglementation' équivaut à 'acceptable' pour les communautés locales ?"
+  relance_cle: "La régulation nationale est-elle suffisante pour protéger les ressources locales contre des projets d'infrastructure numérique globale ?"
+version: "1.0"

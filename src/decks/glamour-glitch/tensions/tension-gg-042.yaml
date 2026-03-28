@@ -1,0 +1,26 @@
+id: tension-gg-042
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "L'optimisation qui réduit le gaspillage humain"
+content: >
+  Avant FAME-GEN, la production d'un clip OmniStream impliquait des déplacements
+  physiques, des studios loués, des équipes mobilisées pour des tournages parfois
+  abandonnés, des ressources matérielles gaspillées sur des projets non aboutis.
+  FAME-GEN a rationalisé la production : moins de déplacements, moins de matériel,
+  moins de ressources physiques mobilisées. L'empreinte numérique a augmenté ;
+  l'empreinte physique hors-numérique a diminué. Le bilan total reste contesté.
+  Mais la question n'est pas simple : peut-on comparer les émissions d'un vol
+  en avion pour un tournage à celles d'une inférence GPU ?
+question: >
+  La réduction de l'empreinte physique traditionnelle par FAME-GEN compense-t-elle
+  l'augmentation de l'empreinte numérique — et qui doit faire ce calcul
+  et avec quelles méthodes ?
+tags:
+  - bilan-global
+  - empreinte-physique
+  - empreinte-numerique
+  - comparaison
+version: "1.0"
