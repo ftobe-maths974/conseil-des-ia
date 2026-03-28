@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const CHAMBER_ENUM = z.enum([
   'delegation-vs-souverainete',
@@ -9,7 +10,7 @@ const CHAMBER_ENUM = z.enum([
 ]);
 
 const bascules = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*/bascules/*.yaml', base: './src/decks' }),
   schema: z.object({
     id: z.string(),
     phase: z.literal('bascule'),
@@ -34,7 +35,7 @@ const bascules = defineCollection({
 });
 
 const tensions = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*/tensions/*.yaml', base: './src/decks' }),
   schema: z.object({
     id: z.string(),
     phase: z.literal('tension'),
@@ -60,7 +61,7 @@ const tensions = defineCollection({
 });
 
 const actions = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*/actions/*.yaml', base: './src/decks' }),
   schema: z.object({
     id: z.string(),
     phase: z.literal('action'),
@@ -87,7 +88,7 @@ const actions = defineCollection({
 });
 
 const scenarios = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*/scenarios/*.yaml', base: './src/decks' }),
   schema: z.object({
     id: z.string(),
     phase: z.literal('scenario'),
@@ -113,7 +114,7 @@ const scenarios = defineCollection({
 });
 
 const roles = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*/roles/*.yaml', base: './src/decks' }),
   schema: z.object({
     id: z.string(),
     phase: z.literal('role'),
@@ -126,7 +127,7 @@ const roles = defineCollection({
 });
 
 const decks = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*/config.yaml', base: './src/decks' }),
   schema: z.object({
     id: z.string(),
     name: z.string(),

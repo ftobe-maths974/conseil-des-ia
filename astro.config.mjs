@@ -5,6 +5,9 @@ export default defineConfig({
   site: 'https://ftobe-maths974.github.io',
   base: '/conseil-des-ia',
   output: 'static',
+  experimental: {
+    contentLayer: true,
+  },
   build: {
     assets: '_assets',
   },
