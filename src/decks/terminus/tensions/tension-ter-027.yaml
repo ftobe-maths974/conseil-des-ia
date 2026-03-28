@@ -1,0 +1,23 @@
+id: tension-ter-027
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+title: "La fraude détectée et la vie détruite"
+content: >
+  CITIZEN-SCAN a détecté une fraude avérée dans 0,8% des dossiers contrôlés.
+  Pour atteindre ce résultat, il a déclenché des procédures de contrôle sur
+  14% des dossiers. Parmi les 13,2% sans fraude, plusieurs ont vécu des
+  suspensions de droits pendant plusieurs semaines. Certains n'ont pas réussi
+  à payer leur loyer. Le système "fonctionne". Il produit aussi des dommages
+  collatéraux non comptabilisés.
+question: >
+  Quel taux de dommages causés à des personnes innocentes est-il acceptable
+  pour garantir la détection d'une fraude dans un système d'aide sociale ?
+tags:
+  - taux-faux-positif
+  - fraude
+  - dommages
+  - proportionnalite
+version: "1.0"

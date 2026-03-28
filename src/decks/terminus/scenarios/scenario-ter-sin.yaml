@@ -1,0 +1,54 @@
+id: scenario-ter-sin
+phase: scenario
+chamber: singularite-vs-standard
+title: "La famille hors cases"
+context: >
+  Youssouf, 22 ans, étudiant boursier, vit dans un appartement avec deux cousins et
+  envoie chaque mois 150 euros à sa famille restée au Sénégal. CITIZEN-SCAN a
+  détecté trois "anomalies" dans son profil : adresse partagée entre trois personnes
+  majeures, virement international régulier, consommation alimentaire très inférieure
+  à la moyenne. Son score a déclenché un contrôle automatique "situation de vie
+  non conforme au profil déclaré". Sa bourse a été mise sous condition de justificatif
+  de résidence principale, qu'il ne peut pas produire — le bail est au nom de son
+  cousin. Le groupe reçoit le mandat : "Reconnaître les formes de solidarité non
+  standard dans l'évaluation des droits, sans les traiter par défaut comme des
+  anomalies ou des fraudes."
+  L'Agence estime que 18% des dossiers étudiants présentent des "configurations
+  de vie atypiques" qui déclenchent des vérifications supplémentaires. Elle affirme
+  que cela permet d'identifier des situations d'hébergement contraint non déclarées.
+roles_briefing:
+  decideur: >
+    Vous êtes responsable des aides étudiantes à L'Agence. Vous avez justifié la
+    détection automatique des "configurations atypiques" comme un outil de protection :
+    elle permet aussi d'identifier des étudiants en logement précaire non signalés.
+    Votre ligne rouge : vous ne supprimerez pas un outil qui peut aussi aider. Votre
+    angle mort : vous ne mesurez pas à quelle fréquence l'outil punit avant d'aider.
+  technicien: >
+    Vous avez paramétré les seuils d'anomalie de CITIZEN-SCAN sur des données
+    statistiques nationales. Les trois signaux qui ont déclenché le contrôle de
+    Youssouf sont tous valides individuellement. Mais leur combinaison particulière
+    n'était pas prévue. Vous pouvez ajuster les seuils mais pas créer une règle
+    d'exception pour "solidarité familiale" : le modèle ne comprend pas cette catégorie.
+    Votre ligne rouge : vous ne certifierez pas que le modèle est culturellement neutre.
+  affecte: >
+    Vous êtes Youssouf. Vous avez expliqué votre situation à L'Agence. On vous a
+    répondu que les critères s'appliquent à tous et que vous devez produire un bail
+    à votre nom. Vous ne pouvez pas. Votre cousin a signé le bail, vous n'avez pas
+    les moyens d'en signer un seul. Vous envoyez de l'argent chez vous parce que
+    c'est votre famille. Votre ligne rouge : vous refusez qu'on vous demande d'arrêter
+    d'être ce que vous êtes pour recevoir une aide à laquelle vous avez droit.
+  contre_pouvoir: >
+    Vous êtes travailleur social dans une association étudiante. Vous connaissez
+    des dizaines de situations similaires. Vous avez documenté que les étudiants
+    d'Afrique subsaharienne sont surreprésentés dans les contrôles "configuration
+    atypique" à hauteur de 2,7 fois la moyenne. Vous cherchez une règle qui protège
+    ces configurations réelles sans créer un régime d'exception ethnique. Votre
+    question : comment reconnaître la solidarité sans la cibler ?
+tags:
+  - solidarite-informelle
+  - configuration-atypique
+  - bourse
+  - discrimination-indirecte
+  - norme
+difficulty: moyen
+version: "1.0"

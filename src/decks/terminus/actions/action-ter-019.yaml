@@ -1,0 +1,21 @@
+id: action-ter-019
+phase: action
+slot: 3
+lever_type: conditionner
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner le maintien d'un dispositif de contrôle à l'évaluation de son impact sur les agents"
+body: >
+  L'Agence ne peut reconduire un dispositif de contrôle automatisé sans présenter,
+  avec le rapport de performance, une évaluation de son impact sur les conditions
+  de travail des agents : taux de démission, consultations psychologiques, signalements
+  de perte de sens. Si l'un de ces indicateurs dépasse un seuil fixé, la reconduction
+  est soumise à validation d'une commission paritaire.
+mandat_principe: "Conditionner le renouvellement de tout dispositif de contrôle à l'évaluation de son impact humain sur les agents qui l'opèrent."
+tags:
+  - agents
+  - conditions-travail
+  - renouvellement
+  - epuisement
+version: "1.0"

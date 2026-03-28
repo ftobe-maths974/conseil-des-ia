@@ -1,0 +1,23 @@
+id: tension-ter-001
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "L'aide rapide contre la décision juste"
+content: >
+  Depuis CITIZEN-SCAN, les dossiers sont traités en 48 heures au lieu de six semaines.
+  Pour des personnes en précarité aiguë, ce délai peut changer le cours d'une situation.
+  Mais la rapidité repose sur l'absence d'examen individuel : le système applique
+  des règles statistiques, pas un jugement de situation. Accepter la vitesse, c'est
+  accepter que sa propre situation ne soit jamais vraiment lue. Refuser l'automatisation,
+  c'est accepter que des personnes urgentes attendent des semaines un agent qui comprend.
+question: >
+  Peut-on accepter une décision juste statistiquement mais potentiellement injuste
+  dans son cas précis, si l'alternative est une attente qui met en danger ?
+tags:
+  - vitesse
+  - precision
+  - trade-off
+  - urgence
+version: "1.0"

@@ -1,0 +1,24 @@
+id: tension-ter-009
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "L'état qui sous-traite son jugement moral"
+content: >
+  CITIZEN-SCAN classe les usagers selon leur "conformité sociale présumée". Ce
+  classement repose sur des critères définis par une société privée dans un contrat
+  non public. Ces critères opérationnalisent des jugements de valeur : ce qui est
+  "actif", ce qui est "régulier", ce qui est "méritant". Ce sont des choix politiques
+  déguisés en paramètres techniques. L'État les applique sans les avoir délibérés
+  publiquement.
+question: >
+  Quand une institution publique délègue à un opérateur privé la définition de
+  ce qu'est un comportement "conforme", qui est réellement responsable des valeurs
+  que le système incarne ?
+tags:
+  - valeurs
+  - jugement-moral
+  - sous-traitance
+  - etat
+version: "1.0"

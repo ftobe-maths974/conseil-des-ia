@@ -1,0 +1,23 @@
+id: tension-ter-031
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: green
+title: "La standardisation qui accélère l'accès"
+content: >
+  Grâce à CITIZEN-SCAN, L'Agence a réduit ses délais de traitement de 85%.
+  Ce gain profite à la majorité des usagers dont les situations sont standard.
+  Mais il a été obtenu en supprimant les procédures d'exception individuelles,
+  jugées trop coûteuses. L'amélioration globale masque une dégradation spécifique :
+  les personnes en situation atypique attendent maintenant deux fois plus longtemps
+  qu'avant pour obtenir un traitement manuel.
+question: >
+  Une amélioration qui profite à la majorité mais aggrave la situation d'une
+  minorité déjà fragile constitue-t-elle un progrès équitable ?
+tags:
+  - standardisation
+  - equite
+  - minorite
+  - efficacite
+version: "1.0"

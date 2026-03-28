@@ -1,0 +1,23 @@
+id: bascule-ter-012
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "La norme qui efface"
+situation: >
+  CITIZEN-SCAN a été entraîné sur dix millions de dossiers traités entre 2015 et
+  2023. Les situations de vie qui n'apparaissaient pas dans ces données — aidants
+  informels, logements partagés non déclarés, rythmes de vie atypiques — ne sont
+  pas reconnues comme valides. Le système ne peut pas apprendre à partir de cas
+  individuels. Les exceptions motivées prennent en moyenne 47 jours à traiter.
+question: >
+  Un modèle statistique entraîné sur le passé peut-il être équitable pour
+  des personnes dont les situations de vie n'étaient pas représentées dans les données ?
+tags:
+  - modele
+  - donnees-historiques
+  - representation
+  - exception
+version: "1.0"

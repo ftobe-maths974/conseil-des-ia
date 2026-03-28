@@ -1,0 +1,22 @@
+id: tension-ter-034
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: green
+title: "L'exception comme soupape ou comme droit"
+content: >
+  L'Agence a prévu une procédure d'exception pour les situations non standard.
+  Elle est utilisée dans 0,3% des dossiers. Les agents qui l'instruisent signalent
+  qu'ils sont soumis à une pression informelle pour en limiter le recours : trop
+  d'exceptions "créent un précédent" et "complexifient le système". L'exception
+  existe comme soupape de sécurité. Pas comme droit.
+question: >
+  Une procédure d'exception conçue pour être rarement utilisée peut-elle
+  constituer un droit réel pour les personnes qui en ont besoin ?
+tags:
+  - exception
+  - pression-interne
+  - droit
+  - pression
+version: "1.0"

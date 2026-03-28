@@ -1,0 +1,23 @@
+id: tension-ter-039
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "L'optimisation qui épuise ce qu'elle optimise"
+content: >
+  Les agents de L'Agence traitaient autrefois des personnes. Maintenant ils traitent
+  des alertes. Ils sont plus "productifs" selon les indicateurs. Mais plusieurs
+  d'entre eux disent avoir perdu le sens de leur travail. La capacité d'écoute,
+  de jugement et d'adaptation qui faisait leur valeur n'est plus requise.
+  Ce qu'ils apportaient de plus — la compréhension humaine d'une situation — a été
+  remplacé par quelque chose de plus rapide qui ne le peut pas.
+question: >
+  Quand l'optimisation d'un service détruit les conditions qui donnaient sens
+  au travail de ceux qui l'assuraient, quel est le vrai coût de cette optimisation ?
+tags:
+  - sens-travail
+  - agent
+  - optimisation
+  - epuisement
+version: "1.0"

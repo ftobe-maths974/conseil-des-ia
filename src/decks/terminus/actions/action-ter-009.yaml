@@ -1,0 +1,21 @@
+id: action-ter-009
+phase: action
+slot: 1
+lever_type: interdire
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Interdire d'interpréter l'absence de signal numérique comme preuve de fraude"
+body: >
+  Il est interdit à CITIZEN-SCAN de déclencher une procédure de contrôle ou de
+  suspension de droits sur la seule base de l'absence de connexion, de réponse
+  ou d'activité numérique d'un usager. Toute suspicion de fraude par inactivité
+  doit être confirmée par un contact humain dans un délai de dix jours ouvrés
+  avant toute mesure.
+mandat_principe: "Garantir que le silence, l'inactivité numérique ou l'absence de réponse ne soient jamais interprétés par défaut comme une fraude ou un désengagement."
+tags:
+  - inactivite
+  - fraude
+  - faux-positif
+  - preuve
+version: "1.0"

@@ -1,0 +1,20 @@
+id: action-ter-004
+phase: action
+slot: 4
+lever_type: limiter
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: systemique
+title: "Plafonner la part des décisions entièrement automatisées à 60% du volume total"
+body: >
+  L'Agence ne peut confier à CITIZEN-SCAN plus de 60% de ses décisions individuelles
+  sans approbation d'une commission indépendante. Les 40% restants sont traités par
+  des agents humains selon un tirage représentatif, afin de maintenir une capacité
+  de jugement institutionnel non automatisé et d'identifier les dérives du modèle.
+mandat_principe: "Plafonner l'automatisation des décisions individuelles à un seuil permettant de maintenir une capacité humaine de jugement et de contrôle."
+tags:
+  - plafonnement
+  - automatisation
+  - delegation
+  - capacite-humaine
+version: "1.0"

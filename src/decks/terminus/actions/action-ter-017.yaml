@@ -1,0 +1,20 @@
+id: action-ter-017
+phase: action
+slot: 1
+lever_type: limiter
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Plafonner le budget de surveillance à la valeur des droits détournés qu'il protège"
+body: >
+  Le coût annuel de tout dispositif de contrôle comportemental déployé par L'Agence
+  ne peut excéder 120% du montant annuel des fraudes qu'il est statistiquement
+  démontré à même de prévenir, attesté par un audit indépendant publié. Tout dispositif
+  dépassant ce seuil est suspendu dans les 90 jours suivant la publication de l'audit.
+mandat_principe: "Plafonner le coût de tout dispositif de contrôle à un montant proportionnel au risque réel qu'il est censé couvrir, attesté par audit public."
+tags:
+  - proportionnalite
+  - surveillance
+  - cout
+  - audit
+version: "1.0"

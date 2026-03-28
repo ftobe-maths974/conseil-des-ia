@@ -1,0 +1,24 @@
+id: bascule-ter-011
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: organisationnel
+title: "La catégorie qui n'existe pas"
+situation: >
+  Une travailleuse sociale signale à L'Agence le cas d'une famille de cinq personnes
+  dont la mère seule subvient aux besoins. La grand-mère vit avec eux mais n'est
+  pas déclarée dans le dossier : sa présence ferait basculer le foyer dans une
+  catégorie différente avec moins d'aides. CITIZEN-SCAN ne reconnaît pas la
+  catégorie "famille élargie non cohabitante officielle". La travailleuse sociale
+  ne sait pas quel formulaire remplir.
+question: >
+  Quand les catégories administratives ne correspondent plus aux structures
+  de vie réelles, qui est responsable des personnes qui tombent entre les cases ?
+tags:
+  - famille-elargie
+  - categorie
+  - travailleur-social
+  - non-conformite
+version: "1.0"

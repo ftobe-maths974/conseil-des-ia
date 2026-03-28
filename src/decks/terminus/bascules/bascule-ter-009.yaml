@@ -1,0 +1,23 @@
+id: bascule-ter-009
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "La présomption renversée"
+situation: >
+  Depuis la version 3.2 de CITIZEN-SCAN, tout dossier présentant plus de trois
+  signaux d'anomalie passe en "mode vérification prioritaire", ce qui suspend
+  automatiquement les droits en attente d'un contrôle. L'usager doit apporter
+  la preuve de sa conformité pour les rétablir. La charge de la preuve est passée
+  de l'institution à la personne concernée, sans texte réglementaire.
+question: >
+  Peut-on accepter qu'un système automatisé inverse la charge de la preuve
+  en matière d'accès aux droits sans cadre légal explicite ?
+tags:
+  - charge-preuve
+  - presomption
+  - droits
+  - legalite
+version: "1.0"

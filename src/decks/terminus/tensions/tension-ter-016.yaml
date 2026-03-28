@@ -1,0 +1,22 @@
+id: tension-ter-016
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "L'explication qui simplifie trop"
+content: >
+  Pour rendre CITIZEN-SCAN contestable, L'Agence propose d'expliquer les décisions
+  par des résumés automatiques en langage simple : "Votre dossier a été ralenti en
+  raison d'une anomalie dans vos données de mobilité." Ces résumés sont générés
+  par un second algorithme. Ils sont compréhensibles. Ils ne sont pas nécessairement
+  vrais : le résumé simplifie un calcul matriciel de 140 variables en une phrase.
+question: >
+  Une explication compréhensible mais inexacte vaut-elle mieux qu'une explication
+  exacte mais incompréhensible — ou les deux sont-elles également insuffisantes pour garantir le droit au recours ?
+tags:
+  - explication
+  - complexite
+  - droit-au-recours
+  - simplification
+version: "1.0"

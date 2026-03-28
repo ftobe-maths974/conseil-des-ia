@@ -1,0 +1,26 @@
+id: tension-ter-018
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Le recours qui coûte"
+content: >
+  Exercer un recours contre une décision de L'Agence prend en moyenne trois mois
+  et nécessite de fournir quinze documents. Pour une personne en situation précaire,
+  ce coût en temps, en énergie et en paperasse est souvent supérieur au bénéfice
+  espéré. Le droit au recours est juridiquement garanti. Il est pratiquement
+  inaccessible à ceux qui en auraient le plus besoin.
+data_point: >
+  En France, le taux d'exercice des recours administratifs sur les refus d'aide
+  sociale est estimé à moins de 3% des décisions contestables, selon le rapport
+  annuel du Défenseur des droits 2022.
+question: >
+  Un droit au recours rendu inaccessible par son coût pratique est-il
+  encore un garde-fou réel contre les abus du système ?
+tags:
+  - recours
+  - accessibilite
+  - cout-pratique
+  - precarite
+version: "1.0"

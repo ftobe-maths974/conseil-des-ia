@@ -1,0 +1,22 @@
+id: tension-ter-017
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "La sanction minimale qui ne se conteste pas"
+content: >
+  CITIZEN-SCAN applique des micro-sanctions : délais rallongés de trois jours,
+  rang reculé de cinq places, alertes de vérification qui n'aboutissent à rien.
+  Chaque sanction individuelle est si petite qu'aucun avocat ne l'accepterait
+  comme dossier. Mais leur accumulation, sur six mois, représente une dégradation
+  réelle des droits. La somme est injuste. Les parties ne le sont pas.
+question: >
+  Un système de micro-sanctions cumulatives est-il plus difficile à contester
+  qu'une sanction explicite unique — et ce fait modifie-t-il son évaluation éthique ?
+tags:
+  - micro-sanction
+  - cumul
+  - recours
+  - systeme
+version: "1.0"

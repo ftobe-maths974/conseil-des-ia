@@ -1,0 +1,23 @@
+id: tension-ter-041
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "La dette technique comme dette sociale"
+content: >
+  CITIZEN-SCAN n'a pas été mis à jour depuis 14 mois. Des patches de sécurité sont
+  en attente. L'opérateur attend un avenant au contrat pour effectuer les mises à
+  jour. Pendant ce temps, le système tourne sur une version qui contient des bugs
+  connus affectant 2 à 3% des calculs de score. L'Agence le sait. Elle n'a pas
+  les moyens de traiter 6 000 dossiers potentiellement affectés.
+question: >
+  Quand une institution n'a plus les moyens financiers de maintenir un système
+  sur lequel elle a rendu ses usagers dépendants, qui porte la responsabilité
+  des décisions erronées produites par ce système non maintenu ?
+tags:
+  - dette-technique
+  - maintenance
+  - responsabilite
+  - bug
+version: "1.0"

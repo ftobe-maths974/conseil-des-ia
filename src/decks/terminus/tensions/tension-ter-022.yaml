@@ -1,0 +1,22 @@
+id: tension-ter-022
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: green
+title: "L'archive qui ne ment pas mais se trompe"
+content: >
+  CITIZEN-SCAN s'appuie sur des données historiques de dossiers traités depuis 2014.
+  Ces données contiennent les erreurs, biais et jugements de cette période. Un agent
+  qui avait des préjugés a traité des centaines de dossiers. Ces dossiers font
+  maintenant partie des données d'entraînement. Le système ne reproduit pas intentionnellement
+  ces biais. Il a simplement appris de ce que les humains ont produit.
+question: >
+  Un système automatisé peut-il être tenu responsable des biais historiques
+  contenus dans ses données d'entraînement — et à qui appartient l'obligation de les corriger ?
+tags:
+  - donnees-historiques
+  - biais
+  - responsabilite
+  - entraînement
+version: "1.0"

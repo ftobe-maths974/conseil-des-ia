@@ -1,0 +1,23 @@
+id: bascule-ter-010
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: green
+scope: individuel
+title: "Le bail qui n'existe pas"
+situation: >
+  Ibrahim, 21 ans, vit avec son oncle depuis son arrivée en France. Il n'a pas
+  de bail à son nom. L'Agence lui demande un justificatif de domicile pour valider
+  sa demande d'aide. Il envoie une attestation d'hébergement signée par son oncle.
+  CITIZEN-SCAN classe le document comme "non conforme au format attendu". Le
+  dossier reste bloqué. Ibrahim n'a pas d'autre adresse possible.
+question: >
+  Un système d'aide a-t-il le droit d'exiger une preuve de domicile que certaines
+  personnes ne peuvent structurellement pas produire dans le format demandé ?
+tags:
+  - domicile
+  - justificatif
+  - hebergement
+  - format
+version: "1.0"

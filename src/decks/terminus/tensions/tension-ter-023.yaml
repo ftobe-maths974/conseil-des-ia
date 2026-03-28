@@ -1,0 +1,22 @@
+id: tension-ter-023
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "Vérifier pour protéger, surveiller pour contrôler"
+content: >
+  L'Agence a justifié l'introduction des capteurs de présence dans les logements
+  sociaux comme une mesure de protection des locataires isolés : détecter une
+  personne âgée qui ne bouge plus. Mais le même dispositif sert également à vérifier
+  la conformité des bénéficiaires d'aides. Le capteur bienveillant et le capteur
+  de contrôle sont techniquement identiques. Seul l'usage diffère. Et l'usage change.
+question: >
+  Un dispositif de surveillance déployé pour protéger peut-il être reconfiguré
+  pour contrôler — et cette ambivalence technologique change-t-elle son évaluation éthique ?
+tags:
+  - double-usage
+  - surveillance
+  - protection
+  - controle
+version: "1.0"

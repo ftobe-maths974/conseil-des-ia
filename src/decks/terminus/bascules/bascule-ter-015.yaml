@@ -1,0 +1,23 @@
+id: bascule-ter-015
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Le contrôle qui coûte plus que l'aide"
+situation: >
+  L'Agence dépense 11 millions d'euros par an pour détecter des fraudes aux aides
+  sociales dans la région. Les fraudes prouvées et récupérées représentent 800 000
+  euros. Le coût d'infrastructure informatique, de maintenance et de personnel
+  de supervision est sept fois supérieur à la valeur des détournements évités.
+  La direction justifie l'écart par "l'effet dissuasif non quantifiable".
+question: >
+  À quel point de déséquilibre un système de contrôle consomme-t-il plus de
+  ressources publiques qu'il n'en protège — et qui est légitime pour décider de s'arrêter ?
+tags:
+  - cout-controle
+  - proportionnalite
+  - fraude
+  - ressource-publique
+version: "1.0"

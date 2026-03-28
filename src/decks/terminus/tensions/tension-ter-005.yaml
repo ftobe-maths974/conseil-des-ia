@@ -1,0 +1,23 @@
+id: tension-ter-005
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "L'expertise perdue"
+content: >
+  Avant CITIZEN-SCAN, les agents de L'Agence avaient développé une connaissance
+  fine des situations atypiques. Ils savaient reconnaître une fraude et distinguer
+  une situation précaire d'une situation frauduleuse. Depuis deux ans, ils ne
+  traitent plus que des alertes. Cette expertise disparaît progressivement. Si
+  demain CITIZEN-SCAN est arrêté ou défaillant, l'organisation n'aura plus les
+  compétences pour reprendre un traitement manuel des dossiers.
+question: >
+  Peut-on déléguer durablement un savoir-faire à un système automatisé quand
+  cette délégation détruit progressivement la capacité humaine de reprendre la main ?
+tags:
+  - expertise
+  - competence
+  - dependance
+  - resilience
+version: "1.0"

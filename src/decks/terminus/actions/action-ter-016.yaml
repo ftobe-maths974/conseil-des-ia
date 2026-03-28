@@ -1,0 +1,21 @@
+id: action-ter-016
+phase: action
+slot: 4
+lever_type: limiter
+chamber: singularite-vs-standard
+reversibility: green
+scope: systemique
+title: "Limiter le nombre de critères comportementaux actifs dans le calcul du score"
+body: >
+  Le score calculé par CITIZEN-SCAN ne peut reposer sur plus de huit critères
+  comportementaux actifs simultanément, publiés et validés par une commission
+  indépendante incluant des représentants des usagers. Tout ajout d'un critère
+  supplémentaire nécessite la suppression d'un critère existant et une période
+  de consultation de 30 jours.
+mandat_principe: "Plafonner le nombre de critères comportementaux actifs dans tout score administratif et imposer une validation publique pour tout nouveau critère."
+tags:
+  - criteres
+  - score
+  - plafonnement
+  - gouvernance
+version: "1.0"

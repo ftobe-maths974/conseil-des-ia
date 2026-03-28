@@ -1,0 +1,22 @@
+id: tension-ter-033
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: red
+title: "Adapter le système ou adapter les gens"
+content: >
+  L'Agence a ouvert des ateliers d'accompagnement numérique pour aider les usagers
+  à "optimiser leur profil CITIZEN-SCAN". Les participants apprennent à se connecter
+  régulièrement, à déclarer leurs activités, à éviter les comportements qui déclenchent
+  des alertes. Le système ne change pas. Ce sont les usagers qui apprennent à lui
+  ressembler. L'adaptation va dans un seul sens.
+question: >
+  Quand une institution aide les usagers à s'adapter à un algorithme plutôt
+  qu'à adapter l'algorithme aux usagers, quel est le sens réel de cette aide ?
+tags:
+  - adaptation
+  - formation
+  - conformite
+  - direction
+version: "1.0"

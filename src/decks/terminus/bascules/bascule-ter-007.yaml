@@ -1,0 +1,23 @@
+id: bascule-ter-007
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+scope: individuel
+title: "Prouver qu'on dormait"
+situation: >
+  Sonia, aidante à domicile non déclarée de sa voisine âgée, n'a pas bougé de
+  son quartier pendant dix jours. CITIZEN-SCAN a interprété son immobilité
+  géographique comme un signal d'anomalie. L'Agence lui demande de justifier
+  ses activités sur la période. Elle n'a aucun document. Elle s'occupait de
+  quelqu'un. Il n'y a pas de contrat, pas de reçu, pas de relevé numérique.
+question: >
+  Que devient une personne dont les activités les plus importantes de la semaine
+  ne laissent aucune trace vérifiable par un système automatisé ?
+tags:
+  - preuve
+  - inactivite
+  - aidant
+  - trace
+version: "1.0"

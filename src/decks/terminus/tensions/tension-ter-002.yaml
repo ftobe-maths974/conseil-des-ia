@@ -1,0 +1,23 @@
+id: tension-ter-002
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "La confiance déleguée"
+content: >
+  Beaucoup d'usagers de L'Agence font davantage confiance à une décision automatisée
+  qu'à un agent humain : ils craignent moins l'arbitraire, le favoritisme, ou le
+  jugement moral. L'automatisation peut paraître plus neutre, plus égale. Mais cette
+  neutralité apparente dissimule des choix de conception sur ce qui "mérite" d'être
+  aidé. L'agent humain peut être biaisé — mais il peut aussi être convaincu, corrigé,
+  interpellé. Le système, lui, ne peut pas l'être par un usager ordinaire.
+question: >
+  La perception d'une plus grande équité dans une décision automatisée justifie-t-elle
+  de renoncer à la possibilité de contester la logique même de la décision ?
+tags:
+  - neutralite
+  - confiance
+  - arbitraire
+  - contestabilite
+version: "1.0"

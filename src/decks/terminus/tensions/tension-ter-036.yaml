@@ -1,0 +1,22 @@
+id: tension-ter-036
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+title: "La diversité des situations comme risque systémique"
+content: >
+  Plus CITIZEN-SCAN intègre des exceptions et des cas particuliers, plus il devient
+  complexe et imprévisible. Les ingénieurs de l'opérateur expliquent qu'au-delà
+  d'un certain niveau de complexité, le modèle devient instable et ses décisions
+  plus difficiles à expliquer. La reconnaissance de la singularité a un coût
+  technique réel. Le système le plus équitable n'est peut-être pas le plus fiable.
+question: >
+  Peut-on concevoir un système d'aide automatisé qui soit à la fois équitable
+  envers toutes les situations de vie et techniquement auditable ?
+tags:
+  - complexite
+  - equite
+  - fiabilite
+  - audit
+version: "1.0"

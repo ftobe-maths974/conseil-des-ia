@@ -1,0 +1,21 @@
+id: action-ter-011
+phase: action
+slot: 3
+lever_type: conditionner
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner la détection d'anomalie à un taux de faux positifs inférieur à 2%"
+body: >
+  L'Agence conditionne le maintien de tout module de détection de fraude à la
+  démonstration d'un taux de faux positifs inférieur à 2% sur une période de
+  six mois, attesté par un audit indépendant. Tout module dépassant ce seuil
+  est suspendu automatiquement jusqu'à révision. Ce seuil est rendu public
+  et consultable par toute personne ayant fait l'objet d'un contrôle.
+mandat_principe: "Conditionner l'usage de tout module de détection à la démonstration d'un taux de faux positifs inférieur à un seuil fixé et publié."
+tags:
+  - faux-positif
+  - detection
+  - fraude
+  - seuil
+version: "1.0"

@@ -1,0 +1,23 @@
+id: tension-ter-007
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "La réforme qui se referme"
+content: >
+  CITIZEN-SCAN a permis de réduire le budget de fonctionnement de L'Agence de 22%
+  en trois ans. Ces économies ont été redéployées vers d'autres services. Revenir
+  à un traitement plus manuel nécessiterait de recréer des postes supprimés, de
+  reformer des agents, et de rallonger les délais pendant la transition. Ce coût
+  de réversibilité n'a jamais été calculé explicitement lors du déploiement. Il est
+  maintenant politique autant que financier.
+question: >
+  À quel moment le coût de revenir en arrière devient-il suffisamment élevé
+  pour rendre une décision technologique irréversible en pratique ?
+tags:
+  - reversibilite
+  - cout-sortie
+  - budget
+  - irreversibilite
+version: "1.0"

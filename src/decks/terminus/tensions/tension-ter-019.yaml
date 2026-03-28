@@ -1,0 +1,23 @@
+id: tension-ter-019
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+title: "Exister sans laisser de traces"
+content: >
+  Certaines personnes vivent sans smartphone, sans compte en ligne, sans abonnement
+  numérique. Elles paient en cash, se déplacent à pied, ne s'inscrivent sur aucun
+  service. Pour CITIZEN-SCAN, elles sont presque invisibles — et l'invisibilité
+  est interprétée comme une anomalie. Leur vie est réelle mais non documentable
+  selon les formats attendus. Le système ne peut pas les lire. Il les classe
+  comme suspectes.
+question: >
+  A-t-on le droit de vivre sans générer les traces numériques qu'un système
+  d'aide exige pour vous reconnaître comme bénéficiaire légitime ?
+tags:
+  - invisibilite
+  - trace
+  - numerique
+  - legitimite
+version: "1.0"

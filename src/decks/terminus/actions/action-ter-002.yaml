@@ -1,0 +1,20 @@
+id: action-ter-002
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner tout contrat IA à une clause de reprise humaine opérationnelle"
+body: >
+  L'Agence ne peut signer aucun contrat avec un opérateur de système automatisé
+  sans qu'une procédure de reprise manuelle des décisions soit documentée, testée
+  et activable en moins de 72 heures. Cette procédure doit être maintenue opérationnelle
+  tout au long du contrat, sans surcoût pour l'usager ni délai supplémentaire.
+mandat_principe: "Conditionner tout contrat IA à l'existence d'une procédure de reprise humaine documentée, testée et activable rapidement."
+tags:
+  - contrat
+  - reprise-humaine
+  - delegation
+  - gouvernance
+version: "1.0"

@@ -1,0 +1,22 @@
+id: tension-ter-015
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "L'audit qui déstabilise"
+content: >
+  L'Agence commande un audit indépendant de CITIZEN-SCAN. L'audit identifie
+  des biais significatifs. Publier les résultats permettrait aux personnes lésées
+  de contester leurs décisions — mais créerait aussi un afflux de recours que
+  L'Agence n'a pas les moyens de traiter et remettrait en cause des milliers de
+  décisions passées. La direction hésite entre transparence et stabilité opérationnelle.
+question: >
+  Une institution peut-elle légitimement retarder la publication d'un audit
+  révélant des biais pour préserver sa capacité opérationnelle à traiter les conséquences ?
+tags:
+  - audit
+  - publication
+  - recours
+  - stabilite
+version: "1.0"

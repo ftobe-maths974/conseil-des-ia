@@ -1,0 +1,23 @@
+id: tension-ter-045
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Le progrès qui efface le lien"
+content: >
+  Avant CITIZEN-SCAN, certains agents de L'Agence connaissaient leurs usagers.
+  Ils savaient qui appelait chaque semaine, qui avait des enfants malades, qui
+  avait peur de perdre son logement. Ce lien avait une valeur difficile à mesurer :
+  il permettait de détecter ce qu'aucun algorithme ne peut voir. Il a disparu.
+  Les usagers sont maintenant des profils. Les agents des superviseurs d'alertes.
+  Le service est plus rapide. Il est aussi plus vide.
+question: >
+  Quand l'optimisation d'un service public détruit les relations humaines
+  qui lui donnaient une partie de son efficacité, peut-on encore parler de progrès ?
+tags:
+  - lien-humain
+  - relation
+  - optimisation
+  - service-public
+version: "1.0"

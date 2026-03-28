@@ -1,0 +1,23 @@
+id: tension-ter-029
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "La solidarité invisible au système"
+content: >
+  Dans le quartier de la résidence où vivent plusieurs familles bénéficiaires de
+  L'Agence, les femmes s'organisent informellement : elles gardent les enfants
+  les unes des autres, partagent les courses, préparent ensemble certains repas.
+  Cette économie du soin ne génère aucune trace. Elle n'est comptée nulle part.
+  Pour CITIZEN-SCAN, ces personnes semblent moins actives, moins consommatrices,
+  moins mobiles. Leur score le reflète.
+question: >
+  Quand un système mesure l'activité individuelle mais pas les solidarités collectives,
+  quelles vies juge-t-il comme moins valides ?
+tags:
+  - solidarite-collective
+  - invisibilite
+  - soin
+  - mesure
+version: "1.0"

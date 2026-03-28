@@ -1,0 +1,21 @@
+id: action-ter-013
+phase: action
+slot: 1
+lever_type: recours
+chamber: singularite-vs-standard
+reversibility: red
+scope: individuel
+title: "Garantir une voie d'exception motivée pour toute situation non couverte par le modèle"
+body: >
+  Toute personne dont la situation ne correspond pas aux catégories reconnues par
+  CITIZEN-SCAN a le droit de demander une instruction manuelle de son dossier par
+  un agent formé aux situations atypiques. Cette demande ne peut être refusée,
+  doit être traitée dans un délai de dix jours ouvrés et ne peut entraîner une
+  baisse de score pendant la durée de l'instruction.
+mandat_principe: "Garantir que toute personne dont la vie réelle n'entre pas dans les catégories du modèle dispose d'une voie d'exception humaine, sans pénalité pendant son instruction."
+tags:
+  - exception
+  - instruction-manuelle
+  - singularite
+  - categorie
+version: "1.0"

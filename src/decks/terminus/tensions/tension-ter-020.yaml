@@ -1,0 +1,23 @@
+id: tension-ter-020
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "La preuve qui n'est pas la réalité"
+content: >
+  Pour maintenir son score, une étudiante a appris à se connecter tous les deux
+  jours à l'espace personnel de L'Agence, même quand elle n'a rien à faire. Elle
+  génère de la trace pour le système, pas pour elle. Elle se comporte en fonction
+  de ce que le système attend, pas en fonction de sa propre situation. Elle est
+  conforme. Et pourtant quelque chose s'est déplacé : elle gère sa vie en fonction
+  d'un algorithme qu'elle ne connaît pas.
+question: >
+  Quand une personne adapte ses comportements réels pour satisfaire les attentes
+  d'un système de surveillance, qui est encore authentique — la personne ou sa trace ?
+tags:
+  - conformite
+  - comportement
+  - authenticity
+  - adaptation
+version: "1.0"

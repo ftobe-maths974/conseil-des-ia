@@ -1,0 +1,21 @@
+id: action-ter-012
+phase: action
+slot: 4
+lever_type: recours
+chamber: preuve-vs-simulation
+reversibility: green
+scope: individuel
+title: "Garantir le droit à une instruction humaine sur toute décision basée sur une trace comportementale"
+body: >
+  Toute personne ayant subi une décision de contrôle, de suspension ou de rétrogradation
+  fondée sur des traces comportementales — activité numérique, mobilité, présence —
+  a droit, sans démarche supplémentaire, à une instruction de son dossier par un
+  agent humain dans un délai de cinq jours ouvrés et à la communication écrite des
+  éléments ayant déclenché la procédure.
+mandat_principe: "Garantir à toute personne le droit à une instruction humaine rapide lorsque sa décision est fondée sur des traces comportementales interprétées automatiquement."
+tags:
+  - recours
+  - trace-comportementale
+  - instruction
+  - transparence
+version: "1.0"

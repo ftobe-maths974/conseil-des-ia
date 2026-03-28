@@ -1,0 +1,23 @@
+id: tension-ter-011
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "La sanction qu'on mérite peut-être"
+content: >
+  Un usager a vu son score baisser après avoir déménagé trois fois en un an.
+  Le système a interprété cette mobilité comme un signal d'instabilité. Dans
+  les faits, il fuyait un logement insalubre. Il n'a pas fait de signalement.
+  Il ne savait pas que ses déménagements étaient surveillés. La sanction repose
+  sur une interprétation plausible d'un comportement réel. Elle est injuste dans
+  son cas précis et peut-être juste en moyenne statistique.
+question: >
+  Une sanction algorithmique fondée sur un comportement réel mais mal interprété
+  est-elle une erreur à corriger ou une conséquence acceptable d'un système de masse ?
+tags:
+  - interpretation
+  - sanction
+  - mobilite
+  - contexte
+version: "1.0"

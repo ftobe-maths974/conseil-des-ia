@@ -1,0 +1,23 @@
+id: bascule-ter-006
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Le recours qui ne répond pas"
+situation: >
+  L'Agence traite 4 000 recours par mois. Depuis le déploiement de CITIZEN-SCAN,
+  les recours sont instruits par un module secondaire du même système. Sur les
+  12 derniers mois, 94% des recours ont été rejetés. Les usagers reçoivent un
+  courrier type de deux paragraphes. Il n'existe pas de voie d'appel interne
+  au-delà de ce module. La seule option restante est le tribunal administratif.
+question: >
+  Un recours instruit par le même système que la décision contestée constitue-t-il
+  encore une voie de recours réelle ?
+tags:
+  - recours
+  - appel
+  - systeme
+  - acces-justice
+version: "1.0"

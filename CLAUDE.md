@@ -373,6 +373,47 @@ Une carte action n'est **jamais** transmise telle quelle. Elle doit être reform
 
 ---
 
+## Mini-bible deck `terminus` (univers L'Agence/CITIZEN-SCAN)
+
+**Institution** : `L'Agence` — guichet unifié concentrant accès aux aides, logement, mobilité, bourses, restauration, priorités de dossier, bonus/malus de conformité, détection d'anomalies
+**Technologie** : `CITIZEN-SCAN` — IA calculant un score d'utilité sociale, interprétant activité/inactivité/rythmes de vie/traces, agrégeant signaux de mobilité/consommation/présence/capteurs, priorisant ou dépriorisant l'accès aux droits selon conformité présumée
+**Population** : étudiants, précaires, familles, aidants, jeunes actifs, personnes en logement instable, usagers dépendants d'un pass/bourse/dossier
+**Macro-conflit** : le temps mort, le sommeil, l'inactivité, la solidarité informelle et la vie non standard deviennent suspects, coûteux ou illégitimes quand l'IA mesure tout
+**Thèse** : Qui a encore le droit de ne pas être immédiatement lisible, rentable, traçable, actif et conforme ?
+**Registre** : brut, sec, précis, quotidien, digne — jamais misérabiliste, jamais argot décoratif, jamais dystopie gadget
+**Règle de ton** : écrire comme si le système existait presque déjà — une extrapolation froide de logiques déjà en place
+
+| Chambre | Question mère | Lexique propre | Mandat typique |
+|---|---|---|---|
+| Délégation | À qui a-t-on confié le pouvoir de dire si ma vie est conforme, méritante ou recevable ? | score, effacement de l'agent humain, verrouillage du dossier, responsabilité dissoute | N'autoriser aucune décision de dépriorisation sans qu'un agent humain identifiable puisse la réviser |
+| Invisibilité | Pourquoi ai-je été sanctionné, ralenti ou bloqué sans comprendre sur quelle base ? | opacité punitive, micro-sanctions, anomalie, shadowban administratif, file invisible | Interdire toute sanction automatisée sans explication humaine compréhensible et voie de recours identifiée |
+| Preuve | Qu'est-ce qu'il faut prouver pour exister comme sujet légitime quand la machine interprète tout ? | preuve de présence, silence, inactivité, suspicion, biométrie, trace, présomption de fraude | Garantir que l'absence de signal numérique ne soit jamais interprétée par défaut comme fraude ou désengagement |
+| Singularité | Que devient une vie si elle ne rentre pas dans les cases du modèle ? | solidarité informelle, hébergement non standard, transfert au pays, rythme atypique, situation socialement réelle mais administrativement illisible | Reconnaître les formes de solidarité et les rythmes de vie non standard dans l'évaluation des droits |
+| Métabolisme | Combien coûte réellement le contrôle algorithmique de la survie, et que détruit-il en prétendant optimiser ? | coût du contrôle, inflation bureaucratique, saturation des agents, surveillance plus chère que l'aide | Conditionner tout déploiement de CITIZEN-SCAN à la démonstration que son coût est inférieur au bénéfice social produit |
+
+### Logique de circulation `terminus`
+
+| Passage | Problème transmis | Pourquoi la chambre suivante est la bonne destinataire |
+|---|---|---|
+| Délégation → Invisibilité | Si CITIZEN-SCAN décide sans agent humain identifiable, les sanctions deviennent opaques et déresponsabilisées | La chambre Invisibilité doit se demander comment contester une sanction quand on ne sait pas qui l'a décidée |
+| Invisibilité → Preuve | Si le système sanctionne sans expliquer, les personnes doivent sans cesse prouver qu'elles méritent encore leurs droits | La chambre Preuve doit se demander ce qui constitue une preuve acceptable pour un système qui interprète tout comme signal |
+| Preuve → Singularité | Si les preuves légitimes sont standardisées, les vies non standard deviennent suspectes ou illisibles | La chambre Singularité doit se demander que faire quand la vie réelle d'une personne ne peut pas être prouvée selon les standards du système |
+| Singularité → Métabolisme | Plus on force les vies réelles dans des catégories fixes, plus le coût de surveillance et de rectification explose | La chambre Métabolisme doit se demander si le système peut absorber les exceptions sans devenir plus coûteux que l'aide elle-même |
+| Métabolisme → Délégation | Quand surveiller coûte plus cher que protéger, faut-il rendre le pouvoir à des instances humaines locales ? | La chambre Délégation doit se demander qui reprend la décision et avec quel mandat si l'automatisation est abandonnée |
+
+### Anti-patterns spécifiques `terminus`
+
+- **Misérabilisme** — la pauvreté n'est pas un décor ni un gimmick narratif
+- **Argot décoratif** — pas d'"argot de banlieue" plaqué comme accessoire de style
+- **Dystopie gadget** — situations trop absurdes pour être politiquement crédibles
+- **Moralisation grossière** — pas de "la tech est méchante", pas de "les pauvres sont toujours purs"
+- **Science-fiction lointaine** — écrire comme si le système existait presque déjà
+- **Absence de dignité** — le deck peut être dur, les personnages doivent conserver une dignité narrative
+- **Abstractivité sociologique** — pas de jargon académique, pas de cartes qui ressemblent à des cours
+- **Patchwork de monde** — tout passe par L'Agence et CITIZEN-SCAN, pas un collage de systèmes disparates
+
+---
+
 ## Règles d'écriture par phase
 
 ### Phase 1 — Bascule

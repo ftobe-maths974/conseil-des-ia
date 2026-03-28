@@ -1,0 +1,23 @@
+id: tension-ter-038
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "La charge cognitive de la conformité"
+content: >
+  Maintenir son dossier conforme à CITIZEN-SCAN demande un travail invisible constant :
+  se connecter régulièrement, déclarer ses activités, télécharger les bons documents,
+  répondre aux alertes dans les délais. Ce travail est simple pour qui dispose de
+  temps, d'un bon internet et de compétences numériques. Il est épuisant pour une
+  personne qui jongle entre un emploi précaire, des enfants et une santé fragile.
+  La charge de conformité est inégalement répartie.
+question: >
+  Quand le maintien de ses droits requiert un travail administratif constant,
+  ce travail est-il neutre — ou avantage-t-il ceux qui ont déjà le plus de ressources ?
+tags:
+  - charge-cognitive
+  - inegalite
+  - conformite
+  - numerique
+version: "1.0"

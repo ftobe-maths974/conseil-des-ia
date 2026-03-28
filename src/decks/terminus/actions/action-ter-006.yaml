@@ -1,0 +1,20 @@
+id: action-ter-006
+phase: action
+slot: 2
+lever_type: interdire
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Interdire les sanctions silencieuses sans notification active"
+body: >
+  Il est interdit à L'Agence de modifier le rang, le score ou les droits d'un usager
+  sans notification active envoyée sur le canal choisi par l'usager dans un délai
+  de 24 heures. Une modification silencieuse découverte par l'usager seul constitue
+  une infraction à l'obligation de transparence administrative.
+mandat_principe: "Interdire toute modification silencieuse d'un score, d'un rang ou d'un droit sans notification active adressée à la personne concernée."
+tags:
+  - notification
+  - transparence
+  - score
+  - sanction-silencieuse
+version: "1.0"

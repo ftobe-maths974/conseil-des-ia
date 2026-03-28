@@ -1,0 +1,20 @@
+id: action-ter-008
+phase: action
+slot: 4
+lever_type: conditionner
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: organisationnel
+title: "Conditionner l'usage du scoring à la publication des critères actifs"
+body: >
+  L'Agence ne peut recourir à CITIZEN-SCAN pour classer les dossiers qu'à condition
+  que la liste des critères actifs, leur pondération relative et les seuils de
+  déclenchement soient publiés dans un format compréhensible par un non-spécialiste
+  et mis à jour dans les 30 jours suivant toute modification du modèle.
+mandat_principe: "Conditionner l'usage de tout système de scoring à la publication lisible des critères actifs et de leurs pondérations."
+tags:
+  - scoring
+  - transparence
+  - criteres
+  - publication
+version: "1.0"

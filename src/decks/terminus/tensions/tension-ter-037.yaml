@@ -1,0 +1,23 @@
+id: tension-ter-037
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "Le coût de la surveillance que personne ne paie"
+content: >
+  CITIZEN-SCAN coûte à L'Agence 4,20 euros par dossier traité. Ce coût est inférieur
+  au coût humain précédent. Mais il ne comprend pas : le temps que les usagers
+  passent à maintenir leur profil conforme, le stress de la surveillance permanente,
+  les recours exercés ou non, les dommages causés par les suspensions injustifiées.
+  Ces coûts sont réels. Ils sont portés par les personnes concernées. Ils ne
+  figurent dans aucune comptabilité.
+question: >
+  Un système peut-il être considéré comme "moins coûteux" quand il externalise
+  une partie de son coût sur les personnes les moins capables de le supporter ?
+tags:
+  - cout-cache
+  - externalite
+  - comptabilite
+  - surveillance
+version: "1.0"

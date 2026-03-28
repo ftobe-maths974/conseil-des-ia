@@ -1,0 +1,23 @@
+id: tension-ter-040
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "La maintenance invisible"
+content: >
+  CITIZEN-SCAN nécessite une équipe de 12 personnes dédiées à sa maintenance,
+  ses mises à jour et la gestion des incidents. Cette équipe travaille en permanence
+  mais son coût n'apparaît pas dans les tableaux de bord de L'Agence. Quand la
+  direction annonce des économies, elle ne compte pas l'infrastructure humaine
+  nécessaire pour que l'automatisation fonctionne. Elle comptabilise les postes
+  supprimés, pas les postes déplacés vers la maintenance du système.
+question: >
+  Les économies annoncées par l'automatisation sont-elles réelles quand elles
+  ne comptabilisent pas la charge de maintenance qu'elles déplacent vers d'autres équipes ?
+tags:
+  - maintenance
+  - comptabilite
+  - cout-cache
+  - automatisation
+version: "1.0"

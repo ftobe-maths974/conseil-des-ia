@@ -1,0 +1,24 @@
+id: tension-ter-043
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "L'infrastructure du contrôle comme patrimoine"
+content: >
+  L'Agence a investi 18 millions d'euros dans l'infrastructure CITIZEN-SCAN au cours
+  des quatre dernières années. Cet investissement figure dans son bilan comme un
+  actif. Reconnaître que le système est disproportionné ou dysfonctionnel nécessiterait
+  de déprécier cet actif. La défense du système est aussi une défense du bilan financier
+  de L'Agence. Le calcul rationnel de l'institution pointe dans une direction
+  différente de l'intérêt des usagers.
+question: >
+  Quand l'infrastructure d'un dispositif de contrôle est inscrite comme actif
+  au bilan d'une institution, cette institution peut-elle évaluer objectivement
+  si ce dispositif devrait être abandonné ?
+tags:
+  - investissement
+  - bilan
+  - conflit-interet
+  - infrastructure
+version: "1.0"

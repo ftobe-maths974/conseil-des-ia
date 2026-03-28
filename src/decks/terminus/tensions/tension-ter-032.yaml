@@ -1,0 +1,23 @@
+id: tension-ter-032
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "La norme culturelle encodée sans le dire"
+content: >
+  CITIZEN-SCAN interprète la structure du foyer à partir d'indicateurs conçus
+  dans un contexte de ménage nucléaire occidental : un ou deux adultes, des enfants
+  scolarisés, une adresse stable. Les familles élargies, les foyers multigénérationnels,
+  les configurations de colocation durable entre adultes non apparentés ne correspondent
+  pas à ce modèle. Elles ne sont pas pénalisées par une règle explicite. Elles sont
+  juste mal comprises par un système qui n'a pas été conçu pour elles.
+question: >
+  Quand un modèle encode implicitement une forme de famille comme norme,
+  qui porte la responsabilité de corriger les effets sur les familles qui n'y correspondent pas ?
+tags:
+  - famille-elargie
+  - norme-culturelle
+  - encodage
+  - responsabilite
+version: "1.0"

@@ -1,0 +1,22 @@
+id: tension-ter-042
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "La surveillance qui crée ce qu'elle cherche à éviter"
+content: >
+  Depuis l'introduction des capteurs de présence, plusieurs bénéficiaires d'aides
+  ont commencé à héberger leurs proches de façon non déclarée pour éviter que leur
+  présence soit détectée. D'autres ont cessé d'utiliser leurs droits pour ne pas
+  être suivis. La surveillance a créé des comportements d'évitement qui ressemblent
+  exactement aux anomalies qu'elle cherchait à détecter.
+question: >
+  Quand un système de surveillance produit les comportements suspects qu'il
+  était censé détecter, est-ce un échec du dispositif ou une confirmation de sa logique ?
+tags:
+  - surveillance
+  - comportement-evitement
+  - contre-productif
+  - detection
+version: "1.0"

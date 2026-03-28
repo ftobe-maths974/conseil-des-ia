@@ -1,0 +1,21 @@
+id: action-ter-014
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner le déploiement du modèle à l'audit des populations mal couvertes"
+body: >
+  L'Agence ne peut mettre en production toute nouvelle version de CITIZEN-SCAN sans
+  présenter un rapport d'impact sur les populations dont les configurations de vie
+  s'écartent de la moyenne statistique : aidants informels, cohabitants, bénéficiaires
+  de transferts familiaux, personnes sans domicile fixe numérique. Ce rapport est
+  rendu public avant le déploiement.
+mandat_principe: "Imposer l'audit des populations dont les situations de vie s'écartent du modèle statistique avant tout déploiement ou mise à jour d'un système de scoring."
+tags:
+  - audit
+  - populations-atypiques
+  - deploiement
+  - modele
+version: "1.0"

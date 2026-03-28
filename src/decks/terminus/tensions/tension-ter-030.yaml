@@ -1,0 +1,23 @@
+id: tension-ter-030
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: red
+title: "L'exception qui demande à être justifiée"
+content: >
+  Pour accéder à un traitement exceptionnel de son dossier, un usager doit démontrer
+  que sa situation est "atypique" selon les critères de L'Agence. Mais ces critères
+  ont été définis pour identifier les cas déjà connus du système. Une situation
+  vraiment nouvelle ne correspond à aucun formulaire d'exception existant.
+  L'usager doit prouver qu'il est différent selon des catégories prévues pour
+  les différences déjà répertoriées.
+question: >
+  Peut-on reconnaître une situation singulière dans un système dont les
+  formulaires d'exception n'ont été conçus que pour les singularités déjà anticipées ?
+tags:
+  - exception
+  - formulaire
+  - categorie
+  - singularite
+version: "1.0"

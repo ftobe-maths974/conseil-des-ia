@@ -1,0 +1,22 @@
+id: tension-ter-013
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "La transparence qui facilite la fraude"
+content: >
+  L'Agence refuse de publier les critères de CITIZEN-SCAN en invoquant le risque
+  d'optimisation frauduleuse : si les critères sont connus, certains pourront
+  adapter leur comportement pour gonfler leur score sans mériter l'aide. L'argument
+  est réel. Mais il justifie l'opacité pour tout le monde — y compris les personnes
+  de bonne foi qui veulent comprendre pourquoi elles ont été défavorisées.
+question: >
+  L'opacité d'un système public peut-elle se justifier par la protection contre
+  la fraude quand elle prive également les personnes légitimes d'une possibilité de recours ?
+tags:
+  - opacite
+  - fraude
+  - justification
+  - transparence
+version: "1.0"

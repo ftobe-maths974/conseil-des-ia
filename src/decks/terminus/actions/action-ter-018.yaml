@@ -1,0 +1,20 @@
+id: action-ter-018
+phase: action
+slot: 2
+lever_type: interdire
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Interdire la collecte de données biométriques ou de présence dans les logements sociaux"
+body: >
+  Il est interdit à L'Agence et à ses opérateurs de déployer des capteurs de présence,
+  de mouvement ou d'activité dans les logements sociaux ou les espaces privatifs des
+  bénéficiaires d'aides. Toute donnée collectée par ce biais est réputée non recevable
+  comme base de décision et doit être effacée sous 30 jours.
+mandat_principe: "Interdire la collecte de données de présence ou de comportement dans les espaces de vie privés des bénéficiaires d'aides sociales."
+tags:
+  - biometrie
+  - logement
+  - surveillance
+  - vie-privee
+version: "1.0"

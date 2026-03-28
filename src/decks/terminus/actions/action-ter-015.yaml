@@ -1,0 +1,21 @@
+id: action-ter-015
+phase: action
+slot: 3
+lever_type: interdire
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "Interdire de traiter la solidarité informelle comme une anomalie de conformité"
+body: >
+  Il est interdit à CITIZEN-SCAN d'utiliser comme signal négatif les transferts
+  financiers intrafamiliaux, la cohabitation entre adultes non apparentés au sens
+  légal, ou la mutualisation de ressources entre membres d'un foyer élargi. Ces
+  configurations sont enregistrées comme données neutres et ne peuvent pas déclencher
+  de procédure de contrôle.
+mandat_principe: "Interdire que les formes de solidarité informelle — cohabitation, transferts, mutualisation — soient traitées comme des signaux d'anomalie ou de non-conformité."
+tags:
+  - solidarite-informelle
+  - cohabitation
+  - transfert
+  - anomalie
+version: "1.0"

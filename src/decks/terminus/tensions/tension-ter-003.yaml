@@ -1,0 +1,23 @@
+id: tension-ter-003
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "Le mandat qu'on n'a pas donné"
+content: >
+  Quand une personne dépose une demande à L'Agence, elle consent implicitement
+  à ce que ses données soient traitées. Mais personne ne l'a informée que ce
+  traitement serait délégué à un algorithme privé, que ses habitudes de mobilité
+  seraient analysées, ou que des critères comportementaux entreraient dans le calcul.
+  Le mandat confié à L'Agence ne couvrait pas CITIZEN-SCAN. Pourtant, la décision
+  s'applique à elle.
+question: >
+  Quand une institution délègue son pouvoir de décision à un tiers sans consulter
+  les personnes concernées, le consentement initial tient-il encore ?
+tags:
+  - consentement
+  - mandat
+  - delegation
+  - information
+version: "1.0"

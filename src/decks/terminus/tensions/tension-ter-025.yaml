@@ -1,0 +1,23 @@
+id: tension-ter-025
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: green
+title: "La preuve qui exclut ceux qui en ont le plus besoin"
+content: >
+  Les usagers les plus précaires sont souvent ceux qui ont le moins de traces
+  documentables : pas de bail, pas de contrat, peu de relevés bancaires, mobilité
+  résidentielle élevée. Ce sont aussi ceux qui ont le plus besoin des aides.
+  Un système basé sur la traçabilité avantage structurellement les personnes
+  dont la vie est déjà stable et documentée — et défavorise celles pour lesquelles
+  il a été conçu.
+question: >
+  Un système d'aide conditionné à la production de preuves documentaires peut-il
+  rester équitable quand les plus précaires sont aussi les moins traçables ?
+tags:
+  - traçabilite
+  - equite
+  - documentation
+  - precarite
+version: "1.0"

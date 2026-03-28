@@ -1,0 +1,21 @@
+id: action-ter-010
+phase: action
+slot: 2
+lever_type: limiter
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: individuel
+title: "Limiter les demandes de justificatifs à ceux que l'usager peut raisonnablement produire"
+body: >
+  L'Agence ne peut exiger d'un usager que des justificatifs correspondant à des
+  situations documentables dans sa vie réelle. Est interdite toute demande de preuve
+  qui supposerait que l'usager dispose d'un accès numérique permanent, d'un contrat
+  de bail nominatif, ou d'une traçabilité de ses activités quotidiennes. La liste
+  des justificatifs acceptés est publique et comprend des alternatives non numériques.
+mandat_principe: "Limiter les exigences de preuve à ce qu'une personne en situation ordinaire peut raisonnablement produire, en incluant des alternatives non numériques."
+tags:
+  - justificatif
+  - preuve
+  - accessibilite
+  - standard
+version: "1.0"

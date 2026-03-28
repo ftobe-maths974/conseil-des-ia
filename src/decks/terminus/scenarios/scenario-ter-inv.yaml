@@ -1,0 +1,53 @@
+id: scenario-ter-inv
+phase: scenario
+chamber: invisibilite-vs-arbitrage
+title: "Le score que personne n'explique"
+context: >
+  Depuis janvier, L'Agence utilise CITIZEN-SCAN pour prioriser les demandes de
+  logement social. Un score de 0 à 100 détermine l'ordre de passage. Farida, 31 ans,
+  mère de deux enfants, attend depuis 14 mois. Son score a baissé de 12 points il y
+  a six semaines sans qu'elle en soit informée. Elle l'a découvert en consultant son
+  espace personnel. Quand elle a demandé une explication à L'Agence, on lui a indiqué
+  que les critères de scoring sont "confidentiels pour des raisons de sécurité". Son
+  recours a été classé sans suite en sept jours. Le groupe reçoit le mandat : "Garantir
+  qu'aucune dépriorisation automatique ne soit appliquée sans explication compréhensible
+  et sans voie de recours effective dans un délai de 48 heures."
+  Une enquête interne non publiée révèle que les scores ont baissé de façon
+  disproportionnée pour les personnes ayant des prénoms à consonance étrangère.
+  L'Agence conteste cette corrélation.
+roles_briefing:
+  decideur: >
+    Vous êtes chef de service logement à L'Agence. Vous avez déployé CITIZEN-SCAN
+    après une réduction des effectifs de 30%. Vous savez que l'enquête interne existe
+    mais vous considérez que la corrélation n'est pas une preuve de causalité. Votre
+    ligne rouge : vous n'admettrez pas que le système peut discriminer sans preuve
+    formelle établie par un audit extérieur. Votre angle mort : vous ne voyez pas
+    que l'absence d'explication est elle-même une forme de traitement inégal.
+  technicien: >
+    Vous êtes analyste données chez L'Agence. Vous avez produit l'enquête interne.
+    Les corrélations vous inquiètent mais vous ne pouvez pas affirmer qu'elles
+    constituent une discrimination légale sans analyse causale. Vous avez proposé
+    un audit externe il y a trois mois : votre hiérarchie l'a jugé "prématuré".
+    Votre ligne rouge : vous refuserez de certifier que le système est équitable
+    si l'audit n'est pas réalisé.
+  affecte: >
+    Vous êtes Farida. Vous travaillez à mi-temps, vous élevez deux enfants, vous
+    êtes dans un logement insalubre depuis 14 mois. Vous n'avez pas reçu d'explication
+    pour la baisse de votre score. On vous a dit que le recours avait été "traité".
+    Vous ne savez pas ce que ça veut dire. Votre ligne rouge : vous voulez savoir
+    pourquoi votre score a baissé. Pas une explication technique. Une explication
+    que vous pouvez comprendre et contester.
+  contre_pouvoir: >
+    Vous êtes juriste dans une association de défense des droits au logement. Vous
+    avez la copie de l'enquête interne. Vous pouvez saisir la CNIL, le Défenseur des
+    droits ou les prud'hommes, mais chaque procédure prend 18 à 36 mois. Vous cherchez
+    une mesure immédiate qui protège Farida et les autres sans attendre un jugement.
+    Votre question : peut-on suspendre un algorithme en attente d'audit ?
+tags:
+  - scoring
+  - opacite
+  - discrimination
+  - recours
+  - logement
+difficulty: eleve
+version: "1.0"

@@ -1,0 +1,36 @@
+id: terminus
+name: "TERMINUS — Qui a le droit de ne pas être conforme ?"
+domaine: "protection sociale, économie de la survie, gouvernementalité algorithmique du quotidien"
+institution_centrale: "L'Agence"
+population_affectee: "étudiants, précaires, familles, aidants, jeunes actifs, usagers des aides"
+type_decision: "calcul du score d'utilité sociale, priorisation des droits, détection d'anomalies de conformité"
+horizon_temporel: "très proche — extrapolation froide de logiques déjà en place"
+risque_dominant: "normalisation algorithmique de la survie — la vie non standard devient suspecte ou illisible"
+registre_langage: "brut, sec, précis, quotidien, digne — jamais misérabiliste, jamais caricatural"
+groups:
+  - id: groupe-A
+    chamber: delegation-vs-souverainete
+    receives_from: groupe-E
+    scenario_id: scenario-ter-del
+  - id: groupe-B
+    chamber: invisibilite-vs-arbitrage
+    receives_from: groupe-A
+    scenario_id: scenario-ter-inv
+  - id: groupe-C
+    chamber: preuve-vs-simulation
+    receives_from: groupe-B
+    scenario_id: scenario-ter-pre
+  - id: groupe-D
+    chamber: singularite-vs-standard
+    receives_from: groupe-C
+    scenario_id: scenario-ter-sin
+  - id: groupe-E
+    chamber: metabolisme-vs-progres
+    receives_from: groupe-D
+    scenario_id: scenario-ter-met
+mandat_circulation:
+  groupe-A: groupe-B
+  groupe-B: groupe-C
+  groupe-C: groupe-D
+  groupe-D: groupe-E
+  groupe-E: groupe-A

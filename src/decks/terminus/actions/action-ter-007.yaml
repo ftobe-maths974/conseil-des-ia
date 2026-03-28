@@ -1,0 +1,20 @@
+id: action-ter-007
+phase: action
+slot: 3
+lever_type: auditer
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: organisationnel
+title: "Auditer trimestriellement les biais de dépriorisation par profil"
+body: >
+  L'Agence doit mandater, tous les trois mois, un audit indépendant de la distribution
+  des baisses de score par catégorie d'usager. Toute surreprésentation statistiquement
+  significative d'un groupe dans les dépriorisations doit déclencher une suspension
+  du critère concerné dans un délai de trente jours et une révision du modèle.
+mandat_principe: "Exiger un audit trimestriel des biais de dépriorisation et imposer la suspension automatique de tout critère discriminatoire identifié."
+tags:
+  - audit
+  - biais
+  - discrimination
+  - scoring
+version: "1.0"

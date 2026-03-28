@@ -1,0 +1,22 @@
+id: tension-ter-044
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "Mesurer l'humain pour mieux le remplacer"
+content: >
+  Pour calibrer CITIZEN-SCAN, l'opérateur a analysé trois ans de décisions humaines
+  de L'Agence. Il a extrait des patterns. Il a entraîné le modèle à reproduire
+  ces patterns à grande vitesse. Le modèle est maintenant plus rapide que les agents.
+  Il applique leurs jugements sans leur intuition ni leur capacité de douter.
+  Ce qu'on a capturé pour le reproduire, c'est aussi ce qu'on a perdu en reproduisant.
+question: >
+  Quand on automatise le jugement humain en le réduisant à ses patterns statistiques,
+  qu'est-ce qui disparaît dans la réduction — et est-ce que ça compte ?
+tags:
+  - jugement
+  - intuition
+  - automatisation
+  - reduction
+version: "1.0"

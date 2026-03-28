@@ -1,0 +1,23 @@
+id: tension-ter-021
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: red
+title: "La fraude qui ressemble à une vie normale"
+content: >
+  Une personne cumule plusieurs des signaux que CITIZEN-SCAN associe à une fraude
+  potentielle : adresse instable, faibles transactions bancaires, absence régulière
+  de connexion, bénéficiaire de plusieurs aides. Elle ne fraude pas. Sa vie ressemble
+  à ce que ressemble une vie précaire. Le modèle ne fait pas la différence. Il n'a
+  pas été conçu pour la faire.
+question: >
+  Quand les caractéristiques d'une vie précaire ressemblent statistiquement aux
+  signaux d'une fraude, un système automatisé peut-il distinguer l'un de l'autre
+  sans perpétuer une présomption de culpabilité des personnes les plus démunies ?
+tags:
+  - fraude
+  - precarite
+  - presomption
+  - modele
+version: "1.0"

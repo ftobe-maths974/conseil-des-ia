@@ -1,0 +1,23 @@
+id: tension-ter-012
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "La honte de demander pourquoi"
+content: >
+  Beaucoup d'usagers de L'Agence n'exercent pas leur droit au recours. Non par
+  ignorance, mais par peur : peur d'aggraver leur situation, peur d'être marqués
+  comme "difficiles", peur que contester leur coûte davantage que d'accepter.
+  Cette autocensure n'est pas irrationnelle. Dans certains systèmes, exercer ses
+  droits déclenche des contrôles supplémentaires. Le recours existe en droit —
+  mais son exercice est socialement et pratiquement entravé.
+question: >
+  Un droit au recours qui ne peut pas être exercé librement sans risque perçu
+  de représailles est-il encore un droit réel ?
+tags:
+  - recours
+  - autocensure
+  - peur
+  - droit-effectif
+version: "1.0"

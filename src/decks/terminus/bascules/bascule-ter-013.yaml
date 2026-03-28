@@ -1,0 +1,23 @@
+id: bascule-ter-013
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: individuel
+title: "Vivre sous surveillance"
+situation: >
+  Depuis que L'Agence a installé un capteur de présence dans les couloirs de
+  sa résidence sociale, Thomas, bénéficiaire du RSA, vérifie l'heure chaque fois
+  qu'il sort. Il a arrêté de voir ses amis le soir. Il se sent coupable quand
+  il rentre tard. Il n'a rien à se reprocher. Mais il ne sait pas ce qui est
+  interprété comme "normal" et ce qui ne l'est pas.
+question: >
+  La surveillance permanente d'une personne change-t-elle son comportement même
+  si elle ne fait rien d'interdit — et cette modification est-elle un coût acceptable ?
+tags:
+  - surveillance
+  - comportement
+  - liberte
+  - cout-invisible
+version: "1.0"

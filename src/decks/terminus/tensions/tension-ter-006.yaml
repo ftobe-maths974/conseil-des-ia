@@ -1,0 +1,22 @@
+id: tension-ter-006
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "La tutelle qui ne contrôle plus"
+content: >
+  L'autorité de tutelle de L'Agence reçoit chaque trimestre un rapport d'activité
+  de CITIZEN-SCAN. Ce rapport indique des taux de traitement, des délais, des
+  économies réalisées. Il n'indique pas les critères actifs, les erreurs de
+  classification, ni les catégories de personnes surreprésentées dans les refus.
+  La tutelle approuve les rapports sans pouvoir vérifier ce qu'elle approuve réellement.
+question: >
+  Quand l'autorité de contrôle ne peut plus évaluer ce qu'elle est censée contrôler,
+  la délégation de pouvoir est-elle encore démocratiquement légitime ?
+tags:
+  - tutelle
+  - controle
+  - legitimite
+  - democratie
+version: "1.0"

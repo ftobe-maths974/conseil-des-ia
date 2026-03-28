@@ -1,0 +1,23 @@
+id: bascule-ter-003
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Le contrat sans sortie"
+situation: >
+  L'Agence a signé avec l'opérateur de CITIZEN-SCAN un contrat de sept ans incluant
+  une clause de propriété exclusive des données traitées. Trois ans plus tard, une
+  étude indépendante révèle des biais systématiques dans les attributions. La direction
+  veut changer d'opérateur. Elle découvre que la migration des données coûterait
+  plus que le budget annuel du service et prendrait 18 mois minimum.
+question: >
+  À quel moment une institution perd-elle la maîtrise réelle de ses décisions
+  en signant un contrat technologique à long terme ?
+tags:
+  - lock-in
+  - contrat
+  - sortie
+  - souverainete
+version: "1.0"

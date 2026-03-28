@@ -1,0 +1,22 @@
+id: tension-ter-008
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "La souveraineté fragmentée"
+content: >
+  CITIZEN-SCAN agrège des données provenant de douze systèmes différents : CAF,
+  Pôle emploi, impôts, transport, santé, logement. Chacune de ces institutions a
+  délégué ses données à un opérateur privé unique qui les croise. Aucune d'elles
+  ne voit le tableau complet. Chacune est souveraine sur son fragment. Mais leur
+  combinaison produit une décision que nulle n'aurait pu ni voulu prendre seule.
+question: >
+  Peut-on parler de souveraineté institutionnelle quand chaque acteur ne contrôle
+  qu'une partie d'un système dont l'effet global n'appartient à personne ?
+tags:
+  - souverainete
+  - interoperabilite
+  - fragmentation
+  - responsabilite-collective
+version: "1.0"

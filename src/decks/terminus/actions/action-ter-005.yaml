@@ -1,0 +1,20 @@
+id: action-ter-005
+phase: action
+slot: 1
+lever_type: recours
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: individuel
+title: "Garantir l'explication humaine de toute sanction automatisée"
+body: >
+  Toute décision de dépriorisation, suspension ou restriction de droits générée par
+  CITIZEN-SCAN doit être accompagnée, dans un délai de 24 heures, d'une explication
+  compréhensible par un agent humain et d'une voie de recours identifiée, sans que
+  l'usager ait à la solliciter lui-même.
+mandat_principe: "Interdire toute sanction automatisée sans explication humaine compréhensible et sans voie de recours identifiée et accessible sans démarche supplémentaire."
+tags:
+  - recours
+  - explication
+  - sanction
+  - opacite
+version: "1.0"

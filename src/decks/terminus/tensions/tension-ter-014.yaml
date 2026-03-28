@@ -1,0 +1,27 @@
+id: tension-ter-014
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "La discrimination indirecte sans intention"
+content: >
+  Aucun paramètre de CITIZEN-SCAN ne mentionne l'origine, la religion ou la nationalité.
+  Et pourtant, les données montrent que les usagers avec des prénoms à consonance
+  maghrébine ou africaine sont surreprésentés dans les dépriorisations. Pas par
+  intention : par corrélation avec d'autres variables elles-mêmes socialement construites
+  — mobilité résidentielle, configurations familiales, patterns de consommation.
+  La discrimination est réelle. Personne ne l'a voulue. Et pourtant elle se reproduit.
+data_point: >
+  Des études menées en France sur les algorithmes de crédit et de logement social
+  montrent des taux de refus 1,8 à 2,4 fois supérieurs pour les demandeurs
+  aux noms d'origine étrangère, à revenus et situations comparables.
+question: >
+  Une discrimination algorithmique non intentionnelle mais statistiquement prouvée
+  engage-t-elle la responsabilité de l'institution qui déploie le système ?
+tags:
+  - discrimination-indirecte
+  - biais
+  - responsabilite
+  - intention
+version: "1.0"

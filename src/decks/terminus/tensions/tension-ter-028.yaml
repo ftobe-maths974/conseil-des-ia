@@ -1,0 +1,22 @@
+id: tension-ter-028
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: green
+title: "Vivre autrement dans un système conçu pour la norme"
+content: >
+  Sofia, 28 ans, vit dans un van aménagé par choix. Elle travaille en freelance,
+  change de département régulièrement, ne paie pas de loyer fixe. CITIZEN-SCAN
+  n'a pas de catégorie pour elle. Son score est bas non parce qu'elle est précaire
+  mais parce qu'elle est mobile et non standardisée. Ses droits sont réduits en
+  conséquence. Elle n'a rien demandé. Elle a juste choisi de vivre autrement.
+question: >
+  Un système d'aide conçu pour une norme de vie sédentaire et standardisée
+  peut-il être équitable envers des personnes qui ont choisi de ne pas y entrer ?
+tags:
+  - mobilite
+  - norme
+  - non-standard
+  - equite
+version: "1.0"

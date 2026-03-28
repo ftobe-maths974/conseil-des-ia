@@ -1,0 +1,54 @@
+id: scenario-ter-del
+phase: scenario
+chamber: delegation-vs-souverainete
+title: "Le dossier sans interlocuteur"
+context: >
+  Depuis six mois, L'Agence a confié à CITIZEN-SCAN la gestion automatisée des dossiers
+  de bourse et d'aide au logement pour 12 000 étudiants. Les délais sont passés de
+  huit semaines à 48 heures. Mais trois semaines avant la rentrée, 340 dossiers sont
+  bloqués en statut "vérification requise" sans délai annoncé. Aucun agent humain ne
+  peut reprendre ces dossiers manuellement : la procédure d'exception a été supprimée
+  lors de la migration. Le responsable de L'Agence affirme que CITIZEN-SCAN est
+  "souverain dans son périmètre". Le groupe reçoit le mandat : "Garantir qu'aucune
+  décision engageant les droits d'une personne ne soit définitive sans possibilité
+  d'intervention humaine identifiée dans un délai court."
+  Parmi les 340 dossiers bloqués, 60 concernent des étudiants en situation de précarité
+  grave. Certains ont déjà résilié leur bail. La directrice régionale de L'Agence n'a
+  pas accès aux paramètres du modèle.
+roles_briefing:
+  decideur: >
+    Vous êtes directrice régionale de L'Agence. Vous avez porté la réforme numérique
+    devant votre tutelle comme un succès. Vous ne pouvez pas reconnaître publiquement
+    que vous n'avez plus accès aux décisions individuelles. Votre ligne rouge : vous
+    refusez de signer une déclaration admettant que L'Agence a perdu la main sur ses
+    propres attributions. Votre angle mort : vous ne mesurez pas ce que représente
+    concrètement trois semaines sans logement à 18 ans.
+  technicien: >
+    Vous êtes responsable de l'intégration CITIZEN-SCAN. Vous savez que les 340 dossiers
+    bloqués ont déclenché une règle de cohérence interne que vous ne pouvez pas
+    désactiver sans risquer une corruption des données. Il existe une procédure de
+    déverrouillage manuel, mais elle prend 72 heures par dossier. Votre ligne rouge :
+    vous ne prendrez pas de décision technique sans validation écrite de la hiérarchie.
+    Votre angle mort : vous avez oublié que ces dossiers sont des personnes.
+  affecte: >
+    Vous êtes étudiante en première année, aidante de votre frère cadet. Votre dossier
+    est bloqué depuis 19 jours. Vous avez reçu un message automatique vous demandant
+    de "patienter". Vous avez rappelé quatre fois. À chaque fois, on vous a dit que
+    "le système est en cours de traitement". Vous avez besoin de cette bourse pour
+    payer votre loyer du 1er septembre. Votre ligne rouge : vous n'accepterez pas
+    qu'on vous explique que personne n'est responsable.
+  contre_pouvoir: >
+    Vous êtes médiateur de l'éducation nationale rattaché à la région. Vous avez reçu
+    47 signalements en deux semaines. Vous avez demandé à L'Agence une liste des
+    dossiers bloqués pour intervenir : elle vous a été refusée au motif de la
+    confidentialité RGPD. Vous savez que le contrat avec l'opérateur de CITIZEN-SCAN
+    prévoit une clause de responsabilité limitée. Votre question : si personne n'est
+    responsable, qui peut être mis en demeure ?
+tags:
+  - delegation
+  - blocage
+  - responsabilite
+  - bourse
+  - logement
+difficulty: eleve
+version: "1.0"

@@ -1,0 +1,20 @@
+id: action-ter-003
+phase: action
+slot: 3
+lever_type: auditer
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: organisationnel
+title: "Auditer annuellement la réversibilité effective des systèmes automatisés"
+body: >
+  Toute autorité ayant délégué une décision à un système IA doit publier chaque
+  année un rapport de réversibilité : coût de sortie du système, délai de reprise
+  manuelle, nombre de décisions non traçables à un agent. Ce rapport est transmis
+  à l'autorité de tutelle et rendu public dans un format accessible aux usagers.
+mandat_principe: "Exiger la publication annuelle d'un rapport de réversibilité pour tout système automatisé gérant des droits individuels."
+tags:
+  - audit
+  - reversibilite
+  - transparence
+  - delegation
+version: "1.0"

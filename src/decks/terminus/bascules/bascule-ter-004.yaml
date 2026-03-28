@@ -1,0 +1,23 @@
+id: bascule-ter-004
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: individuel
+title: "Pass en veille"
+situation: >
+  Le pass de transport de Karim passe au rouge au tourniquet un vendredi matin.
+  Il n'a pas fraudé. CITIZEN-SCAN a détecté trois jours sans activité enregistrée
+  et a déclenché une vérification de conformité. Le dossier sera réévalué sous
+  72 heures. Entre-temps, le pass est suspendu. Le guichet de L'Agence n'ouvre
+  que le mardi.
+question: >
+  Un système d'aide peut-il légitimement suspendre un droit en attendant de
+  vérifier qu'il est encore mérité ?
+tags:
+  - suspension
+  - pass
+  - conformite
+  - droits
+version: "1.0"

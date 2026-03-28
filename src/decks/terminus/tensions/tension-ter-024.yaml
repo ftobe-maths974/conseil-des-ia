@@ -1,0 +1,22 @@
+id: tension-ter-024
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: red
+title: "La preuve impossible à effacer"
+content: >
+  Un usager a été classé en "risque de fraude" par CITIZEN-SCAN il y a deux ans.
+  Le contrôle n'a rien trouvé. Mais la classification reste dans ses données.
+  Elle influence encore son score aujourd'hui. L'Agence ne sait pas comment la
+  supprimer sans risquer de corrompre d'autres données. L'usager a prouvé qu'il
+  ne fraudait pas. Il n'a pas pu prouver qu'il ne frauderait jamais.
+question: >
+  Une suspicion démentie par un contrôle devrait-elle disparaître des données
+  d'un usager — et qui est responsable quand les systèmes ne permettent pas cet effacement ?
+tags:
+  - droit-effacement
+  - classification
+  - suspicion
+  - donnees
+version: "1.0"

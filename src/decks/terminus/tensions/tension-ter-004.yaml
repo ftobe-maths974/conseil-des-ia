@@ -1,0 +1,23 @@
+id: tension-ter-004
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "L'efficacité contre la responsabilité"
+content: >
+  L'Agence gère chaque année 400 000 dossiers avec 120 agents. L'automatisation
+  n'est pas un choix idéologique : c'est une nécessité arithmétique. Mais chaque
+  décision déléguée à CITIZEN-SCAN est une décision dont aucun agent ne peut être
+  tenu responsable individuellement. L'organisation gagne en capacité et perd en
+  imputabilité. Quand quelque chose se passe mal, personne ne peut être mis en face
+  de la décision — et la personne lésée n'a personne à qui s'adresser.
+question: >
+  Une organisation peut-elle légitimement automatiser ses décisions quand cette
+  automatisation fait disparaître la responsabilité individuelle face aux personnes concernées ?
+tags:
+  - responsabilite
+  - imputabilite
+  - echelle
+  - organisation
+version: "1.0"

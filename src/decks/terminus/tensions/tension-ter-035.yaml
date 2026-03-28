@@ -1,0 +1,23 @@
+id: tension-ter-035
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Interopérabilité ou homogénéisation forcée"
+content: >
+  Pour que CITIZEN-SCAN fonctionne au niveau national, L'Agence a imposé à tous
+  ses partenaires locaux un format de données unique. Les associations d'aide sociale
+  qui avaient développé leurs propres systèmes de suivi — mieux adaptés à leurs
+  populations — ont dû les abandonner. L'interopérabilité nationale a été obtenue
+  en effaçant les adaptations locales. Les données sont maintenant comparables.
+  Elles sont aussi moins pertinentes pour les cas qui s'écartent de la norme nationale.
+question: >
+  Quand l'interopérabilité d'un système national efface les adaptations locales
+  plus pertinentes pour certaines populations, quel est le vrai bénéfice de l'unification ?
+tags:
+  - interoperabilite
+  - standardisation
+  - local
+  - national
+version: "1.0"

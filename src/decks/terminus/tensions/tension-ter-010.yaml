@@ -1,0 +1,23 @@
+id: tension-ter-010
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Ne pas savoir ce qu'on n'a pas obtenu"
+content: >
+  Quand CITIZEN-SCAN dépriorise un dossier, la personne concernée ne reçoit pas
+  de notification. Elle attend simplement plus longtemps sans savoir pourquoi.
+  Elle peut attribuer ce délai à la surcharge des services, à une erreur, à sa
+  propre situation. Elle ne sait pas qu'un algorithme a décidé qu'elle était moins
+  urgente que d'autres. L'absence d'information préserve la paix sociale — mais
+  elle empêche toute contestation fondée.
+question: >
+  Une décision qui ne se sait pas est-elle moins dommageable qu'une décision
+  explicite, ou plus difficile à contester et donc plus dangereuse ?
+tags:
+  - invisibilite
+  - notification
+  - contestation
+  - depriorisation
+version: "1.0"

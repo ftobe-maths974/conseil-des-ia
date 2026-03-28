@@ -1,0 +1,55 @@
+id: scenario-ter-pre
+phase: scenario
+chamber: preuve-vs-simulation
+title: "Le dossier dormant"
+context: >
+  Nadia, 24 ans, aidante informelle de sa mère, n'a pas consulté son espace numérique
+  de L'Agence depuis 18 jours. Elle n'a pas répondu à deux messages automatiques
+  demandant une "confirmation d'activité". CITIZEN-SCAN a interprété cette absence
+  comme un signal d'anomalie et a rétrogradé son dossier en catégorie "vérification
+  prioritaire". Sa bourse a été suspendue automatiquement. Elle n'a pas eu accès
+  à internet pendant trois semaines : elle utilisait le réseau de la bibliothèque
+  municipale, fermée pour travaux. Le groupe reçoit le mandat : "Garantir que
+  l'absence de signal numérique ne soit jamais interprétée par défaut comme un
+  désengagement ou une fraude sans contact humain préalable."
+  Le directeur technique de CITIZEN-SCAN explique que sans ce mécanisme de détection,
+  12% des fraudes identifiées l'an dernier n'auraient pas été repérées. Il s'agit
+  dans ces cas de personnes décédées ou parties à l'étranger continuant à percevoir
+  des aides. Le coût estimé : 2,3 millions d'euros détournés sur la région.
+roles_briefing:
+  decideur: >
+    Vous êtes responsable du contrôle des dossiers à L'Agence. Le chiffre de 2,3
+    millions d'euros de fraude détectée est réel et vous l'avez mis en avant dans
+    votre rapport annuel. Vous avez une pression politique pour "lutter contre les
+    abus". Votre ligne rouge : vous ne supprimerez pas un mécanisme de détection
+    qui fait ses preuves statistiquement. Votre angle mort : vous ne mesurez pas
+    combien de cas comme celui de Nadia se cachent derrière ce mécanisme.
+  technicien: >
+    Vous êtes ingénieur chez l'opérateur de CITIZEN-SCAN. Le modèle de détection
+    d'anomalie est entraîné sur des données historiques de fraude. Il fonctionne
+    bien pour les cas les plus évidents. Mais il a un taux de faux positifs de 7%
+    que vous avez jugé "acceptable". Vous n'avez pas de moyen simple de distinguer
+    "absence de fraude" et "absence de connectivité". Votre ligne rouge : vous
+    refusez d'affirmer que le modèle peut faire cette distinction.
+  affecte: >
+    Vous êtes Nadia. Vous avez appris la suspension de votre bourse en essayant
+    de payer votre loyer. On vous a dit que votre dossier était "en cours de
+    traitement" et qu'il fallait fournir une preuve de vos activités des 18 derniers
+    jours. Vous ne savez pas quelles preuves produire. Vous aidez votre mère tous
+    les matins mais il n'existe aucun document pour attester ça. Votre ligne rouge :
+    vous refusez qu'on vous demande de prouver que vous existez normalement.
+  contre_pouvoir: >
+    Vous êtes délégué syndical dans un service d'aide à domicile. Vous connaissez
+    plusieurs cas similaires à celui de Nadia parmi les aidantes informelles. Vous
+    voulez une règle qui protège ces personnes sans pour autant nier que la fraude
+    existe. Vous avez une proposition : un contact humain obligatoire avant toute
+    suspension, avec un délai de réponse de 10 jours minimum. Votre question :
+    comment L'Agence peut-elle distinguer l'invisible du fraudeur ?
+tags:
+  - preuve-activite
+  - aidante
+  - suspension
+  - faux-positif
+  - detection
+difficulty: eleve
+version: "1.0"

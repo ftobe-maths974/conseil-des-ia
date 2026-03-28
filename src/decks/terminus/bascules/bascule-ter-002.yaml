@@ -1,0 +1,23 @@
+id: bascule-ter-002
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "L'agent qui n'a plus accès"
+situation: >
+  L'Agence a migré vers CITIZEN-SCAN il y a huit mois. Depuis, les agents de guichet
+  ne peuvent plus modifier un dossier directement : toute intervention passe par
+  une demande adressée à l'opérateur du système, avec un délai de traitement de
+  cinq à dix jours. Quand une usagère arrive en urgence avec un enfant malade et
+  un loyer en défaut, l'agent voit le problème mais ne peut rien faire lui-même.
+question: >
+  Quand un agent humain n'a plus les moyens techniques d'agir, qui est encore
+  responsable de la décision prise par le système à sa place ?
+tags:
+  - delegation
+  - agent
+  - impuissance
+  - responsabilite
+version: "1.0"

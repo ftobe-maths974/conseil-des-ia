@@ -1,0 +1,23 @@
+id: bascule-ter-001
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "Le formulaire qui décide seul"
+situation: >
+  Léa, 19 ans, dépose sa demande de bourse en ligne. Trois jours plus tard,
+  elle reçoit un refus automatique. Le formulaire a détecté une incohérence entre
+  son adresse de résidence et l'adresse de ses parents. Aucun agent n'a lu son
+  dossier. Le message indique : "Décision prise par le système d'évaluation.
+  Recours possible sous 30 jours." Elle ne sait pas ce qu'elle a mal rempli.
+question: >
+  Un système d'aide peut-il légitimement refuser une demande sans qu'aucun humain
+  n'ait examiné la situation de la personne concernée ?
+tags:
+  - delegation
+  - bourse
+  - refus-automatique
+  - recours
+version: "1.0"

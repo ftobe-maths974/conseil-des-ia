@@ -1,0 +1,22 @@
+id: tension-ter-026
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "Le modèle qui fabrique la norme"
+content: >
+  CITIZEN-SCAN a été entraîné sur des dossiers de personnes qui ont obtenu leurs
+  aides sans problème. Ce profil est devenu la norme. Mais cette norme n'est pas
+  neutre : elle reflète les personnes qui avaient déjà les ressources pour naviguer
+  le système. Le modèle a appris ce qu'est un "bon dossier" selon les critères
+  des personnes les mieux dotées. Il applique maintenant cette norme à tout le monde.
+question: >
+  Quand un modèle de conformité est entraîné sur des données déjà sélectionnées,
+  reproduit-il une norme légitime ou la norme de ceux qui ont survécu au filtre précédent ?
+tags:
+  - norme
+  - biais-de-selection
+  - modele
+  - legitimite
+version: "1.0"

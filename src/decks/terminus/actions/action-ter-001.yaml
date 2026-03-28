@@ -1,0 +1,20 @@
+id: action-ter-001
+phase: action
+slot: 1
+lever_type: interdire
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Interdire toute décision automatisée sans responsable humain identifié"
+body: >
+  Il est interdit à L'Agence de prendre toute décision affectant les droits d'un
+  usager — suspension, dépriorisation, blocage de dossier — sans qu'un agent humain
+  nommément responsable soit désigné et joignable dans un délai de 48 heures. Aucun
+  contrat avec un opérateur IA ne peut supprimer cette obligation de responsabilité.
+mandat_principe: "Interdire toute décision engageant les droits d'une personne sans responsable humain identifié, nommément désigné et joignable."
+tags:
+  - delegation
+  - responsabilite
+  - automatisation
+  - droits
+version: "1.0"

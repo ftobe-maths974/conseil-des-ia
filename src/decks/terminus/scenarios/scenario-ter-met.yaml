@@ -1,0 +1,56 @@
+id: scenario-ter-met
+phase: scenario
+chamber: metabolisme-vs-progres
+title: "L'audit qui coûte plus cher que la fraude"
+context: >
+  L'Agence a déployé un dispositif de surveillance comportementale renforcé sur
+  les bénéficiaires du RSA dans trois départements pilotes. Capteurs de présence
+  dans les logements sociaux, géolocalisation des pass de transport, analyse des
+  achats en supermarché, croisement avec les données de scolarisation des enfants.
+  Le coût annuel du dispositif est de 14 millions d'euros. Les fraudes détectées
+  représentent 900 000 euros. Un rapport d'évaluation interne reconnaît le déséquilibre
+  mais argue que "l'effet dissuasif n'est pas monétisable". Le groupe reçoit le mandat :
+  "Plafonner le coût de tout dispositif de contrôle à un montant proportionnel au
+  risque qu'il est censé couvrir, et restituer la décision à un agent humain local
+  dès que ce seuil est dépassé."
+  Trois agents de L'Agence ont démissionné depuis le lancement du dispositif en
+  invoquant une "perte de sens". Les services d'aide psychologique aux agents ont
+  enregistré une hausse de 40% des consultations depuis janvier.
+roles_briefing:
+  decideur: >
+    Vous êtes directeur général de L'Agence pour la région pilote. Vous avez signé
+    le marché du dispositif. Vous croyez sincèrement à la valeur dissuasive que
+    les chiffres ne captent pas. Vous êtes aussi confronté à trois lettres de
+    démission d'agents qui ont travaillé vingt ans dans le service. Votre ligne rouge :
+    vous refusez qu'on réduise la lutte contre la fraude à un calcul comptable. Votre
+    angle mort : vous ne voyez pas ce que le dispositif fait à vos agents et à la
+    confiance des usagers.
+  technicien: >
+    Vous êtes responsable de l'infrastructure de surveillance. Vous avez intégré
+    les données de sept sources différentes. Le système fonctionne techniquement.
+    Mais vous avez constaté que certains capteurs de présence enregistrent des
+    données sur des membres du foyer non bénéficiaires — enfants, cohabitants.
+    Vous n'avez pas encore signalé ce problème à votre hiérarchie. Votre ligne rouge :
+    vous ne certifierez pas la conformité RGPD du dispositif dans l'état actuel.
+  affecte: >
+    Vous êtes bénéficiaire du RSA depuis huit mois, après un licenciement. Vous
+    savez que votre appartement est surveillé. Vous ne sortez plus de chez vous
+    après 22h parce que vous avez peur que ça "déclenche quelque chose". Vous
+    avez arrêté d'aller chez des amis le week-end. Vous vous sentez coupable d'exister
+    normalement. Votre ligne rouge : vous voulez savoir précisément ce qui est
+    mesuré, par qui, et pour quoi faire.
+  contre_pouvoir: >
+    Vous êtes élu local dans l'un des trois départements pilotes. Vous avez voté
+    contre le dispositif en commission mais vous avez été mis en minorité. Vous
+    avez le rapport d'évaluation interne. Vous cherchez une décision concrète qui
+    peut être adoptée maintenant, avant la fin de la période pilote, pour stopper
+    ou transformer le dispositif. Votre question : à partir de quel ratio coût/fraude
+    une autorité locale peut-elle légitimement refuser de continuer ?
+tags:
+  - surveillance
+  - proportionnalite
+  - cout-controle
+  - RSA
+  - epuisement
+difficulty: eleve
+version: "1.0"

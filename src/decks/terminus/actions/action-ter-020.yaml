@@ -1,0 +1,21 @@
+id: action-ter-020
+phase: action
+slot: 4
+lever_type: auditer
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: systemique
+title: "Auditer et publier l'empreinte systémique complète de CITIZEN-SCAN"
+body: >
+  L'Agence doit publier chaque année un bilan systémique de CITIZEN-SCAN comprenant :
+  coût total d'infrastructure, nombre d'agents remplacés, coût de maintenance, nombre
+  de recours générés, coût des litiges et indemnités, bilan énergétique. Ce bilan est
+  comparé chaque année au coût estimé d'un traitement humain équivalent et rendu
+  accessible au grand public.
+mandat_principe: "Exiger la publication annuelle d'un bilan systémique complet de tout dispositif IA public, comparant son coût réel au coût d'un traitement humain équivalent."
+tags:
+  - bilan
+  - cout-systeme
+  - transparence
+  - infrastructure
+version: "1.0"

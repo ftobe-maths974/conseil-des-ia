@@ -1,0 +1,23 @@
+id: bascule-ter-008
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Le signal qui devient preuve"
+situation: >
+  L'Agence a intégré dans CITIZEN-SCAN les données de fréquentation du réseau de
+  transport comme indicateur de "présence active sur le territoire". Les usagers
+  qui ne prennent pas les transports en commun — parce qu'ils n'en ont pas besoin,
+  parce qu'ils ont un véhicule, parce qu'ils sont malades — accumulent des points
+  d'anomalie. Aucune de ces raisons n'est demandée ni prise en compte.
+question: >
+  À quel moment un signal de comportement devient-il une preuve de conformité
+  sans que la personne ait eu la possibilité de contextualiser ce signal ?
+tags:
+  - signal
+  - preuve
+  - mobilite
+  - interpretation
+version: "1.0"
