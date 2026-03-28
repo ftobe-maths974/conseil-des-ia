@@ -1,37 +1,204 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { CHAMBER_LABELS, CHAMBER_LABELS_SHORT } from '../lib/chambers';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const decks = await getCollection('decks');
+
+// Pre-render deck data for client-side use
+const deckData = decks.map(d => ({
+  id: d.data.id,
+  name: d.data.name,
+  domaine: d.data.domaine ?? '',
+  groupes: d.data.groups.map(g => ({
+    id: g.id,
+    chamber: g.chamber,
+    label: CHAMBER_LABELS[g.chamber] ?? g.chamber,
+    labelShort: CHAMBER_LABELS_SHORT[g.chamber] ?? g.chamber,
+  })),
+}));
+
+// Chamber → CSS var mapping
+const CHAMBER_CSS: Record<string, string> = {
+  'delegation-vs-souverainete': 'var(--chamber-delegation)',
+  'preuve-vs-simulation':       'var(--chamber-preuve)',
+  'metabolisme-vs-progres':     'var(--chamber-metabolisme)',
+  'invisibilite-vs-arbitrage':  'var(--chamber-invisibilite)',
+  'singularite-vs-standard':    'var(--chamber-singularite)',
+};
 ---
 
-<BaseLayout title="Accueil">
+<BaseLayout title="Conseil des IA">
   <main class="home">
-    <div class="home__container">
-      <div class="home__header">
+    <div class="home__inner">
+
+      <!-- Header -->
+      <header class="home__header">
         <h1 class="home__title">Conseil des IA</h1>
-        <p class="home__subtitle">Jeu pédagogique sur les points de bascule de l'intelligence artificielle</p>
-      </div>
+        <p class="home__subtitle">Jeu pédagogique sur les enjeux de l'intelligence artificielle générative</p>
+      </header>
 
-      <div class="home__choices">
-        <a href={`${import.meta.env.BASE_URL}/animateur/demo`} class="home__card home__card--animateur">
-          <span class="home__card-icon">📡</span>
-          <span class="home__card-label">Animateur</span>
-          <span class="home__card-desc">Projection grand écran, timer, tableau de bord</span>
-        </a>
+      <!-- Stepper pills -->
+      <nav class="stepper" aria-label="Étapes" id="stepper">
+        <button class="stepper__pill stepper__pill--active" data-step="1" disabled>Rôle</button>
+        <span class="stepper__sep">→</span>
+        <button class="stepper__pill" data-step="2" disabled id="stepper-deck">Deck</button>
+        <span class="stepper__sep" id="stepper-sep2">→</span>
+        <button class="stepper__pill" data-step="3" disabled id="stepper-groupe">Groupe</button>
+      </nav>
 
-        <a href={`${import.meta.env.BASE_URL}/groupe/demo/phase-1/groupe-A`} class="home__card home__card--groupe">
-          <span class="home__card-icon">📱</span>
-          <span class="home__card-label">Groupe</span>
-          <span class="home__card-desc">Interface mobile, cartes, mandats</span>
-        </a>
-      </div>
+      <!-- Step 1 — Rôle -->
+      <section class="step" id="step-1" aria-label="Choisir votre rôle">
+        <h2 class="step__title">Quel est votre rôle ?</h2>
+        <div class="role-grid">
+          <button class="role-card role-card--animateur" id="btn-animateur" data-role="animateur">
+            <span class="role-card__icon">📡</span>
+            <span class="role-card__label">Animateur</span>
+            <span class="role-card__desc">Vue d'ensemble, timer,<br>distribution des groupes</span>
+          </button>
+          <button class="role-card role-card--groupe" id="btn-groupe" data-role="groupe">
+            <span class="role-card__icon">📱</span>
+            <span class="role-card__label">Joueur</span>
+            <span class="role-card__desc">Interface mobile,<br>cartes et mandats</span>
+          </button>
+        </div>
+      </section>
 
-      <p class="home__footnote">
-        Version 0.1 — Deck de démonstration
-      </p>
+      <!-- Step 2 — Deck -->
+      <section class="step step--hidden" id="step-2" aria-label="Choisir le deck">
+        <h2 class="step__title">Quelle session ?</h2>
+        <div class="deck-grid" id="deck-grid">
+          <!-- Populated by JS -->
+        </div>
+        <button class="back-btn" id="back-1">← Retour</button>
+      </section>
+
+      <!-- Step 3 — Groupe (joueur uniquement) -->
+      <section class="step step--hidden" id="step-3" aria-label="Choisir votre groupe">
+        <h2 class="step__title">Quel est votre groupe ?</h2>
+        <div class="groupe-grid" id="groupe-grid">
+          <!-- Populated by JS -->
+        </div>
+        <button class="back-btn" id="back-2">← Retour</button>
+      </section>
+
     </div>
   </main>
 </BaseLayout>
 
+<script define:vars={{ deckData, base, CHAMBER_CSS }}>
+  // ── State ──────────────────────────────────────────────────────────────────
+  let role = null;       // 'animateur' | 'groupe'
+  let selectedDeck = null;
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function showStep(n) {
+    document.querySelectorAll('.step').forEach((s, i) => {
+      const step = i + 1;
+      if (step === n) {
+        s.classList.remove('step--hidden');
+        s.classList.add('step--visible');
+      } else {
+        s.classList.add('step--hidden');
+        s.classList.remove('step--visible');
+      }
+    });
+    // Update stepper pills
+    document.querySelectorAll('.stepper__pill').forEach(pill => {
+      const s = parseInt(pill.dataset.step);
+      pill.classList.toggle('stepper__pill--active', s === n);
+      pill.classList.toggle('stepper__pill--done', s < n);
+      pill.disabled = s > n;
+    });
+    // Hide groupe pill if animateur
+    const stepperGroupe = document.getElementById('stepper-groupe');
+    const stepperSep2   = document.getElementById('stepper-sep2');
+    if (role === 'animateur') {
+      stepperGroupe.style.display = 'none';
+      stepperSep2.style.display = 'none';
+    } else {
+      stepperGroupe.style.display = '';
+      stepperSep2.style.display = '';
+    }
+  }
+
+  function buildDeckGrid() {
+    const grid = document.getElementById('deck-grid');
+    grid.innerHTML = '';
+    deckData.forEach(deck => {
+      const btn = document.createElement('button');
+      btn.className = 'deck-card';
+      btn.dataset.deckId = deck.id;
+      btn.innerHTML = `
+        <span class="deck-card__name">${deck.name}</span>
+        ${deck.domaine ? `<span class="deck-card__domain">${deck.domaine}</span>` : ''}
+        <span class="deck-card__count">${deck.groupes.length} groupe${deck.groupes.length > 1 ? 's' : ''}</span>
+      `;
+      btn.addEventListener('click', () => selectDeck(deck));
+      grid.appendChild(btn);
+    });
+  }
+
+  function selectDeck(deck) {
+    selectedDeck = deck;
+    if (role === 'animateur') {
+      window.location.href = `${base}/animateur/${deck.id}`;
+      return;
+    }
+    // Joueur → show groupe step
+    buildGroupeGrid(deck);
+    showStep(3);
+  }
+
+  function buildGroupeGrid(deck) {
+    const grid = document.getElementById('groupe-grid');
+    grid.innerHTML = '';
+    deck.groupes.forEach(g => {
+      const color = CHAMBER_CSS[g.chamber] ?? 'var(--text-secondary)';
+      const btn = document.createElement('a');
+      btn.className = 'groupe-card';
+      btn.href = `${base}/groupe/${deck.id}/phase-1/${g.id}`;
+      btn.style.setProperty('--chamber-color', color);
+      btn.innerHTML = `
+        <span class="groupe-card__dot"></span>
+        <span class="groupe-card__id">${g.id.replace('groupe-', 'Groupe ')}</span>
+        <span class="groupe-card__chamber">${g.label}</span>
+        <span class="groupe-card__chamber-short">${g.labelShort}</span>
+      `;
+      grid.appendChild(btn);
+    });
+  }
+
+  // ── Role selection ─────────────────────────────────────────────────────────
+  document.getElementById('btn-animateur').addEventListener('click', () => {
+    role = 'animateur';
+    buildDeckGrid();
+    showStep(2);
+  });
+
+  document.getElementById('btn-groupe').addEventListener('click', () => {
+    role = 'groupe';
+    buildDeckGrid();
+    showStep(2);
+  });
+
+  // ── Back buttons ──────────────────────────────────────────────────────────
+  document.getElementById('back-1').addEventListener('click', () => showStep(1));
+  document.getElementById('back-2').addEventListener('click', () => showStep(2));
+
+  // ── Stepper navigation ────────────────────────────────────────────────────
+  document.querySelectorAll('.stepper__pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      const s = parseInt(pill.dataset.step);
+      if (!pill.disabled) showStep(s);
+    });
+  });
+</script>
+
 <style>
+  /* ── Layout ─────────────────────────────────────────────────────────────── */
   .home {
     min-height: 100dvh;
     display: flex;
@@ -40,46 +207,114 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: var(--space-lg);
   }
 
-  .home__container {
+  .home__inner {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  /* ── Header ─────────────────────────────────────────────────────────────── */
+  .home__header {
     text-align: center;
-    max-width: 600px;
   }
 
   .home__title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: var(--space-sm);
     background: linear-gradient(135deg, var(--chamber-delegation), var(--chamber-invisibilite));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-bottom: var(--space-sm);
   }
 
   .home__subtitle {
     color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin-bottom: var(--space-3xl);
-    max-width: 28ch;
-    margin-inline: auto;
+    font-size: 0.95rem;
     line-height: 1.5;
+    max-width: 36ch;
+    margin-inline: auto;
   }
 
-  .home__choices {
+  /* ── Stepper ─────────────────────────────────────────────────────────────── */
+  .stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+
+  .stepper__pill {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: default;
+    transition: all var(--transition-fast);
+  }
+
+  .stepper__pill--done {
+    border-color: var(--chamber-delegation);
+    color: var(--chamber-delegation);
+    cursor: pointer;
+  }
+
+  .stepper__pill--active {
+    background: var(--chamber-delegation);
+    border-color: var(--chamber-delegation);
+    color: white;
+    cursor: default;
+  }
+
+  .stepper__sep {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+  }
+
+  /* ── Steps ───────────────────────────────────────────────────────────────── */
+  .step {
+    animation: stepIn var(--transition-base) ease both;
+  }
+
+  .step--hidden {
+    display: none;
+  }
+
+  @keyframes stepIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .step__title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Role cards ──────────────────────────────────────────────────────────── */
+  .role-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
+    gap: var(--space-md);
   }
 
-  @media (max-width: 480px) {
-    .home__choices {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 420px) {
+    .role-grid { grid-template-columns: 1fr; }
   }
 
-  .home__card {
+  .role-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,47 +323,199 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--text-primary);
-    transition: all var(--transition-base);
     cursor: pointer;
+    transition: all var(--transition-base);
+    color: var(--text-primary);
   }
 
-  .home__card:hover {
-    background: var(--bg-card-hover);
-    transform: translateY(-2px);
+  .role-card:hover {
+    transform: translateY(-3px);
     box-shadow: var(--shadow-card);
   }
 
-  .home__card--animateur:hover {
+  .role-card--animateur:hover {
     border-color: var(--chamber-delegation);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.25);
   }
 
-  .home__card--groupe:hover {
+  .role-card--groupe:hover {
     border-color: var(--chamber-singularite);
-    box-shadow: 0 0 20px rgba(217, 119, 6, 0.2);
+    box-shadow: 0 8px 32px rgba(232, 86, 58, 0.25);
   }
 
-  .home__card-icon {
+  .role-card__icon {
     font-size: 2.5rem;
+    line-height: 1;
   }
 
-  .home__card-label {
+  .role-card__label {
     font-family: var(--font-display);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
   }
 
-  .home__card-desc {
-    font-size: 0.85rem;
+  .role-card__desc {
+    font-size: 0.82rem;
     color: var(--text-muted);
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
-  .home__footnote {
+  /* ── Deck cards ──────────────────────────────────────────────────────────── */
+  .deck-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .deck-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 0.15rem var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    text-align: left;
+    color: var(--text-primary);
+    width: 100%;
+  }
+
+  .deck-card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2), 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .deck-card__name {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .deck-card__domain {
+    font-size: 0.78rem;
     color: var(--text-muted);
-    font-size: 0.8rem;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .deck-card__count {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: var(--bg-surface);
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Groupe cards ────────────────────────────────────────────────────────── */
+  .groupe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-sm);
+  }
+
+  .groupe-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: var(--space-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    /* Reset visited color */
+    color: var(--text-primary);
+    transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Neutralise la couleur :visited du navigateur */
+  .groupe-card:visited {
+    color: var(--text-primary);
+  }
+
+  .groupe-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--chamber-color);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    pointer-events: none;
+  }
+
+  .groupe-card:hover {
+    border-color: var(--chamber-color);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--chamber-color) 40%, transparent),
+                0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .groupe-card:hover::after {
+    opacity: 0.06;
+  }
+
+  .groupe-card__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--chamber-color);
+    margin-bottom: 0.25rem;
+    opacity: 0.8;
+  }
+
+  .groupe-card__id {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+
+  .groupe-card__chamber {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.35;
+    margin-top: 0.1rem;
+  }
+
+  .groupe-card__chamber-short {
+    display: none;
+  }
+
+  @media (max-width: 360px) {
+    .groupe-grid { grid-template-columns: 1fr 1fr; }
+    .groupe-card__chamber { display: none; }
+    .groupe-card__chamber-short { display: block; font-size: 0.72rem; color: var(--text-muted); }
+  }
+
+  /* ── Back button ─────────────────────────────────────────────────────────── */
+  .back-btn {
+    display: block;
+    margin-top: var(--space-lg);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: var(--space-xs) 0;
+    transition: color var(--transition-fast);
+  }
+
+  .back-btn:hover {
+    color: var(--text-secondary);
   }
 </style>
