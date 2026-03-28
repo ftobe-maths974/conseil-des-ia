@@ -119,12 +119,6 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
       ))}
     </section>
 
-    <!-- Alerte règle red-rouge -->
-    <div class="p3__red-warning" id="p3-red-warning" hidden role="alert">
-      ⚠ Votre groupe a hérité d'un mandat irréversible. Vous ne pouvez pas émettre
-      un mandat irréversible à votre tour. Choisissez une carte verte ou jaune.
-    </div>
-
     <!-- Bloc mandat : rappel + formulaire -->
     <div class="p3__mandat-block" id="p3-mandat-block" hidden>
 
@@ -222,12 +216,9 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
 
   // ── État ──────────────────────────────────────────────────────────────────
   let selectedId: string | null = null;
-  let inheritedRed = false;
   let basculeText = '';
 
-  // Lire les données du hash URL
   const hash = window.location.hash;
-  if (hash.includes('inherited=red')) inheritedRed = true;
 
   // Décoder le point de bascule depuis Phase 2
   const basculeMatch = hash.match(/bascule=([^&]*)/);
@@ -271,7 +262,6 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   const parcequeTa    = document.getElementById('mandat-parce') as HTMLTextAreaElement;
   const conditionTa   = document.getElementById('mandat-condition') as HTMLTextAreaElement;
   const submitBtn     = document.getElementById('p3-submit') as HTMLButtonElement;
-  const redWarning    = document.getElementById('p3-red-warning')!;
   const qrDest        = document.getElementById('p3-qr-dest')!;
   const qrCardEl      = document.getElementById('p3-qr-card')!;
   const qrCanvas      = document.getElementById('qr-canvas') as HTMLCanvasElement;
@@ -284,14 +274,6 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     if (!btn) return;
 
     const id  = btn.dataset.id!;
-    const rev = btn.dataset.rev!;
-
-    // Règle : pas de red si héritage red
-    if (inheritedRed && rev === 'red') {
-      redWarning.hidden = false;
-      redWarning.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      return;
-    }
 
     // Déselectionner l'ancienne carte
     cardsSection.querySelectorAll<HTMLElement>('.p3-card--selected').forEach(c => {

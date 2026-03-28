@@ -98,7 +98,6 @@ Mapping dominant → leviers recommandés :
    - Tâche : choisir 1 carte, rédiger un mandat (2 champs guidés)
    - Modification de trajectoire : action green → traj-1 / yellow → traj+0 / red → traj+1 (borné 1–5)
    - Output : handoff base64 avec traj intégré → QR code → groupe suivant
-   - Règle : impossible d'émettre 2 mandats red consécutifs
 
 4. Audience d'Arbitrage (30 min)
    - 1 scénario depuis scenarios/ + mandat hérité via URL hash (traj inclus)
@@ -291,8 +290,9 @@ comment les décisions accumulées réduisent ou restaurent la possibilité de r
 - [x] Enrichissement contenu : 45 tensions (9/chambre × 5 chambres, distribution 3/3/3 par slot_theme),
       filtrage 3/1/1 réel en Phase 2 (cartes hors sélection masquées côté client)
 - [x] Trajectoire de réversibilité : TRAJ_LABELS + clampTraj() + initTraj() dans chambers.ts,
-      calcul Phase 1 (carte du bas), confirmation Phase 2 (majorité red → traj+1),
-      modificateur Phase 3 (green→-1 / yellow→0 / red→+1), badge + contrainte narrative Phase 4
+      chaîne complète P1→P2→P3→P4 vérifiée et cohérente
+- [x] Audit de cohérence : suppression code mort `inherited=red` (règle red-on-red jamais activée),
+      `CHAMBER_ENUM` partagé dans config.ts (actions.chamber + decks.groups.chamber)
 
 ## Ce qui reste à faire (priorité ordre)
 1. ~~Corriger le bug Phase 1~~ ✓ corrigé
@@ -302,7 +302,7 @@ comment les décisions accumulées réduisent ou restaurent la possibilité de r
 5. ~~Migration slot : étape 4 (centraliser constantes → src/lib/chambers.ts)~~ ✓ fait
 6. ~~Refonte Slots & Leviers (slot_theme + lever_type + propagation thématique)~~ ✓ fait
 7. ~~Enrichissement contenu : 9 tensions/chambre (3/3/3), filtrage 3/1/1 réel Phase 2~~ ✓ fait
-8. ~~Implémenter la trajectoire de réversibilité~~ ✓ fait
+8. ~~Implémenter la trajectoire de réversibilité + audit de cohérence~~ ✓ fait
 9. Interface animateur : timer + tableau des mandats reçus + QR distribution
 10. Mode clair / lisibilité mobile en pleine lumière
 
@@ -409,14 +409,11 @@ Ajouté : `TRAJ_LABELS` (Record&lt;number, string&gt;), `clampTraj()`, `initTraj
 `getStaticPaths()` dans toutes les phases lit `getCollection('decks')` et passe
 `chamber`, `nextGroupe`, `scenarioId` comme props. Aucun mapping hardcodé restant.
 
-### Priorité 3 — Renforcer les schémas Zod
+### ✓ Priorité 3 — Renforcer les schémas Zod (fait)
 
-Dans `src/content/config.ts`, les schémas sont trop permissifs sur certains champs :
-- `actions.chamber` : `z.string()` libre alors que la liste est connue et fixe
-- `decks.groups.chamber` : idem
-
-**Règle** : les champs `chamber` doivent utiliser un **enum canonique partagé**,
-pas un `z.string()` libre. Tout champ métier récurrent doit être validé par un type/schéma partagé.
+`CHAMBER_ENUM` défini en tête de `config.ts` et utilisé dans les 4 collections :
+`bascules`, `tensions`, `actions`, `scenarios`, et `decks.groups`.
+Plus aucun `z.string()` libre pour les slugs de chambre.
 
 ### Priorité 4 — Ajouter une chaîne de contrôle qualité
 

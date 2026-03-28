@@ -1,5 +1,13 @@
 import { defineCollection, z } from 'astro:content';
 
+const CHAMBER_ENUM = z.enum([
+  'delegation-vs-souverainete',
+  'preuve-vs-simulation',
+  'metabolisme-vs-progres',
+  'invisibilite-vs-arbitrage',
+  'singularite-vs-standard',
+]);
+
 const bascules = defineCollection({
   type: 'data',
   schema: z.object({
@@ -7,13 +15,7 @@ const bascules = defineCollection({
     phase: z.literal('bascule'),
     slot: z.number().int().min(1),
     slot_theme: z.enum(['individu', 'organisation', 'systeme']),
-    chamber: z.enum([
-      'delegation-vs-souverainete',
-      'preuve-vs-simulation',
-      'metabolisme-vs-progres',
-      'invisibilite-vs-arbitrage',
-      'singularite-vs-standard',
-    ]),
+    chamber: CHAMBER_ENUM,
     reversibility: z.enum(['green', 'yellow', 'red']),
     scope: z.enum(['individuel', 'organisationnel', 'systemique']),
     title: z.string(),
@@ -38,13 +40,7 @@ const tensions = defineCollection({
     phase: z.literal('tension'),
     slot: z.number().int().min(1),
     slot_theme: z.enum(['individu', 'organisation', 'systeme']),
-    chamber: z.enum([
-      'delegation-vs-souverainete',
-      'preuve-vs-simulation',
-      'metabolisme-vs-progres',
-      'invisibilite-vs-arbitrage',
-      'singularite-vs-standard',
-    ]),
+    chamber: CHAMBER_ENUM,
     reversibility: z.enum(['green', 'yellow', 'red']),
     title: z.string(),
     content: z.string(),
@@ -70,7 +66,7 @@ const actions = defineCollection({
     phase: z.literal('action'),
     slot: z.number().int().min(1),
     lever_type: z.enum(['limiter', 'conditionner', 'auditer', 'recours', 'interdire']),
-    chamber: z.string(),
+    chamber: CHAMBER_ENUM,
     reversibility: z.enum(['green', 'yellow', 'red']),
     scope: z.enum(['individuel', 'organisationnel', 'systemique']),
     title: z.string(),
@@ -95,13 +91,7 @@ const scenarios = defineCollection({
   schema: z.object({
     id: z.string(),
     phase: z.literal('scenario'),
-    chamber: z.enum([
-      'delegation-vs-souverainete',
-      'preuve-vs-simulation',
-      'metabolisme-vs-progres',
-      'invisibilite-vs-arbitrage',
-      'singularite-vs-standard',
-    ]),
+    chamber: CHAMBER_ENUM,
     title: z.string(),
     context: z.string(),
     roles_briefing: z.object({
@@ -142,7 +132,7 @@ const decks = defineCollection({
     name: z.string(),
     groups: z.array(z.object({
       id: z.string(),
-      chamber: z.string(),
+      chamber: CHAMBER_ENUM,
       receives_from: z.string(),
       scenario_id: z.string(),
     })),
