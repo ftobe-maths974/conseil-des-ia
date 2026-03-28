@@ -5,9 +5,9 @@ lever_type: auditer
 chamber: delegation-vs-souverainete
 reversibility: red
 scope: organisationnel
-title: "Transférer la négociation des contrats fournisseurs à un système IA autonome"
+title: "Auditer les décisions contractuelles déléguées à un système IA autonome"
 body: >
-  Un système IA négocie, rédige et valide les contrats fournisseurs sans intervention humaine systématique. L'efficacité est maximale mais la responsabilité juridique devient diffuse.
+  Tout contrat fournisseur négocié ou validé avec l'assistance déterminante d'un système IA fait l'objet d'un audit annuel : traçabilité des décisions, identification du responsable humain signataire, vérification de l'absence de clauses défavorables introduites par dérive algorithmique. Les résultats sont transmis au service juridique et aux instances de gouvernance.
 tags: 
   - contrats
   - autonomie

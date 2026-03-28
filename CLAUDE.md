@@ -146,7 +146,9 @@ output_format, tags, difficulty, facilitator_note?, version
 id, role_type, scenario_id, priority, blind_spot, red_line, version
 
 ### Deck (configuration)
-id, name, groups[], phases[], card_distribution{}
+id, name, domaine, institution_centrale, population_affectee, type_decision,
+horizon_temporel, risque_dominant, registre_langage,
+groups[], mandat_circulation{}
 
 ## Les 5 chambres
 - delegation-vs-souverainete   (couleur : bleu)
@@ -154,6 +156,152 @@ id, name, groups[], phases[], card_distribution{}
 - metabolisme-vs-progres       (couleur : vert)
 - invisibilite-vs-arbitrage    (couleur : violet)
 - singularite-vs-standard      (couleur : corail)
+
+## Bible éditoriale
+
+### Fiche deck — champs obligatoires
+
+Tout deck doit définir explicitement :
+
+| Champ | Définition |
+|---|---|
+| `domaine` | Secteur institutionnel (ex : aides sociales, santé, éducation) |
+| `institution_centrale` | L'acteur qui décide (ex : collectivité, entreprise, administration) |
+| `population_affectee` | Qui subit les décisions (ex : citoyens, agents, usagers) |
+| `type_decision` | Ce qui est arbitré (ex : adoption d'outil IA, régulation, déploiement) |
+| `horizon_temporel` | Court/moyen/long terme — fixe le registre de réversibilité |
+| `risque_dominant` | Le risque principal que le deck explore |
+| `registre_langage` | Le ton attendu (ex : institutionnel-pragmatique, ni technocentré ni catastrophiste) |
+
+Toutes les cartes du deck doivent respecter la même institution, la même population et le même domaine.
+
+### Fiches chambre
+
+Chaque chambre a une question mère, un lexique central, un angle mort et une ligne rouge.
+Ces contraintes s'appliquent à chaque carte de la chambre — bascule, tension et action.
+
+---
+
+**Délégation vs Souveraineté**
+- **Question mère** : À qui ai-je confié ce pouvoir — et puis-je encore le reprendre ?
+- **Lexique central** : mandat, dépendance, lock-in, responsabilité diffuse, sous-traitance, maîtrise
+- **Voit bien** : chaînes de délégation invisibles, perte progressive de compétence, contrat comme piège
+- **Angle mort** : qu'une IA peut parfois décider plus justement qu'un humain biaisé
+- **Ligne rouge** : ne pas dériver vers "technologie = mauvais" ou "l'humain doit toujours décider"
+- **Forme typique de mandat** : "N'autoriser aucune décision engageante sans possibilité de reprise humaine identifiée"
+
+---
+
+**Preuve vs Simulation**
+- **Question mère** : Comment établir qu'une chose est vraie quand tout peut être simulé ?
+- **Lexique central** : attestation, certificat, traçabilité, falsifiabilité, authenticité, chaîne de confiance
+- **Voit bien** : crise des institutions de certification, charge de preuve, épistémologie du quotidien
+- **Angle mort** : que la simulation peut servir à éduquer, créer, modéliser sans tromperie
+- **Ligne rouge** : ne pas dériver vers un débat moral général sur l'IA ou la vérité
+- **Forme typique de mandat** : "Imposer la traçabilité de toute décision basée sur du contenu potentiellement synthétique"
+
+---
+
+**Métabolisme vs Progrès**
+- **Question mère** : Quel prix physique payons-nous réellement pour ce progrès numérique ?
+- **Lexique central** : empreinte, ressource, sobriété, énergie, eau, territoire, irréversibilité physique, externalité
+- **Voit bien** : conflits d'usage de ressources, invisibilité du coût physique, greenwashing
+- **Angle mort** : que l'IA peut aussi optimiser la consommation et réduire le gaspillage
+- **Ligne rouge** : ne pas dériver vers un technopessimisme général ou un romantisme pré-numérique
+- **Forme typique de mandat** : "Conditionner tout déploiement IA à la publication vérifiable de son empreinte ressource"
+
+---
+
+**Invisibilité vs Arbitrage**
+- **Question mère** : Qui décide pour moi — comment, sur quoi, et sans que je le sache ?
+- **Lexique central** : profilage, score, opacité, biais, discrimination systémique, explicabilité, voie de recours
+- **Voit bien** : effets de discrimination algorithmique, impossible contestation, victimes silencieuses
+- **Angle mort** : que la personnalisation peut aussi aider (accessibilité, recommandation médicale pertinente)
+- **Ligne rouge** : ne pas confondre biais algorithmique et simple erreur humaine ; ne pas nier la discrimination préexistante
+- **Forme typique de mandat** : "Garantir un droit opposable d'explication et de contestation pour toute décision automatisée affectant des droits"
+
+---
+
+**Singularité vs Standard**
+- **Question mère** : Ce qui me rend singulier est-il encore viable dans un monde que l'IA homogénéise ?
+- **Lexique central** : norme, diversité, edge case, minorité, adaptation, interopérabilité, exception, monoculture
+- **Voit bien** : perdants de la standardisation (minorités linguistiques, neurodivergents, pratiques atypiques)
+- **Angle mort** : valeur réelle de l'interopérabilité pour l'équité et l'accès universel
+- **Ligne rouge** : ne pas dériver vers un rejet de tout standard ou de toute interopérabilité
+- **Forme typique de mandat** : "Imposer l'audit des populations mal couvertes avant tout déploiement à grande échelle"
+
+---
+
+### Règles par phase
+
+**Phase 1 — Bascule (micro-situation incarnée)**
+- `situation` : 40–80 mots. Un fait ou comportement observable du quotidien. Pas une analyse.
+- `question` : 1 phrase, 15–30 mots. Tension ouverte — ne donne pas la réponse implicitement.
+- Test : est-ce que quelqu'un dans la salle a déjà vécu ça ou pourrait le vivre demain ?
+
+**Phase 2 — Tension (montée en généralité)**
+- `content` : 60–120 mots. Tension structurelle entre deux valeurs légitimes.
+- `data_point` : sourcé ou plausiblement sourcé. Pas de statistique floue sans référence.
+- `question` : 1 phrase irréductible, 20–35 mots. On peut avoir raison des deux côtés selon ses valeurs.
+- Test : la tension résiste-t-elle à un désaccord légitime ?
+
+**Phase 3 — Action (levier institutionnel)**
+- `title` : commence par un verbe d'action institutionnel (Interdire / Conditionner / Auditer / Plafonner / Instaurer / Garantir…). Ne décrit jamais le problème — décrit l'intervention.
+- `body` : 30–70 mots. Qui fait quoi, dans quel cadre, avec quel effet mesurable.
+- Test : un décideur ou un législateur pourrait-il adopter cette mesure telle quelle ?
+
+**Mandat transmis (issu de Phase 3)**
+- 1 à 2 phrases, 20–40 mots.
+- Format : "parce que [raison]" + optionnel "à condition que [garde-fou]"
+- Non sectoriel : doit avoir un sens pour une chambre travaillant sur un autre domaine.
+- Test : une chambre différente peut-elle recevoir ce mandat et le débattre sans contexte supplémentaire ?
+
+**Phase 4 — Scénario (crise décisionnelle)**
+- `context` : 100–160 mots. Même institution et même population que le deck.
+- 4 rôles, chacun avec une **ligne rouge explicite** et un **angle mort nommé**.
+- La tension créée par le mandat reçu doit être réelle dans le scénario local.
+- Test : le mandat d'une autre chambre crée-t-il une vraie friction avec ce scénario ?
+
+### Règle de conversion mandat
+
+Une carte action n'est pas transmise telle quelle. Elle doit être reformulée en mandat
+interchambre selon un principe de gouvernance non sectoriel.
+
+| Lever de la carte | Formulation type du mandat |
+|---|---|
+| `interdire` | "N'autoriser aucun [X] sans [garantie Y]" |
+| `conditionner` | "N'adopter aucun [X] sans que [condition Z] soit garantie" |
+| `auditer` | "Exiger la traçabilité et l'auditabilité publique de tout [X]" |
+| `recours` | "Garantir un droit opposable de contestation pour toute [décision X]" |
+| `limiter` | "Plafonner [X] à ce qui peut être justifié, mesuré et réversible" |
+
+### Anti-patterns
+
+Ce qui doit être refusé à la relecture :
+
+1. **Titre d'action décrivant le problème** au lieu de l'intervention ("Confier le scoring à une IA" ≠ "Interdire la délégation opaque du scoring")
+2. **Corps d'action écrit comme description** d'une pratique, pas comme intervention (présent informatif au lieu d'intervention institutionnelle)
+3. **`lever_type` incohérent avec le titre** ("Rendre obligatoire" ≠ `interdire` ; "Substituer des déplacements" ≠ `recours` ; "Plafonner" ≠ `conditionner`)
+4. **Tension dérivant vers le débat moral général** sur l'IA plutôt qu'une tension de valeurs irréductible
+5. **Mandat trop sectoriel** ("les banques doivent…") au lieu d'un principe portable interchambre
+6. **Scénario dans un domaine différent** du deck (contamination de domaine)
+7. **Chambres partageant le même vocabulaire** (contamination lexicale entre chambres)
+8. **Data_point sans source réelle** ou formulé comme "selon une étude" sans référence
+9. **Question de Phase 1 donnant une réponse implicite** (bonne question = tension ouverte, les deux positions sont défendables)
+10. **Titre ou body sans sujet institutionnel clair** (qui fait quoi ?)
+
+### Matrice de contrôle qualité
+
+À vérifier pour chaque carte avant validation :
+
+- [ ] Cohérence avec le deck : même institution, même population, même horizon
+- [ ] Cohérence avec la chambre : lexique de la chambre, pas de contamination inter-chambre
+- [ ] Cohérence avec le `slot_theme` (individu / organisation / système)
+- [ ] Bon niveau d'abstraction pour la phase (concret P1, structurel P2, institutionnel P3)
+- [ ] `lever_type` cohérent avec le titre et le corps (P3)
+- [ ] Mandat transmissible à une chambre différente sans perte de sens
+- [ ] Absence de jargon technique inaccessible à des étudiants non-spécialistes
+- [ ] Absence de redondance avec une autre carte de la même chambre
 
 ## Règles de réversibilité
 green  = réversible, usage individuel, soft
@@ -293,6 +441,11 @@ comment les décisions accumulées réduisent ou restaurent la possibilité de r
       chaîne complète P1→P2→P3→P4 vérifiée et cohérente
 - [x] Audit de cohérence : suppression code mort `inherited=red` (règle red-on-red jamais activée),
       `CHAMBER_ENUM` partagé dans config.ts (actions.chamber + decks.groups.chamber)
+- [x] Bible éditoriale : fiches deck+chambre, règles phases (word counts), anti-patterns, matrice QC
+- [x] Alignement éditorial cartes action : corrections lever_type + framing titre/body
+      (action-001, 004, 009, 010, 011, 012, 013, 016, 017)
+- [x] Fiche deck demo.yaml enrichie (domaine, institution_centrale, population_affectee,
+      type_decision, horizon_temporel, risque_dominant, registre_langage) + schema Zod
 
 ## Ce qui reste à faire (priorité ordre)
 1. ~~Corriger le bug Phase 1~~ ✓ corrigé
@@ -303,8 +456,9 @@ comment les décisions accumulées réduisent ou restaurent la possibilité de r
 6. ~~Refonte Slots & Leviers (slot_theme + lever_type + propagation thématique)~~ ✓ fait
 7. ~~Enrichissement contenu : 9 tensions/chambre (3/3/3), filtrage 3/1/1 réel Phase 2~~ ✓ fait
 8. ~~Implémenter la trajectoire de réversibilité + audit de cohérence~~ ✓ fait
-9. Interface animateur : timer + tableau des mandats reçus + QR distribution
-10. Mode clair / lisibilité mobile en pleine lumière
+9. ~~Alignement éditorial cartes action + fiche deck demo.yaml~~ ✓ fait
+10. Interface animateur : timer + tableau des mandats reçus + QR distribution
+11. Mode clair / lisibilité mobile en pleine lumière
 
 ## Conventions de code
 - Composants Astro pour tout ce qui est statique

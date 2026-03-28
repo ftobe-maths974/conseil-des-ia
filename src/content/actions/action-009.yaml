@@ -1,7 +1,7 @@
 id: action-009
 phase: action
 slot: 1
-lever_type: conditionner
+lever_type: limiter
 chamber: metabolisme-vs-progres
 reversibility: yellow
 scope: organisationnel

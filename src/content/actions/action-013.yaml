@@ -5,9 +5,9 @@ lever_type: interdire
 chamber: invisibilite-vs-arbitrage
 reversibility: red
 scope: systemique
-title: "Rendre obligatoire l'explicabilité des décisions IA d'attribution de ressources"
+title: "Interdire les décisions IA d'attribution de ressources sans explication contestable"
 body: >
-  Toute décision IA attribuant ou refusant logement, emploi, crédit, allocation sociale ou accès aux soins doit être accompagnée d'une explication lisible, contestable et archivée.
+  Il est interdit de mettre en œuvre toute décision automatisée attribuant ou refusant logement, emploi, crédit, allocation sociale ou accès aux soins sans qu'une explication lisible par la personne concernée, archivée et ouvrant droit à contestation auprès d'un référent humain identifié, soit fournie simultanément.
 tags: 
   - explicabilite
   - droits

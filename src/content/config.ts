@@ -130,6 +130,13 @@ const decks = defineCollection({
   schema: z.object({
     id: z.string(),
     name: z.string(),
+    domaine: z.string().optional(),
+    institution_centrale: z.string().optional(),
+    population_affectee: z.string().optional(),
+    type_decision: z.string().optional(),
+    horizon_temporel: z.string().optional(),
+    risque_dominant: z.string().optional(),
+    registre_langage: z.string().optional(),
     groups: z.array(z.object({
       id: z.string(),
       chamber: CHAMBER_ENUM,

@@ -4,17 +4,19 @@ slot: 4
 lever_type: recours
 chamber: metabolisme-vs-progres
 reversibility: green
-scope: individuel
-title: "Substituer 30 % des déplacements professionnels par des réunions IA augmentées"
+scope: systemique
+title: "Ouvrir un droit de recours des collectivités contre les implantations de datacenters excessives"
 body: >
-  Une politique d'entreprise fixe un objectif de réduction des déplacements par l'usage d'outils de présence augmentée. Les économies carbone sont reversées dans un fonds de formation.
-tags: 
-  - mobilite
-  - carbone
-  - teletravail
-  - organisation
+  Toute collectivité territoriale peut saisir une instance administrative indépendante pour contester l'autorisation d'un datacenter IA dont la consommation d'eau ou d'énergie dépasse les seuils réglementaires locaux. La décision d'implantation est suspendue le temps de l'instruction. La charge de la preuve d'impact acceptable incombe au porteur de projet.
+tags:
+  - datacenter
+  - recours
+  - collectivites
+  - eau
+  - energie
 facilitator_note:
-  si_silence: "Demandez : est-ce qu'une réunion en présence IA augmentée peut remplacer un déplacement pour rencontrer un client important — ou certaines choses ne sont-elles possibles qu'en physique ?"
-  si_debat_bloque: "Fait choc : les études post-2020 sur le travail hybride montrent que les réunions à distance bien outillées réduisent les déplacements — mais augmentent le nombre total de réunions. L'effet rebond est documenté."
-  relance_cle: "Si réduire les déplacements crée plus de réunions IA qui consomment au final plus d'énergie que les vols évités, est-ce que l'objectif environnemental est vraiment atteint — ou juste déplacé ?"
+  si_silence: "Demandez : si un datacenter consommant l'eau d'une ville de 50 000 habitants s'installait dans votre région, quelle instance aujourd'hui pourrait bloquer le projet — et avec quels arguments ?"
+  si_debat_bloque: "Fait choc : en 2023, des habitants de Bissen (Luxembourg) ont découvert que le datacenter Meta installé localement consommait plus d'eau que toute la commune. Il n'existait aucun recours formel pour contester l'autorisation déjà accordée."
+  si_trop_technique: "Pas besoin d'entrer dans le droit administratif. La vraie question est : qui aujourd'hui a le droit de dire non à une infrastructure IA qui consomme des ressources communes — et ce droit est-il réel ou formel ?"
+  relance_cle: "Un droit de recours sans moyens d'instruction est un droit symbolique. Quelle condition minimale rend ce recours effectif plutôt que décoratif ?"
 version: "1.0"

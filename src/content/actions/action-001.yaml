@@ -5,9 +5,9 @@ lever_type: interdire
 chamber: delegation-vs-souverainete
 reversibility: red
 scope: systemique
-title: "Confier le scoring de crédit aux modèles d'une IA tierce"
+title: "Interdire la délégation totale du scoring de crédit à un algorithme opaque"
 body: >
-  Une banque ou administration adopte un système de scoring entièrement géré par un prestataire IA externe. Les critères d'évaluation deviennent opaques et le prestataire peut modifier les paramètres sans préavis.
+  Toute décision de crédit ou d'accès à un service public reposant sur un score IA doit pouvoir être expliquée, contestée et réattribuée à un décideur humain identifié. Il est interdit de confier à un prestataire externe la capacité de modifier unilatéralement les critères de scoring sans validation préalable de l'organisme responsable.
 tags: 
   - delegation
   - finance

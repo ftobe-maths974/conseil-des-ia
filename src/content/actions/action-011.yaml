@@ -1,7 +1,7 @@
 id: action-011
 phase: action
 slot: 3
-lever_type: interdire
+lever_type: conditionner
 chamber: metabolisme-vs-progres
 reversibility: red
 scope: systemique

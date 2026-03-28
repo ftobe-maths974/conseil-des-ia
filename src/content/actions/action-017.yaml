@@ -5,9 +5,9 @@ lever_type: interdire
 chamber: singularite-vs-standard
 reversibility: red
 scope: systemique
-title: "Adopter un standard ISO commun pour les IA de diagnostic médical"
+title: "Interdire le déploiement d'IA de diagnostic médical sans certification de robustesse"
 body: >
-  Un standard international définit les critères de validation, les tests de robustesse et les obligations de surveillance post-marché pour tout outil IA utilisé en diagnostic clinique.
+  Il est interdit de mettre en service tout outil IA intervenant dans un diagnostic clinique sans certification préalable attestant des critères de validation, des tests de robustesse sur populations minoritaires, et des obligations de surveillance post-marché. Tout outil déjà déployé sans certification dispose d'un délai de mise en conformité de 18 mois.
 tags: 
   - sante
   - standard
