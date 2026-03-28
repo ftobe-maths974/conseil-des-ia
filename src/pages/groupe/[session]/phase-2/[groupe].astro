@@ -10,9 +10,10 @@ import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
 function selectTensions(
   all: CollectionEntry<'tensions'>[],
   chamber: string,
+  deckId: string,
 ): CollectionEntry<'tensions'>[] {
   return all
-    .filter(t => t.data.chamber === chamber)
+    .filter(t => t.id.startsWith(deckId + '/') && t.data.chamber === chamber)
     .sort((a, b) => a.data.slot - b.data.slot)
     .slice(0, 9);
 }
@@ -32,7 +33,7 @@ export async function getStaticPaths() {
 const { session, groupe } = Astro.params;
 const { chamber } = Astro.props;
 const allTensions = await getCollection('tensions');
-const selected = selectTensions(allTensions, chamber);
+const selected = selectTensions(allTensions, chamber, session);
 
 const phase3Url = `${import.meta.env.BASE_URL}/groupe/${session}/phase-3/${groupe}`;
 

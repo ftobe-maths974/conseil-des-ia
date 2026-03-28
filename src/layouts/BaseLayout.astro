@@ -20,6 +20,19 @@ const {
     <meta name="description" content={description} />
     <title>{title} — Conseil des IA</title>
 
+    <!-- No-flash : détection du thème avant le premier rendu -->
+    <script is:inline>
+      (function () {
+        var stored = sessionStorage.getItem('cia-theme');
+        var theme = stored
+          ? stored
+          : window.matchMedia('(prefers-color-scheme: light)').matches
+            ? 'light'
+            : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +46,51 @@ const {
       @import '../styles/global.css';
     </style>
   </head>
+
   <body data-mode={mode}>
     <slot />
+
+    <!-- Bouton bascule thème -->
+    <button id="theme-toggle" aria-label="Basculer le thème">
+      <!-- Soleil (affiché en mode sombre, clic → mode clair) -->
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.5"/>
+        <line x1="12" y1="2" x2="12" y2="4.5"/>
+        <line x1="12" y1="19.5" x2="12" y2="22"/>
+        <line x1="4.22" y1="4.22" x2="5.98" y2="5.98"/>
+        <line x1="18.02" y1="18.02" x2="19.78" y2="19.78"/>
+        <line x1="2" y1="12" x2="4.5" y2="12"/>
+        <line x1="19.5" y1="12" x2="22" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.98" y2="18.02"/>
+        <line x1="18.02" y1="5.98" x2="19.78" y2="4.22"/>
+      </svg>
+      <!-- Lune (affiché en mode clair, clic → mode sombre) -->
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+
+    <script>
+      // ── Toggle thème ──────────────────────────────────────────────────────
+      const btn  = document.getElementById('theme-toggle')!;
+      const html = document.documentElement;
+
+      function currentTheme(): string {
+        return html.getAttribute('data-theme') ?? 'dark';
+      }
+
+      btn.addEventListener('click', () => {
+        const next = currentTheme() === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        sessionStorage.setItem('cia-theme', next);
+      });
+
+      // Active les transitions CSS après détection initiale (évite le flash)
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          html.classList.add('theme-ready');
+        });
+      });
+    </script>
   </body>
 </html>

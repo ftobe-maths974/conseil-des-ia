@@ -361,6 +361,27 @@ const CHAMBER_CSS: Record<string, string> = {
     line-height: 1.5;
   }
 
+  /* ── Back button ─────────────────────────────────────────────────────────── */
+  .back-btn {
+    display: block;
+    margin-top: var(--space-lg);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: var(--space-xs) 0;
+    transition: color var(--transition-fast);
+  }
+
+  .back-btn:hover {
+    color: var(--text-secondary);
+  }
+</style>
+
+<!-- Styles globaux pour les éléments créés dynamiquement par JS -->
+<!-- Les styles Astro scopés ne s'appliquent pas aux éléments créés avec createElement() -->
+<style is:global>
   /* ── Deck cards ──────────────────────────────────────────────────────────── */
   .deck-grid {
     display: flex;
@@ -435,14 +456,12 @@ const CHAMBER_CSS: Record<string, string> = {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     text-decoration: none;
-    /* Reset visited color */
     color: var(--text-primary);
     transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
     position: relative;
     overflow: hidden;
   }
 
-  /* Neutralise la couleur :visited du navigateur */
   .groupe-card:visited {
     color: var(--text-primary);
   }
@@ -452,15 +471,15 @@ const CHAMBER_CSS: Record<string, string> = {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: var(--chamber-color);
+    background: var(--chamber-color, transparent);
     opacity: 0;
     transition: opacity var(--transition-fast);
     pointer-events: none;
   }
 
   .groupe-card:hover {
-    border-color: var(--chamber-color);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--chamber-color) 40%, transparent),
+    border-color: var(--chamber-color, var(--border-subtle));
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--chamber-color, transparent) 40%, transparent),
                 0 4px 16px rgba(0, 0, 0, 0.3);
   }
 
@@ -472,9 +491,9 @@ const CHAMBER_CSS: Record<string, string> = {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--chamber-color);
+    background: var(--chamber-color, var(--text-muted));
     margin-bottom: 0.25rem;
-    opacity: 0.8;
+    opacity: 0.85;
   }
 
   .groupe-card__id {
@@ -500,22 +519,5 @@ const CHAMBER_CSS: Record<string, string> = {
     .groupe-grid { grid-template-columns: 1fr 1fr; }
     .groupe-card__chamber { display: none; }
     .groupe-card__chamber-short { display: block; font-size: 0.72rem; color: var(--text-muted); }
-  }
-
-  /* ── Back button ─────────────────────────────────────────────────────────── */
-  .back-btn {
-    display: block;
-    margin-top: var(--space-lg);
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    cursor: pointer;
-    padding: var(--space-xs) 0;
-    transition: color var(--transition-fast);
-  }
-
-  .back-btn:hover {
-    color: var(--text-secondary);
   }
 </style>

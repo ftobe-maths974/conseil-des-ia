@@ -1,34 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { CHAMBER_LABELS } from '../../lib/chambers';
+import { CHAMBER_LABELS, CHAMBER_LABELS_SHORT } from '../../lib/chambers';
 
 export async function getStaticPaths() {
   const allDecks = await getCollection('decks');
-  return allDecks.map(deck => ({ params: { session: deck.data.id } }));
+  return allDecks.map(deck => ({ params: { session: deck.data.id }, props: { deck: deck.data } }));
 }
 
 const { session } = Astro.params;
-const bascules = await getCollection('bascules');
-const tensions = await getCollection('tensions');
-const actions  = await getCollection('actions');
+const { deck } = Astro.props;
 
+const prefix = session + '/';
+const bascules = (await getCollection('bascules')).filter(b => b.id.startsWith(prefix));
+const tensions = (await getCollection('tensions')).filter(t => t.id.startsWith(prefix));
+const actions  = (await getCollection('actions')).filter(a => a.id.startsWith(prefix));
 
-// Regrouper les bascules par chambre pour l'affichage
 const basculesByChamberId = bascules.reduce<Record<string, typeof bascules>>((acc, b) => {
   if (!acc[b.data.chamber]) acc[b.data.chamber] = [];
   acc[b.data.chamber].push(b);
   return acc;
 }, {});
 
-// Regrouper les tensions par chambre
 const tensionsByChamberId = tensions.reduce<Record<string, typeof tensions>>((acc, t) => {
   if (!acc[t.data.chamber]) acc[t.data.chamber] = [];
   acc[t.data.chamber].push(t);
   return acc;
 }, {});
 
-// Regrouper les actions par chambre
 const actionsByChamberId = actions.reduce<Record<string, typeof actions>>((acc, a) => {
   if (!acc[a.data.chamber]) acc[a.data.chamber] = [];
   acc[a.data.chamber].push(a);
@@ -41,50 +40,148 @@ type FacilitatorNote = {
   si_trop_technique?: string;
   relance_cle: string;
 } | undefined;
+
+// Circuit des mandats : pour chaque groupe, qui reçoit son mandat
+const circuit = deck.groups.map(g => ({
+  id: g.id,
+  label: g.id.replace('groupe-', 'Groupe '),
+  chamber: g.chamber,
+  chamberLabel: CHAMBER_LABELS[g.chamber] ?? g.chamber,
+  chamberShort: CHAMBER_LABELS_SHORT[g.chamber] ?? g.chamber,
+  sendTo: deck.mandat_circulation[g.id] ?? '?',
+  sendToLabel: (deck.mandat_circulation[g.id] ?? '?').replace('groupe-', 'Groupe '),
+}));
+
+const PHASE_DURATIONS = [20 * 60, 30 * 60, 25 * 60, 30 * 60, 15 * 60];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title={`Animateur — ${session}`} mode="animateur">
   <main class="anim">
 
+    <!-- ═══════════════════════════════════════════════════
+         BARRE TIMER (sticky)
+         ═══════════════════════════════════════════════════ -->
+    <div class="timer-bar" id="timer-bar">
+      <div class="timer-presets">
+        <span class="timer-presets__label">Durée session</span>
+        <div class="timer-presets__btns">
+          <button class="tpreset" data-preset="0">Flash<br><span>30 min</span></button>
+          <button class="tpreset" data-preset="1">Court<br><span>50 min</span></button>
+          <button class="tpreset" data-preset="2">Normal<br><span>1h20</span></button>
+          <button class="tpreset tpreset--active" data-preset="3">Complet<br><span>1h50</span></button>
+        </div>
+      </div>
+
+      <div class="timer-phases" role="tablist">
+        {PHASE_DURATIONS.map((dur, i) => (
+          <button
+            class={`tphase${i === 0 ? ' tphase--active' : ''}`}
+            role="tab"
+            data-phase={i + 1}
+            data-duration={dur}
+            aria-selected={i === 0 ? 'true' : 'false'}
+          >
+            <span class="tphase__num">P{i + 1}</span>
+            <span class="tphase__dur">{Math.floor(dur / 60)}min</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="timer-center">
+        <div class="timer-display" id="timer-display">20:00</div>
+        <div class="timer-controls">
+          <button class="timer-btn timer-btn--play" id="timer-toggle" aria-label="Démarrer">
+            ▶
+          </button>
+          <button class="timer-btn timer-btn--reset" id="timer-reset" aria-label="Réinitialiser">
+            ↺
+          </button>
+        </div>
+      </div>
+
+      <div class="timer-progress-wrap">
+        <div class="timer-progress" id="timer-progress"></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         EN-TÊTE
+         ═══════════════════════════════════════════════════ -->
     <header class="anim__header">
       <div>
         <span class="anim__label">Conseil des IA · {session}</span>
-        <h1 class="anim__title">Interface animateur</h1>
+        <h1 class="anim__title">{deck.name}</h1>
       </div>
       <nav class="anim__nav">
-        <a href={`${import.meta.env.BASE_URL}/animateur/setup`} class="anim__nav-link">
-          ← Setup
-        </a>
+        <a href={`${base}/animateur/setup`} class="anim__nav-link">Fiches groupes →</a>
       </nav>
     </header>
 
     <!-- ═══════════════════════════════════════════════════
-         SECTION RELANCES — visible sur mobile uniquement
-         (le grand écran projette autre chose)
+         CIRCUIT DES MANDATS
+         ═══════════════════════════════════════════════════ -->
+    <section class="circuit" aria-label="Circuit des mandats">
+      <h2 class="section-title">Circuit des mandats</h2>
+      <p class="section-hint">Cochez quand le groupe a remis son mandat au groupe suivant (état volatile, non sauvegardé).</p>
+
+      <div class="circuit__table-wrap">
+        <table class="circuit__table">
+          <thead>
+            <tr>
+              <th>Groupe</th>
+              <th>Chambre</th>
+              <th>Envoie à</th>
+              <th class="circuit__th--status">Mandat remis</th>
+            </tr>
+          </thead>
+          <tbody>
+            {circuit.map(row => (
+              <tr class="circuit__row" data-group={row.id}>
+                <td class="circuit__group">{row.label}</td>
+                <td class="circuit__chamber">
+                  <span class="circuit__chamber-dot" data-chamber={row.chamber}></span>
+                  <span class="circuit__chamber-name">{row.chamberLabel}</span>
+                  <span class="circuit__chamber-short">{row.chamberShort}</span>
+                </td>
+                <td class="circuit__to">{row.sendToLabel}</td>
+                <td class="circuit__status">
+                  <button
+                    class="circuit__check"
+                    aria-label={`Marquer mandat de ${row.label} comme remis`}
+                    data-group={row.id}
+                  >
+                    <span class="circuit__check-icon">○</span>
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         RELANCES ANIMATEUR
          ═══════════════════════════════════════════════════ -->
     <section class="relances" aria-label="Relances animateur">
-      <div class="relances__intro">
-        <span class="relances__badge">📱 Téléphone animateur</span>
-        <p class="relances__hint">
-          Consultez ces relances discrètement pendant que le grand écran reste sur les cartes.
-        </p>
-      </div>
+      <h2 class="section-title">Notes animateur</h2>
 
-      <!-- ══ Phase 1 — Dossiers de bascule ═══════════════════════════════════ -->
+      <!-- Phase 1 -->
       <details class="phase-block" open>
         <summary class="phase-block__summary">
           <span class="phase-block__num">Phase 1</span>
           <span class="phase-block__label">Dossiers de bascule</span>
-          <span class="phase-block__meta">Relances animateur · {bascules.filter(b => b.data.facilitator_note).length} cartes</span>
+          <span class="phase-block__meta">{bascules.filter(b => b.data.facilitator_note).length} cartes</span>
           <span class="phase-block__chevron" aria-hidden="true">›</span>
         </summary>
-
         <div class="phase-block__body">
           {Object.entries(basculesByChamberId).map(([chamberId, cards]) => (
             <details class="chamber-block">
               <summary class="chamber-block__summary">
+                <span class="chamber-block__dot" data-chamber={chamberId}></span>
                 <span class="chamber-block__title">{CHAMBER_LABELS[chamberId]}</span>
-                <span class="chamber-block__count">{cards.filter(c => c.data.facilitator_note).length} cartes</span>
+                <span class="chamber-block__count">{cards.filter(c => c.data.facilitator_note).length}</span>
                 <span class="chamber-block__chevron" aria-hidden="true">›</span>
               </summary>
               <div class="chamber-block__body">
@@ -94,8 +191,7 @@ type FacilitatorNote = {
                   return (
                     <details class="relance-card">
                       <summary class="relance-card__summary">
-                        <span class={`relance-card__rev rev-dot--${card.data.reversibility}`}></span>
-                        <span class="relance-card__id">{card.data.id}</span>
+                        <span class={`rev-dot rev-dot--${card.data.reversibility}`}></span>
                         <span class="relance-card__title">{card.data.title}</span>
                         <span class="relance-card__chevron" aria-hidden="true">›</span>
                       </summary>
@@ -128,21 +224,21 @@ type FacilitatorNote = {
         </div>
       </details>
 
-      <!-- ══ Phase 2 — Chambre de tension ════════════════════════════════════ -->
+      <!-- Phase 2 -->
       <details class="phase-block">
         <summary class="phase-block__summary">
           <span class="phase-block__num">Phase 2</span>
           <span class="phase-block__label">Chambre de tension</span>
-          <span class="phase-block__meta">Points de bascule suggérés · {tensions.length} cartes</span>
+          <span class="phase-block__meta">{tensions.length} cartes</span>
           <span class="phase-block__chevron" aria-hidden="true">›</span>
         </summary>
-
         <div class="phase-block__body">
           {Object.entries(tensionsByChamberId).map(([chamberId, cards]) => (
             <details class="chamber-block">
               <summary class="chamber-block__summary">
+                <span class="chamber-block__dot" data-chamber={chamberId}></span>
                 <span class="chamber-block__title">{CHAMBER_LABELS[chamberId]}</span>
-                <span class="chamber-block__count">{cards.length} cartes</span>
+                <span class="chamber-block__count">{cards.filter(c => (c.data as any).suggestions_bascule?.length).length}</span>
                 <span class="chamber-block__chevron" aria-hidden="true">›</span>
               </summary>
               <div class="chamber-block__body">
@@ -152,14 +248,13 @@ type FacilitatorNote = {
                   return (
                     <details class="relance-card">
                       <summary class="relance-card__summary">
-                        <span class={`relance-card__rev rev-dot--${card.data.reversibility}`}></span>
-                        <span class="relance-card__id">{card.data.id}</span>
+                        <span class={`rev-dot rev-dot--${card.data.reversibility}`}></span>
                         <span class="relance-card__title">{card.data.title}</span>
                         <span class="relance-card__chevron" aria-hidden="true">›</span>
                       </summary>
                       <div class="relance-card__body">
                         <div class="relance-item relance-item--suggestions">
-                          <span class="relance-item__label">Formulations du point de bascule</span>
+                          <span class="relance-item__label">Formulations</span>
                           {suggestions.map((s, i) => (
                             <p class="relance-item__text relance-item__suggestion">
                               <span class="relance-item__suggestion-num">{i + 1}</span>
@@ -177,21 +272,21 @@ type FacilitatorNote = {
         </div>
       </details>
 
-      <!-- ══ Phase 3 — Mandat d'action ════════════════════════════════════════ -->
+      <!-- Phase 3 -->
       <details class="phase-block">
         <summary class="phase-block__summary">
           <span class="phase-block__num">Phase 3</span>
           <span class="phase-block__label">Mandat d'action</span>
-          <span class="phase-block__meta">Relances animateur · {actions.filter(a => a.data.facilitator_note).length} cartes</span>
+          <span class="phase-block__meta">{actions.filter(a => a.data.facilitator_note).length} cartes</span>
           <span class="phase-block__chevron" aria-hidden="true">›</span>
         </summary>
-
         <div class="phase-block__body">
           {Object.entries(actionsByChamberId).map(([chamberId, cards]) => (
             <details class="chamber-block">
               <summary class="chamber-block__summary">
+                <span class="chamber-block__dot" data-chamber={chamberId}></span>
                 <span class="chamber-block__title">{CHAMBER_LABELS[chamberId]}</span>
-                <span class="chamber-block__count">{cards.filter(c => c.data.facilitator_note).length} cartes</span>
+                <span class="chamber-block__count">{cards.filter(c => c.data.facilitator_note).length}</span>
                 <span class="chamber-block__chevron" aria-hidden="true">›</span>
               </summary>
               <div class="chamber-block__body">
@@ -201,8 +296,7 @@ type FacilitatorNote = {
                   return (
                     <details class="relance-card">
                       <summary class="relance-card__summary">
-                        <span class={`relance-card__rev rev-dot--${card.data.reversibility}`}></span>
-                        <span class="relance-card__id">{card.data.id}</span>
+                        <span class={`rev-dot rev-dot--${card.data.reversibility}`}></span>
                         <span class="relance-card__title">{card.data.title}</span>
                         <span class="relance-card__chevron" aria-hidden="true">›</span>
                       </summary>
@@ -240,225 +334,790 @@ type FacilitatorNote = {
   </main>
 </BaseLayout>
 
+<script>
+  // ── Presets de durée ───────────────────────────────────────────────────────
+  // [P1, P2, P3, P4, P5] en secondes — total : 30 / 50 / 80 / 110 min
+  const PRESETS = [
+    { label: '30 min', durations: [5, 8, 6, 8, 3].map(m => m * 60) },
+    { label: '50 min', durations: [8, 13, 10, 13, 6].map(m => m * 60) },
+    { label: '1h20',   durations: [13, 20, 17, 20, 10].map(m => m * 60) },
+    { label: '1h50',   durations: [18, 28, 23, 28, 13].map(m => m * 60) },
+  ];
+
+  // Durées actives (initialisées sur "Complet 1h50", preset index 3)
+  let durations = [...PRESETS[3].durations];
+  let activePhaseIndex = 0; // index 0-based
+
+  // ── Timer ──────────────────────────────────────────────────────────────────
+  let totalSeconds = durations[activePhaseIndex];
+  let remaining    = totalSeconds;
+  let running      = false;
+  let interval: ReturnType<typeof setInterval> | null = null;
+
+  const display   = document.getElementById('timer-display')!;
+  const progress  = document.getElementById('timer-progress')!;
+  const toggleBtn = document.getElementById('timer-toggle')!;
+  const resetBtn  = document.getElementById('timer-reset')!;
+  const timerBar  = document.getElementById('timer-bar')!;
+
+  function fmt(s: number) {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+  }
+
+  function render() {
+    display.textContent = fmt(remaining);
+    const pct = totalSeconds > 0 ? (1 - remaining / totalSeconds) * 100 : 0;
+    progress.style.width = `${pct}%`;
+    const ratio = totalSeconds > 0 ? remaining / totalSeconds : 1;
+    if (ratio > 0.4) {
+      progress.style.background = 'var(--rev-green)';
+      timerBar.removeAttribute('data-urgent');
+    } else if (ratio > 0.15) {
+      progress.style.background = 'var(--rev-yellow)';
+      timerBar.removeAttribute('data-urgent');
+    } else {
+      progress.style.background = 'var(--rev-red)';
+      timerBar.setAttribute('data-urgent', '');
+    }
+    toggleBtn.textContent = running ? '⏸' : '▶';
+    toggleBtn.setAttribute('aria-label', running ? 'Pause' : 'Démarrer');
+  }
+
+  function loadPhase(idx: number) {
+    clearInterval(interval!);
+    running = false;
+    activePhaseIndex = idx;
+    totalSeconds = durations[idx];
+    remaining = totalSeconds;
+    // Sync tab UI
+    document.querySelectorAll('.tphase').forEach((b, i) => {
+      b.classList.toggle('tphase--active', i === idx);
+      b.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+    render();
+  }
+
+  function applyPreset(presetIdx: number) {
+    durations = [...PRESETS[presetIdx].durations];
+    // Update tab labels
+    document.querySelectorAll('.tphase').forEach((btn, i) => {
+      const durEl = btn.querySelector('.tphase__dur')!;
+      durEl.textContent = `${Math.floor(durations[i] / 60)}min`;
+      (btn as HTMLElement).dataset.duration = String(durations[i]);
+    });
+    // Update preset active state
+    document.querySelectorAll('.tpreset').forEach((b, i) => {
+      b.classList.toggle('tpreset--active', i === presetIdx);
+    });
+    // Reload current phase with new duration
+    loadPhase(activePhaseIndex);
+  }
+
+  function tick() {
+    if (remaining <= 0) {
+      clearInterval(interval!);
+      running = false;
+      remaining = 0;
+      render();
+      return;
+    }
+    remaining--;
+    render();
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (running) {
+      clearInterval(interval!);
+      running = false;
+    } else {
+      interval = setInterval(tick, 1000);
+      running = true;
+    }
+    render();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    clearInterval(interval!);
+    running = false;
+    remaining = totalSeconds;
+    render();
+  });
+
+  // Phase tabs
+  document.querySelectorAll('.tphase').forEach((btn, i) => {
+    btn.addEventListener('click', () => loadPhase(i));
+  });
+
+  // Preset buttons
+  document.querySelectorAll('.tpreset').forEach((btn, i) => {
+    btn.addEventListener('click', () => applyPreset(i));
+  });
+
+  render();
+
+  // ── Circuit des mandats ────────────────────────────────────────────────────
+  document.querySelectorAll('.circuit__check').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const row = btn.closest('.circuit__row')!;
+      const done = row.classList.toggle('circuit__row--done');
+      const icon = btn.querySelector('.circuit__check-icon')!;
+      icon.textContent = done ? '✓' : '○';
+      btn.setAttribute('aria-pressed', done ? 'true' : 'false');
+    });
+  });
+</script>
+
 <style>
+  /* ── Mise en page ────────────────────────────────────────────────────────── */
   .anim {
-    padding: var(--space-lg);
-    max-width: 720px;
+    padding-bottom: var(--space-3xl);
+    max-width: 760px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: var(--space-2xl);
   }
 
+  /* ── Timer bar (sticky) ──────────────────────────────────────────────────── */
+  .timer-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--space-md) var(--space-lg) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    transition: box-shadow var(--transition-fast);
+  }
+
+  .timer-bar[data-urgent] {
+    box-shadow: 0 2px 20px rgba(239, 68, 68, 0.25);
+  }
+
+  /* Preset row */
+  .timer-presets {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .timer-presets__label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .timer-presets__btns {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .tpreset {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .tpreset span {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .tpreset:hover {
+    border-color: var(--text-muted);
+    color: var(--text-secondary);
+  }
+
+  .tpreset--active {
+    border-color: var(--chamber-delegation);
+    color: var(--text-primary);
+    background: rgba(37, 99, 235, 0.1);
+  }
+
+  .tpreset--active span {
+    color: var(--chamber-delegation);
+  }
+
+  /* Phase tabs */
+  .timer-phases {
+    display: flex;
+    gap: var(--space-xs);
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+
+  .timer-phases::-webkit-scrollbar { display: none; }
+
+  .tphase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .tphase:hover {
+    border-color: var(--text-muted);
+    color: var(--text-secondary);
+  }
+
+  .tphase--active {
+    background: var(--bg-card);
+    border-color: var(--chamber-delegation);
+    color: var(--text-primary);
+  }
+
+  .tphase__num {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .tphase__dur {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+  }
+
+  .tphase--active .tphase__dur {
+    color: var(--chamber-delegation);
+  }
+
+  /* Timer center */
+  .timer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+  }
+
+  .timer-display {
+    font-family: var(--font-mono);
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    min-width: 6ch;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .timer-bar[data-urgent] .timer-display {
+    color: var(--rev-red);
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.6; }
+  }
+
+  .timer-controls {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .timer-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+  }
+
+  .timer-btn--play:hover {
+    background: var(--chamber-delegation);
+    border-color: var(--chamber-delegation);
+    color: white;
+  }
+
+  .timer-btn--reset:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--text-muted);
+  }
+
+  /* Progress bar */
+  .timer-progress-wrap {
+    height: 3px;
+    background: var(--border-subtle);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 0 calc(-1 * var(--space-lg));
+  }
+
+  .timer-progress {
+    height: 100%;
+    width: 0%;
+    background: var(--rev-green);
+    border-radius: 999px;
+    transition: width 1s linear, background var(--transition-slow);
+  }
+
   /* ── En-tête ─────────────────────────────────────────────────────────────── */
   .anim__header {
-    display: flex; justify-content: space-between; align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: var(--space-lg);
-    padding-bottom: var(--space-lg);
-    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--space-lg) var(--space-lg) 0;
   }
 
   .anim__label {
-    font-family: var(--font-mono); font-size: 0.75rem;
-    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
-    display: block; margin-bottom: var(--space-xs);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: var(--space-xs);
   }
 
   .anim__title {
-    font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
   }
 
   .anim__nav-link {
-    font-family: var(--font-mono); font-size: 0.8rem;
-    color: var(--text-muted); text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-decoration: none;
     padding: var(--space-xs) var(--space-sm);
-    border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
     transition: color var(--transition-fast), border-color var(--transition-fast);
   }
-  .anim__nav-link:hover { color: var(--text-primary); border-color: var(--text-muted); }
 
-  /* ── Section relances ────────────────────────────────────────────────────── */
+  .anim__nav-link:hover {
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+  }
+
+  /* ── Section helpers ─────────────────────────────────────────────────────── */
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+    padding: 0 var(--space-lg);
+  }
+
+  .section-hint {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+    padding: 0 var(--space-lg);
+  }
+
+  /* ── Circuit des mandats ─────────────────────────────────────────────────── */
+  .circuit {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circuit__table-wrap {
+    overflow-x: auto;
+    padding: 0 var(--space-lg);
+  }
+
+  .circuit__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .circuit__table thead th {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-align: left;
+    padding: 0.4rem var(--space-md);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .circuit__th--status {
+    text-align: center;
+  }
+
+  .circuit__row {
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background var(--transition-fast);
+  }
+
+  .circuit__row:hover {
+    background: var(--bg-card);
+  }
+
+  .circuit__row--done {
+    background: rgba(34, 197, 94, 0.05);
+  }
+
+  .circuit__row--done .circuit__group,
+  .circuit__row--done .circuit__to {
+    color: var(--text-muted);
+  }
+
+  .circuit__table td {
+    padding: 0.7rem var(--space-md);
+    vertical-align: middle;
+  }
+
+  .circuit__group {
+    font-family: var(--font-display);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .circuit__chamber {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--text-secondary);
+  }
+
+  .circuit__chamber-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .circuit__chamber-dot[data-chamber="delegation-vs-souverainete"]  { background: var(--chamber-delegation); }
+  .circuit__chamber-dot[data-chamber="preuve-vs-simulation"]        { background: var(--chamber-preuve); }
+  .circuit__chamber-dot[data-chamber="metabolisme-vs-progres"]      { background: var(--chamber-metabolisme); }
+  .circuit__chamber-dot[data-chamber="invisibilite-vs-arbitrage"]   { background: var(--chamber-invisibilite); }
+  .circuit__chamber-dot[data-chamber="singularite-vs-standard"]     { background: var(--chamber-singularite); }
+
+  .circuit__chamber-short { display: none; }
+
+  .circuit__to {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .circuit__status {
+    text-align: center;
+  }
+
+  .circuit__check {
+    background: none;
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+  }
+
+  .circuit__check:hover {
+    border-color: var(--rev-green);
+    color: var(--rev-green);
+  }
+
+  .circuit__row--done .circuit__check {
+    background: rgba(34, 197, 94, 0.15);
+    border-color: var(--rev-green);
+    color: var(--rev-green);
+  }
+
+  @media (max-width: 520px) {
+    .circuit__chamber-name { display: none; }
+    .circuit__chamber-short { display: inline; font-size: 0.78rem; }
+  }
+
+  /* ── Relances ────────────────────────────────────────────────────────────── */
   .relances {
-    display: flex; flex-direction: column; gap: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: 0 var(--space-lg);
   }
 
-  .relances__intro {
-    display: flex; flex-direction: column; gap: var(--space-xs);
-    padding: var(--space-md) var(--space-lg);
-    background: rgba(37,99,235,0.08);
-    border: 1px solid rgba(37,99,235,0.2);
-    border-radius: var(--radius-md);
-  }
-
-  .relances__badge {
-    font-family: var(--font-mono); font-size: 0.75rem;
-    color: var(--chamber-delegation); text-transform: uppercase; letter-spacing: 0.05em;
-  }
-
-  .relances__hint {
-    font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;
-  }
-
-  /* ── Bloc phase (niveau 1) ───────────────────────────────────────────────── */
   .phase-block {
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md); overflow: hidden;
+    border-radius: var(--radius-md);
+    overflow: hidden;
   }
 
   .phase-block__summary {
-    list-style: none; cursor: pointer; user-select: none;
-    display: flex; align-items: center; gap: var(--space-md);
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
     padding: var(--space-md) var(--space-lg);
     background: var(--bg-card);
     transition: background var(--transition-fast);
   }
+
   .phase-block__summary::-webkit-details-marker { display: none; }
   .phase-block[open] .phase-block__summary,
   .phase-block__summary:hover { background: var(--bg-card-hover); }
 
   .phase-block__num {
-    font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700;
-    color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.1em;
-    background: var(--border-subtle); padding: 2px 8px;
-    border-radius: var(--radius-sm); flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--border-subtle);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
   }
 
   .phase-block__label {
-    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
     flex: 1;
   }
 
   .phase-block__meta {
-    font-family: var(--font-mono); font-size: 0.7rem;
-    color: var(--text-muted); flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
   }
 
   .phase-block__chevron {
-    font-size: 1.1rem; color: var(--text-muted);
-    transition: transform var(--transition-fast); flex-shrink: 0;
+    font-size: 1rem;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
   }
+
   .phase-block[open] .phase-block__chevron { transform: rotate(90deg); }
 
   .phase-block__body {
-    display: flex; flex-direction: column; gap: var(--space-sm);
-    padding: var(--space-md) var(--space-md) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-md);
     border-top: 1px solid var(--border-subtle);
-    background: var(--bg-base, transparent);
   }
 
-  /* ── Bloc chambre (niveau 2) ─────────────────────────────────────────────── */
+  /* Chamber blocks */
   .chamber-block {
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm); overflow: hidden;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
   }
 
   .chamber-block__summary {
-    list-style: none; cursor: pointer; user-select: none;
-    display: flex; align-items: center; gap: var(--space-md);
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
     padding: var(--space-sm) var(--space-md);
     background: var(--bg-card);
     transition: background var(--transition-fast);
   }
+
   .chamber-block__summary::-webkit-details-marker { display: none; }
   .chamber-block[open] .chamber-block__summary,
   .chamber-block__summary:hover { background: var(--bg-card-hover); }
 
+  .chamber-block__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .chamber-block__dot[data-chamber="delegation-vs-souverainete"]  { background: var(--chamber-delegation); }
+  .chamber-block__dot[data-chamber="preuve-vs-simulation"]        { background: var(--chamber-preuve); }
+  .chamber-block__dot[data-chamber="metabolisme-vs-progres"]      { background: var(--chamber-metabolisme); }
+  .chamber-block__dot[data-chamber="invisibilite-vs-arbitrage"]   { background: var(--chamber-invisibilite); }
+  .chamber-block__dot[data-chamber="singularite-vs-standard"]     { background: var(--chamber-singularite); }
+
   .chamber-block__title {
-    font-family: var(--font-display); font-size: 0.85rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em;
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 700;
     flex: 1;
   }
 
   .chamber-block__count {
-    font-family: var(--font-mono); font-size: 0.68rem;
-    color: var(--text-muted); flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    background: var(--bg-surface);
+    padding: 1px 6px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
   }
 
   .chamber-block__chevron {
-    font-size: 1rem; color: var(--text-muted);
-    transition: transform var(--transition-fast); flex-shrink: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
   }
+
   .chamber-block[open] .chamber-block__chevron { transform: rotate(90deg); }
 
   .chamber-block__body {
-    display: flex; flex-direction: column; gap: var(--space-xs);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
     padding: var(--space-sm);
     border-top: 1px solid var(--border-subtle);
   }
 
-  /* ── Carte relance (accordion) ───────────────────────────────────────────── */
+  /* Relance cards */
   .relance-card {
-    background: var(--bg-card); border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md); overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    overflow: hidden;
   }
 
   .relance-card__summary {
-    list-style: none; cursor: pointer; user-select: none;
-    display: flex; align-items: center; gap: var(--space-md);
-    padding: var(--space-md) var(--space-lg);
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
     transition: background var(--transition-fast);
   }
+
   .relance-card__summary::-webkit-details-marker { display: none; }
   .relance-card[open] .relance-card__summary,
   .relance-card__summary:hover { background: var(--bg-card-hover); }
 
-  .rev-dot--green  { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--rev-green); }
-  .rev-dot--yellow { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--rev-yellow); }
-  .rev-dot--red    { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--rev-red); }
-
-  .relance-card__id {
-    font-family: var(--font-mono); font-size: 0.7rem;
-    color: var(--text-muted); flex-shrink: 0;
+  .rev-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
 
+  .rev-dot--green  { background: var(--rev-green); }
+  .rev-dot--yellow { background: var(--rev-yellow); }
+  .rev-dot--red    { background: var(--rev-red); }
+
   .relance-card__title {
-    flex: 1; font-size: 0.9rem; line-height: 1.3;
+    flex: 1;
+    font-size: 0.85rem;
+    line-height: 1.3;
   }
 
   .relance-card__chevron {
-    font-size: 1.1rem; color: var(--text-muted);
-    transition: transform var(--transition-fast); flex-shrink: 0;
+    font-size: 1rem;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
   }
+
   .relance-card[open] .relance-card__chevron { transform: rotate(90deg); }
 
   .relance-card__body {
     padding: var(--space-md) var(--space-lg) var(--space-lg);
     border-top: 1px solid var(--border-subtle);
-    display: flex; flex-direction: column; gap: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 
-  /* ── Items de relance ────────────────────────────────────────────────────── */
+  /* Relance items */
   .relance-item {
-    display: flex; flex-direction: column; gap: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-sm);
     border-left: 3px solid var(--border-subtle);
   }
 
-  .relance-item--silence     { border-left-color: var(--text-muted);         background: rgba(255,255,255,0.03); }
-  .relance-item--bloque      { border-left-color: var(--rev-yellow);         background: rgba(234,179,8,0.06); }
-  .relance-item--technique   { border-left-color: var(--chamber-preuve);     background: rgba(217,119,6,0.06); }
-  .relance-item--cle         { border-left-color: var(--chamber-delegation); background: rgba(37,99,235,0.06); }
-  .relance-item--suggestions { border-left-color: var(--chamber-singularite, #f87171); background: rgba(248,113,113,0.06);
-                               gap: var(--space-sm); }
+  .relance-item--silence     { border-left-color: var(--text-muted);         background: rgba(255,255,255,0.02); }
+  .relance-item--bloque      { border-left-color: var(--rev-yellow);         background: rgba(234,179,8,0.05); }
+  .relance-item--technique   { border-left-color: var(--chamber-preuve);     background: rgba(217,119,6,0.05); }
+  .relance-item--cle         { border-left-color: var(--chamber-delegation); background: rgba(37,99,235,0.05); }
+  .relance-item--suggestions { border-left-color: var(--chamber-singularite); background: rgba(232,86,58,0.05); gap: var(--space-sm); }
 
   .relance-item__label {
-    font-family: var(--font-mono); font-size: 0.65rem;
-    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     font-weight: 700;
   }
 
   .relance-item__text {
-    font-size: 0.88rem; color: var(--text-primary); line-height: 1.55;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    line-height: 1.55;
   }
 
   .relance-item__suggestion {
-    display: flex; gap: var(--space-sm); align-items: flex-start;
+    display: flex;
+    gap: var(--space-sm);
+    align-items: flex-start;
   }
 
   .relance-item__suggestion-num {
-    font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700;
-    color: var(--text-muted); flex-shrink: 0; padding-top: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    padding-top: 2px;
   }
-
 </style>

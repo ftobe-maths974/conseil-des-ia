@@ -67,7 +67,7 @@ Jamais de mélange inter-chambres sauf décision explicite de l'animateur.
 Le jeu suit une progression par slots thématiques : **Individu → Organisation → Système**.
 
 - Chaque bascule porte un `slot_theme` (individu / organisation / systeme).
-- La Phase 1 détermine la **priorité thématique** : le groupe range les cartes, celle du bas (la plus irréversible) devient le thème dominant. Ce dominant est encodé dans le hash URL → Phase 2.
+- La Phase 1 détermine la **priorité thématique** : le groupe range les cartes, celle du haut (la plus irréversible, index 0) devient le thème dominant. Ce dominant est encodé dans le hash URL → Phase 2.
 - La Phase 2 reçoit `#dominant=X&secondary=Y&minor=Z` et réordonne les tensions en **pondération 3/1/1** côté client (3 cartes dominant, 1 secondary, 1 minor).
 - La Phase 3 propose des leviers d'action fixes (`lever_type`) dont la pertinence est suggérée par le thème dominant : les actions correspondantes reçoivent un badge **Recommandé**.
 
@@ -81,8 +81,8 @@ Mapping dominant → leviers recommandés :
 ## Les 5 phases du jeu
 1. Dossiers de Bascule (20 min)
    - 3 cartes tirées depuis bascules/ selon la chambre du groupe (1 par slot_theme)
-   - Tâche : trier du plus réversible (haut) au moins réversible (bas)
-   - **Carte pertinente = celle du bas de pile** (la plus irréversible selon le groupe)
+   - Tâche : trier du moins réversible (haut) au plus réversible (bas)
+   - **Carte pertinente = celle du haut de pile** (la plus irréversible selon le groupe, index 0)
    - Initialisation de la trajectoire : green → traj=2 / yellow → traj=3 / red → traj=4
    - Output : `#dominant=X&secondary=Y&minor=Z&traj=N` → Phase 2
 
@@ -312,10 +312,10 @@ red    = quasi irréversible, infrastructure, législatif, systémique
 Elle ne change jamais pendant la partie. Ne jamais modifier la couleur d'une carte en cours de jeu.
 
 Convention d'affichage Phase 1 :
-- haut de pile = plus réversible
-- bas de pile  = moins réversible / plus irréversible
-La carte révélée à la validation est toujours celle du bas (la dernière).
-Toute logique lisant la première carte de la pile est incorrecte.
+- haut de pile = moins réversible / plus irréversible (position 1 = la plus importante pour le groupe)
+- bas de pile  = plus réversible
+La carte révélée à la validation est toujours celle du haut (la première, index 0).
+Toute logique lisant la dernière carte de la pile est incorrecte.
 
 Règle de jeu : un groupe ne peut pas valider un mandat red s'il a
 déjà hérité d'un mandat red. Il doit d'abord émettre un green ou yellow.
@@ -346,7 +346,7 @@ Ces labels sont à centraliser dans `src/lib/chambers.ts` (`TRAJ_LABELS`).
 ### Évolution par phase
 
 **Phase 1 — Initialisation**
-Calculée à partir de la réversibilité de la carte en bas de pile (la plus irréversible selon le groupe) :
+Calculée à partir de la réversibilité de la carte en haut de pile (la plus irréversible selon le groupe, index 0) :
 - green → traj = 2
 - yellow → traj = 3
 - red → traj = 4
@@ -535,8 +535,8 @@ Fichier : `src/pages/groupe/[session]/[phase]/[groupe].astro`
   (`stack.querySelectorAll('.p1-card')[last]`), pas la première.
 
 Règle canonique à respecter partout :
-- **haut = plus réversible**
-- **bas = moins réversible / plus irréversible**
+- **haut = moins réversible / plus irréversible** (position 1, index 0)
+- **bas = plus réversible**
 
 #### ✓ Bug 2 — Setup animateur : incohérence de `data-chamber`
 Fichier : `src/pages/animateur/setup.astro`

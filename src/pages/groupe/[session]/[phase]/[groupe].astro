@@ -10,9 +10,10 @@ import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
 function selectCards(
   all: CollectionEntry<'bascules'>[],
   chamber: string,
+  deckId: string,
 ): CollectionEntry<'bascules'>[] {
   return all
-    .filter(b => b.data.chamber === chamber)
+    .filter(b => b.id.startsWith(deckId + '/') && b.data.chamber === chamber)
     .sort((a, b) => a.data.slot - b.data.slot)
     .slice(0, 3);
 }
@@ -32,7 +33,7 @@ export async function getStaticPaths() {
 const { session, groupe } = Astro.params;
 const { chamber } = Astro.props;
 const allBascules = await getCollection('bascules');
-const selected = selectCards(allBascules, chamber);
+const selected = selectCards(allBascules, chamber, session);
 
 const phase2Url = `${import.meta.env.BASE_URL}/groupe/${session}/phase-2/${groupe}`;
 
@@ -76,8 +77,8 @@ const cardsData: CardData[] = selected.map(b => ({
     <!-- Instructions -->
     <section class="p1__instructions" id="instructions">
       <p class="p1__instructions-text">
-        Lisez les 3 dossiers et rangez-les <strong>du plus réversible en haut</strong> au
-        <strong>moins réversible en bas</strong>. Débattez entre vous — les badges de couleur
+        Lisez les 3 dossiers et rangez-les <strong>du moins réversible en haut</strong> au
+        <strong>plus réversible en bas</strong>. Débattez entre vous — les badges de couleur
         sont des indices, pas la réponse.
       </p>
     </section>
@@ -225,11 +226,11 @@ const cardsData: CardData[] = selected.map(b => ({
     if (!hasMoved) return;
 
     const allCardEls = stack.querySelectorAll<HTMLElement>('.p1-card');
-    const bottomCardEl = allCardEls[allCardEls.length - 1];
-    if (!bottomCardEl) return;
+    const topCardEl = allCardEls[0];
+    if (!topCardEl) return;
 
-    const cardId  = bottomCardEl.dataset.id ?? '';
-    const cardRev = bottomCardEl.dataset.rev ?? 'yellow';
+    const cardId  = topCardEl.dataset.id ?? '';
+    const cardRev = topCardEl.dataset.rev ?? 'yellow';
     const data    = cards.find(c => c.id === cardId);
     if (!data) return;
 
@@ -253,11 +254,11 @@ const cardsData: CardData[] = selected.map(b => ({
 
     // Encoder les thèmes + trajectoire dans le lien "Continuer vers Phase 2"
     const allCardEls2 = stack.querySelectorAll<HTMLElement>('.p1-card');
-    const dominant  = allCardEls2[allCardEls2.length - 1]?.dataset.theme ?? '';
-    const secondary = allCardEls2.length >= 2 ? allCardEls2[allCardEls2.length - 2]?.dataset.theme ?? '' : '';
-    const minor     = allCardEls2[0]?.dataset.theme ?? '';
-    const bottomRev = allCardEls2[allCardEls2.length - 1]?.dataset.rev ?? 'yellow';
-    const traj      = clampTraj(initTraj(bottomRev));
+    const dominant  = allCardEls2[0]?.dataset.theme ?? '';
+    const secondary = allCardEls2[1]?.dataset.theme ?? '';
+    const minor     = allCardEls2[allCardEls2.length - 1]?.dataset.theme ?? '';
+    const topRev    = allCardEls2[0]?.dataset.rev ?? 'yellow';
+    const traj      = clampTraj(initTraj(topRev));
     const continueBtn = document.getElementById('btn-continue') as HTMLAnchorElement;
     if (continueBtn) {
       const base = continueBtn.getAttribute('href')!.split('#')[0];

@@ -9,9 +9,10 @@ import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
 function selectActions(
   all: CollectionEntry<'actions'>[],
   chamber: string,
+  deckId: string,
 ): CollectionEntry<'actions'>[] {
   return all
-    .filter(a => a.data.chamber === chamber)
+    .filter(a => a.id.startsWith(deckId + '/') && a.data.chamber === chamber)
     .sort((a, b) => a.data.slot - b.data.slot)
     .slice(0, 4);
 }
@@ -34,7 +35,7 @@ export async function getStaticPaths() {
 const { session, groupe } = Astro.params;
 const { chamber, nextGroupe } = Astro.props;
 const allActions = await getCollection('actions');
-const selected = selectActions(allActions, chamber);
+const selected = selectActions(allActions, chamber, session);
 
 type ActionData = {
   id: string;

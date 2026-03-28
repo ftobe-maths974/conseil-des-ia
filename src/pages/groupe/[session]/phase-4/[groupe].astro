@@ -19,8 +19,9 @@ export async function getStaticPaths() {
 const { session, groupe } = Astro.params;
 const { chamber, scenarioId } = Astro.props;
 const allScenarios = await getCollection('scenarios');
-const scenario = allScenarios.find(s => s.data.id === scenarioId)
-  ?? allScenarios.find(s => s.data.chamber === chamber);
+const deckScenarios = allScenarios.filter(s => s.id.startsWith(session + '/'));
+const scenario = deckScenarios.find(s => s.data.id === scenarioId)
+  ?? deckScenarios.find(s => s.data.chamber === chamber);
 
 type ScenarioData = {
   id: string;
