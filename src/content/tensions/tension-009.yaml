@@ -1,5 +1,7 @@
 id: tension-009
 phase: tension
+slot: 4
+slot_theme: individu
 chamber: preuve-vs-simulation
 reversibility: green
 title: "La confiance n'a jamais reposé uniquement sur la preuve"

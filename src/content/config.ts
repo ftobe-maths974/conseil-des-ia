@@ -5,6 +5,8 @@ const bascules = defineCollection({
   schema: z.object({
     id: z.string(),
     phase: z.literal('bascule'),
+    slot: z.number().int().min(1),
+    slot_theme: z.enum(['individu', 'organisation', 'systeme']),
     chamber: z.enum([
       'delegation-vs-souverainete',
       'preuve-vs-simulation',
@@ -34,6 +36,8 @@ const tensions = defineCollection({
   schema: z.object({
     id: z.string(),
     phase: z.literal('tension'),
+    slot: z.number().int().min(1),
+    slot_theme: z.enum(['individu', 'organisation', 'systeme']),
     chamber: z.enum([
       'delegation-vs-souverainete',
       'preuve-vs-simulation',
@@ -64,6 +68,8 @@ const actions = defineCollection({
   schema: z.object({
     id: z.string(),
     phase: z.literal('action'),
+    slot: z.number().int().min(1),
+    lever_type: z.enum(['limiter', 'conditionner', 'auditer', 'recours', 'interdire']),
     chamber: z.string(),
     reversibility: z.enum(['green', 'yellow', 'red']),
     scope: z.enum(['individuel', 'organisationnel', 'systemique']),

@@ -1,5 +1,7 @@
 id: tension-003
 phase: tension
+slot: 3
+slot_theme: organisation
 chamber: delegation-vs-souverainete
 reversibility: yellow
 title: "La souveraineté numérique est une question de couche d'infrastructure"

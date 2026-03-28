@@ -2,46 +2,25 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
 
-// Ordre canonique : delegation → invisibilite → preuve → singularite → metabolisme
-const CHAMBER_MAP: Record<string, string> = {
-  'groupe-A': 'delegation-vs-souverainete',
-  'groupe-B': 'invisibilite-vs-arbitrage',
-  'groupe-C': 'preuve-vs-simulation',
-  'groupe-D': 'singularite-vs-standard',
-  'groupe-E': 'metabolisme-vs-progres',
-};
 
-const CHAMBER_LABELS: Record<string, string> = {
-  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
-  'preuve-vs-simulation':       'Preuve vs Simulation',
-  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
-  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
-  'singularite-vs-standard':    'Singularité vs Standard',
-};
-
-const REV_LABELS: Record<string, string> = {
-  green:  'Réversible',
-  yellow: 'Coûteux',
-  red:    'Irréversible',
-};
 
 export async function getStaticPaths() {
-  return ['groupe-A', 'groupe-B', 'groupe-C', 'groupe-D', 'groupe-E'].map(groupe => ({
-    params: { session: 'demo', groupe },
-  }));
+  const allDecks = await getCollection('decks');
+  return allDecks.flatMap(deck =>
+    deck.data.groups.map(g => ({
+      params: { session: deck.data.id, groupe: g.id },
+      props: { chamber: g.chamber, scenarioId: g.scenario_id },
+    }))
+  );
 }
 
 const { session, groupe } = Astro.params;
+const { chamber, scenarioId } = Astro.props;
 const allScenarios = await getCollection('scenarios');
-const allDecks = await getCollection('decks');
-const chamber = CHAMBER_MAP[groupe] ?? 'delegation-vs-souverainete';
-
-const deck = allDecks.find(d => d.data.id === session);
-const groupConfig = deck?.data.groups.find(g => g.id === groupe);
-const scenario = groupConfig?.scenario_id
-  ? allScenarios.find(s => s.data.id === groupConfig.scenario_id)
-  : allScenarios.find(s => s.data.chamber === chamber);
+const scenario = allScenarios.find(s => s.data.id === scenarioId)
+  ?? allScenarios.find(s => s.data.chamber === chamber);
 
 type ScenarioData = {
   id: string;
@@ -197,6 +176,7 @@ const scenarioData: ScenarioData | null = scenario ? {
 <script type="application/json" id="scenario-data" set:html={JSON.stringify(scenarioData)} />
 
 <script>
+  import { REV_LABELS, CHAMBER_LABELS_SHORT } from '../../../../lib/chambers';
   // ── Types ─────────────────────────────────────────────────────────────────
   interface Handoff {
     action?:  { id: string; title: string };
@@ -221,24 +201,12 @@ const scenarioData: ScenarioData | null = scenario ? {
 
   const handoff = decodeHandoff();
 
-  const REV_LABELS: Record<string, string> = {
-    green: 'Réversible', yellow: 'Coûteux', red: 'Irréversible',
-  };
-
-  const CHAMBER_LABELS: Record<string, string> = {
-    'delegation-vs-souverainete': 'Délégation',
-    'preuve-vs-simulation':       'Preuve',
-    'metabolisme-vs-progres':     'Métabolisme',
-    'invisibilite-vs-arbitrage':  'Invisibilité',
-    'singularite-vs-standard':    'Singularité',
-  };
-
   // ── Affichage du mandat reçu ──────────────────────────────────────────────
   const mandatContent = document.getElementById('p4-mandat-content')!;
 
   if (handoff) {
     document.getElementById('p4-mandat-from')!.textContent =
-      `${handoff.from} · ${CHAMBER_LABELS[handoff.chamber] ?? handoff.chamber}`;
+      `${handoff.from} · ${CHAMBER_LABELS_SHORT[handoff.chamber] ?? handoff.chamber}`;
 
     const badge = document.getElementById('p4-mandat-badge')!;
     badge.textContent = REV_LABELS[handoff.level] ?? handoff.level;

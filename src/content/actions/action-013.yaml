@@ -1,5 +1,7 @@
 id: action-013
 phase: action
+slot: 1
+lever_type: interdire
 chamber: invisibilite-vs-arbitrage
 reversibility: red
 scope: systemique

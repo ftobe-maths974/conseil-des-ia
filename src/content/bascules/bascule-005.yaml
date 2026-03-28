@@ -1,5 +1,7 @@
 id: bascule-005
 phase: bascule
+slot: 1
+slot_theme: organisation
 chamber: singularite-vs-standard
 reversibility: yellow
 scope: organisationnel

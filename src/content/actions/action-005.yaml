@@ -1,5 +1,7 @@
 id: action-005
 phase: action
+slot: 1
+lever_type: conditionner
 chamber: preuve-vs-simulation
 reversibility: yellow
 scope: organisationnel

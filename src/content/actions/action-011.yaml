@@ -1,5 +1,7 @@
 id: action-011
 phase: action
+slot: 3
+lever_type: interdire
 chamber: metabolisme-vs-progres
 reversibility: red
 scope: systemique

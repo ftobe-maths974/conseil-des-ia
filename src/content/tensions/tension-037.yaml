@@ -1,0 +1,22 @@
+id: tension-037
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "La dépendance énergétique de l'économie numérique"
+content: >
+  La croissance de l'IA générative exige une expansion massive des infrastructures énergétiques. Les grands pays technologiques relancent des centrales nucléaires ou construisent des capacités fossiles dédiées aux datacenters. L'économie numérique crée ainsi une dépendance énergétique structurelle qui contraint les politiques climatiques sur plusieurs décennies.
+data_point: >
+  Les datacenters américains consommeront en 2026 autant d'électricité que l'ensemble du Japon (Goldman Sachs, 2024). Le groupe Alphabet a signé en 2024 le premier contrat d'approvisionnement en énergie nucléaire dédiée à l'IA avec Kairos Power pour 2030.
+question: >
+  Peut-on construire une IA au service du progrès humain sur une infrastructure qui rend impossible la transition énergétique ?
+tags:
+  - energie
+  - datacenter
+  - nucleaire
+  - transition-energetique
+suggestions_bascule:
+  - "Le point de bascule est le moment où un gouvernement bloque une centrale de datacenter pour raisons climatiques — quand la sobriété numérique devient une contrainte d'État."
+  - "Le point de bascule est atteint quand la demande électrique de l'IA dépasse la capacité des énergies renouvelables disponibles — quand le numérique et le climat entrent en conflit systémique."
+version: "1.0"

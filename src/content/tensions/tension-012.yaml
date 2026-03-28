@@ -1,5 +1,7 @@
 id: tension-012
 phase: tension
+slot: 2
+slot_theme: organisation
 chamber: metabolisme-vs-progres
 reversibility: yellow
 title: "Le progrès technique crée les besoins qu'il prétend satisfaire"

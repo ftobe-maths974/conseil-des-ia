@@ -1,5 +1,7 @@
 id: action-017
 phase: action
+slot: 1
+lever_type: interdire
 chamber: singularite-vs-standard
 reversibility: red
 scope: systemique

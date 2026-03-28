@@ -1,5 +1,7 @@
 id: tension-016
 phase: tension
+slot: 1
+slot_theme: systeme
 chamber: invisibilite-vs-arbitrage
 reversibility: red
 title: "Ce qu'on ne voit pas ne peut pas être contesté"

@@ -1,5 +1,7 @@
 id: tension-008
 phase: tension
+slot: 3
+slot_theme: organisation
 chamber: preuve-vs-simulation
 reversibility: yellow
 title: "L'authenticité devient un luxe"

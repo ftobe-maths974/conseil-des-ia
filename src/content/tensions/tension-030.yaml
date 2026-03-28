@@ -1,0 +1,22 @@
+id: tension-030
+phase: tension
+slot: 6
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+title: "Prouver qu'on est humain est devenu un effort quotidien"
+content: >
+  Les CAPTCHAs, les vérifications d'identité biométrique, les tests de comportement humain se multiplient. L'individu doit désormais prouver son humanité à chaque interaction numérique significative — un renversement de charge qui normalise la suspicion par défaut.
+data_point: >
+  En 2024, un internaute moyen passe 72 heures par an à résoudre des vérifications d'humanité (CAPTCHAs, OTP, authentifications biométriques), selon une étude de l'Electronic Frontier Foundation.
+question: >
+  Quand l'humain doit prouver qu'il n'est pas une machine, qui porte la charge de la confiance dans l'espace numérique ?
+tags:
+  - identite
+  - confiance
+  - humain
+  - verification
+suggestions_bascule:
+  - "Le point de bascule est le moment où la vérification d'humanité devient une barrière à l'accès aux services publics — quand prouver qu'on est humain conditionne l'exercice des droits."
+  - "Le point de bascule est atteint quand certains humains (personnes âgées, handicapées) échouent systématiquement les tests d'humanité — quand le filtre anti-bot exclut des humains."
+version: "1.0"

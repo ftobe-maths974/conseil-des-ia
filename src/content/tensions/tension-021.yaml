@@ -1,5 +1,7 @@
 id: tension-021
 phase: tension
+slot: 1
+slot_theme: systeme
 chamber: singularite-vs-standard
 reversibility: red
 title: "Le standard tue l'exception — et l'exception peut sauver une vie"

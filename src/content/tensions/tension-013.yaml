@@ -1,5 +1,7 @@
 id: tension-013
 phase: tension
+slot: 3
+slot_theme: organisation
 chamber: metabolisme-vs-progres
 reversibility: yellow
 title: "L'eau douce devient une variable des équations IA"

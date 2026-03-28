@@ -1,5 +1,7 @@
 id: tension-018
 phase: tension
+slot: 3
+slot_theme: organisation
 chamber: invisibilite-vs-arbitrage
 reversibility: yellow
 title: "La personnalisation crée des individus incomparables"

@@ -1,25 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { CHAMBER_LABELS } from '../../lib/chambers';
 
 const allDecks = await getCollection('decks');
 const deck = allDecks.find(d => d.data.id === 'demo')!;
 
-const CHAMBER_LABELS: Record<string, string> = {
-  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
-  'preuve-vs-simulation':       'Preuve vs Simulation',
-  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
-  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
-  'singularite-vs-standard':    'Singularité vs Standard',
-};
-
-const CHAMBER_KEY: Record<string, string> = {
-  'delegation-vs-souverainete': 'delegation',
-  'preuve-vs-simulation':       'preuve',
-  'metabolisme-vs-progres':     'metabolisme',
-  'invisibilite-vs-arbitrage':  'invisibilite',
-  'singularite-vs-standard':    'singularite',
-};
 
 const groups = deck.data.groups;
 const baseUrl = import.meta.env.BASE_URL;
@@ -43,7 +29,7 @@ const baseUrl = import.meta.env.BASE_URL;
 
       <div class="setup__groups">
         {groups.map(g => (
-          <div class="setup__group-row" data-chamber={CHAMBER_KEY[g.chamber]}>
+          <div class="setup__group-row" data-chamber={g.chamber}>
             <span class="setup__group-id">{g.id}</span>
             <span class="setup__group-chamber">{CHAMBER_LABELS[g.chamber]}</span>
             <span class="setup__group-arrow">→ {deck.data.mandat_circulation[g.id]}</span>
@@ -62,7 +48,7 @@ const baseUrl = import.meta.env.BASE_URL;
         <div
           class="sheet"
           data-groupe={g.id}
-          data-chamber={CHAMBER_KEY[g.chamber]}
+          data-chamber={g.chamber}
           data-url={`${baseUrl}/groupe/demo/phase-1/${g.id}`}
         >
           <div class="sheet__header">

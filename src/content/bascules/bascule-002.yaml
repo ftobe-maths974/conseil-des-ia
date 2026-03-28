@@ -1,5 +1,7 @@
 id: bascule-002
 phase: bascule
+slot: 1
+slot_theme: systeme
 chamber: preuve-vs-simulation
 reversibility: red
 scope: systemique

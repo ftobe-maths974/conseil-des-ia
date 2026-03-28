@@ -1,5 +1,7 @@
 id: tension-024
 phase: tension
+slot: 4
+slot_theme: individu
 chamber: singularite-vs-standard
 reversibility: green
 title: "La diversité des systèmes IA est une forme de résilience"

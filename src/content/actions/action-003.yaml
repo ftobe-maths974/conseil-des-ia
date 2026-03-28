@@ -1,5 +1,7 @@
 id: action-003
 phase: action
+slot: 3
+lever_type: recours
 chamber: delegation-vs-souverainete
 reversibility: green
 scope: individuel

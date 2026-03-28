@@ -1,5 +1,7 @@
 id: tension-005
 phase: tension
+slot: 5
+slot_theme: systeme
 chamber: delegation-vs-souverainete
 reversibility: red
 title: "L'automatisation des décisions RH redessine les frontières de la dignité"

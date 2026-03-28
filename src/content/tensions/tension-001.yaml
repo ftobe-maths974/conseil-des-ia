@@ -1,5 +1,7 @@
 id: tension-001
 phase: tension
+slot: 1
+slot_theme: systeme
 chamber: delegation-vs-souverainete
 reversibility: red
 title: "Le délégant ne comprend plus ce qu'il délègue"

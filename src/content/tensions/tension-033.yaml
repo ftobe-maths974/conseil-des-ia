@@ -1,0 +1,22 @@
+id: tension-033
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+title: "Quand les archives deviennent révisables"
+content: >
+  Les archives historiques, judiciaires et journalistiques constituent le fondement de la mémoire collective. Si la simulation permet de produire rétrospectivement des documents crédibles, l'intégrité de ces corpus devient indémontrable. Toute vérité historique peut être mise en doute — non pas parce qu'elle est fausse, mais parce qu'une alternative convaincante existe désormais.
+data_point: >
+  En 2023, 14 procès en révision ont été rouverts dans des pays à régime autoritaire en utilisant des preuves audio/vidéo générées par IA pour contester des condamnations gênantes. Aucun tribunal international n'a encore établi de protocole de vérification standard.
+question: >
+  Si n'importe quel document historique peut être simulé, comment une société peut-elle s'accorder sur ce qui s'est réellement passé ?
+tags:
+  - archives
+  - histoire
+  - memoire-collective
+  - manipulation
+suggestions_bascule:
+  - "Le point de bascule est le moment où un État utilise une simulation pour contester un crime historique avéré — quand la falsification devient une arme géopolitique."
+  - "Le point de bascule est atteint quand les archives nationales adoptent un système de hachage cryptographique pour tous les documents — quand la confiance en l'histoire exige une infrastructure technique permanente."
+version: "1.0"

@@ -1,5 +1,7 @@
 id: tension-004
 phase: tension
+slot: 4
+slot_theme: individu
 chamber: delegation-vs-souverainete
 reversibility: green
 title: "Le consentement à la délégation est-il éclairé ?"

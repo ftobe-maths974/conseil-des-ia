@@ -1,5 +1,7 @@
 id: bascule-006
 phase: bascule
+slot: 2
+slot_theme: individu
 chamber: delegation-vs-souverainete
 reversibility: green
 scope: individuel

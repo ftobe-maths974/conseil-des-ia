@@ -1,5 +1,7 @@
 id: action-004
 phase: action
+slot: 4
+lever_type: auditer
 chamber: delegation-vs-souverainete
 reversibility: red
 scope: organisationnel

@@ -1,5 +1,7 @@
 id: action-007
 phase: action
+slot: 3
+lever_type: auditer
 chamber: preuve-vs-simulation
 reversibility: yellow
 scope: systemique

@@ -1,5 +1,7 @@
 id: action-019
 phase: action
+slot: 3
+lever_type: conditionner
 chamber: singularite-vs-standard
 reversibility: yellow
 scope: systemique

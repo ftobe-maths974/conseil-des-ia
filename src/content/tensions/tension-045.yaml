@@ -1,0 +1,22 @@
+id: tension-045
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+title: "L'interopérabilité forcée efface les particularismes"
+content: >
+  Pour que les systèmes IA communiquent entre eux, ils doivent parler un langage commun — des formats, des protocoles, des ontologies standardisées. Cette interopérabilité technique produit une pression vers l'uniformisation des pratiques, des catégories et des représentations. Les systèmes qui n'adoptent pas les standards deviennent incompatibles, donc marginaux, donc condamnés.
+data_point: >
+  Le règlement européen sur l'IA impose des standards d'interopérabilité qui ont conduit 23 États membres à harmoniser leurs catégories juridiques de "décision automatisée" sur un modèle commun. 11 systèmes juridiques nationaux ont dû abandonner des distinctions locales jugées non interopérables (Commission européenne, rapport d'impact 2024).
+question: >
+  Quand l'interopérabilité technique impose ses catégories au droit, qui décide de ce qui mérite d'être préservé comme singularité ?
+tags:
+  - standard
+  - interoperabilite
+  - droit
+  - diversite
+suggestions_bascule:
+  - "Le point de bascule est le moment où un système juridique singulier est déclaré non conforme aux standards d'interopérabilité — quand la technique arbitre la valeur du droit."
+  - "Le point de bascule est atteint quand une ontologie IA devient la référence mondiale pour définir des catégories sociales — quand le standard technique remplace le débat politique."
+version: "1.0"

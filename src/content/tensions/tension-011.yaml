@@ -1,5 +1,7 @@
 id: tension-011
 phase: tension
+slot: 1
+slot_theme: systeme
 chamber: metabolisme-vs-progres
 reversibility: red
 title: "L'IA consomme plus qu'elle n'économise"

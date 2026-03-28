@@ -1,5 +1,7 @@
 id: action-012
 phase: action
+slot: 4
+lever_type: recours
 chamber: metabolisme-vs-progres
 reversibility: green
 scope: individuel

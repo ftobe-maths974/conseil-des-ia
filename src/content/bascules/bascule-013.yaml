@@ -1,5 +1,7 @@
 id: bascule-013
 phase: bascule
+slot: 3
+slot_theme: individu
 chamber: singularite-vs-standard
 reversibility: yellow
 scope: individuel

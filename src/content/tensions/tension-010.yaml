@@ -1,5 +1,7 @@
 id: tension-010
 phase: tension
+slot: 5
+slot_theme: systeme
 chamber: preuve-vs-simulation
 reversibility: red
 title: "Les enfants grandissent dans un monde où rien ne prouve rien"

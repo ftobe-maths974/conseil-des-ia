@@ -1,5 +1,7 @@
 id: action-010
 phase: action
+slot: 2
+lever_type: limiter
 chamber: metabolisme-vs-progres
 reversibility: green
 scope: organisationnel

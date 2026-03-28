@@ -2,64 +2,37 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
 
-// ── Chambres assignées au deck demo ──────────────────────────────────────────
-// Ordre canonique : delegation → invisibilite → preuve → singularite → metabolisme
-const CHAMBER_MAP: Record<string, string> = {
-  'groupe-A': 'delegation-vs-souverainete',
-  'groupe-B': 'invisibilite-vs-arbitrage',
-  'groupe-C': 'preuve-vs-simulation',
-  'groupe-D': 'singularite-vs-standard',
-  'groupe-E': 'metabolisme-vs-progres',
-};
 
-const CHAMBER_LABELS: Record<string, string> = {
-  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
-  'preuve-vs-simulation':       'Preuve vs Simulation',
-  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
-  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
-  'singularite-vs-standard':    'Singularité vs Standard',
-};
 
-const REV_LABELS: Record<string, string> = {
-  green:  'Réversible',
-  yellow: 'Coûteux',
-  red:    'Irréversible',
-};
-
-// ── Tirage déterministe des 5 cartes tension ──────────────────────────────
-function seededHash(s: string): number {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) {
-    h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
-  }
-  return Math.abs(h);
-}
-
+// ── Sélection : toutes les tensions de la chambre (max 9 = 3/thème) ──────────
 function selectTensions(
   all: CollectionEntry<'tensions'>[],
   chamber: string,
-  seed: number
 ): CollectionEntry<'tensions'>[] {
-  const pool = all.filter(t => t.data.chamber === chamber);
-  const offset = pool.length > 0 ? seed % pool.length : 0;
-  const rotated = [...pool.slice(offset), ...pool.slice(0, offset)];
-  return rotated.slice(0, 5);
+  return all
+    .filter(t => t.data.chamber === chamber)
+    .sort((a, b) => a.data.slot - b.data.slot)
+    .slice(0, 9);
 }
 
 // ── Routes statiques ──────────────────────────────────────────────────────
 export async function getStaticPaths() {
-  return ['groupe-A', 'groupe-B', 'groupe-C', 'groupe-D', 'groupe-E'].map(groupe => ({
-    params: { session: 'demo', groupe },
-  }));
+  const allDecks = await getCollection('decks');
+  return allDecks.flatMap(deck =>
+    deck.data.groups.map(g => ({
+      params: { session: deck.data.id, groupe: g.id },
+      props: { chamber: g.chamber },
+    }))
+  );
 }
 
 // ── Données de la page ────────────────────────────────────────────────────
 const { session, groupe } = Astro.params;
+const { chamber } = Astro.props;
 const allTensions = await getCollection('tensions');
-const chamber = CHAMBER_MAP[groupe] ?? 'delegation-vs-souverainete';
-const seed = seededHash(session + ':phase2:' + groupe);
-const selected = selectTensions(allTensions, chamber, seed);
+const selected = selectTensions(allTensions, chamber);
 
 const phase3Url = `${import.meta.env.BASE_URL}/groupe/${session}/phase-3/${groupe}`;
 
@@ -70,6 +43,7 @@ type TensionData = {
   data_point?: string;
   question: string;
   reversibility: string;
+  slot_theme: string;
   tags: string[];
 };
 
@@ -80,6 +54,7 @@ const tensionsData: TensionData[] = selected.map(t => ({
   data_point: t.data.data_point,
   question: t.data.question,
   reversibility: t.data.reversibility,
+  slot_theme: t.data.slot_theme,
   tags: t.data.tags,
 }));
 ---
@@ -108,9 +83,9 @@ const tensionsData: TensionData[] = selected.map(t => ({
     </section>
 
     <!-- Cartes tension -->
-    <section class="p2__cards" aria-label="Dossiers de tension">
+    <section class="p2__cards" id="p2-cards" aria-label="Dossiers de tension" style="visibility:hidden">
       {tensionsData.map((t, i) => (
-        <article class="p2-card" data-rev={t.reversibility}>
+        <article class="p2-card" data-rev={t.reversibility} data-slot-theme={t.slot_theme}>
           <details class="p2-card__details">
             <summary class="p2-card__summary">
               <div class="p2-card__summary-inner">
@@ -182,8 +157,54 @@ const tensionsData: TensionData[] = selected.map(t => ({
   const textarea  = document.getElementById('bascule-text') as HTMLTextAreaElement;
   const counter   = document.getElementById('bascule-counter')!;
   const continueA = document.getElementById('p2-continue') as HTMLAnchorElement;
+  const cardsSection = document.getElementById('p2-cards') as HTMLElement;
 
   const phase3Base: string = JSON.parse(document.getElementById('phase3-base')!.textContent!);
+
+  // ── Lire le thème dominant depuis le hash Phase 1 ────────────────────────
+  const inHash = window.location.hash;
+  const dominantMatch  = inHash.match(/dominant=([^&]+)/);
+  const secondaryMatch = inHash.match(/secondary=([^&]+)/);
+  const minorMatch     = inHash.match(/minor=([^&]+)/);
+  const dominant  = dominantMatch?.[1]  ?? '';
+  const secondary = secondaryMatch?.[1] ?? '';
+  const minor     = minorMatch?.[1]     ?? '';
+
+  // ── Filtrage + réordonnancement 3/1/1 côté client ────────────────────────
+  if (cardsSection) {
+    const cards = Array.from(cardsSection.querySelectorAll<HTMLElement>('.p2-card'));
+
+    let selected: HTMLElement[];
+    if (dominant) {
+      const byTheme = (theme: string) => cards.filter(c => c.dataset.slotTheme === theme);
+      const dominantCards  = byTheme(dominant).slice(0, 3);
+      const secondaryCards = byTheme(secondary).slice(0, 1);
+      const minorCards     = byTheme(minor).slice(0, 1);
+      selected = [...dominantCards, ...secondaryCards, ...minorCards];
+      // Compléter jusqu'à 5 si certains thèmes manquent de cartes
+      const selectedSet = new Set(selected);
+      cards.filter(c => !selectedSet.has(c)).forEach(c => {
+        if (selected.length < 5) selected.push(c);
+      });
+      // Masquer les cartes non sélectionnées (surplus des thèmes secondaires)
+      const finalSet = new Set(selected);
+      cards.filter(c => !finalSet.has(c)).forEach(c => { c.hidden = true; });
+    } else {
+      // Pas de hash : afficher les 5 premières seulement
+      selected = cards.slice(0, 5);
+      cards.slice(5).forEach(c => { c.hidden = true; });
+    }
+
+    // Réordonner dans le DOM sans FOUC (cardsSection était visible:hidden via CSS)
+    selected.forEach(c => cardsSection.appendChild(c));
+    // Renuméroter les positions visibles
+    selected.forEach((el, i) => {
+      const num = el.querySelector<HTMLElement>('.p2-card__num');
+      if (num) num.textContent = String(i + 1);
+    });
+
+    cardsSection.style.visibility = 'visible';
+  }
 
   textarea.addEventListener('input', () => {
     const len = textarea.value.trim().length;
@@ -192,9 +213,10 @@ const tensionsData: TensionData[] = selected.map(t => ({
       continueA.removeAttribute('aria-disabled');
       continueA.removeAttribute('tabindex');
       continueA.classList.add('p2__continue--active');
-      // Encoder le texte dans l'URL hash pour Phase 3
+      // Encoder texte + propager dominant vers Phase 3
       const encoded = btoa(encodeURIComponent(textarea.value.trim()));
-      continueA.href = `${phase3Base}#bascule=${encoded}`;
+      const dominantSuffix = dominant ? `&dominant=${dominant}` : '';
+      continueA.href = `${phase3Base}#bascule=${encoded}${dominantSuffix}`;
     } else {
       continueA.setAttribute('aria-disabled', 'true');
       continueA.setAttribute('tabindex', '-1');

@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { CHAMBER_LABELS } from '../../lib/chambers';
 
 export async function getStaticPaths() {
-  return [{ params: { session: 'demo' } }];
+  const allDecks = await getCollection('decks');
+  return allDecks.map(deck => ({ params: { session: deck.data.id } }));
 }
 
 const { session } = Astro.params;
@@ -11,13 +13,6 @@ const bascules = await getCollection('bascules');
 const tensions = await getCollection('tensions');
 const actions  = await getCollection('actions');
 
-const CHAMBER_LABELS: Record<string, string> = {
-  'delegation-vs-souverainete': 'Délégation vs Souveraineté',
-  'preuve-vs-simulation':       'Preuve vs Simulation',
-  'metabolisme-vs-progres':     'Métabolisme vs Progrès',
-  'invisibilite-vs-arbitrage':  'Invisibilité vs Arbitrage',
-  'singularite-vs-standard':    'Singularité vs Standard',
-};
 
 // Regrouper les bascules par chambre pour l'affichage
 const basculesByChamberId = bascules.reduce<Record<string, typeof bascules>>((acc, b) => {

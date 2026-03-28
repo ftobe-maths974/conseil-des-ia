@@ -1,5 +1,7 @@
 id: tension-025
 phase: tension
+slot: 5
+slot_theme: systeme
 chamber: singularite-vs-standard
 reversibility: red
 title: "Les IA éducatives façonnent ce qu'on appelle apprendre"

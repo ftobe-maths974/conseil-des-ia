@@ -1,0 +1,22 @@
+id: tension-040
+phase: tension
+slot: 8
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "La discrimination invisible est la discrimination légale"
+content: >
+  Les systèmes algorithmiques peuvent produire des effets discriminatoires sans jamais utiliser de critères explicitement protégés. En corrélant code postal, horaires de connexion ou style rédactionnel avec des caractéristiques démographiques, ils discriminent indirectement de manière difficilement prouvable. L'organisation échappe au droit tout en produisant le résultat que le droit interdit.
+data_point: >
+  Le Défenseur des droits français a traité 210 dossiers de discrimination algorithmique suspectée en 2023. Dans seulement 18 cas, la preuve a pu être établie — non par analyse de l'algorithme mais par statistiques d'effets. Les autres ont été classés faute de possibilité d'accès au système.
+question: >
+  Quand la discrimination devient invisible aux yeux du droit, qui est responsable de ses effets ?
+tags:
+  - discrimination
+  - algorithme
+  - droit
+  - organisation
+suggestions_bascule:
+  - "Le point de bascule est le moment où une organisation ne peut plus démontrer l'équité de son système de sélection — quand l'opacité algorithmique devient une protection juridique."
+  - "Le point de bascule est atteint quand un régulateur impose l'audit d'impact discriminatoire avant tout déploiement — quand la charge de la preuve s'inverse."
+version: "1.0"

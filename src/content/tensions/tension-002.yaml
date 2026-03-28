@@ -1,5 +1,7 @@
 id: tension-002
 phase: tension
+slot: 2
+slot_theme: organisation
 chamber: delegation-vs-souverainete
 reversibility: yellow
 title: "Qui est responsable quand l'IA décide mal ?"

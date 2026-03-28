@@ -1,5 +1,7 @@
 id: tension-017
 phase: tension
+slot: 2
+slot_theme: organisation
 chamber: invisibilite-vs-arbitrage
 reversibility: yellow
 title: "L'arbitrage algorithmique reproduit et amplifie les biais existants"

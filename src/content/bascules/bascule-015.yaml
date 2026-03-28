@@ -1,5 +1,7 @@
 id: bascule-015
 phase: bascule
+slot: 3
+slot_theme: organisation
 chamber: metabolisme-vs-progres
 reversibility: red
 scope: systemique

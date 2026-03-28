@@ -1,5 +1,7 @@
 id: bascule-004
 phase: bascule
+slot: 1
+slot_theme: organisation
 chamber: invisibilite-vs-arbitrage
 reversibility: red
 scope: organisationnel

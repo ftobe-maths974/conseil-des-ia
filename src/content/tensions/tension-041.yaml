@@ -1,0 +1,22 @@
+id: tension-041
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Les scores de crédit deviennent des scores de citoyenneté"
+content: >
+  La logique des scores algorithmiques se diffuse au-delà du crédit financier : scores de réputation professionnelle, scores de risque locatif, scores de fiabilité assurancielle. La combinaison de ces systèmes crée une infrastructure de classement social permanent où l'invisibilité d'un individu dans les bases de données devient en elle-même un signal négatif.
+data_point: >
+  En Chine, le système de crédit social couvre 1,4 milliard de personnes et conditionne l'accès aux transports, aux écoles et aux marchés publics. Des systèmes analogues (scoring locatif, scoring de risque assurantiel) couvrent 40 % de la population adulte en Europe selon le rapport Wachter-Mittelstadt (Oxford, 2023).
+question: >
+  Quand les scores invisibles conditionnent l'accès aux droits fondamentaux, peut-on encore parler de citoyenneté universelle ?
+tags:
+  - scoring
+  - droits
+  - infrastructure
+  - citoyennete
+suggestions_bascule:
+  - "Le point de bascule est le moment où un score algorithmique conditionne l'accès au logement ou à l'emploi sans possibilité de contestation — quand le classement remplace le droit."
+  - "Le point de bascule est atteint quand les scores sectoriels sont interconnectés en un score unique de réputation civique — quand le citoyen devient un profil de risque permanent."
+version: "1.0"

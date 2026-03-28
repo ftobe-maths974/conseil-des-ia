@@ -1,5 +1,7 @@
 id: tension-015
 phase: tension
+slot: 5
+slot_theme: systeme
 chamber: metabolisme-vs-progres
 reversibility: red
 title: "La sobriété numérique est politiquement invendable"

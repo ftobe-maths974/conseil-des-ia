@@ -1,5 +1,7 @@
 id: bascule-011
 phase: bascule
+slot: 3
+slot_theme: organisation
 chamber: preuve-vs-simulation
 reversibility: yellow
 scope: systemique

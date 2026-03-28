@@ -1,5 +1,7 @@
 id: action-015
 phase: action
+slot: 3
+lever_type: conditionner
 chamber: invisibilite-vs-arbitrage
 reversibility: red
 scope: systemique

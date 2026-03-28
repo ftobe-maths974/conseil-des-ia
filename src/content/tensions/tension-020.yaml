@@ -1,5 +1,7 @@
 id: tension-020
 phase: tension
+slot: 5
+slot_theme: individu
 chamber: invisibilite-vs-arbitrage
 reversibility: green
 title: "L'audit algorithmique peut-il être démocratique ?"

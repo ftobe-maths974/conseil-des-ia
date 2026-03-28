@@ -1,0 +1,22 @@
+id: tension-039
+phase: tension
+slot: 7
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Mon profil me précède dans chaque candidature"
+content: >
+  Les systèmes de présélection automatisée de CV croisent des données publiques (LinkedIn, réseaux sociaux, presse) avec les informations fournies par le candidat. Un individu peut être écarté avant même d'être lu — sur la base d'une activité passée, d'une affiliation ou d'une photo de profil analysée par un système qu'il ne connaît pas et ne peut pas interroger.
+data_point: >
+  Une enquête de la CNIL (2024) révèle que 43 % des entreprises françaises de plus de 250 salariés utilisent des outils de présélection automatisée des candidatures. Parmi elles, seules 12 % informent les candidats de cette pratique comme l'exige le RGPD.
+question: >
+  Comment un individu peut-il se défendre contre un jugement algorithmique qu'il n'a pas consenti à subir et dont il ignore les critères ?
+tags:
+  - recrutement
+  - discrimination
+  - profil
+  - consentement
+suggestions_bascule:
+  - "Le point de bascule est le moment où un candidat découvre qu'il a été écarté par une IA sans jamais être lu — quand la décision précède la rencontre."
+  - "Le point de bascule est atteint quand un individu demande à voir son score de présélection et se voit opposer le secret commercial — quand le recours devient impossible."
+version: "1.0"

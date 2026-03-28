@@ -1,5 +1,7 @@
 id: tension-019
 phase: tension
+slot: 4
+slot_theme: systeme
 chamber: invisibilite-vs-arbitrage
 reversibility: red
 title: "Les victimes de discrimination algorithmique ne savent pas qu'elles en sont victimes"

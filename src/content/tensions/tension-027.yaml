@@ -1,0 +1,22 @@
+id: tension-027
+phase: tension
+slot: 7
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Voter par procuration algorithmique"
+content: >
+  Des applications politiques commencent à proposer des recommandations de vote basées sur le profil de l'utilisateur. L'individu délègue son analyse des programmes à un système qui simplifie la délibération en choix optimisé — au risque de court-circuiter le travail démocratique personnel.
+data_point: >
+  Aux élections européennes 2024, plus de 2 millions d'utilisateurs ont utilisé des outils IA de recommandation de vote dans 7 pays membres. 34 % déclarent avoir voté différemment de leur intention initiale après consultation.
+question: >
+  La délégation du choix électoral à un algorithme est-elle une extension ou une abdication de la souveraineté individuelle ?
+tags:
+  - democratie
+  - vote
+  - delegation
+  - souverainete
+suggestions_bascule:
+  - "Le point de bascule est le moment où l'outil de recommandation remplace l'information politique — quand déléguer son analyse revient à déléguer son bulletin."
+  - "Le point de bascule est atteint quand une majorité d'électeurs suit la recommandation algorithmique sans lire les programmes — quand la délibération disparaît de l'acte démocratique."
+version: "1.0"

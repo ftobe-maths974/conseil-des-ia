@@ -1,5 +1,7 @@
 id: tension-006
 phase: tension
+slot: 1
+slot_theme: systeme
 chamber: preuve-vs-simulation
 reversibility: red
 title: "La simulation parfaite rend la vérité indémontrable"

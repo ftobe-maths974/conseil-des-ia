@@ -1,5 +1,7 @@
 id: tension-023
 phase: tension
+slot: 3
+slot_theme: organisation
 chamber: singularite-vs-standard
 reversibility: yellow
 title: "La certification crée des oligopoles de confiance"

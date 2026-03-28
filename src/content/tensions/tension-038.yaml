@@ -1,0 +1,22 @@
+id: tension-038
+phase: tension
+slot: 6
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Le droit d'être opaque dans un monde transparent"
+content: >
+  Les individus qui refusent de partager leurs données — en limitant les permissions d'applications, en utilisant des VPN, en payant en cash — subissent un désavantage croissant : services dégradés, prix plus élevés, exclusion des offres personnalisées. La transparence est devenue la condition implicite de la participation à l'économie numérique.
+data_point: >
+  Une expérience de la Commission européenne (2023) montre que les utilisateurs refusant les cookies personnalisés paient en moyenne 23 % plus cher pour les mêmes produits sur des plateformes e-commerce, en raison de l'absence de promotions ciblées.
+question: >
+  Le droit à la vie privée est-il encore un droit quand son exercice implique une pénalité économique ?
+tags:
+  - vie-privee
+  - donnees
+  - discrimination
+  - opacite
+suggestions_bascule:
+  - "Le point de bascule est le moment où refuser le partage de données coûte plus cher que le partager — quand la transparence devient la norme par défaut économique."
+  - "Le point de bascule est atteint quand un individu ne peut plus accéder à un service essentiel sans céder ses données — quand l'opacité exclut du droit commun."
+version: "1.0"

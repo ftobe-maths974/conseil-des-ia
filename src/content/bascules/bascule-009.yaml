@@ -1,5 +1,7 @@
 id: bascule-009
 phase: bascule
+slot: 3
+slot_theme: individu
 chamber: invisibilite-vs-arbitrage
 reversibility: yellow
 scope: organisationnel

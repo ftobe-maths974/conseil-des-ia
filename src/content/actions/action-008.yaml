@@ -1,5 +1,7 @@
 id: action-008
 phase: action
+slot: 4
+lever_type: limiter
 chamber: preuve-vs-simulation
 reversibility: green
 scope: individuel

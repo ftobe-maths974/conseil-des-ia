@@ -1,0 +1,22 @@
+id: tension-044
+phase: tension
+slot: 8
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Les petites organisations ne peuvent pas se permettre la singularité"
+content: >
+  L'adoption des outils IA standard est présentée comme un levier de compétitivité. Mais cette standardisation avantage les grandes organisations capables de personnaliser les modèles et désavantage les petites structures qui doivent accepter les outils tels quels — avec leurs biais, leurs limites et leurs angles morts. La singularité organisationnelle devient un luxe réservé aux acteurs qui ont les moyens de la financer.
+data_point: >
+  Une étude de Bpifrance (2024) montre que le coût de fine-tuning d'un modèle IA pour l'adapter aux spécificités d'une PME est de 50 000 à 300 000 € — hors de portée pour 89 % des entreprises françaises de moins de 50 salariés. Ces entreprises utilisent des modèles génériques qui ne correspondent pas à leurs pratiques métier.
+question: >
+  Quand seules les grandes organisations peuvent adapter l'IA à leur singularité, l'IA générative nivelle-t-elle ou accentue-t-elle les inégalités de marché ?
+tags:
+  - pme
+  - inegalites
+  - standardisation
+  - competitivite
+suggestions_bascule:
+  - "Le point de bascule est le moment où une PME abandonne une pratique singulière parce qu'elle ne peut pas l'implémenter dans son outil IA — quand le standard efface le savoir-faire."
+  - "Le point de bascule est atteint quand les marchés publics exigent des certifications IA que seules les grandes structures peuvent obtenir — quand le standard devient une barrière à l'entrée."
+version: "1.0"

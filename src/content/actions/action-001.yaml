@@ -1,5 +1,7 @@
 id: action-001
 phase: action
+slot: 1
+lever_type: interdire
 chamber: delegation-vs-souverainete
 reversibility: red
 scope: systemique

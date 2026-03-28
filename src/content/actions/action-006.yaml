@@ -1,5 +1,7 @@
 id: action-006
 phase: action
+slot: 2
+lever_type: interdire
 chamber: preuve-vs-simulation
 reversibility: red
 scope: systemique

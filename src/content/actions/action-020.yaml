@@ -1,5 +1,7 @@
 id: action-020
 phase: action
+slot: 4
+lever_type: limiter
 chamber: singularite-vs-standard
 reversibility: green
 scope: organisationnel
