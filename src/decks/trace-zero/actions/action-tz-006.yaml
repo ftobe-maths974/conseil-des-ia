@@ -1,0 +1,17 @@
+id: action-tz-006
+phase: action
+slot: 2
+lever_type: interdire
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: individuel
+title: "Interdire toute sanction de CVR sans notification préalable et délai de contestation"
+body: >
+  Il est interdit à l'OGR de déclasser, suspendre ou placer en Contrôle Renforcé un CVR sans avoir
+  adressé à la personne concernée une notification explicite via au moins deux canaux de contact enregistrés,
+  et sans lui accorder un délai de contestation de 10 jours avant que la mesure ne prenne effet.
+  En situation de fraude avérée et urgente, la mesure peut être provisoire mais doit être notifiée
+  simultanément à son entrée en vigueur.
+mandat_principe: "Toute dégradation d'un CVR prend effet uniquement après notification de la personne concernée et expiration d'un délai de contestation, sauf motif d'urgence documenté exigeant une décision humaine nommée."
+tags: [invisibilité, notification, déclassement, CVR, délai-de-contestation, suspicion-latente, profil-contaminé]
+version: "1.0"

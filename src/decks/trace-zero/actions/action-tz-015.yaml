@@ -1,0 +1,17 @@
+id: action-tz-015
+phase: action
+slot: 3
+lever_type: conditionner
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: individuel
+title: "Reconnaître contractuellement la variabilité biométrique due à la maladie, l'âge et le handicap"
+body: >
+  Toute entité déployant SIGMA-ID intègre dans son contrat OGR une clause de variabilité biométrique
+  reconnue, permettant à toute personne de déclarer une évolution documentée de ses marqueurs biométriques
+  due à une pathologie, un traitement médical, un handicap ou le vieillissement. Cette déclaration,
+  étayée par un document médical, déclenche la mise à jour du profil de référence dans un délai de
+  5 jours ouvrés sans exigence de seuil de score minimal préalable.
+mandat_principe: "Conditionner toute norme d'authentification à une évaluation d'impact sur les personnes dont le profil biométrique ou comportemental dévie du modèle d'entraînement dominant."
+tags: [singularité, variabilité-biométrique, altération, accessibilité, atypie, dérogation-biométrique, profil-à-risque]
+version: "1.0"

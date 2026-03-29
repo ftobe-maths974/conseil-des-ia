@@ -1,0 +1,17 @@
+id: action-tz-007
+phase: action
+slot: 3
+lever_type: auditer
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: systemique
+title: "Exiger un rapport d'audit annuel public des motifs de déclassement par catégorie"
+body: >
+  L'OGR publie chaque année, au plus tard le 31 mars, un rapport d'audit détaillant les motifs de
+  déclassement de CVR par catégorie agrégée (compromission de compte, anomalie comportementale,
+  corrélation IP suspecte, etc.), le volume de décisions par catégorie, le taux de recours aboutis,
+  le délai médian de traitement des recours, et les évolutions méthodologiques de SIGMA-ID ayant
+  affecté les critères de déclassement. Ce rapport est rédigé en langage accessible aux non-spécialistes.
+mandat_principe: "La société civile a le droit de comprendre, en termes agrégés et accessibles, selon quels critères le système attribue ou retire la confiance aux personnes."
+tags: [invisibilité, audit, log-opaque, déclassement, transparence, score-authenticité, recours-fantôme]
+version: "1.0"

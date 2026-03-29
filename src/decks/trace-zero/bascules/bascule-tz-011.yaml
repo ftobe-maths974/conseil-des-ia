@@ -1,0 +1,20 @@
+id: bascule-tz-011
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: organisationnel
+title: "L'appel quotidien contre les élèves atypiques"
+situation: >
+  Le lycée professionnel Voltaire-Est a déployé la reconnaissance faciale SIGMA-ID pour l'appel
+  automatique. Sur 340 élèves, une dizaine déclenchent des fausses alertes quotidiennes : deux élèves
+  avec vitiligo étendu, trois élèves portant des appareils orthodontiques, deux élèves avec des
+  troubles du mouvement, trois élèves dont la morphologie faciale est sous-représentée dans le
+  modèle. Chaque fausse alerte génère une notification aux parents et un enregistrement d'absence.
+  Les familles se plaignent, les élèves se sentent stigmatisés.
+question: >
+  Quand un système automatisé produit systématiquement des erreurs sur les mêmes élèves, à partir
+  de quel moment cette erreur répétée devient-elle une forme de discrimination institutionnalisée ?
+tags: [singularité, faux-positif, anomalie, accessibilité, discrimination, hors-modèle, profil-à-risque]
+version: "1.0"

@@ -1,0 +1,48 @@
+id: scenario-tz-pre
+phase: scenario
+chamber: preuve-vs-simulation
+difficulty: eleve
+title: "Score à 68% — ni fausse ni vraie, une preuve suspendue au-dessus d'une vie"
+context: >
+  Marc Delourme, 44 ans, agent de gestion dans une caisse d'assurance retraite, est victime depuis six semaines
+  d'une campagne SYNTH-MEMEX : une série de vidéos le montrant tenir des propos discriminatoires envers des
+  collègues a circulé sur les messageries internes et les réseaux professionnels. Il a déposé une plainte pour
+  harcèlement, usurpation d'identité et diffamation. Le parquet a suspendu la procédure : les vidéos ont été
+  soumises à SIGMA-ID, qui leur attribue un score d'authenticité de 68%. Ce score est en zone grise — ni
+  assez élevé pour être certifié authentique, ni assez bas pour être certifié synthétique. La loi actuelle
+  exige un seuil de 85% pour la recevabilité d'une preuve vidéo. Marc ne peut ni prouver que les vidéos sont
+  fausses, ni obtenir que la justice les traite officiellement comme fausses. Son employeur l'a mis en
+  disponibilité forcée. Votre groupe reçoit le mandat suivant de la chambre Invisibilité : "Interdire que
+  l'opacité d'un calcul d'authenticité tienne lieu de preuve contre la personne évaluée — la charge de la
+  preuve ne peut reposer sur le seul score."
+roles_briefing:
+  decideur: >
+    Vous êtes la procureure chargée du dossier. Vous ne pouvez pas ignorer le score SIGMA-ID — il est légalement
+    opposable depuis le décret de l'an dernier. Vous pourriez ordonner une contre-expertise indépendante, mais
+    aucun laboratoire agréé ne peut traiter ce dossier avant six semaines. Votre ligne rouge : ne pas rouvrir
+    une procédure sur la seule pression de la partie plaignante sans élément nouveau. Votre angle mort : vous
+    n'avez pas connaissance d'une circulaire récente autorisant la suspension du score en cas de victime
+    documentée de campagne SYNTH-MEMEX.
+  technicien: >
+    Vous êtes l'expert SIGMA-ID mandaté par le parquet. Vous savez que 68% signifie "artefacts de compression
+    atypiques — origine indéterminée". Ce n'est pas une preuve de synthèse, c'est une absence de certitude.
+    Vous pourriez rédiger un avis technique précisant que le score ne permet pas de conclure à la synthèse,
+    mais votre contrat avec l'OGR vous interdit de nuancer publiquement un score officiel. Votre ligne rouge :
+    ne pas violer votre accord de confidentialité. Votre angle mort : votre propre méthodologie comporte un
+    biais connu sur les vidéos basse résolution que vous n'avez pas signalé à l'OGR.
+  affecte: >
+    Vous êtes Marc Delourme. Vous savez que ces vidéos sont fausses — vous n'étiez pas là, vous avez des
+    preuves de présence ailleurs. Mais ces preuves de présence — des photos, des messages — ont elles-mêmes
+    un score SIGMA-ID inférieur à 85%. Vous êtes pris dans un cercle où rien de ce que vous produisez ne
+    peut être considéré comme preuve. Votre ligne rouge : ne pas accepter que votre employeur fasse de la
+    disponibilité forcée un licenciement déguisé. Votre angle mort : il existe une procédure d'urgence OGR
+    pour les victimes documentées de deepfake — vous n'en avez jamais été informé.
+  contre_pouvoir: >
+    Vous êtes l'avocat de Marc Delourme, spécialisé en droit numérique. Vous avez identifié une faille : le
+    décret rendant le score SIGMA-ID opposable n'a pas prévu le cas des zones grises. Vous pouvez saisir le
+    Conseil d'État en référé, mais cela prend du temps et votre client est en péril financier immédiat. Votre
+    ligne rouge : ne pas engager une procédure contentieuse sans avoir épuisé les voies amiables OGR. Votre
+    angle mort : deux autres avocats ont déjà tenté la même saisine — elles ont abouti à des non-lieux
+    techniques.
+tags: [preuve, liveness, provenance, attestation, présomption-de-synthèse, chaîne-de-garde, certificat-de-présence, consentement]
+version: "1.0"

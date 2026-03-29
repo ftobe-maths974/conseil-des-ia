@@ -1,0 +1,19 @@
+id: tension-tz-018
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Régulation de l'opacité par l'État ou autorégulation du marché"
+content: >
+  Deux camps s'affrontent sur la gouvernance des standards d'opacité de SIGMA-ID. Le camp "régulation"
+  veut que l'État fixe des obligations légales d'explicabilité, avec des sanctions pour non-respect.
+  Les défenseurs de ce camp soulignent que sans obligation légale, aucune entreprise ne réduira
+  volontairement son avantage compétitif. Le camp "autorégulation" argue qu'une loi rigide figera
+  la technologie et que les acteurs privés, sous pression de marché et de réputation, s'amélioreront
+  plus vite. La fraude, elle, n'attend pas les cycles législatifs.
+question: >
+  Pour réguler l'opacité des systèmes d'authentification biométrique qui touchent l'ensemble de la
+  population, la loi est-elle plus efficace que le marché, ou vice versa ?
+tags: [invisibilité, régulation, autorégulation, log-opaque, arbitrage, score-authenticité, transparence]
+version: "1.0"

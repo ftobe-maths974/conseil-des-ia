@@ -1,0 +1,19 @@
+id: tension-tz-016
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Score public ou score privé — à qui appartient l'indice d'authenticité ?"
+content: >
+  L'OGR a choisi de garder le score d'authenticité individuel strictement privé : seule la personne
+  concernée et les institutions habilitées peuvent le consulter. Certains plaident pour une certaine
+  publicité : les employeurs, les bailleurs, les assureurs voudraient y accéder. D'autres plaident
+  pour une opacité totale — même les institutions ne devraient pas y accéder sans consentement explicite
+  et circonstancié. La question n'est pas seulement technique : elle définit si l'indice d'authenticité
+  est un outil de protection personnelle ou une notation sociale partageable.
+question: >
+  Un indice d'authenticité calculé sur le comportement d'une personne appartient-il à cette personne,
+  à l'institution qui la certifie, ou à la société qui en bénéficie ?
+tags: [invisibilité, score-authenticité, vie-privée, arbitrage, log-opaque, transparence, notation-sociale]
+version: "1.0"

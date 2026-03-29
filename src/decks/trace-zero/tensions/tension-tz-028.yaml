@@ -1,0 +1,18 @@
+id: tension-tz-028
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: green
+title: "S'adapter au modèle ou revendiquer le droit à l'atypie"
+content: >
+  Depuis que SIGMA-ID analyse le rythme de frappe, certaines personnes ont modifié leur façon d'utiliser
+  un clavier pour correspondre à ce qu'elles imaginent être le "profil normal" attendu par le système.
+  Elles effacent leur style naturel pour passer les vérifications. Cette adaptation fonctionne — les
+  alertes cessent. Mais d'autres refusent de modifier leur comportement pour un algorithme, et subissent
+  régulièrement des vérifications renforcées. L'une des positions semble raisonnable. L'autre aussi.
+question: >
+  Est-il raisonnable de modifier son comportement naturel pour satisfaire un système d'authentification,
+  ou ce geste ordinaire signale-t-il quelque chose qu'on devrait refuser ?
+tags: [singularité, atypie, hors-modèle, présence-non-conforme, adaptation, standard, dérogation-biométrique]
+version: "1.0"

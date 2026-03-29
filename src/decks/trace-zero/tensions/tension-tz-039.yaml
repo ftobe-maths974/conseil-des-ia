@@ -1,0 +1,19 @@
+id: tension-tz-039
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "S'habituer à n'avoir plus de vie privée biométrique ou résister à un coût personnel élevé"
+content: >
+  La plupart des gens ont simplement intégré le fait que leur façon de marcher, de taper, de parler,
+  de bouger les yeux est continuellement analysée. Ils ont cessé de trouver cela étrange. Ceux qui
+  résistent — qui refusent les appareils connectés, utilisent des réseaux privés, modifient activement
+  leur comportement pour brouiller leur profil comportemental — paient un coût élevé : exclusion de
+  services, temps perdu, isolement numérique progressif. La résistance est possible mais exige des
+  ressources que tout le monde n'a pas. L'habitude, elle, est gratuite.
+question: >
+  Quand s'habituer à la surveillance biométrique permanente est plus accessible que d'y résister,
+  l'absence de résistance signifie-t-elle l'acceptation ou simplement la reddition silencieuse ?
+tags: [métabolisme, vie-privée, résistance, dépendance, fatigue-authentification, charge-cognitive, surveillance]
+version: "1.0"

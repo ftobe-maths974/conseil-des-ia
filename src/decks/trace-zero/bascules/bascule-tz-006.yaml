@@ -1,0 +1,19 @@
+id: bascule-tz-006
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: systemique
+title: "Les critères de déclassement comme secret industriel"
+situation: >
+  L'OGR publie chaque trimestre des statistiques agrégées sur les déclassements de CVR : taux global,
+  délai moyen de résolution, satisfaction des recours. Mais lors d'une audition parlementaire, le
+  directeur technique de l'OGR refuse de communiquer les critères précis de déclassement individuel
+  au motif que "la divulgation des règles de détection affaiblirait leur efficacité contre les acteurs
+  malveillants". Plusieurs associations demandent l'accès à ces critères pour défendre leurs membres.
+question: >
+  Garder secret l'algorithme qui décide de qui est "suspect" est-il une nécessité de sécurité ou
+  un abandon du droit à comprendre les décisions qui nous concernent ?
+tags: [invisibilité, secret-algorithmique, log-opaque, score-authenticité, transparence, arbitrage, recours-fantôme]
+version: "1.0"

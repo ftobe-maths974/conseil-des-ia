@@ -1,0 +1,20 @@
+id: tension-tz-017
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Algorithmes explicables ou algorithmes performants"
+content: >
+  L'OGR a le choix entre deux générations de modèles SIGMA-ID. La version "explicable" peut justifier
+  chaque décision de déclassement en termes compréhensibles pour un non-expert. Son taux de détection
+  des fraudes est de 87%. La version "performante" atteint 94% de détection, mais ses décisions ne
+  sont pas entièrement explicables — elles reposent sur des corrélations statistiques que même les
+  ingénieurs ne peuvent pas toujours articuler. Le gouvernement doit choisir. Les victimes de fraude
+  préfèrent le taux de 94%. Les victimes de faux positifs préfèrent l'explicabilité.
+data_point: "Le règlement européen sur l'IA (2024) exige l'explicabilité pour les systèmes à haut risque, mais ne définit pas de seuil de performance minimal."
+question: >
+  Entre un système d'authentification efficace que personne ne comprend et un système compréhensible
+  mais moins efficace, quelle erreur est la plus acceptable — le faux positif ou le faux négatif ?
+tags: [invisibilité, explicabilité, log-opaque, score-authenticité, arbitrage, zone-grise]
+version: "1.0"

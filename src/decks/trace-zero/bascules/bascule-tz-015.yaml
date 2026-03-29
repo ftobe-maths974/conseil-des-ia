@@ -1,0 +1,19 @@
+id: bascule-tz-015
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Le coût dépasse les fraudes, mais personne ne compare"
+situation: >
+  Deux rapports gouvernementaux existent en parallèle : l'un évalue les fraudes à l'identité évitées
+  grâce à SIGMA-ID à 340 millions d'euros sur l'année. L'autre évalue le coût total du déploiement
+  — infrastructure, personnel, recours, procédures d'exception, perte de productivité — à
+  520 millions d'euros. Ces deux rapports ont été rédigés par des directions différentes du même
+  ministère. Ils ne sont jamais mis en regard dans un document public. L'OGR n'a pas commenté.
+question: >
+  Quand le coût d'un dispositif de sécurité dépasse les dommages qu'il prévient, mais que personne
+  n'est chargé de faire cette comparaison officiellement, comment une société prend-elle cette décision ?
+tags: [métabolisme, coût-de-vérification, bénéfice-documenté, inflation-procédurale, dépendance, bureaucratie-défensive]
+version: "1.0"

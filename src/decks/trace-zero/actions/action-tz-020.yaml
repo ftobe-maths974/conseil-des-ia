@@ -1,0 +1,17 @@
+id: action-tz-020
+phase: action
+slot: 4
+lever_type: auditer
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: organisationnel
+title: "Imposer la publication mensuelle du taux de friction et de son coût humain documenté"
+body: >
+  Toute institution publique utilisant SIGMA-ID publie chaque mois un indicateur de friction
+  d'authentification : nombre de vérifications imposées, nombre d'échecs, temps moyen consacré à
+  l'authentification par agent et par usager, nombre de démarches abandonnées, et estimation du coût
+  humain en heures perdues. Cet indicateur est publié dans un format standardisé OGR, agrégeable
+  nationalement, et accessible sans authentification.
+mandat_principe: "Exiger qu'au-delà d'un seuil de coût de vérification documenté, la décision d'authentification soit rendue à un agent humain responsable et identifiable."
+tags: [métabolisme, friction, taux-de-friction, coût-humain, inflation-procédurale, charge-cognitive, latence-sociale, audit]
+version: "1.0"

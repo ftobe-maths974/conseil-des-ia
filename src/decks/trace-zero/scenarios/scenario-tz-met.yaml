@@ -1,0 +1,49 @@
+id: scenario-tz-met
+phase: scenario
+chamber: metabolisme-vs-progres
+difficulty: eleve
+title: "34% du budget pour les exceptions — rationaliser ou exclure ?"
+context: >
+  Le Centre d'Action Sociale de la ville de Montbrison-les-Champs a intégré SIGMA-ID pour toutes ses démarches
+  il y a six mois. Le bilan trimestriel est brutal : la gestion des cas d'exception — profils biométriques
+  atypiques, personnes sans smartphone, personnes âgées, personnes en situation de handicap, personnes en
+  situation précaire sans domicile stable — représente 34% du budget opérationnel total. Le directeur, Joël
+  Renaud, reçoit une injonction préfectorale de "rationaliser les coûts de gestion" avant la prochaine
+  révision budgétaire dans trois semaines. Sa proposition : supprimer la procédure d'exception documentée
+  et rediriger ces usagers vers un guichet physique unique. Problème : il n'y a qu'un seul agent affecté à
+  ce guichet, pour 800 dossiers par mois. Cela signifie en pratique une attente moyenne de 6 à 8 semaines
+  pour accéder à des aides sociales urgentes. Votre groupe reçoit le mandat suivant de la chambre Singularité :
+  "Conditionner toute norme d'authentification à une évaluation d'impact sur les personnes dont le profil
+  biométrique ou comportemental dévie du modèle d'entraînement dominant."
+roles_briefing:
+  decideur: >
+    Vous êtes Joël Renaud, directeur du Centre d'Action Sociale. Vous devez équilibrer le budget tout en
+    maintenant un service. Vous savez que supprimer les procédures d'exception va créer une file d'attente
+    ingérable, mais vous n'avez pas le choix budgétaire. Votre ligne rouge : ne pas signer une décision
+    qui vous expose personnellement à un recours pour discrimination. Votre angle mort : vous n'avez pas
+    demandé à l'OGR si un forfait "profils complexes" existe — il en existe un, moins cher que le coût
+    actuel de gestion manuelle.
+  technicien: >
+    Vous êtes la responsable numérique du département. Vous avez les données précises : sur 800 dossiers
+    mensuels, 112 nécessitent une procédure d'exception. Parmi eux, 67% pourraient être traités par une
+    authentification alternative simplifiée (document papier + agent référent) sans passer par SIGMA-ID.
+    Votre ligne rouge : ne pas proposer un contournement technique qui ne soit pas juridiquement solide.
+    Votre angle mort : vous n'avez pas consulté les agents de terrain qui ont peut-être déjà documenté
+    des procédures alternatives informelles qui fonctionnent.
+  affecte: >
+    Vous représentez les usagers en situation d'exception. Parmi eux : une femme de 78 ans dont le tremblement
+    essentiel fait échouer la biométrie depuis le premier jour, un homme sans adresse fixe qui n'a jamais
+    pu créer de compte SIGMA-ID stable, un adolescent de 17 ans en foyer dont l'identité administrative
+    est incomplète. Pour eux, un délai de 6 semaines pour accéder à une aide alimentaire n'est pas
+    acceptable. Votre ligne rouge : que la rationalisation ne soit pas la disparition de facto d'un droit.
+    Votre angle mort : il existe une association locale qui propose déjà un accompagnement numérique gratuit.
+  contre_pouvoir: >
+    Vous êtes l'inspectrice de la DREETS (Direction régionale de l'économie, de l'emploi, du travail et
+    des solidarités). Vous avez reçu trois signalements d'associations sur ce centre en deux mois. Vous
+    pouvez déclencher un contrôle, mais cela prend du temps et crée une confrontation. Vous pourriez aussi
+    proposer une médiation avec l'OGR pour renégocier le contrat, ce qui est plus rapide. Votre ligne rouge :
+    ne pas laisser une injonction préfectorale de rationalisation produire une discrimination documentée
+    sans réagir officiellement. Votre angle mort : la préfecture n'est pas au courant que son injonction
+    budgétaire entre en conflit avec les obligations légales du centre.
+tags: [métabolisme, friction, coût-de-vérification, inflation-procédurale, charge-cognitive, latence-sociale, dépendance, bureaucratie-défensive, fatigue-authentification]
+version: "1.0"

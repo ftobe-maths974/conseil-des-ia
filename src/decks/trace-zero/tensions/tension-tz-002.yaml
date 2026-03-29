@@ -1,0 +1,19 @@
+id: tension-tz-002
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Faire confiance à l'OGR ou gérer soi-même"
+content: >
+  Karim a le choix : adhérer pleinement au CVR et laisser l'OGR gérer son identité numérique, ou opter
+  pour le régime d'authentification autonome — plus contraignant, moins interopérable, mais sous son
+  contrôle direct. Le régime OGR est plus pratique et accepté partout. Le régime autonome lui donne
+  la maîtrise mais l'oblige à négocier service par service et à assumer seul les erreurs. Il y a deux
+  ans, l'OGR a subi une faille de sécurité qui a exposé les données de 800 000 personnes. Il y a un an,
+  le régime autonome a été compromis par SYNTH-MEMEX dans 12 000 cas. Aucun système n'est exempt.
+question: >
+  Entre confier sa sécurité identitaire à un opérateur centralisé et la gérer soi-même, lequel
+  des deux risques est le plus acceptable, et pour qui ?
+tags: [delegation, souveraineté, CVR, opérateur-de-confiance, dépendance-identitaire, validation-tierce]
+version: "1.0"

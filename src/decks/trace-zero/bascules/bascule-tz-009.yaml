@@ -1,0 +1,20 @@
+id: bascule-tz-009
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Les auditions parlementaires contestées"
+situation: >
+  Une commission parlementaire mène des auditions sur la régulation de SIGMA-ID. Les séances sont
+  enregistrées et diffusées en direct. Trois semaines après les auditions, un groupe d'opposants
+  dépose une demande d'annulation des votes en arguant que plusieurs enregistrements des auditions
+  présentent des "anomalies de score SIGMA-ID" entre 71% et 83%. L'OGR refuse de se prononcer.
+  Le Parlement ne sait pas si ses propres archives sont recevables comme preuves légales de ses
+  propres délibérations.
+question: >
+  Quand les institutions démocratiques ne peuvent plus certifier l'authenticité de leurs propres
+  archives, quel fondement reste-t-il à la légitimité des décisions collectives ?
+tags: [preuve, démocratie, attestation, provenance, chaîne-de-garde, présomption-de-synthèse, légitimité]
+version: "1.0"

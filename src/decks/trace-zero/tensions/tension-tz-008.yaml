@@ -1,0 +1,19 @@
+id: tension-tz-008
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Souveraineté nationale sur l'identité versus interopérabilité internationale"
+content: >
+  La France a construit SIGMA-ID comme un système souverain, sous contrôle public, ne partageant pas
+  ses données avec les systèmes d'authentification d'autres pays. Cela protège contre certaines formes
+  d'ingérence étrangère et de captation de données. Mais cela pose un problème croissant : les Français
+  vivant ou travaillant à l'étranger, les étrangers résidant en France, les travailleurs transfrontaliers
+  — tous naviguent entre des systèmes incompatibles. Une personne avec un CVR français valide peut être
+  traitée comme "non certifiable" dans un pays partenaire de l'UE.
+question: >
+  Jusqu'où préserver la souveraineté nationale sur l'identité numérique, quand cette souveraineté
+  fragmente la vie quotidienne des personnes qui traversent les frontières ?
+tags: [delegation, souveraineté, CVR, interopérabilité, Europe, validation-tierce, confiance-forcée]
+version: "1.0"

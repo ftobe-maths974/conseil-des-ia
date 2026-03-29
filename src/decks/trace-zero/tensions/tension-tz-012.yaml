@@ -1,0 +1,19 @@
+id: tension-tz-012
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Droit à l'oubli biométrique versus besoin de l'historique pour se défendre"
+content: >
+  Fatou a demandé la suppression de l'ensemble de son historique biométrique comportemental après
+  une procédure de recours résolue. L'OGR l'informe que la suppression est possible, mais qu'elle
+  entraîne la disparition des données qui ont permis de démontrer que son compte avait bien été
+  compromis de l'extérieur — données utiles si une nouvelle usurpation se produisait. Sans cet
+  historique, elle ne pourrait plus prouver qu'elle est victime plutôt qu'auteur d'une compromission.
+  Demander l'oubli, c'est aussi effacer sa propre défense future.
+question: >
+  Le droit à l'oubli biométrique peut-il coexister avec le droit de se défendre grâce à son propre
+  historique, ou choisir l'un revient-il à renoncer à l'autre ?
+tags: [invisibilité, droit-à-l-oubli, historique, log-opaque, profil-contaminé, score-authenticité, recours-fantôme]
+version: "1.0"

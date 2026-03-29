@@ -1,0 +1,19 @@
+id: tension-tz-014
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Recours en interne ou recours externalisé — efficacité versus indépendance"
+content: >
+  Deux modèles de gestion des recours CVR coexistent. Dans le premier, le recours est traité par un
+  service interne à l'OGR — il connaît le système, les délais sont courts (48h en moyenne), mais il
+  est juge et partie. Dans le second, le recours est traité par une autorité indépendante — plus
+  crédible mais avec des délais de 3 à 6 semaines et une courbe d'apprentissage technique sur les
+  critères SIGMA-ID. Les institutions déployantes préfèrent souvent l'interne pour sa rapidité.
+  Les associations de défense des droits exigent l'externe pour son indépendance.
+question: >
+  Pour un recours contre une décision algorithmique opaque, vaut-il mieux la rapidité d'un arbitre
+  interne ou l'indépendance d'un arbitre externe plus lent ?
+tags: [invisibilité, recours-fantôme, arbitrage, log-opaque, indépendance, zone-grise, déclassement]
+version: "1.0"

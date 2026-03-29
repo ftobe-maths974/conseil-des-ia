@@ -1,0 +1,17 @@
+id: action-tz-013
+phase: action
+slot: 1
+lever_type: conditionner
+chamber: singularite-vs-standard
+reversibility: yellow
+scope: organisationnel
+title: "Imposer un protocole de validation alternative pour tout profil biométrique hors-modèle"
+body: >
+  Toute entité déployant SIGMA-ID doit disposer, avant le déploiement, d'un protocole de validation
+  alternative documenté pour les profils biométriques hors-modèle — incluant au minimum : une procédure
+  d'authentification par document physique, un agent référent nommé, et un délai de traitement garanti
+  inférieur à 48 heures. Le protocole est accessible sans démarche préalable de la personne concernée
+  et ne requiert pas la révélation du motif de l'atypie.
+mandat_principe: "L'existence d'une procédure d'exception documentée est une condition de déploiement, non une réponse ad hoc — elle précède l'atypie, elle ne la rattrape pas."
+tags: [singularité, atypie, hors-modèle, protocole-alternatif, accessibilité, dérogation-biométrique, profil-à-risque]
+version: "1.0"

@@ -1,0 +1,19 @@
+id: bascule-tz-004
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: individuel
+title: "L'alerte sans explication"
+situation: >
+  Laure, 29 ans, graphiste indépendante, reçoit une notification sur son téléphone : "Authentification
+  suspecte détectée — votre CVR fait l'objet d'une surveillance renforcée." Elle n'a rien fait de
+  différent ce jour-là. Elle a essayé de se connecter à son espace OGR pour comprendre — le site
+  lui demande une authentification renforcée qu'elle ne peut pas compléter parce que son score est
+  justement en zone grise. Elle tourne en rond depuis deux heures.
+question: >
+  Quand un système vous signale que vous êtes suspect sans vous dire pourquoi, et que le recours
+  exige d'être déjà authentifié, comment sortez-vous du cercle ?
+tags: [invisibilité, score-authenticité, zone-grise, défi-silencieux, log-opaque, notification, recours-fantôme]
+version: "1.0"

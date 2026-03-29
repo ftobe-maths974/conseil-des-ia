@@ -1,0 +1,20 @@
+id: bascule-tz-012
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "Le modèle inapplicable dans 30% des communes"
+situation: >
+  Un audit interne de l'OGR, non publié, révèle que SIGMA-ID a été entraîné sur des données issues
+  à 94% de populations urbaines avec un accès stable à l'électricité, un smartphone récent et une
+  connexion haut débit. Dans 30% des communes rurales françaises, les conditions techniques minimales
+  ne sont pas réunies pour que le système fonctionne dans ses paramètres nominaux. Le taux de faux
+  positifs y est 4,7 fois plus élevé qu'en zone urbaine dense. L'audit recommande une refonte partielle.
+  Il est classé confidentiel.
+question: >
+  Déployer à l'échelle nationale un système d'authentification dont on sait qu'il discrimine
+  structurellement une partie du territoire, est-ce de l'imprudence ou de l'indifférence délibérée ?
+tags: [singularité, équité-biométrique, faux-positif, standard, hors-modèle, exclusion, dérogation-biométrique]
+version: "1.0"

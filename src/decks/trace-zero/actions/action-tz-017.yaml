@@ -1,0 +1,17 @@
+id: action-tz-017
+phase: action
+slot: 1
+lever_type: limiter
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: individuel
+title: "Plafonner à 3 le nombre de vérifications SIGMA-ID imposables par jour et par personne"
+body: >
+  Aucune entité utilisant SIGMA-ID ne peut imposer à une même personne plus de 3 vérifications
+  d'authentification par période de 24 heures, sauf en cas de demande volontaire de la personne ou
+  de procédure judiciaire en cours. Au-delà de ce seuil, la personne est réputée authentifiée pour
+  la période en cours. Les tentatives de vérification supplémentaires sont enregistrées comme incidents
+  de friction excessive et transmises à l'OGR.
+mandat_principe: "La multiplication des vérifications n'est pas une mesure de sécurité proportionnelle — au-delà d'un seuil documenté, elle constitue une atteinte à la capacité d'agir de la personne."
+tags: [métabolisme, friction, fatigue-authentification, charge-cognitive, latence-sociale, plafond-de-vérification]
+version: "1.0"

@@ -1,0 +1,19 @@
+id: bascule-tz-007
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+scope: individuel
+title: "La voix de sa fille"
+situation: >
+  Michèle, 67 ans, retraitée, reçoit un appel de sa fille Aurélie. La voix est parfaite — l'intonation,
+  les formules habituelles, l'accent léger du Lot. Aurélie lui demande de virer 1 800 euros en urgence
+  pour un problème de voiture en Espagne. Michèle hésite. Elle rappelle le numéro d'Aurélie — occupé.
+  Elle a entendu parler du vishing, mais la voix est vraiment identique. Elle ne sait plus si son
+  hésitation la protège ou lui fait rejeter sa vraie fille en difficulté.
+question: >
+  Quand une voix synthétique est indiscernable de la voix réelle, la prudence raisonnable devient-elle
+  une machine à briser les liens de confiance familiaux ?
+tags: [preuve, liveness, vishing, présomption-de-synthèse, substrat-vivant, confiance, trace-non-rejouable]
+version: "1.0"

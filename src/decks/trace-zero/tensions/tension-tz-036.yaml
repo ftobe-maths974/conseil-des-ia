@@ -1,0 +1,19 @@
+id: tension-tz-036
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: red
+title: "Audits d'équité obligatoires ou priorité à l'innovation sécuritaire"
+content: >
+  Une proposition de loi impose des audits d'équité biométrique obligatoires avant tout déploiement
+  de SIGMA-ID à grande échelle — six mois de tests sur des populations représentatives, publication
+  des résultats, seuil maximal de dispersion des taux d'erreur entre groupes. Les défenseurs de la
+  proposition soulignent qu'elle évite de reproduire des discriminations à l'échelle du système. Les
+  opposants — dont plusieurs administrations — font valoir que ce délai de six mois laisse le champ
+  libre à SYNTH-MEMEX pour développer de nouvelles attaques non couvertes par le système en attente.
+question: >
+  Prendre le temps de vérifier qu'un système biométrique est équitable avant de le déployer, est-ce
+  une exigence éthique fondamentale ou un luxe que la menace ne permet pas ?
+tags: [singularité, équité-biométrique, audit, standard, faux-positif, innovation, accessibilité]
+version: "1.0"

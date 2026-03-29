@@ -1,0 +1,16 @@
+id: action-tz-002
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: systemique
+title: "Conditionner la délégation à SIGMA-ID à la préservation d'une procédure de reprise humaine"
+body: >
+  Toute entité utilisant SIGMA-ID comme autorité de certification doit documenter et maintenir opérationnelle
+  une procédure de reprise de contrôle humaine, activable en moins de 30 minutes, sans dépendance technique
+  à SIGMA-ID. Cette procédure doit être testée trimestriellement et son résultat publié. L'absence de
+  procédure documentée entraîne la suspension du droit de déléguer la certification à SIGMA-ID.
+mandat_principe: "Garantir que toute décision de SIGMA-ID affectant les droits d'une personne soit accompagnée d'une explication humainement compréhensible et d'un interlocuteur identifié dans un délai de 72 heures."
+tags: [delegation, confiance-forcée, opérateur-de-confiance, CVR, validation-tierce, reprise-de-contrôle]
+version: "1.0"

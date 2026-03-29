@@ -1,0 +1,19 @@
+id: bascule-tz-013
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+scope: individuel
+title: "Sept fois authentifié, zéro démarche accomplie"
+situation: >
+  Omar, 41 ans, comptable salarié, a besoin d'accéder à cinq services différents dans la même journée :
+  son espace fiscal, sa messagerie pro, son dossier médical en ligne, sa mutuelle et sa caisse de
+  retraite complémentaire. Chacun exige une vérification SIGMA-ID indépendante. Total sur la journée :
+  sept authentifications, dont deux échouent et déclenchent des relances. Il passe deux heures à gérer
+  des vérifications. Il finit par abandonner deux des cinq démarches — les délais sont dépassés.
+question: >
+  Quand la somme des frictions d'authentification dépasse la capacité d'une personne à accomplir ses
+  démarches, est-ce encore un système de sécurité ou une bureaucratie punitive ?
+tags: [métabolisme, friction, fatigue-authentification, charge-cognitive, latence-sociale, inflation-procédurale]
+version: "1.0"

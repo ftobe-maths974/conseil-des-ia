@@ -1,0 +1,20 @@
+id: bascule-tz-008
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Le consentement médical rejeté par l'assurance"
+situation: >
+  La clinique du Parc-Soleil enregistre en vidéo les consentements éclairés avant chaque opération
+  chirurgicale lourde. Ces vidéos constituent des preuves légales en cas de litige. Une compagnie
+  d'assurance refuse désormais de les reconnaître comme preuves recevables dans un dossier de
+  contentieux : les vidéos ont un score SIGMA-ID de 74%, en dessous du seuil légal de 85%.
+  Pourtant, elles ont été tournées en présence de deux témoins physiques. La clinique ne sait
+  pas comment certifier rétroactivement des centaines de fichiers existants.
+question: >
+  Quand le standard de certification des preuves numériques évolue plus vite que les pratiques
+  des organisations, qui assume le coût de la mise en conformité rétroactive ?
+tags: [preuve, consentement, attestation, provenance, chaîne-de-garde, certificat-de-présence, liveness]
+version: "1.0"

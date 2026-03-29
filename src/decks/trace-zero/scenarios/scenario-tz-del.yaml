@@ -1,0 +1,46 @@
+id: scenario-tz-del
+phase: scenario
+chamber: delegation-vs-souverainete
+difficulty: eleve
+title: "Urgences sous verrou — 23 patients bloqués par SIGMA-ID"
+context: >
+  L'hôpital public de Breuilly-les-Forges a intégré SIGMA-ID pour toutes les admissions il y a huit mois.
+  Ce matin, une intoxication collective touche environ 80 personnes lors d'une fête de quartier — eau contaminée,
+  symptômes progressifs. Les ambulances arrivent par vagues. Le système SIGMA-ID sature : 23 patients sont en
+  attente de validation de leur Certificat de Vie Réelle. Sans CVR valide, le logiciel de gestion hospitalière
+  refuse l'ouverture du dossier médical et bloque la prescription. La directrice adjointe de l'OGR local affirme
+  qu'elle n'a pas le mandat pour contourner le système — elle attend une autorisation nationale. Le médecin-chef
+  veut admettre les patients en mode dégradé manuel, mais le service juridique de l'hôpital bloque par crainte
+  de responsabilité. Votre groupe reçoit le mandat suivant de la chambre Métabolisme : "Exiger qu'au-delà d'un
+  seuil de coût de vérification documenté, la décision d'authentification soit rendue à un agent humain
+  responsable et identifiable."
+roles_briefing:
+  decideur: >
+    Vous êtes la directrice de l'hôpital. Votre priorité est de soigner ces patients maintenant. Vous avez le
+    pouvoir de déclencher le mode dégradé, mais votre directeur juridique vous dit que cela engage votre
+    responsabilité personnelle si un patient non authentifié s'avère être une fraude à l'assurance maladie.
+    Votre ligne rouge : ne pas signer une décision qui pourrait vous coûter votre poste et exposer l'hôpital à
+    un contentieux. Votre angle mort : vous n'avez jamais lu le contrat OGR — il existe peut-être une clause
+    d'urgence sanitaire que personne n'a activée.
+  technicien: >
+    Vous êtes le responsable des systèmes d'information de l'hôpital. Techniquement, vous pouvez basculer
+    SIGMA-ID en mode audit passif et laisser entrer les patients — mais cela génère un log d'incident qui remonte
+    automatiquement à l'OGR national. Vous savez que le contrat prévoit des pénalités pour tout contournement
+    non autorisé. Votre ligne rouge : ne pas déclencher une procédure qui pourrait invalider le contrat OGR et
+    couper l'hôpital du système national dans 48 heures. Votre angle mort : vous n'avez pas vérifié si le mode
+    audit passif est techniquement réversible.
+  affecte: >
+    Vous représentez les familles des patients bloqués. L'une des personnes en attente est une femme enceinte
+    de 7 mois qui présente des contractions. Une autre est un homme de 72 ans dont le CVR est en vérification
+    depuis trois semaines suite à une usurpation d'identité antérieure. Votre ligne rouge : obtenir que ces
+    personnes soient admises dans l'heure, quel que soit le statut administratif. Votre angle mort : vous ne
+    savez pas que le mode dégradé existe — vous pensez que c'est un mur technique absolu.
+  contre_pouvoir: >
+    Vous êtes le délégué syndical des infirmiers. Vous avez déjà géré deux incidents SIGMA-ID ce mois-ci,
+    plus mineurs. Vous savez que les agents de terrain ont développé des contournements informels — des codes
+    de passe partagés entre collègues — mais vous ne pouvez pas les mentionner officiellement sans exposer vos
+    collègues. Votre ligne rouge : ne pas laisser le personnel soignant porter seul la responsabilité d'une
+    décision que l'institution refuse de prendre. Votre angle mort : ces contournements informels ont peut-être
+    déjà introduit des failles de sécurité réelles.
+tags: [delegation, CVR, urgence-sanitaire, mode-dégradé, responsabilité, SIGMA-ID, confiance-forcée, verrou-de-présence]
+version: "1.0"

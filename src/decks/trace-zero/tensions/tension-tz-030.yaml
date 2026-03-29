@@ -1,0 +1,19 @@
+id: tension-tz-030
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: red
+title: "Accepter un système imparfait ou risquer l'exclusion totale"
+content: >
+  Certaines personnes dont le profil biométrique est structurellement hors-modèle ont trouvé un
+  compromis difficile : accepter SIGMA-ID malgré ses dysfonctionnements réguliers, parce que refuser
+  ou contourner le système entraîne une exclusion des services beaucoup plus grave que les blocages
+  eux-mêmes. Le choix n'est pas entre un bon et un mauvais système — c'est entre un système défaillant
+  qui laisse quand même passer et une résistance qui coupe l'accès à tout. Cette situation n'est pas
+  une acceptation libre : c'est une acceptation sous contrainte que certains refusent d'appeler consentement.
+question: >
+  Peut-on parler de consentement à un système quand l'alternative au consentement est l'exclusion totale
+  des services essentiels ?
+tags: [singularité, exclusion, atypie, consentement, faux-positif, hors-modèle, présence-non-conforme]
+version: "1.0"

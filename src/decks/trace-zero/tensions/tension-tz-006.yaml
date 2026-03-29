@@ -1,0 +1,19 @@
+id: tension-tz-006
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "Rester dans l'écosystème OGR ou négocier une dérogation"
+content: >
+  L'association Les Bâtisseurs du Lien accompagne des personnes en grande exclusion numérique. Elle
+  a tenté de négocier avec l'OGR une dérogation au CVR obligatoire pour ses bénéficiaires — personnes
+  sans domicile, sans smartphone, sans connectivité stable. La dérogation existe en théorie mais
+  coûte 18 000 euros par an en frais de certification alternative. L'association n'a pas ce budget.
+  Si elle reste dans l'écosystème OGR standard, elle ne peut pas servir ses bénéficiaires. Si elle
+  sort, elle perd l'interopérabilité avec les services publics.
+question: >
+  Quand le coût de la dérogation à une norme obligatoire est inaccessible pour les organisations
+  qui servent les populations les plus fragiles, la norme est-elle encore universelle ?
+tags: [delegation, dérogation, CVR, exclusion, opérateur-de-confiance, confiance-forcée, dépendance-identitaire]
+version: "1.0"

@@ -1,0 +1,36 @@
+id: trace-zero
+name: "TRACE ZÉRO — Quand même ta voix n'est plus une preuve, qu'est-ce qu'il reste de toi ?"
+domaine: "cybersécurité, authentification, identité numérique, cyberviolence"
+institution_centrale: "L'Office de Garantie du Réel (OGR)"
+population_affectee: "salariés, familles, victimes de cyberviolence, soignants, agents publics, adolescents, personnes âgées, personnes atypiques"
+type_decision: "certification de l'authenticité des personnes, arbitrage d'identité, délivrance et suspension des Certificats de Vie Réelle"
+horizon_temporel: "quasi-présent extrapolé — un monde qui ressemble à demain matin"
+risque_dominant: "destruction industrielle de la preuve — la guerre contre le faux détruit la confiance dans le vrai"
+registre_langage: "cyber-noir, clinique, oppressant, quotidien — jamais folklore hacker, jamais SF gadget"
+groups:
+  - id: groupe-A
+    chamber: delegation-vs-souverainete
+    receives_from: groupe-E
+    scenario_id: scenario-tz-del
+  - id: groupe-B
+    chamber: invisibilite-vs-arbitrage
+    receives_from: groupe-A
+    scenario_id: scenario-tz-inv
+  - id: groupe-C
+    chamber: preuve-vs-simulation
+    receives_from: groupe-B
+    scenario_id: scenario-tz-pre
+  - id: groupe-D
+    chamber: singularite-vs-standard
+    receives_from: groupe-C
+    scenario_id: scenario-tz-sin
+  - id: groupe-E
+    chamber: metabolisme-vs-progres
+    receives_from: groupe-D
+    scenario_id: scenario-tz-met
+mandat_circulation:
+  groupe-A: groupe-B
+  groupe-B: groupe-C
+  groupe-C: groupe-D
+  groupe-D: groupe-E
+  groupe-E: groupe-A

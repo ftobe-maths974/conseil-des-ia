@@ -1,0 +1,19 @@
+id: tension-tz-023
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "La vidéo comme preuve légale ou comme pièce systématiquement suspecte"
+content: >
+  Avant SIGMA-ID, la vidéo était une preuve forte dans les procédures civiles et pénales. Aujourd'hui,
+  plusieurs barreaux déconseillent à leurs clients de soumettre des vidéos sans certification OGR,
+  car un score insuffisant peut retourner la preuve contre eux — la partie adverse arguant que "si
+  la vidéo était vraie, elle aurait un meilleur score". Des avocats commencent à soumettre
+  systématiquement leurs pièces vidéo à l'OGR avant tout dépôt judiciaire, ce qui rallonge les
+  procédures de plusieurs semaines et crée une asymétrie entre parties avec et sans moyens.
+question: >
+  Quand la certification d'une preuve est devenue une étape nécessaire avant toute procédure,
+  l'accès à la justice dépend-il désormais aussi du budget pour certifier ses preuves ?
+tags: [preuve, liveness, attestation, certificat-de-présence, chaîne-de-garde, accès-à-la-justice]
+version: "1.0"

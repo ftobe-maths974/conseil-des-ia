@@ -1,0 +1,20 @@
+id: tension-tz-035
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Responsabilité du fabricant ou de l'institution déployante pour les faux positifs"
+content: >
+  Quand SIGMA-ID produit un faux positif qui cause un préjudice — refus de soins, perte d'emploi,
+  blocage de prestations —, qui est responsable ? Le fabricant du système argue que la configuration
+  a été choisie par l'institution déployante, qui assume la responsabilité opérationnelle. L'institution
+  déployante argue qu'elle a respecté les spécifications OGR et que les limites du système sont celles
+  du fabricant. En pratique, les victimes se retrouvent face à deux entités qui se renvoient la
+  responsabilité, sans qu'aucune juridiction n'ait encore tranchée la question au fond.
+data_point: "En 2023, sur 47 cas de contentieux liés à des faux positifs biométriques en Europe, aucun n'avait abouti à une condamnation au fond, faute de clarté sur la chaîne de responsabilité (rapport EDPS 2024)."
+question: >
+  Entre le fabricant d'un système biométrique et l'institution qui le déploie, qui porte la responsabilité
+  des dommages causés par ses erreurs systématiques ?
+tags: [singularité, responsabilité, faux-positif, standard, équité-biométrique, profil-à-risque, anomalie]
+version: "1.0"

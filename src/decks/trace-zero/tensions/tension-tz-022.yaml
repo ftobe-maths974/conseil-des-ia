@@ -1,0 +1,19 @@
+id: tension-tz-022
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: green
+title: "N'accepter que des preuves certifiées ou risquer d'exclure l'authentique"
+content: >
+  Le tribunal administratif de Bordeaux-Métropole a adopté une politique "preuves certifiées uniquement" :
+  seules les preuves numériques avec un score SIGMA-ID supérieur à 85% sont acceptées. Depuis, aucune
+  preuve synthétique n'a été soumise — mais 12% des preuves authentiques présentées ont été rejetées
+  pour score insuffisant. Des victimes de violences filmées sur des téléphones grand public se retrouvent
+  sans preuve recevable parce que leurs vidéos ont été enregistrées dans des conditions qui abaissent
+  le score (mauvais éclairage, compression automatique, réseau instable).
+question: >
+  Un seuil de certification des preuves qui rejette une fraction des preuves authentiques est-il
+  un progrès de la rigueur judiciaire ou un recul de l'accès à la justice ?
+tags: [preuve, attestation, liveness, certificat-de-présence, chaîne-de-garde, faux-positif, justice]
+version: "1.0"

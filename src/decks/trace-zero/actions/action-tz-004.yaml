@@ -1,0 +1,16 @@
+id: action-tz-004
+phase: action
+slot: 4
+lever_type: auditer
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: organisationnel
+title: "Imposer la publication d'un registre public des décisions déléguées à SIGMA-ID"
+body: >
+  Toute institution publique ou privée utilisant SIGMA-ID pour des décisions affectant des droits (accès
+  aux soins, emploi, prestations sociales, logement, éducation) doit publier trimestriellement un registre
+  lisible des catégories de décisions déléguées au système, avec le volume de décisions concernées et le
+  taux de décisions ayant fait l'objet d'un recours humain. Ce registre est accessible sans authentification.
+mandat_principe: "La délégation à un système automatisé ne dispense pas l'institution de rendre compte publiquement des décisions prises en son nom par ce système."
+tags: [delegation, transparence, audit, opérateur-de-confiance, CVR, délégation-du-réel, registre-public]
+version: "1.0"

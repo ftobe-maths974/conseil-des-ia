@@ -1,0 +1,17 @@
+id: action-tz-014
+phase: action
+slot: 2
+lever_type: interdire
+chamber: singularite-vs-standard
+reversibility: red
+scope: systemique
+title: "Interdire tout refus d'accès à un service essentiel fondé sur la seule atypie biométrique"
+body: >
+  Il est interdit à toute entité publique ou privée gérant un service essentiel (santé, banque, éducation,
+  prestations sociales, logement, emploi) de refuser ou de suspendre l'accès à ce service au seul motif
+  qu'une personne génère des alertes d'anomalie biométrique dans SIGMA-ID. Toute alerte d'anomalie
+  déclenche obligatoirement la procédure de validation alternative. L'accès provisoire au service
+  est maintenu pendant la durée de la procédure.
+mandat_principe: "L'atypie biométrique ne constitue pas en elle-même un motif de refus d'accès à un service essentiel — elle déclenche une procédure alternative, elle ne suspend pas le droit."
+tags: [singularité, accessibilité, faux-positif, anomalie, présence-non-conforme, hors-modèle, service-essentiel]
+version: "1.0"

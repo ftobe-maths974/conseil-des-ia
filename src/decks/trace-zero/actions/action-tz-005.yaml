@@ -1,0 +1,16 @@
+id: action-tz-005
+phase: action
+slot: 1
+lever_type: auditer
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+scope: individuel
+title: "Rendre visible le score d'authenticité à la personne concernée en temps réel"
+body: >
+  Toute entité utilisant SIGMA-ID doit exposer à la personne concernée, via une interface accessible sans
+  score minimal d'authenticité, la valeur numérique de son indice d'authenticité courant, la date de sa
+  dernière modification, et les trois critères ayant le plus contribué au calcul. Cette information est
+  mise à jour en temps réel et accessible sur simple demande, sans délai ni procédure.
+mandat_principe: "Aucune personne ne peut être maintenue dans l'ignorance de l'indice qui gouverne son accès aux services — la visibilité du score est un droit, non un privilège."
+tags: [invisibilité, score-authenticité, transparence, notification, défi-silencieux, log-opaque]
+version: "1.0"

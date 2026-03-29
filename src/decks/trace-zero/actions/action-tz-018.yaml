@@ -1,0 +1,17 @@
+id: action-tz-018
+phase: action
+slot: 2
+lever_type: conditionner
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner tout déploiement SIGMA-ID à la publication d'un bilan coût-bénéfice vérifiable"
+body: >
+  Tout déploiement ou renouvellement de contrat SIGMA-ID par une entité publique est conditionné à la
+  publication annuelle d'un bilan coût-bénéfice documenté, comparant le coût total d'authentification
+  (infrastructure, personnel, frais de recours, coût des procédures d'exception) au montant des fraudes
+  effectivement prévenues. Ce bilan est vérifié par la Cour des comptes ou un organisme délégué et rendu
+  public dans un format comparatif standardisé.
+mandat_principe: "Le déploiement d'un système d'authentification à fort coût social n'est légitime que si son bénéfice documenté excède son coût total mesuré — y compris les coûts portés par les usagers."
+tags: [métabolisme, coût-de-vérification, bénéfice-documenté, inflation-procédurale, bilan, dépendance]
+version: "1.0"

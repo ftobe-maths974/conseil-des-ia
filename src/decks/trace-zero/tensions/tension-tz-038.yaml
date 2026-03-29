@@ -1,0 +1,18 @@
+id: tension-tz-038
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "Payer pour une authentification rapide ou subir les délais du service public gratuit"
+content: >
+  L'OGR a ouvert un service "CVR Prioritaire" : moyennant 12 euros par mois, les utilisateurs bénéficient
+  de vérifications accélérées, d'un interlocuteur dédié en cas de problème, et d'un délai de recours
+  garanti de 24 heures. Le service standard gratuit a des délais de recours de 2 à 6 semaines. Des
+  personnes qui ont les moyens de payer ont de fait une identité numérique de meilleure qualité de service.
+  Ceux qui ne peuvent pas payer subissent des délais qui peuvent leur coûter leur emploi ou leurs droits.
+question: >
+  Un système d'authentification à deux vitesses — rapide pour ceux qui paient, lent pour les autres —
+  est-il une offre de service complémentaire ou une marchandisation d'un droit fondamental ?
+tags: [métabolisme, friction, latence-sociale, inégalité, coût-de-vérification, service-public, dépendance]
+version: "1.0"

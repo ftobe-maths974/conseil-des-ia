@@ -1,0 +1,19 @@
+id: tension-tz-001
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Le confort de ne plus avoir à s'authentifier soi-même"
+content: >
+  Depuis que SIGMA-ID gère son identité, Nadia ne saisit plus de mot de passe, ne perd plus accès à
+  ses comptes, ne subit plus de phishing classique. Elle a délégué le problème à l'OGR et elle en est
+  soulagée. Mais cette délégation a un revers : si son CVR est compromis, elle ne peut plus rien faire
+  seule. Son accès à l'ensemble de ses services dépend d'un tiers qu'elle ne contrôle pas et dont elle
+  ne comprend pas les règles. Elle a gagné de la tranquillité au prix d'une dépendance qu'elle ne mesure
+  pas jusqu'au jour où le système la lâche.
+question: >
+  Déléguer la gestion de son identité à un système fiable, est-ce une protection raisonnable ou
+  la création d'une vulnérabilité plus grave encore ?
+tags: [delegation, dépendance-identitaire, confiance-forcée, CVR, opérateur-de-confiance]
+version: "1.0"

@@ -1,0 +1,17 @@
+id: action-tz-016
+phase: action
+slot: 4
+lever_type: auditer
+chamber: singularite-vs-standard
+reversibility: green
+scope: systemique
+title: "Exiger un audit d'équité biométrique par groupe démographique avant tout déploiement"
+body: >
+  Tout déploiement de SIGMA-ID dans un contexte impliquant plus de 500 personnes est conditionné à la
+  publication préalable d'un audit d'équité biométrique mesurant les taux de faux positifs et de faux
+  négatifs par groupe démographique (âge, genre, ethnie déclarée, pathologie chronique documentée,
+  niveau de connectivité). Cet audit est réalisé par un organisme indépendant de l'OGR et publié 30 jours
+  avant le déploiement.
+mandat_principe: "Aucun déploiement biométrique à grande échelle ne peut ignorer sa distribution inégale des erreurs — l'équité n'est pas un paramètre optionnel, c'est une condition de légitimité."
+tags: [singularité, audit, équité-biométrique, faux-positif, anomalie, hors-modèle, accessibilité, standard]
+version: "1.0"

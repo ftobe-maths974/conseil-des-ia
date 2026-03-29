@@ -1,0 +1,19 @@
+id: tension-tz-032
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Procédure d'exception au cas par cas ou catégories prédéfinies — efficacité contre dignité"
+content: >
+  Pour gérer les profils atypiques, deux approches existent. L'approche "catégories prédéfinies" :
+  l'OGR définit des groupes d'exception (personnes avec handicap, personnes âgées de plus de 75 ans,
+  etc.) avec des procédures standardisées. C'est rapide à traiter mais oblige les personnes à s'inscrire
+  dans une catégorie pour exister dans le système. L'approche "cas par cas" traite chaque situation
+  individuellement — plus équitable, mais lente, coûteuse, et dépendante de l'agent qui traite le dossier.
+  Les personnes atypiques n'entrant dans aucune catégorie sont les perdantes des deux systèmes.
+question: >
+  Entre une procédure d'exception qui impose une catégorie et une procédure au cas par cas qui impose
+  d'attendre, laquelle respecte davantage la personne qui en a besoin ?
+tags: [singularité, atypie, dérogation-biométrique, accessibilité, catégorie, hors-modèle, profil-à-risque]
+version: "1.0"

@@ -1,0 +1,19 @@
+id: tension-tz-029
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: yellow
+title: "Révéler son état de santé pour obtenir une dérogation ou garder le silence"
+content: >
+  Pour obtenir un profil biométrique "évolutif" qui tient compte de ses variations dues à la maladie,
+  une personne doit soumettre à l'OGR un certificat médical précisant son diagnostic, la nature de
+  son évolution biométrique attendue et sa durée prévisible. Certains le font — les blocages cessent.
+  D'autres refusent de communiquer leur diagnostic à une autorité administrative : leur état de santé
+  ne devrait pas conditionner leur droit d'accéder à leurs propres services. Ils continuent à subir
+  les blocages plutôt que de livrer une information médicale privée pour fonctionner normalement.
+question: >
+  Devoir révéler son état de santé à une autorité administrative pour avoir accès à ses propres
+  services, est-ce une procédure raisonnable ou une atteinte à l'intégrité personnelle ?
+tags: [singularité, altération, vie-privée-médicale, atypie, dérogation-biométrique, accessibilité, hors-modèle]
+version: "1.0"

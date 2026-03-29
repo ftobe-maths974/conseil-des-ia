@@ -1,0 +1,19 @@
+id: tension-tz-024
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: preuve-vs-simulation
+reversibility: red
+title: "Standard de preuve élevé contre la fraude ou impunité pour les violences filmées"
+content: >
+  La hausse du standard de certification des preuves a réduit les condamnations fondées sur des
+  preuves vidéo synthétiques. Mais elle a aussi rendu plus difficiles les condamnations pour
+  violences conjugales filmées, harcèlement au travail enregistré, ou bavures policières capturées
+  par un passant sur un téléphone ordinaire. Les défenseurs du standard élevé soulignent que la
+  baisse du risque de condamnation sur faux éléments est une garantie des droits de la défense.
+  Les associations de victimes soulignent que ce même standard laisse des agresseurs sans sanction.
+question: >
+  Élever le standard de preuve pour protéger les innocents d'une fausse accusation, est-ce
+  acceptable si cela protège aussi les coupables de preuves authentiques mal certifiées ?
+tags: [preuve, standard-de-preuve, liveness, violence, justice, présomption-de-synthèse, chaîne-de-garde]
+version: "1.0"

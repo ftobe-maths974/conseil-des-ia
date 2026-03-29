@@ -1,0 +1,19 @@
+id: tension-tz-007
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Un point de confiance unique — robustesse ou vulnérabilité maximale"
+content: >
+  Centraliser l'authentification sur SIGMA-ID a rendu le système cohérent, interopérable et globalement
+  plus sûr qu'un écosystème fragmenté. Les attaques sont plus faciles à détecter car les anomalies
+  ressortent sur fond uniforme. Mais cette centralisation crée aussi un point de défaillance unique :
+  une attaque réussie sur SIGMA-ID ou sur l'OGR affecte simultanément l'ensemble des services connectés.
+  La panne de l'OGR pendant 6 heures en mars dernier a paralysé 40 millions de transactions.
+data_point: "Le rapport du SGDSN 2025 sur la résilience des infrastructures numériques identifie les points de confiance uniques comme le principal vecteur de vulnérabilité systémique."
+question: >
+  Construire un seul point de confiance robuste et partagé, ou maintenir plusieurs systèmes moins
+  performants mais indépendants — quelle architecture protège mieux la société ?
+tags: [delegation, souveraineté, infrastructure, CVR, point-de-défaillance, confiance-forcée, résilience]
+version: "1.0"

@@ -1,0 +1,20 @@
+id: bascule-tz-014
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: yellow
+scope: organisationnel
+title: "Les assistantes sociales devenues techniciens SIGMA-ID"
+situation: >
+  Au centre d'action sociale de Mauriac-les-Plaines, les assistants sociaux consacrent en moyenne
+  41% de leur temps de travail à résoudre des problèmes SIGMA-ID pour leurs usagers : erreurs de
+  CVR, procédures d'exception, appels à l'OGR, accompagnement des personnes âgées. L'encadrante
+  a demandé un poste de "référent numérique SIGMA-ID" — refusé pour raisons budgétaires. Elle a
+  signalé que deux suivis sociaux urgents ont été retardés de plusieurs semaines à cause de ces
+  blocages administratifs.
+question: >
+  Quand des professionnels de l'accompagnement humain passent plus de temps à gérer un système
+  informatique qu'à accompagner les personnes, qui a perdu le contrôle de quoi ?
+tags: [métabolisme, charge-cognitive, coût-de-vérification, bureaucratie-défensive, inflation-procédurale, latence-sociale]
+version: "1.0"

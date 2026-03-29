@@ -1,0 +1,17 @@
+id: action-tz-010
+phase: action
+slot: 2
+lever_type: interdire
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Interdire qu'un score d'authenticité inférieur à 90% serve seul de motif de rejet d'une preuve"
+body: >
+  Il est interdit à toute autorité administrative, judiciaire ou institutionnelle de rejeter une preuve
+  produite par une personne physique au seul motif que son score d'authenticité SIGMA-ID est inférieur
+  à 90%. Tout rejet fondé partiellement sur un score d'authenticité doit être accompagné d'au moins
+  un élément de preuve complémentaire indépendant du score et d'une motivation écrite signée par un
+  décideur humain nommé.
+mandat_principe: "Un score d'authenticité est un indice, non une vérité — son insuffisance ne constitue pas une preuve de synthèse et ne dispense pas d'un examen humain de la preuve."
+tags: [preuve, liveness, certificat-de-présence, chaîne-de-garde, présomption-de-synthèse, score-authenticité]
+version: "1.0"

@@ -1,0 +1,19 @@
+id: bascule-tz-005
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+scope: organisationnel
+title: "Le dirigeant en zone grise et la paie bloquée"
+situation: >
+  La PME Arcoverre Menuiserie emploie 23 personnes. Depuis huit jours, le dirigeant, Bernard Lassalle,
+  a un score SIGMA-ID "zone grise" — 58% — consécutif à un incident de phishing dont il a été victime.
+  Le système de paie de l'entreprise est couplé à son CVR pour les ordres de virement. Résultat : il
+  ne peut pas valider les virements de salaire. Les 23 employés n'ont pas été payés. L'OGR dit que
+  le dossier est "en cours d'instruction". Délai estimé : 3 à 4 semaines.
+question: >
+  Quand la compromission du CVR d'un dirigeant paralyse une organisation entière, qui paie le coût
+  de l'opacité du système ?
+tags: [invisibilité, zone-grise, profil-contaminé, log-opaque, déclassement, suspicion-latente, score-authenticité]
+version: "1.0"

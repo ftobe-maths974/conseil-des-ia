@@ -1,0 +1,17 @@
+id: action-tz-003
+phase: action
+slot: 3
+lever_type: recours
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: individuel
+title: "Garantir le droit à la révocation partielle du certificat biométrique"
+body: >
+  Toute personne titulaire d'un CVR peut demander à l'OGR la révocation partielle de ses données
+  biométriques d'un ou plusieurs opérateurs tiers, sans que cette révocation n'affecte la validité
+  du CVR central. L'OGR dispose de 15 jours ouvrés pour exécuter la révocation. Le refus de révocation
+  doit être motivé par écrit et ouvre automatiquement droit à recours devant la Commission d'arbitrage
+  de l'identité numérique.
+mandat_principe: "Le titulaire d'un CVR conserve un droit de reprise partielle sur la délégation de ses données biométriques, indépendamment des contrats conclus par les opérateurs tiers avec l'OGR."
+tags: [delegation, révocation, CVR, souveraineté, dépendance-identitaire, certificat, recours]
+version: "1.0"

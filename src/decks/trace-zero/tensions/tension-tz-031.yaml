@@ -1,0 +1,19 @@
+id: tension-tz-031
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: green
+title: "Déployer SIGMA-ID pour réduire la fraude ou l'adapter aux profils atypiques"
+content: >
+  La mairie de Villefort-les-Bains veut déployer SIGMA-ID dans son service d'état civil pour réduire
+  les fraudes documentaires. Les experts techniques disent que le déploiement standard réduirait la
+  fraude de 65%. Mais ils estiment aussi que 8 à 12% des usagers du service — personnes âgées, personnes
+  avec handicap moteur ou sensoriel, personnes d'origine étrangère dont les traits faciaux sont
+  sous-représentés dans le modèle — déclencheraient des faux positifs réguliers, nécessitant une
+  procédure d'exception coûteuse. Adapter le déploiement pour eux diviserait l'efficacité anti-fraude par deux.
+question: >
+  Déployer un système efficace qui discrimine une fraction connue de la population, ou un système
+  moins efficace qui les inclut mieux — quel arbitrage une institution doit-elle assumer et devant qui ?
+tags: [singularité, faux-positif, accessibilité, équité-biométrique, standard, dérogation-biométrique, anomalie]
+version: "1.0"

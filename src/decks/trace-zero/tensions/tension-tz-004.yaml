@@ -1,0 +1,20 @@
+id: tension-tz-004
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: green
+title: "Réduire la fraude ou perdre le jugement"
+content: >
+  Depuis que la banque régionale Crédit du Plateau a intégré SIGMA-ID, les fraudes à l'ouverture de
+  compte ont chuté de 78%. Les conseillers passent moins de temps à vérifier manuellement les identités.
+  Mais les agents eux-mêmes reconnaissent qu'ils ont perdu l'habitude de lire les incohérences dans
+  un dossier — SIGMA-ID le fait à leur place. Lors de la dernière formation interne, 60% des conseillers
+  ont échoué au test de détection manuelle de fraude documentaire simple. La compétence s'est atrophiée
+  en deux ans.
+data_point: "Une étude sur l'automatisation des contrôles douaniers (2023) montrait que les agents exposés à une vérification 100% automatisée perdaient 40% de leur capacité de détection manuelle en 18 mois."
+question: >
+  Quand un outil automatisé améliore les résultats mais affaiblit les compétences humaines de repli,
+  quel niveau de dépendance une organisation doit-elle accepter ?
+tags: [delegation, dépendance-identitaire, compétence-humaine, CVR, confiance-forcée, opérateur-de-confiance]
+version: "1.0"

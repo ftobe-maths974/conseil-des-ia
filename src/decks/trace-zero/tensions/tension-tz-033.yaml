@@ -1,0 +1,19 @@
+id: tension-tz-033
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: singularite-vs-standard
+reversibility: red
+title: "Former les agents à identifier les faux positifs ou déléguer au système"
+content: >
+  La caisse d'allocations familiales de la Haute-Marne doit choisir entre deux politiques. Option A :
+  former ses agents à identifier et traiter manuellement les faux positifs SIGMA-ID — ce qui coûte
+  du temps de formation et introduit de la variabilité humaine dans les décisions. Option B : déléguer
+  entièrement à SIGMA-ID et ne traiter manuellement que les recours formels déposés par les usagers —
+  ce qui est plus homogène mais laisse les personnes qui ne savent pas qu'elles peuvent faire un recours
+  sans protection. Les allocataires les plus vulnérables sont souvent ceux qui ne font pas de recours.
+question: >
+  Former des agents à corriger les erreurs d'un système ou laisser le système décider en comptant
+  sur les usagers pour détecter et signaler les erreurs — qui protège mieux les plus vulnérables ?
+tags: [singularité, faux-positif, compétence-humaine, accessibilité, anomalie, dérogation-biométrique]
+version: "1.0"

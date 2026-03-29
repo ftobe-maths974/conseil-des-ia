@@ -1,0 +1,19 @@
+id: tension-tz-037
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "La friction comme protection ou comme harcèlement quotidien"
+content: >
+  Chaque fois que Sonia doit s'authentifier pour accéder à un service, elle sait rationnellement que
+  cette friction la protège — une vérification supplémentaire, c'est une fraude potentielle de plus
+  détectée. Mais après la cinquième vérification de la journée, cette rationalité s'efface devant
+  l'épuisement. Elle se surprend à choisir de ne pas accéder à un service dont elle a besoin parce
+  que l'effort d'authentification semble disproportionné au bénéfice immédiat. Elle commence à
+  se demander si la protection vaut vraiment ce coût quotidien sur sa capacité à agir librement.
+question: >
+  À quel moment la friction d'authentification dépasse-t-elle le seuil où elle protège réellement,
+  et commence à restreindre la liberté d'agir des personnes protégées ?
+tags: [métabolisme, friction, fatigue-authentification, charge-cognitive, latence-sociale, coût-de-vérification]
+version: "1.0"

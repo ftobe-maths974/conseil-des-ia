@@ -1,0 +1,19 @@
+id: bascule-tz-003
+phase: bascule
+slot: 3
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "L'obligation sans filet de secours"
+situation: >
+  Par décret, SIGMA-ID devient obligatoire pour accéder à l'ensemble des services de l'administration
+  publique. Le décret ne prévoit aucune procédure de secours documentée pour les personnes dont le CVR
+  est en erreur, en vérification ou invalide. Le gouvernement a annoncé que les "procédures alternatives
+  seront définies ultérieurement". Six mois après le décret, aucune procédure alternative n'a été publiée.
+  Environ 2,3% de la population active se retrouve sans accès à un ou plusieurs services publics.
+question: >
+  Rendre obligatoire un système d'authentification sans prévoir les procédures de secours, est-ce une
+  décision de sécurité ou une exclusion administrative déguisée ?
+tags: [delegation, CVR, obligation, souveraineté, exclusion, dépendance-identitaire, délégation-du-réel]
+version: "1.0"

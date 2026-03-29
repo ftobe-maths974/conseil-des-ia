@@ -1,0 +1,19 @@
+id: tension-tz-015
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+title: "Notifier immédiatement toute suspicion ou attendre confirmation"
+content: >
+  Le protocole OGR prévoit deux options pour les institutions : notification immédiate dès qu'une
+  anomalie est détectée (avant confirmation), ou notification différée après vérification (48 à 72h).
+  La notification immédiate prévient plus vite les personnes concernées — mais génère 34% de faux
+  positifs anxiogènes. La notification différée réduit l'anxiété inutile — mais laisse des personnes
+  exposées pendant 2 à 3 jours sans le savoir. Un directeur d'hôpital ayant choisi la notification
+  immédiate a reçu 12 plaintes en deux mois pour "notifications angoissantes injustifiées".
+question: >
+  Entre une alerte qui inquiète inutilement et un silence qui laisse dans le danger, comment
+  une organisation choisit-elle le niveau de notification qui respecte les personnes ?
+tags: [invisibilité, notification, faux-positif, suspicion-latente, zone-grise, déclassement, score-authenticité]
+version: "1.0"

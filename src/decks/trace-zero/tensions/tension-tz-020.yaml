@@ -1,0 +1,19 @@
+id: tension-tz-020
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "Certifier ses propres preuves ou rester vulnérable à la contestation"
+content: >
+  Pour protéger ses propres vidéos, photos et messages d'une contestation future, une personne peut
+  demander à l'OGR de les certifier en temps réel — ce qui leur donne un score d'authenticité élevé
+  et les rend difficilement contestables. Mais cette certification implique de soumettre ses documents
+  personnels à l'infrastructure OGR, qui conserve une copie de la chaîne d'attestation. Certifier ses
+  preuves, c'est les protéger contre la contestation — mais aussi les inscrire dans un registre auquel
+  des tiers pourraient accéder sur injonction judiciaire ou en cas de faille.
+question: >
+  Protéger ses propres preuves en les confiant à l'infrastructure de certification, est-ce se donner
+  les moyens de se défendre ou se rendre plus vulnérable sur un autre plan ?
+tags: [preuve, attestation, consentement, chaîne-de-garde, certificat-de-présence, vie-privée, liveness]
+version: "1.0"

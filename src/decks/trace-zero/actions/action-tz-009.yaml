@@ -1,0 +1,16 @@
+id: action-tz-009
+phase: action
+slot: 1
+lever_type: conditionner
+chamber: preuve-vs-simulation
+reversibility: red
+scope: systemique
+title: "Imposer une présomption de légitimité de la preuve vivante en l'absence de certification contraire"
+body: >
+  En l'absence de certification SIGMA-ID établissant qu'une preuve est synthétique avec une probabilité
+  supérieure à 95%, toute preuve produite par une personne physique dans le cadre d'une procédure
+  administrative ou judiciaire bénéficie d'une présomption de légitimité. La charge de la preuve de
+  la synthèse incombe à la partie qui conteste, non à la personne qui produit la preuve.
+mandat_principe: "La présomption d'authenticité est le principe, la présomption de synthèse est l'exception — aucune procédure ne peut inverser ce rapport sans décision humaine motivée."
+tags: [preuve, liveness, présomption-de-synthèse, attestation, charge-de-la-preuve, substrat-vivant]
+version: "1.0"

@@ -1,0 +1,17 @@
+id: action-tz-011
+phase: action
+slot: 3
+lever_type: recours
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: individuel
+title: "Garantir une procédure de contre-expertise indépendante pour toute preuve contestée"
+body: >
+  Toute personne dont une preuve est rejetée ou suspendue sur la base d'un score SIGMA-ID peut demander
+  une contre-expertise menée par un laboratoire indépendant agréé OGR, dans un délai maximum de 10 jours
+  ouvrés pour les procédures urgentes (pénal, médical, emploi). L'OGR prend en charge les frais de
+  contre-expertise si le résultat confirme l'authenticité de la preuve. La contre-expertise est opposable
+  au score SIGMA-ID initial.
+mandat_principe: "Préserver la valeur probante de toute expression authentique non conforme au standard biométrique dominant, sous réserve d'une procédure de validation alternative."
+tags: [preuve, contre-expertise, attestation, liveness, provenance, chaîne-de-garde, certificat-de-présence]
+version: "1.0"

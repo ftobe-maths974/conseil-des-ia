@@ -1,0 +1,19 @@
+id: bascule-tz-001
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: green
+scope: individuel
+title: "Le compte gelé et la raison inconnue"
+situation: >
+  Théo, 34 ans, technicien de maintenance, découvre un matin qu'il ne peut plus accéder à son compte
+  bancaire en ligne. Un message indique "accès suspendu — CVR en cours de vérification". Il n'a rien
+  fait d'inhabituel. Il n'a reçu aucun courriel, aucun SMS, aucune lettre. Sa banque lui dit de
+  contacter l'OGR. L'OGR lui dit de contacter sa banque. Il a 47 euros en liquide et un loyer à payer
+  dans trois jours.
+question: >
+  Quand une institution délègue à un système automatisé le droit de bloquer l'accès à l'argent d'une
+  personne, qui est responsable quand personne ne répond ?
+tags: [delegation, CVR, responsabilité, verrou-de-présence, dépendance-identitaire, confiance-forcée]
+version: "1.0"

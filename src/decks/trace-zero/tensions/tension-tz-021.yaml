@@ -1,0 +1,20 @@
+id: tension-tz-021
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: red
+title: "Tracer sa propre vie ou alimenter la surveillance du réel"
+content: >
+  Pour être en mesure de prouver qui l'on est et ce que l'on a fait — en cas d'usurpation, de litige,
+  de contentieux — il est de plus en plus conseillé de maintenir une "trace de présence vérifiable" :
+  enregistrer ses appels, certifier ses photos, conserver ses logs de connexion. Cette pratique protège
+  réellement contre les usurpations. Mais elle signifie aussi produire en permanence des données de
+  présence qui alimentent l'infrastructure même qui rend la vie privée de plus en plus difficile.
+  Se protéger du faux en certifiant le vrai, c'est aussi participer activement à construire le réel
+  comme quelque chose d'administré.
+question: >
+  Tracer sa propre existence pour la protéger, est-ce l'exercice d'une souveraineté personnelle
+  ou la contribution volontaire à une infrastructure de surveillance totale ?
+tags: [preuve, substrat-vivant, trace-non-rejouable, consentement, vie-privée, certificat-de-présence]
+version: "1.0"

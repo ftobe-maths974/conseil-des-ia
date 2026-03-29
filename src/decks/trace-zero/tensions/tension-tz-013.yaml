@@ -1,0 +1,19 @@
+id: tension-tz-013
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Transparence totale des critères versus risque d'exploitation"
+content: >
+  L'OGR pourrait publier en open source l'intégralité des critères de déclassement utilisés par SIGMA-ID.
+  Cela permettrait aux personnes de comprendre pourquoi elles sont sanctionnées et aux chercheurs de
+  détecter les biais. Mais les experts en sécurité avertissent que cette transparence totale fournirait
+  aussi aux acteurs de SYNTH-MEMEX une carte précise des angles morts du système. La transparence qui
+  permet à Camille de comprendre son déclassement est la même qui aide SYNTH-MEMEX à l'éviter.
+data_point: "La publication des règles de détection des fraudes bancaires en 2019 par un prestataire européen a été suivie d'une hausse de 23% des fraudes ciblant précisément les seuils publiés (rapport BRI 2021)."
+question: >
+  Rendre les critères de décision d'un système de sécurité compréhensibles pour les victimes,
+  est-ce compatible avec les rendre inopérants pour les fraudeurs ?
+tags: [invisibilité, transparence, log-opaque, score-authenticité, arbitrage, zone-grise]
+version: "1.0"

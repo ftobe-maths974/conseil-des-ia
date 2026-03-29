@@ -1,0 +1,19 @@
+id: tension-tz-025
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: green
+title: "Tout certifier pour restaurer la confiance ou normaliser la suspicion permanente"
+content: >
+  L'OGR propose un programme "Réel Garanti" : toute communication, document ou preuve soumis volontairement
+  reçoit une certification temps réel et un sceau visible par les destinataires. Les promoteurs du programme
+  affirment que cela restaure la confiance en rendant le vrai visiblement vrai. Les critiques soulèvent
+  un problème symétrique : si tout ce qui est certifié est présumé vrai, tout ce qui n'est pas certifié
+  devient automatiquement suspect. La certification obligatoire implicite finit par équivaloir à une
+  surveillance totale des échanges.
+question: >
+  Certifier en masse le vrai pour le distinguer du faux, est-ce restaurer la confiance ou installer
+  la suspicion comme état normal de la communication humaine ?
+tags: [preuve, attestation, liveness, présomption-de-synthèse, confiance, substrat-vivant, surveillance]
+version: "1.0"

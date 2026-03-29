@@ -1,0 +1,19 @@
+id: tension-tz-005
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: yellow
+title: "Déléguer pour gagner du temps, assumer les erreurs du système"
+content: >
+  La mutuelle Solidar-Santé a délégué toutes ses vérifications d'identité à SIGMA-ID pour réduire
+  ses délais de traitement. Les délais ont effectivement baissé de 40%. Mais quand SIGMA-ID commet
+  une erreur — refus de remboursement à un assuré légitime, blocage d'un dossier d'urgence — c'est
+  la mutuelle que l'assuré appelle, que la presse interpelle et que le médiateur sanctionne. Le
+  contrat OGR précise que "la responsabilité opérationnelle reste à l'entité déployante". Solidar-Santé
+  a délégué la décision mais pas la responsabilité.
+question: >
+  Peut-on déléguer une décision à un système tout en assumant la responsabilité de ses erreurs,
+  ou cette délégation crée-t-elle une fiction de responsabilité ?
+tags: [delegation, responsabilité, CVR, opérateur-de-confiance, validation-tierce, confiance-forcée]
+version: "1.0"

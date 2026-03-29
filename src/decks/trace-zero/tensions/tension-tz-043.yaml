@@ -1,0 +1,19 @@
+id: tension-tz-043
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "Mesurer le coût de la vérification pour décider de son niveau ou le normaliser comme inévitable"
+content: >
+  Deux philosophies de gouvernance de SIGMA-ID s'affrontent. La première : mesurer régulièrement et
+  publiquement le coût total de la vérification — en euros, en heures, en abandons de démarches, en
+  accès aux soins retardés — et utiliser ces mesures pour décider du niveau de friction acceptable.
+  La seconde : considérer que le coût de la vérification est le prix de la sécurité et ne pas le
+  mesurer comme une variable politique — le mesurer crée l'illusion qu'on pourrait s'en passer.
+  La première approche rend visible ce qui coûte. La seconde préserve l'idée que protéger n'a pas de prix.
+question: >
+  Mettre un chiffre sur le coût humain d'un système de sécurité, est-ce le moyen de mieux le gouverner
+  ou le risque de rendre politiquement contestable quelque chose qui devrait être indiscutable ?
+tags: [métabolisme, coût-de-vérification, mesure, inflation-procédurale, charge-cognitive, gouvernance]
+version: "1.0"

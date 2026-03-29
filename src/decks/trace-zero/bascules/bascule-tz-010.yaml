@@ -1,0 +1,19 @@
+id: bascule-tz-010
+phase: bascule
+slot: 1
+slot_theme: individu
+chamber: singularite-vs-standard
+reversibility: green
+scope: individuel
+title: "La voix perdue après la chimio"
+situation: >
+  David, 48 ans, directeur commercial, a suivi une chimiothérapie lourde il y a six mois. Sa voix
+  a changé — plus rauque, avec des variations de timbre inhabituelles. SIGMA-ID ne le reconnaît
+  plus via la biométrie vocale. Ses comptes professionnels liés à cette biométrie sont verrouillés.
+  Pour débloquer la situation, il doit fournir un "justificatif médical de modification vocale" à
+  l'OGR — un document qui n'existe pas comme formulaire standard dans aucun hôpital ou cabinet.
+question: >
+  Quand un système d'authentification ne reconnaît plus quelqu'un parce qu'il a survécu à une
+  maladie, qui a tort — l'homme ou le modèle ?
+tags: [singularité, atypie, altération, faux-positif, hors-modèle, présence-non-conforme, accessibilité]
+version: "1.0"

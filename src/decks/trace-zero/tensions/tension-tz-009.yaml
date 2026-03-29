@@ -1,0 +1,19 @@
+id: tension-tz-009
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "Infrastructure privée rapide ou service public souverain mais lent"
+content: >
+  Lors de l'appel d'offres OGR, deux options étaient sur la table : un consortium privé promettant
+  un déploiement en 18 mois avec une infrastructure technologiquement avancée, ou un opérateur public
+  en 48 mois avec une infrastructure moins performante mais entièrement sous contrôle de l'État. Le
+  consortium privé a été retenu pour des raisons de délai. Le contrat prévoit un accès aux données
+  agrégées de comportement pour "amélioration du service". Quatre ans plus tard, ces données agrégées
+  alimentent aussi des produits commerciaux de l'opérateur privé.
+question: >
+  Confier la gestion de l'identité nationale à un opérateur privé efficace, est-ce un choix pragmatique
+  ou le début d'une perte de contrôle sur l'infrastructure la plus sensible de la démocratie ?
+tags: [delegation, souveraineté, service-public, délégation-du-réel, CVR, opérateur-de-confiance, confiance-forcée]
+version: "1.0"

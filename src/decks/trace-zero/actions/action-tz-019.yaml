@@ -1,0 +1,17 @@
+id: action-tz-019
+phase: action
+slot: 3
+lever_type: interdire
+chamber: metabolisme-vs-progres
+reversibility: red
+scope: systemique
+title: "Interdire la conservation des données biométriques comportementales au-delà de 30 jours"
+body: >
+  Il est interdit à l'OGR et à tout opérateur délégué de conserver les données de biométrie comportementale
+  (rythme de frappe, trajectoire oculaire, latence de réponse, démarche, signature vocale contextuelle)
+  au-delà de 30 jours calendaires à compter de leur collecte, sauf consentement explicite renouvelable
+  annuellement de la personne concernée ou injonction judiciaire nominative. Les données comportementales
+  ne peuvent être agrégées en profil permanent sans ce consentement.
+mandat_principe: "Les données comportementales ne sont pas des données d'identité permanentes — leur conservation prolongée constitue un profitage de l'existence, non une authentification."
+tags: [métabolisme, données-comportementales, conservation, vie-privée, friction, bureaucratie-défensive, dépendance]
+version: "1.0"

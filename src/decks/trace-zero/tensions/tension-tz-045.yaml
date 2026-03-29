@@ -1,0 +1,19 @@
+id: tension-tz-045
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Accepter l'inflation procédurale permanente ou simplifier au risque d'ouvrir des brèches"
+content: >
+  Le bilan annuel de l'OGR montre une tendance constante : chaque incident majeur de fraude déclenche
+  l'ajout d'une couche de vérification supplémentaire. En cinq ans, le nombre d'étapes d'authentification
+  pour accéder à un service public sensible est passé de 2 à 7. Chaque couche a sa justification propre.
+  Ensemble, elles produisent une inflation procédurale qui fait baisser les taux de complétion des
+  démarches et augmenter les abandons. Simplifier signifie supprimer des couches utiles. Ne pas
+  simplifier signifie continuer à perdre les usagers les moins équipés numériquement.
+question: >
+  Face à une accumulation de procédures de sécurité chacune justifiée individuellement mais
+  insoutenable collectivement, comment une société tranche-t-elle entre sécurité et habitabilité ?
+tags: [métabolisme, inflation-procédurale, friction, charge-cognitive, bureaucratie-défensive, simplification, latence-sociale]
+version: "1.0"

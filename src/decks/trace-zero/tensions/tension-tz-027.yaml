@@ -1,0 +1,19 @@
+id: tension-tz-027
+phase: tension
+slot: 9
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: red
+title: "Abolir la valeur probante de l'image ou la maintenir au risque d'y croire à tort"
+content: >
+  Une proposition de réforme circule dans les milieux juridiques : supprimer entièrement la valeur
+  probante autonome des enregistrements vidéo et audio en dehors d'une chaîne de certification OGR
+  stricte. Résultat attendu : plus aucune condamnation sur faux deepfake. Résultat redouté : plus
+  aucune condamnation sur video authentique sans certification. Des juristes estiment que c'est
+  inévitable. D'autres estiment que c'est une capitulation — que la société ne peut pas fonctionner
+  en décidant que l'image ne prouve plus rien.
+question: >
+  Quand on ne peut plus distinguer le vrai du faux dans une image, vaut-il mieux abolir sa valeur
+  probante ou maintenir un régime de preuve qui risque d'être trompé ?
+tags: [preuve, valeur-probante, présomption-de-synthèse, liveness, attestation, justice, confiance]
+version: "1.0"

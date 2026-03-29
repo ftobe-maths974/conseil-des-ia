@@ -1,0 +1,17 @@
+id: action-tz-012
+phase: action
+slot: 4
+lever_type: conditionner
+chamber: preuve-vs-simulation
+reversibility: yellow
+scope: organisationnel
+title: "Conditionner la recevabilité d'une preuve à la transparence de la chaîne d'attestation"
+body: >
+  Toute entité souhaitant qu'une preuve numérique soit certifiée par SIGMA-ID doit soumettre avec
+  la preuve une chaîne d'attestation documentant les conditions de captation, de transmission et
+  de conservation depuis l'origine. L'absence de chaîne d'attestation complète ne vaut pas présomption
+  de synthèse, mais rend la certification SIGMA-ID inopérante — la preuve est alors évaluée selon
+  les règles probatoires de droit commun.
+mandat_principe: "La transparence de la chaîne d'attestation est une condition de la certification, non de l'authenticité — une preuve sans chaîne reste une preuve, elle perd seulement son sceau SIGMA-ID."
+tags: [preuve, provenance, chaîne-de-garde, attestation, consentement, trace-non-rejouable]
+version: "1.0"

@@ -1,0 +1,19 @@
+id: tension-tz-044
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "Infrastructure centralisée efficace ou infrastructure distribuée résiliente"
+content: >
+  Le modèle actuel de SIGMA-ID centralise l'ensemble du traitement dans trois datacenters nationaux.
+  C'est efficace en conditions normales, mais fragile : la panne de mars dernier a paralysé 40 millions
+  de transactions en 6 heures. Une architecture distribuée — traitement réparti entre des noeuds
+  régionaux et locaux — serait plus résiliente aux pannes et aux attaques, mais 30% plus coûteuse à
+  opérer et plus difficile à auditer. Dans un monde où SYNTH-MEMEX cherche activement les points de
+  défaillance, la résilience a un prix que tout le monde n'est pas prêt à payer.
+question: >
+  Entre une infrastructure centralisée efficace en temps normal et une infrastructure distribuée
+  résistante aux crises, quel modèle correspond le mieux à la nature d'un service critique ?
+tags: [métabolisme, infrastructure, centralisation, résilience, coût-de-vérification, dépendance, point-de-défaillance]
+version: "1.0"

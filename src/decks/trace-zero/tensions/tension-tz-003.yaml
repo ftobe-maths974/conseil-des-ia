@@ -1,0 +1,19 @@
+id: tension-tz-003
+phase: tension
+slot: 3
+slot_theme: individu
+chamber: delegation-vs-souverainete
+reversibility: red
+title: "Accepter la surveillance biométrique totale pour protéger les autres"
+content: >
+  Le CVR obligatoire a fait reculer les fraudes à l'identité dans les hôpitaux, les banques et les
+  services sociaux. Les personnes les plus vulnérables — personnes âgées ciblées par le vishing, enfants
+  dont l'identité était usurpée — bénéficient d'une protection réelle. Mais cette protection repose sur
+  la collecte permanente et universelle de données biométriques comportementales pour tout le monde.
+  Ceux qui refusent cette collecte affaiblissent le système collectif. Celui qui proteste le plus fort
+  contre la surveillance est peut-être aussi celui dont la résistance facilite le travail de SYNTH-MEMEX.
+question: >
+  Peut-on légitimement refuser une surveillance biométrique totale quand cette surveillance protège
+  des personnes plus vulnérables que soi ?
+tags: [delegation, souveraineté, CVR, surveillance, confiance-forcée, solidarité, dépendance-identitaire]
+version: "1.0"

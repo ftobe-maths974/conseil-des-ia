@@ -1,0 +1,48 @@
+id: scenario-tz-sin
+phase: scenario
+chamber: singularite-vs-standard
+difficulty: moyen
+title: "Corps hors-modèle — quand la maladie devient une anomalie biométrique"
+context: >
+  Sophie Arnaud, 41 ans, chercheuse en biologie végétale à l'université de Clermont-Métropole, est atteinte
+  de sclérose en plaques depuis trois ans. Au cours des derniers mois, ses tremblements se sont aggravés,
+  modifiant sa biométrie comportementale : son rythme de frappe est devenu irrégulier, sa trajectoire oculaire
+  a changé, sa signature vocale présente des variations inhabituelles. SIGMA-ID génère des alertes "anomalie
+  comportementale — présence non conforme" à chaque connexion. Son accès à sa messagerie professionnelle,
+  à ses données de recherche sur le serveur universitaire et à l'application de gestion de ses frais est
+  suspendu deux à trois fois par semaine. Chaque déblocage nécessite une intervention manuelle du service
+  informatique — mais celui-ci n'a pas de procédure d'exception documentée et traite les cas dans l'ordre
+  d'arrivée, délai moyen 48 heures. Sophie doit soumettre un dossier de renouvellement de financement dans
+  dix jours. Votre groupe reçoit le mandat suivant de la chambre Preuve : "Préserver la valeur probante de
+  toute expression authentique non conforme au standard biométrique dominant, sous réserve d'une procédure
+  de validation alternative."
+roles_briefing:
+  decideur: >
+    Vous êtes le directeur du service informatique de l'université. Vous avez le pouvoir de créer un profil
+    d'exception pour Sophie, mais cela n'a jamais été fait et votre équipe n'a pas de procédure. Vous avez
+    peur qu'un profil d'exception soit exploité par quelqu'un qui usurpe l'identité de Sophie en imitant ses
+    variations. Votre ligne rouge : ne pas créer un contournement qui affaiblit la sécurité globale du système.
+    Votre angle mort : l'OGR propose un module de "profil biométrique évolutif" pour les pathologies
+    progressives — vous ne l'avez jamais activé car personne ne vous en a parlé.
+  technicien: >
+    Vous êtes l'ingénieure SIGMA-ID chargée des déploiements universitaires. Vous connaissez le module de
+    profil évolutif — vous ne l'avez jamais déployé car il nécessite un certificat médical et une validation
+    OGR nationale, délai habituel 3 à 6 semaines. Vous pourriez lancer la procédure maintenant, mais cela
+    ne résout pas le problème immédiat de Sophie. Votre ligne rouge : ne pas modifier manuellement le seuil
+    d'alerte sans validation — cela invaliderait les logs d'audit. Votre angle mort : il est possible de
+    déclencher une procédure d'urgence médicale qui accélère le délai à 72 heures.
+  affecte: >
+    Vous êtes Sophie Arnaud. Vous êtes épuisée. Prouver que vos propres mains, votre propre voix, votre propre
+    regard sont bien les vôtres est devenu une tâche quotidienne humiliante. Vous n'avez pas envie de révéler
+    votre diagnostic à votre institution pour obtenir un formulaire administratif. Votre ligne rouge : ne pas
+    rendre votre état de santé une condition d'accès à votre propre travail. Votre angle mort : votre médecin
+    spécialiste peut certifier l'évolution neurologique en une heure — vous ne lui avez pas encore demandé.
+  contre_pouvoir: >
+    Vous êtes la déléguée aux situations de handicap de l'université. Vous avez déjà accompagné cinq cas
+    similaires cette année — mais toujours de manière informelle, par arrangement avec les informaticiens.
+    Il n'existe aucune politique institutionnelle écrite sur les exceptions biométriques liées au handicap.
+    Votre ligne rouge : faire de ce cas le point de départ d'une politique formelle, pas d'un arrangement
+    de couloir supplémentaire. Votre angle mort : vous ignorez que deux autres universités ont déjà une
+    politique écrite que vous pourriez adapter en 48 heures.
+tags: [singularité, atypie, faux-positif, profil-à-risque, accessibilité, altération, hors-modèle, présence-non-conforme, dérogation-biométrique]
+version: "1.0"

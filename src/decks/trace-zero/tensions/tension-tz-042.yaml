@@ -1,0 +1,19 @@
+id: tension-tz-042
+phase: tension
+slot: 6
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: red
+title: "Investir dans SIGMA-ID pour réduire la fraude ou admettre que le coût dépasse les bénéfices"
+content: >
+  Le directeur financier d'un grand groupe d'assurances a commandé une analyse comparative : le coût
+  total de l'intégration SIGMA-ID (licence, infrastructure, formation, recours, procédures d'exception)
+  représente 2,3 fois le montant des fraudes évitées grâce au système sur la même période. Sortir du
+  système aurait un coût de sortie de contrat élevé. Rester dedans est financièrement irrationnel mais
+  politiquement difficile à assumer — l'entreprise a communiqué publiquement sur la sécurité SIGMA-ID
+  depuis deux ans. Le directeur est coincé entre la rationalité économique et la cohérence institutionnelle.
+question: >
+  Quand le coût documenté d'un dispositif de sécurité dépasse ses bénéfices mesurés, comment
+  une organisation sort-elle d'un engagement qu'elle a publiquement valorisé ?
+tags: [métabolisme, coût-de-vérification, bénéfice-documenté, dépendance, inflation-procédurale, bureaucratie-défensive]
+version: "1.0"

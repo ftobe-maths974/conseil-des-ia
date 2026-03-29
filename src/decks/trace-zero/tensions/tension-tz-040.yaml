@@ -1,0 +1,19 @@
+id: tension-tz-040
+phase: tension
+slot: 4
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: green
+title: "Réduire les frictions pour l'expérience utilisateur ou maintenir des seuils de sécurité élevés"
+content: >
+  Le directeur de l'expérience client de la Mutuelle Interrégionale du Centre a des données claires :
+  chaque vérification d'authentification supplémentaire dans le parcours de remboursement réduit de 8%
+  le taux de complétion de la demande. Simplifier les frictions augmenterait les remboursements traités
+  de 30%. Mais le département sécurité estime que réduire les frictions dans les accès aux données
+  de santé augmenterait le risque de fraude documentaire de 15 à 20%. La direction doit choisir entre
+  l'accessibilité réelle de son service et son niveau de protection contre la fraude.
+question: >
+  Entre un service plus accessible mais plus vulnérable à la fraude et un service plus sécurisé mais
+  que les usagers abandonnent en cours de route, quelle erreur est la moins grave ?
+tags: [métabolisme, friction, coût-de-vérification, sécurité, expérience-utilisateur, latence-sociale]
+version: "1.0"

@@ -1,0 +1,17 @@
+id: action-tz-008
+phase: action
+slot: 4
+lever_type: recours
+chamber: invisibilite-vs-arbitrage
+reversibility: red
+scope: individuel
+title: "Garantir une voie de recours humaine opposable dans les 72 heures pour tout déclassement"
+body: >
+  Toute personne dont le CVR a été déclassé, suspendu ou placé en Contrôle Renforcé dispose d'un droit
+  de recours auprès d'un agent OGR humain nommé, joignable dans les 72 heures suivant la notification
+  de la mesure, via un canal de contact garanti sans exigence de score d'authenticité minimal. L'agent
+  humain a le pouvoir de lever provisoirement la mesure dans l'attente d'un examen complet. Tout refus
+  de lever la mesure provisoire doit être motivé par écrit.
+mandat_principe: "Interdire que l'opacité d'un calcul d'authenticité tienne lieu de preuve contre la personne évaluée — la charge de la preuve ne peut reposer sur le seul score."
+tags: [invisibilité, recours-fantôme, zone-grise, déclassement, agent-humain, délai, suspicion-latente, score-authenticité]
+version: "1.0"

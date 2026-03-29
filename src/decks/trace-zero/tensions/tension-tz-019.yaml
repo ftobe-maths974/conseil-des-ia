@@ -1,0 +1,19 @@
+id: tension-tz-019
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: preuve-vs-simulation
+reversibility: green
+title: "Douter d'un appel de proche ou lui faire confiance"
+content: >
+  Depuis que le vishing émotionnel de SYNTH-MEMEX s'est répandu, beaucoup de gens vivent avec un
+  doute de fond sur les appels qu'ils reçoivent de leurs proches. Ignorer ce doute expose à la fraude.
+  Mais cultiver ce doute transforme chaque appel en interrogatoire implicite. Des enfants rapportent
+  que leurs parents vérifient maintenant leur identité par des "questions secrètes" avant de répondre.
+  Des personnes âgées racontent avoir refusé des appels de leurs médecins parce que la voix "paraissait
+  trop nette". La prudence raisonnable et la paranoïa sociale se confondent.
+question: >
+  À quel moment la méfiance légitime envers une voix potentiellement synthétique devient-elle un
+  dommage collectif plus grand que la fraude elle-même ?
+tags: [preuve, liveness, vishing, présomption-de-synthèse, substrat-vivant, confiance, trace-non-rejouable]
+version: "1.0"

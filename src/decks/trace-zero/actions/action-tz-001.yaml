@@ -1,0 +1,16 @@
+id: action-tz-001
+phase: action
+slot: 1
+lever_type: interdire
+chamber: delegation-vs-souverainete
+reversibility: red
+scope: systemique
+title: "Interdire toute suspension de CVR sans validation humaine préalable"
+body: >
+  Il est interdit à l'OGR et à tout opérateur délégué de suspendre, rétrograder ou invalider un Certificat
+  de Vie Réelle sans qu'un agent humain habilité ait explicitement validé la décision. Toute suspension
+  automatisée de SIGMA-ID est nulle de plein droit jusqu'à confirmation humaine. L'agent validant est
+  nominalement responsable et identifiable dans le log de décision.
+mandat_principe: "Toute décision de suspension ou de révocation d'un CVR engage la responsabilité nominale d'un agent humain identifié, dont le nom et la qualité sont accessibles à la personne concernée sur simple demande."
+tags: [delegation, CVR, validation-humaine, responsabilité, verrou-de-présence, dépendance-identitaire]
+version: "1.0"

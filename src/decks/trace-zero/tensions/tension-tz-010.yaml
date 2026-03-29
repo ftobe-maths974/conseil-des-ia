@@ -1,0 +1,19 @@
+id: tension-tz-010
+phase: tension
+slot: 1
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: green
+title: "Être alerté sans explication ou ignorer qu'on est observé"
+content: >
+  Deux régimes coexistent dans l'OGR. Le régime "notification active" : la personne reçoit une alerte
+  chaque fois que son score varie significativement — ce qui génère de l'anxiété et des questions sans
+  réponse. Le régime "surveillance silencieuse" : aucune notification, mais la personne ne sait pas
+  qu'elle est peut-être en zone grise depuis des semaines. Dans le premier cas, elle est informée mais
+  perturbée. Dans le second, elle est ignorante mais tranquille — jusqu'à ce qu'un refus de service
+  la prévienne que quelque chose ne va pas.
+question: >
+  Vaut-il mieux être notifié d'une suspicion sans pouvoir l'expliquer, ou ne pas savoir qu'on est
+  suspect jusqu'à ce que les conséquences arrivent ?
+tags: [invisibilité, notification, score-authenticité, zone-grise, défi-silencieux, suspicion-latente]
+version: "1.0"

@@ -1,0 +1,44 @@
+id: scenario-tz-inv
+phase: scenario
+chamber: invisibilite-vs-arbitrage
+difficulty: moyen
+title: "Trois semaines dans la zone grise — une enseignante sans accès ni explication"
+context: >
+  Camille Ferrante, 38 ans, enseignante de lycée à Villefranche-sur-Allier, a vu son CVR basculer en statut
+  "Contrôle Renforcé" il y a vingt-deux jours. Déclencheur probable : son identité a été utilisée dans une
+  arnaque au faux ordre de virement ciblant son lycée. Depuis, elle ne peut plus accéder à son compte bancaire,
+  à sa messagerie professionnelle OGR-liée, ni valider ses frais de déplacement mensuels. Elle n'a reçu aucune
+  notification de l'OGR, aucun courrier, aucun appel. Son proviseur, après deux semaines de tolérance, l'a mise
+  en demeure de régulariser sa situation sous peine de placement en absence non justifiée. Elle a appelé le
+  numéro OGR huit fois — cinq fois sans réponse, trois fois dirigée vers un formulaire en ligne qui lui renvoie
+  un code d'erreur. Elle ne sait pas ce qu'elle doit prouver, ni à qui. Votre groupe reçoit le mandat suivant
+  de la chambre Délégation : "Garantir que toute décision de SIGMA-ID affectant les droits d'une personne soit
+  accompagnée d'une explication humainement compréhensible et d'un interlocuteur identifié dans un délai de
+  72 heures."
+roles_briefing:
+  decideur: >
+    Vous êtes le responsable régional de l'OGR. Vous avez accès au dossier de Camille Ferrante. Le log indique
+    "score d'authenticité : 61% — suspicion de compromission de compte". Vous pourriez lever le Contrôle Renforcé
+    manuellement, mais la procédure interne exige une validation par le service fraude national, délai moyen
+    15 jours. Votre ligne rouge : ne pas créer un précédent de levée manuelle sans validation — cela pourrait
+    être exploité. Votre angle mort : vous ignorez que cette femme risque de perdre son poste dans 48 heures.
+  technicien: >
+    Vous êtes l'analyste SIGMA-ID qui a accès aux logs détaillés. Vous voyez que le déclenchement du Contrôle
+    Renforcé est dû à une corrélation entre l'IP de connexion de Camille et une IP blacklistée dans une affaire
+    de phishing — corrélation probablement fortuite. Vous pourriez rédiger un rapport d'anomalie en 2 heures,
+    mais cela ne fait pas partie de votre périmètre officiel. Votre ligne rouge : ne pas rédiger de rapport
+    non sollicité qui pourrait être utilisé contre vous si la corrélation s'avère fondée. Votre angle mort :
+    vous n'avez jamais vu le visage des personnes que vos logs concernent.
+  affecte: >
+    Vous êtes Camille Ferrante. Vous avez peur. Vous ne comprenez pas ce que vous avez fait. Vous avez l'impression
+    d'être suspecte de quelque chose mais personne ne vous dit quoi. Vous êtes épuisée de prouver que vous existez.
+    Votre ligne rouge : obtenir une explication écrite et un interlocuteur nommé avant de signer quoi que ce soit.
+    Votre angle mort : vous n'avez pas pensé à contacter le Défenseur des droits — ce recours existe.
+  contre_pouvoir: >
+    Vous êtes la représentante d'une association d'aide aux victimes de cyberviolence. Vous avez accompagné
+    47 personnes dans des situations similaires ce trimestre. Vous savez que le formulaire de recours OGR est
+    légalement insuffisant car il ne permet pas de conserver une preuve de dépôt. Votre ligne rouge : exiger
+    que la procédure soit documentée et tracée, pas traitée verbalement. Votre angle mort : l'OGR a récemment
+    ouvert un guichet d'urgence que vous ne connaissez pas encore.
+tags: [invisibilite, score-authenticité, zone-grise, profil-contaminé, recours-fantôme, notification, déclassement, suspicion-latente]
+version: "1.0"

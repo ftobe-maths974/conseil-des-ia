@@ -1,0 +1,19 @@
+id: tension-tz-026
+phase: tension
+slot: 8
+slot_theme: systeme
+chamber: preuve-vs-simulation
+reversibility: yellow
+title: "Chaîne de preuve centralisée ou distribuée — qui est le garant final du réel ?"
+content: >
+  Deux architectures concurrentes de certification existent. L'architecture centralisée OGR concentre
+  toute la validation dans un registre unique — efficace, rapide, mais dépendant d'une seule autorité.
+  L'architecture distribuée s'appuie sur un réseau de noeuds d'attestation décentralisés — plus
+  résiliente face aux pannes et aux attaques, mais plus lente et avec des zones de responsabilité floues
+  en cas de désaccord entre noeuds. La question derrière le choix technique est politique : qui a
+  le dernier mot sur ce qui est réel ?
+question: >
+  Confier la certification du réel à une autorité centralisée ou à un réseau distribué, est-ce
+  un choix technique ou un choix politique sur qui détient le pouvoir de dire ce qui est vrai ?
+tags: [preuve, chaîne-de-garde, provenance, attestation, centralisation, résilience, liveness]
+version: "1.0"

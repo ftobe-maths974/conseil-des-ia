@@ -1,0 +1,21 @@
+id: tension-tz-041
+phase: tension
+slot: 5
+slot_theme: organisation
+chamber: metabolisme-vs-progres
+reversibility: yellow
+title: "Externaliser l'authentification à l'OGR ou garder la maîtrise des données"
+content: >
+  La coopérative agricole Terre-du-Forez gère 3 200 adhérents. Elle peut externaliser entièrement
+  ses vérifications d'identité à l'OGR — gain de temps considérable, zéro investissement technique.
+  Ou elle peut maintenir son propre système d'authentification interne, moins performant mais sous
+  son contrôle : elle conserve la relation directe avec ses adhérents, leurs données restent chez
+  elle, et elle peut adapter ses procédures à ses propres valeurs. Le choix OGR crée une dépendance
+  institutionnelle. Le choix interne impose une charge technique qu'elle n'a pas forcément les
+  moyens d'assumer correctement.
+question: >
+  Une organisation qui maîtrise moins bien l'authentification mais garde le contrôle de ses données
+  est-elle dans une meilleure position qu'une organisation qui externalise efficacement mais perd
+  cette maîtrise ?
+tags: [métabolisme, dépendance, externalisation, coût-de-vérification, souveraineté, données, bureaucratie-défensive]
+version: "1.0"

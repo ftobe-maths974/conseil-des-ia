@@ -1,0 +1,19 @@
+id: bascule-tz-002
+phase: bascule
+slot: 2
+slot_theme: organisation
+chamber: delegation-vs-souverainete
+reversibility: yellow
+scope: organisationnel
+title: "L'hôpital qui ne peut plus admettre"
+situation: >
+  Le service des urgences de l'hôpital de Sainte-Croix-du-Val a migré vers SIGMA-ID il y a quatre mois.
+  Ce soir, une femme de 61 ans arrive en ambulance après un malaise cardiaque. Son CVR est en cours de
+  vérification — statut "anomalie de provenance" depuis deux semaines suite à une usurpation d'identité
+  dont elle a été victime. Le logiciel refuse d'ouvrir un dossier médical. Le médecin de garde veut passer
+  outre. L'administration lui dit qu'il engage sa responsabilité personnelle.
+question: >
+  Jusqu'où une organisation peut-elle déléguer à un système automatisé des décisions dont les conséquences
+  dépassent ce que le système peut mesurer ?
+tags: [delegation, CVR, urgence, responsabilité, confiance-forcée, opérateur-de-confiance, verrou-de-présence]
+version: "1.0"

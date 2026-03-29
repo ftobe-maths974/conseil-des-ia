@@ -1,0 +1,19 @@
+id: tension-tz-011
+phase: tension
+slot: 2
+slot_theme: individu
+chamber: invisibilite-vs-arbitrage
+reversibility: yellow
+title: "Contester son score en s'exposant ou se taire pour ne pas attirer l'attention"
+content: >
+  Pauline a un score de 71% depuis deux semaines. Elle peut le contester — mais la procédure de
+  contestation exige de soumettre des documents supplémentaires qui enrichissent son profil dans
+  la base OGR. Plus elle conteste, plus elle fournit de données. Certains utilisateurs ont aussi
+  remarqué que contester un score déclenche parfois une "revue renforcée" qui abaisse temporairement
+  le score encore davantage. Se taire maintient le problème mais évite d'amplifier la visibilité
+  de son dossier. Contester risque d'aggraver la situation tout en étant le seul recours légitime.
+question: >
+  Quand exercer son droit de recours contre un score opaque risque d'aggraver la situation,
+  ce droit est-il encore réel ou seulement formel ?
+tags: [invisibilité, score-authenticité, recours-fantôme, zone-grise, log-opaque, défi-silencieux]
+version: "1.0"

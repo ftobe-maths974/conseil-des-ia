@@ -1,0 +1,19 @@
+id: tension-tz-034
+phase: tension
+slot: 7
+slot_theme: systeme
+chamber: singularite-vs-standard
+reversibility: green
+title: "Norme biométrique internationale pour l'interopérabilité ou norme locale adaptée"
+content: >
+  L'Union européenne pousse vers une norme biométrique d'authentification unifiée — le même standard
+  SIGMA-ID pour tous les États membres. Cela permettrait l'interopérabilité totale : un CVR français
+  reconnu en Pologne ou en Italie. Mais les études préliminaires montrent que ce standard européen,
+  construit sur des données majoritairement issues d'Europe du Nord et de l'Ouest, produirait des taux
+  de faux positifs significativement plus élevés pour les populations d'Europe du Sud et du Sud-Est,
+  pour les populations issues de l'immigration récente, et pour les communautés rurales.
+question: >
+  Un standard biométrique universel qui améliore l'interopérabilité mais creuse les inégalités de
+  fiabilité selon les origines, est-ce une avancée ou une régression déguisée en progrès ?
+tags: [singularité, standard, équité-biométrique, interopérabilité, faux-positif, hors-modèle, Europe]
+version: "1.0"
