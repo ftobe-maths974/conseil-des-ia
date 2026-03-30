@@ -2,7 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
+import { CHAMBER_LABELS, CHAMBER_ICONS, REV_LABELS } from '../../../../lib/chambers';
 
 
 
@@ -70,14 +70,14 @@ const cardsData: CardData[] = selected.map(b => ({
         <h1 class="p1__groupe">{groupe}</h1>
       </div>
       <span class="p1__chamber" data-chamber={chamber}>
-        {CHAMBER_LABELS[chamber]}
+        <span class="p1__chamber-icon" aria-hidden="true">{CHAMBER_ICONS[chamber]}</span>{CHAMBER_LABELS[chamber]}
       </span>
     </header>
 
     <!-- Instructions -->
     <section class="p1__instructions" id="instructions">
       <p class="p1__instructions-text">
-        Lisez les 3 situations. Classez-les : en haut, celle qui sera la plus difficile à rattraper si on laisse faire. Votre premier choix comptera le plus pour la suite. Débattez avant de valider.
+        Lisez les 3 situations. Classez-les : en haut, celle qui sera la plus difficile à rattraper si on laisse faire. Votre premier choix pèsera le plus pour la suite. Débattez vite, puis validez.
       </p>
     </section>
 

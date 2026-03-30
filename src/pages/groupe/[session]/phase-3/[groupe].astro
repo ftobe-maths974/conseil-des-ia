@@ -2,7 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
+import { CHAMBER_LABELS, CHAMBER_ICONS, REV_LABELS } from '../../../../lib/chambers';
 
 
 // ── Sélection par slot ────────────────────────────────────────────────────────
@@ -78,16 +78,16 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${g
         <h1 class="p3__groupe">{groupe}</h1>
       </div>
       <span class="p3__chamber" data-chamber={chamber}>
-        {CHAMBER_LABELS[chamber]}
+        <span class="p3__chamber-icon" aria-hidden="true">{CHAMBER_ICONS[chamber]}</span>{CHAMBER_LABELS[chamber]}
       </span>
     </header>
 
     <!-- Instructions -->
     <section class="p3__instructions" id="p3-instructions">
       <p class="p3__instructions-text">
-        Lisez les actions disponibles. Débattez et écartez celles qui vous semblent
-        moins pertinentes — jusqu'à n'en garder <strong>qu'une seule</strong>.
-        C'est cette action que vous transmettrez via QR code.
+        Vous devez maintenant assumer une décision. Débattez, éliminez, tranchez.
+        <strong>Une seule action</strong> partira à la phase suivante.
+        C'est votre acte.
       </p>
     </section>
 

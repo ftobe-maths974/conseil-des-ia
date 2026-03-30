@@ -70,16 +70,16 @@ const tensionsData: TensionData[] = selected.map(t => ({
         <h1 class="p2__groupe">{groupe}</h1>
       </div>
       <span class="p2__chamber" data-chamber={chamber}>
-        {CHAMBER_LABELS[chamber]}
+        <span class="p2__chamber-icon" aria-hidden="true">{CHAMBER_ICONS[chamber]}</span>{CHAMBER_LABELS[chamber]}
       </span>
     </header>
 
     <!-- Instructions -->
     <section class="p2__instructions">
       <p class="p2__instructions-text">
-        Lisez les dossiers de tension. Débattez et écartez ceux qui vous semblent
-        moins centraux — jusqu'à n'en garder <strong>qu'un seul</strong>.
-        C'est ce dossier que vous transmettrez à la phase suivante.
+        Lisez les dossiers de tension. Écartez ceux qui vous semblent secondaires
+        jusqu'à n'en garder <strong>qu'un seul</strong>.
+        C'est ce conflit central que vous transmettez à la phase suivante.
       </p>
     </section>
 

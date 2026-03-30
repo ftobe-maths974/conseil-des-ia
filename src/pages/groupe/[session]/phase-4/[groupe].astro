@@ -2,7 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
+import { CHAMBER_LABELS, CHAMBER_ICONS, REV_LABELS } from '../../../../lib/chambers';
 
 
 
@@ -72,12 +72,22 @@ const bonusActions: BonusAction[] = allActionsRaw
         <h1 class="p4__groupe">{groupe}</h1>
       </div>
       <span class="p4__chamber" data-chamber={chamber}>
-        {CHAMBER_LABELS[chamber]}
+        <span class="p4__chamber-icon" aria-hidden="true">{CHAMBER_ICONS[chamber]}</span>{CHAMBER_LABELS[chamber]}
       </span>
     </header>
 
     {scenarioData ? (
       <>
+        <!-- Instructions -->
+        <section class="p4__instructions">
+          <p class="p4__instructions-text">
+            Lisez le scénario, vos rôles et les cartes héritées. Délibérez, puis rédigez votre Acte d'arbitrage.
+            Positionnez votre chambre sur les quatre dimensions : ce que vous autorisez, ce que vous conditionnez,
+            ce que vous interdisez et ce que vous renvoyez à réexamen.
+            Chaque ligne doit être justifiée en <strong>1 à 3 phrases</strong>.
+          </p>
+        </section>
+
         <!-- Scénario -->
         <section class="p4__scenario">
           <div class="p4__scenario-header">
@@ -240,7 +250,10 @@ const bonusActions: BonusAction[] = allActionsRaw
               </summary>
               <div class="p4bc__body">
                 <p class="p4bc__content">${escHtml(t.content)}</p>
-                <blockquote class="p4bc__question">${escHtml(t.question)}</blockquote>
+                <div class="p4bc__hint-wrap">
+                  <button class="p4bc__hint-btn" type="button" aria-expanded="false">💡</button>
+                  <blockquote class="p4bc__question" hidden>${escHtml(t.question)}</blockquote>
+                </div>
                 <div class="p4bc__tags">${t.tags.map(tag => `<span class="p4bc__tag">#${escHtml(tag)}</span>`).join('')}</div>
               </div>
             </details>
@@ -274,6 +287,17 @@ const bonusActions: BonusAction[] = allActionsRaw
       bonusSection.hidden = false;
     }
   }
+
+  // ── Toggle ampoule cartes héritées ───────────────────────────────────────
+  document.addEventListener('click', (e: Event) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('.p4bc__hint-btn');
+    if (!btn) return;
+    e.stopPropagation();
+    const question = btn.nextElementSibling as HTMLElement;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    question.hidden = expanded;
+  });
 
   // ── Rôles — accordion ─────────────────────────────────────────────────────
   document.querySelectorAll<HTMLElement>('.p4-role').forEach(card => {
@@ -380,6 +404,13 @@ const bonusActions: BonusAction[] = allActionsRaw
     border: 1px solid var(--chamber-color, var(--border-subtle));
     color: var(--chamber-color, var(--text-muted));
     text-align: right; max-width: 16ch; line-height: 1.3;
+  }
+
+  /* ── Instructions ───────────────────────────────────────────────────────── */
+  .p4__instructions-text {
+    font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg);
   }
 
   /* ── Scénario ────────────────────────────────────────────────────────────── */
@@ -642,6 +673,17 @@ const bonusActions: BonusAction[] = allActionsRaw
     display: flex; flex-direction: column; gap: var(--space-md);
   }
   .p4bc__content { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+  .p4bc__hint-wrap { display: flex; flex-direction: column; gap: var(--space-xs); }
+  .p4bc__hint-btn {
+    background: none; border: none; cursor: pointer;
+    font-size: 1rem; padding: 0; width: 2rem; height: 2rem;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.5; transition: opacity var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .p4bc__hint-btn:active,
+  .p4bc__hint-btn[aria-expanded="true"] { opacity: 1; }
+  .p4bc__question[hidden] { display: none; }
   .p4bc__question {
     font-size: 0.85rem; font-style: italic; color: var(--text-primary);
     border-left: 3px solid var(--border-subtle);

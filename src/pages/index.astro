@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { CHAMBER_LABELS, CHAMBER_LABELS_SHORT } from '../lib/chambers';
+import { CHAMBER_LABELS, CHAMBER_LABELS_SHORT, CHAMBER_ICONS } from '../lib/chambers';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -17,6 +17,7 @@ const deckData = decks.map(d => ({
     chamber: g.chamber,
     label: CHAMBER_LABELS[g.chamber] ?? g.chamber,
     labelShort: CHAMBER_LABELS_SHORT[g.chamber] ?? g.chamber,
+    icon: CHAMBER_ICONS[g.chamber] ?? '',
   })),
 }));
 
@@ -39,6 +40,18 @@ const CHAMBER_CSS: Record<string, string> = {
         <h1 class="home__title">Conseil des IA</h1>
         <p class="home__subtitle">Jeu pédagogique sur les enjeux de l'intelligence artificielle générative</p>
       </header>
+
+      <!-- Pitch accordéon -->
+      <details class="home__pitch">
+        <summary class="home__pitch-summary">Comment ça marche ?</summary>
+        <p class="home__pitch-text">
+          Vous n'allez pas juste donner un avis. Vous allez construire une décision politique en quatre temps.
+          D'abord, vous repérez ce qui peut devenir le plus difficile à rattraper.
+          Ensuite, vous isolez le vrai conflit derrière ces situations.
+          Puis vous choisissez une action concrète.
+          Enfin, vous découvrez le type de monde que votre choix fabrique.
+        </p>
+      </details>
 
       <!-- Stepper pills -->
       <nav class="stepper" aria-label="Étapes" id="stepper">
@@ -164,8 +177,8 @@ const CHAMBER_CSS: Record<string, string> = {
       btn.innerHTML = `
         <span class="groupe-card__dot"></span>
         <span class="groupe-card__id">${g.id.replace('groupe-', 'Groupe ')}</span>
-        <span class="groupe-card__chamber">${g.label}</span>
-        <span class="groupe-card__chamber-short">${g.labelShort}</span>
+        <span class="groupe-card__chamber"><span aria-hidden="true">${g.icon}</span> ${g.label}</span>
+        <span class="groupe-card__chamber-short"><span aria-hidden="true">${g.icon}</span> ${g.labelShort}</span>
       `;
       grid.appendChild(btn);
     });
@@ -238,6 +251,44 @@ const CHAMBER_CSS: Record<string, string> = {
     line-height: 1.5;
     max-width: 36ch;
     margin-inline: auto;
+  }
+
+  /* ── Pitch ───────────────────────────────────────────────────────────────── */
+  .home__pitch {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+  }
+  .home__pitch-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: var(--space-sm) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  .home__pitch-summary::-webkit-details-marker { display: none; }
+  .home__pitch-summary::before {
+    content: '›';
+    font-size: 1.1rem;
+    transition: transform var(--transition-fast);
+    display: inline-block;
+  }
+  .home__pitch[open] .home__pitch-summary::before { transform: rotate(90deg); }
+  .home__pitch-summary:hover { color: var(--text-secondary); }
+  .home__pitch-text {
+    padding: 0 var(--space-lg) var(--space-lg);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: var(--space-md);
   }
 
   /* ── Stepper ─────────────────────────────────────────────────────────────── */
