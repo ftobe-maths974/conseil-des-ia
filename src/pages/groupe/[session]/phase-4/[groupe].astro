@@ -9,25 +9,15 @@ import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
 export async function getStaticPaths() {
   const allDecks = await getCollection('decks');
   return allDecks.flatMap(deck =>
-    deck.data.groups.map(g => {
-      // Trouver le groupe expéditeur (celui dont la destination dans mandat_circulation = g.id)
-      const senderGroupId = Object.entries(deck.data.mandat_circulation)
-        .find(([, dest]) => dest === g.id)?.[0];
-      const senderGroup = deck.data.groups.find(sg => sg.id === senderGroupId);
-      return {
-        params: { session: deck.data.id, groupe: g.id },
-        props: {
-          chamber: g.chamber,
-          scenarioId: g.scenario_id,
-          senderChamber: senderGroup?.chamber ?? null,
-        },
-      };
-    })
+    deck.data.groups.map(g => ({
+      params: { session: deck.data.id, groupe: g.id },
+      props: { chamber: g.chamber, scenarioId: g.scenario_id },
+    }))
   );
 }
 
 const { session, groupe } = Astro.params;
-const { chamber, scenarioId, senderChamber } = Astro.props;
+const { chamber, scenarioId } = Astro.props;
 const allScenarios = await getCollection('scenarios');
 const deckScenarios = allScenarios.filter(s => s.id.startsWith(session + '/'));
 const scenario = deckScenarios.find(s => s.data.id === scenarioId)
@@ -49,40 +39,27 @@ const scenarioData: ScenarioData | null = scenario ? {
   difficulty: scenario.data.difficulty,
 } : null;
 
-// ── Cartes héritées (tension Phase 2 + action Phase 3 de l'expéditeur) ──────
+// ── Cartes bonus — tension et action retenues par ce groupe (même chambre) ──
 type BonusTension = { id: string; title: string; content: string; question: string; reversibility: string; tags: string[] };
 type BonusAction  = { id: string; title: string; body: string; reversibility: string; scope: string; lever_type: string; tags: string[] };
 
-let bonusTensions: BonusTension[] = [];
-let bonusActions:  BonusAction[]  = [];
-
-if (senderChamber) {
-  const [allTensionsRaw, allActionsRaw] = await Promise.all([
-    getCollection('tensions'),
-    getCollection('actions'),
-  ]);
-  bonusTensions = allTensionsRaw
-    .filter(t => t.id.startsWith(session + '/') && t.data.chamber === senderChamber)
-    .map(t => ({
-      id: t.data.id,
-      title: t.data.title,
-      content: t.data.content,
-      question: t.data.question,
-      reversibility: t.data.reversibility,
-      tags: t.data.tags,
-    }));
-  bonusActions = allActionsRaw
-    .filter(a => a.id.startsWith(session + '/') && a.data.chamber === senderChamber)
-    .map(a => ({
-      id: a.data.id,
-      title: a.data.title,
-      body: a.data.body,
-      reversibility: a.data.reversibility,
-      scope: a.data.scope,
-      lever_type: a.data.lever_type,
-      tags: a.data.tags,
-    }));
-}
+const [allTensionsRaw, allActionsRaw] = await Promise.all([
+  getCollection('tensions'),
+  getCollection('actions'),
+]);
+const bonusTensions: BonusTension[] = allTensionsRaw
+  .filter(t => t.id.startsWith(session + '/') && t.data.chamber === chamber)
+  .map(t => ({
+    id: t.data.id, title: t.data.title, content: t.data.content,
+    question: t.data.question, reversibility: t.data.reversibility, tags: t.data.tags,
+  }));
+const bonusActions: BonusAction[] = allActionsRaw
+  .filter(a => a.id.startsWith(session + '/') && a.data.chamber === chamber)
+  .map(a => ({
+    id: a.data.id, title: a.data.title, body: a.data.body,
+    reversibility: a.data.reversibility, scope: a.data.scope,
+    lever_type: a.data.lever_type, tags: a.data.tags,
+  }));
 ---
 
 <BaseLayout title={`${groupe} — Phase 4`} mode="groupe">
@@ -137,7 +114,11 @@ if (senderChamber) {
                       {scenarioData.roles_briefing[role.key]}
                     </p>
                     {role.key === 'decideur' && (
-                      <div class="p4__acte" id="p4-acte-form">
+                      <>
+                        <button class="p4__acte-reveal-btn" id="p4-acte-reveal">
+                          ⚖️ Rédiger l'Acte d'arbitrage
+                        </button>
+                      <div class="p4__acte" id="p4-acte-form" hidden>
                         <h3 class="p4__acte-title">Rédigez l'Acte d'arbitrage</h3>
                         <p class="p4__acte-hint">
                           Positionnez-vous sur les quatre dimensions après délibération du groupe.
@@ -169,6 +150,7 @@ if (senderChamber) {
                           </button>
                         </div>
                       </div>
+                      </>
                     )}
                   </div>
                 </details>
@@ -214,16 +196,8 @@ if (senderChamber) {
 <script type="application/json" id="bonus-actions"    set:html={JSON.stringify(bonusActions)} />
 
 <script>
-  import { REV_LABELS, TRAJ_LABELS } from '../../../../lib/chambers';
-  // ── Types ─────────────────────────────────────────────────────────────────
-  interface Handoff {
-    action?:    { id: string; title: string };
-    tensionId?: string;
-    level:      'green' | 'yellow' | 'red';
-    chamber:    string;
-    from:       string;
-    traj?:      number;
-  }
+  import { REV_LABELS } from '../../../../lib/chambers';
+
   interface BonusTension {
     id: string; title: string; content: string; question: string;
     reversibility: string; tags: string[];
@@ -233,34 +207,27 @@ if (senderChamber) {
     reversibility: string; scope: string; lever_type: string; tags: string[];
   }
 
-  // ── Lecture du handoff depuis le hash ─────────────────────────────────────
-  function decodeHandoff(): Handoff | null {
-    const hash = window.location.hash;
-    const match = hash.match(/[#&]handoff=([^&]+)/);
-    if (!match) return null;
-    try {
-      return JSON.parse(decodeURIComponent(atob(match[1])));
-    } catch {
-      return null;
-    }
-  }
-
-  const handoff = decodeHandoff();
-
-  // ── Données cartes héritées ────────────────────────────────────────────────
+  // ── Données préchargées (même chambre) ────────────────────────────────────
   const bonusTensions: BonusTension[] =
     JSON.parse(document.getElementById('bonus-tensions')!.textContent!);
   const bonusActions: BonusAction[] =
     JSON.parse(document.getElementById('bonus-actions')!.textContent!);
 
-  // ── Cartes héritées ────────────────────────────────────────────────────────
-  if (handoff) {
+  // ── Lecture des IDs depuis le hash ────────────────────────────────────────
+  const hash = window.location.hash;
+  const tensionIdMatch = hash.match(/tensionId=([^&]+)/);
+  const actionIdMatch  = hash.match(/actionId=([^&]+)/);
+  const tensionId = tensionIdMatch ? decodeURIComponent(tensionIdMatch[1]) : null;
+  const actionId  = actionIdMatch  ? decodeURIComponent(actionIdMatch[1])  : null;
+
+  // ── Affichage des cartes bonus ────────────────────────────────────────────
+  if (tensionId || actionId) {
     const bonusSection = document.getElementById('p4-bonus')!;
     const bonusCardsEl = document.getElementById('p4-bonus-cards')!;
     const cards: string[] = [];
 
-    if (handoff.tensionId) {
-      const t = bonusTensions.find(x => x.id === handoff.tensionId);
+    if (tensionId) {
+      const t = bonusTensions.find(x => x.id === tensionId);
       if (t) {
         cards.push(`
           <article class="p4bc p4bc--tension">
@@ -281,8 +248,8 @@ if (senderChamber) {
       }
     }
 
-    if (handoff.action?.id) {
-      const a = bonusActions.find(x => x.id === handoff.action!.id);
+    if (actionId) {
+      const a = bonusActions.find(x => x.id === actionId);
       if (a) {
         cards.push(`
           <article class="p4bc p4bc--action">
@@ -315,6 +282,15 @@ if (senderChamber) {
     det.addEventListener('toggle', () => {
       card.classList.toggle('p4-role--taken', det.open);
     });
+  });
+
+  // ── Acte — révélation par le décideur ────────────────────────────────────
+  document.getElementById('p4-acte-reveal')?.addEventListener('click', () => {
+    const acteForm = document.getElementById('p4-acte-form')!;
+    const revealBtn = document.getElementById('p4-acte-reveal') as HTMLButtonElement;
+    acteForm.hidden = false;
+    revealBtn.hidden = true;
+    acteForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   // ── Acte — validation ─────────────────────────────────────────────────────
@@ -498,6 +474,18 @@ if (senderChamber) {
   .p4-role__briefing { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
 
   /* ── Acte dans le dépliant décideur ─────────────────────────────────────── */
+  .p4__acte-reveal-btn {
+    align-self: flex-start;
+    padding: var(--space-sm) var(--space-xl);
+    background: var(--chamber-delegation); color: #fff;
+    border: none; border-radius: var(--radius-md);
+    font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+    cursor: pointer;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .p4__acte-reveal-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .p4__acte[hidden] { display: none; }
   .p4__acte {
     display: flex; flex-direction: column; gap: var(--space-md);
     border-top: 1px solid var(--border-subtle);
@@ -552,6 +540,7 @@ if (senderChamber) {
     from { opacity: 0; transform: translateY(20px) scale(0.98); }
     to   { opacity: 1; transform: translateY(0) scale(1); }
   }
+  .p4__acte-final[hidden] { display: none; }
   .p4__acte-final {
     background: var(--bg-card); border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg); padding: var(--space-xl);
@@ -641,7 +630,7 @@ if (senderChamber) {
     flex: 1; font-family: var(--font-display); font-size: 0.88rem;
     font-weight: 600; line-height: 1.3;
   }
-  .p4bc__rev { flex-shrink: 0; }
+  .p4bc__rev { display: none; }
   .p4bc__chevron {
     font-size: 1.1rem; color: var(--text-muted); flex-shrink: 0;
     transition: transform var(--transition-fast);

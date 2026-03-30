@@ -17,10 +17,10 @@ Jeu pédagogique en présentiel sur l'IA générative. 2h, 4–6 groupes. Zéro 
 
 ```
 src/decks/
-  demo/           config.yaml  bascules/  tensions/  actions/  scenarios/
   care-triage/    ← santé publique, CareFlow / GHR
   glamour-glitch/ ← creator economy, OmniStream / FAME-GEN
   terminus/       ← protection sociale, L'Agence / CITIZEN-SCAN
+  trace-zero/     ← cybersécurité / identité, NEXUS / ZeroID
 
 src/content/config.ts   ← schémas Zod + glob loaders
 ```
@@ -55,15 +55,21 @@ Routes générées via `getStaticPaths()` depuis les decks YAML. Aucune route ha
 
 ## Mécanique — résumé des phases
 
-| Phase | Durée | Entrée | Sortie hash |
+| Phase | Durée | Mécanique | Sortie hash |
 |---|---|---|---|
-| 1 — Bascules | 20 min | 3 cartes triées par irréversibilité | `#dominant=X&secondary=Y&minor=Z&traj=N` |
-| 2 — Tensions | 30 min | 9 tensions, reordonnées selon dominant | `#bascule=BASE64&dominant=X&traj=N` |
-| 3 — Action + mandat | 25 min | 4 actions, badge Recommandé | `#handoff=BASE64` |
-| 4 — Scénario | 30 min | Scénario + mandat reçu | acte à 4 points |
+| 1 — Bascules | 20 min | 3 cartes classées par irréversibilité (drag & drop) → révélation | `#dominant=X&secondary=Y&minor=Z&traj=N` |
+| 2 — Tensions | 30 min | 5 dossiers, écarter jusqu'à n'en garder qu'un | `#dominant=X&traj=N&tensionId=ENCODED` |
+| 3 — Actions | 25 min | 4 actions, écarter jusqu'à n'en garder qu'une | `#handoff=BASE64` |
+| 4 — Scénario | 30 min | Scénario + rôles + 2 cartes héritées bonus | acte à 4 points |
 
 **Phase 1** : haut de pile (index 0 DOM) = carte la plus irréversible = **dominant**.
 `initTraj` : `green→2`, `yellow→3`, `red→4`. Vérifié dans `src/lib/chambers.ts`.
+
+**Phase 2** : 5 dossiers filtrés client-side (3 dominant + 1 secondary + 1 minor) depuis le hash Phase 1. Mécanisme poubelle/récupération. Hash sortie : `dominant`, `traj`, `tensionId` (ID de la tension retenue).
+
+**Phase 3** : 4 actions. Mécanisme poubelle/récupération identique à Phase 2. Le handoff QR encode : `action.{id,title}`, `tensionId`, `level`, `chamber`, `from`, `traj`.
+
+**Phase 4** : Les cartes héritées (tension Phase 2 + action Phase 3) sont affichées après les rôles comme bonus consultables par tous. Identifiées via `tensionId` et `action.id` dans le handoff, résolues contre les données préchargées côté serveur depuis la chambre de l'expéditeur (déterminée via `mandat_circulation` à build time).
 
 **Trajectoire 1–5** : Fluide / Engagé / Contraint / Critique / Point de non-retour.
 
@@ -101,7 +107,7 @@ chamber: [slug]          reversibility: green|yellow|red
 scope: individuel|organisationnel|systemique
 title: "Verbe institutionnel + objet"
 body: "..."              # 30–70 mots, qui fait quoi avec quel effet mesurable
-mandat_principe: "..."   # OBLIGATOIRE sauf deck demo — voir .claude/deck-recipe.md
+mandat_principe: "..."   # conservé dans le YAML, non affiché en jeu — utile pour audit éditorial
 tags: [...]              version: "1.0"
 ```
 
@@ -139,7 +145,9 @@ mandat_circulation:
 - Constantes métier dans `src/lib/chambers.ts` uniquement — jamais redéclarées localement
 - `data-chamber` utilise toujours les slugs complets canoniques
 - Éléments JS créés dynamiquement → `<style is:global>` (Astro scoped CSS ne s'applique pas)
-- Phase 3 : toujours 2 champs guidés "parce que" + "à condition que" — jamais textarea libre
+- Phases 2 et 3 : mécanique poubelle/récupération identique — `countActive()`, `renumberActive()`, `updateContinueVisibility()`
+- Phase 4 : cartes bonus créées par `innerHTML` → classes courtes préfixées `p4bc__` + `<style is:global>`
+- `mandat_circulation` sert à la fois au routage des QR codes et à la résolution des cartes héritées en Phase 4 (`getStaticPaths` identifie l'expéditeur à build time)
 
 ## Ajouter un deck
 

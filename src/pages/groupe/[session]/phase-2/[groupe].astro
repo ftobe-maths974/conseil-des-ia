@@ -2,7 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
+import { CHAMBER_LABELS, CHAMBER_ICONS, REV_LABELS } from '../../../../lib/chambers';
 
 
 
@@ -114,7 +114,10 @@ const tensionsData: TensionData[] = selected.map(t => ({
                   <p>{t.data_point}</p>
                 </aside>
               )}
-              <blockquote class="p2-card__question">{t.question}</blockquote>
+              <div class="p2-card__question-wrap">
+                <button class="p2-card__question-toggle" type="button" aria-expanded="false">💡</button>
+                <blockquote class="p2-card__question" hidden>{t.question}</blockquote>
+              </div>
               <div class="p2-card__tags" aria-hidden="true">
                 {t.tags.map(tag => <span class="p2-card__tag">#{tag}</span>)}
               </div>
@@ -155,6 +158,9 @@ const tensionsData: TensionData[] = selected.map(t => ({
   let   traj      = parseInt(trajMatch?.[1] ?? '3', 10);
   if (isNaN(traj) || traj < 1 || traj > 5) traj = 3;
 
+  // ── Poubelle / récupération ────────────────────────────────────────────────
+  let orderedCards: HTMLElement[] = [];
+
   // ── Filtrage + réordonnancement 3/1/1 côté client ────────────────────────
   if (cardsSection) {
     const cards = Array.from(cardsSection.querySelectorAll<HTMLElement>('.p2-card'));
@@ -193,6 +199,8 @@ const tensionsData: TensionData[] = selected.map(t => ({
     });
 
     cardsSection.style.visibility = 'visible';
+    // Mémoriser l'ordre final pour la réintégration positionnée
+    orderedCards = [...cardsSection.querySelectorAll<HTMLElement>('.p2-card')];
 
     // ── Confirmation de trajectoire (Phase 2) ────────────────────────────────
     // Si la majorité des 5 cartes visibles est red → traj + 1 (borné à 5)
@@ -236,6 +244,17 @@ const tensionsData: TensionData[] = selected.map(t => ({
   document.addEventListener('click', (e: Event) => {
     const target = e.target as HTMLElement;
 
+    // ── Toggle question (ampoule) ─────────────────────────────────────────────
+    const toggleBtn = target.closest<HTMLElement>('.p2-card__question-toggle');
+    if (toggleBtn) {
+      e.stopPropagation();
+      const question = toggleBtn.nextElementSibling as HTMLElement;
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!expanded));
+      question.hidden = expanded;
+      return;
+    }
+
     // ── Écarter ──────────────────────────────────────────────────────────────
     const trashBtn = target.closest<HTMLElement>('.p2-card__trash');
     if (trashBtn) {
@@ -245,7 +264,6 @@ const tensionsData: TensionData[] = selected.map(t => ({
       card.classList.add('p2-card--trashed');
       discardedZone.appendChild(card);
       discardedZone.hidden = false;
-      renumberActive();
       updateFormVisibility();
       return;
     }
@@ -256,16 +274,13 @@ const tensionsData: TensionData[] = selected.map(t => ({
       const card = recoverBtn.closest<HTMLElement>('.p2-card');
       if (!card) return;
       card.classList.remove('p2-card--trashed');
-      // Réinsérer en respectant l'ordre de réversibilité
-      const revOrder: Record<string, number> = { green: 0, yellow: 1, red: 2 };
-      const cardRev = revOrder[card.dataset.rev ?? ''] ?? 1;
-      const actives = [...cardsSection.querySelectorAll<HTMLElement>('.p2-card')];
-      const insertBefore = actives.find(a => (revOrder[a.dataset.rev ?? ''] ?? 1) > cardRev);
-      cardsSection.insertBefore(card, insertBefore ?? null);
+      // Réinsérer à la position d'origine
+      const idx = orderedCards.indexOf(card);
+      const insertBefore = orderedCards.slice(idx + 1).find(c => c.parentElement === cardsSection) ?? null;
+      cardsSection.insertBefore(card, insertBefore);
       if (discardedZone.querySelectorAll('.p2-card').length === 0) {
         discardedZone.hidden = true;
       }
-      renumberActive();
       updateFormVisibility();
     }
   });
@@ -372,10 +387,24 @@ const tensionsData: TensionData[] = selected.map(t => ({
   }
   .p2-card__data-point p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; }
 
+  .p2-card__question-wrap {
+    display: flex; flex-direction: column; gap: var(--space-xs);
+  }
+  .p2-card__question-toggle {
+    background: none; border: none; cursor: pointer;
+    font-size: 1rem; padding: 0; width: 2rem; height: 2rem;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.5; transition: opacity var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .p2-card__question-toggle:active,
+  .p2-card__question-toggle[aria-expanded="true"] { opacity: 1; }
+  .p2-card__question[hidden] { display: none; }
   .p2-card__question {
     font-size: 0.9rem; font-style: italic; color: var(--text-primary);
     border-left: 3px solid var(--border-subtle);
     padding-left: var(--space-md); line-height: 1.5;
+    margin: 0;
   }
   .p2-card__tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
   .p2-card__tag {
@@ -390,22 +419,22 @@ const tensionsData: TensionData[] = selected.map(t => ({
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    padding: 0.2rem 0.3rem;
+    font-size: 1.1rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text-muted);
-    line-height: 1;
     flex-shrink: 0;
-    transition: color var(--transition-fast), opacity var(--transition-fast);
-    opacity: 0;
+    transition: color var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
   }
-  .p2-card:hover .p2-card__trash,
-  .p2-card--trashed .p2-card__recover {
-    opacity: 1;
-  }
-  .p2-card__trash:hover  { color: var(--text-primary); }
+  .p2-card__trash:active,
+  .p2-card__recover:active  { color: var(--text-primary); }
   .p2-card__recover { display: none; }
   .p2-card--trashed .p2-card__trash   { display: none; }
-  .p2-card--trashed .p2-card__recover { display: inline-flex; opacity: 1; }
+  .p2-card--trashed .p2-card__recover { display: flex; }
 
   /* ── Carte écartée (compacte) ────────────────────────────────────────────── */
   .p2-card--trashed {
@@ -413,12 +442,13 @@ const tensionsData: TensionData[] = selected.map(t => ({
     transition: opacity var(--transition-base);
   }
   .p2-card--trashed .p2-card__summary { padding: var(--space-sm) var(--space-md); }
-  .p2-card--trashed .p2-card__num,
   .p2-card--trashed .p2-card__badges  { display: none; }
+  .p2-card .rev-badge                 { display: none; }
   .p2-card--trashed .p2-card__title   { font-size: 0.8rem; font-weight: 400; }
   .p2-card--trashed .p2-card__body    { display: none; }
 
   /* ── Zone dossiers écartés ───────────────────────────────────────────────── */
+  .p2__discarded[hidden] { display: none; }
   .p2__discarded {
     display: flex;
     flex-direction: column;

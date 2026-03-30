@@ -98,7 +98,10 @@ const cardsData: CardData[] = selected.map(b => ({
             <div class="p1-card__expanded">
               <span class="rev-badge" data-rev={card.reversibility}>{REV_LABELS[card.reversibility]}</span>
               <p class="p1-card__situation">{card.situation}</p>
-              <blockquote class="p1-card__question">{card.question}</blockquote>
+              <div class="p1-card__question-wrap">
+                <button class="p1-card__question-toggle" aria-label="Révéler la question" aria-expanded="false">💡</button>
+                <blockquote class="p1-card__question" hidden>{card.question}</blockquote>
+              </div>
               <div class="p1-card__tags" aria-hidden="true">
                 {card.tags.map(tag => <span class="p1-card__tag">#{tag}</span>)}
               </div>
@@ -111,7 +114,14 @@ const cardsData: CardData[] = selected.map(b => ({
     <!-- Pied de page actions -->
     <footer class="p1__footer" id="sort-footer">
       <p class="p1__footer-hint">Glissez les dossiers pour les classer</p>
-      <button class="p1__validate" id="btn-validate" disabled aria-disabled="true">
+      <div class="p1__confirm" id="p1-confirm" hidden role="alert">
+        <p class="p1__confirm-text">Vous n'avez pas modifié l'ordre. Validez-vous le classement tel quel ?</p>
+        <div class="p1__confirm-btns">
+          <button class="p1__confirm-yes" id="p1-confirm-yes">Oui, valider</button>
+          <button class="p1__confirm-no" id="p1-confirm-no">Non, je réorganise</button>
+        </div>
+      </div>
+      <button class="p1__validate" id="btn-validate">
         Valider notre choix
       </button>
     </footer>
@@ -160,6 +170,9 @@ const cardsData: CardData[] = selected.map(b => ({
 
   // ── État ──────────────────────────────────────────────────────────────────
   let hasMoved = false;
+  const confirmBox  = document.getElementById('p1-confirm')!;
+  const confirmYes  = document.getElementById('p1-confirm-yes') as HTMLButtonElement;
+  const confirmNo   = document.getElementById('p1-confirm-no') as HTMLButtonElement;
 
   // ── Helpers ───────────────────────────────────────────────────────────────
   function updateRanks(): void {
@@ -171,8 +184,7 @@ const cardsData: CardData[] = selected.map(b => ({
 
   function markMoved(): void {
     hasMoved = true;
-    validateBtn.disabled = false;
-    validateBtn.removeAttribute('aria-disabled');
+    confirmBox.hidden = true;
   }
 
   // ── Drag and drop (souris) ────────────────────────────────────────────────
@@ -257,9 +269,18 @@ const cardsData: CardData[] = selected.map(b => ({
     touchCard = null;
   });
 
+  // ── Toggle question ───────────────────────────────────────────────────────
+  stack.addEventListener('click', (e: Event) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('.p1-card__question-toggle');
+    if (!btn) return;
+    const question = btn.nextElementSibling as HTMLElement;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    question.hidden = expanded;
+  });
+
   // ── Validation ────────────────────────────────────────────────────────────
-  validateBtn.addEventListener('click', () => {
-    if (!hasMoved) return;
+  function doValidate(): void {
 
     const allCardEls = [...stack.querySelectorAll<HTMLElement>('.p1-card')];
 
@@ -311,7 +332,19 @@ const cardsData: CardData[] = selected.map(b => ({
     document.getElementById('instructions')!.hidden = true;
     revealPanel.hidden = false;
     revealPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  validateBtn.addEventListener('click', () => {
+    if (!hasMoved) {
+      confirmBox.hidden = false;
+      confirmBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
+    doValidate();
   });
+
+  confirmYes.addEventListener('click', () => doValidate());
+  confirmNo.addEventListener('click', () => { confirmBox.hidden = true; });
 
   // ── Échappement HTML sûr ──────────────────────────────────────────────────
   function escHtml(str: string): string {
@@ -576,6 +609,28 @@ const cardsData: CardData[] = selected.map(b => ({
     line-height: 1.55;
   }
 
+  .p1-card__question-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .p1-card__question-toggle {
+    align-self: flex-start;
+    background: none;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    color: var(--text-muted);
+    transition: border-color var(--transition-fast), opacity var(--transition-fast);
+    opacity: 0.6;
+  }
+  .p1-card__question-toggle:hover { opacity: 1; border-color: var(--text-muted); }
+  .p1-card__question-toggle[aria-expanded="true"] { opacity: 1; border-color: var(--text-muted); }
+
+  .p1-card__question[hidden] { display: none; }
   .p1-card__question {
     font-size: 0.88rem;
     font-style: italic;
@@ -583,6 +638,7 @@ const cardsData: CardData[] = selected.map(b => ({
     border-left: 3px solid var(--border-subtle);
     padding-left: var(--space-sm);
     line-height: 1.5;
+    margin: 0;
   }
 
   .p1-card__tags {
@@ -616,6 +672,40 @@ const cardsData: CardData[] = selected.map(b => ({
     font-family: var(--font-mono);
   }
 
+  /* ── Alerte confirmation sans drag ──────────────────────────────────────── */
+  .p1__confirm[hidden] { display: none; }
+  .p1__confirm {
+    display: flex; flex-direction: column; gap: var(--space-sm);
+    background: rgba(234,179,8,0.08);
+    border: 1px solid rgba(234,179,8,0.35);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+  }
+  .p1__confirm-text {
+    font-size: 0.88rem; color: var(--text-primary); line-height: 1.5;
+  }
+  .p1__confirm-btns {
+    display: flex; gap: var(--space-sm); flex-wrap: wrap;
+  }
+  .p1__confirm-yes {
+    padding: var(--space-xs) var(--space-lg);
+    background: var(--chamber-delegation); color: #fff;
+    border: none; border-radius: var(--radius-sm);
+    font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+  }
+  .p1__confirm-yes:hover { opacity: 0.85; }
+  .p1__confirm-no {
+    padding: var(--space-xs) var(--space-lg);
+    background: transparent; color: var(--text-secondary);
+    border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
+    font-family: var(--font-display); font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+  }
+  .p1__confirm-no:hover { border-color: var(--text-muted); color: var(--text-primary); }
+
   .p1__validate {
     padding: var(--space-md) var(--space-2xl);
     background: var(--chamber-delegation);
@@ -629,14 +719,9 @@ const cardsData: CardData[] = selected.map(b => ({
     transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
 
-  .p1__validate:not(:disabled):hover {
+  .p1__validate:hover {
     opacity: 0.9;
     transform: translateY(-1px);
-  }
-
-  .p1__validate:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
   }
 
   /* ── Panneau de révélation ───────────────────────────────────────────────── */
@@ -645,6 +730,7 @@ const cardsData: CardData[] = selected.map(b => ({
     to   { opacity: 1; transform: translateY(0)    scale(1);    }
   }
 
+  .p1__reveal[hidden] { display: none; }
   .p1__reveal {
     display: flex;
     flex-direction: column;

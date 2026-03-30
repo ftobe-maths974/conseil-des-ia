@@ -21,6 +21,15 @@ export const CHAMBER_LABELS: Record<string, string> = {
   'singularite-vs-standard':    'Singularité vs Standard',
 };
 
+/** Icônes emoji — une par chambre */
+export const CHAMBER_ICONS: Record<string, string> = {
+  'delegation-vs-souverainete': '⚖️',
+  'preuve-vs-simulation':       '🔬',
+  'metabolisme-vs-progres':     '🌿',
+  'invisibilite-vs-arbitrage':  '👁️',
+  'singularite-vs-standard':    '🧬',
+};
+
 /** Labels courts — affichage compact (ex. handoff phase-4) */
 export const CHAMBER_LABELS_SHORT: Record<string, string> = {
   'delegation-vs-souverainete': 'Délégation',
