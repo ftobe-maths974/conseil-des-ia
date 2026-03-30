@@ -37,6 +37,12 @@ const { chamber, nextGroupe } = Astro.props;
 const allActions = await getCollection('actions');
 const selected = selectActions(allActions, chamber, session);
 
+const allTensions = await getCollection('tensions');
+type TensionReminder = { id: string; title: string; content: string; question: string; };
+const tensionsReminder: TensionReminder[] = allTensions
+  .filter(t => t.id.startsWith(session + '/') && t.data.chamber === chamber)
+  .map(t => ({ id: t.data.id, title: t.data.title, content: t.data.content, question: t.data.question }));
+
 type ActionData = {
   id: string;
   title: string;
@@ -79,20 +85,38 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     <!-- Instructions -->
     <section class="p3__instructions" id="p3-instructions">
       <p class="p3__instructions-text">
-        Choisissez <strong>une carte action</strong>. Complétez ensuite les deux phrases
-        qui formeront votre mandat. Il sera transmis au groupe suivant via QR code.
+        Lisez les actions disponibles. Débattez et écartez celles qui vous semblent
+        moins pertinentes — jusqu'à n'en garder <strong>qu'une seule</strong>.
+        C'est cette action que vous transmettrez via QR code.
       </p>
     </section>
 
-    <!-- Grille des 4 cartes action -->
-    <section class="p3__cards" id="p3-cards" aria-label="Cartes action disponibles">
-      {actionsData.map(action => (
+    <!-- Rappel dossier retenu Phase 2 -->
+    <div class="p3__tension-reminder" id="p3-tension-reminder" hidden>
+      <span class="p3__reminder-label">Dossier retenu en Phase 2</span>
+      <h3 class="p3__tension-title" id="p3-tension-title"></h3>
+      <p class="p3__tension-content" id="p3-tension-content"></p>
+      <blockquote class="p3__tension-question" id="p3-tension-question"></blockquote>
+    </div>
+
+    <!-- Zone des actions écartées -->
+    <div class="p3__discarded" id="p3-discarded" hidden>
+      <p class="p3__discarded-label">Actions écartées</p>
+    </div>
+
+    <!-- Cartes action -->
+    <section class="p3__cards" id="p3-cards" aria-label="Actions disponibles">
+      {actionsData.map((action, i) => (
         <article class="p3-card" data-id={action.id} data-rev={action.reversibility} data-lever={action.lever_type}>
           <details class="p3-card__details">
             <summary class="p3-card__summary">
-              <span class="p3-card__id">{action.id}</span>
-              <h2 class="p3-card__title">{action.title}</h2>
-              <span class="p3-card__chevron" aria-hidden="true">›</span>
+              <div class="p3-card__summary-inner">
+                <span class="p3-card__num">{i + 1}</span>
+                <h2 class="p3-card__title">{action.title}</h2>
+                <span class="p3-card__recommended-badge" aria-hidden="true">★ Recommandé</span>
+                <button class="p3-card__trash" type="button" aria-label="Écarter cette action">🗑</button>
+                <button class="p3-card__recover" type="button" aria-label="Récupérer cette action">↩</button>
+              </div>
             </summary>
             <div class="p3-card__expanded">
               <div class="p3-card__badges">
@@ -100,78 +124,23 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
                   {REV_LABELS[action.reversibility]}
                 </span>
                 <span class="p3-card__scope">{action.scope}</span>
-                <span class="p3-card__recommended-badge" aria-hidden="true">★ Recommandé</span>
               </div>
               <p class="p3-card__body">{action.body}</p>
               <div class="p3-card__tags" aria-hidden="true">
                 {action.tags.map(tag => <span class="p3-card__tag">#{tag}</span>)}
               </div>
-              <button
-                class="p3-card__select-btn"
-                data-id={action.id}
-                data-rev={action.reversibility}
-              >
-                Choisir cette action →
-              </button>
             </div>
           </details>
-          <div class="p3-card__check" aria-hidden="true">✓ Sélectionnée</div>
         </article>
       ))}
     </section>
 
-    <!-- Bloc mandat : rappel + formulaire -->
-    <div class="p3__mandat-block" id="p3-mandat-block" hidden>
-
-      <!-- Rappel point de bascule (rempli depuis le hash URL) -->
-      <div class="p3__bascule-reminder" id="p3-bascule-reminder" hidden>
-        <span class="p3__bascule-label">* RAPPEL : Votre point de bascule — Phase 2</span>
-        <p class="p3__bascule-text" id="p3-bascule-text"></p>
-      </div>
-
-      <!-- Formulaire de rédaction du mandat -->
-      <section class="p3__form" id="p3-form">
-      <div class="p3__mandat-card" id="p3-selected-title" aria-hidden="true">
-        <!-- Nom de la carte sélectionnée, rempli par JS -->
-      </div>
-
-      <div class="p3__field">
-        <label class="p3__field-label" for="mandat-parce">
-          <span class="p3__field-prefix">Nous choisissons cette action</span>
-          <span class="p3__field-connector">parce que</span>
-        </label>
-        <textarea
-          id="mandat-parce"
-          class="p3__textarea"
-          rows="2"
-          maxlength="200"
-          placeholder="…cette technologie crée une dépendance irréversible sur laquelle il faut agir maintenant."
-        ></textarea>
-      </div>
-
-      <div class="p3__field">
-        <label class="p3__field-label" for="mandat-condition">
-          <span class="p3__field-prefix">Nous la soumettons</span>
-          <span class="p3__field-connector">à condition que</span>
-          <span class="p3__field-optional">optionnel</span>
-        </label>
-        <textarea
-          id="mandat-condition"
-          class="p3__textarea"
-          rows="2"
-          maxlength="200"
-          placeholder="…un mécanisme de recours humain soit garanti avant tout déploiement à grande échelle."
-        ></textarea>
-      </div>
-
-      <div class="p3__form-footer">
-        <button class="p3__submit" id="p3-submit" disabled>
-          Générer le QR code →
-        </button>
-      </div>
-      </section>
-
-    </div><!-- /.p3__mandat-block -->
+    <!-- Bouton continuer (affiché quand 1 seule action reste) -->
+    <section class="p3__continue" id="p3-continue" hidden>
+      <button class="p3__generate-btn" id="p3-generate-btn">
+        Générer le QR code →
+      </button>
+    </section>
 
     <!-- Panneau QR code -->
     <section class="p3__qr-panel" id="p3-qr-panel" hidden aria-live="polite">
@@ -202,6 +171,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
 <!-- Données pour le script client -->
 <script type="application/json" id="actions-data" set:html={JSON.stringify(actionsData)} />
 <script type="application/json" id="phase4-base" set:html={JSON.stringify(phase4BaseUrl)} />
+<script type="application/json" id="tensions-reminder" set:html={JSON.stringify(tensionsReminder)} />
 
 <script>
   import QRCode from 'qrcode';
@@ -210,33 +180,25 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   // ── Données ──────────────────────────────────────────────────────────────
   const actionsData: Array<{
     id: string; title: string; body: string;
-    reversibility: string; scope: string; chamber: string; tags: string[];
+    reversibility: string; scope: string; chamber: string; lever_type: string; tags: string[];
   }> = JSON.parse(document.getElementById('actions-data')!.textContent!);
 
   const phase4Base: string = JSON.parse(document.getElementById('phase4-base')!.textContent!);
 
-  // ── État ──────────────────────────────────────────────────────────────────
-  let selectedId: string | null = null;
-  let basculeText = '';
+  const tensionsReminder: Array<{ id: string; title: string; content: string; question: string; }> =
+    JSON.parse(document.getElementById('tensions-reminder')!.textContent!);
 
+  // ── Hash Phase 2 ──────────────────────────────────────────────────────────
   const hash = window.location.hash;
 
-  // Décoder le point de bascule depuis Phase 2
-  const basculeMatch = hash.match(/bascule=([^&]*)/);
-  if (basculeMatch) {
-    try {
-      basculeText = decodeURIComponent(atob(basculeMatch[1]));
-    } catch { /* hash malformé, on ignore */ }
-  }
-
-  // Lire la trajectoire transmise par Phase 2
   const trajMatch = hash.match(/traj=([^&]+)/);
   let incomingTraj = parseInt(trajMatch?.[1] ?? '3', 10);
   if (isNaN(incomingTraj) || incomingTraj < 1 || incomingTraj > 5) incomingTraj = 3;
 
-  // Badge "Recommandé" selon le thème dominant de Phase 1
   const dominantMatch = hash.match(/dominant=([^&]+)/);
   const dominant = dominantMatch?.[1] ?? '';
+
+  // Badge "Recommandé" selon le thème dominant de Phase 1
   if (dominant) {
     const recommended = DOMINANT_TO_LEVERS[dominant] ?? [];
     document.querySelectorAll<HTMLElement>('.p3-card[data-lever]').forEach(card => {
@@ -246,105 +208,109 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     });
   }
 
-  // Afficher le rappel si on a un texte
-  const basculeReminder = document.getElementById('p3-bascule-reminder')!;
-  const basculeTextEl   = document.getElementById('p3-bascule-text')!;
-  if (basculeText) {
-    basculeTextEl.textContent = basculeText;
-    basculeReminder.hidden = false;
+  // Afficher la carte de tension retenue (Phase 2)
+  const tensionIdMatch = hash.match(/tensionId=([^&]+)/);
+  if (tensionIdMatch) {
+    const tensionId = decodeURIComponent(tensionIdMatch[1]);
+    const tension = tensionsReminder.find(t => t.id === tensionId);
+    if (tension) {
+      document.getElementById('p3-tension-title')!.textContent    = tension.title;
+      document.getElementById('p3-tension-content')!.textContent  = tension.content;
+      document.getElementById('p3-tension-question')!.textContent = tension.question;
+      document.getElementById('p3-tension-reminder')!.hidden = false;
+    }
   }
 
   // ── Éléments DOM ─────────────────────────────────────────────────────────
   const cardsSection  = document.getElementById('p3-cards')!;
-  const mandatBlock   = document.getElementById('p3-mandat-block')!;
-  const formSection   = document.getElementById('p3-form')!;
+  const discardedZone = document.getElementById('p3-discarded')!;
+  const continueSection = document.getElementById('p3-continue')!;
+  const generateBtn   = document.getElementById('p3-generate-btn') as HTMLButtonElement;
   const qrPanel       = document.getElementById('p3-qr-panel')!;
-  const selectedTitle = document.getElementById('p3-selected-title')!;
-  const parcequeTa    = document.getElementById('mandat-parce') as HTMLTextAreaElement;
-  const conditionTa   = document.getElementById('mandat-condition') as HTMLTextAreaElement;
-  const submitBtn     = document.getElementById('p3-submit') as HTMLButtonElement;
   const qrDest        = document.getElementById('p3-qr-dest')!;
   const qrCardEl      = document.getElementById('p3-qr-card')!;
   const qrCanvas      = document.getElementById('qr-canvas') as HTMLCanvasElement;
   const qrUrlEl       = document.getElementById('p3-qr-url')!;
   const copyBtn       = document.getElementById('p3-copy-btn') as HTMLButtonElement;
 
-  // ── Sélection de carte ────────────────────────────────────────────────────
-  cardsSection.addEventListener('click', (e: Event) => {
-    const btn = (e.target as HTMLElement).closest<HTMLElement>('.p3-card__select-btn');
-    if (!btn) return;
-
-    const id  = btn.dataset.id!;
-
-    // Déselectionner l'ancienne carte
-    cardsSection.querySelectorAll<HTMLElement>('.p3-card--selected').forEach(c => {
-      c.classList.remove('p3-card--selected');
-    });
-
-    // Sélectionner la nouvelle
-    const card = btn.closest<HTMLElement>('.p3-card')!;
-    card.classList.add('p3-card--selected');
-    selectedId = id;
-
-    // Mettre à jour le titre affiché dans le formulaire
-    const action = actionsData.find(a => a.id === id);
-    selectedTitle.textContent = action?.title ?? '';
-
-    // Afficher le bloc mandat
-    mandatBlock.hidden = false;
-    mandatBlock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    parcequeTa.focus();
-    updateSubmitState();
-  });
-
-  // ── Formulaire ────────────────────────────────────────────────────────────
-  parcequeTa.addEventListener('input', updateSubmitState);
-  conditionTa.addEventListener('input', updateSubmitState);
-
-  function updateSubmitState(): void {
-    submitBtn.disabled = !(selectedId && parcequeTa.value.trim().length >= 8);
+  // ── Poubelle / récupération ───────────────────────────────────────────────
+  function countActive(): number {
+    return cardsSection.querySelectorAll('.p3-card:not([hidden])').length;
   }
 
-  // ── Génération QR code ────────────────────────────────────────────────────
-  submitBtn.addEventListener('click', async () => {
-    if (!selectedId) return;
+  function renumberActive(): void {
+    [...cardsSection.querySelectorAll<HTMLElement>('.p3-card:not([hidden])')].forEach((card, i) => {
+      const num = card.querySelector<HTMLElement>('.p3-card__num');
+      if (num) num.textContent = String(i + 1);
+    });
+  }
 
-    const action = actionsData.find(a => a.id === selectedId);
+  function updateContinueVisibility(): void {
+    continueSection.hidden = countActive() !== 1;
+  }
+
+  document.addEventListener('click', (e: Event) => {
+    const target = e.target as HTMLElement;
+
+    // ── Écarter ──────────────────────────────────────────────────────────────
+    const trashBtn = target.closest<HTMLElement>('.p3-card__trash');
+    if (trashBtn) {
+      const card = trashBtn.closest<HTMLElement>('.p3-card');
+      if (!card || countActive() <= 1) return;
+      card.querySelector('details')?.removeAttribute('open');
+      card.classList.add('p3-card--trashed');
+      discardedZone.appendChild(card);
+      discardedZone.hidden = false;
+      renumberActive();
+      updateContinueVisibility();
+      return;
+    }
+
+    // ── Récupérer ─────────────────────────────────────────────────────────────
+    const recoverBtn = target.closest<HTMLElement>('.p3-card__recover');
+    if (recoverBtn) {
+      const card = recoverBtn.closest<HTMLElement>('.p3-card');
+      if (!card) return;
+      card.classList.remove('p3-card--trashed');
+      cardsSection.appendChild(card);
+      if (discardedZone.querySelectorAll('.p3-card').length === 0) {
+        discardedZone.hidden = true;
+      }
+      renumberActive();
+      updateContinueVisibility();
+    }
+  });
+
+  // ── Génération QR code ────────────────────────────────────────────────────
+  generateBtn.addEventListener('click', async () => {
+    const activeCards = [...cardsSection.querySelectorAll<HTMLElement>('.p3-card:not([hidden])')];
+    if (activeCards.length !== 1) return;
+
+    const actionId = activeCards[0].dataset.id!;
+    const action = actionsData.find(a => a.id === actionId);
     if (!action) return;
 
-    const parce     = parcequeTa.value.trim();
-    const condition = conditionTa.value.trim();
-    const text = condition
-      ? `Parce que : ${parce} — À condition que : ${condition}`
-      : `Parce que : ${parce}`;
-    // Modifier la trajectoire selon la réversibilité de l'action choisie
     const trajDelta = action.reversibility === 'green' ? -1
                     : action.reversibility === 'red'   ?  1
                     :                                     0;
     const outTraj = clampTraj(incomingTraj + trajDelta);
 
+    const tensionId = tensionIdMatch ? decodeURIComponent(tensionIdMatch[1]) : undefined;
+
     const handoff = {
-      action:   { id: action.id, title: action.title },
-      bascule:  basculeText || undefined,
-      text,
-      level:    action.reversibility,
-      chamber:  action.chamber,
-      from:     document.querySelector<HTMLElement>('.p3')!.dataset.groupe ?? '',
-      traj:     outTraj,
+      action:    { id: action.id, title: action.title },
+      tensionId: tensionId || undefined,
+      level:     action.reversibility,
+      chamber:   action.chamber,
+      from:      document.querySelector<HTMLElement>('.p3')!.dataset.groupe ?? '',
+      traj:      outTraj,
     };
 
     const encoded = btoa(encodeURIComponent(JSON.stringify(handoff)));
     const fullUrl = `${window.location.origin}${phase4Base}#handoff=${encoded}`;
 
-    // Remplir la carte de résumé
-    const basculeHtml = basculeText
-      ? `<div class="p3-qr-summary__bascule">
-           <span class="p3-qr-summary__bascule-label">Point de bascule</span>
-           <p class="p3-qr-summary__bascule-text">${escHtml(basculeText)}</p>
-         </div>`
-      : '';
+    // Remplir la carte récapitulative
     qrCardEl.innerHTML = `
-      ${basculeHtml}
       <div class="p3-qr-summary__meta">
         <span class="p3-card__id">${escHtml(action.id)}</span>
         <span class="rev-badge rev-badge--glow" data-rev="${escHtml(action.reversibility)}">
@@ -352,12 +318,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
         </span>
       </div>
       <h3 class="p3-qr-summary__title">${escHtml(action.title)}</h3>
-      <dl class="p3-qr-summary__mandat">
-        <dt>Parce que</dt>
-        <dd>${escHtml(parce)}</dd>
-        <dt>À condition que</dt>
-        <dd>${escHtml(condition)}</dd>
-      </dl>
+      <p class="p3-qr-summary__body">${escHtml(action.body)}</p>
     `;
 
     // Destination
@@ -374,7 +335,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     qrUrlEl.textContent = fullUrl;
 
     // Afficher le panneau
-    mandatBlock.hidden = true;
+    continueSection.hidden = true;
     document.getElementById('p3-instructions')!.hidden = true;
     qrPanel.hidden = false;
     qrPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -409,9 +370,10 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     display: flex;
     flex-direction: column;
     gap: var(--space-xl);
+    padding-bottom: var(--space-3xl);
   }
 
-  /* ── En-tête (identique Phase 1) ────────────────────────────────────────── */
+  /* ── En-tête ─────────────────────────────────────────────────────────────── */
   .p3__header {
     display: flex;
     justify-content: space-between;
@@ -432,33 +394,6 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     text-align: right; max-width: 16ch; line-height: 1.3;
   }
 
-  /* ── Bloc mandat (parent rappel + formulaire) ────────────────────────────── */
-  .p3__mandat-block {
-    display: flex; flex-direction: column; gap: var(--space-lg);
-    background: var(--bg-surface);
-    border: 2px solid var(--chamber-color, var(--chamber-delegation));
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-    box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
-  }
-
-  /* ── Rappel point de bascule ─────────────────────────────────────────────── */
-  .p3__bascule-reminder {
-    background: var(--bg-card);
-    border-left: 3px solid var(--chamber-color, var(--chamber-delegation));
-    border-radius: var(--radius-sm);
-    padding: var(--space-md) var(--space-lg);
-    display: flex; flex-direction: column; gap: var(--space-xs);
-  }
-  .p3__bascule-label {
-    font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
-    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
-  }
-  .p3__bascule-text {
-    font-size: 0.92rem; color: var(--text-primary);
-    line-height: 1.55; font-style: italic;
-  }
-
   /* ── Instructions ────────────────────────────────────────────────────────── */
   .p3__instructions-text {
     font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;
@@ -466,53 +401,120 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg);
   }
 
-  /* ── Grille de cartes ────────────────────────────────────────────────────── */
-  .p3__cards {
+  /* ── Rappel dossier tension retenu ──────────────────────────────────────── */
+  .p3__tension-reminder {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--chamber-color, var(--chamber-delegation));
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    display: flex; flex-direction: column; gap: var(--space-sm);
+  }
+  .p3__reminder-label {
+    font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p3__tension-title {
+    font-family: var(--font-display); font-size: 0.95rem;
+    font-weight: 600; line-height: 1.3; color: var(--text-primary);
+  }
+  .p3__tension-content {
+    font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;
+  }
+  .p3__tension-question {
+    font-size: 0.85rem; font-style: italic; color: var(--text-primary);
+    border-left: 3px solid var(--border-subtle);
+    padding-left: var(--space-sm); line-height: 1.5;
+  }
+
+  /* ── Zone actions écartées ───────────────────────────────────────────────── */
+  .p3__discarded {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-sm);
+  }
+  .p3__discarded-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
-  /* ── Carte action ────────────────────────────────────────────────────────── */
+  /* ── Cartes accordion ────────────────────────────────────────────────────── */
+  .p3__cards {
+    display: flex; flex-direction: column; gap: var(--space-sm);
+  }
+
   .p3-card {
     background: var(--bg-card);
-    border: 2px solid var(--border-subtle);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    transition: border-color var(--transition-base);
   }
-
-  .p3-card--selected {
-    border-color: var(--chamber-delegation);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  .p3-card:has(details[open]) {
+    border-color: var(--chamber-color, var(--border-subtle));
   }
-
-  /* ── Summary (replié) ────────────────────────────────────────────────────── */
-  .p3-card__details { }
 
   .p3-card__summary {
-    list-style: none; cursor: pointer; user-select: none;
-    display: flex; align-items: center; gap: var(--space-md);
-    padding: var(--space-md) var(--space-lg);
-    transition: background var(--transition-fast);
+    list-style: none; cursor: pointer; padding: var(--space-lg); user-select: none;
   }
   .p3-card__summary::-webkit-details-marker { display: none; }
-  .p3-card__summary:hover,
-  .p3-card__details[open] .p3-card__summary { background: var(--bg-card-hover); }
+  .p3-card__summary:hover { background: var(--bg-card-hover); }
 
-  .p3-card__id {
-    font-family: var(--font-mono); font-size: 0.7rem;
-    color: var(--text-muted); flex-shrink: 0;
+  .p3-card__summary-inner {
+    display: flex; align-items: center; gap: var(--space-md);
+  }
+
+  .p3-card__num {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: var(--text-muted); min-width: 1.5ch; flex-shrink: 0;
   }
   .p3-card__title {
-    flex: 1; font-family: var(--font-display); font-size: 0.95rem;
-    font-weight: 600; line-height: 1.3;
+    flex: 1; font-family: var(--font-display);
+    font-size: 0.95rem; font-weight: 600; line-height: 1.3;
   }
-  .p3-card__chevron {
-    font-size: 1.1rem; color: var(--text-muted); flex-shrink: 0;
-    transition: transform var(--transition-fast);
+
+  /* Badge Recommandé dans le summary */
+  .p3-card__recommended-badge { display: none; }
+  .p3-card[data-recommended="true"] .p3-card__recommended-badge {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 600;
+    color: #f59e0b; background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: var(--radius-sm); padding: 2px 6px; flex-shrink: 0;
   }
-  .p3-card__details[open] .p3-card__chevron { transform: rotate(90deg); }
+  .p3-card[data-recommended="true"] {
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+
+  /* ── Boutons poubelle / récupération ────────────────────────────────────── */
+  .p3-card__trash,
+  .p3-card__recover {
+    background: none; border: none; cursor: pointer;
+    font-size: 1rem; padding: 0.2rem 0.3rem;
+    color: var(--text-muted); line-height: 1; flex-shrink: 0;
+    transition: color var(--transition-fast), opacity var(--transition-fast);
+    opacity: 0;
+  }
+  .p3-card:hover .p3-card__trash,
+  .p3-card--trashed .p3-card__recover { opacity: 1; }
+  .p3-card__trash:hover { color: var(--text-primary); }
+  .p3-card__recover { display: none; }
+  .p3-card--trashed .p3-card__trash   { display: none; }
+  .p3-card--trashed .p3-card__recover { display: inline-flex; opacity: 1; }
+
+  /* ── Carte écartée (compacte) ────────────────────────────────────────────── */
+  .p3-card--trashed {
+    opacity: 0.55;
+    transition: opacity var(--transition-base);
+  }
+  .p3-card--trashed .p3-card__summary  { padding: var(--space-sm) var(--space-md); }
+  .p3-card--trashed .p3-card__num,
+  .p3-card--trashed .p3-card__recommended-badge { display: none; }
+  .p3-card--trashed .p3-card__title    { font-size: 0.8rem; font-weight: 400; }
+  .p3-card--trashed .p3-card__expanded { display: none; }
 
   /* ── Contenu déplié ──────────────────────────────────────────────────────── */
   .p3-card__expanded {
@@ -520,22 +522,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     border-top: 1px solid var(--border-subtle);
     display: flex; flex-direction: column; gap: var(--space-md);
   }
-
   .p3-card__badges { display: flex; gap: var(--space-xs); align-items: center; flex-wrap: wrap; }
-
-  /* Badge Recommandé — masqué par défaut, visible quand dominant correspond */
-  .p3-card__recommended-badge { display: none; }
-  .p3-card[data-recommended="true"] .p3-card__recommended-badge {
-    display: inline-flex; align-items: center; gap: 3px;
-    font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
-    color: #f59e0b; background: rgba(245, 158, 11, 0.12);
-    border: 1px solid rgba(245, 158, 11, 0.35);
-    border-radius: var(--radius-sm); padding: 2px 7px;
-  }
-  .p3-card[data-recommended="true"] {
-    border-color: rgba(245, 158, 11, 0.4);
-    box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.15);
-  }
   .p3-card__scope {
     font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);
     background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
@@ -548,97 +535,18 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm); padding: 1px 6px;
   }
-
-  /* ── Bouton de sélection ─────────────────────────────────────────────────── */
-  .p3-card__select-btn {
-    align-self: flex-end;
-    padding: var(--space-xs) var(--space-lg);
-    background: transparent; border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md); color: var(--text-secondary);
-    font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
-    cursor: pointer;
-    transition: background var(--transition-fast), border-color var(--transition-fast),
-                color var(--transition-fast);
-  }
-  .p3-card__select-btn:hover {
-    background: var(--chamber-delegation); border-color: var(--chamber-delegation);
-    color: #fff;
-  }
-  .p3-card--selected .p3-card__select-btn {
-    background: var(--chamber-delegation); border-color: var(--chamber-delegation);
-    color: #fff;
+  .p3-card__id {
+    font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);
   }
 
-  /* ── Check indicator ─────────────────────────────────────────────────────── */
-  .p3-card__check {
-    display: none;
-    font-family: var(--font-mono); font-size: 0.72rem;
-    color: var(--chamber-delegation); font-weight: 600;
-    padding: 2px var(--space-lg) var(--space-xs);
+  /* ── Bouton continuer ────────────────────────────────────────────────────── */
+  .p3__continue[hidden] { display: none; }
+  .p3__continue {
+    display: flex;
+    justify-content: center;
+    padding-bottom: var(--space-2xl);
   }
-  .p3-card--selected .p3-card__check { display: block; }
-
-  /* ── Alerte red ──────────────────────────────────────────────────────────── */
-  .p3__red-warning {
-    padding: var(--space-md) var(--space-lg);
-    background: rgba(239, 68, 68, 0.1);
-    border: 1px solid rgba(239, 68, 68, 0.4);
-    border-radius: var(--radius-md);
-    color: #fca5a5;
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  /* ── Formulaire mandat ───────────────────────────────────────────────────── */
-  @keyframes slide-in {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .p3__form {
-    display: flex; flex-direction: column; gap: var(--space-lg);
-  }
-
-  /* Nom de la carte sélectionnée */
-  .p3__mandat-card {
-    font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
-    line-height: 1.3; color: var(--text-primary);
-    padding: var(--space-sm) var(--space-md);
-    background: var(--bg-surface); border-radius: var(--radius-md);
-    border-left: 3px solid var(--chamber-delegation);
-  }
-
-  /* Champ guidé */
-  .p3__field { display: flex; flex-direction: column; gap: var(--space-xs); }
-
-  .p3__field-label {
-    display: flex; align-items: baseline; gap: var(--space-sm); flex-wrap: wrap;
-  }
-  .p3__field-prefix {
-    font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-body);
-  }
-  .p3__field-connector {
-    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
-    color: var(--text-primary);
-  }
-  .p3__field-optional {
-    font-family: var(--font-mono); font-size: 0.7rem;
-    color: var(--text-muted); margin-left: var(--space-xs);
-  }
-
-  .p3__textarea {
-    width: 100%; background: var(--bg-surface); border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md); color: var(--text-primary);
-    font-family: var(--font-body); font-size: 0.95rem; line-height: 1.6;
-    padding: var(--space-md); resize: vertical; outline: none;
-    transition: border-color var(--transition-fast);
-  }
-  .p3__textarea:focus { border-color: var(--chamber-delegation); }
-  .p3__textarea::placeholder { color: var(--text-muted); font-style: italic; font-size: 0.85rem; }
-
-  .p3__form-footer { display: flex; justify-content: flex-end; }
-
-  .p3__submit {
+  .p3__generate-btn {
     padding: var(--space-sm) var(--space-xl);
     background: var(--chamber-delegation); color: #fff;
     border: none; border-radius: var(--radius-md);
@@ -646,8 +554,7 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
     cursor: pointer;
     transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
-  .p3__submit:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
-  .p3__submit:disabled { opacity: 0.35; cursor: not-allowed; }
+  .p3__generate-btn:hover { opacity: 0.9; transform: translateY(-1px); }
 
   /* ── Panneau QR code ─────────────────────────────────────────────────────── */
   @keyframes reveal-in {
@@ -683,36 +590,8 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   .p3-qr-summary__title {
     font-family: var(--font-display); font-size: 1rem; font-weight: 600; line-height: 1.3;
   }
-  .p3-qr-summary__mandat {
-    display: flex; flex-direction: column; gap: var(--space-sm);
-    border-left: 3px solid var(--chamber-delegation);
-    padding-left: var(--space-md);
-  }
-  /* Bloc bascule dans la récap QR */
-  .p3-qr-summary__bascule {
-    padding: var(--space-sm) var(--space-md);
-    background: var(--bg-surface);
-    border-left: 3px solid var(--chamber-color, var(--chamber-delegation));
-    border-radius: var(--radius-sm);
-    display: flex; flex-direction: column; gap: 4px;
-    margin-bottom: var(--space-sm);
-  }
-  .p3-qr-summary__bascule-label {
-    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
-    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
-  }
-  .p3-qr-summary__bascule-text {
-    font-size: 0.85rem; color: var(--text-secondary);
-    line-height: 1.5; font-style: italic;
-  }
-
-  .p3-qr-summary__mandat dt {
-    font-family: var(--font-display); font-size: 0.75rem; font-weight: 700;
-    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;
-  }
-  .p3-qr-summary__mandat dd {
-    font-size: 0.9rem; color: var(--text-secondary);
-    line-height: 1.55; font-style: italic; margin: 0;
+  .p3-qr-summary__body {
+    font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;
   }
 
   /* Badge glow dans la récap */
@@ -720,13 +599,8 @@ const phase4BaseUrl = `${import.meta.env.BASE_URL}/groupe/${session}/phase-4/${n
   .rev-badge--glow[data-rev="yellow"] { box-shadow: 0 0 12px rgba(234,179,8,0.4); }
   .rev-badge--glow[data-rev="red"]    { box-shadow: 0 0 12px rgba(239,68,68,0.4); }
 
-  .p3__qr-wrap {
-    display: flex; justify-content: center;
-  }
-  .p3__qr-canvas {
-    border-radius: var(--radius-md);
-    max-width: 100%;
-  }
+  .p3__qr-wrap { display: flex; justify-content: center; }
+  .p3__qr-canvas { border-radius: var(--radius-md); max-width: 100%; }
 
   .p3__qr-url-wrap {
     display: flex; align-items: center; gap: var(--space-sm);

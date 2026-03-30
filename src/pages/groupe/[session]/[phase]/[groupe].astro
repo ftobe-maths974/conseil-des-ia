@@ -77,20 +77,17 @@ const cardsData: CardData[] = selected.map(b => ({
     <!-- Instructions -->
     <section class="p1__instructions" id="instructions">
       <p class="p1__instructions-text">
-        Lisez les 3 dossiers et rangez-les <strong>du moins réversible en haut</strong> au
-        <strong>plus réversible en bas</strong>. Débattez entre vous — les badges de couleur
-        sont des indices, pas la réponse.
+        Lisez les 3 situations. Classez-les : en haut, celle qui sera la plus difficile à rattraper si on laisse faire. Votre premier choix comptera le plus pour la suite. Débattez avant de valider.
       </p>
     </section>
 
     <!-- Pile de cartes -->
     <ol class="p1__stack" id="card-stack" aria-label="Classement des cartes">
       {cardsData.map((card, i) => (
-        <li class="p1-card" data-id={card.id} data-rev={card.reversibility} data-theme={card.slot_theme}>
-          <div class="p1-card__controls">
-            <button class="p1-card__btn p1-card__btn--up" data-dir="up" aria-label="Monter cette carte">↑</button>
-            <span class="p1-card__rank" aria-label={`Position ${i + 1}`}>{i + 1}</span>
-            <button class="p1-card__btn p1-card__btn--down" data-dir="down" aria-label="Descendre cette carte">↓</button>
+        <li class="p1-card" draggable="true" data-id={card.id} data-rev={card.reversibility} data-theme={card.slot_theme}>
+          <div class="p1-card__handle" aria-hidden="true">
+            <span class="p1-card__rank">{i + 1}</span>
+            <span class="p1-card__grip">⠿</span>
           </div>
           <details class="p1-card__details">
             <summary class="p1-card__summary">
@@ -113,7 +110,7 @@ const cardsData: CardData[] = selected.map(b => ({
 
     <!-- Pied de page actions -->
     <footer class="p1__footer" id="sort-footer">
-      <p class="p1__footer-hint">Utilisez ↑ ↓ pour modifier le classement</p>
+      <p class="p1__footer-hint">Glissez les dossiers pour les classer</p>
       <button class="p1__validate" id="btn-validate" disabled aria-disabled="true">
         Valider notre choix
       </button>
@@ -122,11 +119,11 @@ const cardsData: CardData[] = selected.map(b => ({
     <!-- Panneau de révélation (caché jusqu'à validation) -->
     <section class="p1__reveal" id="reveal-panel" hidden aria-live="polite">
       <div class="p1__reveal-header">
-        <span class="p1__reveal-label">Votre carte la plus irréversible</span>
+        <span class="p1__reveal-label">Résultat de votre classement</span>
       </div>
-      <div class="p1__reveal-card" id="reveal-card">
+      <ol class="p1__reveal-list" id="reveal-list">
         <!-- rempli par le script -->
-      </div>
+      </ol>
       <div class="p1__reveal-actions">
         <a class="p1__continue" id="btn-continue" href={phase2Url}>
           Continuer vers la Phase 2 →
@@ -159,7 +156,7 @@ const cardsData: CardData[] = selected.map(b => ({
   const validateBtn = document.getElementById('btn-validate') as HTMLButtonElement;
   const footer      = document.getElementById('sort-footer') as HTMLElement;
   const revealPanel = document.getElementById('reveal-panel') as HTMLElement;
-  const revealCard  = document.getElementById('reveal-card') as HTMLElement;
+  const revealList  = document.getElementById('reveal-list') as HTMLElement;
 
   // ── État ──────────────────────────────────────────────────────────────────
   let hasMoved = false;
@@ -172,92 +169,135 @@ const cardsData: CardData[] = selected.map(b => ({
     });
   }
 
-  function updateButtonStates(): void {
-    const cards = stack.querySelectorAll<HTMLElement>('.p1-card');
-    cards.forEach((card, i) => {
-      const up   = card.querySelector<HTMLButtonElement>('[data-dir="up"]');
-      const down = card.querySelector<HTMLButtonElement>('[data-dir="down"]');
-      if (up)   { up.disabled   = i === 0;                 }
-      if (down) { down.disabled = i === cards.length - 1;  }
-    });
+  function markMoved(): void {
+    hasMoved = true;
+    validateBtn.disabled = false;
+    validateBtn.removeAttribute('aria-disabled');
   }
 
-  function bumpCard(card: HTMLElement): void {
-    card.classList.remove('p1-card--moving');
-    // Force reflow pour relancer l'animation
-    void card.offsetWidth;
-    card.classList.add('p1-card--moving');
-    card.addEventListener('animationend', () => {
-      card.classList.remove('p1-card--moving');
-    }, { once: true });
-  }
+  // ── Drag and drop (souris) ────────────────────────────────────────────────
+  let draggedEl: HTMLElement | null = null;
 
-  // ── Gestion des déplacements ──────────────────────────────────────────────
-  stack.addEventListener('click', (e: Event) => {
-    const target = e.target as HTMLElement;
-    const btn = target.closest<HTMLElement>('[data-dir]');
-    if (!btn) return;
-
-    const card = btn.closest<HTMLElement>('.p1-card');
+  stack.addEventListener('dragstart', (e: DragEvent) => {
+    const card = (e.target as HTMLElement).closest<HTMLElement>('.p1-card');
     if (!card) return;
+    draggedEl = card;
+    e.dataTransfer!.effectAllowed = 'move';
 
-    const dir = btn.dataset.dir;
-    if (dir === 'up' && card.previousElementSibling) {
-      stack.insertBefore(card, card.previousElementSibling);
-      bumpCard(card);
-      hasMoved = true;
-    } else if (dir === 'down' && card.nextElementSibling) {
-      stack.insertBefore(card.nextElementSibling, card);
-      bumpCard(card);
-      hasMoved = true;
+    // Clone replié pour la ghost image — la carte ouverte serait trop grande
+    const clone = card.cloneNode(true) as HTMLElement;
+    clone.querySelector('details')?.removeAttribute('open');
+    clone.style.cssText = `position:absolute;top:-9999px;width:${card.offsetWidth}px;`;
+    document.body.appendChild(clone);
+    e.dataTransfer!.setDragImage(clone, 24, 24);
+
+    setTimeout(() => {
+      card.querySelector('details')?.removeAttribute('open');
+      card.classList.add('p1-card--dragging');
+      document.body.removeChild(clone);
+    }, 0);
+  });
+
+  stack.addEventListener('dragend', () => {
+    draggedEl?.classList.remove('p1-card--dragging');
+    draggedEl = null;
+  });
+
+  stack.addEventListener('dragover', (e: DragEvent) => {
+    e.preventDefault();
+    if (!draggedEl) return;
+    const target = (e.target as HTMLElement).closest<HTMLElement>('.p1-card');
+    if (!target || target === draggedEl) return;
+    const rect = target.getBoundingClientRect();
+    if (e.clientY < rect.top + rect.height / 2) {
+      stack.insertBefore(draggedEl, target);
+    } else {
+      stack.insertBefore(draggedEl, target.nextElementSibling);
     }
-
     updateRanks();
-    updateButtonStates();
+    markMoved();
+  });
 
-    if (hasMoved) {
-      validateBtn.disabled = false;
-      validateBtn.removeAttribute('aria-disabled');
+  stack.addEventListener('drop', (e: DragEvent) => e.preventDefault());
+
+  // ── Glisser-déposer tactile (mobile) ─────────────────────────────────────
+  let touchCard: HTMLElement | null = null;
+
+  stack.addEventListener('touchstart', (e: TouchEvent) => {
+    const handle = (e.target as HTMLElement).closest<HTMLElement>('.p1-card__handle');
+    if (!handle) return;
+    touchCard = handle.closest<HTMLElement>('.p1-card');
+    if (!touchCard) return;
+    e.preventDefault();
+    touchCard.querySelector('details')?.removeAttribute('open');
+    touchCard.classList.add('p1-card--dragging');
+  }, { passive: false });
+
+  stack.addEventListener('touchmove', (e: TouchEvent) => {
+    if (!touchCard) return;
+    e.preventDefault();
+    const y = e.touches[0].clientY;
+    const siblings = [...stack.querySelectorAll<HTMLElement>('.p1-card')].filter(c => c !== touchCard);
+    let inserted = false;
+    for (const sibling of siblings) {
+      const rect = sibling.getBoundingClientRect();
+      if (y < rect.top + rect.height / 2) {
+        stack.insertBefore(touchCard, sibling);
+        inserted = true;
+        break;
+      }
     }
+    if (!inserted) stack.appendChild(touchCard!);
+    updateRanks();
+    markMoved();
+  }, { passive: false });
+
+  stack.addEventListener('touchend', () => {
+    touchCard?.classList.remove('p1-card--dragging');
+    touchCard = null;
   });
 
   // ── Validation ────────────────────────────────────────────────────────────
   validateBtn.addEventListener('click', () => {
     if (!hasMoved) return;
 
-    const allCardEls = stack.querySelectorAll<HTMLElement>('.p1-card');
-    const topCardEl = allCardEls[0];
-    if (!topCardEl) return;
+    const allCardEls = [...stack.querySelectorAll<HTMLElement>('.p1-card')];
 
-    const cardId  = topCardEl.dataset.id ?? '';
-    const cardRev = topCardEl.dataset.rev ?? 'yellow';
-    const data    = cards.find(c => c.id === cardId);
-    if (!data) return;
+    // Position → réversibilité estimée par le groupe (haut = plus irréversible)
+    const positionToRev: string[] = ['red', 'yellow', 'green'];
 
-    // Construire le contenu de révélation
-    const tagsHtml = data.tags
-      .map(t => `<span class="p1-card__tag">#${t}</span>`)
-      .join('');
+    revealList.innerHTML = allCardEls.map((cardEl, i) => {
+      const cardId       = cardEl.dataset.id ?? '';
+      const actualRev    = cardEl.dataset.rev ?? 'yellow';
+      const estimatedRev = positionToRev[i] ?? 'yellow';
+      const data         = cards.find(c => c.id === cardId);
+      if (!data) return '';
 
-    revealCard.innerHTML = `
-      <div class="p1-card__meta">
-        <span class="p1-card__id">${cardId}</span>
-        <span class="rev-badge rev-badge--glow" data-rev="${cardRev}">
-          ${REV_LABELS[cardRev] ?? cardRev}
-        </span>
-      </div>
-      <h2 class="p1-card__title">${escHtml(data.title)}</h2>
-      <p class="p1-card__situation">${escHtml(data.situation)}</p>
-      <blockquote class="p1-card__question">${escHtml(data.question)}</blockquote>
-      <div class="p1-card__tags" aria-hidden="true">${tagsHtml}</div>
-    `;
+      const isCorrect      = actualRev === estimatedRev;
+      const actualLabel    = REV_LABELS[actualRev]    ?? actualRev;
+      const estimatedLabel = REV_LABELS[estimatedRev] ?? estimatedRev;
+
+      const verdict = isCorrect
+        ? `Bravo — ce problème est effectivement <strong>${actualLabel}</strong>.`
+        : `Vous avez estimé ce problème <strong>${estimatedLabel}</strong>, alors qu'il est <strong>${actualLabel}</strong>.`;
+
+      return `
+        <li class="p1__reveal-item ${isCorrect ? 'p1__reveal-item--correct' : 'p1__reveal-item--wrong'}">
+          <span class="p1__reveal-rank">${i + 1}</span>
+          <div class="p1__reveal-content">
+            <p class="p1__reveal-title">${escHtml(data.title)}</p>
+            <p class="p1__reveal-verdict">${verdict}</p>
+          </div>
+          <span class="rev-badge rev-badge--glow" data-rev="${actualRev}">${actualLabel}</span>
+        </li>
+      `;
+    }).join('');
 
     // Encoder les thèmes + trajectoire dans le lien "Continuer vers Phase 2"
-    const allCardEls2 = stack.querySelectorAll<HTMLElement>('.p1-card');
-    const dominant  = allCardEls2[0]?.dataset.theme ?? '';
-    const secondary = allCardEls2[1]?.dataset.theme ?? '';
-    const minor     = allCardEls2[allCardEls2.length - 1]?.dataset.theme ?? '';
-    const topRev    = allCardEls2[0]?.dataset.rev ?? 'yellow';
+    const dominant  = allCardEls[0]?.dataset.theme ?? '';
+    const secondary = allCardEls[1]?.dataset.theme ?? '';
+    const minor     = allCardEls[allCardEls.length - 1]?.dataset.theme ?? '';
+    const topRev    = allCardEls[0]?.dataset.rev ?? 'yellow';
     const traj      = clampTraj(initTraj(topRev));
     const continueBtn = document.getElementById('btn-continue') as HTMLAnchorElement;
     if (continueBtn) {
@@ -284,8 +324,69 @@ const cardsData: CardData[] = selected.map(b => ({
 
   // ── Initialisation ────────────────────────────────────────────────────────
   updateRanks();
-  updateButtonStates();
 </script>
+
+<!-- Styles pour les éléments créés dynamiquement par JS (innerHTML) -->
+<style is:global>
+  /* Items de comparaison (créés par JS) */
+  .p1__reveal-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md) var(--space-lg);
+  }
+  .p1__reveal-item--correct {
+    border-color: color-mix(in srgb, var(--rev-green) 35%, transparent);
+  }
+  .p1__reveal-item--wrong {
+    border-color: color-mix(in srgb, var(--rev-yellow) 35%, transparent);
+  }
+  .p1__reveal-rank {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    min-width: 1.5ch;
+    text-align: center;
+  }
+  .p1__reveal-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  .p1__reveal-title {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+  .p1__reveal-verdict {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+  .p1__reveal-verdict strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  /* Glow sur le badge dans les items */
+  .p1__reveal-item .rev-badge--glow[data-rev="green"] {
+    box-shadow: 0 0 12px rgba(34,  197, 94,  0.4);
+  }
+  .p1__reveal-item .rev-badge--glow[data-rev="yellow"] {
+    box-shadow: 0 0 12px rgba(234, 179, 8,   0.4);
+  }
+  .p1__reveal-item .rev-badge--glow[data-rev="red"] {
+    box-shadow: 0 0 12px rgba(239, 68,  68,  0.4);
+  }
+</style>
 
 <style>
   /* ── Layout principal ────────────────────────────────────────────────────── */
@@ -374,19 +475,14 @@ const cardsData: CardData[] = selected.map(b => ({
     border-color: color-mix(in srgb, var(--text-muted) 60%, transparent);
   }
 
-  /* Animation de déplacement */
-  @keyframes card-bump {
-    0%   { transform: scale(1);    box-shadow: none; }
-    40%  { transform: scale(1.02); box-shadow: var(--shadow-card); }
-    100% { transform: scale(1);    box-shadow: none; }
+  /* État pendant le drag */
+  .p1-card--dragging {
+    opacity: 0.35;
+    border-style: dashed;
   }
 
-  .p1-card--moving {
-    animation: card-bump 220ms ease;
-  }
-
-  /* ── Contrôles ↑↓ ────────────────────────────────────────────────────────── */
-  .p1-card__controls {
+  /* ── Handle drag ─────────────────────────────────────────────────────────── */
+  .p1-card__handle {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -395,6 +491,13 @@ const cardsData: CardData[] = selected.map(b => ({
     flex-shrink: 0;
     padding: var(--space-md) var(--space-sm) var(--space-md) var(--space-md);
     border-right: 1px solid var(--border-subtle);
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .p1-card__handle:active {
+    cursor: grabbing;
   }
 
   .p1-card__rank {
@@ -406,32 +509,11 @@ const cardsData: CardData[] = selected.map(b => ({
     text-align: center;
   }
 
-  .p1-card__btn {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    color: var(--text-secondary);
-    cursor: pointer;
+  .p1-card__grip {
     font-size: 1rem;
+    color: var(--text-muted);
+    opacity: 0.45;
     line-height: 1;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background var(--transition-fast), color var(--transition-fast),
-                border-color var(--transition-fast);
-  }
-
-  .p1-card__btn:hover:not(:disabled) {
-    background: var(--bg-card-hover);
-    color: var(--text-primary);
-    border-color: var(--text-muted);
-  }
-
-  .p1-card__btn:disabled {
-    opacity: 0.25;
-    cursor: not-allowed;
   }
 
   /* ── Accordion de carte ──────────────────────────────────────────────────── */
@@ -455,10 +537,7 @@ const cardsData: CardData[] = selected.map(b => ({
   .p1-card__details[open] .p1-card__summary { background: var(--bg-card-hover); }
 
   .p1-card__id {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--text-muted);
-    flex-shrink: 0;
+    display: none;
   }
 
   .p1-card__title {
@@ -484,6 +563,11 @@ const cardsData: CardData[] = selected.map(b => ({
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
+  }
+
+  /* Badge de réversibilité caché pendant le tri — révélé uniquement dans le panneau de dévoilement */
+  .p1-card__expanded .rev-badge {
+    display: none;
   }
 
   .p1-card__situation {
@@ -581,26 +665,13 @@ const cardsData: CardData[] = selected.map(b => ({
     letter-spacing: 0.08em;
   }
 
-  /* La carte révélée réutilise les styles .p1-card__* mais sans les contrôles */
-  .p1__reveal-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
+  /* Liste de comparaison */
+  .p1__reveal-list {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-  }
-
-  /* Glow sur le badge de réversibilité dans la révélation */
-  .p1__reveal-card .rev-badge--glow[data-rev="green"] {
-    box-shadow: 0 0 16px rgba(34,  197, 94,  0.45);
-  }
-  .p1__reveal-card .rev-badge--glow[data-rev="yellow"] {
-    box-shadow: 0 0 16px rgba(234, 179, 8,   0.45);
-  }
-  .p1__reveal-card .rev-badge--glow[data-rev="red"] {
-    box-shadow: 0 0 16px rgba(239, 68,  68,  0.45);
   }
 
   .p1__reveal-actions {

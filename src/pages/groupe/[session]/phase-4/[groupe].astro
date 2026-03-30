@@ -9,15 +9,25 @@ import { CHAMBER_LABELS, REV_LABELS } from '../../../../lib/chambers';
 export async function getStaticPaths() {
   const allDecks = await getCollection('decks');
   return allDecks.flatMap(deck =>
-    deck.data.groups.map(g => ({
-      params: { session: deck.data.id, groupe: g.id },
-      props: { chamber: g.chamber, scenarioId: g.scenario_id },
-    }))
+    deck.data.groups.map(g => {
+      // Trouver le groupe expéditeur (celui dont la destination dans mandat_circulation = g.id)
+      const senderGroupId = Object.entries(deck.data.mandat_circulation)
+        .find(([, dest]) => dest === g.id)?.[0];
+      const senderGroup = deck.data.groups.find(sg => sg.id === senderGroupId);
+      return {
+        params: { session: deck.data.id, groupe: g.id },
+        props: {
+          chamber: g.chamber,
+          scenarioId: g.scenario_id,
+          senderChamber: senderGroup?.chamber ?? null,
+        },
+      };
+    })
   );
 }
 
 const { session, groupe } = Astro.params;
-const { chamber, scenarioId } = Astro.props;
+const { chamber, scenarioId, senderChamber } = Astro.props;
 const allScenarios = await getCollection('scenarios');
 const deckScenarios = allScenarios.filter(s => s.id.startsWith(session + '/'));
 const scenario = deckScenarios.find(s => s.data.id === scenarioId)
@@ -38,6 +48,41 @@ const scenarioData: ScenarioData | null = scenario ? {
   roles_briefing: scenario.data.roles_briefing,
   difficulty: scenario.data.difficulty,
 } : null;
+
+// ── Cartes héritées (tension Phase 2 + action Phase 3 de l'expéditeur) ──────
+type BonusTension = { id: string; title: string; content: string; question: string; reversibility: string; tags: string[] };
+type BonusAction  = { id: string; title: string; body: string; reversibility: string; scope: string; lever_type: string; tags: string[] };
+
+let bonusTensions: BonusTension[] = [];
+let bonusActions:  BonusAction[]  = [];
+
+if (senderChamber) {
+  const [allTensionsRaw, allActionsRaw] = await Promise.all([
+    getCollection('tensions'),
+    getCollection('actions'),
+  ]);
+  bonusTensions = allTensionsRaw
+    .filter(t => t.id.startsWith(session + '/') && t.data.chamber === senderChamber)
+    .map(t => ({
+      id: t.data.id,
+      title: t.data.title,
+      content: t.data.content,
+      question: t.data.question,
+      reversibility: t.data.reversibility,
+      tags: t.data.tags,
+    }));
+  bonusActions = allActionsRaw
+    .filter(a => a.id.startsWith(session + '/') && a.data.chamber === senderChamber)
+    .map(a => ({
+      id: a.data.id,
+      title: a.data.title,
+      body: a.data.body,
+      reversibility: a.data.reversibility,
+      scope: a.data.scope,
+      lever_type: a.data.lever_type,
+      tags: a.data.tags,
+    }));
+}
 ---
 
 <BaseLayout title={`${groupe} — Phase 4`} mode="groupe">
@@ -53,32 +98,6 @@ const scenarioData: ScenarioData | null = scenario ? {
         {CHAMBER_LABELS[chamber]}
       </span>
     </header>
-
-    <!-- Mandat reçu (rempli par JS depuis le hash) -->
-    <section class="p4__mandat" id="p4-mandat" aria-live="polite">
-      <div class="p4__mandat-content" id="p4-mandat-content" hidden>
-        <div class="p4__mandat-header">
-          <span class="p4__mandat-label">Mandat reçu</span>
-          <div class="p4__mandat-meta">
-            <span class="p4__mandat-from" id="p4-mandat-from"></span>
-            <span class="rev-badge" id="p4-mandat-badge"></span>
-          </div>
-        </div>
-        <div class="p4__mandat-action" id="p4-mandat-action" hidden></div>
-        <div class="p4__mandat-bascule" id="p4-mandat-bascule" hidden>
-          <span class="p4__mandat-bascule-label">Point de bascule identifié</span>
-          <p class="p4__mandat-bascule-text" id="p4-mandat-bascule-text"></p>
-        </div>
-        <blockquote class="p4__mandat-text" id="p4-mandat-text"></blockquote>
-        <div class="p4__traj-row">
-          <span class="p4__traj-badge" id="p4-traj" hidden></span>
-        </div>
-        <div class="p4__traj-constraint" id="p4-traj-constraint" hidden role="alert">
-          <span class="p4__traj-constraint-label">Contexte structurel</span>
-          <p>L'infrastructure est déjà verrouillée. Interdire n'est plus une suspension simple, mais un démantèlement coûteux. Votre arbitrage doit en tenir compte.</p>
-        </div>
-      </div>
-    </section>
 
     {scenarioData ? (
       <>
@@ -158,6 +177,15 @@ const scenarioData: ScenarioData | null = scenario ? {
           </div>
         </section>
 
+        <!-- Cartes héritées — bonus après les rôles -->
+        <section class="p4__bonus" id="p4-bonus" hidden>
+          <div class="p4__bonus-header">
+            <span class="p4__bonus-label">Cartes héritées</span>
+            <span class="p4__bonus-hint">Transmises par le groupe précédent — consultables par tous</span>
+          </div>
+          <div class="p4__bonus-cards" id="p4-bonus-cards"></div>
+        </section>
+
         <!-- Acte final (caché jusqu'à validation) -->
         <section class="p4__acte-final" id="p4-acte-final" hidden aria-live="polite">
           <div class="p4__acte-final-header">
@@ -181,19 +209,28 @@ const scenarioData: ScenarioData | null = scenario ? {
 </BaseLayout>
 
 <!-- Données pour le script client -->
-<script type="application/json" id="scenario-data" set:html={JSON.stringify(scenarioData)} />
+<script type="application/json" id="scenario-data"    set:html={JSON.stringify(scenarioData)} />
+<script type="application/json" id="bonus-tensions"   set:html={JSON.stringify(bonusTensions)} />
+<script type="application/json" id="bonus-actions"    set:html={JSON.stringify(bonusActions)} />
 
 <script>
-  import { REV_LABELS, CHAMBER_LABELS_SHORT, TRAJ_LABELS } from '../../../../lib/chambers';
+  import { REV_LABELS, TRAJ_LABELS } from '../../../../lib/chambers';
   // ── Types ─────────────────────────────────────────────────────────────────
   interface Handoff {
-    action?:  { id: string; title: string };
-    bascule?: string;
-    text:     string;
-    level:    'green' | 'yellow' | 'red';
-    chamber:  string;
-    from:     string;
-    traj?:    number;
+    action?:    { id: string; title: string };
+    tensionId?: string;
+    level:      'green' | 'yellow' | 'red';
+    chamber:    string;
+    from:       string;
+    traj?:      number;
+  }
+  interface BonusTension {
+    id: string; title: string; content: string; question: string;
+    reversibility: string; tags: string[];
+  }
+  interface BonusAction {
+    id: string; title: string; body: string;
+    reversibility: string; scope: string; lever_type: string; tags: string[];
   }
 
   // ── Lecture du handoff depuis le hash ─────────────────────────────────────
@@ -210,47 +247,64 @@ const scenarioData: ScenarioData | null = scenario ? {
 
   const handoff = decodeHandoff();
 
-  // ── Affichage du mandat reçu ──────────────────────────────────────────────
-  const mandatContent = document.getElementById('p4-mandat-content')!;
+  // ── Données cartes héritées ────────────────────────────────────────────────
+  const bonusTensions: BonusTension[] =
+    JSON.parse(document.getElementById('bonus-tensions')!.textContent!);
+  const bonusActions: BonusAction[] =
+    JSON.parse(document.getElementById('bonus-actions')!.textContent!);
 
+  // ── Cartes héritées ────────────────────────────────────────────────────────
   if (handoff) {
-    document.getElementById('p4-mandat-from')!.textContent =
-      `${handoff.from} · ${CHAMBER_LABELS_SHORT[handoff.chamber] ?? handoff.chamber}`;
+    const bonusSection = document.getElementById('p4-bonus')!;
+    const bonusCardsEl = document.getElementById('p4-bonus-cards')!;
+    const cards: string[] = [];
 
-    const badge = document.getElementById('p4-mandat-badge')!;
-    badge.textContent = REV_LABELS[handoff.level] ?? handoff.level;
-    badge.setAttribute('data-rev', handoff.level);
-
-    if (handoff.action?.title) {
-      const actionEl = document.getElementById('p4-mandat-action')!;
-      actionEl.textContent = handoff.action.title;
-      actionEl.hidden = false;
+    if (handoff.tensionId) {
+      const t = bonusTensions.find(x => x.id === handoff.tensionId);
+      if (t) {
+        cards.push(`
+          <article class="p4bc p4bc--tension">
+            <details class="p4bc__details">
+              <summary class="p4bc__summary">
+                <span class="p4bc__type">Tension · Phase 2</span>
+                <h4 class="p4bc__title">${escHtml(t.title)}</h4>
+                <span class="p4bc__rev rev-badge" data-rev="${escHtml(t.reversibility)}">${escHtml(REV_LABELS[t.reversibility] ?? t.reversibility)}</span>
+                <span class="p4bc__chevron">›</span>
+              </summary>
+              <div class="p4bc__body">
+                <p class="p4bc__content">${escHtml(t.content)}</p>
+                <blockquote class="p4bc__question">${escHtml(t.question)}</blockquote>
+                <div class="p4bc__tags">${t.tags.map(tag => `<span class="p4bc__tag">#${escHtml(tag)}</span>`).join('')}</div>
+              </div>
+            </details>
+          </article>`);
+      }
     }
 
-    if (handoff.bascule) {
-      const basculeEl = document.getElementById('p4-mandat-bascule')!;
-      document.getElementById('p4-mandat-bascule-text')!.textContent = handoff.bascule;
-      basculeEl.hidden = false;
+    if (handoff.action?.id) {
+      const a = bonusActions.find(x => x.id === handoff.action!.id);
+      if (a) {
+        cards.push(`
+          <article class="p4bc p4bc--action">
+            <details class="p4bc__details">
+              <summary class="p4bc__summary">
+                <span class="p4bc__type">Action · Phase 3</span>
+                <h4 class="p4bc__title">${escHtml(a.title)}</h4>
+                <span class="p4bc__rev rev-badge" data-rev="${escHtml(a.reversibility)}">${escHtml(REV_LABELS[a.reversibility] ?? a.reversibility)}</span>
+                <span class="p4bc__chevron">›</span>
+              </summary>
+              <div class="p4bc__body">
+                <p class="p4bc__content">${escHtml(a.body)}</p>
+                <div class="p4bc__tags">${a.tags.map(tag => `<span class="p4bc__tag">#${escHtml(tag)}</span>`).join('')}</div>
+              </div>
+            </details>
+          </article>`);
+      }
     }
 
-    document.getElementById('p4-mandat-text')!.textContent = handoff.text;
-
-    mandatContent.hidden = false;
-
-    if (handoff.level === 'red') {
-      mandatContent.classList.add('p4__mandat-content--red');
-    }
-
-    // ── Trajectoire de réversibilité ────────────────────────────────────────
-    const traj = handoff.traj ?? 3;
-    const trajEl = document.getElementById('p4-traj')!;
-    trajEl.textContent = `Trajectoire : ${TRAJ_LABELS[traj] ?? traj}`;
-    trajEl.setAttribute('data-traj', String(traj));
-    trajEl.hidden = false;
-
-    if (traj >= 4) {
-      const constraintEl = document.getElementById('p4-traj-constraint')!;
-      constraintEl.hidden = false;
+    if (cards.length > 0) {
+      bonusCardsEl.innerHTML = cards.join('');
+      bonusSection.hidden = false;
     }
   }
 
@@ -350,91 +404,6 @@ const scenarioData: ScenarioData | null = scenario ? {
     border: 1px solid var(--chamber-color, var(--border-subtle));
     color: var(--chamber-color, var(--text-muted));
     text-align: right; max-width: 16ch; line-height: 1.3;
-  }
-
-  /* ── Mandat reçu ─────────────────────────────────────────────────────────── */
-  .p4__mandat-content {
-    background: var(--bg-card); border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg); padding: var(--space-lg);
-    display: flex; flex-direction: column; gap: var(--space-md);
-  }
-  .p4__mandat-content--red {
-    border-color: rgba(239,68,68,0.5);
-    box-shadow: 0 0 16px rgba(239,68,68,0.1);
-  }
-
-  .p4__mandat-header {
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm);
-  }
-  .p4__mandat-label {
-    font-family: var(--font-mono); font-size: 0.75rem;
-    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
-  }
-  .p4__mandat-meta { display: flex; align-items: center; gap: var(--space-sm); }
-  .p4__mandat-from { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); }
-
-  .p4__mandat-action {
-    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
-    line-height: 1.3; color: var(--text-primary);
-    padding: var(--space-sm) var(--space-md);
-    background: var(--bg-surface); border-radius: var(--radius-md);
-    border-left: 3px solid var(--chamber-color, var(--border-subtle));
-  }
-
-  .p4__mandat-bascule {
-    padding: var(--space-sm) var(--space-md);
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border-subtle);
-    border-left: 3px solid var(--text-muted);
-    border-radius: var(--radius-sm);
-    display: flex; flex-direction: column; gap: 4px;
-  }
-  .p4__mandat-bascule-label {
-    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
-    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
-  }
-  .p4__mandat-bascule-text {
-    font-size: 0.88rem; color: var(--text-secondary);
-    line-height: 1.55; font-style: italic;
-  }
-
-  .p4__mandat-text {
-    font-size: 1rem; font-style: italic; line-height: 1.6;
-    border-left: 3px solid var(--chamber-color, var(--border-subtle));
-    padding-left: var(--space-md); color: var(--text-primary);
-  }
-  .p4__mandat-constraint {
-    font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
-  }
-
-  /* ── Trajectoire ─────────────────────────────────────────────────────────── */
-  .p4__traj-row { display: flex; align-items: center; gap: var(--space-sm); }
-
-  .p4__traj-badge {
-    font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
-    padding: 3px 10px; border-radius: var(--radius-sm);
-    background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle);
-    color: var(--text-muted);
-    transition: background var(--transition-fast), color var(--transition-fast),
-                border-color var(--transition-fast);
-  }
-  .p4__traj-badge[data-traj="4"],
-  .p4__traj-badge[data-traj="5"] {
-    background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.4); color: #ef4444;
-  }
-
-  .p4__traj-constraint {
-    background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.3);
-    border-left: 3px solid #ef4444;
-    border-radius: var(--radius-md); padding: var(--space-md);
-    display: flex; flex-direction: column; gap: var(--space-xs);
-  }
-  .p4__traj-constraint-label {
-    font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
-    color: #ef4444; text-transform: uppercase; letter-spacing: 0.06em;
-  }
-  .p4__traj-constraint p {
-    font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55;
   }
 
   /* ── Scénario ────────────────────────────────────────────────────────────── */
@@ -630,5 +599,69 @@ const scenarioData: ScenarioData | null = scenario ? {
   .p4__no-scenario {
     color: var(--text-muted); font-style: italic; text-align: center;
     padding: var(--space-2xl);
+  }
+
+  /* ── Cartes héritées (conteneur, styles statiques) ──────────────────────── */
+  .p4__bonus[hidden] { display: none; }
+  .p4__bonus { display: flex; flex-direction: column; gap: var(--space-md); }
+  .p4__bonus-header { display: flex; align-items: baseline; gap: var(--space-sm); flex-wrap: wrap; }
+  .p4__bonus-label {
+    font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .p4__bonus-hint { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
+  .p4__bonus-cards { display: flex; flex-direction: column; gap: var(--space-sm); }
+</style>
+
+<!-- Styles des cartes générées par JS (is:global obligatoire — pas de scope hash) -->
+<style is:global>
+  .p4bc {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--chamber-color, var(--border-subtle));
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .p4bc__details {}
+  .p4bc__summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    transition: background var(--transition-fast);
+  }
+  .p4bc__summary::-webkit-details-marker { display: none; }
+  .p4bc__summary:hover,
+  .p4bc__details[open] .p4bc__summary { background: var(--bg-card-hover); }
+  .p4bc__type {
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+  .p4bc__title {
+    flex: 1; font-family: var(--font-display); font-size: 0.88rem;
+    font-weight: 600; line-height: 1.3;
+  }
+  .p4bc__rev { flex-shrink: 0; }
+  .p4bc__chevron {
+    font-size: 1.1rem; color: var(--text-muted); flex-shrink: 0;
+    transition: transform var(--transition-fast);
+  }
+  .p4bc__details[open] .p4bc__chevron { transform: rotate(90deg); }
+  .p4bc__body {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    border-top: 1px solid var(--border-subtle);
+    display: flex; flex-direction: column; gap: var(--space-md);
+  }
+  .p4bc__content { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+  .p4bc__question {
+    font-size: 0.85rem; font-style: italic; color: var(--text-primary);
+    border-left: 3px solid var(--border-subtle);
+    padding-left: var(--space-sm); line-height: 1.5; margin: 0;
+  }
+  .p4bc__tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+  .p4bc__tag {
+    font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted);
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm); padding: 1px 6px;
   }
 </style>

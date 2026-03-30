@@ -4,8 +4,8 @@ import { getCollection } from 'astro:content';
 import { CHAMBER_LABELS } from '../../lib/chambers';
 
 const allDecks = await getCollection('decks');
-const deck = allDecks.find(d => d.data.id === 'demo')!;
-
+const deck = allDecks[0];
+if (!deck) throw new Error('Aucun deck disponible');
 
 const groups = deck.data.groups;
 const baseUrl = import.meta.env.BASE_URL;
@@ -19,7 +19,7 @@ const baseUrl = import.meta.env.BASE_URL;
         <span class="setup__label">Conseil des IA</span>
         <h1 class="setup__title">Préparation de session</h1>
       </div>
-      <a class="setup__launch" href={`${baseUrl}/animateur/demo`}>
+      <a class="setup__launch" href={`${baseUrl}/animateur/${deck.data.id}`}>
         Lancer la session →
       </a>
     </header>

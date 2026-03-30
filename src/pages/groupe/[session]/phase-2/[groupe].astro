@@ -77,16 +77,21 @@ const tensionsData: TensionData[] = selected.map(t => ({
     <!-- Instructions -->
     <section class="p2__instructions">
       <p class="p2__instructions-text">
-        Lisez les 5 dossiers de tension. Débattez entre vous, puis formulez
-        <strong>en une phrase</strong> le point de bascule irréductible de votre chambre —
-        celui qu'aucune régulation ne pourra effacer.
+        Lisez les dossiers de tension. Débattez et écartez ceux qui vous semblent
+        moins centraux — jusqu'à n'en garder <strong>qu'un seul</strong>.
+        C'est ce dossier que vous transmettrez à la phase suivante.
       </p>
     </section>
+
+    <!-- Zone de dossiers écartés -->
+    <div class="p2__discarded" id="p2-discarded" hidden>
+      <p class="p2__discarded-label">Dossiers écartés</p>
+    </div>
 
     <!-- Cartes tension -->
     <section class="p2__cards" id="p2-cards" aria-label="Dossiers de tension" style="visibility:hidden">
       {tensionsData.map((t, i) => (
-        <article class="p2-card" data-rev={t.reversibility} data-slot-theme={t.slot_theme}>
+        <article class="p2-card" data-id={t.id} data-rev={t.reversibility} data-slot-theme={t.slot_theme}>
           <details class="p2-card__details">
             <summary class="p2-card__summary">
               <div class="p2-card__summary-inner">
@@ -97,6 +102,8 @@ const tensionsData: TensionData[] = selected.map(t => ({
                     {REV_LABELS[t.reversibility]}
                   </span>
                 </div>
+                <button class="p2-card__trash" type="button" aria-label="Écarter ce dossier">🗑</button>
+                <button class="p2-card__recover" type="button" aria-label="Récupérer ce dossier">↩</button>
               </div>
             </summary>
             <div class="p2-card__body">
@@ -117,35 +124,11 @@ const tensionsData: TensionData[] = selected.map(t => ({
       ))}
     </section>
 
-    <!-- Formulaire de synthèse -->
-    <section class="p2__form" id="p2-form">
-      <label class="p2__form-label" for="bascule-text">
-        Votre point de bascule irréductible
-        <span class="p2__form-hint">
-          Une seule phrase. Commencez par "Le point de bascule de notre chambre est…"
-        </span>
-      </label>
-      <textarea
-        id="bascule-text"
-        class="p2__textarea"
-        rows="3"
-        maxlength="300"
-        placeholder="Le point de bascule de notre chambre est…"
-        aria-describedby="bascule-counter"
-      ></textarea>
-      <div class="p2__form-footer">
-        <span class="p2__char-counter" id="bascule-counter">0 / 300</span>
-        <a
-          class="p2__continue"
-          id="p2-continue"
-          href={phase3Url}
-          aria-disabled="true"
-          tabindex="-1"
-        >
-          Continuer vers la Phase 3 →
-        </a>
-
-      </div>
+    <!-- Bouton continuer (affiché quand 1 seule carte reste) -->
+    <section class="p2__form" id="p2-form" hidden>
+      <a class="p2__continue p2__continue--active" id="p2-continue" href={phase3Url}>
+        Continuer vers la Phase 3 →
+      </a>
     </section>
 
   </main>
@@ -155,9 +138,7 @@ const tensionsData: TensionData[] = selected.map(t => ({
 <script type="application/json" id="phase3-base" set:html={JSON.stringify(phase3Url)} />
 
 <script>
-  const textarea  = document.getElementById('bascule-text') as HTMLTextAreaElement;
-  const counter   = document.getElementById('bascule-counter')!;
-  const continueA = document.getElementById('p2-continue') as HTMLAnchorElement;
+  const continueA    = document.getElementById('p2-continue') as HTMLAnchorElement;
   const cardsSection = document.getElementById('p2-cards') as HTMLElement;
 
   const phase3Base: string = JSON.parse(document.getElementById('phase3-base')!.textContent!);
@@ -199,6 +180,10 @@ const tensionsData: TensionData[] = selected.map(t => ({
       cards.slice(5).forEach(c => { c.hidden = true; });
     }
 
+    // Trier du plus réversible (green) au plus irréversible (red)
+    const revOrder: Record<string, number> = { green: 0, yellow: 1, red: 2 };
+    selected.sort((a, b) => (revOrder[a.dataset.rev ?? ''] ?? 1) - (revOrder[b.dataset.rev ?? ''] ?? 1));
+
     // Réordonner dans le DOM sans FOUC (cardsSection était visible:hidden via CSS)
     selected.forEach(c => cardsSection.appendChild(c));
     // Renuméroter les positions visibles
@@ -218,28 +203,71 @@ const tensionsData: TensionData[] = selected.map(t => ({
     }
   }
 
-  textarea.addEventListener('input', () => {
-    const len = textarea.value.trim().length;
-    counter.textContent = `${textarea.value.length} / 300`;
-    if (len >= 15) {
-      continueA.removeAttribute('aria-disabled');
-      continueA.removeAttribute('tabindex');
-      continueA.classList.add('p2__continue--active');
-      // Encoder texte + propager dominant vers Phase 3
-      const encoded = btoa(encodeURIComponent(textarea.value.trim()));
-      const dominantSuffix = dominant ? `&dominant=${dominant}` : '';
-      continueA.href = `${phase3Base}#bascule=${encoded}${dominantSuffix}&traj=${traj}`;
-    } else {
-      continueA.setAttribute('aria-disabled', 'true');
-      continueA.setAttribute('tabindex', '-1');
-      continueA.classList.remove('p2__continue--active');
-      continueA.href = phase3Base;
-    }
-  });
 
-  // Bloquer le clic si désactivé
-  continueA.addEventListener('click', (e) => {
-    if (continueA.getAttribute('aria-disabled') === 'true') e.preventDefault();
+  // ── Poubelle / récupération ────────────────────────────────────────────────
+  const discardedZone = document.getElementById('p2-discarded') as HTMLElement;
+  const formSection   = document.getElementById('p2-form') as HTMLElement;
+  let lastTensionId   = '';
+
+  function countActive(): number {
+    return cardsSection.querySelectorAll('.p2-card:not([hidden])').length;
+  }
+
+  function renumberActive(): void {
+    [...cardsSection.querySelectorAll<HTMLElement>('.p2-card:not([hidden])')].forEach((card, i) => {
+      const num = card.querySelector<HTMLElement>('.p2-card__num');
+      if (num) num.textContent = String(i + 1);
+    });
+  }
+
+  function updateFormVisibility(): void {
+    const active = [...cardsSection.querySelectorAll<HTMLElement>('.p2-card:not([hidden])')];
+    formSection.hidden = active.length !== 1;
+    if (active.length === 1) {
+      lastTensionId = active[0].dataset.id ?? '';
+      const dominantSuffix = dominant ? `&dominant=${dominant}` : '';
+      const tensionSuffix  = lastTensionId ? `&tensionId=${encodeURIComponent(lastTensionId)}` : '';
+      continueA.href = `${phase3Base}#${dominantSuffix}&traj=${traj}${tensionSuffix}`.replace('#&', '#');
+    } else {
+      lastTensionId = '';
+    }
+  }
+
+  document.addEventListener('click', (e: Event) => {
+    const target = e.target as HTMLElement;
+
+    // ── Écarter ──────────────────────────────────────────────────────────────
+    const trashBtn = target.closest<HTMLElement>('.p2-card__trash');
+    if (trashBtn) {
+      const card = trashBtn.closest<HTMLElement>('.p2-card');
+      if (!card || countActive() <= 1) return;
+      card.querySelector('details')?.removeAttribute('open');
+      card.classList.add('p2-card--trashed');
+      discardedZone.appendChild(card);
+      discardedZone.hidden = false;
+      renumberActive();
+      updateFormVisibility();
+      return;
+    }
+
+    // ── Récupérer ─────────────────────────────────────────────────────────────
+    const recoverBtn = target.closest<HTMLElement>('.p2-card__recover');
+    if (recoverBtn) {
+      const card = recoverBtn.closest<HTMLElement>('.p2-card');
+      if (!card) return;
+      card.classList.remove('p2-card--trashed');
+      // Réinsérer en respectant l'ordre de réversibilité
+      const revOrder: Record<string, number> = { green: 0, yellow: 1, red: 2 };
+      const cardRev = revOrder[card.dataset.rev ?? ''] ?? 1;
+      const actives = [...cardsSection.querySelectorAll<HTMLElement>('.p2-card')];
+      const insertBefore = actives.find(a => (revOrder[a.dataset.rev ?? ''] ?? 1) > cardRev);
+      cardsSection.insertBefore(card, insertBefore ?? null);
+      if (discardedZone.querySelectorAll('.p2-card').length === 0) {
+        discardedZone.hidden = true;
+      }
+      renumberActive();
+      updateFormVisibility();
+    }
   });
 </script>
 
@@ -356,35 +384,60 @@ const tensionsData: TensionData[] = selected.map(t => ({
     border-radius: var(--radius-sm); padding: 1px 6px;
   }
 
-  /* ── Formulaire de synthèse ──────────────────────────────────────────────── */
-  .p2__form {
-    display: flex; flex-direction: column; gap: var(--space-md);
-    background: var(--bg-card); border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg); padding: var(--space-xl);
+  /* ── Boutons poubelle / récupération ────────────────────────────────────── */
+  .p2-card__trash,
+  .p2-card__recover {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.2rem 0.3rem;
+    color: var(--text-muted);
+    line-height: 1;
+    flex-shrink: 0;
+    transition: color var(--transition-fast), opacity var(--transition-fast);
+    opacity: 0;
   }
-  .p2__form-label {
-    display: flex; flex-direction: column; gap: var(--space-xs);
-    font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+  .p2-card:hover .p2-card__trash,
+  .p2-card--trashed .p2-card__recover {
+    opacity: 1;
   }
-  .p2__form-hint {
-    font-family: var(--font-body); font-size: 0.8rem;
-    color: var(--text-muted); font-weight: 400;
-  }
-  .p2__textarea {
-    width: 100%; background: var(--bg-surface); border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md); color: var(--text-primary);
-    font-family: var(--font-body); font-size: 0.95rem; line-height: 1.6;
-    padding: var(--space-md); resize: vertical; outline: none;
-    transition: border-color var(--transition-fast);
-  }
-  .p2__textarea:focus { border-color: var(--chamber-delegation); }
-  .p2__textarea::placeholder { color: var(--text-muted); }
+  .p2-card__trash:hover  { color: var(--text-primary); }
+  .p2-card__recover { display: none; }
+  .p2-card--trashed .p2-card__trash   { display: none; }
+  .p2-card--trashed .p2-card__recover { display: inline-flex; opacity: 1; }
 
-  .p2__form-footer {
-    display: flex; justify-content: space-between; align-items: center; gap: var(--space-md);
+  /* ── Carte écartée (compacte) ────────────────────────────────────────────── */
+  .p2-card--trashed {
+    opacity: 0.55;
+    transition: opacity var(--transition-base);
   }
-  .p2__char-counter {
-    font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);
+  .p2-card--trashed .p2-card__summary { padding: var(--space-sm) var(--space-md); }
+  .p2-card--trashed .p2-card__num,
+  .p2-card--trashed .p2-card__badges  { display: none; }
+  .p2-card--trashed .p2-card__title   { font-size: 0.8rem; font-weight: 400; }
+  .p2-card--trashed .p2-card__body    { display: none; }
+
+  /* ── Zone dossiers écartés ───────────────────────────────────────────────── */
+  .p2__discarded {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .p2__discarded-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Bouton continuer ────────────────────────────────────────────────────── */
+  .p2__form[hidden] { display: none; }
+  .p2__form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: var(--space-2xl);
   }
 
   .p2__continue {
