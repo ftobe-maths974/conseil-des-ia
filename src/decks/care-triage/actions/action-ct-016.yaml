@@ -22,4 +22,8 @@ tags:
   - hors-champ
   - alerte
   - profil
+facilitator_note:
+  si_silence: "Demandez : si l'interface CareFlow affiche une alerte 'profil hors-champ' et que le soignant valide quand même la recommandation, parce qu'il n'a pas le temps ou pas de meilleure option — est-ce que la confirmation documentée protège le patient ou dégage CareFlow de responsabilité ?"
+  si_debat_bloque: "Poussez sur la définition de 'hors-champ' : qui maintient la liste des profils hors-champ, à quelle fréquence, et si elle date de plus d'un an avec un modèle qui a été mis à jour depuis, est-ce que cette interdiction s'appuie sur une information fiable ?"
+  relance_cle: "Ce mandat pose la question de l'alerte sans alternative : interdire l'application automatique d'un score à un profil hors-champ est rigoureux — mais si le soignant n'a pas d'outil de substitution, est-ce que l'alerte l'aide à décider ou lui rappelle seulement qu'il est seul ?"
 version: "1.0"

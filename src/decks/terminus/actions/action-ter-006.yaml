@@ -17,4 +17,8 @@ tags:
   - transparence
   - score
   - sanction-silencieuse
+facilitator_note:
+  si_silence: "Demandez : si un usager de L'Agence découvre par hasard que son rang a baissé trois semaines plus tôt et que personne ne l'a notifié — quelles conséquences a-t-il subies pendant ces trois semaines sans le savoir ?"
+  si_debat_bloque: "Poussez sur le canal de notification : l'usager choisit son canal. Si l'usager n'a pas de smartphone ou une adresse mail inactive, est-ce que la notification envoyée sur un canal non opérationnel remplit l'obligation — et qui vérifie que le canal fonctionne ?"
+  relance_cle: "Ce mandat pose la question de la notification comme protection réelle : interdire les modifications silencieuses est rigoureux — mais si la notification part et n'arrive pas, ou arrive sans être comprise, est-ce que l'obligation est remplie ou seulement formellement respectée ?"
 version: "1.0"

@@ -21,4 +21,8 @@ tags:
   - responsabilite-individuelle
   - protection
   - pression
+facilitator_note:
+  si_silence: "Demandez : si un soignant sait qu'une dérogation motivée sera auditée et que sa conformité au standard sera évaluée, est-ce qu'il prend sa décision clinique librement — ou est-ce qu'il intègre la peur d'être singularisé ?"
+  si_debat_bloque: "Poussez sur la valeur réelle de la dérogation : si certains soignants y renoncent par peur des conséquences professionnelles plutôt que par conviction clinique, combien de patients atypiques sont mal pris en charge sans que personne ne le sache ?"
+  relance_cle: "La vraie question n'est pas si le droit à la dérogation existe — c'est si une garantie formelle qui n'est pas exercée en pratique par peur protège encore réellement le patient."
 version: "1.0"

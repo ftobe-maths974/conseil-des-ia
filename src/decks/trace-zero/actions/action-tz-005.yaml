@@ -13,4 +13,8 @@ body: >
   mise à jour en temps réel et accessible sur simple demande, sans délai ni procédure.
 mandat_principe: "Aucune personne ne peut être maintenue dans l'ignorance de l'indice qui gouverne son accès aux services — la visibilité du score est un droit, non un privilège."
 tags: [invisibilité, score-authenticité, transparence, notification, défi-silencieux, log-opaque]
+facilitator_note:
+  si_silence: "Demandez : l'interface est accessible 'sans score minimal d'authenticité' — mais si accéder à l'interface nécessite une authentification quelconque, et que cette authentification utilise SIGMA-ID, est-ce qu'une personne avec un score très bas peut physiquement accéder à l'information sur son propre score ?"
+  si_debat_bloque: "Poussez sur les 'trois critères ayant le plus contribué' : si SIGMA-ID utilise des corrélations non linéaires entre dizaines de variables, présenter les trois principaux peut donner une image trompeuse du calcul réel. Est-ce une transparence ou une simplification qui oriente la contestation vers de mauvaises cibles ?"
+  relance_cle: "Ce mandat pose la question de la visibilité du score comme protection contre l'arbitraire : savoir où on en est en temps réel est un droit fondamental — mais si voir son score baisser sans pouvoir en comprendre la cause ni l'influencer autrement qu'en modifiant ses comportements, la visibilité protège-t-elle ou génère-t-elle une anxiété de conformité permanente ?"
 version: "1.0"

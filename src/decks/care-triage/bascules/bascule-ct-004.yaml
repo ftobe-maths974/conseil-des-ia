@@ -20,4 +20,8 @@ tags:
   - triage
   - transparence
   - attente
+facilitator_note:
+  si_silence: "Demandez : si vous étiez ce patient et qu'on vous dise 'c'est le système' sans rien expliquer, qu'est-ce que vous feriez ?"
+  si_debat_bloque: "Poussez la question du droit : en France, un patient a le droit d'être informé des décisions automatisées qui le concernent — est-ce que ce qui se passe aux urgences du GHR respecte ce droit ?"
+  relance_cle: "La vraie question n'est pas si le patient comprend l'algorithme — c'est : peut-il contester une décision dont il ignore qu'elle a été prise par une machine ?"
 version: "1.0"

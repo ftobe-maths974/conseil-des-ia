@@ -20,4 +20,8 @@ tags:
   - supervision
   - epuisement
   - validation-par-defaut
+facilitator_note:
+  si_silence: "Demandez : si vous étiez l'un de ces agents et que vous validez 185 alertes par jour sans les examiner, comment vous vous sentez au bout d'un an ?"
+  si_debat_bloque: "Allez vers la fiction juridique : si une erreur du système cause un préjudice, qui est responsable — l'agent qui a validé par défaut ou l'opérateur du système ?"
+  relance_cle: "La vraie question : quand un humain signe une décision qu'il n'a pas le temps de vérifier, sa signature protège qui — l'usager ou l'institution ?"
 version: "1.0"

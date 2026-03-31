@@ -19,4 +19,8 @@ tags:
   - demonetisation
   - transparence
   - biais
+facilitator_note:
+  si_silence: "Demandez : 'taux d'erreur par catégorie de créateurs' — pour qu'un audit mesure un taux d'erreur, il faut une définition de ce qu'est une décision correcte. Qui définit qu'une démonétisation était une erreur, si ce n'est pas OmniStream lui-même qui fournit le standard de référence ?"
+  si_debat_bloque: "Poussez sur les biais par sous-groupe : si l'audit identifie un biais systématique contre certains types de créateurs — contenus militants, minoritaires, alternatifs — est-ce qu'OmniStream est tenu de corriger l'algorithme, ou seulement de publier le constat ?"
+  relance_cle: "Ce mandat pose la question de l'audit comme outil de contestabilité : rendre les critères de démonétisation visibles permet de les contester — mais si les critères effectifs de FAME-GEN sont emergents et non programmés explicitement, est-ce qu'un audit peut les rendre lisibles, ou décrit-il seulement les effets sans exposer les causes ?"
 version: "1.0"

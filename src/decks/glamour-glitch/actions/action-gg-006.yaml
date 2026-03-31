@@ -18,4 +18,8 @@ tags:
   - visibilite
   - explication
   - droits
+facilitator_note:
+  si_silence: "Demandez : 'identifiant la règle déclenchée et les éléments factuels retenus' — si FAME-GEN a restreint la visibilité d'un contenu en raison d'une combinaison de signaux comportementaux sans règle explicite déclenchée, qu'est-ce qu'OmniStream écrit dans sa réponse motivée ?"
+  si_debat_bloque: "Poussez sur l'indépendance de la voie de recours : la voie humaine doit être indépendante de l'équipe ayant appliqué la restriction — mais si l'équipe de recours travaille pour OmniStream, quelle est sa marge réelle de désaccord avec une décision de la plateforme ?"
+  relance_cle: "Ce mandat pose la question de l'effectivité du recours dans une relation asymétrique : un droit de recours en 7 jours avec réponse motivée, c'est un progrès réel — mais si le créateur qui conteste risque d'être vu comme problématique par l'algorithme de recommandation, est-ce que le droit formel est compatible avec l'exercice réel ?"
 version: "1.0"

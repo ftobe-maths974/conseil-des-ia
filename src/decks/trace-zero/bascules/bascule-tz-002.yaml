@@ -16,4 +16,8 @@ question: >
   Jusqu'où une organisation peut-elle déléguer à un système automatisé des décisions dont les conséquences
   dépassent ce que le système peut mesurer ?
 tags: [delegation, CVR, urgence, responsabilité, confiance-forcée, opérateur-de-confiance, verrou-de-présence]
+facilitator_note:
+  si_silence: "Posez la question : le médecin passe outre et la patiente survit — qui est poursuivi s'il y a ensuite un litige ?"
+  si_debat_bloque: "Inversez la logique : si le médecin ne passe pas outre et la patiente meurt, est-ce que le système est jugé responsable ou lui ?"
+  relance_cle: "La vraie question : à quel moment un professionnel a-t-il le droit — voire le devoir — de désobéir à un système automatisé ?"
 version: "1.0"

@@ -16,4 +16,8 @@ question: >
   Déléguer la gestion de son identité à un système fiable, est-ce une protection raisonnable ou
   la création d'une vulnérabilité plus grave encore ?
 tags: [delegation, dépendance-identitaire, confiance-forcée, CVR, opérateur-de-confiance]
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un dans ce groupe a déjà perdu l'accès à un compte important et ne savait pas quoi faire ?"
+  si_debat_bloque: "Déplacez vers l'OGR : si c'est l'opérateur lui-même qui subit la panne, qui répond à Nadia — et dans quel délai ?"
+  relance_cle: "La vraie question est celle du recours : quand on a tout délégué, à qui s'adresse-t-on le jour où ça tombe ?"
 version: "1.0"

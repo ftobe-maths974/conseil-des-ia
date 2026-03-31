@@ -20,4 +20,8 @@ tags:
   - reversibilite
   - procedure
   - formation
+facilitator_note:
+  si_silence: "Demandez : si tester la procédure dégradée est obligatoire tous les six mois avant déploiement, qui dans le GHR organise ce test, combien de temps ça prend — et si personne ne le fait, est-ce que le module est suspendu automatiquement ?"
+  si_debat_bloque: "Poussez sur le coût réel de la maintenance : former toutes les équipes à fonctionner sans CareFlow ET avec CareFlow représente une charge de formation considérable. Dans un contexte de sous-effectif chronique, est-ce que ce mandat est opérationnel ou idéal ?"
+  relance_cle: "Ce mandat pose la question du prix de la résilience : maintenir une capacité dégradée a un coût réel qui repose sur des équipes déjà sous tension. Si personne ne peut financer ce coût, est-ce que ce mandat protège contre la dépendance — ou l'institutionnalise en créant une obligation impossible à tenir ?"
 version: "1.0"

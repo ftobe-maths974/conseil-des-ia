@@ -20,4 +20,8 @@ tags:
   - fragmentation
   - specilite
   - standardisation
+facilitator_note:
+  si_silence: "Demandez : si la cardiologie, la pédiatrie et la gériatrie ont chacune un paramétrage CareFlow différent, est-ce que le GHR utilise encore un système commun — ou trois systèmes distincts qui partagent une interface ?"
+  si_debat_bloque: "Poussez sur le coût de la fragmentation : si chaque adaptation locale rend les comparaisons impossibles et augmente la charge de maintenance, à quel moment le coût de l'adaptation dépasse-t-il le bénéfice clinique — et comment le mesure-t-on ?"
+  relance_cle: "La vraie question n'est pas si l'adaptation est souhaitable — c'est si un outil qui doit être fragmenté pour être éthique peut encore remplir sa promesse de standardisation et d'équité entre services."
 version: "1.0"

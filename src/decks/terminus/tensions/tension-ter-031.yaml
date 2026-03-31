@@ -20,4 +20,8 @@ tags:
   - equite
   - minorite
   - efficacite
+facilitator_note:
+  si_silence: "Demandez : si 85% des usagers sont traités deux fois plus vite mais que les 15% restants attendent deux fois plus longtemps, est-ce que cette amélioration mérite d'être présentée comme un progrès sans réserve ?"
+  si_debat_bloque: "Poussez sur la définition du progrès : qui a défini que l'efficacité globale était le bon indicateur — et pourquoi les personnes en situation atypique ne sont-elles pas incluses dans ce calcul ?"
+  relance_cle: "La vraie question n'est pas si le système est plus efficace — c'est si une efficacité qui aggrave la situation des plus fragiles constitue un progrès pour un service public."
 version: "1.0"

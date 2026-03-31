@@ -20,4 +20,8 @@ tags:
   - cohorte
   - pathologie
   - validation-locale
+facilitator_note:
+  si_silence: "Demandez : si un soignant face à un patient avec une pathologie non couverte doit déposer une demande motivée auprès du comité médical pour utiliser CareFlow, quelle est la probabilité qu'il le fasse en situation d'urgence — et que se passe-t-il s'il utilise quand même le module ?"
+  si_debat_bloque: "Poussez sur la responsabilité du vide : si le module est désactivé par défaut pour les pathologies non couvertes, qu'est-ce que le soignant utilise à la place — et si la réponse est 'son jugement seul', est-ce que ce mandat protège le patient ou le laisse avec moins d'outils ?"
+  relance_cle: "Ce mandat pose la question du vide créé par la restriction : limiter l'usage de CareFlow aux périmètres validés est rigoureux — mais si ces périmètres excluent des patients réels, est-ce que la restriction les protège ou les prive d'un outil imparfait qui valait mieux que rien ?"
 version: "1.0"

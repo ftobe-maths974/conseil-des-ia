@@ -19,4 +19,8 @@ tags:
   - equite
   - fiabilite
   - audit
+facilitator_note:
+  si_silence: "Demandez : si les ingénieurs disent qu'intégrer plus d'exceptions rend le système instable et moins auditable, est-ce une contrainte technique ou une raison de ne pas chercher à être équitable ?"
+  si_debat_bloque: "Poussez vers la décision politique : si on ne peut pas avoir à la fois équité maximale et auditabilité maximale, qui doit décider du compromis — les ingénieurs ou les élus ?"
+  relance_cle: "La vraie question n'est pas si c'est techniquement difficile — c'est si la difficulté technique est une raison suffisante pour renoncer à l'équité."
 version: "1.0"

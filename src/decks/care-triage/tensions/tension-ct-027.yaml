@@ -21,4 +21,8 @@ tags:
   - documentation
   - co-décideur
   - editeur
+facilitator_note:
+  si_silence: "Demandez : si un médecin écrit dans le dossier 'décision prise en cohérence avec CareFlow', est-ce qu'il protège sa décision — ou est-ce qu'il engage aussi la responsabilité du système qu'il cite ?"
+  si_debat_bloque: "Poussez sur la contradiction contractuelle : si l'éditeur stipule que CareFlow est un outil d'aide sans responsabilité propre, et que le médecin documente une décision 'appuyée sur CareFlow', qui a raison en cas de complication — et qui paie ?"
+  relance_cle: "La vraie question n'est pas si le médecin peut s'appuyer sur CareFlow — c'est si on peut documenter une décision comme coconstruite avec un algorithme tout en maintenant que la responsabilité reste entièrement humaine."
 version: "1.0"

@@ -17,4 +17,8 @@ tags:
   - responsabilite
   - automatisation
   - droits
+facilitator_note:
+  si_silence: "Demandez : si un usager de L'Agence reçoit une décision de suspension de droits et cherche à contacter le responsable humain désigné — est-ce que ce responsable connaît le dossier, a du temps disponible, et peut réellement modifier la décision ?"
+  si_debat_bloque: "Poussez sur le volume : L'Agence traite des dizaines de milliers de dossiers. Désigner un responsable joignable en 48h pour chacun — combien d'agents ça implique, et si les effectifs ne suivent pas, est-ce que ce mandat est une garantie ou une obligation sans moyens ?"
+  relance_cle: "Ce mandat pose la question de la responsabilité nominale versus réelle : désigner un nom dans un dossier change-t-il quelque chose si cette personne n'a ni le temps ni le pouvoir de revenir sur une décision algorithmique ?"
 version: "1.0"

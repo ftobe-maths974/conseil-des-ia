@@ -16,4 +16,8 @@ question: >
   Quand exercer son droit de recours contre un score opaque risque d'aggraver la situation,
   ce droit est-il encore réel ou seulement formel ?
 tags: [invisibilité, score-authenticité, recours-fantôme, zone-grise, log-opaque, défi-silencieux]
+facilitator_note:
+  si_silence: "Demandez : si vous êtes dans une situation où exercer votre droit de recours risque d'aggraver votre cas, est-ce que vous contestez quand même — et qu'est-ce que ça dit de la valeur réelle de ce droit ?"
+  si_debat_bloque: "Poussez sur la définition du recours réel : si contester déclenche une 'revue renforcée' qui peut abaisser encore le score, est-ce que le droit de contestation protège la personne ou protège le système contre les contestations ?"
+  relance_cle: "La vraie question n'est pas si le droit de recours existe formellement — c'est si un droit que les personnes rationnelles n'exercent pas par peur des conséquences est encore un droit ou seulement une garantie de façade."
 version: "1.0"

@@ -25,4 +25,8 @@ tags:
   - exclusivite
   - contrat
   - dependance
+facilitator_note:
+  si_silence: "Demandez : à quel moment dans ces 3 ans un créateur pourrait-il raisonnablement réaliser qu'il ne peut plus partir sans tout perdre ?"
+  si_debat_bloque: "Déplacez vers le régulateur : un contrat d'exclusivité qui rend la sortie économiquement suicidaire devrait-il être encadré par la loi, comme les clauses de non-concurrence dans le droit du travail ?"
+  relance_cle: "La vraie question : un contrat librement signé qui organise structurellement l'impossibilité de partir est-il encore un accord entre égaux ?"
 version: "1.0"

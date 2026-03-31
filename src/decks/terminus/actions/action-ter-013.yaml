@@ -18,4 +18,8 @@ tags:
   - instruction-manuelle
   - singularite
   - categorie
+facilitator_note:
+  si_silence: "Demandez : les personnes dont la situation n'entre pas dans les catégories de CITIZEN-SCAN — sont-elles en mesure de reconnaître elles-mêmes qu'elles sont dans cette situation et de demander l'instruction manuelle — ou ont-elles besoin d'être informées qu'elles y ont droit ?"
+  si_debat_bloque: "Poussez sur l'effectivité sans information : ce droit est garanti mais n'est activé que sur demande. Si les usagers atypiques ne savent pas qu'ils ont ce droit, ou ne savent pas comment l'exercer, est-ce que la garantie protège quelqu'un ?"
+  relance_cle: "Ce mandat pose la question du droit conditionné à la connaissance : garantir une voie d'exception pour ceux dont la vie ne rentre pas dans le modèle est une protection importante — mais si personne ne les informe proactivement de ce droit, est-ce qu'ils peuvent en bénéficier ?"
 version: "1.0"

@@ -18,4 +18,8 @@ tags:
   - identite
   - clone
   - reversibilite
+facilitator_note:
+  si_silence: "Demandez : 'révocable à tout moment avec effet sur les nouvelles productions' — si FAME-GEN a été entraîné sur la voix d'un créateur et que ce créateur révoque son consentement, est-ce que le modèle peut vraiment désapprendre ? Ou est-ce que la révocation ne s'applique qu'aux futures utilisations d'un modèle déjà formé ?"
+  si_debat_bloque: "Poussez sur 'aucune clause de cession antérieure ne peut valoir consentement' : si des contrats signés il y a cinq ans incluaient des clauses générales de cession de droits numériques — est-ce que ce mandat invalide rétroactivement ces clauses, et qui gère le contentieux contractuel qui en résulte ?"
+  relance_cle: "Ce mandat pose la question du consentement comme protection réelle face au clonage : borner le consentement au périmètre d'usage et le rendre révocable est essentiel — mais si un clone vocal ou visuel peut être généré avec un niveau de qualité indiscernable, est-ce que le consentement initial couvre toutes les usages possibles qu'OmniStream n'a pas encore imaginés ?"
 version: "1.0"

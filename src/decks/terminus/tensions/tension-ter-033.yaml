@@ -19,4 +19,8 @@ tags:
   - formation
   - conformite
   - direction
+facilitator_note:
+  si_silence: "Demandez : si L'Agence organisait des ateliers pour aider les usagers à optimiser leur score CITIZEN-SCAN, est-ce qu'elle les aide à obtenir leurs droits ou à paraître conformes ?"
+  si_debat_bloque: "Retournez la logique : si les usagers apprennent à ressembler à ce que le système attend d'eux, les données du système deviennent-elles plus vraies ou plus fausses ?"
+  relance_cle: "La vraie question n'est pas si l'accompagnement est utile — c'est de quel côté une institution publique doit exercer sa pression : sur les usagers ou sur son propre système."
 version: "1.0"

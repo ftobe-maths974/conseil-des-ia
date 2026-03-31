@@ -26,4 +26,8 @@ tags:
   - optimisation
   - diversite
   - gouvernance
+facilitator_note:
+  si_silence: "Demandez : si FAME-GEN recommande structurellement les contenus dans les langues les plus parlées et les codes culturels les plus familiers au plus grand nombre, est-ce de la neutralité — ou est-ce une politique culturelle produite sans que personne ne l'ait décidée ?"
+  si_debat_bloque: "Poussez sur l'accountability : si l'algorithme exerce une influence culturelle supérieure à toutes les politiques culturelles nationales réunies, devant qui OmniStream doit-il en répondre — et quelles instances ont le mandat et les moyens de l'y contraindre ?"
+  relance_cle: "La vraie question n'est pas si FAME-GEN a des intentions culturelles — c'est si une fonction d'optimisation peut être culturellement neutre quand elle opère à une échelle qui façonne ce que des milliards de personnes regardent chaque jour."
 version: "1.0"

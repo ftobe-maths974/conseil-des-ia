@@ -20,4 +20,8 @@ tags:
   - sanction
   - mobilite
   - contexte
+facilitator_note:
+  si_silence: "Demandez : l'usager ne savait pas que ses déménagements étaient surveillés — à quel moment aurait-il dû le savoir, et qui aurait dû le lui dire ?"
+  si_debat_bloque: "Inversez la charge : si le système doit prouver qu'une interprétation est juste plutôt que l'usager prouver qu'elle est fausse, qu'est-ce que ça change dans la conception ?"
+  relance_cle: "La vraie question : une sanction juste en moyenne mais injuste dans ce cas précis — pour qui conçoit-on ce système ?"
 version: "1.0"

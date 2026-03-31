@@ -16,4 +16,8 @@ question: >
   Confier la certification du réel à une autorité centralisée ou à un réseau distribué, est-ce
   un choix technique ou un choix politique sur qui détient le pouvoir de dire ce qui est vrai ?
 tags: [preuve, chaîne-de-garde, provenance, attestation, centralisation, résilience, liveness]
+facilitator_note:
+  si_silence: "Demandez : dans une architecture distribuée avec des nœuds d'attestation décentralisés, si deux nœuds sont en désaccord sur l'authenticité d'une preuve, qui tranche — et si personne ne peut trancher, qu'est-ce qu'on fait de la preuve dans une procédure en cours ?"
+  si_debat_bloque: "Poussez sur la vulnérabilité politique de chaque architecture : l'architecture centralisée est vulnérable à la coercition d'une seule entité. L'architecture distribuée est vulnérable à une coalition d'acteurs contrôlant la majorité des nœuds. Est-ce que l'une est vraiment plus sûre que l'autre face à une attaque étatique ou à une capture industrielle ?"
+  relance_cle: "La vraie question n'est pas technique mais politique : qui a le droit de dire que quelque chose est réel — une institution centrale avec une légitimité démocratique, ou un réseau dont la gouvernance est floue ? Les deux réponses ont un coût, et choisir l'une c'est aussi choisir quel type de pouvoir on veut limiter."
 version: "1.0"

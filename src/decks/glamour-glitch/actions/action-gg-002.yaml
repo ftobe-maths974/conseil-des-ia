@@ -18,4 +18,8 @@ tags:
   - reprise-controle
   - pipeline
   - autonomie
+facilitator_note:
+  si_silence: "Demandez : 'sans réduction de visibilité pendant 30 jours' — OmniStream contrôle l'algorithme de recommandation. Si un créateur reprend le contrôle de son pipeline et que sa cadence de publication baisse, comment OmniStream peut-il s'engager à ne pas ajuster la visibilité, même automatiquement ?"
+  si_debat_bloque: "Poussez sur 'documenter l'effectivité' : OmniStream doit documenter que la procédure de reprise fonctionne — mais c'est OmniStream lui-même qui documente. Qui vérifie que cette documentation est honnête, et que le créateur qui a repris le contrôle n'a pas subi de pénalités invisibles ?"
+  relance_cle: "Ce mandat pose la question de l'autonomie contractuelle réelle : garantir le droit de reprendre le contrôle sans pénalité visible, c'est une protection — mais si la plateforme peut moduler la recommandation, la monétisation ou la distribution sans l'inscrire explicitement comme pénalité, le droit de reprise protège-t-il vraiment contre les représailles invisibles ?"
 version: "1.0"

@@ -20,4 +20,8 @@ tags:
   - comptabilite
   - cout-cache
   - automatisation
+facilitator_note:
+  si_silence: "Demandez : si L'Agence a supprimé 40 postes grâce à l'automatisation mais embauché 12 personnes pour maintenir le système, est-ce qu'on peut encore parler d'économies nettes ?"
+  si_debat_bloque: "Poussez sur la comptabilité politique : pourquoi les postes supprimés apparaissent dans les tableaux de bord comme une réussite, mais pas les postes créés pour la maintenance ?"
+  relance_cle: "La vraie question n'est pas si l'automatisation réduit les coûts — c'est si les économies annoncées sont réelles ou si elles déplacent simplement des coûts vers des cases qui ne sont pas comptées."
 version: "1.0"

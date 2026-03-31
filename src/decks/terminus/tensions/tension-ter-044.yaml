@@ -19,4 +19,8 @@ tags:
   - intuition
   - automatisation
   - reduction
+facilitator_note:
+  si_silence: "Demandez : si vous deviez expliquer à quelqu'un comment vous décidez d'accorder ou refuser quelque chose de difficile, est-ce que vous pourriez le mettre en règles claires — ou est-ce qu'une partie resterait indicible ?"
+  si_debat_bloque: "Poussez sur ce qui a disparu : si le modèle reproduit les patterns de décision mais pas le doute, qu'est-ce que le doute faisait que les patterns ne font pas ?"
+  relance_cle: "La vraie question n'est pas si le modèle décide comme un humain — c'est si ce qu'on a perdu en extrayant les patterns était précisément ce qui rendait la décision humaine légitime."
 version: "1.0"

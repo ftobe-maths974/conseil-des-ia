@@ -14,4 +14,8 @@ body: >
   nationalement, et accessible sans authentification.
 mandat_principe: "Exiger qu'au-delà d'un seuil de coût de vérification documenté, la décision d'authentification soit rendue à un agent humain responsable et identifiable."
 tags: [métabolisme, friction, taux-de-friction, coût-humain, inflation-procédurale, charge-cognitive, latence-sociale, audit]
+facilitator_note:
+  si_silence: "Demandez : 'estimation du coût humain en heures perdues' — qui fait cette estimation, avec quelle méthode ? Si l'institution détermine elle-même la valeur d'une heure perdue par un usager dans une procédure d'authentification échouée, est-ce que le chiffre reflète le coût réel ou le minimise ?"
+  si_debat_bloque: "Poussez sur la publication mensuelle sans authentification : si l'indicateur est public et agrégeable nationalement, il peut révéler des institutions dont le taux de friction est anormalement élevé. Est-ce que cette visibilité crée une pression suffisante pour que les institutions réduisent leur friction, ou est-ce que les contraintes opérationnelles et réglementaires priment sur la réputation ?"
+  relance_cle: "Ce mandat pose la question de la friction comme indicateur de gouvernance : rendre le coût humain de l'authentification visible chaque mois, c'est reconnaître que ce coût existe et qu'il doit être mesuré — mais si aucun seuil de friction acceptable n'est défini et qu'aucune conséquence automatique n'est prévue, la publication mensuelle rend le problème lisible sans le rendre contraignant ?"
 version: "1.0"

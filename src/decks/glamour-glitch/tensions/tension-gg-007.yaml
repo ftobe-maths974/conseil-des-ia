@@ -25,4 +25,8 @@ tags:
   - pouvoir-editorial
   - gouvernance
   - systeme
+facilitator_note:
+  si_silence: "Demandez : dans l'histoire des médias, quand la presse ou la radio s'est concentrée en quelques mains, qu'est-ce qui a changé dans ce qu'on pouvait dire ou montrer ?"
+  si_debat_bloque: "Changez d'angle vers la régulation : si OmniStream était un journal possédant 80% des kiosques du pays, les règles antitrust s'appliqueraient — pourquoi pas ici ?"
+  relance_cle: "La vraie question : un monopole éditorial de fait est-il moins dangereux parce qu'il est exercé par un algorithme plutôt que par un éditeur en chef ?"
 version: "1.0"

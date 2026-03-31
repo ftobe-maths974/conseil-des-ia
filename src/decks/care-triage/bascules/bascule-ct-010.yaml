@@ -20,4 +20,8 @@ tags:
   - relation-soignant
   - alerte
   - patient-fragile
+facilitator_note:
+  si_silence: "Demandez : si l'infirmière ignore l'alerte et qu'elle a tort cette fois, est-ce que sa connaissance du patient la protège ou l'expose ?"
+  si_debat_bloque: "Poussez vers la conception du système : pourquoi CareFlow n'intègre-t-il pas la possibilité de renseigner les valeurs de référence individuelles d'un patient — et qui aurait dû exiger ça ?"
+  relance_cle: "La vraie question n'est pas si l'infirmière a raison — c'est : dans quel cadre institutionnel la connaissance clinique personnelle d'un soignant a-t-elle une valeur reconnue face à une alerte automatique ?"
 version: "1.0"

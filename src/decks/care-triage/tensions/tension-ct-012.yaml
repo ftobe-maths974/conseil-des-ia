@@ -20,4 +20,8 @@ tags:
   - autonomie-patient
   - information
   - risque-cognitif
+facilitator_note:
+  si_silence: "Demandez : si un patient refuse un soin parce qu'il a mal compris un critère du score CareFlow, qui est responsable de cette incompréhension — le système, le soignant, ou la direction qui a décidé du format d'affichage ?"
+  si_debat_bloque: "Retournez vers le patient : lui donner moins d'information pour le protéger de lui-même, est-ce du paternalisme bienveillant ou la décision unilatérale de limiter son autonomie ?"
+  relance_cle: "La vraie question est de savoir qui décide du bon niveau d'information pour un patient — et sur quelle base cette décision est légitime."
 version: "1.0"

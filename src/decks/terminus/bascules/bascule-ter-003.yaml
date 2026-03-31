@@ -20,4 +20,8 @@ tags:
   - contrat
   - sortie
   - souverainete
+facilitator_note:
+  si_silence: "Posez la question : à quel moment dans ce contrat de 7 ans quelqu'un aurait pu tirer la sonnette d'alarme ?"
+  si_debat_bloque: "Retournez vers les personnes affectées : pendant les 18 mois de migration, que se passe-t-il pour les usagers dont les droits sont biaisés ?"
+  relance_cle: "La vraie question : est-ce que signer ce contrat revenait déjà à céder une part de souveraineté, même avant de découvrir les biais ?"
 version: "1.0"

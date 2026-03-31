@@ -14,4 +14,8 @@ body: >
   de lever la mesure provisoire doit être motivé par écrit.
 mandat_principe: "Interdire que l'opacité d'un calcul d'authenticité tienne lieu de preuve contre la personne évaluée — la charge de la preuve ne peut reposer sur le seul score."
 tags: [invisibilité, recours-fantôme, zone-grise, déclassement, agent-humain, délai, suspicion-latente, score-authenticité]
+facilitator_note:
+  si_silence: "Demandez : le canal de recours est garanti 'sans exigence de score d'authenticité minimal' — mais si la personne déclassée n'a plus accès à internet, à un téléphone, ou à tout outil numérique à cause de sa situation de précarité, comment elle accède concrètement à ce canal dans les 72 heures ?"
+  si_debat_bloque: "Poussez sur le pouvoir de l'agent humain de lever provisoirement la mesure : si l'agent peut lever provisoirement et que SIGMA-ID peut immédiatement la réimposer parce que les critères de déclassement persistent, dans quel sens fonctionne réellement la hiérarchie entre l'agent humain et le système ?"
+  relance_cle: "Ce mandat pose la question du recours humain comme protection contre le score comme preuve : garantir un accès humain opposable en 72 heures avec pouvoir de levée provisoire est un droit fort — mais si l'agent humain ne dispose pas des mêmes informations que SIGMA-ID pour instruire le dossier, peut-il exercer ce pouvoir en toute connaissance de cause ?"
 version: "1.0"

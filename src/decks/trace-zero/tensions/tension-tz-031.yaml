@@ -16,4 +16,8 @@ question: >
   Déployer un système efficace qui discrimine une fraction connue de la population, ou un système
   moins efficace qui les inclut mieux — quel arbitrage une institution doit-elle assumer et devant qui ?
 tags: [singularité, faux-positif, accessibilité, équité-biométrique, standard, dérogation-biométrique, anomalie]
+facilitator_note:
+  si_silence: "Demandez : si la mairie sait que 8 à 12 % des usagers de son service d'état civil déclencheront des faux positifs réguliers, et qu'elle déploie quand même le système standard — est-ce qu'elle a pris une décision explicite sur ces usagers, ou est-ce qu'elle a évité d'en prendre une ?"
+  si_debat_bloque: "Poussez sur la visibilité de l'arbitrage : si diviser l'efficacité anti-fraude par deux pour mieux inclure les profils atypiques est trop coûteux, est-ce que la mairie peut assumer publiquement qu'elle a choisi l'efficacité contre l'inclusion — et devant qui ?"
+  relance_cle: "La vraie question n'est pas si 65 % de réduction des fraudes est un bon résultat — c'est si une institution publique peut déployer un système qui discrimine une fraction connue et prévisible de sa population sans que cet arbitrage soit rendu explicite et assumé."
 version: "1.0"

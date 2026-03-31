@@ -22,4 +22,8 @@ tags:
   - couts
   - inegalite
   - acces
+facilitator_note:
+  si_silence: "Demandez : si protéger votre identité artistique en ligne coûte 800€ de certification, et que vous êtes un créateur indépendant avec un revenu précaire, est-ce que ce système vous protège — ou est-ce qu'il protège ceux qui ont les moyens de payer ?"
+  si_debat_bloque: "Poussez sur la présomption : si les créateurs non-certifiés sont implicitement considérés comme potentiellement synthétiques par le système, est-ce une présomption d'authenticité inversée — et quelle en est la conséquence pour leur visibilité ?"
+  relance_cle: "La vraie question n'est pas si la certification est techniquement solide — c'est si un système de preuve dont le coût d'accès exclut les plus précaires peut encore s'appeler un système de protection."
 version: "1.0"

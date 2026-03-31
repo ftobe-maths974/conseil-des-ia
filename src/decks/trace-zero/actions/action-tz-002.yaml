@@ -13,4 +13,8 @@ body: >
   procédure documentée entraîne la suspension du droit de déléguer la certification à SIGMA-ID.
 mandat_principe: "Garantir que toute décision de SIGMA-ID affectant les droits d'une personne soit accompagnée d'une explication humainement compréhensible et d'un interlocuteur identifié dans un délai de 72 heures."
 tags: [delegation, confiance-forcée, opérateur-de-confiance, CVR, validation-tierce, reprise-de-contrôle]
+facilitator_note:
+  si_silence: "Demandez : 'activable en moins de 30 minutes, sans dépendance technique à SIGMA-ID' — si la procédure de reprise a été conçue il y a trois ans et que le système a évolué depuis, comment l'entité sait-elle que la procédure fonctionne encore sans la tester dans un contexte de vrai incident ?"
+  si_debat_bloque: "Poussez sur la sanction d'absence de procédure : l'entité qui n'a pas de procédure documentée perd le droit de déléguer à SIGMA-ID. Mais si SIGMA-ID est devenu le standard de facto et qu'il n'existe pas d'alternative, est-ce que cette sanction est applicable sans créer une crise d'identité numérique pour les personnes dépendantes de l'entité ?"
+  relance_cle: "Ce mandat pose la question de la résilience comme condition de délégation : exiger une procédure de reprise testée trimestriellement force les entités à maintenir une capacité autonome — mais si le test trimestriel est pro forma et que la vraie procédure de reprise n'a jamais été utilisée dans un incident réel, la condition est-elle remplie ou simulée ?"
 version: "1.0"

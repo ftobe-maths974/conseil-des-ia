@@ -20,4 +20,8 @@ tags:
   - relation
   - optimisation
   - service-public
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici a vécu une situation où le fait qu'un agent vous connaisse personnellement a changé quelque chose — dans une administration, une banque, un hôpital ?"
+  si_debat_bloque: "Poussez sur la mesure : si le lien humain permettait de détecter des situations qu'aucun algorithme ne peut voir, est-ce que sa disparition a un coût — et comment le calculerait-on ?"
+  relance_cle: "La vraie question n'est pas si le service est plus rapide — c'est si un service public qui a supprimé les relations humaines pour les remplacer par des profils est encore un service public."
 version: "1.0"

@@ -20,4 +20,8 @@ tags:
   - justificatif
   - hebergement
   - format
+facilitator_note:
+  si_silence: "Demandez : est-ce que vivre chez un oncle sans bail, c'est une situation rare ou est-ce que tout le monde connaît quelqu'un dans ce cas ?"
+  si_debat_bloque: "Retournez vers le système : est-ce que le format du justificatif protège quelque chose de réel, ou c'est juste une contrainte technique non réfléchie ?"
+  relance_cle: "La vraie question : quand le format exclut structurellement certaines personnes, est-ce que le système sélectionne les bons bénéficiaires ou les plus conformes ?"
 version: "1.0"

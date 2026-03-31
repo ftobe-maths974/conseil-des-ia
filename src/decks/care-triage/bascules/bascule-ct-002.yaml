@@ -20,4 +20,8 @@ tags:
   - signature
   - sortie
   - protocole
+facilitator_note:
+  si_silence: "Demandez : si ce médecin est convoqué devant un juge et qu'il dit 'c'est CareFlow qui a recommandé la sortie', est-ce que ça le protège ?"
+  si_debat_bloque: "Déplacez vers l'institution : si personne ne peut expliquer une décision signée, est-ce que l'hôpital peut encore défendre cette décision en cas de plainte ?"
+  relance_cle: "La vraie question n'est pas la responsabilité individuelle du médecin — c'est : qui a décidé que signer sans comprendre était acceptable dans ce protocole ?"
 version: "1.0"

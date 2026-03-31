@@ -20,4 +20,8 @@ tags:
   - comportement
   - authenticity
   - adaptation
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici a déjà changé son comportement en sachant qu'il était observé — au travail, en voiture, en ligne ?"
+  si_debat_bloque: "Poussez la logique : si tout le monde se comporte en fonction de l'algorithme, les données reflètent les attentes du système, pas la réalité des gens. Que mesure-t-on encore ?"
+  relance_cle: "La vraie question n'est pas si elle triche — c'est si un système de contrôle qui modifie les comportements peut encore prétendre mesurer quelque chose de réel."
 version: "1.0"

@@ -18,4 +18,8 @@ tags:
   - recommandation
   - diversite
   - flux
+facilitator_note:
+  si_silence: "Demandez : le plafond de 30% s'applique par utilisateur sur 7 jours glissants — mais si FAME-GEN génère du contenu attribué à des créateurs humains qui l'ont validé, est-ce que ce contenu entre dans les 30% ou dans les 70% 'humains' ?"
+  si_debat_bloque: "Poussez sur l'audit automatisé mensuel : l'audit est automatisé et produit par OmniStream sur ses propres données. Qui vérifie que l'audit lui-même est correct, et que le calcul du 30% utilise la même définition de 'contenu généré' que le mandat ?"
+  relance_cle: "Ce mandat pose la question du plafond comme protection de la diversité : limiter le contenu synthétique à 30% des recommandations préserve un espace pour la création humaine — mais si le contenu synthétique est structurellement plus engageant (plus poli, plus régulier, mieux ciblé), est-ce que le plafond protège les créateurs humains ou préserve artificiellemnt un espace qu'ils ont du mal à occuper ?"
 version: "1.0"

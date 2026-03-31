@@ -16,4 +16,8 @@ question: >
   Confier la gestion de l'identité nationale à un opérateur privé efficace, est-ce un choix pragmatique
   ou le début d'une perte de contrôle sur l'infrastructure la plus sensible de la démocratie ?
 tags: [delegation, souveraineté, service-public, délégation-du-réel, CVR, opérateur-de-confiance, confiance-forcée]
+facilitator_note:
+  si_silence: "Demandez : si l'État avait choisi l'opérateur public, le déploiement aurait duré 48 mois — et les données agrégées n'auraient pas alimenté des produits commerciaux. Est-ce que ça valait 30 mois d'attente supplémentaire ?"
+  si_debat_bloque: "Poussez sur la clause contractuelle : si le contrat prévoyait explicitement l'accès aux données agrégées pour 'amélioration du service', est-ce que l'État savait ce qu'il signait — et si oui, quelle est la responsabilité de ceux qui ont signé ?"
+  relance_cle: "La vraie question n'est pas si l'opérateur privé est compétent — c'est si confier l'infrastructure d'identité nationale à un acteur dont le modèle économique inclut la valorisation de données agrégées est compatible avec le contrôle démocratique sur la démocratie elle-même."
 version: "1.0"

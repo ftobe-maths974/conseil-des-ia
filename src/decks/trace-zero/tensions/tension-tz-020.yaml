@@ -16,4 +16,8 @@ question: >
   Protéger ses propres preuves en les confiant à l'infrastructure de certification, est-ce se donner
   les moyens de se défendre ou se rendre plus vulnérable sur un autre plan ?
 tags: [preuve, attestation, consentement, chaîne-de-garde, certificat-de-présence, vie-privée, liveness]
+facilitator_note:
+  si_silence: "Demandez : si vous pouviez certifier dès maintenant vos photos et messages importants pour les protéger d'une contestation future — mais que ça impliquait de confier une copie à l'infrastructure OGR — est-ce que vous le feriez ?"
+  si_debat_bloque: "Poussez sur le paradoxe de la protection : si se défendre contre l'usurpation future exige de livrer ses données personnelles à une infrastructure que des tiers peuvent accéder sur injonction, est-ce qu'on échange une vulnérabilité contre une autre — et comment choisit-on ?"
+  relance_cle: "La vraie question n'est pas si la certification des preuves est utile — c'est si confier ses preuves à l'infrastructure pour les protéger crée une dépendance nouvelle qui peut être utilisée contre soi dans des contextes qu'on n'avait pas anticipés."
 version: "1.0"

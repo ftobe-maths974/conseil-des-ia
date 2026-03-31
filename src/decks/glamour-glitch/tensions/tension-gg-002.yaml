@@ -22,4 +22,8 @@ tags:
   - contrat
   - evolution-systeme
   - surveillance
+facilitator_note:
+  si_silence: "Demandez : si votre contrat de travail évoluait en pratique sans avenant signé, à quel moment estimeriez-vous que le consentement initial ne tient plus ?"
+  si_debat_bloque: "Déplacez vers OmniStream : l'entreprise avait-elle l'obligation d'informer le créateur du changement de comportement du système, même si la clause contractuelle le couvrait ?"
+  relance_cle: "La vraie question : un consentement à un outil vaut-il encore quand l'outil a fondamentalement changé de nature sans prévenir ?"
 version: "1.0"

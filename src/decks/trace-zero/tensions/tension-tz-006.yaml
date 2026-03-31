@@ -16,4 +16,8 @@ question: >
   Quand le coût de la dérogation à une norme obligatoire est inaccessible pour les organisations
   qui servent les populations les plus fragiles, la norme est-elle encore universelle ?
 tags: [delegation, dérogation, CVR, exclusion, opérateur-de-confiance, confiance-forcée, dépendance-identitaire]
+facilitator_note:
+  si_silence: "Demandez : si une association n'a pas les 18 000 euros, qu'est-ce qui se passe concrètement pour les personnes sans domicile qu'elle accompagne ?"
+  si_debat_bloque: "Remontez au niveau politique : qui a décidé que la dérogation aurait ce tarif, et a-t-on évalué son impact sur les publics fragiles avant de le fixer ?"
+  relance_cle: "La vraie question est celle de l'universalité tarifée : une norme obligatoire avec une dérogation inaccessible n'est pas universelle, c'est une norme qui exclut légalement."
 version: "1.0"

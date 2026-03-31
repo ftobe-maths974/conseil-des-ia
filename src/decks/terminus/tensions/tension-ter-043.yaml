@@ -21,4 +21,8 @@ tags:
   - bilan
   - conflit-interet
   - infrastructure
+facilitator_note:
+  si_silence: "Demandez : si reconnaître que CITIZEN-SCAN est dysfonctionnel obligeait L'Agence à déprécier 18 millions d'euros d'actifs dans son bilan, pensez-vous qu'elle pourrait faire cette évaluation objectivement ?"
+  si_debat_bloque: "Poussez sur le conflit d'intérêt structurel : quelle instance externe aurait le mandat et les moyens d'évaluer si CITIZEN-SCAN devrait être abandonné — et pourquoi cette instance n'existe pas encore ?"
+  relance_cle: "La vraie question n'est pas si L'Agence est de mauvaise foi — c'est si une institution peut être à la fois juge et partie de la valeur d'un actif dont dépendent ses propres usagers."
 version: "1.0"

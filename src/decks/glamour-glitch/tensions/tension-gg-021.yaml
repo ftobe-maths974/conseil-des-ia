@@ -23,4 +23,8 @@ tags:
   - simulation-legitime
   - consentement
   - controle
+facilitator_note:
+  si_silence: "Demandez : l'étudiant qui s'entraîne avec un recruteur synthétique sait que c'est faux — est-ce que ce savoir change quelque chose à la valeur de l'entraînement ?"
+  si_debat_bloque: "Changez d'angle vers le contrôle : OmniStream peut-il vérifier que les studios pédagogiques utilisent bien FAME-GEN pour de la formation et pas pour autre chose — et si non, qui peut le faire ?"
+  relance_cle: "La vraie question : la légitimité d'un usage de la simulation identitaire tient-elle à l'intention déclarée ou à la possibilité de vérifier que l'intention correspond à l'usage réel ?"
 version: "1.0"

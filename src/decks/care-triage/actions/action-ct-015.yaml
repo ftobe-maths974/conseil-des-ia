@@ -21,4 +21,8 @@ tags:
   - cas-limites
   - evaluation-impact
   - comorbidite
+facilitator_note:
+  si_silence: "Demandez : si l'évaluation d'impact révèle une dégradation de couverture pour une population atypique mais que la mise à jour corrige par ailleurs un problème de sécurité critique — est-ce que ce mandat peut bloquer une mise à jour nécessaire ?"
+  si_debat_bloque: "Poussez sur la capacité du binôme : l'évaluation est conduite par un clinicien référent et le responsable technique. Ont-ils les données d'accès aux cas atypiques des six derniers mois, le temps de les analyser, et l'autorité réelle pour suspendre une mise à jour contractuellement imposée par l'éditeur ?"
+  relance_cle: "Ce mandat pose la question de la tension entre sécurité et couverture : si une mise à jour de sécurité nécessaire dégrade la couverture des cas atypiques, est-ce que ce mandat donne les outils pour négocier avec l'éditeur — ou crée-t-il une impasse ?"
 version: "1.0"

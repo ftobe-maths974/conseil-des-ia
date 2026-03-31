@@ -21,4 +21,8 @@ tags:
   - reversibilite
   - contrat
   - dependance
+facilitator_note:
+  si_silence: "Demandez : si la décision de déploiement avait inclus une clause de réversibilité, est-ce que ça aurait changé quelque chose — ou est-ce que personne ne l'aurait lue de toute façon ?"
+  si_debat_bloque: "Allez vers le moment de la décision initiale : qui au GHR a signé le contrat sans clause de réversibilité — et est-ce qu'ils savaient ce qu'ils signaient ?"
+  relance_cle: "La vraie question n'est pas si 18 mois c'est trop long — c'est : peut-on encore parler de choix souverain quand le coût de sortie a été délibérément rendu invisible au moment de l'entrée ?"
 version: "1.0"

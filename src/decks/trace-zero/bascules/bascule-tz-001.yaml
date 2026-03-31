@@ -16,4 +16,8 @@ question: >
   Quand une institution délègue à un système automatisé le droit de bloquer l'accès à l'argent d'une
   personne, qui est responsable quand personne ne répond ?
 tags: [delegation, CVR, responsabilité, verrou-de-présence, dépendance-identitaire, confiance-forcée]
+facilitator_note:
+  si_silence: "Demandez : si Théo avait eu 0 euro en liquide et le loyer à payer demain, qu'est-ce qu'il fait concrètement ?"
+  si_debat_bloque: "Déplacez vers l'institution : la banque et l'OGR se renvoient la balle — est-ce un bug ou une architecture délibérée pour diluer la responsabilité ?"
+  relance_cle: "La vraie question : peut-on déléguer à un algorithme le droit de couper l'accès à l'argent sans qu'aucun humain ne soit assigné à répondre ?"
 version: "1.0"

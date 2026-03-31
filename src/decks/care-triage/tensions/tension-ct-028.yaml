@@ -20,4 +20,8 @@ tags:
   - standard
   - efficience
   - cas-complexe
+facilitator_note:
+  si_silence: "Demandez : si un système de triage génère des alertes mal calibrées pour certains patients et nécessite des consultations supplémentaires pour eux, est-ce que ces patients sont servis par le système — ou est-ce qu'ils le contournent ?"
+  si_debat_bloque: "Poussez sur la définition du coût : si le patient atypique coûte plus cher au système en temps et en ressources, ce coût est-il un problème d'efficience ou le signe que le standard a été conçu sans lui ?"
+  relance_cle: "La vraie question n'est pas si les patients atypiques sont difficiles à gérer — c'est si un standard qui exclut les cas qui en sortent peut encore être présenté comme un standard de qualité."
 version: "1.0"

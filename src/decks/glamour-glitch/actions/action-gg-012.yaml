@@ -18,4 +18,8 @@ tags:
   - consentement
   - modele
   - responsabilite
+facilitator_note:
+  si_silence: "Demandez : 'consentement antérieur à l'usage génératif' — beaucoup de contrats signés avant l'émergence des IA génératives incluaient des cessions générales de droits numériques. L'audit identifie ces cas comme ambigus — mais les mesures correctives exigent-elles un nouveau consentement, ou une compensation rétroactive ?"
+  si_debat_bloque: "Poussez sur la fréquence de 18 mois : FAME-GEN évolue en permanence et de nouveaux modèles sont entraînés bien plus fréquemment. Est-ce qu'un audit tous les 18 mois peut suivre le rythme d'intégration de nouvelles identités, ou est-ce que chaque nouvelle version entre dans un angle mort ?"
+  relance_cle: "Ce mandat pose la question de l'auditabilité du passé : auditer la chaîne de consentement des modèles actifs, c'est regarder en arrière — mais si des modèles ont déjà généré des milliers de productions à partir d'identités pour lesquelles le consentement est ambigu, les mesures correctives futures peuvent-elles réparer le préjudice déjà causé ?"
 version: "1.0"

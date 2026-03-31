@@ -22,4 +22,8 @@ tags:
   - information
   - responsabilite
   - opacite
+facilitator_note:
+  si_silence: "Demandez : si vous produisez 15 clips par semaine avec FAME-GEN mais qu'OmniStream ne vous dit pas ce que ça consomme en énergie, est-ce que vous pouvez décider de produire moins pour des raisons environnementales — et qui est responsable si vous ne le faites pas ?"
+  si_debat_bloque: "Poussez sur l'asymétrie d'information : si OmniStream connaît le coût ressource de chaque inférence et ne le communique pas aux créateurs, est-ce une décision neutre — ou une décision qui protège le volume de production en empêchant les créateurs de faire des choix éclairés ?"
+  relance_cle: "La vraie question n'est pas si le créateur est responsable de son empreinte — c'est si on peut exiger une responsabilité individuelle sur une information que l'acteur qui la détient a choisi de ne pas partager."
 version: "1.0"

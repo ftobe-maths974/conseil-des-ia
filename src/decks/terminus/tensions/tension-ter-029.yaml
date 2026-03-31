@@ -20,4 +20,8 @@ tags:
   - invisibilite
   - soin
   - mesure
+facilitator_note:
+  si_silence: "Demandez : si une voisine garde vos enfants gratuitement trois fois par semaine, est-ce que ça compte comme une activité productive selon vous — et selon CITIZEN-SCAN ?"
+  si_debat_bloque: "Posez la question en termes de valeur : pourquoi l'économie marchande est-elle traçable et comptée, et l'économie du soin est-elle invisible et non comptée — qui a décidé ça ?"
+  relance_cle: "La vraie question n'est pas si ces solidarités existent — c'est si un système qui ne peut pas les mesurer peut prétendre évaluer correctement ces vies."
 version: "1.0"

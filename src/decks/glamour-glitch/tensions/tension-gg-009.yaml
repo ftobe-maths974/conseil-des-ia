@@ -22,4 +22,8 @@ tags:
   - entrainement
   - consentement
   - propriete-intellectuelle
+facilitator_note:
+  si_silence: "Demandez : si vous appreniez que votre style créatif a été utilisé sans accord pour entraîner un modèle, est-ce que cela changerait votre rapport à FAME-GEN ?"
+  si_debat_bloque: "Retournez vers les juristes de la salle : est-ce que le droit d'auteur tel qu'il existe protège les créateurs contre ce type d'extraction — ou a-t-il besoin d'être reécrit ?"
+  relance_cle: "La vraie question : peut-on parler de délégation libre à un système qui a d'abord pris sans demander, et qui continue à prendre chaque fois qu'on l'utilise ?"
 version: "1.0"

@@ -22,4 +22,8 @@ tags:
   - inegalite
   - petits-createurs
   - politique
+facilitator_note:
+  si_silence: "Demandez : si OmniStream limite à 10 clips FAME-GEN par semaine pour tous les créateurs, un grand créateur établi perd un confort — mais un petit créateur émergent perd son seul avantage compétitif. Est-ce une politique équitable ?"
+  si_debat_bloque: "Poussez sur la conception de la sobriété : si une politique de sobriété uniforme creuse les inégalités entre créateurs, est-ce que la solution est de ne pas faire de politique de sobriété — ou de concevoir une politique différenciée selon la position des acteurs ?"
+  relance_cle: "La vraie question n'est pas si la sobriété est souhaitable — c'est si une contrainte uniforme appliquée à des acteurs en situation inégale peut être appelée une politique juste, et comment concevoir une sobriété qui ne renforce pas les inégalités existantes."
 version: "1.0"

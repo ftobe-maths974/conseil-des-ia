@@ -26,4 +26,8 @@ tags:
   - atrophie
   - dependance
   - formation
+facilitator_note:
+  si_silence: "Demandez : si demain FAME-GEN tombait en panne, ce monteur pourrait-il reprendre son travail seul — et qui doit s'en préoccuper ?"
+  si_debat_bloque: "Changez d'angle vers OmniStream : est-ce qu'une entreprise qui laisse atrophier les compétences de ses prestataires porte une responsabilité vis-à-vis d'eux ?"
+  relance_cle: "La vraie question : l'atrophie d'une compétence humaine rendue 'inutile' par l'IA est-elle un dommage collectif ou un ajustement naturel du marché du travail ?"
 version: "1.0"

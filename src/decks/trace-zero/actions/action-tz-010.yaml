@@ -14,4 +14,8 @@ body: >
   décideur humain nommé.
 mandat_principe: "Un score d'authenticité est un indice, non une vérité — son insuffisance ne constitue pas une preuve de synthèse et ne dispense pas d'un examen humain de la preuve."
 tags: [preuve, liveness, certificat-de-présence, chaîne-de-garde, présomption-de-synthèse, score-authenticité]
+facilitator_note:
+  si_silence: "Demandez : 'au moins un élément de preuve complémentaire indépendant du score' — si tous les éléments de preuve disponibles dans le dossier sont eux-mêmes attestés par SIGMA-ID ou dépendent du même score, comment un décideur humain peut-il trouver un élément réellement indépendant ?"
+  si_debat_bloque: "Poussez sur le seuil de 90% : pourquoi 90% et pas 80% ou 95% ? Si ce seuil est perçu comme arbitraire, est-ce que toute valeur choisie aura le même problème — et si oui, comment définir un seuil défendable plutôt qu'une frontière contestable ?"
+  relance_cle: "Ce mandat pose la question du score comme indice versus preuve : interdire que le score seul justifie le rejet d'une preuve est une protection contre l'automatisation du doute — mais si 'un élément complémentaire' suffit à compléter le motif de rejet, est-ce que ce mandat empêche vraiment le rejet ou ajoute-t-il seulement une étape documentaire à une décision déjà prise ?"
 version: "1.0"

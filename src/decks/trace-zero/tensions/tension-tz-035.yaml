@@ -17,4 +17,8 @@ question: >
   Entre le fabricant d'un système biométrique et l'institution qui le déploie, qui porte la responsabilité
   des dommages causés par ses erreurs systématiques ?
 tags: [singularité, responsabilité, faux-positif, standard, équité-biométrique, profil-à-risque, anomalie]
+facilitator_note:
+  si_silence: "Demandez : si vous êtes victime d'un faux positif SIGMA-ID qui vous a fait perdre votre emploi, et que le fabricant et l'institution se renvoient la responsabilité — vers qui vous tournez-vous, et pourquoi aucun ne peut être condamné aujourd'hui ?"
+  si_debat_bloque: "Poussez sur les 47 cas sans condamnation : si aucun des 47 contentieux européens n'a abouti faute de clarté sur la chaîne de responsabilité, est-ce une lacune juridique temporaire ou le signe que le droit n'a pas été conçu pour ce type de dommage ?"
+  relance_cle: "La vraie question n'est pas si les erreurs de SIGMA-ID sont inévitables — c'est si une technologie dont les erreurs causent des préjudices réels peut être déployée massivement tant qu'aucune chaîne de responsabilité claire n'existe pour les victimes."
 version: "1.0"

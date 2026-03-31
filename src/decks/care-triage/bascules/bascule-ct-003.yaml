@@ -21,4 +21,8 @@ tags:
   - rationalisation
   - dependance
   - irréversibilite
+facilitator_note:
+  si_silence: "Posez la question : si CareFlow tombe en panne demain matin, qui dans ce service est encore capable de coordonner le triage sans lui ?"
+  si_debat_bloque: "Retournez l'argument de la direction : si c'est vraiment une rationalisation, pourquoi est-ce que la décision est 'non réversible à court terme' dès l'annonce ?"
+  relance_cle: "La vraie question n'est pas si le poste était utile — c'est : à quel moment une décision budgétaire devient-elle une décision clinique que personne n'a validée ?"
 version: "1.0"

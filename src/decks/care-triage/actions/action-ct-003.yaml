@@ -20,4 +20,8 @@ tags:
   - perimetre
   - glissement
   - gouvernance
+facilitator_note:
+  si_silence: "Demandez : si CareFlow a progressivement étendu son périmètre au-delà du contrat initial et que personne ne l'a formalisé, est-ce que l'audit annuel va révéler des usages que la direction médicale ne savait pas qu'elle avait autorisés ?"
+  si_debat_bloque: "Poussez sur l'utilité du rapport : l'audit produit un rapport transmis au comité médical. Qu'est-ce qui se passe si ce rapport révèle des glissements significatifs — quelles sont les conséquences réelles, et qui peut agir ?"
+  relance_cle: "Ce mandat pose la question du glissement non gouverné : si les élargissements de périmètre arrivent par accumulation de petites décisions opérationnelles, est-ce que l'audit annuel peut vraiment les rattraper — ou mesure-t-il ce qui est déjà irréversible ?"
 version: "1.0"

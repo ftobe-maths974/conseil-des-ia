@@ -21,4 +21,8 @@ tags:
   - audit
   - conditions-travail
   - extension
+facilitator_note:
+  si_silence: "Demandez : si l'audit révèle que CareFlow génère une charge nette négative pour les équipes soignantes — plus de temps perdu qu'économisé — mais que la direction médicale veut quand même étendre son périmètre pour des raisons stratégiques, qu'est-ce que 'motif de suspension d'extension' signifie concrètement ?"
+  si_debat_bloque: "Poussez sur la représentation : l'audit est 'conduit avec les représentants des soignants'. Si les soignants les plus touchés par la charge ne sont pas bien représentés, ou si leurs retours sont minimisés dans le rapport final, qui contrôle que l'audit reflète la réalité ?"
+  relance_cle: "Ce mandat pose la question du pouvoir du résultat : un audit qui dit 'charge nette négative' sans mécanisme contraignant qui empêche l'extension — est-ce un outil de gouvernance ou un outil de communication qui légitime des décisions déjà prises ?"
 version: "1.0"

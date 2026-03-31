@@ -18,4 +18,8 @@ tags:
   - empreinte
   - efficacite
   - croissance
+facilitator_note:
+  si_silence: "Demandez : 'amélioration documentée de l'efficacité par unité produite' — si FAME-GEN produit plus de contenus complexes (vidéos longues, multi-format) plutôt que des contenus courts, l'efficacité par unité peut s'améliorer alors que l'empreinte totale augmente. Qui définit l''unité' et comment mesure-t-on l'amélioration ?"
+  si_debat_bloque: "Poussez sur la pression concurrentielle : si OmniStream playfonne son empreinte et que ses concurrents font croître la leur sans contrainte, est-ce que ce mandat désavantage OmniStream au bénéfice d'acteurs non contraints — et est-ce que l'impact global sur l'environnement s'améliore ou se déplace ?"
+  relance_cle: "Ce mandat pose la question de la décroissance comme contrainte de croissance : lier l'expansion à l'efficacité est une logique de plafonnement physique cohérente — mais si les progrès d'efficacité permettent de produire toujours plus à empreinte constante, est-ce un plafond réel ou un plancher en perpétuel mouvement ?"
 version: "1.0"

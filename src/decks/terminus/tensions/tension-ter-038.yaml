@@ -20,4 +20,8 @@ tags:
   - inegalite
   - conformite
   - numerique
+facilitator_note:
+  si_silence: "Demandez : combien de temps par semaine pensez-vous qu'une personne précaire devrait consacrer à la gestion administrative de ses droits pour ne pas les perdre ?"
+  si_debat_bloque: "Inversez la logique : si la charge de conformité est plus lourde pour les personnes les plus fragiles, est-ce que le système sélectionne les personnes capables de le supporter plutôt que celles qui ont besoin d'aide ?"
+  relance_cle: "La vraie question n'est pas si les démarches sont simples — c'est si un système dont la charge pèse le plus sur les plus fragiles peut prétendre être un système d'aide."
 version: "1.0"

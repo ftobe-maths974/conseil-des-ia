@@ -25,4 +25,8 @@ tags:
   - triage
   - donnees-entraînement
   - equite
+facilitator_note:
+  si_silence: "Demandez : si CareFlow a appris à trier sur des décisions prises par des soignants fatigués en nuit de garde, qu'a-t-il appris exactement ?"
+  si_debat_bloque: "Prenez l'angle du patient lésé : il n'a pas reçu de mauvais soin d'un soignant biaisé — il a reçu un score biaisé d'un système considéré comme neutre. Qui lui répond ?"
+  relance_cle: "La vraie question est de savoir si un biais invisible dans un système certifié est plus dangereux qu'un biais visible dans un jugement humain contestable."
 version: "1.0"

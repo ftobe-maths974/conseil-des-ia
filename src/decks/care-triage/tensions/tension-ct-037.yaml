@@ -21,4 +21,8 @@ tags:
   - competence
   - atrophie-silencieuse
   - interne
+facilitator_note:
+  si_silence: "Demandez : si vous avez appris à conduire avec GPS depuis le début, est-ce que vous sauriez retrouver votre chemin sans lui — et est-ce que vous sauriez que vous ne le sauriez pas ?"
+  si_debat_bloque: "Poussez sur la mesure de la compétence : si un soignant formé avec CareFlow ne sait pas ce qu'il est incapable de faire sans lui, comment évalue-t-on sa compétence réelle — et comment le GHR saurait-il en cas de panne du système ?"
+  relance_cle: "La vraie question n'est pas si CareFlow améliore la formation — c'est si une compétence dont les limites sont invisibles pour celui qui la détient peut être considérée comme une compétence complète."
 version: "1.0"

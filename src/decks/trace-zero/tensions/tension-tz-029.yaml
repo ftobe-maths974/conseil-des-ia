@@ -16,4 +16,8 @@ question: >
   Devoir révéler son état de santé à une autorité administrative pour avoir accès à ses propres
   services, est-ce une procédure raisonnable ou une atteinte à l'intégrité personnelle ?
 tags: [singularité, altération, vie-privée-médicale, atypie, dérogation-biométrique, accessibilité, hors-modèle]
+facilitator_note:
+  si_silence: "Demandez : si la seule façon d'accéder normalement à vos services en ligne est de communiquer votre diagnostic à une autorité administrative, est-ce que vous le faites — et qu'est-ce que votre réponse dit de la nature de ce 'choix' ?"
+  si_debat_bloque: "Poussez sur la définition de l'accès : si certaines personnes subissent des blocages réguliers plutôt que de révéler leur état de santé, est-ce que ça signifie qu'elles n'ont pas accès aux services — ou qu'elles y ont accès à un coût personnel que d'autres n'ont pas à payer ?"
+  relance_cle: "La vraie question n'est pas si la procédure de dérogation médicale est efficace — c'est si conditionner l'accès à des services essentiels à la communication d'un diagnostic médical est une atteinte à l'intégrité personnelle qu'aucune efficacité opérationnelle ne justifie."
 version: "1.0"

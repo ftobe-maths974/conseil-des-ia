@@ -18,4 +18,8 @@ tags:
   - preuve
   - accessibilite
   - standard
+facilitator_note:
+  si_silence: "Demandez : qui décide quels justificatifs correspondent à des 'situations documentables dans une vie réelle' — et est-ce que cette définition est revue régulièrement pour tenir compte des situations de précarité qui n'ont pas de trace documentaire ?"
+  si_debat_bloque: "Poussez sur la liste publique d'alternatives non numériques : est-ce que les agents de L'Agence connaissent cette liste et l'appliquent uniformément — ou est-ce que la procédure de substitution est laissée à l'appréciation individuelle de l'agent qui traite le dossier ?"
+  relance_cle: "Ce mandat pose la question du standard implicite : limiter les exigences à ce qu'une 'personne en situation ordinaire peut raisonnablement produire' suppose de savoir ce qu'est une situation ordinaire. Si ce standard est défini par la majorité, est-ce qu'il protège ceux dont la situation est précisément hors-norme ?"
 version: "1.0"

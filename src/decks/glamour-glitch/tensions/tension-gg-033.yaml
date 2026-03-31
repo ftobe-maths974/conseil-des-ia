@@ -22,4 +22,8 @@ tags:
   - standard-technique
   - identite-format
   - acces
+facilitator_note:
+  si_silence: "Demandez : si vous pouvez diffuser votre contenu sur 20 plateformes simultanément grâce à un format standard imposé, mais que ce format vous force à abandonner les particularités techniques qui définissaient votre style, avez-vous gagné quelque chose ou perdu quelque chose ?"
+  si_debat_bloque: "Poussez sur la nature de la contrainte : si les standards d'interopérabilité permettent la distribution mais contraignent la création, est-ce que la liberté de distribution compense la perte de liberté créative — et pour qui cette équation est-elle acceptable ?"
+  relance_cle: "La vraie question n'est pas si l'interopérabilité est utile — c'est si un accès conditionné à la conformité technique est encore un accès libre, ou une forme d'adhésion forcée à un moule que quelqu'un d'autre a défini."
 version: "1.0"

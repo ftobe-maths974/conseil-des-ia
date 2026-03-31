@@ -17,4 +17,8 @@ question: >
   Quand un système automatisé produit systématiquement des erreurs sur les mêmes élèves, à partir
   de quel moment cette erreur répétée devient-elle une forme de discrimination institutionnalisée ?
 tags: [singularité, faux-positif, anomalie, accessibilité, discrimination, hors-modèle, profil-à-risque]
+facilitator_note:
+  si_silence: "Demandez : ces dix élèves reçoivent chaque matin une notification d'absence injustifiée envoyée à leurs parents — qu'est-ce que ça fait à leur relation avec l'école ?"
+  si_debat_bloque: "Retournez la question : si c'était toujours les mêmes dix élèves qui recevaient des punitions injustes d'un surveillant humain, on appellerait ça comment ?"
+  relance_cle: "La vraie question : une erreur systématique sur les mêmes personnes, causée par un biais du modèle, est-ce encore une erreur ou déjà une discrimination ?"
 version: "1.0"

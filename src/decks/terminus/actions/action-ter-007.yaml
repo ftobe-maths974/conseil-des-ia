@@ -17,4 +17,8 @@ tags:
   - biais
   - discrimination
   - scoring
+facilitator_note:
+  si_silence: "Demandez : si l'audit révèle qu'un groupe est surreprésenté dans les dépriorisations, et que la suspension du critère dans les 30 jours crée un vide dans le traitement des dossiers — comment L'Agence fonctionne pendant la révision du modèle ?"
+  si_debat_bloque: "Poussez sur l'indépendance de l'audit : 'mandater un audit indépendant' — L'Agence choisit et paie l'auditeur. Est-ce que ça garantit l'indépendance, ou est-ce que L'Agence peut choisir un auditeur dont elle connaît les méthodes à l'avance ?"
+  relance_cle: "Ce mandat pose la question de la détection sans neutralisation : identifier statistiquement un biais de dépriorisation ne dit pas pourquoi il existe — et si le biais vient de données historiques de discrimination sociale, suspendre le critère résout-il le problème ou le cache temporairement ?"
 version: "1.0"

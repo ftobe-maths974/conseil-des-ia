@@ -18,4 +18,8 @@ tags:
   - conditions-travail
   - renouvellement
   - epuisement
+facilitator_note:
+  si_silence: "Demandez : 'signalements de perte de sens' — comment un agent signale-t-il officiellement qu'il perd le sens de son travail, dans une institution dont la culture valorise l'efficacité et la neutralité ? Et qui reçoit ce signalement et le prend au sérieux ?"
+  si_debat_bloque: "Poussez sur la commission paritaire : si le taux de démission dépasse le seuil et que la reconduction est soumise à validation, mais que L'Agence n'a pas de personnel formé pour remplacer le dispositif — est-ce que la commission peut vraiment bloquer la reconduction sans créer une crise opérationnelle ?"
+  relance_cle: "Ce mandat pose la question du travail émotionnel du contrôle social : les agents qui exécutent des décisions automatisées sur des usagers fragiles subissent un coût psychologique réel — mais si l'évaluation de leur bien-être devient une condition de renouvellement du dispositif, est-ce que L'Agence n'est pas incitée à minimiser les signalements plutôt qu'à améliorer les conditions ?"
 version: "1.0"

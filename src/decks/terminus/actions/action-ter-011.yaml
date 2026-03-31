@@ -18,4 +18,8 @@ tags:
   - detection
   - fraude
   - seuil
+facilitator_note:
+  si_silence: "Demandez : si un module de détection de fraude est suspendu automatiquement parce qu'il dépasse 2 % de faux positifs, qu'est-ce qui détecte les fraudes pendant la révision — et combien de temps dure cette fenêtre de vulnérabilité ?"
+  si_debat_bloque: "Poussez sur le choix du seuil : 2 % de faux positifs sur 100 000 usagers, c'est 2 000 personnes injustement suspectées. Est-ce que ce seuil est acceptable — et qui l'a fixé, avec quel raisonnement, et les usagers concernés ont-ils été consultés ?"
+  relance_cle: "Ce mandat pose la question du seuil de tolérance socialement acceptable : fixer un taux maximal de faux positifs est une décision politique autant que technique. Qui décide combien d'erreurs injustes sont acceptables pour combien de fraudes détectées ?"
 version: "1.0"

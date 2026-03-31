@@ -19,4 +19,8 @@ tags:
   - classification
   - suspicion
   - donnees
+facilitator_note:
+  si_silence: "Demandez : si vous aviez été soupçonné à tort par un système automatisé et que le contrôle vous avait innocenté, voudriez-vous que cette suspicion reste dans votre dossier pour toujours ?"
+  si_debat_bloque: "Poussez sur la technique : si L'Agence ne sait pas comment effacer une classification sans corrompre d'autres données, est-ce un problème de volonté politique ou de conception du système ?"
+  relance_cle: "La vraie question n'est pas si on peut prouver l'innocence — c'est si un système peut légitimement conserver une suspicion que ses propres contrôles ont invalidée."
 version: "1.0"

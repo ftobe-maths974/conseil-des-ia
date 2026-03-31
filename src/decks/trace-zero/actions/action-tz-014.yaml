@@ -14,4 +14,8 @@ body: >
   est maintenu pendant la durée de la procédure.
 mandat_principe: "L'atypie biométrique ne constitue pas en elle-même un motif de refus d'accès à un service essentiel — elle déclenche une procédure alternative, elle ne suspend pas le droit."
 tags: [singularité, accessibilité, faux-positif, anomalie, présence-non-conforme, hors-modèle, service-essentiel]
+facilitator_note:
+  si_silence: "Demandez : 'l'accès provisoire au service est maintenu pendant la durée de la procédure' — si la procédure de validation alternative dure plusieurs jours et que l'alerte d'anomalie indique une possible fraude, est-ce que l'entité peut maintenir l'accès sans risque réglementaire ou financier si la fraude est confirmée ?"
+  si_debat_bloque: "Poussez sur les services privés : les entités privées (banques, employeurs) ont des obligations contractuelles de KYC et de conformité anti-fraude. Si ce mandat leur interdit de suspendre l'accès sur la base d'une alerte SIGMA-ID, est-ce qu'il entre en conflit avec leurs obligations légales de vérification ?"
+  relance_cle: "Ce mandat pose la question du droit d'accès maintenu face à l'anomalie algorithmique : déclencher une procédure alternative plutôt que de refuser l'accès est un principe de proportionnalité essentiel — mais si la procédure alternative n'est pas dimensionnée pour absorber le volume d'alertes générées par SIGMA-ID, le droit d'accès provisoire crée-t-il une charge que les entités ne peuvent pas tenir ?"
 version: "1.0"

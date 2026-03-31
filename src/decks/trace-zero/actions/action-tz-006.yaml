@@ -14,4 +14,8 @@ body: >
   simultanément à son entrée en vigueur.
 mandat_principe: "Toute dégradation d'un CVR prend effet uniquement après notification de la personne concernée et expiration d'un délai de contestation, sauf motif d'urgence documenté exigeant une décision humaine nommée."
 tags: [invisibilité, notification, déclassement, CVR, délai-de-contestation, suspicion-latente, profil-contaminé]
+facilitator_note:
+  si_silence: "Demandez : la notification est adressée via 'au moins deux canaux de contact enregistrés' — si une personne a changé d'adresse email ou de numéro de téléphone sans les mettre à jour dans SIGMA-ID, l'OGR a notifié formellement sans que la personne reçoive l'information. Quel recours existe ?"
+  si_debat_bloque: "Poussez sur l'exception d'urgence : en cas de fraude avérée urgente, la mesure peut être provisoire mais simultanée à la notification. Qui certifie qu'une fraude est 'avérée' dans ce cas, et si la fraude n'est qu'une suspicion forte, est-ce que l'exception d'urgence peut être invoquée ?"
+  relance_cle: "Ce mandat pose la question du délai comme protection minimale : 10 jours de contestation avant que la mesure prenne effet est un filet de sécurité — mais pour quelqu'un dont le CVR est en Contrôle Renforcé provisoire et qui n'a pas accès aux services pendant ces 10 jours, la notification préalable protège-t-elle la personne ou documente-t-elle seulement la procédure ?"
 version: "1.0"

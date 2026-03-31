@@ -20,4 +20,8 @@ tags:
   - critere-cache
   - equite
   - validation
+facilitator_note:
+  si_silence: "Demandez : si vous étiez le patient orienté différemment à cause de votre code postal, et que vous le découvriez, comment vous appelleriez ça ?"
+  si_debat_bloque: "Retournez vers la gouvernance : qui dans cet hôpital aurait dû valider les variables du modèle avant déploiement — et pourquoi ça n'a pas eu lieu ?"
+  relance_cle: "La vraie question n'est pas si le code postal est un biais — c'est : qui est responsable quand un critère non validé par l'institution produit des effets cliniques différents selon le quartier ?"
 version: "1.0"

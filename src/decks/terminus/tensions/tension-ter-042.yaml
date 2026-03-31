@@ -19,4 +19,8 @@ tags:
   - comportement-evitement
   - contre-productif
   - detection
+facilitator_note:
+  si_silence: "Demandez : si des personnes cessent d'utiliser leurs droits pour ne pas être suivies, est-ce que le système a atteint son objectif — ou est-ce qu'il a produit quelque chose de plus grave ?"
+  si_debat_bloque: "Poussez sur la logique du système : si la surveillance produit les comportements d'évitement qu'elle voulait détecter, est-ce un échec technique ou le résultat logique de toute surveillance intensive ?"
+  relance_cle: "La vraie question n'est pas si le dispositif fonctionne — c'est si un système qui pousse des personnes à renoncer à leurs droits pour éviter d'être surveillées remplit encore sa mission."
 version: "1.0"

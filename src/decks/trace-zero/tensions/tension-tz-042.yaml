@@ -16,4 +16,8 @@ question: >
   Quand le coût documenté d'un dispositif de sécurité dépasse ses bénéfices mesurés, comment
   une organisation sort-elle d'un engagement qu'elle a publiquement valorisé ?
 tags: [métabolisme, coût-de-vérification, bénéfice-documenté, dépendance, inflation-procédurale, bureaucratie-défensive]
+facilitator_note:
+  si_silence: "Demandez : si vous êtes directeur financier et que vos données montrent que SIGMA-ID coûte 2,3 fois plus que ce qu'il rapporte, mais que votre direction de communication a passé deux ans à vanter sa sécurité — qu'est-ce que vous faites, et à qui vous le dites ?"
+  si_debat_bloque: "Poussez sur la dissonance institutionnelle : si la rationalité économique et la cohérence institutionnelle pointent dans des directions opposées, est-ce que la décision de rester dans SIGMA-ID est encore une décision de sécurité — ou une décision de réputation ?"
+  relance_cle: "La vraie question n'est pas si le calcul économique justifie de sortir — c'est si une organisation peut admettre publiquement que son engagement pour la sécurité coûte plus qu'il ne protège, et ce que cette incapacité dit de la gouvernance des dispositifs de sécurité."
 version: "1.0"

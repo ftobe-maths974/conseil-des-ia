@@ -16,4 +16,8 @@ question: >
   À quel moment la friction d'authentification dépasse-t-elle le seuil où elle protège réellement,
   et commence à restreindre la liberté d'agir des personnes protégées ?
 tags: [métabolisme, friction, fatigue-authentification, charge-cognitive, latence-sociale, coût-de-vérification]
+facilitator_note:
+  si_silence: "Demandez : si vous avez déjà renoncé à accéder à un service en ligne parce que l'authentification vous semblait trop fastidieuse à ce moment-là — est-ce que vous avez pris une décision libre, ou est-ce que la friction a pris une décision à votre place ?"
+  si_debat_bloque: "Poussez sur la définition de la protection : si la friction d'authentification finit par décourager les personnes légitimes mais pas les fraudeurs qui ont prévu leur tentative, est-ce que la friction protège encore — ou est-ce qu'elle déplace le problème ?"
+  relance_cle: "La vraie question n'est pas si la friction est nécessaire — c'est à partir de quel seuil elle cesse de protéger ceux qu'elle est censée protéger et commence à restreindre leur liberté d'agir."
 version: "1.0"

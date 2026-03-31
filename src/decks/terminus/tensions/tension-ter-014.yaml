@@ -24,4 +24,8 @@ tags:
   - biais
   - responsabilite
   - intention
+facilitator_note:
+  si_silence: "Demandez : si les données montrent une surreprésentation dans les refus corrélée à un prénom, et que L'Agence le sait — à partir de quand l'inaction devient-elle une intention ?"
+  si_debat_bloque: "Changez de plan : le problème n'est pas le biais dans le modèle, c'est le biais dans les données de la société — peut-on corriger l'algorithme sans corriger ce qui l'alimente ?"
+  relance_cle: "La vraie question : l'absence d'intention discriminatoire exonère-t-elle d'une obligation de résultat en matière d'égalité de traitement ?"
 version: "1.0"

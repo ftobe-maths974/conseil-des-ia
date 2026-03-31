@@ -17,4 +17,8 @@ question: >
   Tracer sa propre existence pour la protéger, est-ce l'exercice d'une souveraineté personnelle
   ou la contribution volontaire à une infrastructure de surveillance totale ?
 tags: [preuve, substrat-vivant, trace-non-rejouable, consentement, vie-privée, certificat-de-présence]
+facilitator_note:
+  si_silence: "Demandez : si vous deviez enregistrer tous vos appels, certifier vos photos et conserver vos logs pour pouvoir prouver qui vous êtes en cas de litige — est-ce que ça vous semblerait être une pratique de protection normale, ou quelque chose d'inquiétant ?"
+  si_debat_bloque: "Poussez sur la direction de la causalité : si tracer sa propre existence est une réponse à la menace synthétique — et si cette réponse alimente l'infrastructure qui rend la vie privée plus difficile — est-ce que les personnes qui utilisent la certification contribuent à leur propre surveillance, ou est-ce qu'elles n'ont pas le choix ?"
+  relance_cle: "La vraie question n'est pas si certifier le réel est utile — c'est si une société où prouver son existence nécessite de produire en permanence des traces certifiées a encore un espace pour une vie privée qui ne soit pas administrée."
 version: "1.0"

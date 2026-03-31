@@ -20,4 +20,8 @@ tags:
   - formulaire
   - categorie
   - singularite
+facilitator_note:
+  si_silence: "Demandez : si votre situation ne correspond à aucune des cases existantes, comment prouvez-vous que vous avez le droit à une exception dans un formulaire conçu pour les exceptions déjà connues ?"
+  si_debat_bloque: "Inversez le problème : si le système ne peut reconnaître que les singularités qu'il a déjà anticipées, est-ce encore un système capable de traiter des situations singulières ?"
+  relance_cle: "La vraie question n'est pas si des exceptions sont prévues — c'est si un système peut reconnaître ce qu'il n'a pas encore appris à voir."
 version: "1.0"

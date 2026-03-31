@@ -18,4 +18,8 @@ tags:
   - attribution
   - identite
   - labellisation
+facilitator_note:
+  si_silence: "Demandez : le contenu au-delà du seuil est labellisé 'produit par OmniStream' et non attribué au créateur — pour le public, est-ce que ce label réduit l'attrait du contenu, et si oui, est-ce que le créateur est économiquement pénalisé par la règle qui est censée le protéger ?"
+  si_debat_bloque: "Poussez sur le 50% : un créateur peut publier deux fois plus s'il maintient 50% de contenu humain — est-ce que ce seuil incite à augmenter le volume de contenu automatisé jusqu'au plafond plutôt qu'à maintenir un ratio raisonnable ?"
+  relance_cle: "Ce mandat pose la question de l'identité créatrice comme bien protégeable : plafonner la substitution à 50% pour préserver l'attribution humaine, c'est cohérent — mais si les audiences ne font pas la différence entre un contenu humain et un contenu généré, est-ce que le plafond protège une valeur réelle ou une distinction symbolique ?"
 version: "1.0"

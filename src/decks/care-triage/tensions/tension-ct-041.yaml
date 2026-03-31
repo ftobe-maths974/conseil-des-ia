@@ -22,4 +22,8 @@ tags:
   - charge
   - inegalite-service
   - decision
+facilitator_note:
+  si_silence: "Demandez : si l'audit montre que les urgences ont gagné 30 % de fluidité mais que la néonatologie a perdu 20 % de temps soignant, est-ce que la direction du GHR peut présenter CareFlow comme un succès global — et vis-à-vis de qui ?"
+  si_debat_bloque: "Poussez sur la pondération : si certains services gagnent et d'autres perdent, qui décide comment pondérer ces résultats — et est-ce que les services qui perdent ont eu leur mot à dire dans cette pondération ?"
+  relance_cle: "La vraie question n'est pas si l'audit est nécessaire — c'est si une décision prise à partir d'une moyenne qui cache des perdants visibles est une décision informée ou une décision politiquement commode."
 version: "1.0"

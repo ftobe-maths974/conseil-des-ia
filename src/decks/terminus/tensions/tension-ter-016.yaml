@@ -19,4 +19,8 @@ tags:
   - complexite
   - droit-au-recours
   - simplification
+facilitator_note:
+  si_silence: "Demandez : si vous recevez l'explication 'anomalie dans vos données de mobilité' et que c'est faux mais compréhensible, que faites-vous — et que pouvez-vous contester réellement ?"
+  si_debat_bloque: "Changez d'acteur : un avocat spécialisé en droit administratif — peut-il construire un recours sur une explication générée par un second algorithme qui simplifie le premier ?"
+  relance_cle: "La vraie question : une explication qui permet de se sentir informé sans permettre de contester n'est pas un droit au recours, c'est une mise en scène de ce droit."
 version: "1.0"

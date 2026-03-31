@@ -21,4 +21,8 @@ tags:
   - souverainete
   - critères
   - preuve
+facilitator_note:
+  si_silence: "Demandez : si CareFlow a été validé cliniquement sur la population du GHR, et qu'une mise à jour change ses critères sans nouvelle validation, est-ce que le GHR utilise encore le système qu'il a approuvé ?"
+  si_debat_bloque: "Poussez sur la clause contractuelle : si les mises à jour sont imposées pour des raisons de sécurité, mais sans preuve d'adéquation à la population locale, qui porte la responsabilité d'une décision basée sur un modèle modifié unilatéralement ?"
+  relance_cle: "La vraie question n'est pas si les mises à jour sont nécessaires — c'est si un établissement peut déléguer des décisions médicales à un système dont il n'a plus la maîtrise des critères."
 version: "1.0"

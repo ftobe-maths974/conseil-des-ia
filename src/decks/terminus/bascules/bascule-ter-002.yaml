@@ -20,4 +20,8 @@ tags:
   - agent
   - impuissance
   - responsabilite
+facilitator_note:
+  si_silence: "Demandez : si vous étiez l'agent devant cette femme avec l'enfant malade, que ressentiriez-vous ?"
+  si_debat_bloque: "Déplacez vers l'institution : est-ce que L'Agence aurait pu prévoir ce cas quand elle a signé le contrat ?"
+  relance_cle: "La vraie question : quand l'agent ne peut plus rien faire, est-il encore un agent ou juste un visage ?"
 version: "1.0"

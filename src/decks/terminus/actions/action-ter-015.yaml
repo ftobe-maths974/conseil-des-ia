@@ -18,4 +18,8 @@ tags:
   - cohabitation
   - transfert
   - anomalie
+facilitator_note:
+  si_silence: "Demandez : si les transferts financiers intrafamiliaux sont des données neutres qui ne peuvent pas déclencher de contrôle, comment CITIZEN-SCAN distingue-t-il un transfert d'entraide familiale d'un transfert de revenus non déclarés — et si la distinction est impossible, qu'est-ce que 'données neutres' signifie en pratique ?"
+  si_debat_bloque: "Poussez sur le risque de contournement : si la solidarité informelle ne peut pas déclencher de contrôle, est-ce que ce mandat crée un angle mort exploitable pour des fraudes réelles qui se camouflent derrière des transferts familiaux ?"
+  relance_cle: "Ce mandat pose la question de la neutralité des données dans un système de scoring : qualifier une donnée de 'neutre' ne supprime pas son contenu informatif. Si CITIZEN-SCAN ne peut pas l'utiliser pour détecter des fraudes, comment L'Agence maintient-elle une capacité de contrôle sans pénaliser la solidarité légitime ?"
 version: "1.0"

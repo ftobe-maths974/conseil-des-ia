@@ -21,4 +21,8 @@ tags:
   - complement
   - examen-clinique
   - preuve
+facilitator_note:
+  si_silence: "Demandez : si CareFlow détecte un signal de décompensation que le soignant n'a pas vu, est-ce que le soignant devrait suivre la recommandation — même s'il ne perçoit aucun signe clinique inquiétant devant lui ?"
+  si_debat_bloque: "Poussez sur la complémentarité : si les deux types de preuve sont irréductibles l'un à l'autre, qu'est-ce qui doit décider quand ils divergent — et qui porte la responsabilité de ce choix ?"
+  relance_cle: "La vraie question n'est pas lequel de CareFlow ou du soignant a raison — c'est si on peut construire une procédure légitime pour décider quand les deux preuves ne disent pas la même chose."
 version: "1.0"

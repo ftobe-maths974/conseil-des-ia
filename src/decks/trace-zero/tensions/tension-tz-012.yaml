@@ -16,4 +16,8 @@ question: >
   Le droit à l'oubli biométrique peut-il coexister avec le droit de se défendre grâce à son propre
   historique, ou choisir l'un revient-il à renoncer à l'autre ?
 tags: [invisibilité, droit-à-l-oubli, historique, log-opaque, profil-contaminé, score-authenticité, recours-fantôme]
+facilitator_note:
+  si_silence: "Demandez : si demander la suppression de votre historique biométrique efface aussi les preuves qui vous ont permis de démontrer que vous étiez victime — est-ce que vous demandez l'oubli quand même, ou est-ce que vous gardez des données sur vous-même pour vous protéger de futurs risques ?"
+  si_debat_bloque: "Poussez sur l'asymétrie de pouvoir : si l'OGR retient les données pour se protéger contre les fraudes, et que Fatou doit aussi retenir ses données pour se défendre contre les usurpations, qui contrôle vraiment cet historique — et peut-on appeler ça un droit à l'oubli ?"
+  relance_cle: "La vraie question n'est pas si le droit à l'oubli est légitime — c'est si un droit à l'oubli qui oblige à choisir entre la vie privée et la capacité à se défendre peut encore s'appeler un droit, ou si c'est un piège formulé comme une liberté."
 version: "1.0"

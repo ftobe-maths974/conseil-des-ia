@@ -14,4 +14,8 @@ body: >
   au score SIGMA-ID initial.
 mandat_principe: "Préserver la valeur probante de toute expression authentique non conforme au standard biométrique dominant, sous réserve d'une procédure de validation alternative."
 tags: [preuve, contre-expertise, attestation, liveness, provenance, chaîne-de-garde, certificat-de-présence]
+facilitator_note:
+  si_silence: "Demandez : 'laboratoire indépendant agréé OGR' — si l'OGR est l'autorité d'agrément des laboratoires de contre-expertise, comment garantir que ces laboratoires ne partagent pas les mêmes méthodes ou biais que SIGMA-ID ? L'indépendance est-elle possible si l'agrément dépend du même organisme ?"
+  si_debat_bloque: "Poussez sur le délai de 10 jours ouvrés pour les procédures urgentes : en contexte pénal ou médical urgent, 2 semaines de contre-expertise peut être trop long pour préserver les droits de la personne concernée. Que se passe-t-il entre la contestation et la conclusion de la contre-expertise ?"
+  relance_cle: "Ce mandat pose la question du double standard comme protection : si SIGMA-ID dit 'synthétique' et que la contre-expertise dit 'authentique', l'une des deux est nécessairement dans l'erreur. Si c'est SIGMA-ID, est-ce que ce résultat entraîne une révision du modèle — ou la contre-expertise corrige-t-elle le cas sans remettre en question le système qui a échoué ?"
 version: "1.0"

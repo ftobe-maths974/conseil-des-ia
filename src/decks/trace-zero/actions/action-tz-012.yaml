@@ -14,4 +14,8 @@ body: >
   les règles probatoires de droit commun.
 mandat_principe: "La transparence de la chaîne d'attestation est une condition de la certification, non de l'authenticité — une preuve sans chaîne reste une preuve, elle perd seulement son sceau SIGMA-ID."
 tags: [preuve, provenance, chaîne-de-garde, attestation, consentement, trace-non-rejouable]
+facilitator_note:
+  si_silence: "Demandez : 'conditions de captation, de transmission et de conservation depuis l'origine' — pour une vidéo filmée avec un smartphone, cette chaîne d'attestation existe-t-elle ? Qui peut la fournir, et si c'est l'utilisateur qui doit la construire lui-même, est-ce accessible à une personne non-technique ?"
+  si_debat_bloque: "Poussez sur le droit commun comme filet de sécurité : une preuve sans chaîne d'attestation est évaluée selon les règles probatoires de droit commun — mais dans un monde où SIGMA-ID est le standard, est-ce que les juges et les administrations savent encore évaluer une preuve numérique sans son sceau ?"
+  relance_cle: "Ce mandat pose la question de la traçabilité comme condition d'accès à la certification : distinguer 'sans sceau' de 'fausse preuve' est une nuance essentielle — mais en pratique, si une preuve non certifiée par SIGMA-ID a moins de poids dans une procédure, est-ce que la distinction juridique protège réellement la valeur probante des preuves hors-système ?"
 version: "1.0"

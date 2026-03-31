@@ -23,4 +23,8 @@ tags:
   - transition
   - regulation
   - competition
+facilitator_note:
+  si_silence: "Demandez : si des alternatives moins consommatrices existent mais qu'OmniStream ne peut pas les adopter sans déprécier 4 milliards d'investissements et partager ses données avec des concurrents, est-ce qu'on peut lui demander de le faire — et pourquoi ne le ferait-elle pas ?"
+  si_debat_bloque: "Poussez sur la limite du marché : si le marché renforce le verrouillage au lieu de le corriger, quelles sont les options régulotoires réalistes — taxe carbone sur l'inférence, interopérabilité obligatoire, partage de brevets — et lesquelles OmniStream pourrait accepter sans se voir comme perdante ?"
+  relance_cle: "La vraie question n'est pas si OmniStream serait prête à changer — c'est si un marché qui récompense le verrouillage technologique peut spontanément produire la transition vers des infrastructures plus sobres, ou si une contrainte externe est la seule voie réaliste."
 version: "1.0"

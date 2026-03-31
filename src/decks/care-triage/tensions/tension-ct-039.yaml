@@ -21,4 +21,8 @@ tags:
   - compétence-requise
   - pression-marche
   - soignants
+facilitator_note:
+  si_silence: "Demandez : si maîtriser CareFlow devient une condition implicite pour être recruté dans un hôpital de la région, est-ce que le soignant qui n'a pas travaillé avec ce système est libre de ne pas l'adopter ?"
+  si_debat_bloque: "Poussez sur la circularité : si l'adoption de CareFlow par les GHR crée une pression sur le marché du travail qui rend l'adoption par d'autres établissements quasi-obligatoire, qui a réellement décidé de déployer CareFlow à l'échelle régionale ?"
+  relance_cle: "La vraie question n'est pas si CareFlow améliore l'employabilité — c'est si une standardisation portée par le marché du travail est encore une décision institutionnelle ou une contrainte de fait que plus personne n'a formellement choisie."
 version: "1.0"

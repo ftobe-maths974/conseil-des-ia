@@ -20,4 +20,8 @@ tags:
   - trace
   - numerique
   - legitimite
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici connaît une personne qui n'a pas de smartphone, pas de compte en ligne — et comment cette personne prouverait-elle aujourd'hui qu'elle a besoin d'aide ?"
+  si_debat_bloque: "Retournez le problème : si L'Agence devait concevoir un système qui reconnaît les gens sans traces numériques, qu'est-ce qu'elle utiliserait à la place ?"
+  relance_cle: "La vraie question n'est pas si ces personnes existent — c'est si un système d'aide peut se permettre de ne pas les voir."
 version: "1.0"

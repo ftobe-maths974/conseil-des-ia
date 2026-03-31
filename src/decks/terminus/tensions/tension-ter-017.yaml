@@ -19,4 +19,8 @@ tags:
   - cumul
   - recours
   - systeme
+facilitator_note:
+  si_silence: "Demandez : si chaque micro-sanction est trop petite pour un recours mais que leur somme sur six mois représente une dégradation réelle — qui peut agir, et comment ?"
+  si_debat_bloque: "Passez au niveau du concepteur : est-ce que la granularité des sanctions a été choisie précisément parce qu'elle rend le recours impossible, ou est-ce un effet de bord ?"
+  relance_cle: "La vraie question : un système conçu pour rester sous le seuil du contestable n'est pas un système impartial — c'est un système immunisé contre ses propres erreurs."
 version: "1.0"

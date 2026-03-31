@@ -16,4 +16,8 @@ question: >
   Quand une voix synthétique est indiscernable de la voix réelle, la prudence raisonnable devient-elle
   une machine à briser les liens de confiance familiaux ?
 tags: [preuve, liveness, vishing, présomption-de-synthèse, substrat-vivant, confiance, trace-non-rejouable]
+facilitator_note:
+  si_silence: "Demandez : si Michèle avait un mot de code secret avec sa fille pour les urgences, est-ce que ça règle le problème — ou est-ce que ça déplace juste la charge de la preuve sur la famille ?"
+  si_debat_bloque: "Retournez la situation : si la voix était vraiment celle d'Aurélie en danger, et que Michèle n'envoie pas l'argent parce qu'elle doute — qui assume cette conséquence ?"
+  relance_cle: "La vraie question : quand la technologie rend indiscernable le vrai du faux, est-ce qu'elle détruit la confiance ou révèle qu'on ne l'avait bâtie que sur des indices fragiles ?"
 version: "1.0"

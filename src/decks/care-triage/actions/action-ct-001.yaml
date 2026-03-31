@@ -22,4 +22,8 @@ tags:
   - orientation
   - responsabilite
   - traçabilite
+facilitator_note:
+  si_silence: "Demandez : si CareFlow reclasse automatiquement la priorité d'un patient sans que le médecin soit notifié et qu'une complication survient, qui est responsable — et ce mandat change-t-il quelque chose à cette réponse ?"
+  si_debat_bloque: "Poussez sur l'opérationnalité : à 3h du matin, avec un médecin seul pour 40 patients, est-ce que la validation explicite de chaque recommandation CareFlow est réaliste — ou est-ce que ce mandat déplace le problème sans le résoudre ?"
+  relance_cle: "Ce mandat pose la question de qui porte réellement la responsabilité : si la validation humaine est obligatoire mais impossible à respecter en conditions réelles, est-ce une garantie ou une fiction administrative ?"
 version: "1.0"

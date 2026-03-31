@@ -21,4 +21,8 @@ tags:
   - independance
   - audit
   - prestataire
+facilitator_note:
+  si_silence: "Demandez : quel organisme en France a aujourd'hui la capacité technique et l'accès contractuel pour auditer réellement les critères internes d'un système comme CareFlow — nommez-en un ?"
+  si_debat_bloque: "Retournez vers la certification : si aucun auditeur crédible ne peut accéder au modèle, que certifie exactement le label CE médical apposé sur le système ?"
+  relance_cle: "La vraie question est de savoir si l'exigence d'auditabilité sans les conditions de sa réalisation est une garantie ou une fiction rassurante."
 version: "1.0"

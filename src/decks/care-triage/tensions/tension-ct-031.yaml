@@ -21,4 +21,8 @@ tags:
   - audit
   - arbitrage
   - majorite-minorite
+facilitator_note:
+  si_silence: "Demandez : si un module CareFlow améliore la prise en charge de 90 % des patients mais qu'on ne sait pas encore s'il nuit aux 10 % restants, est-ce qu'on doit le déployer ou attendre l'audit — et qui décide ?"
+  si_debat_bloque: "Poussez sur la symétrie de l'argument : si retarder pour protéger une minorité prive la majorité d'un bénéfice réel, ne pas auditer pour déployer plus vite revient à décider que les risques de la minorité sont acceptables. Qui a ce mandat ?"
+  relance_cle: "La vraie question n'est pas si l'audit est utile — c'est si l'arbitrage entre bénéfice majoritaire et protection minoritaire est une décision technique ou une décision politique qui devrait être prise explicitement."
 version: "1.0"

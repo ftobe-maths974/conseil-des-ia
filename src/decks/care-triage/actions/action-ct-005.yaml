@@ -21,4 +21,8 @@ tags:
   - explication
   - contestation
   - score
+facilitator_note:
+  si_silence: "Demandez : si un patient aux urgences dans un état grave peut théoriquement demander une explication de son score CareFlow — est-ce que ce droit est exercé par les patients qui en auraient le plus besoin, ou seulement par ceux qui savent qu'il existe ?"
+  si_debat_bloque: "Poussez sur le délai : une explication écrite en 24h est utile pour un suivi ambulatoire, mais aux urgences une décision de triage a déjà produit ses effets en une heure. Est-ce que ce mandat protège les patients au moment où ça compte ?"
+  relance_cle: "Ce mandat pose la question de l'effectivité du droit : un droit d'explication et de contestation qui existe formellement mais que les patients ne connaissent pas ou ne peuvent pas exercer en temps utile — est-ce encore un droit ?"
 version: "1.0"

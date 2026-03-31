@@ -21,4 +21,8 @@ tags:
   - contrat
   - bilan
   - sortie
+facilitator_note:
+  si_silence: "Demandez : si le bilan de réversibilité montre que le coût de sortie de CareFlow est 10 fois plus élevé que ce qui était anticipé au déploiement, et que les compétences perdues prendraient 3 ans à reconstituer — est-ce que le conseil de surveillance peut encore décider de ne pas renouveler ?"
+  si_debat_bloque: "Poussez sur le producteur du bilan : ce mandat exige un bilan documenté mais ne dit pas qui le produit. Si c'est la direction du GHR elle-même, avec un intérêt à minimiser les irréversibilités pour faciliter le renouvellement — quelle est la valeur de ce bilan ?"
+  relance_cle: "Ce mandat pose la question du constat irréversible : un bilan de réversibilité produit après des années de déploiement peut révéler ce qu'on a perdu — mais peut-il encore changer la décision, ou mesure-t-il seulement l'ampleur d'une dépendance devenue inévitable ?"
 version: "1.0"

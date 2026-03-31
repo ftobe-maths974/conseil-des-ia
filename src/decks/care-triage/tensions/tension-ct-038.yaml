@@ -21,4 +21,8 @@ tags:
   - inegalite
   - temps
   - soignants
+facilitator_note:
+  si_silence: "Demandez : si une technologie est censée faire gagner du temps à l'équipe, mais que sa maintenance — saisie, formation, gestion des alertes — tombe systématiquement sur les mêmes personnes, est-ce que ce gain de temps est partagé ou concentré ?"
+  si_debat_bloque: "Poussez sur la comptabilisation : si la charge de maintenance n'est pas mesurée ni attribuée, qui décide qu'elle est acceptable — et pour qui est-elle acceptable en réalité ?"
+  relance_cle: "La vraie question n'est pas si CareFlow fait gagner du temps — c'est si un gain d'efficience qui repose sur du travail invisible non reconnu est un progrès ou un transfert de charge."
 version: "1.0"

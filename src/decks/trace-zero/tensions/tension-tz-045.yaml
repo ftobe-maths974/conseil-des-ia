@@ -16,4 +16,8 @@ question: >
   Face à une accumulation de procédures de sécurité chacune justifiée individuellement mais
   insoutenable collectivement, comment une société tranche-t-elle entre sécurité et habitabilité ?
 tags: [métabolisme, inflation-procédurale, friction, charge-cognitive, bureaucratie-défensive, simplification, latence-sociale]
+facilitator_note:
+  si_silence: "Demandez : si le nombre d'étapes d'authentification est passé de 2 à 7 en cinq ans et que chacune était justifiée au moment de son ajout — à quel moment quelqu'un aurait dû dire stop, et qui avait le mandat pour le faire ?"
+  si_debat_bloque: "Poussez sur la direction de l'erreur : si simplifier revient à supprimer des couches utiles et que ne pas simplifier perd les usagers les moins équipés numériquement, qui porte la responsabilité des personnes exclues par l'inflation procédurale — et est-ce que quelqu'un la mesure ?"
+  relance_cle: "La vraie question n'est pas comment simplifier sans créer de brèches — c'est si une accumulation de décisions individuellement rationnelles qui produit collectivement un système inhabitable constitue une défaillance de gouvernance, et qui était censé la prévenir."
 version: "1.0"

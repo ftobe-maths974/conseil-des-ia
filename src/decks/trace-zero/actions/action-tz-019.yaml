@@ -14,4 +14,8 @@ body: >
   ne peuvent être agrégées en profil permanent sans ce consentement.
 mandat_principe: "Les données comportementales ne sont pas des données d'identité permanentes — leur conservation prolongée constitue un profitage de l'existence, non une authentification."
 tags: [métabolisme, données-comportementales, conservation, vie-privée, friction, bureaucratie-défensive, dépendance]
+facilitator_note:
+  si_silence: "Demandez : si les données comportementales sont effacées au bout de 30 jours, SIGMA-ID doit reconstituer un profil de référence à chaque cycle. Est-ce que ce mandat rend l'authentification comportementale moins performante — et si oui, est-ce un problème ou une fonctionnalité ?"
+  si_debat_bloque: "Poussez sur le consentement renouvelable annuellement : si une personne consent à la conservation mais que son comportement change (maladie, vieillissement, contexte de stress), le profil comportemental stocké reste figé sur ce qu'elle était l'année précédente. Est-ce que le consentement couvre aussi ce que les données peuvent dire d'elle dans le futur ?"
+  relance_cle: "Ce mandat pose la question de la mémoire comportementale comme outil d'identité : interdire la conservation prolongée protège contre le profilage permanent — mais si SIGMA-ID a besoin d'un historique comportemental pour distinguer un usager légitime d'un imposteur, la limite à 30 jours protège-t-elle la vie privée sans sacrifier la sécurité, ou choisit-elle délibérément un arbitrage en faveur de la première ?"
 version: "1.0"

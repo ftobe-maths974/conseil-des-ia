@@ -20,4 +20,8 @@ tags:
   - agent
   - optimisation
   - epuisement
+facilitator_note:
+  si_silence: "Demandez : si votre travail consistait à traiter des alertes plutôt que des personnes, est-ce que vous estimeriez faire le même métier ?"
+  si_debat_bloque: "Poussez sur le calcul : si la perte de sens et l'épuisement des agents se traduisent par des arrêts maladie et un turnover plus élevé, est-ce que ces coûts sont dans le bilan de l'optimisation ?"
+  relance_cle: "La vraie question n'est pas si les agents sont plus productifs — c'est si ce qu'on leur a retiré pour les rendre productifs avait une valeur que les indicateurs ne mesurent pas."
 version: "1.0"

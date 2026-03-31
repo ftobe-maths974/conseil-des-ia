@@ -21,4 +21,8 @@ tags:
   - categorie
   - travailleur-social
   - non-conformite
+facilitator_note:
+  si_silence: "Demandez : qu'est-ce que la travailleuse sociale peut faire concrètement — elle voit le problème, elle ne peut pas le résoudre, elle fait quoi ?"
+  si_debat_bloque: "Allez vers la grand-mère : si elle se déclare dans le dossier et que les aides baissent, qui souffre de cette vérité administrative ?"
+  relance_cle: "La vraie question : quand les catégories d'un système ne correspondent plus aux vies réelles, est-ce que c'est la vie qui est en tort ou le système ?"
 version: "1.0"

@@ -21,4 +21,8 @@ tags:
   - continuite
   - charge-patient
   - atypie
+facilitator_note:
+  si_silence: "Demandez : si vous avez un profil médical atypique et que vous devez réexpliquer votre cas à chaque passage aux urgences parce que le système ne l'a pas mémorisé, qu'est-ce que ça vous dit sur votre place dans ce système de soins ?"
+  si_debat_bloque: "Poussez sur la continuité : si le droit à des soins personnalisés existe en théorie mais que sa mise en œuvre repose entièrement sur la capacité du patient à argumenter son cas à répétition, qui bénéficie réellement de ce droit ?"
+  relance_cle: "La vraie question n'est pas si CareFlow peut être amélioré — c'est si un système qui transfère sur le patient la charge de prouver son atypie à chaque contact respecte le principe de continuité des soins."
 version: "1.0"

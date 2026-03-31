@@ -21,4 +21,8 @@ tags:
   - audit
   - populations-vulnerables
   - deploiement
+facilitator_note:
+  si_silence: "Demandez : si l'audit de couverture identifie que les patients polymédicamentés sont sous-représentés dans la base d'entraînement, et que l'éditeur répond qu'améliorer la couverture nécessite 12 mois de développement — est-ce que le déploiement est conditionné ou reporté indéfiniment ?"
+  si_debat_bloque: "Poussez sur le levier contractuel : ce mandat conditionne le déploiement à la 'prise en compte' des restrictions par l'éditeur. Est-ce que 'prise en compte' signifie 'corriger' ou 'documenter dans les limites du produit' — et qui arbitre ?"
+  relance_cle: "Ce mandat pose la question de la condition réelle : conditionner le déploiement à la prise en compte des populations mal couvertes a une valeur si l'éditeur peut être contraint. Mais si la relation est contractuellement déséquilibrée, est-ce une condition ou un vœu pieux ?"
 version: "1.0"

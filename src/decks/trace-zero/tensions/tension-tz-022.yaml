@@ -16,4 +16,8 @@ question: >
   Un seuil de certification des preuves qui rejette une fraction des preuves authentiques est-il
   un progrès de la rigueur judiciaire ou un recul de l'accès à la justice ?
 tags: [preuve, attestation, liveness, certificat-de-présence, chaîne-de-garde, faux-positif, justice]
+facilitator_note:
+  si_silence: "Demandez : si une victime de violence domestique a filmé une scène sur son téléphone dans de mauvaises conditions et que sa vidéo est rejetée parce que le score SIGMA-ID est insuffisant — est-ce que le tribunal a pris la bonne décision ?"
+  si_debat_bloque: "Poussez sur le sens du seuil : si un seuil à 85 % rejette 12 % des preuves authentiques pour éliminer les synthétiques, quelle est la justification de ce chiffre — qui l'a fixé, sur quelle base — et existe-t-il un seuil où la rigueur n'exclut plus l'authentique ?"
+  relance_cle: "La vraie question n'est pas si des seuils de certification sont nécessaires — c'est si un standard technique fixé pour les cas les plus avancés peut devenir une barrière d'accès à la justice pour ceux qui n'ont pas les moyens de produire des preuves parfaitement certifiées."
 version: "1.0"

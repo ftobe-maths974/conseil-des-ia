@@ -20,4 +20,8 @@ tags:
   - pass
   - conformite
   - droits
+facilitator_note:
+  si_silence: "Demandez : qu'est-ce que Karim est censé faire pendant ces 72 heures s'il n'a plus de transport ?"
+  si_debat_bloque: "Inversez l'angle : si le système se trompait dans 5 % des cas, est-ce que ce taux justifie de suspendre d'abord et vérifier ensuite ?"
+  relance_cle: "La vraie question : suspendre avant de vérifier, c'est traiter le bénéficiaire comme suspect — est-ce le principe d'un système d'aide ?"
 version: "1.0"

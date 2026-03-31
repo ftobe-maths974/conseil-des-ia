@@ -24,4 +24,8 @@ tags:
   - desensibilisation
   - securite
   - alerte
+facilitator_note:
+  si_silence: "Demandez : dans votre service, quelle proportion des alertes CareFlow du mois dernier ont conduit à une action clinique réelle — et combien ont été fermées en moins de trente secondes ?"
+  si_debat_bloque: "Retournez vers l'éditeur : si les soignants ignorent les alertes parce qu'elles sont trop fréquentes, est-ce la réponse des soignants qui est problématique ou le calibrage du système ?"
+  relance_cle: "La vraie question est de savoir si un système d'alerte qui a perdu la confiance des soignants améliore encore la sécurité ou crée une couverture de responsabilité sans effet réel."
 version: "1.0"

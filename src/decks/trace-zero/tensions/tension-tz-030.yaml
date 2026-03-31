@@ -16,4 +16,8 @@ question: >
   Peut-on parler de consentement à un système quand l'alternative au consentement est l'exclusion totale
   des services essentiels ?
 tags: [singularité, exclusion, atypie, consentement, faux-positif, hors-modèle, présence-non-conforme]
+facilitator_note:
+  si_silence: "Demandez : si l'alternative à accepter un système défaillant est d'être coupé de tous les services essentiels, est-ce qu'on peut appeler ça du consentement — ou est-ce que le vocabulaire du consentement s'applique encore ici ?"
+  si_debat_bloque: "Poussez sur la définition du consentement libre : si accepter sous contrainte d'exclusion totale n'est pas un consentement libre, mais que certains utilisent quand même le mot 'consentement' pour désigner ce choix, qui est protégé par cette terminologie — la personne ou le système ?"
+  relance_cle: "La vraie question n'est pas si SIGMA-ID fonctionne mieux que rien — c'est si un consentement dont l'alternative est l'exclusion des services essentiels satisfait aux conditions minimales pour s'appeler un consentement."
 version: "1.0"

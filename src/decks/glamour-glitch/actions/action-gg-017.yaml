@@ -18,4 +18,8 @@ tags:
   - energie
   - eau
   - transparence
+facilitator_note:
+  si_silence: "Demandez : 'consommation énergétique par type de contenu produit' — est-ce que OmniStream est en mesure de mesurer le coût énergétique d'une minute de vidéo générée par FAME-GEN versus une image, un texte ? Si cette granularité n'existe pas dans les systèmes actuels, comment le rapport peut-il être vérifiable ?"
+  si_debat_bloque: "Poussez sur ce qui constitue une 'mise à jour majeure' : si OmniStream qualifie ses déploiements de mises à jour incrémentales plutôt que majeures, le mandat peut être contourné sans le violer formellement. Qui décide qu'un déploiement est majeur et déclenche l'obligation de rapport ?"
+  relance_cle: "Ce mandat pose la question de la transparence environnementale comme condition de légitimité : publier l'empreinte ressource avant déploiement rend le coût visible — mais si ce coût est jugé acceptable par OmniStream et que les autorités ne définissent pas de seuil interdit, la transparence suffit-elle à modifier les décisions de déploiement ?"
 version: "1.0"

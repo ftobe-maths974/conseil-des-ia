@@ -20,4 +20,8 @@ tags:
   - proportionnalite
   - fraude
   - ressource-publique
+facilitator_note:
+  si_silence: "Demandez : est-ce que 'l'effet dissuasif non quantifiable' est un argument ou une façon de ne pas avoir à répondre de ses choix ?"
+  si_debat_bloque: "Tournez la question vers les usagers : avec ces 11 millions, combien d'accompagnements réels aurait-on pu financer pour les personnes en fragilité ?"
+  relance_cle: "La vraie question : quand contrôler coûte plus que ce qu'on contrôle, est-ce qu'on protège encore les finances publiques ou est-ce qu'on justifie un appareil de surveillance ?"
 version: "1.0"

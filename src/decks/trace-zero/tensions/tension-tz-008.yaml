@@ -16,4 +16,8 @@ question: >
   Jusqu'où préserver la souveraineté nationale sur l'identité numérique, quand cette souveraineté
   fragmente la vie quotidienne des personnes qui traversent les frontières ?
 tags: [delegation, souveraineté, CVR, interopérabilité, Europe, validation-tierce, confiance-forcée]
+facilitator_note:
+  si_silence: "Demandez : si vous travaillez en Belgique avec un CVR français et que le système belge ne le reconnaît pas, est-ce que la souveraineté numérique française vous protège ou vous pénalise ?"
+  si_debat_bloque: "Poussez sur le compromis concret : si l'interopérabilité européenne exige de partager des données avec des partenaires dont la législation est moins protectrice, est-ce qu'on sacrifie la protection de tous pour permettre la mobilité de certains — et qui décide ?"
+  relance_cle: "La vraie question n'est pas si la souveraineté nationale sur l'identité est légitime — c'est jusqu'où elle peut aller quand elle fragmente la vie concrète des personnes qui vivent entre plusieurs systèmes."
 version: "1.0"

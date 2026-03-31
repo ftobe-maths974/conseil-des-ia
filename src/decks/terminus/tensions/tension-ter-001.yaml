@@ -20,4 +20,8 @@ tags:
   - precision
   - trade-off
   - urgence
+facilitator_note:
+  si_silence: "Demandez : dans le groupe, qui a déjà attendu une décision administrative dont le délai changeait concrètement quelque chose — logement, emploi, soin ?"
+  si_debat_bloque: "Inversez la perspective : ce n'est plus l'usager qui choisit, c'est L'Agence — peut-elle assumer devant un juge qu'elle a privilégié la vitesse sur l'exactitude ?"
+  relance_cle: "La vraie question : à qui profite le compromis — à la personne urgente, ou à l'institution qui évite d'embaucher ?"
 version: "1.0"

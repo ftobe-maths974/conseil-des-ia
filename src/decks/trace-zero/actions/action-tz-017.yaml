@@ -14,4 +14,8 @@ body: >
   de friction excessive et transmises à l'OGR.
 mandat_principe: "La multiplication des vérifications n'est pas une mesure de sécurité proportionnelle — au-delà d'un seuil documenté, elle constitue une atteinte à la capacité d'agir de la personne."
 tags: [métabolisme, friction, fatigue-authentification, charge-cognitive, latence-sociale, plafond-de-vérification]
+facilitator_note:
+  si_silence: "Demandez : le plafond de 3 vérifications par jour est global — mais si une personne utilise SIGMA-ID avec cinq entités différentes (banque, hôpital, employeur, mairie, service public), est-ce que chaque entité peut imposer 3 vérifications indépendamment, ou le compteur est-il partagé et comment ?"
+  si_debat_bloque: "Poussez sur 'la personne est réputée authentifiée pour la période en cours' au-delà du seuil : si cette présomption d'authentification permet à quelqu'un d'usurper l'identité d'une autre personne après avoir épuisé son quota, est-ce que le mécanisme de protection crée lui-même une vulnérabilité ?"
+  relance_cle: "Ce mandat pose la question de la fatigue d'authentification comme atteinte aux droits : limiter le nombre de vérifications imposables protège le temps et la capacité d'agir — mais si une personne dont le score est suspect nécessite réellement plus de vérifications pour des raisons de sécurité, le plafond protège-t-il la personne ou empêche-t-il un contrôle légitime ?"
 version: "1.0"

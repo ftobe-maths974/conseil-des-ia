@@ -17,4 +17,8 @@ question: >
   Quand les institutions démocratiques ne peuvent plus certifier l'authenticité de leurs propres
   archives, quel fondement reste-t-il à la légitimité des décisions collectives ?
 tags: [preuve, démocratie, attestation, provenance, chaîne-de-garde, présomption-de-synthèse, légitimité]
+facilitator_note:
+  si_silence: "Demandez : si le Parlement ne peut pas certifier ses propres archives, est-ce que les lois votées ce jour-là ont encore force obligatoire ?"
+  si_debat_bloque: "Radicalisez : une société qui ne peut plus distinguer une vraie délibération d'un deepfake de délibération — comment elle fait pour se gouverner ?"
+  relance_cle: "La vraie question : la démocratie repose sur des archives certifiées — quand c'est un algorithme privé qui décide si elles sont authentiques, à qui appartient la mémoire collective ?"
 version: "1.0"

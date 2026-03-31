@@ -21,4 +21,8 @@ tags:
   - autocensure
   - recours
   - pouvoir
+facilitator_note:
+  si_silence: "Demandez : ce créateur qui se censure par peur de 'l'effet loupe' — est-ce qu'il exerce encore son droit de recours, ou est-ce qu'il l'a abandonné sans que personne ne le lui retire ?"
+  si_debat_bloque: "Retournez vers un acteur différent : qu'est-ce qu'un syndicat de créateurs pourrait faire que le créateur seul ne peut pas faire — et pourquoi n'en existe-t-il pas encore ?"
+  relance_cle: "La vraie question : quand la dépendance économique neutralise le droit de contestation, sommes-nous encore dans un rapport contractuel ou dans un rapport de subordination ?"
 version: "1.0"

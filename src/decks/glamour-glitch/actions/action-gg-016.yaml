@@ -18,4 +18,8 @@ tags:
   - consentement
   - catalogue
   - droits-auteur
+facilitator_note:
+  si_silence: "Demandez : un créateur peut refuser la modification rétroactive de son catalogue — mais si les contenus non standardisés sont moins bien distribués par l'algorithme, le refus est-il vraiment sans pénalité, ou le créateur choisit-il entre son intégrité artistique et sa visibilité ?"
+  si_debat_bloque: "Poussez sur ce qui compte comme modification : les métadonnées et le thumbnail sont couverts — mais si OmniStream change la façon dont le contenu est indexé ou catégorisé par FAME-GEN sans toucher au contenu lui-même, est-ce que ça entre dans le périmètre de ce mandat ?"
+  relance_cle: "Ce mandat pose la question de l'intégrité du catalogue passé : interdire la modification rétroactive protège l'œuvre telle qu'elle a été publiée — mais si le catalogue d'un créateur reste en ligne sans être optimisé, est-ce une protection de son travail ou un abandon progressif aux marges de l'algorithme ?"
 version: "1.0"

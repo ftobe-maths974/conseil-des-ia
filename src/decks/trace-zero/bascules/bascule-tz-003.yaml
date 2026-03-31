@@ -16,4 +16,8 @@ question: >
   Rendre obligatoire un système d'authentification sans prévoir les procédures de secours, est-ce une
   décision de sécurité ou une exclusion administrative déguisée ?
 tags: [delegation, CVR, obligation, souveraineté, exclusion, dépendance-identitaire, délégation-du-réel]
+facilitator_note:
+  si_silence: "Demandez : parmi les 2,3% de personnes bloquées, à quels services elles ne peuvent plus accéder concrètement — allocations, santé, retraite ?"
+  si_debat_bloque: "Recentrez sur la décision politique : rendre obligatoire sans filet de secours, est-ce une erreur de gouvernance ou une stratégie d'accélération au mépris des marges ?"
+  relance_cle: "La vraie question : quand l'État sait qu'un système exclut une fraction de la population et ne prévoit pas de recours, à quel moment cesse-t-il d'être un État de droit ?"
 version: "1.0"

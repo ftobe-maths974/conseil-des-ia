@@ -20,4 +20,8 @@ tags:
   - contrat
   - editeur
   - maitrise
+facilitator_note:
+  si_silence: "Demandez : si demain l'éditeur de CareFlow modifie unilatéralement les critères de triage pour la septicémie, qui au GHR peut l'en empêcher ou même le savoir avant la mise à jour ?"
+  si_debat_bloque: "Décalez vers le politique : quel élu ou quelle agence régionale de santé a validé que cet hôpital public délègue ses critères de triage à une société privée ?"
+  relance_cle: "La vraie question est de savoir si un établissement public peut accepter une souveraineté de façade — contrôler l'interface mais pas le modèle."
 version: "1.0"

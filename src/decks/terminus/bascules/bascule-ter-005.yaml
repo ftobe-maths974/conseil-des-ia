@@ -20,4 +20,8 @@ tags:
   - criteres
   - secret-commercial
   - institution
+facilitator_note:
+  si_silence: "Posez la question : est-ce que L'Agence elle-même sait pourquoi certains dossiers attendent plus longtemps ?"
+  si_debat_bloque: "Montez d'un cran : si les critères sont protégés par le secret commercial, qui peut les contester — et comment ?"
+  relance_cle: "La vraie question : une institution publique peut-elle être responsable d'une décision dont elle ignore les règles ?"
 version: "1.0"

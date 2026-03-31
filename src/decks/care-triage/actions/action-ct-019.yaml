@@ -20,4 +20,8 @@ tags:
   - competence-autonome
   - formation
   - seuil
+facilitator_note:
+  si_silence: "Demandez : pour évaluer annuellement que 30 % des soignants maintiennent une compétence certifiée sans CareFlow, comment la certification est-elle organisée — et si un soignant échoue, est-ce qu'il y a une conséquence sur son exercice ou seulement sur l'extension de CareFlow dans son service ?"
+  si_debat_bloque: "Poussez sur le paradoxe du seuil : si 30 % des soignants gardent la compétence mais que les 70 % restants l'ont perdue, est-ce que le service peut vraiment fonctionner sans CareFlow en cas de panne — ou est-ce que 30 % est insuffisant pour une crise réelle ?"
+  relance_cle: "Ce mandat pose la question du seuil suffisant : 30 % est un chiffre précis qui crée une obligation mesurable — mais est-ce que 30 % de soignants compétents sans CareFlow suffit à absorber une panne totale du système dans un service à fort volume, et qui a décidé que ce chiffre était le bon ?"
 version: "1.0"

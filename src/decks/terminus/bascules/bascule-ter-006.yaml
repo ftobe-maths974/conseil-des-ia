@@ -20,4 +20,8 @@ tags:
   - appel
   - systeme
   - acces-justice
+facilitator_note:
+  si_silence: "Demandez : si 94 % des recours sont rejetés, est-ce que le recours existe encore vraiment ou c'est juste une procédure ?"
+  si_debat_bloque: "Allez vers le concret : qu'est-ce que ça veut dire pour une personne sans argent et sans avocat d'aller au tribunal administratif ?"
+  relance_cle: "La vraie question : un recours jugé par le même système que la décision initiale, c'est un recours ou une confirmation automatique ?"
 version: "1.0"

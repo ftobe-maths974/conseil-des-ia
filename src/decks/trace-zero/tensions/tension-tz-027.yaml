@@ -16,4 +16,8 @@ question: >
   Quand on ne peut plus distinguer le vrai du faux dans une image, vaut-il mieux abolir sa valeur
   probante ou maintenir un régime de preuve qui risque d'être trompé ?
 tags: [preuve, valeur-probante, présomption-de-synthèse, liveness, attestation, justice, confiance]
+facilitator_note:
+  si_silence: "Demandez : si la valeur probante de la vidéo est supprimée sauf certification OGR, qu'est-ce que ça change pour les victimes de violences filmées par un témoin avec un smartphone ordinaire ? La réforme protège-t-elle les innocents ou abandonne-t-elle les victimes ?"
+  si_debat_bloque: "Poussez sur le point de non-retour : les juristes qui disent que c'est 'inévitable' supposent qu'on ne pourra plus jamais distinguer. Est-ce que c'est vrai — ou est-ce que des progrès en détection peuvent changer la donne ? Et si la réforme est adoptée avant que la détection s'améliore, comment la défait-on ensuite ?"
+  relance_cle: "Ce n'est pas une question technique sur les deepfakes — c'est une question sur ce qu'une société est prête à sacrifier pour se protéger du faux. Supprimer la valeur probante de l'image c'est admettre qu'on capitule face à la désinformation. La maintenir c'est accepter qu'on sera trompé. Aucune des deux réponses n'est satisfaisante — et c'est exactement ça le dilemme."
 version: "1.0"

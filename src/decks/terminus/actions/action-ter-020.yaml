@@ -18,4 +18,8 @@ tags:
   - cout-systeme
   - transparence
   - infrastructure
+facilitator_note:
+  si_silence: "Demandez : 'coût estimé d'un traitement humain équivalent' — équivalent en volume de dossiers, ou équivalent en qualité de décision ? Si les agents humains produisent des décisions plus nuancées mais plus lentes, comment L'Agence construit-elle une base de comparaison honnête ?"
+  si_debat_bloque: "Poussez sur les conséquences du bilan : si le bilan systémique annuel démontre que CITIZEN-SCAN coûte plus qu'un traitement humain équivalent et génère plus de recours — qu'est-ce qui se passe ensuite ? Ce mandat impose la publication, pas l'action. Qui décide si le dispositif est maintenu ?"
+  relance_cle: "Ce mandat pose la question de la transparence sans obligation d'agir : publier l'empreinte systémique complète est un acte de responsabilité — mais si le bilan est défavorable et que L'Agence continue à déployer CITIZEN-SCAN, la publication devient-elle une couverture institutionnelle plutôt qu'un levier de changement ?"
 version: "1.0"

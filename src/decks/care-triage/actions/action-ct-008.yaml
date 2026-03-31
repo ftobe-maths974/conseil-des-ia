@@ -22,4 +22,8 @@ tags:
   - sortie
   - traçabilite
   - responsabilite
+facilitator_note:
+  si_silence: "Demandez : si la journalisation révèle qu'un praticien a utilisé des scores CareFlow sans observation clinique associée sur 80 % de ses décisions de sortie, qu'est-ce qui se passe — et est-ce que ce mandat crée une surveillance que les soignants n'ont pas demandée ?"
+  si_debat_bloque: "Poussez sur le double effet : la journalisation protège le patient ET trace le praticien. Si les soignants perçoivent la traçabilité comme un outil de surveillance de leur travail plutôt que de protection du patient, comment ça change leur façon de documenter ?"
+  relance_cle: "Ce mandat pose la question de la traçabilité comme outil ambivalent : exiger que chaque décision soit attribuable à un responsable identifié protège-t-il le patient — ou crée-t-il une pression qui pousse les soignants à documenter la conformité plutôt que la réalité ?"
 version: "1.0"

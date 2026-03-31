@@ -16,4 +16,8 @@ question: >
   Un indice d'authenticité calculé sur le comportement d'une personne appartient-il à cette personne,
   à l'institution qui la certifie, ou à la société qui en bénéficie ?
 tags: [invisibilité, score-authenticité, vie-privée, arbitrage, log-opaque, transparence, notation-sociale]
+facilitator_note:
+  si_silence: "Demandez : si votre bailleur pouvait consulter votre score d'authenticité CVR avant de vous louer un appartement — sans votre consentement explicite — est-ce que ça vous pose un problème, et pourquoi ?"
+  si_debat_bloque: "Poussez sur la nature du score : si le score d'authenticité est calculé à partir de votre comportement sur des services que vous utilisez, est-ce que vous avez produit cette donnée — ou est-ce que l'OGR l'a extraite de vous sans que vous l'ayez consciemment fournie ?"
+  relance_cle: "La vraie question n'est pas à qui appartient techniquement le score — c'est si une donnée calculée par un algorithme sur votre comportement peut être utilisée contre vous sans votre accord dans des contextes que vous n'aviez pas anticipés quand vous avez accepté d'être authentifié."
 version: "1.0"

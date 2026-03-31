@@ -16,4 +16,8 @@ question: >
   Un standard biométrique universel qui améliore l'interopérabilité mais creuse les inégalités de
   fiabilité selon les origines, est-ce une avancée ou une régression déguisée en progrès ?
 tags: [singularité, standard, équité-biométrique, interopérabilité, faux-positif, hors-modèle, Europe]
+facilitator_note:
+  si_silence: "Demandez : si un standard biométrique européen est construit principalement sur des données d'Europe du Nord et de l'Ouest, et que des populations d'Europe du Sud ou issues de l'immigration récente y ont des taux d'erreur plus élevés — est-ce que ce standard est neutre ?"
+  si_debat_bloque: "Poussez sur le paradoxe de l'universalisme : si l'interopérabilité totale exige un standard unique, et que ce standard unique produit des inégalités de fiabilité selon les origines, est-ce que l'Europe peut appeler ça un progrès pour tous — ou seulement pour certains ?"
+  relance_cle: "La vraie question n'est pas si l'interopérabilité est souhaitable — c'est si un standard universel construit sur des données non représentatives peut être appelé universel, et qui porte la responsabilité des inégalités qu'il produit structurellement."
 version: "1.0"

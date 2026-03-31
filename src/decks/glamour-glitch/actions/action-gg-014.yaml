@@ -18,4 +18,8 @@ tags:
   - exception
   - format
   - visibilite
+facilitator_note:
+  si_silence: "Demandez : 'maintien de la visibilité de base' — si un créateur demande une exemption de format et qu'OmniStream la lui accorde, mais que FAME-GEN optimise la distribution pour les contenus conformes au standard, est-ce que la visibilité 'de base' est équivalente à celle d'un créateur conforme, ou structurellement inférieure ?"
+  si_debat_bloque: "Poussez sur la publication du taux d'acceptation par catégorie : si le taux d'exemption est très bas pour certaines catégories de créateurs, ça révèle une inégalité — mais est-ce qu'OmniStream est tenu d'en expliquer les raisons ou seulement de publier le chiffre ?"
+  relance_cle: "Ce mandat pose la question de l'exception comme soupape ou comme droit réel : créer une voie d'exception documentée est une protection contre l'uniformisation — mais si le taux d'acceptation est faible, si les délais sont longs et si la visibilité de base reste inférieure au standard, l'exception est-elle une voie réelle ou une procédure symbolique ?"
 version: "1.0"

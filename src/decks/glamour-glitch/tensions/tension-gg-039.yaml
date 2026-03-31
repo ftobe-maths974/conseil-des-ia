@@ -22,4 +22,8 @@ tags:
   - inférence
   - bilan-ressource
   - production-invisible
+facilitator_note:
+  si_silence: "Demandez : si OmniStream produit des milliers de clips A/B testés qui ne seront jamais publiés pour optimiser les performances, est-ce que cette consommation ressource doit apparaître dans leur bilan environnemental — ou est-ce un coût de fonctionnement interne invisible ?"
+  si_debat_bloque: "Poussez sur la définition du périmètre : si le bilan ressource n'inclut que les contenus diffusés, OmniStream peut améliorer ses métriques en augmentant les tests sans impact apparent. Qui décide quoi compter — et peut-on faire confiance à OmniStream pour définir son propre périmètre de comptabilité ?"
+  relance_cle: "La vraie question n'est pas si les tests sont nécessaires — c'est si un bilan de soutenabilité qui exclut la production non publiée mesure vraiment l'impact réel du système ou seulement la partie que l'entreprise choisit de rendre visible."
 version: "1.0"

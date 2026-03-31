@@ -16,4 +16,8 @@ question: >
   Élever le standard de preuve pour protéger les innocents d'une fausse accusation, est-ce
   acceptable si cela protège aussi les coupables de preuves authentiques mal certifiées ?
 tags: [preuve, standard-de-preuve, liveness, violence, justice, présomption-de-synthèse, chaîne-de-garde]
+facilitator_note:
+  si_silence: "Demandez : si un standard de preuve élevé réduit les condamnations sur deepfakes ET les condamnations pour violence conjugale filmée sur téléphone, est-ce qu'on peut dire que c'est un progrès — et pour qui ?"
+  si_debat_bloque: "Poussez sur la symétrie des erreurs : si le standard élevé commet deux types d'erreurs — libérer des innocents faussement accusés ET libérer des coupables prouvés par des preuves mal certifiées — est-ce qu'on peut décider quelle erreur est moins grave, et au nom de quoi ?"
+  relance_cle: "La vraie question n'est pas si protéger les droits de la défense est légitime — c'est si une protection contre la fausse accusation qui produit simultanément une protection contre les preuves authentiques fragiles peut encore s'appeler une garantie des droits."
 version: "1.0"

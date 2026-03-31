@@ -21,4 +21,8 @@ tags:
   - donnees-de-sante
   - vie-privee
   - usage-futur
+facilitator_note:
+  si_silence: "Demandez : dans dix ans, si le GHR change de prestataire ou fait l'objet d'une cyberattaque, qu'advient-il du journal complet des scores et fragilités de chaque patient passé aux urgences ?"
+  si_debat_bloque: "Décalez vers l'assureur ou l'employeur : ces données de trajectoire de soins, agrégées et profilées, ont-elles une valeur pour des acteurs que le patient n'a jamais rencontrés ?"
+  relance_cle: "La vraie question est de savoir si les données collectées aujourd'hui pour protéger le patient constituent demain une archive de ses vulnérabilités accessible à d'autres."
 version: "1.0"

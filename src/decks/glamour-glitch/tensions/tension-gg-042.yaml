@@ -23,4 +23,8 @@ tags:
   - empreinte-physique
   - empreinte-numerique
   - comparaison
+facilitator_note:
+  si_silence: "Demandez : si FAME-GEN supprime les vols en avion pour les tournages mais augmente la consommation des data centers, est-ce qu'on peut dire que c'est mieux pour l'environnement — et sur quelle méthode de calcul vous appuyez-vous pour répondre ?"
+  si_debat_bloque: "Poussez sur la méthode : si comparer les émissions d'un vol à celles d'une inférence GPU nécessite des méthodes de comptabilité carbone qui n'existent pas encore de façon standardisée, qui a intérêt à ce qu'elles restent non-standardisées — et pourquoi ?"
+  relance_cle: "La vraie question n'est pas si FAME-GEN est plus propre que les tournages physiques — c'est qui doit faire ce calcul, avec quelle méthode reconnue, et si le résultat doit être rendu public indépendamment de ce qu'il montre."
 version: "1.0"

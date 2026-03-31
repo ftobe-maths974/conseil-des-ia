@@ -20,4 +20,8 @@ tags:
   - equite
   - documentation
   - precarite
+facilitator_note:
+  si_silence: "Demandez : si vous deviez prouver votre situation à un algorithme demain, qu'est-ce que vous pourriez lui montrer — et qu'est-ce qui serait impossible à documenter ?"
+  si_debat_bloque: "Retournez la logique : si un système d'aide favorise structurellement les personnes stables et documentées, est-ce encore un système d'aide ou un système de confirmation de statut ?"
+  relance_cle: "La vraie question n'est pas si les pauvres peuvent prouver leur situation — c'est si un système conditionné à la preuve peut rester un système de solidarité."
 version: "1.0"

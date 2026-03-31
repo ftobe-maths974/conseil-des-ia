@@ -21,4 +21,8 @@ tags:
   - alerte
   - confiance
   - preuve
+facilitator_note:
+  si_silence: "Demandez : si ce médecin maintient son évaluation contre CareFlow et que le patient se dégrade deux heures plus tard, qui sera mis en cause — et sur quoi sera fondé ce jugement ?"
+  si_debat_bloque: "Renversez la situation : si CareFlow a raison dans 70 % des cas de divergence, que font les 30 % restants — et qui les défend ?"
+  relance_cle: "La vraie question est de savoir si une divergence entre l'expert et le modèle est un signal d'alarme ou une preuve que l'un des deux a tort."
 version: "1.0"

@@ -16,4 +16,8 @@ question: >
   Pour un recours contre une décision algorithmique opaque, vaut-il mieux la rapidité d'un arbitre
   interne ou l'indépendance d'un arbitre externe plus lent ?
 tags: [invisibilité, recours-fantôme, arbitrage, log-opaque, indépendance, zone-grise, déclassement]
+facilitator_note:
+  si_silence: "Demandez : si votre score CVR avait baissé sans explication et que vous pouviez contester en 48h auprès d'un service OGR interne — ou en 4 semaines auprès d'une instance indépendante — laquelle choisiriez-vous, et pourquoi ?"
+  si_debat_bloque: "Poussez sur la valeur de l'indépendance : si l'arbitre interne est rapide mais juge et partie, et que l'arbitre externe est crédible mais lent, est-ce que la rapidité d'une décision biaisée vaut mieux que l'attente d'une décision impartiale — et dans quels cas la réponse change ?"
+  relance_cle: "La vraie question n'est pas si 48h c'est mieux que 4 semaines — c'est si une procédure de recours dont le résultat est prédictible par son opacité peut encore être appelée un droit de recours, ou si c'est une soupape de sécurité pour éviter les plaintes."
 version: "1.0"

@@ -17,4 +17,8 @@ tags:
   - reversibilite
   - transparence
   - delegation
+facilitator_note:
+  si_silence: "Demandez : si le rapport de réversibilité est rendu public et révèle que L'Agence ne pourrait pas reprendre manuellement ses décisions en moins de 6 mois — qu'est-ce qui se passe ensuite, et qui a le pouvoir d'obliger à corriger ça ?"
+  si_debat_bloque: "Poussez sur le destinataire du rapport : il est 'transmis à l'autorité de tutelle et rendu public'. Si la tutelle ne réagit pas et que le public ne lit pas les rapports techniques — à qui sert vraiment ce document ?"
+  relance_cle: "Ce mandat pose la question de la transparence sans conséquence : un rapport annuel qui rend visible la dépendance sans créer d'obligation de la corriger — est-ce un outil de gouvernance ou un outil de documentation qui absout l'inaction ?"
 version: "1.0"

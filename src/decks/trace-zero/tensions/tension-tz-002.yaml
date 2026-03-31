@@ -16,4 +16,8 @@ question: >
   Entre confier sa sécurité identitaire à un opérateur centralisé et la gérer soi-même, lequel
   des deux risques est le plus acceptable, et pour qui ?
 tags: [delegation, souveraineté, CVR, opérateur-de-confiance, dépendance-identitaire, validation-tierce]
+facilitator_note:
+  si_silence: "Demandez : connaissant les deux incidents cités, lequel aurait été le plus grave pour vous personnellement — perdre 800 000 dossiers ou voir 12 000 cas compromis individuellement ?"
+  si_debat_bloque: "Inversez l'angle : si ni l'OGR ni le régime autonome n'est sûr, qui doit assumer le coût des incidents — la personne ou l'État ?"
+  relance_cle: "La vraie question n'est pas quel système est le plus sûr, mais qui paye quand ça échoue."
 version: "1.0"

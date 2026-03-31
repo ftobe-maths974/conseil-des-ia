@@ -14,4 +14,8 @@ body: >
   public dans un format comparatif standardisé.
 mandat_principe: "Le déploiement d'un système d'authentification à fort coût social n'est légitime que si son bénéfice documenté excède son coût total mesuré — y compris les coûts portés par les usagers."
 tags: [métabolisme, coût-de-vérification, bénéfice-documenté, inflation-procédurale, bilan, dépendance]
+facilitator_note:
+  si_silence: "Demandez : 'coût des procédures d'exception' inclut le coût porté par les agents et par les entités — mais 'coût total incluant les coûts portés par les usagers' est dans le mandat_principe. Est-ce que le bilan inclut le temps perdu par les usagers, la friction psychologique, les accès refusés en attendant une validation ? Comment monétiser ces coûts ?"
+  si_debat_bloque: "Poussez sur la vérification par la Cour des comptes : la Cour des comptes ne vérifie que les entités publiques. Si une entité semi-publique ou délégataire utilise SIGMA-ID, qui vérifie son bilan ? Et si la Cour constate que le bilan est défavorable, est-elle habilitée à interrompre le contrat ?"
+  relance_cle: "Ce mandat pose la question du bilan coût-bénéfice comme condition de légitimité : exiger que l'entité démontre que SIGMA-ID génère plus de valeur qu'il ne coûte est une logique de responsabilité publique saine — mais si les fraudes prévenues sont difficilement mesurables et que les coûts sociaux sont sous-estimés, qui garantit que le bilan est honnête plutôt qu'optimisé pour valider la reconduction ?"
 version: "1.0"

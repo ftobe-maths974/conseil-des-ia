@@ -20,4 +20,8 @@ tags:
   - precarite
   - presomption
   - modele
+facilitator_note:
+  si_silence: "Demandez : si vous étiez en situation précaire — adresse instable, peu de transactions — et qu'un algorithme vous signalait comme suspect, comment prouveriez-vous que vous ne fraudez pas ?"
+  si_debat_bloque: "Déplacez vers les concepteurs : quand les ingénieurs ont entraîné CITIZEN-SCAN, est-ce qu'ils avaient des données sur des personnes précaires qui ne fraudaient pas — et en nombre suffisant ?"
+  relance_cle: "La vraie question n'est pas si le modèle se trompe — c'est si un modèle entraîné sur des populations pauvres peut éviter de les criminaliser."
 version: "1.0"

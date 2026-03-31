@@ -27,4 +27,8 @@ tags:
   - course-technologique
   - certification
   - fragilite
+facilitator_note:
+  si_silence: "Demandez : si les meilleurs outils de détection passent de 90 % à 50 % de fiabilité en moins d'un an quand les modèles génératifs s'améliorent, est-ce qu'une certification basée sur ces outils protège quelque chose — ou donne-t-elle une illusion de protection ?"
+  si_debat_bloque: "Poussez sur l'asymétrie : si produire des faux est structurellement moins cher que les détecter, et qu'OmniStream investit dans la génération mais pas dans la détection, qui a intérêt à ce que la détection reste sous-financée — et pourquoi ?"
+  relance_cle: "La vraie question n'est pas si la détection technique fonctionne aujourd'hui — c'est si on peut bâtir un régime de confiance sur une technologie qui est structurellement en retard sur ce qu'elle cherche à identifier."
 version: "1.0"

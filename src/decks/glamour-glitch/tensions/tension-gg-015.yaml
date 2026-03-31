@@ -22,4 +22,8 @@ tags:
   - echelle
   - contrainte
   - explication
+facilitator_note:
+  si_silence: "Demandez : si 400 000 décisions par jour ne peuvent pas être expliquées individuellement, quelle forme d'explication serait réaliste et utile pour un créateur affecté ?"
+  si_debat_bloque: "Déplacez vers la conception : est-ce qu'OmniStream aurait pu concevoir FAME-GEN différemment pour rendre l'explication possible — ou l'opacité est-elle une nécessité technique et pas un choix ?"
+  relance_cle: "La vraie question : la nécessité opérationnelle d'une décision inexplicable la rend-elle légitime, ou crée-t-elle une obligation de concevoir autrement ?"
 version: "1.0"

@@ -21,4 +21,8 @@ tags:
   - jugement-clinique
   - avantage
   - contrepartie
+facilitator_note:
+  si_silence: "Demandez : si un soignant prend moins de décisions difficiles parce que CareFlow les prend à sa place, est-ce qu'il est moins fatigué — ou est-ce qu'il perd progressivement la capacité de les prendre seul quand il le faudra ?"
+  si_debat_bloque: "Poussez sur la distinction entre charge et jugement : si réduire la charge cognitive est un bénéfice réel, et que maintenir le jugement clinique exige de l'exercer régulièrement, comment préserve-t-on les deux simultanément — ou faut-il choisir ?"
+  relance_cle: "La vraie question n'est pas si alléger la charge cognitive des soignants est souhaitable — c'est si on peut déléguer une partie du raisonnement clinique à un algorithme sans que la capacité à raisonner sans lui se dégrade progressivement."
 version: "1.0"

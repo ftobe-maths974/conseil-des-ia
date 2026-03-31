@@ -22,4 +22,8 @@ tags:
   - edge-case
   - exclusion
   - diversite
+facilitator_note:
+  si_silence: "Demandez : si un créateur sourd produit des contenus sans voix parce que c'est son mode d'expression naturel, et que FAME-GEN le déclasse systématiquement pour ça, est-ce que le système est neutre — ou est-ce qu'il a été conçu en excluant certaines expériences ?"
+  si_debat_bloque: "Poussez sur la distinction entre exception et exclusion : si le format du créateur sourd est une exception au standard, cela signifie que le standard a été défini sans lui. Dans ce cas, qui devrait avoir le droit de définir ce qu'est un contenu standard ?"
+  relance_cle: "La vraie question n'est pas si FAME-GEN peut être amélioré pour ce cas — c'est si un système d'optimisation conçu pour la moyenne peut structurellement éviter d'exclure ceux dont la différence n'est pas un choix esthétique."
 version: "1.0"

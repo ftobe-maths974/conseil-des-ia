@@ -18,4 +18,8 @@ tags:
   - audit
   - sobriete
   - reporting
+facilitator_note:
+  si_silence: "Demandez : pour produire cette décomposition par catégorie, FAME-GEN doit mesurer son propre coût ressource par opération. Si cette instrumentation n'est pas intégrée à l'architecture actuelle, OmniStream peut-il produire ce rapport annuel avec une précision réelle, ou s'agit-il d'estimations agrégées par répartition comptable ?"
+  si_debat_bloque: "Poussez sur l'usage du rapport : il permet aux créateurs et aux régulateurs 'd'orienter les politiques de sobriété' — mais si aucune régulation ne fixe de plafond par catégorie, le rapport est une information sans contrainte. Qui peut agir sur la base de ce rapport, et comment ?"
+  relance_cle: "Ce mandat pose la question de la granularité comme levier de sobriété : décomposer l'empreinte par type de contenu permet d'identifier les usages les plus coûteux et de prioriser les arbitrages — mais si la catégorie la plus coûteuse est aussi la plus rentable pour OmniStream (avatars continus, re-génération de catalogue), est-ce que la transparence suffit à orienter des décisions de sobriété qui vont à l'encontre des intérêts économiques du studio ?"
 version: "1.0"

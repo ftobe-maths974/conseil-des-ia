@@ -20,4 +20,8 @@ tags:
   - interne
   - compétence
   - transmission
+facilitator_note:
+  si_silence: "Demandez : si CareFlow tombait en panne pendant la garde de nuit de cet interne dans deux ans, qu'est-ce qu'il ferait ?"
+  si_debat_bloque: "Poussez vers le maître de stage : il dit 'avant c'était différent' — est-ce qu'il aurait pu former l'interne autrement, et pourquoi il ne l'a pas fait ?"
+  relance_cle: "La vraie question n'est pas la qualité de l'interne — c'est : quand une génération de soignants forme la suivante uniquement autour d'un outil, que transmet-on comme savoir clinique ?"
 version: "1.0"

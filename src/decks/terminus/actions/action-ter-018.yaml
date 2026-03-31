@@ -17,4 +17,8 @@ tags:
   - logement
   - surveillance
   - vie-privee
+facilitator_note:
+  si_silence: "Demandez : ce mandat concerne les logements sociaux et les espaces privatifs — mais si un bénéficiaire d'aides vit chez un tiers, dans un foyer ou dans une structure d'hébergement collectif, où s'arrête l'espace privatif que ce mandat protège ?"
+  si_debat_bloque: "Poussez sur l'effacement en 30 jours : si des données ont déjà été intégrées dans un modèle de scoring avant l'effacement, l'effacement des données brutes suffit-il à neutraliser leur influence sur le score — ou faut-il aussi corriger le modèle entraîné sur ces données ?"
+  relance_cle: "Ce mandat pose la question de la frontière entre contrôle légitime et surveillance domiciliaire : interdire la collecte dans les espaces de vie privés des plus précaires protège une dignité fondamentale — mais si L'Agence peut toujours collecter les mêmes signaux via des sources externes (opérateurs télécom, capteurs urbains), l'interdiction protège-t-elle réellement ou déplace-t-elle la collecte ?"
 version: "1.0"

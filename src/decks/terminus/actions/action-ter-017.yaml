@@ -17,4 +17,8 @@ tags:
   - surveillance
   - cout
   - audit
+facilitator_note:
+  si_silence: "Demandez : 'les fraudes statistiquement démontré à même de prévenir' — comment L'Agence calcule-t-elle les fraudes prévenues par un système qui n'a pas encore été déployé, ou qui n'aurait pas détecté certaines fraudes sans lui ?"
+  si_debat_bloque: "Poussez sur la suspension en 90 jours : si l'audit révèle que le dispositif coûte plus que les fraudes prévenues, et que le suspendre crée un vide de contrôle, est-ce que la suspension est vraiment exécutée — ou est-ce que L'Agence conteste l'audit pour gagner du temps ?"
+  relance_cle: "Ce mandat pose la question de la proportionnalité comme principe budgétaire : lier le coût de surveillance au montant des fraudes, c'est cohérent — mais si les bénéfices du contrôle incluent des effets dissuasifs non mesurables, est-ce que le calcul peut capturer ce que le dispositif vaut vraiment ?"
 version: "1.0"

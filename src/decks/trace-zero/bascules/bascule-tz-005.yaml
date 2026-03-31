@@ -16,4 +16,8 @@ question: >
   Quand la compromission du CVR d'un dirigeant paralyse une organisation entière, qui paie le coût
   de l'opacité du système ?
 tags: [invisibilité, zone-grise, profil-contaminé, log-opaque, déclassement, suspicion-latente, score-authenticité]
+facilitator_note:
+  si_silence: "Demandez : les 23 salariés n'ont rien fait de mal — qui est responsable de leur préjudice, l'OGR, la banque, ou Bernard ?"
+  si_debat_bloque: "Changez d'angle : si Bernard avait pu voir son score en temps réel et comprendre pourquoi il chutait, est-ce que la situation aurait été différente ?"
+  relance_cle: "La vraie question : quand une erreur dans un CVR peut paralyser une organisation entière en quelques jours, est-ce une défaillance technique ou une conception qui a sous-estimé les dépendances ?"
 version: "1.0"

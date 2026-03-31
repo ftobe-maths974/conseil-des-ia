@@ -20,4 +20,8 @@ tags:
   - preuve
   - mobilite
   - interpretation
+facilitator_note:
+  si_silence: "Posez la question : qui avait la responsabilité de s'assurer que ces données de transport correspondent vraiment à ce qu'on veut mesurer ?"
+  si_debat_bloque: "Demandez : si vous êtes malade et ne prenez pas les transports pendant un mois, voulez-vous qu'un système en déduise quelque chose sur vous ?"
+  relance_cle: "La vraie question : à partir de quel moment un indicateur proxy cesse d'être un signal et devient une accusation ?"
 version: "1.0"

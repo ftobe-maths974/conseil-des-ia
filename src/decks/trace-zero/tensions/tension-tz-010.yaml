@@ -16,4 +16,8 @@ question: >
   Vaut-il mieux être notifié d'une suspicion sans pouvoir l'expliquer, ou ne pas savoir qu'on est
   suspect jusqu'à ce que les conséquences arrivent ?
 tags: [invisibilité, notification, score-authenticité, zone-grise, défi-silencieux, suspicion-latente]
+facilitator_note:
+  si_silence: "Demandez : si vous receviez une alerte 'votre score d'authenticité vient de baisser' sans aucune explication, qu'est-ce que vous feriez — et comment vous sentiriez-vous ?"
+  si_debat_bloque: "Poussez sur le paradoxe de l'information : si être notifié sans explication génère de l'anxiété et ne permet pas d'agir, et que ne pas être notifié expose à des conséquences inattendues, est-ce qu'il existe une troisième option — et laquelle ?"
+  relance_cle: "La vraie question n'est pas quel régime de notification est préférable — c'est si un système qui ne peut pas expliquer ses alertes a le droit d'en émettre, et si une opacité qui s'habille de transparence est encore de la transparence."
 version: "1.0"

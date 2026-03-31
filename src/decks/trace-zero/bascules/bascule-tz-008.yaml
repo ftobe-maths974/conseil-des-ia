@@ -17,4 +17,8 @@ question: >
   Quand le standard de certification des preuves numériques évolue plus vite que les pratiques
   des organisations, qui assume le coût de la mise en conformité rétroactive ?
 tags: [preuve, consentement, attestation, provenance, chaîne-de-garde, certificat-de-présence, liveness]
+facilitator_note:
+  si_silence: "Demandez : les deux témoins physiques sont là, ils ont vu la scène — pourquoi leur présence ne suffit-elle pas à valider une preuve que l'algorithme rejette ?"
+  si_debat_bloque: "Déplacez vers la responsabilité : si la clinique est condamnée parce que ses preuves ne passent plus le seuil, est-ce que c'est juste — et qui a fixé ce seuil sans les prévenir ?"
+  relance_cle: "La vraie question : qui décide de ce qui compte comme preuve, et peut-on déléguer cette décision à un algorithme dont les seuils changent sans préavis ?"
 version: "1.0"

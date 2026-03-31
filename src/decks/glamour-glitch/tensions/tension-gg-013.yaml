@@ -24,4 +24,8 @@ tags:
   - manipulation
   - criteres
   - equilibre
+facilitator_note:
+  si_silence: "Demandez : est-ce qu'on peut imaginer un niveau de transparence des critères qui satisferait les créateurs légitimes sans être exploitable par les optimiseurs malveillants — ou ces deux exigences sont-elles structurellement incompatibles ?"
+  si_debat_bloque: "Changez d'angle vers les créateurs : si les critères devenaient publics et que tous commençaient à les optimiser, est-ce que le contenu serait meilleur ou pire pour le public ?"
+  relance_cle: "La vraie question : une transparence qui produit de la manipulation sert-elle encore les droits qu'elle est censée protéger ?"
 version: "1.0"

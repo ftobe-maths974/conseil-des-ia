@@ -25,4 +25,8 @@ tags:
   - equite
   - accessibilite
   - contestation
+facilitator_note:
+  si_silence: "Demandez : un patient allophone de 78 ans qui n'a pas de proche présent — comment fait-il concrètement pour contester son score CareFlow aux urgences du GHR ?"
+  si_debat_bloque: "Retournez vers l'institution : si le GHR sait que certains patients ne peuvent pas contester, a-t-il mis en place une procédure de contestation assistée — et sinon, pourquoi ?"
+  relance_cle: "La vraie question est de savoir si un droit qui protège mieux ceux qui en ont le moins besoin est encore un droit ou un avantage supplémentaire pour les plus favorisés."
 version: "1.0"

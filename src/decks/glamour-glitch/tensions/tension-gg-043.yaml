@@ -23,4 +23,8 @@ tags:
   - externalite
   - geographie
   - inegalite
+facilitator_note:
+  si_silence: "Demandez : si les data centers d'OmniStream sont au Maroc ou en Égypte parce que l'eau et l'électricité y sont moins chères, et que les populations locales supportent la chaleur et la consommation d'eau sans regarder les contenus produits — est-ce que cette situation a un nom ?"
+  si_debat_bloque: "Poussez sur les mécanismes de correction : si la géographie des coûts et celle des bénéfices ne coïncident pas, quel acteur — État d'accueil, régulateur international, OmniStream elle-même — a le mandat et les moyens de corriger cette asymétrie ?"
+  relance_cle: "La vraie question n'est pas si OmniStream respecte les lois locales — c'est si une infrastructure de divertissement peut être considérée comme acceptable quand ses coûts physiques sont supportés par des populations qui n'en bénéficient pas."
 version: "1.0"

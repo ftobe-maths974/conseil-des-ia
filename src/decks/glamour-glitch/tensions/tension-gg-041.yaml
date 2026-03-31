@@ -24,4 +24,8 @@ tags:
   - dependance
   - sobriete
   - contrainte
+facilitator_note:
+  si_silence: "Demandez : si OmniStream sait que réduire son empreinte ressource de 50 % impliquerait de licencier des milliers d'emplois et de perdre des milliards de revenus, est-ce qu'on peut lui demander de le faire volontairement — et sinon, qui peut l'y contraindre ?"
+  si_debat_bloque: "Poussez sur la limite de la responsabilité volontaire : si l'architecture productive d'OmniStream rend la sobriété choisie économiquement suicidaire pour une entreprise cotée, est-ce que la réglementation est la seule voie — et que doit-elle imposer concrètement ?"
+  relance_cle: "La vraie question n'est pas si OmniStream devrait être sobre — c'est si un modèle économique qui rend impossible la sobriété choisie peut être transformé par la volonté de ses dirigeants, ou si seule une contrainte externe peut créer les conditions d'un choix réel."
 version: "1.0"

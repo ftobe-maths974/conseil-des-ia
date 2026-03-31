@@ -21,4 +21,8 @@ tags:
   - score
   - critere
   - interface
+facilitator_note:
+  si_silence: "Demandez : si CareFlow affiche 'score : 87' sans explication et qu'un soignant doit décider en 30 secondes, est-ce qu'il peut vraiment prendre une décision clinique autonome — ou est-ce qu'il s'appuie sur le chiffre sans pouvoir l'interroger ?"
+  si_debat_bloque: "Poussez sur la limite de l'explicabilité : si le critère principal affiché est 'combinaison de 14 variables biologiques et comportementales', est-ce que ça satisfait l'exigence de lisibilité — ou est-ce une formulation qui donne l'illusion de transparence ?"
+  relance_cle: "Ce mandat pose la question de la lisibilité réelle : un critère formulé en langage clinique reste-t-il lisible si le soignant ne peut pas comprendre pourquoi ce critère-là et pas un autre a déterminé le score ?"
 version: "1.0"

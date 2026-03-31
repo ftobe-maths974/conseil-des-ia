@@ -16,4 +16,8 @@ question: >
   Entre une procédure d'exception qui impose une catégorie et une procédure au cas par cas qui impose
   d'attendre, laquelle respecte davantage la personne qui en a besoin ?
 tags: [singularité, atypie, dérogation-biométrique, accessibilité, catégorie, hors-modèle, profil-à-risque]
+facilitator_note:
+  si_silence: "Demandez : si vous êtes atypique mais que vous n'entrez dans aucune des catégories d'exception prédéfinies par l'OGR, quelle procédure vous protège — et qui a pensé à vous quand le système a été conçu ?"
+  si_debat_bloque: "Poussez sur la tension entre vitesse et dignité : si la procédure par catégories est rapide mais étiquetante, et que la procédure au cas par cas est équitable mais lente, est-ce qu'il existe une troisième voie — ou est-ce que ces deux défauts sont inévitables ?"
+  relance_cle: "La vraie question n'est pas laquelle des deux procédures est meilleure — c'est si un système d'exception conçu pour gérer l'atypie à l'échelle peut respecter la singularité des personnes qui ne rentrent dans aucune de ses cases."
 version: "1.0"

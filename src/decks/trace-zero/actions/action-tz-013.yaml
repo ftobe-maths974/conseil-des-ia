@@ -14,4 +14,8 @@ body: >
   et ne requiert pas la révélation du motif de l'atypie.
 mandat_principe: "L'existence d'une procédure d'exception documentée est une condition de déploiement, non une réponse ad hoc — elle précède l'atypie, elle ne la rattrape pas."
 tags: [singularité, atypie, hors-modèle, protocole-alternatif, accessibilité, dérogation-biométrique, profil-à-risque]
+facilitator_note:
+  si_silence: "Demandez : le protocole alternatif ne requiert pas que la personne révèle le motif de son atypie — mais l'agent référent qui traite le dossier doit bien comprendre pourquoi SIGMA-ID a échoué pour choisir la procédure adaptée. Comment l'atypie est-elle traitée sans être nommée ?"
+  si_debat_bloque: "Poussez sur le délai de 48 heures garanti : si l'entité n'a qu'un seul agent référent et qu'il est absent ou surchargé, comment garantit-elle le délai ? Est-ce qu'une entité peut déployer SIGMA-ID sans avoir la capacité humaine de tenir cette promesse ?"
+  relance_cle: "Ce mandat pose la question de l'exception comme obligation préalable et non comme réponse tardive : conditionner le déploiement à l'existence d'un protocole alternatif force les entités à anticiper les atypies plutôt qu'à les gérer au cas par cas — mais si le protocole existe sur le papier sans avoir été testé sur des cas réels d'atypie, est-ce une condition remplie ou une formalité ?"
 version: "1.0"

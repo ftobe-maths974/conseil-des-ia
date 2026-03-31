@@ -20,4 +20,8 @@ tags:
   - maintenance
   - responsabilite
   - bug
+facilitator_note:
+  si_silence: "Demandez : si L'Agence sait que CITIZEN-SCAN contient des bugs affectant 2 à 3% des scores et qu'elle n'a pas les moyens de traiter les dossiers potentiellement erronés, est-ce qu'elle devrait continuer à l'utiliser ?"
+  si_debat_bloque: "Poussez sur la responsabilité contractuelle : si l'opérateur attend un avenant pour corriger des bugs connus, qui est responsable des décisions erronées pendant ce délai — L'Agence ou l'opérateur ?"
+  relance_cle: "La vraie question n'est pas si la dette technique peut être remboursée — c'est si une institution peut déléguer des décisions à un système dont elle sait qu'il produit des erreurs."
 version: "1.0"

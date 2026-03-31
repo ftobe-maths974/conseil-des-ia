@@ -16,4 +16,8 @@ question: >
   Rendre les critères de décision d'un système de sécurité compréhensibles pour les victimes,
   est-ce compatible avec les rendre inopérants pour les fraudeurs ?
 tags: [invisibilité, transparence, log-opaque, score-authenticité, arbitrage, zone-grise]
+facilitator_note:
+  si_silence: "Demandez : si SIGMA-ID publiait en open source tous ses critères de déclassement pour que vous puissiez comprendre pourquoi votre score a baissé — et que cela permettait aussi aux pirates de contourner précisément ces critères — est-ce que vous voudriez quand même cette transparence ?"
+  si_debat_bloque: "Poussez sur la conception du problème : si la transparence totale rend le système vulnérable et l'opacité totale rend les recours impossibles, est-ce qu'il existe une transparence partielle viable — et qui décide ce qu'on publie et ce qu'on garde secret ?"
+  relance_cle: "La vraie question n'est pas si la transparence est souhaitable — c'est si une transparence qui armait les adversaires du système peut encore être appelée transparence, et comment construire un régime d'explicabilité qui ne soit pas un mode d'emploi pour la fraude."
 version: "1.0"

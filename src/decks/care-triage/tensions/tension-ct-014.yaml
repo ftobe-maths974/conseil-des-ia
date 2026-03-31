@@ -20,4 +20,8 @@ tags:
   - publication
   - contentieux
   - responsabilite
+facilitator_note:
+  si_silence: "Demandez : si l'audit interne du GHR révèle que CareFlow a systématiquement sous-scoré une population précise de patients, à quel moment le GHR a-t-il l'obligation légale de le rendre public ?"
+  si_debat_bloque: "Renversez la perspective : si le GHR ne publie pas et que les biais sont découverts par un journaliste ou un avocat, quel est le coût de cette non-transparence ?"
+  relance_cle: "La vraie question est de savoir si la peur du contentieux est une raison éthiquement défendable pour ne pas informer les patients qui ont été lésés."
 version: "1.0"

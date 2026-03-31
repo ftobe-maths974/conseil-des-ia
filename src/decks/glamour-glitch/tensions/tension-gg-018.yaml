@@ -23,4 +23,8 @@ tags:
   - biais
   - merite
   - classement
+facilitator_note:
+  si_silence: "Demandez : un contenu qui n'a jamais eu de visibilité parce que FAME-GEN ne l'a pas mis en avant — peut-on dire qu'il a été évalué sur son mérite ?"
+  si_debat_bloque: "Retournez vers les données d'entraînement : si FAME-GEN a appris sur des contenus déjà filtrés par des biais antérieurs, qu'est-ce qui garantit que ses prédictions ne reproduisent pas ces mêmes biais ?"
+  relance_cle: "La vraie question : un système qui crée les conditions de validation de ses propres prédictions ne mesure pas la qualité — il la définit."
 version: "1.0"

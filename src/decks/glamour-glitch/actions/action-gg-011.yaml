@@ -18,4 +18,8 @@ tags:
   - droits-identite
   - registre
   - consentement
+facilitator_note:
+  si_silence: "Demandez : 'arrêt de toute nouvelle production dans un délai de 30 jours' — mais les productions générées avant le retrait et déjà diffusées continuent de circuler. Est-ce que le droit de retrait peut s'appliquer aux contenus déjà publiés, ou ne couvre-t-il que les nouvelles générations ?"
+  si_debat_bloque: "Poussez sur le registre public des consentements actifs : si ce registre est public et accessible, est-ce qu'il devient aussi une liste publique de créateurs dont l'identité est intégrée dans FAME-GEN — et est-ce que cette publicité est voulue par les créateurs concernés ?"
+  relance_cle: "Ce mandat pose la question de la réversibilité technique du retrait : un droit de retrait opposable suppose qu'OmniStream peut arrêter d'utiliser une identité — mais si cette identité a été fusionnée avec d'autres dans un modèle entraîné, isoler et neutraliser la contribution d'une personne spécifique est-il techniquement possible, ou le droit formel dépasse-t-il les capacités techniques actuelles ?"
 version: "1.0"

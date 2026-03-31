@@ -22,4 +22,8 @@ tags:
   - atypie
   - profil-hors-standard
   - droits
+facilitator_note:
+  si_silence: "Demandez : si la dérogation ne peut pas être refusée pour motif d'organisation mais qu'elle doit être documentée et transmise au référent CareFlow, est-ce que les soignants qui l'utilisent peu le font par conviction clinique ou par peur d'être dans le registre des non-conformes ?"
+  si_debat_bloque: "Poussez sur le paradoxe de la traçabilité : ce mandat protège le patient ET documente la non-conformité du soignant au standard. Si ces deux effets coexistent, est-ce que les soignants vont exercer ce droit — ou vont-ils trouver des façons de documenter la conformité tout en s'en écartant ?"
+  relance_cle: "Ce mandat pose la question du droit réellement exercé : garantir une voie de dérogation formelle change-t-il les pratiques si les soignants perçoivent la dérogation documentée comme une exposition professionnelle plutôt que comme une protection du patient ?"
 version: "1.0"

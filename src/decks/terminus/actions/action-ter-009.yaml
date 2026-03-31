@@ -18,4 +18,8 @@ tags:
   - fraude
   - faux-positif
   - preuve
+facilitator_note:
+  si_silence: "Demandez : les personnes les moins connectées numériquement — personnes âgées, précaires, rurales — sont aussi celles qui ont le plus de chances d'être signalées par inactivité numérique. Est-ce que ce mandat les protège, ou est-ce qu'il protège surtout ceux qui sont déjà numériquement actifs ?"
+  si_debat_bloque: "Poussez sur le contact humain en 10 jours : L'Agence doit contacter l'usager avant toute mesure. Par quel canal, avec quelle ressource humaine, et si l'usager ne répond pas au contact (parce qu'il est hospitalisé, en déplacement…) — est-ce que ça déclenche quand même la mesure ?"
+  relance_cle: "Ce mandat pose la question de la preuve par défaut : interdire que l'inactivité soit interprétée comme fraude est une protection importante — mais si le contact humain ne répond pas à la question de savoir pourquoi quelqu'un est inactif, qu'est-ce que L'Agence fait ensuite ?"
 version: "1.0"

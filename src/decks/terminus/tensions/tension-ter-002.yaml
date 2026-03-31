@@ -20,4 +20,8 @@ tags:
   - confiance
   - arbitraire
   - contestabilite
+facilitator_note:
+  si_silence: "Demandez : est-ce qu'on a déjà préféré une règle écrite à une décision humaine, non parce que la règle était juste, mais parce qu'elle ne pouvait pas vous viser personnellement ?"
+  si_debat_bloque: "Changez d'acteur : un syndicat d'agents de L'Agence — comment réagissent-ils à l'idée que les usagers leur font moins confiance qu'à un algorithme ?"
+  relance_cle: "La vraie question : la neutralité perçue d'un système opaque est-elle une protection ou une illusion qui ferme la porte à toute contestation ?"
 version: "1.0"

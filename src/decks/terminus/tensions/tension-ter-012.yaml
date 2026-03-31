@@ -20,4 +20,8 @@ tags:
   - autocensure
   - peur
   - droit-effectif
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un dans le groupe a déjà renoncé à contester une décision parce que la contestation semblait plus risquée que l'injustice elle-même ?"
+  si_debat_bloque: "Passez au niveau systémique : si contester déclenche des contrôles supplémentaires, le système punit-il les recours — et L'Agence le sait-elle ?"
+  relance_cle: "La vraie question : un droit qui ne peut s'exercer qu'au prix d'un risque supplémentaire n'est pas un droit — c'est un piège."
 version: "1.0"

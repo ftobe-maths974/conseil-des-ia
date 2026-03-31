@@ -17,4 +17,8 @@ tags:
   - automatisation
   - delegation
   - capacite-humaine
+facilitator_note:
+  si_silence: "Demandez : si les 40 % de dossiers traités manuellement par tirage représentatif servent à détecter les dérives du modèle — et qu'un agent traite manuellement un dossier parce qu'il l'a tiré au sort et non parce qu'il y a un problème détecté — est-ce qu'il peut vraiment identifier une dérive ?"
+  si_debat_bloque: "Poussez sur le seuil de 60 % : pourquoi 60 % et pas 40 ou 80 — et si les 40 % manuels ne couvrent pas les cas les plus fragiles mais sont tirés aléatoirement dans l'ensemble du volume, est-ce que ce tirage protège ceux qui en ont le plus besoin ?"
+  relance_cle: "Ce mandat pose la question de l'efficacité du plafonnement : réserver 40 % aux agents humains préserve une capacité de jugement institutionnel — mais si ce 40 % est représentatif du flux global et non ciblé sur les décisions à risque, est-ce que ça détecte vraiment les dérives ?"
 version: "1.0"

@@ -13,4 +13,8 @@ body: >
   la synthèse incombe à la partie qui conteste, non à la personne qui produit la preuve.
 mandat_principe: "La présomption d'authenticité est le principe, la présomption de synthèse est l'exception — aucune procédure ne peut inverser ce rapport sans décision humaine motivée."
 tags: [preuve, liveness, présomption-de-synthèse, attestation, charge-de-la-preuve, substrat-vivant]
+facilitator_note:
+  si_silence: "Demandez : le seuil de 95% de probabilité que la preuve soit synthétique est fixé par SIGMA-ID. Si SIGMA-ID est incertain — il établit une probabilité de 80% de synthèse — la présomption de légitimité s'applique. Est-ce que 80% d'incertitude suffit pour protéger une preuve réellement synthétique ?"
+  si_debat_bloque: "Poussez sur la charge de la preuve : la partie qui conteste l'authenticité doit prouver la synthèse. Si SIGMA-ID est l'outil de référence pour cette preuve, et que l'adversaire a accès à SIGMA-ID mais pas la personne qui produit la preuve, est-ce que cette asymétrie d'accès aux outils crée une inégalité dans la charge de preuve ?"
+  relance_cle: "Ce mandat pose la question de la présomption d'humanité comme principe juridique : inverser la charge de la preuve vers la présomption de légitimité est une protection essentielle contre la suspicion automatique — mais si SIGMA-ID peut établir à 95% qu'une preuve est synthétique et que cette preuve protège une fraude réelle, est-ce que la présomption de légitimité protège les personnes ou couvre des usages malveillants ?"
 version: "1.0"

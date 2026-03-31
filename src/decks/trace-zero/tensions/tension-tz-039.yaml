@@ -16,4 +16,8 @@ question: >
   Quand s'habituer à la surveillance biométrique permanente est plus accessible que d'y résister,
   l'absence de résistance signifie-t-elle l'acceptation ou simplement la reddition silencieuse ?
 tags: [métabolisme, vie-privée, résistance, dépendance, fatigue-authentification, charge-cognitive, surveillance]
+facilitator_note:
+  si_silence: "Demandez : si la résistance à la surveillance biométrique est possible mais coûteuse, et que l'habitude est gratuite, est-ce que les gens qui ne résistent pas ont choisi de ne pas le faire — ou est-ce que le coût de la résistance l'a choisi pour eux ?"
+  si_debat_bloque: "Poussez sur la définition du consentement social : si une majorité de gens ont simplement cessé de trouver la surveillance biométrique étrange, est-ce que ça constitue un consentement collectif — ou est-ce que l'accoutumance et le consentement sont deux choses différentes ?"
+  relance_cle: "La vraie question n'est pas si la surveillance biométrique est acceptable — c'est si une société peut considérer qu'elle a obtenu le consentement de sa population parce que la majorité a arrêté de protester, quand protester coûte ce que tout le monde n'a pas."
 version: "1.0"

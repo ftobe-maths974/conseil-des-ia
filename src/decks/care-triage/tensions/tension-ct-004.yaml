@@ -20,4 +20,8 @@ tags:
   - efficience
   - exception
   - pression
+facilitator_note:
+  si_silence: "Demandez : si un médecin s'écarte du score pour une raison clinique valide et que le patient s'en sort bien, est-ce que cet écart apparaît dans l'audit comme une réussite ou comme une non-conformité ?"
+  si_debat_bloque: "Pensez au patient : a-t-il consenti à être trié par un standard qui optimise le flux global plutôt que sa situation individuelle ?"
+  relance_cle: "La vraie question est de savoir si une réduction de 23 % des temps d'attente est un bénéfice pour tous ou un bénéfice moyen qui masque des perdants."
 version: "1.0"

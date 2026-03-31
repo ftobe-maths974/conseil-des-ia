@@ -14,4 +14,8 @@ body: >
   5 jours ouvrés sans exigence de seuil de score minimal préalable.
 mandat_principe: "Conditionner toute norme d'authentification à une évaluation d'impact sur les personnes dont le profil biométrique ou comportemental dévie du modèle d'entraînement dominant."
 tags: [singularité, variabilité-biométrique, altération, accessibilité, atypie, dérogation-biométrique, profil-à-risque]
+facilitator_note:
+  si_silence: "Demandez : 'déclaration étayée par un document médical' — une personne en situation de précarité de santé qui n'a pas de médecin traitant, pas de suivi régulier, peut-elle obtenir ce document dans les délais que la procédure exige ? La condition documentaire exclut-elle ceux qui en ont le plus besoin ?"
+  si_debat_bloque: "Poussez sur la mise à jour du profil en 5 jours : SIGMA-ID met à jour le profil de référence — mais si la variabilité biométrique est temporaire (traitement ponctuel) et que le profil mis à jour reste dans le système, est-ce que la personne peut demander le retour à son profil antérieur après guérison ?"
+  relance_cle: "Ce mandat pose la question de la reconnaissance contractuelle de la singularité corporelle : intégrer la variabilité biométrique comme fait légitime plutôt que comme anomalie est une avancée — mais si cette reconnaissance dépend d'une déclaration individuelle et d'un document médical, elle ne protège pas les personnes dont l'atypie est systémique et non documentée médicalement."
 version: "1.0"

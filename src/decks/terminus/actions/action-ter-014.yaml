@@ -18,4 +18,8 @@ tags:
   - populations-atypiques
   - deploiement
   - modele
+facilitator_note:
+  si_silence: "Demandez : un rapport d'impact sur les aidants informels, les cohabitants ou les personnes sans domicile fixe numérique — comment L'Agence identifie-t-elle ces populations pour les auditer si ce sont précisément les populations les moins visibles dans ses données ?"
+  si_debat_bloque: "Poussez sur la condition de déploiement : si le rapport d'impact révèle des lacunes importantes mais que la pression calendaire ou politique pousse quand même au déploiement, qu'est-ce qui empêche concrètement L'Agence de passer outre — et qui contrôle ?"
+  relance_cle: "Ce mandat pose la question de l'audit des invisibles : on ne peut auditer que ce qu'on voit. Si les populations atypiques ne sont pas dans les données de L'Agence, est-ce que le rapport d'impact peut réellement les couvrir — ou documente-t-il seulement les atypies déjà connues ?"
 version: "1.0"

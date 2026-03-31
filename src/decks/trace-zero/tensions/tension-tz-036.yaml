@@ -16,4 +16,8 @@ question: >
   Prendre le temps de vérifier qu'un système biométrique est équitable avant de le déployer, est-ce
   une exigence éthique fondamentale ou un luxe que la menace ne permet pas ?
 tags: [singularité, équité-biométrique, audit, standard, faux-positif, innovation, accessibilité]
+facilitator_note:
+  si_silence: "Demandez : si SYNTH-MEMEX développe pendant les 6 mois d'audit une nouvelle attaque que SIGMA-ID ne couvre pas, et qu'une vague de fraudes survient à cause de ce délai — est-ce que les partisans de l'audit peuvent accepter d'en être partiellement responsables ?"
+  si_debat_bloque: "Poussez sur la symétrie des risques : si déployer sans audit expose des populations à des discriminations systématiques, et qu'auditer expose toute la population à une fenêtre de vulnérabilité, qui décide quel risque est acceptable — et cette décision peut-elle être technique ?"
+  relance_cle: "La vraie question n'est pas si l'audit d'équité est légitime — c'est si la menace sécuritaire peut servir d'argument pour déployer des systèmes dont on sait qu'ils discriminent, en décidant implicitement que certains groupes paient le prix de la rapidité."
 version: "1.0"

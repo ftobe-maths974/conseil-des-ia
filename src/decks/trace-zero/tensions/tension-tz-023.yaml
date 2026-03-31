@@ -16,4 +16,8 @@ question: >
   Quand la certification d'une preuve est devenue une étape nécessaire avant toute procédure,
   l'accès à la justice dépend-il désormais aussi du budget pour certifier ses preuves ?
 tags: [preuve, liveness, attestation, certificat-de-présence, chaîne-de-garde, accès-à-la-justice]
+facilitator_note:
+  si_silence: "Demandez : si avoir accès à la justice dépend maintenant d'avoir les moyens de certifier ses preuves avant de les soumettre, est-ce que le système judiciaire est encore accessible à tous — ou est-ce qu'une nouvelle inégalité a été créée sans que personne ne l'ait décidée formellement ?"
+  si_debat_bloque: "Poussez sur la responsabilité de la norme : si la certification des preuves est devenue une pratique standard des avocats, qui a créé cette norme de facto — l'OGR, les barreaux, les tribunaux — et qui aurait dû décider si c'était acceptable ?"
+  relance_cle: "La vraie question n'est pas si certifier ses preuves est utile — c'est si une procédure qui est devenue nécessaire sans avoir été rendue obligatoire, et dont le coût est inégalement supportable, crée une justice à deux vitesses sans que personne en ait décidé explicitement."
 version: "1.0"

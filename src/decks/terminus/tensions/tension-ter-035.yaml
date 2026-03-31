@@ -20,4 +20,8 @@ tags:
   - standardisation
   - local
   - national
+facilitator_note:
+  si_silence: "Demandez : si une association locale avait un système mieux adapté à sa population et qu'on lui a demandé de l'abandonner pour s'aligner sur le national, qu'est-ce qui a été perdu — et pour qui ?"
+  si_debat_bloque: "Retournez la question vers le politique : qui a décidé que l'uniformité nationale valait plus que la pertinence locale — et est-ce que ce choix a été explicite ou silencieux ?"
+  relance_cle: "La vraie question n'est pas si l'interopérabilité est utile — c'est si l'unification a effacé une diversité qui protégeait des populations que la norme nationale ne voit pas."
 version: "1.0"

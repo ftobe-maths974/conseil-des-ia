@@ -16,4 +16,8 @@ question: >
   Peut-on déléguer une décision à un système tout en assumant la responsabilité de ses erreurs,
   ou cette délégation crée-t-elle une fiction de responsabilité ?
 tags: [delegation, responsabilité, CVR, opérateur-de-confiance, validation-tierce, confiance-forcée]
+facilitator_note:
+  si_silence: "Demandez : si vous étiez l'assuré bloqué en urgence, à qui vous retourneriez-vous — à la mutuelle ou à l'OGR ?"
+  si_debat_bloque: "Passez côté contractuel : si le contrat dit que la responsabilité reste à Solidar-Santé, pourquoi une organisation signe-t-elle un tel contrat ?"
+  relance_cle: "La vraie question est celle du contrat de façade : déléguer la décision tout en gardant la responsabilité, c'est prétendre contrôler ce qu'on ne contrôle plus."
 version: "1.0"

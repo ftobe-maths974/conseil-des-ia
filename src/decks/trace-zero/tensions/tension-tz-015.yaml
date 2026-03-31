@@ -16,4 +16,8 @@ question: >
   Entre une alerte qui inquiète inutilement et un silence qui laisse dans le danger, comment
   une organisation choisit-elle le niveau de notification qui respecte les personnes ?
 tags: [invisibilité, notification, faux-positif, suspicion-latente, zone-grise, déclassement, score-authenticité]
+facilitator_note:
+  si_silence: "Demandez : si vous receviez une alerte 'anomalie détectée sur votre identité' alors que tout va bien pour vous — est-ce que vous préférez cette alerte inutile, ou préfériez-vous ne pas avoir été alerté ?"
+  si_debat_bloque: "Poussez sur la dissymétrie du risque : si 34 % des alertes immédiates sont des faux positifs anxiogènes, et que 100 % des silences pendant 72h laissent des vraies victimes dans le danger, comment calibre-t-on le seuil de notification — et peut-on le calibrer différemment selon le contexte ?"
+  relance_cle: "La vraie question n'est pas si notifier est mieux que ne pas notifier — c'est si une organisation peut choisir un niveau de notification qui 'respecte les personnes' quand les deux options disponibles causent des préjudices différents à des groupes différents."
 version: "1.0"

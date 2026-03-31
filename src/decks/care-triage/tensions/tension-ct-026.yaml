@@ -21,4 +21,8 @@ tags:
   - statistique
   - incertitude
   - decision-clinique
+facilitator_note:
+  si_silence: "Demandez : si un médecin vous dit 'ce test est fiable à 71 %', est-ce que vous sauriez si cette statistique s'applique à vous personnellement — ou est-ce qu'elle s'applique à une population dont vous faites peut-être partie à 45 % de fiabilité ?"
+  si_debat_bloque: "Poussez sur la granularité : si le seuil global masque des variations importantes selon les sous-populations, comment le soignant devrait-il interpréter ce chiffre pour le patient qu'il a devant lui — et que se passe-t-il s'il ne le sait pas ?"
+  relance_cle: "La vraie question n'est pas si publier un taux de fiabilité est utile — c'est si un chiffre global qui masque des hétérogénéités importantes informe réellement ou crée une fausse certitude."
 version: "1.0"

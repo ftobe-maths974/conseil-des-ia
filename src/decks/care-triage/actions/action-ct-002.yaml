@@ -20,4 +20,8 @@ tags:
   - gouvernance
   - module
   - designation
+facilitator_note:
+  si_silence: "Demandez : si chaque module CareFlow doit avoir un médecin nommément responsable et capable de le suspendre, combien de médecins au GHR savent aujourd'hui faire ça techniquement — et qui les a formés ?"
+  si_debat_bloque: "Poussez sur le côté nominal : désigner un responsable sur le papier sans lui donner la formation, le temps et l'autorité réelle pour suspendre un module, est-ce de la gouvernance ou de la responsabilité diffuse organisée ?"
+  relance_cle: "Ce mandat pose la question de la nomination comme acte réel : désigner un responsable change-t-il quelque chose si cette personne n'a ni le temps ni les moyens d'exercer cette responsabilité au quotidien ?"
 version: "1.0"

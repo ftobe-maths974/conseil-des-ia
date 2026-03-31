@@ -21,4 +21,8 @@ tags:
   - jugement-moral
   - sous-traitance
   - etat
+facilitator_note:
+  si_silence: "Demandez : qui, dans la chaîne — ingénieur, chef de produit, direction de L'Agence, ministère — a décidé de ce que signifie être 'actif' ou 'méritant' dans CITIZEN-SCAN ?"
+  si_debat_bloque: "Passez à l'angle politique : si un parti au pouvoir changeait les critères de 'conformité sociale' encodés dans le contrat privé, le saurait-on — et qui pourrait s'y opposer ?"
+  relance_cle: "La vraie question : externaliser la définition des valeurs à un contrat privé non public, c'est se donner les moyens de ne pas en être responsable."
 version: "1.0"

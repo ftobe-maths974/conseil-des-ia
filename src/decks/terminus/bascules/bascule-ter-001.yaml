@@ -20,4 +20,8 @@ tags:
   - bourse
   - refus-automatique
   - recours
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici a déjà reçu un refus sans explication ?"
+  si_debat_bloque: "Retournez la question : est-ce que Léa aurait plus de chances si elle appelait au lieu d'écrire ?"
+  relance_cle: "La vraie question : qui assume la responsabilité quand aucun humain n'a décidé ?"
 version: "1.0"

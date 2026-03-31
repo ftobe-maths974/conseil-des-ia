@@ -20,4 +20,8 @@ tags:
   - competence
   - dependance
   - resilience
+facilitator_note:
+  si_silence: "Demandez : un agent de L'Agence qui n'a plus traité de dossier manuellement depuis deux ans — est-il encore qualifié pour reprendre la main si le système tombe ?"
+  si_debat_bloque: "Retournez la question vers le secteur privé : une banque qui automatise son analyse de crédit perd-elle quelque chose qu'un hôpital ne peut pas se permettre de perdre ?"
+  relance_cle: "La vraie question : déléguer un savoir-faire à une machine, est-ce le conserver ou le détruire progressivement ?"
 version: "1.0"

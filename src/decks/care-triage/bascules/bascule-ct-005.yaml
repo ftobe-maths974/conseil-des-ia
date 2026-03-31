@@ -20,4 +20,8 @@ tags:
   - lisibilite
   - audit
   - incident
+facilitator_note:
+  si_silence: "Posez la question : si les données existent mais que seul l'éditeur peut les lire, à qui appartiennent vraiment ces données ?"
+  si_debat_bloque: "Décalez vers l'urgence clinique : pendant les 72 heures d'attente de réponse de l'éditeur, le service doit-il continuer à utiliser CareFlow ou s'en passer — et qui décide ?"
+  relance_cle: "La vraie question n'est pas technique — c'est : une traçabilité que l'équipe ne peut pas lire elle-même, est-ce une traçabilité au service du soin ou au service de l'éditeur ?"
 version: "1.0"

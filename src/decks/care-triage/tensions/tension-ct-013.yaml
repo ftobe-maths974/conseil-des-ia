@@ -21,4 +21,8 @@ tags:
   - protection
   - usage-secondaire
   - soignants
+facilitator_note:
+  si_silence: "Demandez : un soignant qui a dévié du score CareFlow pour une bonne raison clinique et dont le patient s'en est bien sorti — est-ce que ce journal le protège ou le signale comme non-conforme ?"
+  si_debat_bloque: "Prenez l'angle des données : qui au GHR a accès à ce journal — la direction, les RH, l'éditeur, une future agence d'inspection — et est-ce que les soignants le savent ?"
+  relance_cle: "La vraie question est de savoir si une traçabilité sans garantie d'usage est une protection ou une surveillance consentie par défaut."
 version: "1.0"

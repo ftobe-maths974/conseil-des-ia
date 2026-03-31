@@ -19,4 +19,8 @@ tags:
   - publication
   - recours
   - stabilite
+facilitator_note:
+  si_silence: "Demandez : L'Agence a commandé l'audit — elle en connaît les résultats — et elle hésite à le publier : à qui appartient ce rapport, et qui décide de sa diffusion ?"
+  si_debat_bloque: "Passez au niveau des personnes lésées : elles ont subi des décisions biaisées sans le savoir — leur absence de connaissance leur retire-t-elle le droit à une réparation ?"
+  relance_cle: "La vraie question : retarder la publication d'un audit pour raisons opérationnelles, c'est choisir la stabilité de l'institution contre la justice due aux usagers."
 version: "1.0"

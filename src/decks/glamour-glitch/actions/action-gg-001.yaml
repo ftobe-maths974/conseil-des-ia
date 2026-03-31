@@ -18,4 +18,8 @@ tags:
   - pipeline
   - delegation
   - publication
+facilitator_note:
+  si_silence: "Demandez : 'validation active et horodatée' — si un créateur valide un template de contenu hebdomadaire, est-ce que cette validation couvre toutes les publications de la semaine, ou chacune individuellement ? Où s'arrête l'acte de consentement ?"
+  si_debat_bloque: "Poussez sur la responsabilité civile d'OmniStream : si OmniStream est responsable de chaque publication non validée et que les créateurs avec lesquels ils travaillent sont des milliers, est-ce que ce mandat pousse OmniStream à réduire le nombre de créateurs partenaires plutôt qu'à améliorer sa chaîne de validation ?"
+  relance_cle: "Ce mandat pose la question du consentement dans une relation de dépendance économique : interdire que le silence vaille consentement est une protection essentielle — mais si un créateur dépend économiquement d'OmniStream, jusqu'où peut-il vraiment refuser de valider sans risquer sa place sur la plateforme ?"
 version: "1.0"

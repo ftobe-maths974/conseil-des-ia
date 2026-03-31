@@ -20,4 +20,8 @@ tags:
   - inactivite
   - aidant
   - trace
+facilitator_note:
+  si_silence: "Demandez : qu'est-ce que Sonia pourrait faire pour prouver qu'elle s'occupait de sa voisine — y a-t-il quoi que ce soit ?"
+  si_debat_bloque: "Élargissez : combien d'activités essentielles dans nos vies ne laissent aucune trace numérique — s'occuper d'un enfant, consoler quelqu'un, faire la cuisine ?"
+  relance_cle: "La vraie question : un système qui ne reconnaît que ce qu'il peut mesurer va-t-il systématiquement pénaliser ceux qui vivent le plus hors des traces numériques ?"
 version: "1.0"

@@ -21,4 +21,8 @@ tags:
   - efficacite
   - legitimite
   - droits
+facilitator_note:
+  si_silence: "Demandez : avec un délai de 23 jours et 4,7% de révisions favorables, est-ce qu'un créateur rationnel va utiliser ce recours ou apprendre à s'en passer ?"
+  si_debat_bloque: "Déplacez vers le régulateur : à quel seuil d'efficacité un mécanisme de recours cesse-t-il d'être un recours et devient-il une façade de conformité réglementaire ?"
+  relance_cle: "La vraie question : un recours qui existe sur le papier mais que personne n'utilise parce qu'il ne fonctionne pas protège qui — le créateur ou la plateforme ?"
 version: "1.0"

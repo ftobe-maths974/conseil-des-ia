@@ -20,4 +20,8 @@ tags:
   - coût
   - resilience
   - formation
+facilitator_note:
+  si_silence: "Demandez : si un hôpital supprime sa procédure de fonctionnement dégradé pour économiser les coûts de formation — et que CareFlow tombe en panne trois mois plus tard — est-ce un risque acceptable qu'il avait le droit de prendre ?"
+  si_debat_bloque: "Poussez sur l'horizon temporel : si le coût de la procédure dégradée est visible aujourd'hui et son bénéfice hypothétique et différé, comment arbitre-t-on entre efficience immédiate et résilience à long terme dans un contexte de tension budgétaire ?"
+  relance_cle: "La vraie question n'est pas si la procédure dégradée coûte cher — c'est si une institution peut accepter de ne plus être capable de fonctionner sans une technologie qu'elle ne contrôle pas."
 version: "1.0"

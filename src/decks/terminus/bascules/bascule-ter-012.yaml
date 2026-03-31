@@ -20,4 +20,8 @@ tags:
   - donnees-historiques
   - representation
   - exception
+facilitator_note:
+  si_silence: "Posez la question : si votre situation de vie n'existait pas dans les données de 2015 à 2023, est-ce que vous pouvez avoir confiance dans ce système ?"
+  si_debat_bloque: "Montez d'un niveau : peut-on corriger un modèle entraîné sur le passé sans retraiter des millions de décisions passées — et qui le financerait ?"
+  relance_cle: "La vraie question : utiliser des données historiques pour évaluer l'avenir, c'est perpétuer les inégalités passées ou les corriger ?"
 version: "1.0"

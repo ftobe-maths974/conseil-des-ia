@@ -16,4 +16,8 @@ question: >
   Certifier en masse le vrai pour le distinguer du faux, est-ce restaurer la confiance ou installer
   la suspicion comme état normal de la communication humaine ?
 tags: [preuve, attestation, liveness, présomption-de-synthèse, confiance, substrat-vivant, surveillance]
+facilitator_note:
+  si_silence: "Demandez : si vous receviez un message sans sceau 'Réel Garanti', est-ce que vous en douteriez automatiquement — et si oui, est-ce que vous réalisez que vous venez de basculer dans un monde où la suspicion est l'état par défaut ?"
+  si_debat_bloque: "Poussez sur le renversement implicite de la présomption : si un programme de certification voluntaire devient de facto une certification obligatoire parce que l'absence de sceau est suspecte, qui a décidé de ce basculement — et a-t-on pu refuser ?"
+  relance_cle: "La vraie question n'est pas si certifier le vrai restaure la confiance — c'est si un système où tout doit être certifié pour ne pas être suspect est encore un système de confiance, ou un système de surveillance totale habillé en garantie."
 version: "1.0"

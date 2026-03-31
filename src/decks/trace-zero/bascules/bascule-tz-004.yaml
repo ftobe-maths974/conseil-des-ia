@@ -16,4 +16,8 @@ question: >
   Quand un système vous signale que vous êtes suspect sans vous dire pourquoi, et que le recours
   exige d'être déjà authentifié, comment sortez-vous du cercle ?
 tags: [invisibilité, score-authenticité, zone-grise, défi-silencieux, log-opaque, notification, recours-fantôme]
+facilitator_note:
+  si_silence: "Demandez : Laure a-t-elle commis une erreur quelque part, ou est-ce le système qui la traite comme suspecte sans raison accessible ?"
+  si_debat_bloque: "Déplacez vers le recours : un système qui exige d'être authentifié pour contester une décision d'authentification — c'est concevable comme architecture ou c'est une absurdité délibérée ?"
+  relance_cle: "La vraie question : a-t-on le droit de concevoir un système où la porte de sortie est verrouillée de l'intérieur ?"
 version: "1.0"

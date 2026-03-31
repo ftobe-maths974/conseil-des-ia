@@ -19,4 +19,8 @@ tags:
   - pression-interne
   - droit
   - pression
+facilitator_note:
+  si_silence: "Demandez : si vous étiez agent à L'Agence et qu'on vous disait informellement de ne pas trop utiliser la procédure d'exception pour ne pas créer de précédent, que feriez-vous ?"
+  si_debat_bloque: "Poussez sur la définition du droit : si une procédure d'exception est prévue mais découragée en pratique, est-elle encore un droit ou une faveur ?"
+  relance_cle: "La vraie question n'est pas si la procédure existe — c'est si un droit qu'on presse les agents de ne pas exercer est encore un droit."
 version: "1.0"

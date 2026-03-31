@@ -19,4 +19,8 @@ tags:
   - controle
   - legitimite
   - democratie
+facilitator_note:
+  si_silence: "Demandez : si un élu de la tutelle approuve un rapport trimestriel sans pouvoir vérifier les critères actifs de CITIZEN-SCAN, qu'est-ce qu'il approuve réellement ?"
+  si_debat_bloque: "Passez au niveau parlementaire : un député peut-il voter un budget pour un système dont il ne peut pas lire le fonctionnement — et est-ce différent de ce qui se passe ici ?"
+  relance_cle: "La vraie question : la délégation démocratique suppose qu'on peut évaluer ce qu'on délègue — quand c'est impossible, le mandat démocratique est rompu."
 version: "1.0"

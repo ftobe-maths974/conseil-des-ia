@@ -21,4 +21,8 @@ tags:
   - audit
   - prediction
   - tableau-de-bord
+facilitator_note:
+  si_silence: "Demandez : si l'audit révèle que CareFlow a un taux de faux positifs de 30 % pour un type d'alerte spécifique sur la population du GHR — qu'est-ce que les équipes médicales font de cette information au quotidien, et est-ce que ça change leur pratique ?"
+  si_debat_bloque: "Poussez sur le paradoxe de l'audit de prévention : si une alerte CareFlow déclenche une hospitalisation préventive et que le patient ne décompense pas, est-ce un vrai positif ou un faux positif — et comment l'audit tranche-t-il cette question ?"
+  relance_cle: "Ce mandat pose la question de la mesure possible : dans un contexte de médecine préventive où l'action modifie l'événement prédit, est-ce que l'audit de concordance mesure la fiabilité de CareFlow ou seulement sa capacité à déclencher des interventions ?"
 version: "1.0"

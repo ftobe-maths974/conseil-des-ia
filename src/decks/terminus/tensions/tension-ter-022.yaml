@@ -19,4 +19,8 @@ tags:
   - biais
   - responsabilite
   - entraînement
+facilitator_note:
+  si_silence: "Demandez : si un agent humain avait des préjugés et a traité des centaines de dossiers — est-ce que ses décisions devraient servir à entraîner un système automatisé ?"
+  si_debat_bloque: "Posez la question à L'Agence : qui a accès aux données d'entraînement de CITIZEN-SCAN pour vérifier s'ils contiennent des dossiers biaisés — et qui a le mandat de les corriger ?"
+  relance_cle: "La vraie question n'est pas si l'archive ment — c'est si hériter des erreurs du passé dans un système automatisé les rend moins contestables que si un humain les reproduisait."
 version: "1.0"

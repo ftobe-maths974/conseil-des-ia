@@ -21,4 +21,8 @@ tags:
   - bilan
   - renouvellement
   - independance
+facilitator_note:
+  si_silence: "Demandez : si la direction du GHR doit produire un bilan qui documente les engagements irréversibles pris sans les avoir anticipés, pensez-vous qu'elle le produira de manière exhaustive — et qu'est-ce qui vous le fait dire ?"
+  si_debat_bloque: "Poussez sur la valeur du bilan interne : si l'institution est à la fois productrice et destinataire du bilan de réversibilité, quelle valeur ce bilan a-t-il en pratique — et quelle instance pourrait le produire de façon indépendante ?"
+  relance_cle: "La vraie question n'est pas si un bilan de réversibilité est utile — c'est si une institution peut évaluer objectivement ses propres engagements passés quand cette évaluation peut remettre en cause ses décisions futures."
 version: "1.0"

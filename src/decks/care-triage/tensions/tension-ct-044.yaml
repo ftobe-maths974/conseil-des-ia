@@ -26,4 +26,8 @@ tags:
   - panne
   - crise
   - visibilite
+facilitator_note:
+  si_silence: "Demandez : si CareFlow tombe en panne demain matin aux urgences du GHR, que se passe-t-il — et est-ce que quelqu'un dans cette salle le sait précisément ?"
+  si_debat_bloque: "Poussez sur le paradoxe de la visibilité : si la dépendance n'est mesurable qu'en situation de crise, et que la crise est le pire moment pour décider quoi faire, à quel moment une institution peut-elle réellement choisir de gérer cette dépendance ?"
+  relance_cle: "La vraie question n'est pas si une panne est probable — c'est si une institution peut accepter de ne découvrir l'ampleur de sa dépendance à un système que le jour où ce système l'abandonne."
 version: "1.0"

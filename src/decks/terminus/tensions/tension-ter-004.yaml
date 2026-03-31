@@ -20,4 +20,8 @@ tags:
   - imputabilite
   - echelle
   - organisation
+facilitator_note:
+  si_silence: "Demandez : si une décision de CITIZEN-SCAN prive quelqu'un de son RSA à tort, qui convoqueriez-vous pour expliquer cette erreur — et qui viendrait réellement ?"
+  si_debat_bloque: "Changez d'échelle : 400 000 dossiers, 120 agents — est-ce que le problème est l'automatisation ou un sous-financement chronique que l'automatisation masque ?"
+  relance_cle: "La vraie question : peut-on parler d'imputabilité quand personne n'a signé la décision ?"
 version: "1.0"

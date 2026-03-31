@@ -20,4 +20,8 @@ tags:
   - presomption
   - droits
   - legalite
+facilitator_note:
+  si_silence: "Demandez : normalement, qui doit prouver quoi dans un litige entre un citoyen et une administration ?"
+  si_debat_bloque: "Allez vers l'absurde : si on applique ce principe à la justice pénale, ça donne quoi — on suspend la liberté d'abord et on vérifie ensuite ?"
+  relance_cle: "La vraie question : renverser la charge de la preuve par mise à jour logicielle sans loi, c'est une évolution technique ou un changement de régime juridique ?"
 version: "1.0"

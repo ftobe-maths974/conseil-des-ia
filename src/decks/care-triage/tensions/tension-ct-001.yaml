@@ -25,4 +25,8 @@ tags:
   - competence
   - charge-cognitive
   - delegation
+facilitator_note:
+  si_silence: "Demandez : depuis que CareFlow calcule les scores, combien de fois ce mois-ci avez-vous fait un triage complet mentalement, sans regarder l'écran ?"
+  si_debat_bloque: "Retournez la question vers l'institution : si le GHR sait que ses soignants perdent en précision sans l'outil, pourquoi ne pas tester régulièrement leurs capacités hors-système ?"
+  relance_cle: "La vraie question n'est pas si CareFlow est fiable, c'est qui dans cet hôpital sait encore trier sans lui."
 version: "1.0"

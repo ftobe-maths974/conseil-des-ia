@@ -20,4 +20,8 @@ tags:
   - norme-culturelle
   - encodage
   - responsabilite
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici vit ou a vécu dans une configuration familiale non standard — famille élargie, colocation durable — et comment un formulaire administratif standard l'a décrite ?"
+  si_debat_bloque: "Déplacez vers la responsabilité : si le biais culturel n'est dans aucune règle explicite mais dans les données d'entraînement, qui est responsable — les ingénieurs, les commanditaires, ou personne ?"
+  relance_cle: "La vraie question n'est pas si le système discrimine intentionnellement — c'est si une discrimination non intentionnelle et non corrigée reste une discrimination."
 version: "1.0"

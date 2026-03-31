@@ -20,4 +20,8 @@ tags:
   - externalite
   - comptabilite
   - surveillance
+facilitator_note:
+  si_silence: "Demandez : si CITIZEN-SCAN coûte 4,20€ par dossier à L'Agence mais que chaque usager passe deux heures par mois à maintenir son profil conforme, est-ce que ce temps est dans le calcul du coût ?"
+  si_debat_bloque: "Poussez sur la comptabilité : si on intégrait les coûts externalisés sur les usagers — stress, temps, recours — dans le bilan de CITIZEN-SCAN, est-ce qu'il serait encore rentable ?"
+  relance_cle: "La vraie question n'est pas si le système coûte moins cher à L'Agence — c'est à qui il a transféré le coût qu'il a cessé de payer."
 version: "1.0"

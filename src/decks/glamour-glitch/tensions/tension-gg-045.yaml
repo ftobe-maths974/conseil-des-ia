@@ -22,4 +22,8 @@ tags:
   - resilience
   - souverainete-creative
   - capacite-hors-ia
+facilitator_note:
+  si_silence: "Demandez : si FAME-GEN tombait en panne pendant six mois, est-ce que les studios et créateurs qui en dépendent pourraient continuer à produire — et si la réponse est non, est-ce un problème individuel ou un problème systémique ?"
+  si_debat_bloque: "Poussez sur le coût de la résilience : si maintenir une capacité de production hors-FAME-GEN coûte cher et que personne n'a d'incitation économique à le faire, qui devrait porter ce coût — les créateurs, OmniStream, ou une régulation publique ?"
+  relance_cle: "La vraie question n'est pas si FAME-GEN est fiable — c'est si une filière créative qui a externalisé sa capacité de production à un système qu'elle ne contrôle pas a encore une souveraineté créative, ou si elle l'a échangée contre de la commodité."
 version: "1.0"

@@ -16,4 +16,8 @@ question: >
   À quel moment la méfiance légitime envers une voix potentiellement synthétique devient-elle un
   dommage collectif plus grand que la fraude elle-même ?
 tags: [preuve, liveness, vishing, présomption-de-synthèse, substrat-vivant, confiance, trace-non-rejouable]
+facilitator_note:
+  si_silence: "Demandez : si votre parent âgé a refusé un appel de son médecin parce que la voix paraissait trop nette — et que ça a retardé une décision médicale importante — est-ce qu'on peut dire que SYNTH-MEMEX a causé un préjudice sans avoir rien fait de direct ?"
+  si_debat_bloque: "Poussez sur la définition du dommage : si la méfiance généralisée envers les voix synthétiques détruit la confiance entre proches et entre patients et soignants, est-ce un effet secondaire de la technologie — ou est-ce que la technologie a créé une nouvelle forme de violence sociale diffuse ?"
+  relance_cle: "La vraie question n'est pas comment distinguer une voix authentique d'une voix synthétique — c'est si une société où chaque appel doit être vérifié avant d'être cru a encore les structures de confiance nécessaires pour fonctionner."
 version: "1.0"

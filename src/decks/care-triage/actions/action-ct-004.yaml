@@ -20,4 +20,8 @@ tags:
   - revision-humaine
   - delegation
   - service
+facilitator_note:
+  si_silence: "Demandez : si un service dépasse 60 % de recommandations exécutées sans révision, est-ce nécessairement un dysfonctionnement — ou est-ce que certains services, pour certaines décisions, peuvent légitimement déléguer davantage ?"
+  si_debat_bloque: "Poussez sur le mécanisme de sanction : un entretien avec la direction médicale change-t-il quelque chose si la cause réelle du dépassement est le manque de personnel — et si ce mandat crée une pression supplémentaire sur des équipes déjà sous-dotées ?"
+  relance_cle: "Ce mandat pose la question du seuil arbitraire : pourquoi 60 % et pas 40 ou 80 — et si le bon seuil dépend du contexte clinique et de la charge réelle, est-ce que fixer un chiffre unique est une réponse ou une simplification ?"
 version: "1.0"

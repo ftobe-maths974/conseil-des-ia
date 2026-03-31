@@ -16,4 +16,8 @@ question: >
   Former des agents à corriger les erreurs d'un système ou laisser le système décider en comptant
   sur les usagers pour détecter et signaler les erreurs — qui protège mieux les plus vulnérables ?
 tags: [singularité, faux-positif, compétence-humaine, accessibilité, anomalie, dérogation-biométrique]
+facilitator_note:
+  si_silence: "Demandez : les allocataires les plus vulnérables — ceux qui ne savent pas qu'ils peuvent faire un recours — sont aussi ceux qui en auraient le plus besoin. Est-ce que déléguer entièrement à SIGMA-ID revient à leur dire que leur protection dépend d'une connaissance administrative qu'ils n'ont pas ?"
+  si_debat_bloque: "Poussez sur la charge de la correction : si former les agents introduit de la variabilité humaine, et que déléguer au système laisse les plus vulnérables sans protection, est-ce qu'il existe une option qui ne pénalise aucun des deux groupes — ou faut-il choisir ?"
+  relance_cle: "La vraie question n'est pas laquelle des deux options est plus efficiente — c'est laquelle protège le mieux ceux qui ne peuvent pas se défendre seuls, et si l'efficience peut légitimement primer sur cette protection."
 version: "1.0"

@@ -22,4 +22,8 @@ tags:
   - identite-creative
   - sous-traitance
   - valeur-ajoutee
+facilitator_note:
+  si_silence: "Demandez : si les 15 personnes de l'équipe créative interne quittaient OmniStream demain, est-ce que FAME-GEN pourrait continuer à produire sans elles ?"
+  si_debat_bloque: "Retournez vers les clients d'OmniStream : les annonceurs et le public se soucient-ils de savoir si c'est une organisation créative ou un opérateur de pipeline qui produit le contenu ?"
+  relance_cle: "La vraie question : quand l'expertise d'une organisation se réduit à paramétrer un modèle, qu'est-ce qui reste de sa raison d'être créative ?"
 version: "1.0"

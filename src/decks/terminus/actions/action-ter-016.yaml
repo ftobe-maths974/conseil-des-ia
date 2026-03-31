@@ -18,4 +18,8 @@ tags:
   - score
   - plafonnement
   - gouvernance
+facilitator_note:
+  si_silence: "Demandez : si les huit critères sont publics et connus, est-ce qu'un usager — ou son entourage — peut adapter son comportement pour optimiser son score plutôt que pour améliorer sa situation réelle ? Et est-ce un problème ou une fonctionnalité ?"
+  si_debat_bloque: "Poussez sur la substitution obligatoire : supprimer un critère pour en ajouter un nouveau — qui décide lequel disparaît, et si le critère supprimé protégeait un sous-groupe particulier, est-ce que la commission indépendante peut détecter cette perte ?"
+  relance_cle: "Ce mandat pose la question de la lisibilité comme protection : huit critères publiés, c'est plus transparent qu'un modèle opaque — mais si la simplification du modèle le rend moins précis et génère plus de faux positifs sur les cas atypiques, la transparence protège-t-elle vraiment les usagers ?"
 version: "1.0"

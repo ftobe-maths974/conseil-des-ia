@@ -23,4 +23,8 @@ tags:
   - transparence
   - publicite
   - recommandation
+facilitator_note:
+  si_silence: "Demandez : en tant que spectateur, est-ce que savoir qu'un contenu a été boosté commercialement changerait votre façon de le regarder — et pourquoi OmniStream parie sur le fait que non ?"
+  si_debat_bloque: "Retournez vers l'annonceur : payer pour un boost non déclaré, est-ce de la publicité ou de la manipulation — et la distinction a-t-elle une importance légale ?"
+  relance_cle: "La vraie question : un système de recommandation qui intègre des intérêts commerciaux non déclarés peut-il encore prétendre guider vers le meilleur contenu ?"
 version: "1.0"

@@ -21,4 +21,8 @@ tags:
   - institutionnel
   - audit
   - dysfonctionnement
+facilitator_note:
+  si_silence: "Demandez : si un audit complet de CareFlow révèle en même temps des biais du système et des sous-effectifs chroniques dans le service des urgences du GHR, lequel des deux problèmes sera traité en premier ?"
+  si_debat_bloque: "Prenez l'angle de l'agence de santé : si le GHR est le seul à décider de la portée de l'audit sur son propre fonctionnement, quel intérêt a-t-il à un audit exhaustif ?"
+  relance_cle: "La vraie question est de savoir si une institution peut s'auto-auditer honnêtement quand l'audit révèle ses propres défaillances structurelles."
 version: "1.0"

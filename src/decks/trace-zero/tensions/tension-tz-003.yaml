@@ -16,4 +16,8 @@ question: >
   Peut-on légitimement refuser une surveillance biométrique totale quand cette surveillance protège
   des personnes plus vulnérables que soi ?
 tags: [delegation, souveraineté, CVR, surveillance, confiance-forcée, solidarité, dépendance-identitaire]
+facilitator_note:
+  si_silence: "Demandez : qui dans ce groupe accepterait d'être surveillé en permanence si cela protégeait concrètement une personne âgée de son entourage ?"
+  si_debat_bloque: "Déplacez vers SYNTH-MEMEX : si l'argument dit que la résistance aide les attaquants, peut-on encore défendre un droit sans être accusé d'en abuser ?"
+  relance_cle: "La vraie question est celle du chantage solidaire : peut-on conditionner un droit individuel à une responsabilité collective qu'on ne peut pas refuser ?"
 version: "1.0"

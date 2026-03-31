@@ -21,4 +21,8 @@ tags:
   - concordance
   - prevention
   - methodologie
+facilitator_note:
+  si_silence: "Demandez : si CareFlow recommande une hospitalisation préventive et que le patient n'est pas hospitalisé, comment saurait-on si la prédiction était juste ou fausse ?"
+  si_debat_bloque: "Poussez sur le paradoxe de la prévention : si toutes les décisions préventives modifient l'événement qu'elles cherchent à éviter, comment évaluer un système de prédiction clinique — et peut-on ne pas l'évaluer ?"
+  relance_cle: "La vraie question n'est pas si CareFlow est fiable — c'est si un système dont on ne peut pas mesurer proprement la fiabilité peut légitimement orienter des décisions médicales."
 version: "1.0"

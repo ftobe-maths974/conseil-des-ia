@@ -21,4 +21,8 @@ tags:
   - audit
   - population
   - equite
+facilitator_note:
+  si_silence: "Demandez : si l'audit révèle que les patients de plus de 80 ans sont systématiquement sous-scorés par rapport aux décisions cliniques effectives, qu'est-ce que le plan de correction implique concrètement — et qui le finance ?"
+  si_debat_bloque: "Poussez sur la limite de l'audit : identifier des biais ne suffit pas à les corriger si les biais viennent des données d'entraînement que l'éditeur contrôle. Que peut faire le GHR seul — et que doit-il exiger contractuellement de l'éditeur ?"
+  relance_cle: "Ce mandat pose la question de la correction possible : si les biais détectés dépassent ce que le GHR peut corriger unilatéralement, est-ce que l'audit crée une obligation sans donner les moyens de la remplir ?"
 version: "1.0"

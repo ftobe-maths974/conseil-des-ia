@@ -21,4 +21,8 @@ tags:
   - expertise-locale
   - pratique
   - standard
+facilitator_note:
+  si_silence: "Demandez : si une équipe des urgences avait développé sur dix ans un protocole de triage adapté à une population vieillissante, et que CareFlow l'a remplacé par un standard commun, est-ce qu'on a perdu quelque chose — ou gagné quelque chose ?"
+  si_debat_bloque: "Poussez sur l'irréversibilité : si l'expertise locale disparaît quand elle n'est plus pratiquée, peut-on revenir à elle si CareFlow s'avère insuffisant pour certaines patientèles — ou est-ce une perte définitive ?"
+  relance_cle: "La vraie question n'est pas si le standard est meilleur que l'expertise locale — c'est si une homogénéisation qui efface des savoirs collectifs construits localement est une décision réversible ou définitive."
 version: "1.0"

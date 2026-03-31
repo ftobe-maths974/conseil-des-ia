@@ -19,4 +19,8 @@ tags:
   - data-center
   - impact-environnemental
   - zone-critique
+facilitator_note:
+  si_silence: "Demandez : OmniStream ne possède pas forcément ses data centers — elle les loue à des hébergeurs tiers. Si c'est l'hébergeur qui implante le data center en zone de stress hydrique et qu'OmniStream est client, est-ce que ce mandat s'applique à OmniStream, ou seulement aux opérateurs d'infrastructure ?"
+  si_debat_bloque: "Poussez sur le plan de sortie en 36 mois pour les installations existantes : déménager un data center est une opération coûteuse et techniquement complexe. Si le plan de sortie n'est pas exécuté dans les délais, qui applique la sanction et avec quelles conséquences pour la continuité de service de FAME-GEN ?"
+  relance_cle: "Ce mandat pose la question de la localisation comme enjeu de gouvernance : interdire les data centers dans les zones en stress hydrique est une protection environnementale locale concrète — mais si cette interdiction pousse OmniStream à implanter ses infrastructures dans des zones moins réglementées, est-ce une solution ou un déplacement du problème ?"
 version: "1.0"

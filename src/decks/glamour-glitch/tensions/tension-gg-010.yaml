@@ -25,4 +25,8 @@ tags:
   - droit
   - opacite
   - modele-proprietaire
+facilitator_note:
+  si_silence: "Demandez : si votre employeur réduisait votre salaire sans vous dire pourquoi, en invoquant 'des critères confidentiels', considéreriez-vous cette décision comme légitime ?"
+  si_debat_bloque: "Changez de camp vers OmniStream : si les critères deviennent publics et que des créateurs les contournent massivement, qui en subit les conséquences — la plateforme ou les créateurs honnêtes ?"
+  relance_cle: "La vraie question : le droit à l'explication d'une décision qui affecte un revenu doit-il être conditionnel à l'absence d'impact sur le système qui décide ?"
 version: "1.0"

@@ -17,4 +17,8 @@ tags:
   - reprise-humaine
   - delegation
   - gouvernance
+facilitator_note:
+  si_silence: "Demandez : si la procédure de reprise manuelle doit être activable en moins de 72h, ça suppose que des agents formés à traiter manuellement les dossiers existent. Si L'Agence n'a plus le personnel ni la formation pour ça, est-ce que ce mandat est réaliste ?"
+  si_debat_bloque: "Poussez sur la maintenance : documenter et tester une procédure de reprise au moment du contrat, c'est faisable. La maintenir opérationnelle tout au long du contrat, sans surcoût — qui paie pour ça, et si le coût n'est pas financé, comment cette obligation tient-elle dans la durée ?"
+  relance_cle: "Ce mandat pose la question de l'obligation contractuelle sans financement : conditionner le contrat à une procédure de reprise humaine est rigoureux — mais si aucun budget n'est alloué à sa maintenance, est-ce une condition réelle ou une clause de style ?"
 version: "1.0"

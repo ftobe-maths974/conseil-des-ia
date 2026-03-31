@@ -19,4 +19,8 @@ tags:
   - biais-de-selection
   - modele
   - legitimite
+facilitator_note:
+  si_silence: "Demandez : si la norme de CITIZEN-SCAN a été construite sur les dossiers des gens qui ont réussi dans l'ancien système, qu'est-ce que ça dit sur ce que le système considère comme 'normal' ?"
+  si_debat_bloque: "Déplacez vers le politique : qui a décidé que les personnes bien dotées étaient la bonne référence pour définir un dossier conforme ? C'était une décision technique ou politique ?"
+  relance_cle: "La vraie question n'est pas si le modèle est biaisé — c'est si une norme construite par sélection peut prétendre être une norme légitime."
 version: "1.0"

@@ -17,4 +17,8 @@ question: >
   Quand des professionnels de l'accompagnement humain passent plus de temps à gérer un système
   informatique qu'à accompagner les personnes, qui a perdu le contrôle de quoi ?
 tags: [métabolisme, charge-cognitive, coût-de-vérification, bureaucratie-défensive, inflation-procédurale, latence-sociale]
+facilitator_note:
+  si_silence: "Demandez : les deux suivis sociaux urgents retardés — qu'est-ce qui peut se passer pour une personne fragile quand son accompagnement dérape de plusieurs semaines ?"
+  si_debat_bloque: "Changez d'échelle : si 41% du temps d'un service entier est absorbé par la gestion d'un outil censé simplifier, est-ce que le bilan de l'outil est positif ou négatif ?"
+  relance_cle: "La vraie question : quand un outil numérique transforme des travailleurs sociaux en techniciens de support, qui a fait le choix de prioriser la sécurité du système sur la sécurité des personnes ?"
 version: "1.0"

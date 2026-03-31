@@ -22,4 +22,8 @@ tags:
   - interchangeabilite
   - rapport-de-force
   - economie
+facilitator_note:
+  si_silence: "Demandez : si vous êtes créateur sur OmniStream et que vous savez que FAME-GEN peut reproduire votre format sans vous, est-ce que vous avez du pouvoir dans la négociation de vos conditions avec la plateforme — ou est-ce que votre valeur a disparu ?"
+  si_debat_bloque: "Poussez sur l'intention : si l'homogénéisation des formats par FAME-GEN affaiblit le pouvoir de négociation des créateurs, est-ce un résultat involontaire de l'optimisation ou un avantage structurel pour OmniStream — et peut-on encore distinguer les deux ?"
+  relance_cle: "La vraie question n'est pas si FAME-GEN est techniquement impressionnant — c'est si un système qui rend chaque créateur remplaçable crée un rapport de force dans lequel les créateurs peuvent encore exiger des conditions équitables."
 version: "1.0"

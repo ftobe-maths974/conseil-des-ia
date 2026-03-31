@@ -20,4 +20,8 @@ tags:
   - conformite
   - resistance
   - deontologie
+facilitator_note:
+  si_silence: "Demandez : si ce médecin documente chaque dérogation et a toujours raison, à partir de combien de contestations par semaine la direction l'appelle-t-elle dans son bureau ?"
+  si_debat_bloque: "Changez de perspective : ce n'est plus le médecin qui résiste, c'est le tableau de bord de conformité — qui décide ce qu'il mesure et dans quel but ?"
+  relance_cle: "La vraie question est de savoir si l'institution utilise la conformité à CareFlow comme indicateur de qualité ou comme outil de management."
 version: "1.0"

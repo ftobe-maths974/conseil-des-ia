@@ -20,4 +20,8 @@ tags:
   - mise-a-jour
   - litige
   - trace
+facilitator_note:
+  si_silence: "Demandez : si un patient attaque l'hôpital pour une décision prise il y a six mois et que le modèle a changé depuis, comment l'hôpital se défend ?"
+  si_debat_bloque: "Allez vers l'éditeur : est-ce que c'est à l'hôpital de bloquer les mises à jour pour préserver la reproductibilité — et qu'est-ce que ça implique pour la qualité du système ?"
+  relance_cle: "La vraie question n'est pas technique — c'est : peut-on utiliser comme fondement médical un système dont les décisions passées ne sont plus vérifiables ?"
 version: "1.0"

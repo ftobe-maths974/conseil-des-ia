@@ -22,4 +22,8 @@ tags:
   - posthume
   - consentement
   - fan
+facilitator_note:
+  si_silence: "Demandez : si vous appreniez que la voix que vous venez d'écouter est synthétique et que l'acteur n'avait pas consenti, est-ce que cela transforme rétrospectivement votre expérience d'écoute ?"
+  si_debat_bloque: "Déplacez vers les ayants droit : peuvent-ils donner ou refuser le consentement à la place d'une personne décédée — et sur quelle légitimité se fondent-ils pour le faire ?"
+  relance_cle: "La vraie question : le plaisir subjectif d'un auditeur peut-il légitimer l'usage d'une identité dont le propriétaire ne peut plus se défendre ?"
 version: "1.0"

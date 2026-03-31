@@ -18,4 +18,8 @@ tags:
   - shadowban
   - restriction
   - transparence
+facilitator_note:
+  si_silence: "Demandez : 'modification substantielle' — comment OmniStream définit-il le seuil à partir duquel une baisse de visibilité est substantielle ? Si la visibilité baisse de 5%, de 20%, de 50% — où est la frontière qui déclenche l'obligation de notification ?"
+  si_debat_bloque: "Poussez sur la compensation automatique : la perte de revenus estimée — estimée par qui, sur quelle base ? Si FAME-GEN est aussi l'outil qui calcule les revenus potentiels, OmniStream est juge et partie dans le calcul de la compensation qu'il doit ?"
+  relance_cle: "Ce mandat pose la question de la visibilité comme droit opposable : interdire le shadowban silencieux est une protection forte — mais si OmniStream peut réduire la visibilité à condition de notifier, est-ce que la notification transforme une pratique opaque en pratique acceptable, ou est-ce que la restriction reste injuste même quand elle est annoncée ?"
 version: "1.0"

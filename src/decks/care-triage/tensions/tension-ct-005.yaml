@@ -20,4 +20,8 @@ tags:
   - expertise
   - resilience
   - gouvernance
+facilitator_note:
+  si_silence: "Demandez : si le référent CareFlow de votre service prend deux semaines de congé demain, qui sait interpréter une alerte mal calibrée ou signaler un dysfonctionnement à l'éditeur ?"
+  si_debat_bloque: "Retournez vers l'organisation : ce n'est plus un problème de personnes, c'est un problème de contrat — que prévoit le GHR si son unique référent part ?"
+  relance_cle: "La vraie question est de savoir si le GHR a construit une expertise ou une dépendance à une personne — et s'il fait la différence."
 version: "1.0"

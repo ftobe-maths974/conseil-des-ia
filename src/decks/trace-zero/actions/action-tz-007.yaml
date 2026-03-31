@@ -14,4 +14,8 @@ body: >
   affecté les critères de déclassement. Ce rapport est rédigé en langage accessible aux non-spécialistes.
 mandat_principe: "La société civile a le droit de comprendre, en termes agrégés et accessibles, selon quels critères le système attribue ou retire la confiance aux personnes."
 tags: [invisibilité, audit, log-opaque, déclassement, transparence, score-authenticité, recours-fantôme]
+facilitator_note:
+  si_silence: "Demandez : 'anomalie comportementale' comme catégorie de motif de déclassement — c'est une description générique qui peut couvrir des dizaines de signaux différents. Un rapport accessible peut-il vraiment rendre lisible ce que 'anomalie comportementale' signifie pour un non-spécialiste sans trahir la précision technique ?"
+  si_debat_bloque: "Poussez sur le taux de recours aboutis : un taux faible peut signifier que SIGMA-ID prend de bonnes décisions — ou que le recours est trop difficile pour la plupart des personnes. Est-ce que le rapport distingue entre 'recours rejeté après instruction' et 'recours abandonné en cours de procédure' ?"
+  relance_cle: "Ce mandat pose la question de l'audit agrégé comme outil de contrôle démocratique : un rapport annuel public sur les critères et volumes de déclassement, c'est une avancée importante — mais si les catégories sont définies par l'OGR lui-même, que les évolutions méthodologiques sont décrites sans être soumises à validation externe, qui contrôle que le rapport est complet et honnête ?"
 version: "1.0"

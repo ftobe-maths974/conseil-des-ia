@@ -20,4 +20,8 @@ tags:
   - cohorte
   - coût
   - deploiement
+facilitator_note:
+  si_silence: "Demandez : si la population du GHR est significativement différente de la cohorte nationale — plus âgée, plus précaire, profil de comorbidités distinct — sur quelle base clinique la direction justifie-t-elle le déploiement immédiat ?"
+  si_debat_bloque: "Retournez vers les patients qui attendent : six mois de délai pour une validation locale, c'est aussi six mois pendant lesquels des patients comparables bénéficient d'un outil mieux calibré ailleurs."
+  relance_cle: "La vraie question est de savoir si accepter une validation nationale quand la population locale est spécifique est une prise de risque raisonnée ou une économie sur la sécurité."
 version: "1.0"

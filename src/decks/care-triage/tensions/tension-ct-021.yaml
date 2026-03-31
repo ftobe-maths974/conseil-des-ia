@@ -21,4 +21,8 @@ tags:
   - refus-soin
   - prediction
   - consentement
+facilitator_note:
+  si_silence: "Demandez : si ce patient a déjà été hospitalisé à tort sur la base d'une alerte CareFlow et que ça lui a coûté son emploi, son refus est-il irrationnel ou une réponse cohérente à son expérience ?"
+  si_debat_bloque: "Retournez vers le modèle : CareFlow n'a pas de taux d'erreur documenté pour ce profil patient précis — sur quelle base le médecin peut-il dire au patient qu'il a tort ?"
+  relance_cle: "La vraie question est de savoir si un patient peut opposer sa propre expérience à une prédiction dont la précision pour son profil n'est pas établie."
 version: "1.0"

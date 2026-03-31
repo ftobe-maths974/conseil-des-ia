@@ -16,4 +16,8 @@ question: >
   Quand un système d'authentification ne reconnaît plus quelqu'un parce qu'il a survécu à une
   maladie, qui a tort — l'homme ou le modèle ?
 tags: [singularité, atypie, altération, faux-positif, hors-modèle, présence-non-conforme, accessibilité]
+facilitator_note:
+  si_silence: "Demandez : David a survécu à sa maladie — est-ce que la première chose qu'on lui demande de prouver, c'est qu'il est encore lui-même ?"
+  si_debat_bloque: "Changez d'angle : le formulaire n'existe pas dans aucun hôpital — est-ce un bug administratif ou le signe que le système n'a jamais imaginé que des corps puissent changer ?"
+  relance_cle: "La vraie question : un système biométrique qui ne reconnaît plus les personnes dont le corps a évolué — est-ce un système d'identité ou un système de conformité corporelle ?"
 version: "1.0"

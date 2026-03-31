@@ -20,4 +20,8 @@ tags:
   - simplification
   - critere
   - fiabilite
+facilitator_note:
+  si_silence: "Demandez : si CareFlow affiche 'critère principal : fréquence cardiaque élevée' mais que le score résulte aussi de dix autres variables, le soignant qui lit ce critère sait-il ce qu'il valide vraiment ?"
+  si_debat_bloque: "Retournez vers le concepteur du système : si rendre lisible suppose de trahir la réalité du calcul, le problème n'est-il pas dans la conception même de l'interface ?"
+  relance_cle: "La vraie question est de savoir si une transparence simplifiée à l'excès produit de la confiance ou de l'illusion de confiance — et si la différence est visible."
 version: "1.0"

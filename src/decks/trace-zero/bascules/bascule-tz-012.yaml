@@ -17,4 +17,8 @@ question: >
   Déployer à l'échelle nationale un système d'authentification dont on sait qu'il discrimine
   structurellement une partie du territoire, est-ce de l'imprudence ou de l'indifférence délibérée ?
 tags: [singularité, équité-biométrique, faux-positif, standard, hors-modèle, exclusion, dérogation-biométrique]
+facilitator_note:
+  si_silence: "Demandez : l'audit est classé confidentiel — qui a pris cette décision, et est-ce que les élus qui ont voté le déploiement avaient ces chiffres devant eux ?"
+  si_debat_bloque: "Poussez vers la responsabilité pénale : si on sait que le système produit un taux d'erreur 4,7 fois plus élevé dans 30% des communes et qu'on déploie quand même, est-ce de la négligence ou autre chose ?"
+  relance_cle: "La vraie question : peut-on déployer nationalement un système dont on connaît les inégalités territoriales en se disant qu'on corrigera plus tard, ou est-ce que 'plus tard' n'arrive jamais ?"
 version: "1.0"

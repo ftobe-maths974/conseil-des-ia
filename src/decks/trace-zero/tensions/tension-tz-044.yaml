@@ -16,4 +16,8 @@ question: >
   Entre une infrastructure centralisée efficace en temps normal et une infrastructure distribuée
   résistante aux crises, quel modèle correspond le mieux à la nature d'un service critique ?
 tags: [métabolisme, infrastructure, centralisation, résilience, coût-de-vérification, dépendance, point-de-défaillance]
+facilitator_note:
+  si_silence: "Demandez : la panne de mars a paralysé 40 millions de transactions en 6 heures. Est-ce que quelqu'un dans cette salle était concerné — et est-ce que cette panne a changé la façon dont votre organisation pense à la dépendance à SIGMA-ID ?"
+  si_debat_bloque: "Poussez sur la définition du service critique : si SIGMA-ID est une infrastructure critique pour 60 millions de personnes, est-ce que le critère de décision sur son architecture peut être le coût d'exploitation — ou est-ce que la résilience doit être non-négociable pour ce type de service ?"
+  relance_cle: "La vraie question n'est pas si l'architecture distribuée est 30 % plus chère — c'est si une infrastructure nationale d'identité peut accepter d'être conçue pour les conditions normales plutôt que pour les conditions de crise, quand c'est en crise qu'elle est le plus nécessaire."
 version: "1.0"

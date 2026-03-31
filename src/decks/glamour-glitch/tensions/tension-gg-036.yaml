@@ -22,4 +22,8 @@ tags:
   - diversite
   - regulation
   - engagement
+facilitator_note:
+  si_silence: "Demandez : si imposer 15 % de contenus hors-standard dans le flux d'OmniStream réduit les revenus publicitaires et donc la rémunération des créateurs, est-ce que le régulateur a le droit d'imposer ça — et au nom de quoi ?"
+  si_debat_bloque: "Poussez sur la définition de l'intérêt public : si la diversité culturelle est un intérêt public qui ne peut pas être réduit à une métrique d'engagement, qui a le mandat de le défendre face à un acteur privé qui optimise pour ses revenus ?"
+  relance_cle: "La vraie question n'est pas si un quota de 15 % est le bon chiffre — c'est si la maximisation de l'engagement commercial peut être la seule boussole d'une infrastructure culturelle qui touche des milliards de personnes chaque jour."
 version: "1.0"

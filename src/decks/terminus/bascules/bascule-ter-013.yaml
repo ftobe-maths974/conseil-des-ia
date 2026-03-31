@@ -20,4 +20,8 @@ tags:
   - comportement
   - liberte
   - cout-invisible
+facilitator_note:
+  si_silence: "Demandez : est-ce que Thomas a le droit de sortir le soir — et si oui, pourquoi se sent-il coupable quand il le fait ?"
+  si_debat_bloque: "Retournez la logique : si la surveillance ne change pas les droits de Thomas, est-ce que la modification de son comportement est un problème ou juste un effet secondaire ?"
+  relance_cle: "La vraie question : si un contrôle modifie les comportements même sans sanction, est-ce un outil de gestion ou un outil de discipline ?"
 version: "1.0"

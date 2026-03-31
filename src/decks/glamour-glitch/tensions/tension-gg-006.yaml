@@ -23,4 +23,8 @@ tags:
   - inegalites
   - petits-createurs
   - democratisation
+facilitator_note:
+  si_silence: "Demandez : ce créateur sans moyens qui accède grâce à FAME-GEN — dans cinq ans, sera-t-il plus libre ou plus dépendant d'OmniStream qu'aujourd'hui ?"
+  si_debat_bloque: "Retournez vers les créateurs établis : ont-ils intérêt à ce que FAME-GEN reste inaccessible aux petits — et est-ce qu'ils l'admettent ?"
+  relance_cle: "La vraie question : l'accès à un marché via un outil propriétaire d'un acteur dominant est-il une forme de démocratisation ou une nouvelle forme de dépendance ?"
 version: "1.0"

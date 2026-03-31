@@ -18,4 +18,8 @@ tags:
   - transparence
   - creation-humaine
   - reporting
+facilitator_note:
+  si_silence: "Demandez : qu'est-ce qui compte comme 'contenu modifié par un humain' — si un créateur change un mot dans un texte généré par FAME-GEN, est-ce que ça passe dans la catégorie 'humain' ? Comment l'auditeur trace la frontière ?"
+  si_debat_bloque: "Poussez sur les catégories de créateurs : l'audit mesure la proportion par catégorie. Si les créateurs les plus petits sont massivement automatisés et les plus grands relativement humains, est-ce que les chiffres globaux reflètent la réalité vécue par la majorité des créateurs de la plateforme ?"
+  relance_cle: "Ce mandat pose la question de la transparence comme levier : publier la part de contenu humain dans un audit annuel, c'est rendre le glissement visible — mais si le rapport montre une automatisation croissante et que ni OmniStream ni les créateurs ne changent leurs pratiques, la transparence suffit-elle à inverser la tendance ?"
 version: "1.0"

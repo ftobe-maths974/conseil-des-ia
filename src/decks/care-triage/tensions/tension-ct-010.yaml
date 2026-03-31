@@ -20,4 +20,8 @@ tags:
   - information
   - transparence
   - charge-soignant
+facilitator_note:
+  si_silence: "Demandez : quand un patient vous demande pourquoi il attend depuis deux heures alors que quelqu'un arrivé après lui a été pris en charge, que lui répondez-vous concrètement ?"
+  si_debat_bloque: "Déplacez vers le législateur : si le code de la santé impose ce droit à l'information mais que le système CareFlow le rend inapplicable, qui a raté quelque chose — le droit ou le déploiement ?"
+  relance_cle: "La vraie question est de savoir si un droit conditionné par la disponibilité opérationnelle est encore un droit ou une promesse vide."
 version: "1.0"

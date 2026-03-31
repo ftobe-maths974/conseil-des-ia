@@ -13,4 +13,8 @@ body: >
   taux de décisions ayant fait l'objet d'un recours humain. Ce registre est accessible sans authentification.
 mandat_principe: "La délégation à un système automatisé ne dispense pas l'institution de rendre compte publiquement des décisions prises en son nom par ce système."
 tags: [delegation, transparence, audit, opérateur-de-confiance, CVR, délégation-du-réel, registre-public]
+facilitator_note:
+  si_silence: "Demandez : le registre publie les catégories de décisions déléguées — mais si l'institution décrit ses délégations à un niveau de généralité élevé ('décisions d'accès aux prestations sociales'), comment le public peut-il évaluer si des décisions spécifiques et potentiellement discriminantes sont dans le périmètre ?"
+  si_debat_bloque: "Poussez sur le taux de recours humain : si ce taux est très bas, ça peut signifier que SIGMA-ID fonctionne bien — ou que les personnes affectées ne savent pas qu'elles peuvent contester, ou qu'elles renoncent à le faire. Comment interpréter un taux de recours faible sans cette information ?"
+  relance_cle: "Ce mandat pose la question de la transparence institutionnelle comme condition de légitimité de la délégation : publier ce qu'on délègue à SIGMA-ID rend la dépendance visible — mais si aucun régulateur n'analyse activement ces registres et que les données sont accessibles sans être lues, la publication remplit-elle vraiment sa fonction de contrôle démocratique ?"
 version: "1.0"

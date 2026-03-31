@@ -20,4 +20,8 @@ tags:
   - cout-sortie
   - budget
   - irreversibilite
+facilitator_note:
+  si_silence: "Demandez : les 22% d'économies budgétaires — qui en a bénéficié, et est-ce que ça change qui supporte le coût d'un éventuel retour arrière ?"
+  si_debat_bloque: "Inversez la temporalité : si L'Agence avait dû calculer le coût de réversibilité avant de déployer CITIZEN-SCAN, aurait-elle fait le même choix ?"
+  relance_cle: "La vraie question : une décision qui devient irréversible par accumulation de faits accomplis a-t-elle jamais été vraiment choisie ?"
 version: "1.0"

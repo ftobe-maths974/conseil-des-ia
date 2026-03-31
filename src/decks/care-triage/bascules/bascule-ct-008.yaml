@@ -20,4 +20,8 @@ tags:
   - examen-clinique
   - preuve
   - documentation
+facilitator_note:
+  si_silence: "Posez la question : si un avocat ouvre ce dossier et lit 'recommandation CareFlow suivie' sans trouver d'examen clinique, qu'est-ce qu'il peut en faire ?"
+  si_debat_bloque: "Poussez l'angle collectif : cette pratique s'est installée sans directive — est-ce que ça veut dire que tout le monde l'a acceptée, ou que personne n'a osé la nommer ?"
+  relance_cle: "La vraie question n'est pas la qualité de la documentation — c'est : quand un dossier médical cite une machine à la place d'un examen, est-ce encore un acte médical traçable ?"
 version: "1.0"

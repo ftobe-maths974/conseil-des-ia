@@ -21,4 +21,8 @@ tags:
   - coût-de-sortie
   - choix
   - irréversibilite
+facilitator_note:
+  si_silence: "Demandez : si la direction du GHR sait que CareFlow a des problèmes sérieux mais que sortir coûterait plus cher que rester, est-ce qu'elle peut encore dire que son choix de continuer est libre — et est-ce que ça change sa responsabilité ?"
+  si_debat_bloque: "Poussez sur le moment du choix : si le vrai choix sur CareFlow se faisait au moment du déploiement initial et non lors de chaque renouvellement, quand le GHR a-t-il réellement décidé — et quelqu'un a-t-il mesuré l'irréversibilité à ce moment-là ?"
+  relance_cle: "La vraie question n'est pas si le coût de sortie est trop élevé — c'est si une décision contrainte par une irréversibilité accumulée peut encore s'appeler un choix institutionnel, et qui porte la responsabilité de cette situation."
 version: "1.0"

@@ -21,4 +21,8 @@ tags:
   - charge-operationnelle
   - migration
   - continuite
+facilitator_note:
+  si_silence: "Posez la question : pendant ces deux semaines, si un incident clinique se produit dans les fonctionnalités dégradées, qui est responsable — le service, la direction, ou l'éditeur ?"
+  si_debat_bloque: "Retournez l'argument de la direction : si c'est un coût d'investissement normal, est-ce que ça veut dire qu'il y aura une migration tous les ans — et comment ça s'intègre au plan de soins ?"
+  relance_cle: "La vraie question n'est pas si la charge est acceptable — c'est : à partir de quel niveau de dépendance technique, la maintenance d'un outil numérique devient-elle une décision médicale que la direction n'a pas le droit de prendre seule ?"
 version: "1.0"

@@ -13,4 +13,8 @@ body: >
   nominalement responsable et identifiable dans le log de décision.
 mandat_principe: "Toute décision de suspension ou de révocation d'un CVR engage la responsabilité nominale d'un agent humain identifié, dont le nom et la qualité sont accessibles à la personne concernée sur simple demande."
 tags: [delegation, CVR, validation-humaine, responsabilité, verrou-de-présence, dépendance-identitaire]
+facilitator_note:
+  si_silence: "Demandez : si l'agent humain valide 200 suspensions par jour, à quel moment la validation devient-elle formelle plutôt que réelle ? Quel est le volume de décisions au-delà duquel la responsabilité nominale ne peut plus être exercée sérieusement ?"
+  si_debat_bloque: "Poussez sur la responsabilité nominale : l'agent est 'nominalement responsable et identifiable' — mais si sa hiérarchie lui impose de valider les décisions de SIGMA-ID sans les contester, est-ce que sa responsabilité est réelle ou seulement documentaire ?"
+  relance_cle: "Ce mandat pose la question du verrou humain dans une chaîne de décision automatisée : exiger une validation humaine nominale avant toute suspension de CVR est une protection essentielle — mais si SIGMA-ID génère les alertes et que l'agent les approuve systématiquement, la validation humaine est-elle un contrôle réel ou une étape administrative ?"
 version: "1.0"

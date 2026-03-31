@@ -20,4 +20,8 @@ tags:
   - couverture
   - precision
   - arbitrage
+facilitator_note:
+  si_silence: "Demandez : si améliorer CareFlow pour les patients rares dégrade légèrement sa précision pour tous les autres, qui devrait prendre cette décision — l'éditeur, le GHR, ou une instance de régulation externe ?"
+  si_debat_bloque: "Poussez sur la nature de l'arbitrage : si l'arbitrage entre couverture et précision est un choix technique habillé en décision neutre, qui porte réellement la responsabilité des conséquences sur les groupes défavorisés par ce choix ?"
+  relance_cle: "La vraie question n'est pas comment optimiser le modèle — c'est si un arbitrage entre la précision pour la majorité et la couverture des minorités peut être décidé sans que les personnes affectées aient leur mot à dire."
 version: "1.0"

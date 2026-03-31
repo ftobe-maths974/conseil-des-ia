@@ -19,4 +19,8 @@ tags:
   - surveillance
   - protection
   - controle
+facilitator_note:
+  si_silence: "Demandez : si vous installiez un capteur dans votre appartement pour que L'Agence détecte une urgence médicale, accepteriez-vous qu'il serve aussi à vérifier que vous respectez vos obligations ?"
+  si_debat_bloque: "Poussez sur le moment du basculement : à quel moment précis un dispositif de protection devient-il un outil de contrôle — et qui décide que ce moment est arrivé ?"
+  relance_cle: "La vraie question n'est pas l'intention initiale — c'est que rien dans la technologie n'empêche l'usage de changer, et que cela suffit à changer son évaluation éthique."
 version: "1.0"

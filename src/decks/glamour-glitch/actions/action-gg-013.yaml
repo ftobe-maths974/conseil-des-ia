@@ -18,4 +18,8 @@ tags:
   - diversite
   - hors-standard
   - declassement
+facilitator_note:
+  si_silence: "Demandez : 'créateur ne correspondant pas aux formats optimisés de FAME-GEN' — qui définit les formats optimisés ? Si c'est FAME-GEN lui-même qui apprend ce qui performe, les formats optimisés reflètent les biais des audiences existantes. L'audit peut-il identifier un biais que le modèle a lui-même codifié comme norme ?"
+  si_debat_bloque: "Poussez sur 'opposable à la décision de déclassement' : les résultats de l'audit sont opposables — mais opposables comment ? Si l'audit montre un impact différentiel sur un sous-groupe et qu'OmniStream maintient quand même le déclassement, quel mécanisme de contrainte s'applique ?"
+  relance_cle: "Ce mandat pose la question de la diversité comme protection contre l'uniformisation : auditer les profils hors-standard avant déclassement protège les créateurs minoritaires ou atypiques — mais si FAME-GEN optimise pour l'engagement et que les audiences préfèrent statistiquement les formats standardisés, l'audit peut-il inverser une tendance de marché ?"
 version: "1.0"

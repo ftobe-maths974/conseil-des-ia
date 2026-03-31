@@ -20,4 +20,8 @@ tags:
   - faux-positif
   - discernement
   - vigilance
+facilitator_note:
+  si_silence: "Demandez : si la quatrième alerte est la bonne et que le médecin ne rappelle pas le patient, qui est responsable ?"
+  si_debat_bloque: "Renversez la logique : si le médecin ignore l'alerte et qu'il a raison, est-ce que ça prouve que le système dysfonctionne — ou que le médecin est meilleur que le système ?"
+  relance_cle: "La vraie question n'est pas le nombre de faux positifs — c'est : à partir de combien d'alertes ignorées, un professionnel cesse-t-il d'être couvert par le système et commence à en porter seul le risque ?"
 version: "1.0"

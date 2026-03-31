@@ -28,4 +28,8 @@ tags:
   - secrets-commerciaux
   - controle
   - regulation
+facilitator_note:
+  si_silence: "Demandez : les régulateurs européens cités ont trouvé un moyen de protéger les secrets commerciaux tout en auditant — OmniStream dit que c'est impossible, qui croire ?"
+  si_debat_bloque: "Retournez vers les créateurs affectés : ont-ils leur mot à dire sur la question de l'audit — et si leur revenu dépend de FAME-GEN, ne sont-ils pas les premiers concernés par sa vérification ?"
+  relance_cle: "La vraie question : la protection d'un secret commercial est-elle un droit absolu quand le système protégé affecte les droits économiques de centaines de milliers de personnes ?"
 version: "1.0"

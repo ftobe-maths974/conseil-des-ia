@@ -15,4 +15,8 @@ question: >
   Est-il raisonnable de modifier son comportement naturel pour satisfaire un système d'authentification,
   ou ce geste ordinaire signale-t-il quelque chose qu'on devrait refuser ?
 tags: [singularité, atypie, hors-modèle, présence-non-conforme, adaptation, standard, dérogation-biométrique]
+facilitator_note:
+  si_silence: "Demandez : si vous avez modifié votre façon de taper au clavier pour passer les vérifications SIGMA-ID sans alerte, est-ce que vous avez résolu un problème — ou est-ce que vous avez cédé à quelque chose que vous n'avez pas choisi ?"
+  si_debat_bloque: "Poussez sur la normalisation implicite : si des millions de personnes adaptent leur comportement naturel pour correspondre au 'profil normal' attendu par un algorithme, est-ce que le système mesure l'identité — ou fabrique-t-il une norme comportementale qu'il impose ensuite ?"
+  relance_cle: "La vraie question n'est pas si s'adapter est raisonnable — c'est si un système qui oblige les gens à modifier leur comportement naturel pour y accéder exerce une forme de pouvoir sur l'identité que personne n'a explicitement acceptée."
 version: "1.0"

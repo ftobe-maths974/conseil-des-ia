@@ -17,4 +17,8 @@ question: >
   Quand un outil automatisé améliore les résultats mais affaiblit les compétences humaines de repli,
   quel niveau de dépendance une organisation doit-elle accepter ?
 tags: [delegation, dépendance-identitaire, compétence-humaine, CVR, confiance-forcée, opérateur-de-confiance]
+facilitator_note:
+  si_silence: "Demandez : si SIGMA-ID tombe en panne demain matin, est-ce que les conseillers de cette banque peuvent encore faire leur travail correctement ?"
+  si_debat_bloque: "Changez de temporalité : dans dix ans, si 100% des vérifications sont automatisées, à qui fait-on appel quand le système se trompe ?"
+  relance_cle: "La vraie question est celle de la réversibilité : peut-on retrouver une compétence qu'on a laissé s'atrophier pendant deux ans ?"
 version: "1.0"

@@ -15,4 +15,8 @@ question: >
   Un système d'authentification à deux vitesses — rapide pour ceux qui paient, lent pour les autres —
   est-il une offre de service complémentaire ou une marchandisation d'un droit fondamental ?
 tags: [métabolisme, friction, latence-sociale, inégalité, coût-de-vérification, service-public, dépendance]
+facilitator_note:
+  si_silence: "Demandez : si un délai de recours de 2 à 6 semaines peut vous faire perdre un emploi ou des droits, et que 12€/mois vous garantirait 24h — est-ce que cette offre est un service complémentaire ou la preuve que l'État n'assure plus un service de base équitable ?"
+  si_debat_bloque: "Poussez sur la définition du droit fondamental : si l'identité numérique est un droit fondamental — au même titre que l'identité civile — est-ce qu'il peut y avoir une version premium de ce droit selon la capacité à payer ?"
+  relance_cle: "La vraie question n'est pas si une offre premium est légale — c'est si une authentification à deux vitesses, où la qualité du service public dépend du portefeuille, constitue une marchandisation d'un droit que l'État devrait garantir équitablement."
 version: "1.0"

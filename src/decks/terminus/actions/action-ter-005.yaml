@@ -17,4 +17,8 @@ tags:
   - explication
   - sanction
   - opacite
+facilitator_note:
+  si_silence: "Demandez : si une explication compréhensible doit être fournie dans les 24h 'sans que l'usager ait à la solliciter lui-même' — qui dans L'Agence produit cette explication pour chaque décision automatisée, et quel est le temps agent que ça représente par jour ?"
+  si_debat_bloque: "Poussez sur la notion de 'compréhensible' : une explication formulée par un agent qui lui-même ne comprend pas pourquoi l'algorithme a décidé ça — est-ce qu'elle remplit l'obligation, ou est-ce qu'elle reformule l'opacité en langage accessible ?"
+  relance_cle: "Ce mandat pose la question de la compréhension en amont : exiger qu'un agent explique une décision de CITIZEN-SCAN suppose que l'agent la comprend. Si l'algorithme n'est pas explicable même pour les agents, est-ce que ce mandat peut être tenu — ou crée-t-il une explication de façade ?"
 version: "1.0"

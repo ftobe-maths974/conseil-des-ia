@@ -16,4 +16,8 @@ question: >
   Quand le coût d'un dispositif de sécurité dépasse les dommages qu'il prévient, mais que personne
   n'est chargé de faire cette comparaison officiellement, comment une société prend-elle cette décision ?
 tags: [métabolisme, coût-de-vérification, bénéfice-documenté, inflation-procédurale, dépendance, bureaucratie-défensive]
+facilitator_note:
+  si_silence: "Demandez : les deux rapports existent dans le même ministère et ne se parlent pas — est-ce que c'est possible par hasard, ou est-ce que quelqu'un a intérêt à ce qu'ils ne se croisent pas ?"
+  si_debat_bloque: "Forcez la décision : si on vous donne les deux chiffres — 340 millions évités, 520 millions dépensés — est-ce que vous continuez le dispositif, vous l'arrêtez, ou vous demandez autre chose ?"
+  relance_cle: "La vraie question : une société peut-elle maintenir un dispositif dont le coût dépasse le bénéfice si personne n'est officiellement chargé de faire cette arithmétique ?"
 version: "1.0"

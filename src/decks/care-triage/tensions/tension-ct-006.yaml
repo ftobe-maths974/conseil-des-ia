@@ -20,4 +20,8 @@ tags:
   - conformite
   - derogation
   - pression-institutionnelle
+facilitator_note:
+  si_silence: "Demandez : si un service affiche 30 % de dérogations et de meilleurs résultats cliniques qu'un service à 5 %, que dit l'audit — et qui est convoqué ?"
+  si_debat_bloque: "Prenez la perspective des soignants silencieux : ceux qui ont arrêté de déroger sans l'avouer — que mesurent-ils vraiment dans cet audit ?"
+  relance_cle: "La vraie question est de savoir si l'audit mesure ce que le GHR dit vouloir — la qualité des soins — ou ce qu'il veut vraiment, la docilité au système."
 version: "1.0"

@@ -16,4 +16,8 @@ question: >
   Quand la somme des frictions d'authentification dépasse la capacité d'une personne à accomplir ses
   démarches, est-ce encore un système de sécurité ou une bureaucratie punitive ?
 tags: [métabolisme, friction, fatigue-authentification, charge-cognitive, latence-sociale, inflation-procédurale]
+facilitator_note:
+  si_silence: "Demandez : Omar a abandonné deux démarches parce que les délais étaient dépassés — est-ce qu'il a subi une sanction sans avoir commis aucune faute ?"
+  si_debat_bloque: "Déplacez vers la conception : est-ce que sept authentifications indépendantes dans la même journée, c'est un oubli de conception ou une décision consciente de ne pas mutualiser ?"
+  relance_cle: "La vraie question : quand la sécurité consomme plus de temps citoyen que les services eux-mêmes, est-ce encore de la protection ou de la punition par friction ?"
 version: "1.0"

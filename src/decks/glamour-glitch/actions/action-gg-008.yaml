@@ -18,4 +18,8 @@ tags:
   - transparence
   - regles
   - consultation
+facilitator_note:
+  si_silence: "Demandez : 'critères effectifs de scoring dans un langage accessible' — si le scoring de FAME-GEN repose sur des embeddings et des interactions non linéaires, est-ce qu'une description accessible est encore fidèle au fonctionnement réel, ou est-ce qu'elle simplifie au point de devenir trompeuse ?"
+  si_debat_bloque: "Poussez sur les 30 jours d'observation : OmniStream doit répondre publiquement aux observations reçues — mais répondre ne signifie pas modifier. Si OmniStream déploie la mise à jour malgré des observations formelles critiques, quel recours ont les créateurs ?"
+  relance_cle: "Ce mandat pose la question de la consultation comme condition de légitimité : publier les règles 30 jours avant déploiement crée une fenêtre de dialogue — mais si l'économie de la plateforme pousse à l'optimisation constante et rapide, est-ce que ce délai est compatible avec le rythme d'innovation d'OmniStream, ou sera-t-il systématiquement contourné par des mises à jour qualifiées de 'mineures' ?"
 version: "1.0"

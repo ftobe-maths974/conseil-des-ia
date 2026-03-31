@@ -27,4 +27,8 @@ tags:
   - efficacite
   - expansion
   - communication
+facilitator_note:
+  si_silence: "Demandez : si FAME-GEN consomme 3 fois moins d'énergie par clip qu'en 2022 mais que le volume a été multiplié par 12, est-ce qu'OmniStream peut se présenter comme une entreprise responsable sur le plan environnemental — et comment ?"
+  si_debat_bloque: "Poussez sur l'effet rebond : si l'efficacité par unité rend la production moins coûteuse et donc incite à produire plus, et que cet effet est documenté depuis 160 ans, est-ce qu'OmniStream ne le savait pas — et si elle le savait, que dit ça de sa communication ?"
+  relance_cle: "La vraie question n'est pas si l'efficacité énergétique est un progrès — c'est si une amélioration de l'efficacité utilisée pour justifier une expansion du volume peut encore être présentée comme une réponse sérieuse aux enjeux environnementaux."
 version: "1.0"

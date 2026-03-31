@@ -22,4 +22,8 @@ tags:
   - censure
   - responsabilite
   - politique-editoriale
+facilitator_note:
+  si_silence: "Demandez : si OmniStream peut toujours invoquer un bug algorithmique quand un shadowban est identifié, comment un créateur peut-il jamais prouver que la restriction était intentionnelle ?"
+  si_debat_bloque: "Changez d'angle vers l'effet : si le résultat d'une restriction silencieuse et d'une suppression de compte est identique pour le créateur affecté, est-ce que l'intention d'OmniStream change quelque chose à l'injustice subie ?"
+  relance_cle: "La vraie question : un outil de politique éditoriale qui ne peut pas être contesté parce qu'il ne peut pas être prouvé est-il un outil de gestion ou un outil de pouvoir ?"
 version: "1.0"

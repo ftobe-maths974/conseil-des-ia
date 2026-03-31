@@ -16,4 +16,8 @@ question: >
   Entre un service plus accessible mais plus vulnérable à la fraude et un service plus sécurisé mais
   que les usagers abandonnent en cours de route, quelle erreur est la moins grave ?
 tags: [métabolisme, friction, coût-de-vérification, sécurité, expérience-utilisateur, latence-sociale]
+facilitator_note:
+  si_silence: "Demandez : si chaque étape d'authentification supplémentaire réduit de 8 % le taux de complétion des demandes de remboursement, est-ce que les personnes qui abandonnent en cours de route paient un coût réel — et est-ce que la mutuelle le sait ?"
+  si_debat_bloque: "Poussez sur la comparaison des erreurs : si réduire les frictions augmente de 30 % les remboursements traités mais aussi la fraude de 15-20 %, quels chiffres concrets correspondent à ces pourcentages — et laquelle des deux erreurs pèse le plus lourd ?"
+  relance_cle: "La vraie question n'est pas quel niveau de friction est optimal techniquement — c'est si la sécurité d'un service de santé peut légitimement être calibrée au détriment de l'accessibilité réelle pour les personnes qui en ont le plus besoin."
 version: "1.0"

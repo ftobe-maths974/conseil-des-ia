@@ -17,4 +17,8 @@ tags:
   - transparence
   - criteres
   - publication
+facilitator_note:
+  si_silence: "Demandez : si les critères et pondérations de CITIZEN-SCAN sont publiés 'dans un format compréhensible par un non-spécialiste' — est-ce que les usagers les plus vulnérables, ceux dont les droits sont en jeu, peuvent réellement lire ce document et comprendre pourquoi leur score a changé ?"
+  si_debat_bloque: "Poussez sur le risque de gaming : si les critères actifs sont publics, est-ce que certains usagers peuvent adapter leur comportement déclaré pour optimiser leur score sans que ça corresponde à leur situation réelle — et comment L'Agence gère cette asymétrie ?"
+  relance_cle: "Ce mandat pose la tension classique entre transparence et robustesse : publier les critères améliore l'équité pour les usagers de bonne foi — mais peut réduire la fiabilité du système si les critères publiés deviennent un guide de contournement."
 version: "1.0"

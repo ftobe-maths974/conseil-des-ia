@@ -14,4 +14,8 @@ body: >
   avant le déploiement.
 mandat_principe: "Aucun déploiement biométrique à grande échelle ne peut ignorer sa distribution inégale des erreurs — l'équité n'est pas un paramètre optionnel, c'est une condition de légitimité."
 tags: [singularité, audit, équité-biométrique, faux-positif, anomalie, hors-modèle, accessibilité, standard]
+facilitator_note:
+  si_silence: "Demandez : 'ethnie déclarée' — si l'audit mesure les taux d'erreur par ethnie déclarée, il faut collecter cette donnée. Dans des contextes où la collecte de données ethniques est sensible ou illégale, comment l'audit peut-il mesurer l'équité sans disposer de cette dimension ?"
+  si_debat_bloque: "Poussez sur le seuil de 500 personnes : un déploiement de 499 personnes n'est pas soumis à l'audit. Est-ce que des entités peuvent fractionner leurs déploiements pour rester sous le seuil — et si oui, le mandat protège-t-il vraiment les populations visées ?"
+  relance_cle: "Ce mandat pose la question de l'équité comme condition préalable et non comme correctif : exiger l'audit avant le déploiement force à mesurer les inégalités avant de les créer — mais si l'audit révèle des taux de faux positifs significativement plus élevés pour certains groupes et que le déploiement est maintenu quand même, quel mécanisme de contrainte empêche un déploiement inéquitable ?"
 version: "1.0"

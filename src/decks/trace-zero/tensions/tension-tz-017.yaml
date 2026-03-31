@@ -17,4 +17,8 @@ question: >
   Entre un système d'authentification efficace que personne ne comprend et un système compréhensible
   mais moins efficace, quelle erreur est la plus acceptable — le faux positif ou le faux négatif ?
 tags: [invisibilité, explicabilité, log-opaque, score-authenticité, arbitrage, zone-grise]
+facilitator_note:
+  si_silence: "Demandez : si vous étiez victime d'une usurpation et que le système à 94 % de détection vous avait protégé — mais que vous ne puissiez pas comprendre pourquoi vous aviez été déclassé temporairement — est-ce que ce manque d'explication vous pose encore un problème ?"
+  si_debat_bloque: "Poussez sur la question des faux positifs : si le système à 94 % détecte plus de fraudes mais produit aussi plus de faux positifs inexplicables, est-ce que les victimes de faux positifs doivent subir cette inexplicabilité pour que les victimes de fraude soient mieux protégées — et qui a décidé de ce partage des risques ?"
+  relance_cle: "La vraie question n'est pas quel taux de détection est meilleur — c'est si un système peut prendre des décisions qui affectent la vie des personnes sans être en mesure de les expliquer, et si l'efficacité statistique peut légitimer l'opacité décisionnelle."
 version: "1.0"

@@ -20,4 +20,8 @@ tags:
   - mandat
   - delegation
   - information
+facilitator_note:
+  si_silence: "Demandez : si vous déposez un dossier à L'Agence aujourd'hui, pensez-vous que vous consentez à ce que vos données de mobilité soient analysées par un algorithme privé ?"
+  si_debat_bloque: "Passez à l'angle juridique : un tribunal administratif peut-il valider une décision prise par un tiers non mentionné dans le mandat initial — et qui devrait répondre ?"
+  relance_cle: "La vraie question : le consentement implicite est-il encore un consentement, ou juste une façon d'éviter de demander ?"
 version: "1.0"

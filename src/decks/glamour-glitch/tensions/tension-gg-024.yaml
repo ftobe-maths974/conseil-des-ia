@@ -22,4 +22,8 @@ tags:
   - echelle
   - garantie
   - limites
+facilitator_note:
+  si_silence: "Demandez : si OmniStream affiche le label 'Verified Human' sur des contenus sans pouvoir les vérifier tous, et qu'un abonné paie pour ce label — qu'est-ce qu'il achète exactement ?"
+  si_debat_bloque: "Poussez sur la limite entre promesse et tromperie : si maintenir une garantie qu'on sait ne plus pouvoir tenir à l'échelle n'est pas de la mauvaise foi mais une contrainte opérationnelle, à partir de quel moment cela devient-il une promesse mensongère ?"
+  relance_cle: "La vraie question n'est pas si OmniStream est de mauvaise foi — c'est si une organisation peut continuer à vendre une garantie d'authenticité dont elle sait qu'elle ne peut plus la vérifier sans que cela devienne structurellement trompeur."
 version: "1.0"

@@ -16,4 +16,8 @@ question: >
   Construire un seul point de confiance robuste et partagé, ou maintenir plusieurs systèmes moins
   performants mais indépendants — quelle architecture protège mieux la société ?
 tags: [delegation, souveraineté, infrastructure, CVR, point-de-défaillance, confiance-forcée, résilience]
+facilitator_note:
+  si_silence: "Demandez : pendant la panne de 6 heures, quels services essentiels — santé, banque, accès aux prestations — ont été bloqués pour des millions de personnes ?"
+  si_debat_bloque: "Posez la question de la décision d'urgence : si l'OGR tombe, qui a l'autorité pour passer en mode dégradé, et cette procédure existe-t-elle vraiment ?"
+  relance_cle: "La vraie question est celle du monopole de confiance : plus un système est efficace et partagé, plus sa défaillance est catastrophique — c'est une loi, pas une surprise."
 version: "1.0"

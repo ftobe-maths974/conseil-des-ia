@@ -22,4 +22,8 @@ tags:
   - singularite
   - resilience
   - communaute
+facilitator_note:
+  si_silence: "Demandez : si votre créateur préféré était remplacé par un avatar FAME-GEN pendant son absence et que vous ne l'ayez pas su, est-ce que ça change quelque chose pour vous — et pourquoi ?"
+  si_debat_bloque: "Poussez sur l'ambivalence : si certains créateurs voient le remplacement comme une protection de leur communauté et d'autres comme une menace pour leur unicité, qui décide quelle vision s'applique — et le contrat de la plateforme le précise-t-il ?"
+  relance_cle: "La vraie question n'est pas si le remplacement est techniquement invisible — c'est si une communauté qui croit suivre un créateur humain et suit en réalité un avatar a été trompée, et si cette tromperie est acceptable au nom de la continuité du service."
 version: "1.0"

@@ -21,4 +21,8 @@ tags:
   - visibilite
   - catalogue
   - concentration
+facilitator_note:
+  si_silence: "Demandez : si OmniStream a 200 catégories dans son catalogue mais que 80 % des vues se concentrent sur 5 catégories, est-ce que la communication sur 'la diversité du catalogue' est honnête — ou est-ce du greenwashing culturel ?"
+  si_debat_bloque: "Poussez sur la distinction entre volume et visibilité : si la diversité n'est mesurée qu'en nombre de titres disponibles et non en parts d'écoute, quel indicateur OmniStream devrait-il publier pour qu'on puisse évaluer son engagement réel envers la diversité ?"
+  relance_cle: "La vraie question n'est pas si OmniStream ment sur sa diversité — c'est si un acteur peut se dire engagé pour la diversité culturelle en mesurant cet engagement par des métriques qui lui permettent toujours de dire qu'il la respecte."
 version: "1.0"

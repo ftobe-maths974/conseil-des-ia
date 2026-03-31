@@ -25,4 +25,8 @@ tags:
   - signature
   - juridique
   - autonomie-clinique
+facilitator_note:
+  si_silence: "Demandez : quand vous validez une recommandation CareFlow, combien de temps regardez-vous réellement les critères avant de signer — cinq secondes, trente secondes, jamais ?"
+  si_debat_bloque: "Retournez vers l'éditeur : si CareFlow n'est qu'un outil d'aide, pourquoi son contrat prévoit-il explicitement que la signature du médecin l'exonère de toute responsabilité ?"
+  relance_cle: "La vraie question est de savoir si une signature apposée sur une recommandation opaque peut constituer un acte médical libre et éclairé."
 version: "1.0"

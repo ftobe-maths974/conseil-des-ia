@@ -18,4 +18,8 @@ tags:
   - trace-comportementale
   - instruction
   - transparence
+facilitator_note:
+  si_silence: "Demandez : si L'Agence doit communiquer par écrit 'les éléments ayant déclenché la procédure' et que ces éléments sont des corrélations comportementales que l'algorithme n'explique pas — qu'est-ce que l'agent écrit dans sa communication ?"
+  si_debat_bloque: "Poussez sur le délai de 5 jours : pour un usager dont les droits sont suspendus et qui dépend de ces droits pour se nourrir ou se loger, 5 jours ouvrés c'est une semaine. Est-ce que ce délai est protecteur ou expose les plus fragiles à une semaine de préjudice ?"
+  relance_cle: "Ce mandat pose la question de la transparence sur les traces comportementales : informer quelqu'un que sa 'mobilité atypique' a déclenché un contrôle — est-ce une explication ou une description d'un signal que ni l'agent ni l'usager ne comprend vraiment ?"
 version: "1.0"

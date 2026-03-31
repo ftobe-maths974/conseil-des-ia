@@ -23,4 +23,8 @@ tags:
   - auteur
   - droit
   - delegation-totale
+facilitator_note:
+  si_silence: "Demandez : si vous étiez le créateur dont le nom est en bas de ce contenu problématique, qu'est-ce que vous répondriez à un journaliste qui vous demande d'en assumer la responsabilité ?"
+  si_debat_bloque: "Déplacez vers le législateur : le droit civil prévoit-il des réponses à cette dissolution de responsabilité — ou faut-il créer de nouveaux régimes de responsabilité pour les systèmes IA ?"
+  relance_cle: "La vraie question : quand personne ne décide seul, peut-il encore y avoir quelqu'un de responsable — ou la délégation totale est-elle structurellement conçue pour éviter la sanction ?"
 version: "1.0"

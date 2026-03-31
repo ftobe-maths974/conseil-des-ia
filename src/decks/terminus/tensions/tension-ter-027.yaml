@@ -20,4 +20,8 @@ tags:
   - fraude
   - dommages
   - proportionnalite
+facilitator_note:
+  si_silence: "Demandez : parmi les 13,2% de dossiers contrôlés sans fraude, certains n'ont pas pu payer leur loyer. Est-ce que ce coût est comptabilisé quelque part dans l'évaluation du système ?"
+  si_debat_bloque: "Posez la question en termes de budget : si corriger les dommages causés aux 13,2% coûtait plus cher que les fraudes récupérées sur les 0,8%, le système serait-il maintenu ?"
+  relance_cle: "La vraie question n'est pas si le taux de détection est bon — c'est si les dommages causés aux innocents sont comptabilisés ou externalisés."
 version: "1.0"

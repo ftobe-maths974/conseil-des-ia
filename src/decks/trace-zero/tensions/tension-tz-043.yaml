@@ -16,4 +16,8 @@ question: >
   Mettre un chiffre sur le coût humain d'un système de sécurité, est-ce le moyen de mieux le gouverner
   ou le risque de rendre politiquement contestable quelque chose qui devrait être indiscutable ?
 tags: [métabolisme, coût-de-vérification, mesure, inflation-procédurale, charge-cognitive, gouvernance]
+facilitator_note:
+  si_silence: "Demandez : si on mesurait publiquement que SIGMA-ID cause chaque année X milliers d'abandons de soins par friction d'authentification excessive — est-ce que ça changerait les décisions sur le niveau de friction — et est-ce que c'est ça qui empêche de le mesurer ?"
+  si_debat_bloque: "Poussez sur le risque de la mesure : si mesurer le coût humain de la sécurité le rend politiquement contestable, est-ce que ceux qui préfèrent ne pas mesurer protègent la sécurité — ou protègent le statu quo contre l'accountability ?"
+  relance_cle: "La vraie question n'est pas si la sécurité a un prix — c'est si refuser de mesurer ce prix revient à décider que certains coûts humains sont non-politiques par définition, et si cette décision peut elle-même être acceptée sans débat."
 version: "1.0"

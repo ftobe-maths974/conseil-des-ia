@@ -20,4 +20,8 @@ tags:
   - notification
   - contestation
   - depriorisation
+facilitator_note:
+  si_silence: "Demandez : si vous attendez depuis trois semaines et que personne ne vous dit pourquoi, à quel moment décidez-vous de relancer — et sur quelle base ?"
+  si_debat_bloque: "Changez d'acteur : un travailleur social qui accompagne l'usager — comment peut-il l'aider à contester une décision dont ni lui ni l'usager ne connaissent l'existence ?"
+  relance_cle: "La vraie question : une décision invisible n'est pas une décision absente — c'est une décision à l'abri de tout recours."
 version: "1.0"

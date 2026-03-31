@@ -22,4 +22,8 @@ tags:
   - seuil
   - validation
   - cohorte
+facilitator_note:
+  si_silence: "Demandez : si l'indicateur de fiabilité affiché est calculé sur une cohorte de validation nationale et que le GHR accueille une population atypique, est-ce que cet indicateur informe vraiment le soignant sur la fiabilité de la recommandation pour le patient devant lui ?"
+  si_debat_bloque: "Poussez sur le label 'fiabilité non certifiée' : si le modèle dépasse 18 mois sans revalidation, le soignant voit ce label — est-ce qu'il arrête d'utiliser CareFlow, ou est-ce qu'il continue en ignorant l'avertissement parce qu'il n'a pas d'alternative ?"
+  relance_cle: "Ce mandat pose la question de l'information actionnable : afficher un indicateur de fiabilité que le soignant ne peut pas ignorer mais ne peut pas non plus remplacer par autre chose — est-ce de la transparence ou une anxiety machine ?"
 version: "1.0"

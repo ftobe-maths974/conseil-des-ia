@@ -20,4 +20,8 @@ tags:
   - specialite
   - conformite
   - adaptation
+facilitator_note:
+  si_silence: "Demandez : si la direction découvrait ces pratiques demain, est-ce que les soignants seraient sanctionnés — et est-ce que ce serait juste ?"
+  si_debat_bloque: "Retournez vers la direction : elle n'est pas informée — est-ce qu'elle ne veut pas savoir, ou est-ce qu'elle préfère que ça reste invisible pour maintenir les indicateurs de conformité ?"
+  relance_cle: "La vraie question n'est pas si le contournement est légitime — c'est : quand les experts protègent leurs patients en contournant le système, qui est responsable de ce que le système officiel dit de leurs décisions ?"
 version: "1.0"

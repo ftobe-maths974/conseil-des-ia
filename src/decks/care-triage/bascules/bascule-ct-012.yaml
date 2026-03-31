@@ -21,4 +21,8 @@ tags:
   - responsabilite
   - information
   - population-exclue
+facilitator_note:
+  si_silence: "Posez la question : l'avertissement de l'éditeur est en annexe du contrat technique — qui dans cet hôpital aurait dû le lire et le transmettre aux équipes ?"
+  si_debat_bloque: "Allez vers les patients : ces patients passent par un triage automatisé qui sait qu'il n'est pas fait pour eux — est-ce qu'ils ont le droit de le savoir ?"
+  relance_cle: "La vraie question n'est pas qui a lu le contrat — c'est : quand un système signale ses propres limites en annexe mais continue à s'appliquer à tous, est-ce une information ou une protection juridique pour l'éditeur ?"
 version: "1.0"

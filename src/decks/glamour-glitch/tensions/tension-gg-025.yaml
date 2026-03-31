@@ -23,4 +23,8 @@ tags:
   - droit-fondamental
   - marché
   - identite
+facilitator_note:
+  si_silence: "Demandez : si le droit à ne pas voir son image ou sa voix exploitée sans accord est un droit fondamental, est-ce que le faire valoir devrait coûter de l'argent — ou est-ce que le faire payer revient à en faire un privilège ?"
+  si_debat_bloque: "Poussez sur la contradiction : si OmniStream monétise la certification d'authenticité comme premium, elle a un intérêt commercial à ce que tout le monde ne soit pas certifié — sinon le premium n'a plus de valeur. Peut-on faire confiance à cette entreprise pour défendre l'authenticité comme droit universel ?"
+  relance_cle: "La vraie question n'est pas si la certification a de la valeur — c'est si transformer la protection d'une identité en produit commercial revient à conditionner l'exercice d'un droit à la capacité de payer pour le faire respecter."
 version: "1.0"

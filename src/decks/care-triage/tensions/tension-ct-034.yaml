@@ -26,4 +26,8 @@ tags:
   - standard
   - majorite
   - exclusion
+facilitator_note:
+  si_silence: "Demandez : si un standard garantit un traitement identique pour 90 % des patients mais génère systématiquement des délais supplémentaires pour les 10 % restants, est-ce un système équitable — ou équitable pour la majorité ?"
+  si_debat_bloque: "Poussez sur la visibilité de l'inégalité : si l'inégalité produite par le standard est moins visible que l'équité qu'il garantit, est-ce que cette invisibilité est accidentelle — ou est-elle une condition du maintien du standard ?"
+  relance_cle: "La vraie question n'est pas si le standard produit de l'équité — c'est si une équité qui exclut structurellement certains patients peut encore être appelée équité sans nommer l'inégalité qu'elle produit en même temps."
 version: "1.0"

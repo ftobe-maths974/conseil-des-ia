@@ -23,4 +23,8 @@ tags:
   - satire
   - usage-legitime
   - distinction
+facilitator_note:
+  si_silence: "Demandez : si quelqu'un produit avec FAME-GEN une pièce de théâtre satirique où un politicien dit des choses absurdes avec une voix synthétique clairement identifiée, est-ce que c'est du même ordre qu'une deepfake destinée à tromper — et comment le système sait-il faire la différence ?"
+  si_debat_bloque: "Poussez sur la limite technique : si OmniStream ne peut pas distinguer automatiquement le faux assumé du faux trompeur à grande échelle, la seule règle possible est soit 'tout interdire' soit 'tout autoriser'. Quelle est la moins mauvaise option — et pour qui ?"
+  relance_cle: "La vraie question n'est pas si la satire est légitime — c'est si une plateforme à grande échelle peut construire une distinction institutionnelle solide entre usage culturel du faux et tromperie, sans que cette distinction soit contournée en masse."
 version: "1.0"

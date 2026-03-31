@@ -21,4 +21,8 @@ tags:
   - documentation
   - amelioration
   - incitation
+facilitator_note:
+  si_silence: "Demandez : si vous saviez que chaque fois que vous prenez une décision qui s'écarte du standard, cette décision est enregistrée dans un registre consultable par votre direction, est-ce que vous la preniez quand même ?"
+  si_debat_bloque: "Poussez sur la double fonction du registre : si les données de dérogation sont à la fois utiles pour améliorer CareFlow et potentiellement utilisées pour évaluer la conformité des soignants, ces deux usages sont-ils compatibles — ou l'un détruit-il l'autre ?"
+  relance_cle: "La vraie question n'est pas si documenter les dérogations est utile — c'est si un registre qui peut servir d'outil d'amélioration ET d'outil de surveillance peut réellement remplir les deux fonctions sans que l'une nuise à l'autre."
 version: "1.0"

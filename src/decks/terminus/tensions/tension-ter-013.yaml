@@ -19,4 +19,8 @@ tags:
   - fraude
   - justification
   - transparence
+facilitator_note:
+  si_silence: "Demandez : si les critères de CITIZEN-SCAN étaient publics, combien d'usagers de bonne foi changeraient leur comportement — et est-ce un problème ou une solution ?"
+  si_debat_bloque: "Déplacez vers le droit : un juge peut-il valider un refus d'aide dont les critères sont secrets — et si oui, le contrôle juridictionnel a-t-il encore un sens ?"
+  relance_cle: "La vraie question : l'opacité protège-t-elle vraiment contre la fraude, ou protège-t-elle surtout le système contre ses propres erreurs ?"
 version: "1.0"

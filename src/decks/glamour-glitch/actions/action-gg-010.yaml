@@ -18,4 +18,8 @@ tags:
   - authenticite
   - transparence
   - traçabilite
+facilitator_note:
+  si_silence: "Demandez : 'substantiellement modifié par FAME-GEN' — si un créateur écrit un texte, FAME-GEN en reformule 40%, et le créateur valide la version finale, est-ce que le contenu est 'substantiellement modifié' ? Qui décide du seuil de modification qui déclenche le label ?"
+  si_debat_bloque: "Poussez sur l'interopérabilité avec les régulateurs : si les standards de traçabilité ne sont pas encore adoptés par tous les régulateurs, OmniStream peut se conformer aux standards d'un pays et pas d'un autre. Est-ce que le mandat crée une conformité internationale ou une conformité minimale ?"
+  relance_cle: "Ce mandat pose la question de l'efficacité du label sur le comportement des audiences : rendre l'origine synthétique visible est une condition de transparence nécessaire — mais si les études montrent que les publics préfèrent consciemment les contenus synthétiques bien produits aux contenus humains moins polis, le label protège-t-il les créateurs ou accélère-t-il leur remplacement ?"
 version: "1.0"

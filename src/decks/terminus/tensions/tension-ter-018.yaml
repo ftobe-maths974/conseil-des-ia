@@ -23,4 +23,8 @@ tags:
   - accessibilite
   - cout-pratique
   - precarite
+facilitator_note:
+  si_silence: "Demandez : trois mois de procédure et quinze documents pour récupérer une aide — qui dans ce groupe peut se permettre de tenir ce délai sans conséquences sur son quotidien ?"
+  si_debat_bloque: "Retournez la responsabilité : si le taux de recours est inférieur à 3%, L'Agence peut-elle prétendre que ses décisions sont rarement contestées parce qu'elles sont justes ?"
+  relance_cle: "La vraie question : quand le coût du recours est calibré sur le temps disponible de ceux qui n'en ont pas, le recours n'est un droit que pour les autres."
 version: "1.0"

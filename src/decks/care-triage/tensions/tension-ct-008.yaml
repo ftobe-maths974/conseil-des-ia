@@ -20,4 +20,8 @@ tags:
   - redéploiement
   - triage
   - compétence
+facilitator_note:
+  si_silence: "Demandez : si une infirmière des urgences ne fait plus jamais de triage, qu'est-ce qu'elle fait à la place — et est-ce que ce nouveau rôle est reconnu et formé ?"
+  si_debat_bloque: "Retournez vers les syndicats : ont-ils été consultés avant que le triage soit délégué à CareFlow, ou ont-ils appris la nouvelle avec le déploiement ?"
+  relance_cle: "La vraie question est de savoir si le redéploiement est une décision clinique ou une décision budgétaire habillée en revalorisation."
 version: "1.0"

@@ -16,4 +16,8 @@ question: >
   Pour réguler l'opacité des systèmes d'authentification biométrique qui touchent l'ensemble de la
   population, la loi est-elle plus efficace que le marché, ou vice versa ?
 tags: [invisibilité, régulation, autorégulation, log-opaque, arbitrage, score-authenticité, transparence]
+facilitator_note:
+  si_silence: "Demandez : si aucune loi n'oblige SIGMA-ID à être explicable mais que les utilisateurs peuvent choisir des alternatives plus transparentes, pensez-vous que la pression de marché forcerait l'OGR à s'améliorer — ou que la plupart des gens n'auraient pas de choix réel ?"
+  si_debat_bloque: "Poussez sur l'asymétrie de la pression de marché : si l'opacité de SIGMA-ID est un avantage concurrentiel face aux attaquants comme SYNTH-MEMEX, et que les utilisateurs subissent cette opacité sans pouvoir en partir, est-ce que le marché peut vraiment corriger ce déséquilibre ?"
+  relance_cle: "La vraie question n'est pas si la loi ou le marché fonctionne mieux en général — c'est si un système d'authentification qui touche l'ensemble de la population et dont personne ne peut vraiment se passer peut être soumis à la pression de marché comme n'importe quel service commercial."
 version: "1.0"

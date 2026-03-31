@@ -23,4 +23,8 @@ tags:
   - consentement-retroactif
   - donnees-archives
   - droit
+facilitator_note:
+  si_silence: "Demandez : si un artiste a signé en 2010 un contrat cédant ses enregistrements à un studio, et que ce studio est racheté en 2024 par OmniStream qui entraîne FAME-GEN dessus — est-ce que l'artiste a consenti à ce qui se passe aujourd'hui ?"
+  si_debat_bloque: "Poussez sur la limite des instruments juridiques : si le problème n'est pas la mauvaise foi d'OmniStream mais que les contrats de 2010 n'ont pas été conçus pour l'IA générative, qui doit réécrire ces instruments — et sur quelle base ?"
+  relance_cle: "La vraie question n'est pas si OmniStream respecte la lettre des contrats — c'est si un consentement donné pour un usage qui était techniquement impossible au moment de la signature peut couvrir des usages nés dix ans plus tard."
 version: "1.0"

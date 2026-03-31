@@ -20,4 +20,8 @@ tags:
   - attention
   - triage
   - autonomie-clinique
+facilitator_note:
+  si_silence: "Demandez : est-ce que quelqu'un ici a déjà signé ou validé quelque chose sans vraiment le relire parce qu'il faisait confiance à l'outil ?"
+  si_debat_bloque: "Poussez l'angle inverse : si l'infirmière donnait systématiquement des scores différents de CareFlow, est-ce que ce serait un problème — et pour qui ?"
+  relance_cle: "La vraie question n'est pas la confiance dans le système — c'est : à quel moment la validation humaine ne protège plus le patient de rien ?"
 version: "1.0"

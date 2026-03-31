@@ -22,4 +22,8 @@ tags:
   - alerte
   - admission
   - evaluation-clinique
+facilitator_note:
+  si_silence: "Demandez : si CareFlow génère une alerte prédictive de décompensation et que le médecin fait un examen clinique qui ne confirme rien — mais qu'il décide d'hospitaliser quand même 'par précaution' — est-ce que la décision repose sur l'examen ou sur l'alerte ?"
+  si_debat_bloque: "Poussez sur la distinction réelle/formelle : si documenter 'examen clinique réalisé, pas d'anomalie détectée, hospitalisation préventive maintenue' suffit à respecter ce mandat, est-ce que l'examen clinique est réellement indépendant du score — ou est-ce une formalité qui valide la décision algorithmique ?"
+  relance_cle: "Ce mandat pose la question de l'indépendance cognitive : peut-on demander à un soignant qui a vu l'alerte CareFlow de faire un examen 'indépendant' du score, ou l'alerte a-t-elle déjà orienté son attention avant même qu'il touche le patient ?"
 version: "1.0"

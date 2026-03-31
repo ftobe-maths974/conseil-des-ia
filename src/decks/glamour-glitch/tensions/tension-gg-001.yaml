@@ -25,4 +25,8 @@ tags:
   - identite-professionnelle
   - sens
   - autonomie
+facilitator_note:
+  si_silence: "Demandez : parmi vous, qui a déjà confié une tâche créative à un outil numérique et regretté de l'avoir fait — ou au contraire été soulagé ?"
+  si_debat_bloque: "Retournez la question vers l'audience : les spectateurs remarquent-ils quand un créateur a perdu sa singularité ? Cela change-t-il leur relation au contenu ?"
+  relance_cle: "La vraie question n'est pas si FAME-GEN produit mieux — c'est ce que le créateur devient quand il ne produit plus lui-même."
 version: "1.0"
