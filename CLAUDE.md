@@ -20,7 +20,7 @@ src/decks/
   care-triage/    ← santé publique, CareFlow / GHR
   glamour-glitch/ ← creator economy, OmniStream / FAME-GEN
   terminus/       ← protection sociale, L'Agence / CITIZEN-SCAN
-  trace-zero/     ← cybersécurité / identité, NEXUS / ZeroID
+  trace-zero/     ← cybersécurité / identité, OGR / SIGMA-ID
 
 src/content/config.ts   ← schémas Zod + glob loaders
 ```
@@ -97,6 +97,10 @@ content: "..."           # 60–120 mots, dilemme entre deux valeurs légitimes
 data_point: "..."        # optionnel, sourcé
 question: "..."          # 20–35 mots, désaccord légitime possible
 tags: [...]              version: "1.0"
+facilitator_note:
+  si_silence: "..."      # question concrète pour débloquer le silence
+  si_debat_bloque: "..."  # angle alternatif pour relancer un débat figé
+  relance_cle: "..."     # la tension centrale reformulée comme vraie question
 ```
 
 ### Action
@@ -109,6 +113,10 @@ title: "Verbe institutionnel + objet"
 body: "..."              # 30–70 mots, qui fait quoi avec quel effet mesurable
 mandat_principe: "..."   # conservé dans le YAML, non affiché en jeu — utile pour audit éditorial
 tags: [...]              version: "1.0"
+facilitator_note:
+  si_silence: "..."      # question concrète pour débloquer le silence
+  si_debat_bloque: "..."  # angle alternatif pour relancer un débat figé
+  relance_cle: "Ce mandat pose la question de…"  # toujours commencer ainsi pour les actions
 ```
 
 ### Scénario

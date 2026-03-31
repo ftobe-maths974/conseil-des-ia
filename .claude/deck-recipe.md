@@ -1,6 +1,6 @@
 # Recette de fabrication d'un deck — Conseil des IA
 
-Distillée à partir des trois decks de référence : `care-triage`, `glamour-glitch`, `terminus`.
+Distillée à partir des quatre decks de référence : `care-triage`, `glamour-glitch`, `terminus`, `trace-zero`.
 
 ---
 
@@ -229,6 +229,37 @@ Conditionner…          Plafonner…
 
 ---
 
+### `trace-zero` (OGR / SIGMA-ID)
+
+**Univers** : SIGMA-ID certifie les identités numériques via biométrie comportementale (CVR). L'OGR arbitre la confiance dans un monde où tout peut être deepfaké.
+**Macro-conflit** : quand l'authenticité doit être prouvée en permanence, qui protège ceux dont l'existence réelle ne correspond pas au modèle de preuve ?
+**Thèse** : Peut-on gouverner un système qui doit décider ce qui est vrai, sans que ce système devienne lui-même une menace pour la liberté ?
+**Registre** : technique, juridique, précis. Ni thriller ni prophétie — le système existe déjà à moitié.
+**Règle de ton** : le danger vient de la normalité du dispositif, pas de sa monstruosité.
+
+| Chambre | Question mère | Lexique propre | Mandat typique |
+|---|---|---|---|
+| Délégation | À qui ai-je confié le pouvoir de certifier que je suis moi — et puis-je le reprendre ? | CVR, délégation d'autorité de certification, reprise de contrôle, opérateur de confiance | Limiter le droit de délégation à SIGMA-ID aux entités maintenant une capacité de reprise autonome |
+| Invisibilité | Pourquoi mon score d'authenticité baisse — et comment le contester si je ne sais pas d'où il vient ? | score d'authenticité, log opaque, déclassement silencieux, suspicion latente | Rendre visible le score d'authenticité en temps réel et garantir une voie de recours humaine |
+| Preuve | Comment prouver que je suis vivant et réel quand tout peut être simulé ? | liveness, deepfake, présomption de synthèse, chaîne de garde, charge de la preuve | Imposer une présomption de légitimité de la preuve vivante en l'absence de certification contraire |
+| Singularité | Que devient quelqu'un dont le profil biométrique ou comportemental échappe au modèle d'entraînement ? | atypie biométrique, variabilité, hors-modèle, protocole alternatif, faux positif | Interdire tout refus d'accès à un service essentiel fondé sur la seule atypie biométrique |
+| Métabolisme | Quel est le coût réel — en friction, données, énergie, temps — d'un monde où tout doit être certifié ? | friction d'authentification, conservation de données comportementales, fatigue d'authentification, coût de vérification | Plafonner le nombre de vérifications imposables et limiter la conservation des données comportementales |
+
+**Logique de circulation** :
+- Del → Inv : si SIGMA-ID décide de l'authenticité, comment conteste-t-on une décision qu'on ne comprend pas ?
+- Inv → Pre : si le score est opaque, que faut-il prouver pour être considéré légitime ?
+- Pre → Sin : si les preuves valides sont standardisées, que devient celui dont le corps ou le comportement échappe au modèle ?
+- Sin → Met : préserver les atypies a un coût en procédures, agents, exceptions — est-il soutenable ?
+- Met → Del : quand vérifier coûte plus cher que faire confiance, à qui redonne-t-on la décision ?
+
+**Anti-patterns spécifiques** :
+- Thriller technologique — le danger vient de la banalisation du dispositif, pas de sa spectacularité
+- Confusion deepfake/IA générale — SIGMA-ID est un système d'authentification, pas une IA générative
+- Suspicion sans issue — les mandats doivent toujours préserver une voie humaine réelle
+- Fatalisme juridique — les droits sont défendables, même dans un système opaque
+
+---
+
 ## Anti-patterns universels
 
 | # | Anti-pattern | Correction |
@@ -254,8 +285,11 @@ Conditionner…          Plafonner…
 - [ ] Chambre cohérente : lexique propre, question mère respectée, pas de contamination
 - [ ] `slot_theme` distribué : individu / organisation / système (3 bascules par chambre)
 - [ ] Abstraction correcte par phase : concret P1, structurel P2, institutionnel P3, collision P4
-- [ ] `lever_type` cohérent avec titre et body
+- [ ] `lever_type` cohérent avec titre et body (Plafonner/Limiter → `limiter`, Interdire → `interdire`, etc.)
+- [ ] `lever_type` équilibré sur les 20 actions : les 5 types représentés, pas de sous-représentation < 2
 - [ ] `mandat_principe` portable vers la chambre suivante
+- [ ] `facilitator_note` présent sur toutes les tensions et actions, avec les 3 sous-champs : `si_silence`, `si_debat_bloque`, `relance_cle`
+- [ ] `relance_cle` des actions commence par "Ce mandat pose la question de…"
 - [ ] Accessible à des étudiants non-spécialistes
 - [ ] Pas de redondance forte dans la même chambre
 - [ ] Audit de circulation complété (5 passages évalués)
