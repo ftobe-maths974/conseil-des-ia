@@ -1,21 +1,22 @@
 id: action-tz-018
 phase: action
 slot: 2
-lever_type: conditionner
+lever_type: limiter
 chamber: metabolisme-vs-progres
 reversibility: yellow
 scope: organisationnel
-title: "Conditionner tout déploiement SIGMA-ID à la publication d'un bilan coût-bénéfice vérifiable"
+title: "Limiter le renouvellement de contrat SIGMA-ID aux entités dont le bilan coût-bénéfice est validé"
 body: >
-  Tout déploiement ou renouvellement de contrat SIGMA-ID par une entité publique est conditionné à la
-  publication annuelle d'un bilan coût-bénéfice documenté, comparant le coût total d'authentification
-  (infrastructure, personnel, frais de recours, coût des procédures d'exception) au montant des fraudes
-  effectivement prévenues. Ce bilan est vérifié par la Cour des comptes ou un organisme délégué et rendu
-  public dans un format comparatif standardisé.
-mandat_principe: "Le déploiement d'un système d'authentification à fort coût social n'est légitime que si son bénéfice documenté excède son coût total mesuré — y compris les coûts portés par les usagers."
+  Le renouvellement de contrat SIGMA-ID par une entité publique est limité aux entités dont le bilan
+  coût-bénéfice annuel, comparant le coût total d'authentification (infrastructure, personnel, frais
+  de recours, coût des procédures d'exception) au montant des fraudes effectivement prévenues, est
+  positif et vérifié par la Cour des comptes ou un organisme délégué. Toute entité dont le bilan est
+  défavorable pendant deux années consécutives ne peut renouveler son contrat sans dérogation motivée
+  et publique.
+mandat_principe: "Restreindre le renouvellement de tout contrat SIGMA-ID public aux entités dont le bénéfice documenté excède le coût total mesuré, y compris les coûts portés par les usagers."
 tags: [métabolisme, coût-de-vérification, bénéfice-documenté, inflation-procédurale, bilan, dépendance]
 facilitator_note:
-  si_silence: "Demandez : 'coût des procédures d'exception' inclut le coût porté par les agents et par les entités — mais 'coût total incluant les coûts portés par les usagers' est dans le mandat_principe. Est-ce que le bilan inclut le temps perdu par les usagers, la friction psychologique, les accès refusés en attendant une validation ? Comment monétiser ces coûts ?"
-  si_debat_bloque: "Poussez sur la vérification par la Cour des comptes : la Cour des comptes ne vérifie que les entités publiques. Si une entité semi-publique ou délégataire utilise SIGMA-ID, qui vérifie son bilan ? Et si la Cour constate que le bilan est défavorable, est-elle habilitée à interrompre le contrat ?"
-  relance_cle: "Ce mandat pose la question du bilan coût-bénéfice comme condition de légitimité : exiger que l'entité démontre que SIGMA-ID génère plus de valeur qu'il ne coûte est une logique de responsabilité publique saine — mais si les fraudes prévenues sont difficilement mesurables et que les coûts sociaux sont sous-estimés, qui garantit que le bilan est honnête plutôt qu'optimisé pour valider la reconduction ?"
+  si_silence: "Demandez : deux années consécutives de bilan défavorable avant la limite de renouvellement — pendant deux ans, l'entité utilise SIGMA-ID alors que son bilan est négatif. Qui protège les usagers pendant ces deux années, et pourquoi attendre deux cycles avant d'agir ?"
+  si_debat_bloque: "Poussez sur la dérogation motivée et publique : une entité peut renouveler malgré un bilan défavorable avec une dérogation. Qui l'accorde, selon quels critères, et si les dérogations sont systématiquement accordées dès qu'une entité argumente le besoin sécuritaire, est-ce que le plafond a une valeur contraignante réelle ?"
+  relance_cle: "Ce mandat pose la question du bilan coût-bénéfice comme condition de renouvellement : lier la reconduction à une démonstration de valeur mesurée est une logique de responsabilité publique forte — mais si les coûts sociaux portés par les usagers (friction, accès refusés, recours abandonnés) ne sont pas intégrés dans le calcul officiel, le bilan peut être positif sur le papier tout en étant négatif dans la réalité vécue."
 version: "1.0"

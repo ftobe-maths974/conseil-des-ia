@@ -1,20 +1,21 @@
 id: action-tz-002
 phase: action
 slot: 2
-lever_type: conditionner
+lever_type: limiter
 chamber: delegation-vs-souverainete
 reversibility: yellow
 scope: systemique
-title: "Conditionner la délégation à SIGMA-ID à la préservation d'une procédure de reprise humaine"
+title: "Limiter le droit de délégation à SIGMA-ID aux entités maintenant une capacité de reprise autonome"
 body: >
-  Toute entité utilisant SIGMA-ID comme autorité de certification doit documenter et maintenir opérationnelle
-  une procédure de reprise de contrôle humaine, activable en moins de 30 minutes, sans dépendance technique
-  à SIGMA-ID. Cette procédure doit être testée trimestriellement et son résultat publié. L'absence de
-  procédure documentée entraîne la suspension du droit de déléguer la certification à SIGMA-ID.
-mandat_principe: "Garantir que toute décision de SIGMA-ID affectant les droits d'une personne soit accompagnée d'une explication humainement compréhensible et d'un interlocuteur identifié dans un délai de 72 heures."
+  Le droit de déléguer la certification d'identité à SIGMA-ID est réservé aux entités documentant
+  et maintenant une procédure de reprise de contrôle humaine opérationnelle, activable en moins de
+  30 minutes, sans dépendance technique à SIGMA-ID. Cette procédure est testée trimestriellement
+  et le résultat publié. Toute entité ne satisfaisant pas à cette condition perd le droit de délégation
+  jusqu'à mise en conformité documentée.
+mandat_principe: "Restreindre l'accès à la délégation à SIGMA-ID aux seules entités capables de reprendre le contrôle de leurs décisions d'identité sans dépendance au système délégué."
 tags: [delegation, confiance-forcée, opérateur-de-confiance, CVR, validation-tierce, reprise-de-contrôle]
 facilitator_note:
-  si_silence: "Demandez : 'activable en moins de 30 minutes, sans dépendance technique à SIGMA-ID' — si la procédure de reprise a été conçue il y a trois ans et que le système a évolué depuis, comment l'entité sait-elle que la procédure fonctionne encore sans la tester dans un contexte de vrai incident ?"
-  si_debat_bloque: "Poussez sur la sanction d'absence de procédure : l'entité qui n'a pas de procédure documentée perd le droit de déléguer à SIGMA-ID. Mais si SIGMA-ID est devenu le standard de facto et qu'il n'existe pas d'alternative, est-ce que cette sanction est applicable sans créer une crise d'identité numérique pour les personnes dépendantes de l'entité ?"
-  relance_cle: "Ce mandat pose la question de la résilience comme condition de délégation : exiger une procédure de reprise testée trimestriellement force les entités à maintenir une capacité autonome — mais si le test trimestriel est pro forma et que la vraie procédure de reprise n'a jamais été utilisée dans un incident réel, la condition est-elle remplie ou simulée ?"
+  si_silence: "Demandez : si SIGMA-ID est devenu le standard de facto et qu'une entité perd son droit de délégation parce qu'elle n'a pas de procédure de reprise — qu'est-ce qu'elle fait pendant la mise en conformité ? Ses usagers se retrouvent sans certification d'identité, et qui porte ce préjudice ?"
+  si_debat_bloque: "Poussez sur la procédure testée trimestriellement : le test confirme que la procédure fonctionne dans un contexte de test — mais si la vraie reprise de contrôle n'a jamais été activée dans un incident réel, est-ce que la limite est opérationnelle ou seulement documentaire ?"
+  relance_cle: "Ce mandat pose la question de la délégation comme privilège conditionné : restreindre l'accès à SIGMA-ID aux entités capables de reprendre le contrôle de façon autonome est une logique de sécurité cohérente — mais si la condition de reprise autonome est trop exigeante pour les petites entités publiques, est-ce que ce plafond protège la résilience ou concentre SIGMA-ID chez les seuls acteurs qui ont les moyens de s'en passer ?"
 version: "1.0"
